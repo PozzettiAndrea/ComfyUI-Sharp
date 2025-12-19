@@ -2,8 +2,22 @@
 
 ComfyUI wrapper for [SHARP](https://arxiv.org/abs/2512.10685) by [Apple](https://github.com/apple/ml-sharp) - monocular 3D Gaussian Splatting in under 1 second.
 
+2 Example workflows.
+
+Workflow 1: standard/user input focal length.
 ![Workflow](docs/no_exif.png)
+
+
+https://github.com/user-attachments/assets/479fb066-4d40-4d7c-a8d4-d1224fc22efa
+
+
+Workflow 2: focal length extraction from exif data.
+
 ![Workflow_exif](docs/with_exif.png)
+
+
+https://github.com/user-attachments/assets/b0c3e196-aa93-4380-8f8b-9c19b833b818
+
 
 Model auto-downloads on first run. For offline use, place `sharp_2572gikvuh.pt` in `ComfyUI/models/sharp/`.
 
