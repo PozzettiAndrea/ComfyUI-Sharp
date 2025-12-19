@@ -43,8 +43,8 @@ class SharpPredict:
             }
         }
 
-    RETURN_TYPES = ("STRING",)
-    RETURN_NAMES = ("ply_path",)
+    RETURN_TYPES = ("STRING", "EXTRINSICS", "INTRINSICS",)
+    RETURN_NAMES = ("ply_path", "extrinsics", "intrinsics",)
     FUNCTION = "predict"
     CATEGORY = "SHARP"
     OUTPUT_NODE = True
@@ -67,6 +67,7 @@ class SharpPredict:
         # Convert ComfyUI image to numpy RGB
         image_np = comfy_to_numpy_rgb(image)
         height, width = image_np.shape[:2]
+        print(f"[SHARP] Input image: {width}x{height}")
 
         # Determine focal length in pixels
         if focal_length_mm > 0:
@@ -76,7 +77,11 @@ class SharpPredict:
             f_px = convert_focallength(width, height, 30.0)
 
         # Run inference
+        print(f"[SHARP] Running inference...")
+        inference_start = time.time()
         gaussians = self._predict_image(predictor, image_np, f_px, device)
+        inference_time = time.time() - inference_start
+        print(f"[SHARP] Inference complete in {inference_time:.2f}s")
 
         # Ensure output directory exists
         os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -86,12 +91,18 @@ class SharpPredict:
         output_filename = f"{output_prefix}_{timestamp}.ply"
         output_path = os.path.join(OUTPUT_DIR, output_filename)
 
-        # Save PLY
-        save_ply(gaussians, f_px, (height, width), Path(output_path))
+        # Save PLY and get metadata
+        print(f"[SHARP] Saving PLY file...")
+        _, metadata = save_ply(gaussians, f_px, (height, width), Path(output_path))
 
-        print(f"[SHARP] Saved PLY to: {output_path}")
+        print(f"[SHARP] Saved: {output_path}")
+        print(f"[SHARP] Result: {metadata['num_gaussians']:,} gaussians")
 
-        return (output_path,)
+        # Extract extrinsics (4x4) and intrinsics (3x3) for camera setup
+        extrinsics = metadata["extrinsic"]  # 4x4 identity matrix
+        intrinsics = metadata["intrinsic"]  # 3x3 camera matrix
+
+        return (output_path, extrinsics, intrinsics,)
 
     def _predict_image(
         self,

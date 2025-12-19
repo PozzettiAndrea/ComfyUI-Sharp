@@ -1,14 +1,24 @@
 """LoadSharpModel node for ComfyUI-Sharp."""
 
 import os
+from urllib.request import urlopen
 
 import torch
+from tqdm import tqdm
+
+# Try to get ComfyUI models directory
+try:
+    import folder_paths
+    MODELS_DIR = os.path.join(folder_paths.models_dir, "sharp")
+except ImportError:
+    MODELS_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "models", "sharp")
 
 # Model cache
 _MODEL_CACHE = {}
 
-# Default model URL (Hugging Face mirror)
+# Default model URL and filename
 DEFAULT_MODEL_URL = "https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt"
+DEFAULT_MODEL_FILENAME = "sharp_2572gikvuh.pt"
 
 
 class LoadSharpModel:
@@ -58,16 +68,40 @@ class LoadSharpModel:
 
         # Load or download checkpoint
         if checkpoint_path and os.path.exists(checkpoint_path):
-            state_dict = torch.load(checkpoint_path, weights_only=True)
+            model_path = checkpoint_path
         else:
-            print(f"[SHARP] Downloading model from Hugging Face...")
-            state_dict = torch.hub.load_state_dict_from_url(DEFAULT_MODEL_URL, progress=True)
+            # Use default model in ComfyUI models/sharp directory
+            os.makedirs(MODELS_DIR, exist_ok=True)
+            model_path = os.path.join(MODELS_DIR, DEFAULT_MODEL_FILENAME)
+
+            if not os.path.exists(model_path):
+                print(f"[SHARP] Downloading model to {model_path}")
+                response = urlopen(DEFAULT_MODEL_URL)
+                total_size = int(response.headers.get('content-length', 0))
+
+                with open(model_path, 'wb') as f:
+                    with tqdm(total=total_size, unit='B', unit_scale=True, desc="Downloading SHARP model") as pbar:
+                        while True:
+                            chunk = response.read(8192)
+                            if not chunk:
+                                break
+                            f.write(chunk)
+                            pbar.update(len(chunk))
+                print(f"[SHARP] Download complete.")
+            else:
+                print(f"[SHARP] Loading model from {model_path}")
+
+        print(f"[SHARP] Loading checkpoint...")
+        state_dict = torch.load(model_path, weights_only=True)
 
         # Create predictor
+        print(f"[SHARP] Initializing model...")
         predictor = create_predictor(PredictorParams())
         predictor.load_state_dict(state_dict)
         predictor.eval()
+        print(f"[SHARP] Moving model to {device}...")
         predictor.to(device)
+        print(f"[SHARP] Model ready!")
 
         model_dict = {
             "predictor": predictor,
