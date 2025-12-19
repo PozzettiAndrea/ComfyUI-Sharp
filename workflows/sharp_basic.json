@@ -1,9 +1,43 @@
 {
   "id": "sharp-basic-workflow",
   "revision": 0,
-  "last_node_id": 3,
-  "last_link_id": 2,
+  "last_node_id": 4,
+  "last_link_id": 5,
   "nodes": [
+    {
+      "id": 2,
+      "type": "LoadSharpModel",
+      "pos": [
+        -150,
+        -400
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "SHARP_MODEL",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "PozzettiAndrea/ComfyUI-Sharp",
+        "ver": "9f1b9c726e2cfc0118866c3df783e7f6bc895226",
+        "Node name for S&R": "LoadSharpModel"
+      },
+      "widgets_values": [
+        "auto",
+        ""
+      ]
+    },
     {
       "id": 1,
       "type": "LoadImage",
@@ -16,7 +50,7 @@
         314
       ],
       "flags": {},
-      "order": 0,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -34,42 +68,55 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1",
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "example.png",
+        "beach.jpg",
         "image"
       ]
     },
     {
-      "id": 2,
-      "type": "LoadSharpModel",
+      "id": 4,
+      "type": "GeomPackPreviewGaussian",
       "pos": [
-        -150,
-        -400
+        629.92578125,
+        -322.046875
       ],
       "size": [
-        270,
-        106
+        512,
+        658
       ],
       "flags": {},
-      "order": 1,
+      "order": 3,
       "mode": 0,
-      "inputs": [],
-      "outputs": [
+      "inputs": [
         {
-          "name": "model",
-          "type": "SHARP_MODEL",
-          "links": [
-            1
-          ]
+          "name": "ply_path",
+          "type": "STRING",
+          "link": 3
+        },
+        {
+          "name": "extrinsics",
+          "shape": 7,
+          "type": "EXTRINSICS",
+          "link": 4
+        },
+        {
+          "name": "intrinsics",
+          "shape": 7,
+          "type": "INTRINSICS",
+          "link": 5
         }
       ],
+      "outputs": [],
       "properties": {
-        "Node name for S&R": "LoadSharpModel"
+        "cnr_id": "comfyui-geometrypack",
+        "ver": "b7df285fc5b3fef7aad434d8b6e8698efed6358b",
+        "Node name for S&R": "GeomPackPreviewGaussian"
       },
       "widgets_values": [
-        "auto",
         ""
       ]
     },
@@ -103,10 +150,28 @@
         {
           "name": "ply_path",
           "type": "STRING",
-          "links": []
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "extrinsics",
+          "type": "EXTRINSICS",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "intrinsics",
+          "type": "INTRINSICS",
+          "links": [
+            5
+          ]
         }
       ],
       "properties": {
+        "aux_id": "PozzettiAndrea/ComfyUI-Sharp",
+        "ver": "9f1b9c726e2cfc0118866c3df783e7f6bc895226",
         "Node name for S&R": "SharpPredict"
       },
       "widgets_values": [
@@ -131,18 +196,44 @@
       3,
       1,
       "IMAGE"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "STRING"
+    ],
+    [
+      4,
+      3,
+      1,
+      4,
+      1,
+      "EXTRINSICS"
+    ],
+    [
+      5,
+      3,
+      2,
+      4,
+      2,
+      "INTRINSICS"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.0,
+      "scale": 1,
       "offset": [
-        400,
-        600
+        277.03125,
+        538.4453125
       ]
-    }
+    },
+    "workflowRendererVersion": "LG",
+    "frontendVersion": "1.34.9"
   },
   "version": 0.4
 }
