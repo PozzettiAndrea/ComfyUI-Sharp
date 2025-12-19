@@ -1,5 +1,5 @@
 [project]
-name = "ComfyUI-Sharp"
+name = "comfyui-sharp"
 description = "SHARP integration for ComfyUI - Monocular 3D Gaussian Splatting in under 1 second. Generate 3D Gaussians from a single image using Apple's SHARP model."
 version = "0.0.1"
 license = { text = "MIT License (wrapper) + SHARP License (vendored library)" }
