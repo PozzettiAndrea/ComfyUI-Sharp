@@ -6,6 +6,7 @@ torch>=2.0.0
 numpy>=1.21.0
 pillow>=9.0.0
 
+
 # SHARP specific
 plyfile>=1.0.0
 pillow-heif>=0.10.0
