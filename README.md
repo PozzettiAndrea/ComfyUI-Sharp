@@ -44,6 +44,22 @@ Questions or feature requests? Open a [Discussion](https://github.com/PozzettiAn
 
 Join the [Comfy3D Discord](https://discord.gg/bcdQCUjnHE) for help, updates, and chat about 3D workflows in ComfyUI.
 
+## Setup Instructions
+
+### A) Using ComfyUI Manager (Recommended)
+This package is available in the [ComfyUI Manager](https://docs.comfy.org/manager/install).
+
+### B) Manual Installation
+These instructsions assume you have the portable version of ComfyUI, but you can just replace the Python path otherwise.
+
+```powershell
+cd ComfyUI/custom_nodes
+git clone https://github.com/PozzettiAndrea/ComfyUI-Sharp
+cd ComfyUI-Sharp
+..\..\embeded_python\python.exe -m pip install -r requirements.txt
+..\..\embeded_python\python.exe install.py
+```
+
 ## Credits
 
 Thanks to Apple for releasing SHARP as open source.
