@@ -109,12 +109,7 @@ def _load_sharp_model(config):
         _model_patcher = patcher
         _model_config = config
 
-    # Load to GPU via ComfyUI VRAM management
-    # SPN processes ~35 patches through ViT + merge + upsample features + decode
-    # ~3 GB activation memory at 1536x1536 with chunked processing
-    memory_required = 3 * 1024 * 1024 * 1024
-    comfy.model_management.load_models_gpu([_model_patcher], memory_required=memory_required)
-    return _model_patcher.model, _model_patcher.load_device
+    return _model_patcher
 
 
 # -- Node -----------------------------------------------------------------

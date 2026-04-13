@@ -585,6 +585,34 @@ class SlidingPyramidNetwork(nn.Module):
     def internal_resolution(self) -> int:
         return self.patch_size * 4
 
+    def memory_required(self, input_shape):
+        """Estimate peak activation VRAM for SPN encoder + Monodepth decoder.
+
+        The peak occurs during the decoder fusion phase when SPN feature maps
+        and decoder intermediates (ResNet Conv2d) are all live.  Memory scales
+        with the number of pyramid patches (depends on input spatial dims),
+        the ViT embedding width, and dtype — following the same empirical-factor
+        pattern as ComfyUI's ``memory_usage_factor`` and VAE estimators.
+        """
+        import comfy.model_management
+        H, W = input_shape[-2], input_shape[-1]
+        dtype = next(self.parameters()).dtype
+        dtype_size = comfy.model_management.dtype_size(dtype)
+
+        # Patch count from the 3-level pyramid (mirrors forward() logic)
+        ps = self.patch_size
+        n_x0 = (math.ceil((H - ps) / int(ps * 0.75)) + 1) ** 2 if H > ps else 1
+        n_x1 = (math.ceil((H // 2 - ps) / int(ps * 0.5)) + 1) ** 2 if H // 2 > ps else 1
+        n_total = n_x0 + n_x1 + 1
+
+        # Per-patch memory covers: chunked ViT forward, encoding storage,
+        # merged feature maps, ConvTranspose2d upsample intermediates,
+        # Monodepth decoder fusion+ResNet Conv2d, and PyTorch allocator overhead.
+        # Calibrated at 1536x1536 bf16: 35 patches, ~6.8 GB peak reserved.
+        mem_per_patch = 200 * 1024 * 1024 * (dtype_size / 2) * (self.patch_encoder.embed_dim / 1024)
+
+        return int(n_total * mem_per_patch)
+
     def _create_pyramid(
         self, x: torch.Tensor
     ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
@@ -1969,6 +1997,10 @@ class RGBGaussianPredictor(nn.Module):
         self.prediction_head = prediction_head
         self.gaussian_composer = gaussian_composer
         self.depth_alignment = DepthAlignment(scale_map_estimator)
+
+    def memory_required(self, input_shape):
+        """Estimate peak activation VRAM (delegates to SPN encoder)."""
+        return self.monodepth_model.monodepth_predictor.encoder.memory_required(input_shape)
 
     def encode(self, image: torch.Tensor):
         monodepth_output = self.monodepth_model(image)

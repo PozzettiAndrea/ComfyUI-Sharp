@@ -108,7 +108,9 @@ class SharpPredict(io.ComfyNode):
         from .sharp.gaussians import save_ply, unproject_gaussians
 
         # model is a config dict from LoadSharpModel — load on-demand
-        predictor, device = _load_sharp_model(model)
+        patcher = _load_sharp_model(model)
+        predictor = patcher.model
+        device = patcher.load_device
 
         # Handle batch dimension
         if image.dim() == 3:
@@ -180,7 +182,7 @@ class SharpPredict(io.ComfyNode):
             # Run inference with caching
             log.info(f"Running inference on image {i+1}/{batch_size}...")
             gaussians = _predict_image_cached(
-                predictor, image_np, f_px, device,
+                patcher, predictor, image_np, f_px, device,
                 extrinsics=img_extrinsics,
                 intrinsics=img_intrinsics,
             )
@@ -216,6 +218,7 @@ class SharpPredict(io.ComfyNode):
 
 
 def _predict_image_cached(
+    patcher,
     predictor,
     image: np.ndarray,
     f_px: float,
@@ -229,6 +232,7 @@ def _predict_image_cached(
     Changing focal_length reuses cached features (instant).
 
     Args:
+        patcher: ComfyUI ModelPatcher wrapping the predictor
         predictor: SHARP predictor model
         image: Input image as numpy array [H, W, 3]
         f_px: Focal length in pixels
@@ -241,6 +245,11 @@ def _predict_image_cached(
     from .sharp.gaussians import unproject_gaussians
 
     internal_shape = (1536, 1536)
+
+    # Load to GPU with dynamic memory budget based on input shape
+    input_shape = [1, 3, internal_shape[0], internal_shape[1]]
+    memory_required = patcher.memory_required(input_shape)
+    comfy.model_management.load_models_gpu([patcher], memory_required=memory_required)
     height, width = image.shape[:2]
 
     # Compute image hash for cache

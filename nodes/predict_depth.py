@@ -68,7 +68,9 @@ class SharpPredictDepth(io.ComfyNode):
         from .load_model import _load_sharp_model
 
         # model is a config dict from LoadSharpModel — load on-demand
-        predictor, device = _load_sharp_model(model)
+        patcher = _load_sharp_model(model)
+        predictor = patcher.model
+        device = patcher.load_device
 
         # Handle batch dimension
         if image.dim() == 3:
@@ -98,6 +100,11 @@ class SharpPredictDepth(io.ComfyNode):
         # SHARP processes at 1536x1536 internally
         # We output depth at native disparity resolution (1536x1536)
         internal_shape = (1536, 1536)
+
+        # Load to GPU with dynamic memory budget based on input shape
+        input_shape = [1, 3, internal_shape[0], internal_shape[1]]
+        memory_required = patcher.memory_required(input_shape)
+        comfy.model_management.load_models_gpu([patcher], memory_required=memory_required)
 
         all_depth_maps = []
         all_alignment_maps = []
