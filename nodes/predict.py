@@ -10,6 +10,8 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
+from comfy_api.latest import io
+
 log = logging.getLogger("sharp")
 
 # Try to import ComfyUI folder_paths for output directory
@@ -31,52 +33,58 @@ _encode_cache = {
 }
 
 
+def _monodepth_to(output, device):
+    """Move all tensors in a MonodepthOutput to the given device."""
+    from .sharp.model import MonodepthOutput
+    return MonodepthOutput(
+        disparity=output.disparity.to(device),
+        encoder_features=[t.to(device) for t in output.encoder_features],
+        decoder_features=output.decoder_features.to(device),
+        output_features=[t.to(device) for t in output.output_features],
+        intermediate_features=[t.to(device) for t in output.intermediate_features],
+    )
+
+
 def _compute_image_hash(image_np: np.ndarray) -> str:
     """Compute hash of image for cache key."""
     return hashlib.sha256(image_np.tobytes()).hexdigest()[:16]
 
 
-class SharpPredict:
+class SharpPredict(io.ComfyNode):
     """Run SHARP inference to generate 3D Gaussians from a single image or batch."""
 
     @classmethod
-    def INPUT_TYPES(cls):
-        return {
-            "required": {
-                "model": ("SHARP_MODEL",),
-                "image": ("IMAGE",),
-            },
-            "optional": {
-                "focal_length_mm": ("FLOAT", {
-                    "default": 30.0,
-                    "min": 0.0,
-                    "max": 500.0,
-                    "step": 0.1,
-                    "tooltip": "Focal length in mm (35mm equivalent). 0 = auto (defaults to 30mm). Ignored if intrinsics provided."
-                }),
-                "output_prefix": ("STRING", {
-                    "default": "sharp",
-                    "tooltip": "Prefix for output PLY filename or folder name for batches."
-                }),
-                "extrinsics": ("EXTRINSICS", {
-                    "tooltip": "Camera extrinsics (from SamplePanorama). If batched, must match image batch size."
-                }),
-                "intrinsics": ("INTRINSICS", {
-                    "tooltip": "Camera intrinsics (from SamplePanorama). Overrides focal_length_mm if provided."
-                }),
-            }
-        }
+    def define_schema(cls):
+        return io.Schema(
+            node_id="SharpPredict",
+            display_name="SHARP Predict (Image to PLY)",
+            category="SHARP",
+            description="Generate 3D Gaussian Splatting PLY file(s) from image(s) using SHARP. Batch input creates a folder with numbered PLY files.",
+            is_output_node=True,
+            inputs=[
+                io.Custom("SHARP_MODEL_CONFIG").Input("model"),
+                io.Image.Input("image"),
+                io.Float.Input("focal_length_mm", default=30.0, min=0.0, max=500.0, step=0.1,
+                               optional=True,
+                               tooltip="Focal length in mm (35mm equivalent). 0 = auto (defaults to 30mm). Ignored if intrinsics provided."),
+                io.String.Input("output_prefix", default="sharp", optional=True,
+                                tooltip="Prefix for output PLY filename or folder name for batches."),
+                io.Custom("EXTRINSICS").Input("extrinsics", optional=True,
+                                             tooltip="Camera extrinsics (from SamplePanorama). If batched, must match image batch size."),
+                io.Custom("INTRINSICS").Input("intrinsics", optional=True,
+                                             tooltip="Camera intrinsics (from SamplePanorama). Overrides focal_length_mm if provided."),
+            ],
+            outputs=[
+                io.String.Output(display_name="ply_path"),
+                io.Custom("EXTRINSICS").Output(display_name="extrinsics"),
+                io.Custom("INTRINSICS").Output(display_name="intrinsics"),
+            ],
+        )
 
-    RETURN_TYPES = ("STRING", "EXTRINSICS", "INTRINSICS",)
-    RETURN_NAMES = ("ply_path", "extrinsics", "intrinsics",)
-    FUNCTION = "predict"
-    CATEGORY = "SHARP"
-    OUTPUT_NODE = True
-    DESCRIPTION = "Generate 3D Gaussian Splatting PLY file(s) from image(s) using SHARP. Batch input creates a folder with numbered PLY files."
-
+    @classmethod
     @torch.no_grad()
-    def predict(
-        self,
+    def execute(
+        cls,
         model,
         image: torch.Tensor,
         focal_length_mm: float = 0.0,
@@ -96,15 +104,13 @@ class SharpPredict:
         """
         import comfy.model_management
         import comfy.utils
+        from .load_model import _load_sharp_model
         from .sharp.gaussians import save_ply, unproject_gaussians
 
-        # model is a ModelPatcher from LoadSharpModel
-        # Estimate activation memory: SPN processes 35 patches through ViT at 1536x1536
-        dtype = model.model.dtype if hasattr(model.model, 'dtype') else torch.float32
-        memory_required = (1536 * 1536 * 6) * comfy.model_management.dtype_size(dtype)
-        comfy.model_management.load_models_gpu([model], memory_required=memory_required)
-        predictor = model.model
-        device = model.load_device
+        # model is a config dict from LoadSharpModel — load on-demand
+        patcher = _load_sharp_model(model)
+        predictor = patcher.model
+        device = patcher.load_device
 
         # Handle batch dimension
         if image.dim() == 3:
@@ -175,8 +181,8 @@ class SharpPredict:
 
             # Run inference with caching
             log.info(f"Running inference on image {i+1}/{batch_size}...")
-            gaussians = self._predict_image_cached(
-                predictor, image_np, f_px, device,
+            gaussians = _predict_image_cached(
+                patcher, predictor, image_np, f_px, device,
                 extrinsics=img_extrinsics,
                 intrinsics=img_intrinsics,
             )
@@ -205,125 +211,132 @@ class SharpPredict:
         if is_batch:
             # For batch: return folder path, and first image's camera params
             # (assuming all images have same camera - user can override)
-            return (output_path, all_extrinsics[0], all_intrinsics[0],)
+            return io.NodeOutput(output_path, all_extrinsics[0], all_intrinsics[0])
         else:
             # For single image: return PLY path and camera params
-            return (output_path, all_extrinsics[0], all_intrinsics[0],)
+            return io.NodeOutput(output_path, all_extrinsics[0], all_intrinsics[0])
 
-    def _predict_image_cached(
-        self,
-        predictor,
-        image: np.ndarray,
-        f_px: float,
-        device: torch.device,
-        extrinsics: torch.Tensor = None,
-        intrinsics: torch.Tensor = None,
-    ):
-        """Predict Gaussians with caching of encoded features.
 
-        The expensive encode step is cached per image.
-        Changing focal_length reuses cached features (instant).
+def _predict_image_cached(
+    patcher,
+    predictor,
+    image: np.ndarray,
+    f_px: float,
+    device: torch.device,
+    extrinsics: torch.Tensor = None,
+    intrinsics: torch.Tensor = None,
+):
+    """Predict Gaussians with caching of encoded features.
 
-        Args:
-            predictor: SHARP predictor model
-            image: Input image as numpy array [H, W, 3]
-            f_px: Focal length in pixels
-            device: Torch device
-            extrinsics: Optional 4x4 camera extrinsics (world-to-camera)
-            intrinsics: Optional 4x4 camera intrinsics
-        """
-        global _encode_cache
-        import comfy.model_management
-        from .sharp.gaussians import unproject_gaussians
+    The expensive encode step is cached per image.
+    Changing focal_length reuses cached features (instant).
 
-        internal_shape = (1536, 1536)
-        height, width = image.shape[:2]
+    Args:
+        patcher: ComfyUI ModelPatcher wrapping the predictor
+        predictor: SHARP predictor model
+        image: Input image as numpy array [H, W, 3]
+        f_px: Focal length in pixels
+        device: Torch device
+        extrinsics: Optional 4x4 camera extrinsics (world-to-camera)
+        intrinsics: Optional 4x4 camera intrinsics
+    """
+    global _encode_cache
+    import comfy.model_management
+    from .sharp.gaussians import unproject_gaussians
 
-        # Compute image hash for cache
-        image_hash = _compute_image_hash(image)
+    internal_shape = (1536, 1536)
 
-        # Check cache
-        if _encode_cache["image_hash"] == image_hash:
-            # Cache hit - reuse encoded features
-            log.info("Cache hit - reusing encoded features (focal_length change is instant)")
-            monodepth_output = _encode_cache["monodepth_output"]
-            image_resized_pt = _encode_cache["image_resized"]
-        else:
-            # Cache miss - need to encode
-            log.info("Encoding...")
+    # Load to GPU with dynamic memory budget based on input shape
+    input_shape = [1, 3, internal_shape[0], internal_shape[1]]
+    memory_required = patcher.memory_required(input_shape)
+    comfy.model_management.load_models_gpu([patcher], memory_required=memory_required)
+    height, width = image.shape[:2]
 
-            # Clear old cache
-            _encode_cache["image_hash"] = None
-            _encode_cache["monodepth_output"] = None
-            _encode_cache["image_resized"] = None
-            _encode_cache["original_shape"] = None
+    # Compute image hash for cache
+    image_hash = _compute_image_hash(image)
 
-            # Convert to tensor and normalize
-            image_pt = torch.from_numpy(image.copy()).float().to(device).permute(2, 0, 1) / 255.0
+    # Check cache
+    if _encode_cache["image_hash"] == image_hash:
+        # Cache hit - reuse encoded features
+        log.info("Cache hit - reusing encoded features (focal_length change is instant)")
+        monodepth_output = _monodepth_to(_encode_cache["monodepth_output"], device)
+        image_resized_pt = _encode_cache["image_resized"].to(device)
+    else:
+        # Cache miss - need to encode
+        log.info("Encoding...")
 
-            # Resize to internal resolution
-            image_resized_pt = F.interpolate(
-                image_pt[None],
-                size=(internal_shape[1], internal_shape[0]),
-                mode="bilinear",
-                align_corners=True,
-            )
+        # Clear old cache
+        _encode_cache["image_hash"] = None
+        _encode_cache["monodepth_output"] = None
+        _encode_cache["image_resized"] = None
+        _encode_cache["original_shape"] = None
 
-            # Encode
-            encode_start = time.time()
-            monodepth_output, _ = predictor.encode(image_resized_pt)
-            log.info(f"Encode time: {time.time() - encode_start:.2f}s")
+        # Convert to tensor and normalize
+        image_pt = torch.from_numpy(image.copy()).float().to(device).permute(2, 0, 1) / 255.0
 
-            # Release fragmented GPU memory after heavy encode (35 ViT passes)
-            comfy.model_management.soft_empty_cache()
-
-            # Update cache
-            _encode_cache["image_hash"] = image_hash
-            _encode_cache["monodepth_output"] = monodepth_output
-            _encode_cache["image_resized"] = image_resized_pt
-            _encode_cache["original_shape"] = (height, width)
-
-        # Decode - always run with current focal length
-        disparity_factor = torch.tensor([f_px / width]).float().to(device)
-
-        decode_start = time.time()
-        gaussians_ndc = predictor.decode(monodepth_output, image_resized_pt, disparity_factor)
-        log.info(f"Decode time: {time.time() - decode_start:.2f}s")
-
-        # Build intrinsics for unprojection (use provided or construct from f_px)
-        if intrinsics is not None:
-            unproj_intrinsics = intrinsics.clone()
-        else:
-            unproj_intrinsics = (
-                torch.tensor(
-                    [
-                        [f_px, 0, width / 2, 0],
-                        [0, f_px, height / 2, 0],
-                        [0, 0, 1, 0],
-                        [0, 0, 0, 1],
-                    ]
-                )
-                .float()
-                .to(device)
-            )
-
-        # Scale intrinsics to internal resolution
-        intrinsics_resized = unproj_intrinsics.clone()
-        intrinsics_resized[0] *= internal_shape[0] / width
-        intrinsics_resized[1] *= internal_shape[1] / height
-
-        # Use provided extrinsics or identity
-        if extrinsics is not None:
-            unproj_extrinsics = extrinsics
-        else:
-            unproj_extrinsics = torch.eye(4, device=device)
-
-        # Convert Gaussians to world/metric space
-        gaussians = unproject_gaussians(
-            gaussians_ndc, unproj_extrinsics, intrinsics_resized, internal_shape
+        # Resize to internal resolution
+        image_resized_pt = F.interpolate(
+            image_pt[None],
+            size=(internal_shape[1], internal_shape[0]),
+            mode="bilinear",
+            align_corners=True,
         )
 
-        return gaussians
+        # Encode
+        encode_start = time.time()
+        monodepth_output, _ = predictor.encode(image_resized_pt)
+        log.info(f"Encode time: {time.time() - encode_start:.2f}s")
+
+        # Update cache (store on CPU to free VRAM)
+        _encode_cache["image_hash"] = image_hash
+        _encode_cache["monodepth_output"] = _monodepth_to(monodepth_output, "cpu")
+        _encode_cache["image_resized"] = image_resized_pt.cpu()
+        _encode_cache["original_shape"] = (height, width)
+
+        # Release fragmented GPU memory after heavy encode (35 ViT passes)
+        comfy.model_management.soft_empty_cache()
+
+    # Decode - always run with current focal length
+    disparity_factor = torch.tensor([f_px / width]).float().to(device)
+
+    decode_start = time.time()
+    gaussians_ndc = predictor.decode(monodepth_output, image_resized_pt, disparity_factor)
+    log.info(f"Decode time: {time.time() - decode_start:.2f}s")
+
+    # Build intrinsics for unprojection (use provided or construct from f_px)
+    if intrinsics is not None:
+        unproj_intrinsics = intrinsics.clone()
+    else:
+        unproj_intrinsics = (
+            torch.tensor(
+                [
+                    [f_px, 0, width / 2, 0],
+                    [0, f_px, height / 2, 0],
+                    [0, 0, 1, 0],
+                    [0, 0, 0, 1],
+                ]
+            )
+            .float()
+            .to(device)
+        )
+
+    # Scale intrinsics to internal resolution
+    intrinsics_resized = unproj_intrinsics.clone()
+    intrinsics_resized[0] *= internal_shape[0] / width
+    intrinsics_resized[1] *= internal_shape[1] / height
+
+    # Use provided extrinsics or identity
+    if extrinsics is not None:
+        unproj_extrinsics = extrinsics
+    else:
+        unproj_extrinsics = torch.eye(4, device=device)
+
+    # Convert Gaussians to world/metric space
+    gaussians = unproject_gaussians(
+        gaussians_ndc, unproj_extrinsics, intrinsics_resized, internal_shape
+    )
+
+    return gaussians
 
 
 NODE_CLASS_MAPPINGS = {

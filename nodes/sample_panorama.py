@@ -10,6 +10,8 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
+from comfy_api.latest import io
+
 log = logging.getLogger("sharp")
 
 
@@ -145,56 +147,43 @@ def sample_perspective_from_equirectangular(
     return perspective, extrinsics, intrinsics
 
 
-class SamplePanorama:
+class SamplePanorama(io.ComfyNode):
     """Sample perspective cutouts from an equirectangular panorama.
 
     Automatically calculates the number of samples needed to cover the full
-    360° x 180° panorama based on FOV and overlap settings.
+    360 x 180 panorama based on FOV and overlap settings.
     """
 
     @classmethod
-    def INPUT_TYPES(cls):
-        return {
-            "required": {
-                "panorama": ("IMAGE",),
-                "fov_degrees": ("FLOAT", {
-                    "default": 65.0,
-                    "min": 30.0,
-                    "max": 120.0,
-                    "step": 1.0,
-                    "tooltip": "Field of view in degrees for each perspective cutout"
-                }),
-                "overlap_percent": ("FLOAT", {
-                    "default": 10.0,
-                    "min": 0.0,
-                    "max": 50.0,
-                    "step": 1.0,
-                    "tooltip": "Overlap between adjacent samples as percentage of FOV"
-                }),
-                "output_size": ("INT", {
-                    "default": 1536,
-                    "min": 256,
-                    "max": 2048,
-                    "step": 64,
-                    "tooltip": "Output resolution for each perspective image (square). 1536 is SHARP's native resolution."
-                }),
-            },
-            "optional": {
-                "skip_poles": ("BOOLEAN", {
-                    "default": True,
-                    "tooltip": "Skip samples pointing straight up/down (often low quality in panoramas)"
-                }),
-            }
-        }
+    def define_schema(cls):
+        return io.Schema(
+            node_id="SamplePanorama",
+            display_name="Sample Panorama (Equirect -> Perspective)",
+            category="SHARP",
+            description="Sample perspective views from a 360 equirectangular panorama for SHARP processing.",
+            inputs=[
+                io.Image.Input("panorama"),
+                io.Float.Input("fov_degrees", default=65.0, min=30.0, max=120.0, step=1.0,
+                               tooltip="Field of view in degrees for each perspective cutout"),
+                io.Float.Input("overlap_percent", default=10.0, min=0.0, max=50.0, step=1.0,
+                               tooltip="Overlap between adjacent samples as percentage of FOV"),
+                io.Int.Input("output_size", default=1536, min=256, max=2048, step=64,
+                             tooltip="Output resolution for each perspective image (square). 1536 is SHARP's native resolution."),
+                io.Boolean.Input("skip_poles", default=True, optional=True,
+                                 tooltip="Skip samples pointing straight up/down (often low quality in panoramas)"),
+            ],
+            outputs=[
+                io.Image.Output(display_name="images"),
+                io.Custom("EXTRINSICS").Output(display_name="extrinsics"),
+                io.Custom("INTRINSICS").Output(display_name="intrinsics"),
+                io.Int.Output(display_name="num_horizontal"),
+                io.Int.Output(display_name="num_vertical"),
+            ],
+        )
 
-    RETURN_TYPES = ("IMAGE", "EXTRINSICS", "INTRINSICS", "INT", "INT")
-    RETURN_NAMES = ("images", "extrinsics", "intrinsics", "num_horizontal", "num_vertical")
-    FUNCTION = "sample"
-    CATEGORY = "SHARP"
-    DESCRIPTION = "Sample perspective views from a 360° equirectangular panorama for SHARP processing."
-
-    def sample(
-        self,
+    @classmethod
+    def execute(
+        cls,
         panorama: torch.Tensor,
         fov_degrees: float = 65.0,
         overlap_percent: float = 10.0,
@@ -212,10 +201,10 @@ class SamplePanorama:
         # Calculate number of samples needed
         num_horizontal = math.ceil(360 / step_degrees)
 
-        # For vertical, we cover -90° to +90° (180° total)
+        # For vertical, we cover -90 to +90 (180 total)
         # But if skip_poles, we limit to avoid extreme angles
         if skip_poles:
-            # Skip top and bottom 15°
+            # Skip top and bottom 15
             vertical_range = 150  # degrees
             vertical_start = -75  # degrees
         else:
@@ -270,7 +259,7 @@ class SamplePanorama:
 
         log.info(f"Output shape: {images_batch.shape}")
 
-        return (images_batch, extrinsics_batch, intrinsics, num_horizontal, num_vertical)
+        return io.NodeOutput(images_batch, extrinsics_batch, intrinsics, num_horizontal, num_vertical)
 
 
 NODE_CLASS_MAPPINGS = {

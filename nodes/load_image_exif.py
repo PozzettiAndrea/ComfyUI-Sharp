@@ -11,6 +11,8 @@ import numpy as np
 import torch
 from PIL import Image, ImageOps, ImageSequence, ExifTags, TiffTags
 
+from comfy_api.latest import io
+
 log = logging.getLogger("sharp")
 
 try:
@@ -89,7 +91,16 @@ def extract_focal_length_mm(img_pil: Image.Image, default_mm: float = 30.0) -> f
     return float(f_35mm)
 
 
-class LoadImageWithExif:
+def _get_image_files():
+    """Get sorted list of image files from ComfyUI input directory."""
+    if folder_paths is None:
+        return []
+    input_dir = folder_paths.get_input_directory()
+    files = [f for f in os.listdir(input_dir) if os.path.isfile(os.path.join(input_dir, f))]
+    return sorted(folder_paths.filter_files_content_types(files, ["image"]))
+
+
+class LoadImageWithExif(io.ComfyNode):
     """Load an image and extract focal length from EXIF metadata.
 
     Works like the standard ComfyUI LoadImage node but also outputs
@@ -97,36 +108,28 @@ class LoadImageWithExif:
     """
 
     @classmethod
-    def INPUT_TYPES(cls):
-        if folder_paths is None:
-            return {"required": {"image": ("STRING", {"default": ""})}}
+    def define_schema(cls):
+        return io.Schema(
+            node_id="LoadImageWithExif",
+            display_name="Load Image with EXIF (Focal Length)",
+            category="SHARP",
+            description="Load an image and extract focal length from EXIF metadata (35mm equivalent).",
+            inputs=[
+                io.Combo.Input("image", options=_get_image_files(),
+                               upload=io.UploadType.image),
+                io.Float.Input("default_focal_mm", default=30.0, min=1.0, max=500.0, step=0.1,
+                               optional=True,
+                               tooltip="Default focal length (35mm equiv) if not found in EXIF"),
+            ],
+            outputs=[
+                io.Image.Output(display_name="image"),
+                io.Mask.Output(display_name="mask"),
+                io.Float.Output(display_name="focal_length_mm"),
+            ],
+        )
 
-        input_dir = folder_paths.get_input_directory()
-        files = [f for f in os.listdir(input_dir) if os.path.isfile(os.path.join(input_dir, f))]
-        files = folder_paths.filter_files_content_types(files, ["image"])
-
-        return {
-            "required": {
-                "image": (sorted(files), {"image_upload": True}),
-            },
-            "optional": {
-                "default_focal_mm": ("FLOAT", {
-                    "default": 30.0,
-                    "min": 1.0,
-                    "max": 500.0,
-                    "step": 0.1,
-                    "tooltip": "Default focal length (35mm equiv) if not found in EXIF"
-                }),
-            }
-        }
-
-    RETURN_TYPES = ("IMAGE", "MASK", "FLOAT",)
-    RETURN_NAMES = ("image", "mask", "focal_length_mm",)
-    FUNCTION = "load_image"
-    CATEGORY = "SHARP"
-    DESCRIPTION = "Load an image and extract focal length from EXIF metadata (35mm equivalent)."
-
-    def load_image(self, image: str, default_focal_mm: float = 30.0):
+    @classmethod
+    def execute(cls, image: str, default_focal_mm: float = 30.0):
         """Load image and extract EXIF focal length."""
         if folder_paths is None:
             raise RuntimeError("ComfyUI folder_paths not available")
@@ -186,10 +189,11 @@ class LoadImageWithExif:
             output_image = output_images[0]
             output_mask = output_masks[0]
 
-        return (output_image, output_mask, focal_length_mm)
+        return io.NodeOutput(output_image, output_mask, focal_length_mm)
 
     @classmethod
-    def IS_CHANGED(cls, image, default_focal_mm=30.0):
+    def fingerprint_inputs(cls, **kwargs):
+        image = kwargs.get("image", "")
         if folder_paths is None:
             return image
         image_path = folder_paths.get_annotated_filepath(image)
@@ -199,7 +203,8 @@ class LoadImageWithExif:
         return m.digest().hex()
 
     @classmethod
-    def VALIDATE_INPUTS(cls, image, default_focal_mm=30.0):
+    def validate_inputs(cls, **kwargs):
+        image = kwargs.get("image", "")
         if folder_paths is None:
             return True
         if not folder_paths.exists_annotated_filepath(image):

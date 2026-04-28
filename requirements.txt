@@ -1,16 +1,2 @@
-comfy-env==0.2.10
-comfy-3d-viewers==0.2.32
-
-# Core dependencies for SHARP
-torch>=2.0.0
-numpy>=1.21.0
-pillow>=9.0.0
-
-
-# SHARP specific
-plyfile>=1.0.0
-pillow-heif>=0.10.0
-huggingface-hub>=0.16.0
-
-# Hugging Face transfer extension (faster downloads on Windows)
-hf_xet
+comfy-env==0.3.35
+comfy-3d-viewers==0.2.41

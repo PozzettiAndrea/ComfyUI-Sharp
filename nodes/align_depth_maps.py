@@ -12,6 +12,8 @@ from collections import deque
 import torch
 import torch.nn.functional as F
 
+from comfy_api.latest import io
+
 log = logging.getLogger("sharp")
 
 
@@ -557,7 +559,7 @@ def compute_global_alignments_optimized(
     return {i: (scales[i], 0.0) for i in range(num_views)}
 
 
-class AlignDepthMaps:
+class AlignDepthMaps(io.ComfyNode):
     """Global optimization-based scale alignment for multi-view depth maps.
 
     Aligns depth maps to remove seams caused by scale ambiguity in
@@ -566,36 +568,35 @@ class AlignDepthMaps:
     """
 
     @classmethod
-    def INPUT_TYPES(cls):
-        return {
-            "required": {
-                "depth_maps": ("IMAGE",),
-                "extrinsics": ("EXTRINSICS",),
-                "intrinsics": ("INTRINSICS",),
-            },
-            "optional": {
-                "method": (["global_optimization", "bfs_chain"], {
-                    "default": "global_optimization",
-                    "tooltip": "global_optimization: solve all scales jointly (recommended). bfs_chain: chain pairwise alignments (can drift)."
-                }),
-                "reference_view": ("INT", {
-                    "default": 0,
-                    "min": 0,
-                    "max": 999,
-                    "step": 1,
-                    "tooltip": "Index of the reference view (scale=1.0)"
-                }),
-            }
-        }
+    def define_schema(cls):
+        return io.Schema(
+            node_id="AlignDepthMaps",
+            display_name="Align Depth Maps (Global Optimization)",
+            category="SHARP",
+            description="Align depth maps using global optimization to remove seams from monocular depth estimation.",
+            inputs=[
+                io.Image.Input("depth_maps"),
+                io.Custom("EXTRINSICS").Input("extrinsics"),
+                io.Custom("INTRINSICS").Input("intrinsics"),
+                io.Combo.Input("method",
+                               options=["global_optimization", "bfs_chain"],
+                               default="global_optimization", optional=True,
+                               tooltip="global_optimization: solve all scales jointly (recommended). bfs_chain: chain pairwise alignments (can drift)."),
+                io.Int.Input("reference_view", default=0, min=0, max=999, step=1,
+                             optional=True,
+                             tooltip="Index of the reference view (scale=1.0)"),
+            ],
+            outputs=[
+                io.Image.Output(display_name="aligned_depth_maps"),
+                io.Custom("EXTRINSICS").Output(display_name="extrinsics"),
+                io.Custom("INTRINSICS").Output(display_name="intrinsics"),
+                io.String.Output(display_name="alignment_info"),
+            ],
+        )
 
-    RETURN_TYPES = ("IMAGE", "EXTRINSICS", "INTRINSICS", "STRING",)
-    RETURN_NAMES = ("aligned_depth_maps", "extrinsics", "intrinsics", "alignment_info",)
-    FUNCTION = "align"
-    CATEGORY = "SHARP"
-    DESCRIPTION = "Align depth maps using global optimization to remove seams from monocular depth estimation."
-
-    def align(
-        self,
+    @classmethod
+    def execute(
+        cls,
         depth_maps: torch.Tensor,
         extrinsics: torch.Tensor,
         intrinsics: torch.Tensor,
@@ -655,7 +656,7 @@ class AlignDepthMaps:
         if variation > 2.0:
             log.warning(f"Large scale variation ({variation:.2f}x) - alignment may be unreliable.")
 
-        return (aligned_batch, extrinsics, intrinsics, info_str,)
+        return io.NodeOutput(aligned_batch, extrinsics, intrinsics, info_str)
 
 
 NODE_CLASS_MAPPINGS = {

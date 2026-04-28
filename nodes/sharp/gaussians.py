@@ -12,7 +12,6 @@ from typing import Any, Literal, NamedTuple
 
 import numpy as np
 import torch
-from plyfile import PlyData
 
 from . import color_space as cs_utils
 from . import linalg
@@ -208,6 +207,7 @@ def convert_rgb_to_spherical_harmonics(rgb: torch.Tensor) -> torch.Tensor:
 
 def load_ply(path: Path) -> tuple[Gaussians3D, SceneMetaData]:
     """Loads a ply from a file."""
+    from plyfile import PlyData
     plydata = PlyData.read(path)
 
     vertices = next(filter(lambda x: x.name == "vertex", plydata.elements))

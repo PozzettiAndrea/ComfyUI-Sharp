@@ -11,12 +11,13 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
+from comfy_api.latest import io
 from .utils.image import comfy_to_numpy_rgb
 
 log = logging.getLogger("sharp")
 
 
-class SharpPredictDepth:
+class SharpPredictDepth(io.ComfyNode):
     """Run SHARP inference to generate depth maps from images.
 
     Unlike SharpPredict which outputs PLY files, this node outputs
@@ -24,34 +25,34 @@ class SharpPredictDepth:
     """
 
     @classmethod
-    def INPUT_TYPES(cls):
-        return {
-            "required": {
-                "model": ("SHARP_MODEL",),
-                "image": ("IMAGE",),
-            },
-            "optional": {
-                "extrinsics": ("EXTRINSICS", {
-                    "tooltip": "Camera extrinsics (from SamplePanorama). Passed through for pipeline."
-                }),
-                "intrinsics": ("INTRINSICS", {
-                    "tooltip": "Camera intrinsics (from SamplePanorama). Used for depth scale."
-                }),
-                "reference_depth": ("IMAGE", {
-                    "tooltip": "Reference depth maps (e.g., from DepthAnythingV3) for dense alignment. Must match image batch size."
-                }),
-            }
-        }
+    def define_schema(cls):
+        return io.Schema(
+            node_id="SharpPredictDepth",
+            display_name="SHARP Predict Depth",
+            category="SHARP",
+            description="Generate depth maps from images using SHARP. Optionally align to reference depth (e.g., DepthAnythingV3) using learned dense alignment.",
+            inputs=[
+                io.Custom("SHARP_MODEL_CONFIG").Input("model"),
+                io.Image.Input("image"),
+                io.Custom("EXTRINSICS").Input("extrinsics", optional=True,
+                                             tooltip="Camera extrinsics (from SamplePanorama). Passed through for pipeline."),
+                io.Custom("INTRINSICS").Input("intrinsics", optional=True,
+                                             tooltip="Camera intrinsics (from SamplePanorama). Used for depth scale."),
+                io.Image.Input("reference_depth", optional=True,
+                               tooltip="Reference depth maps (e.g., from DepthAnythingV3) for dense alignment. Must match image batch size."),
+            ],
+            outputs=[
+                io.Image.Output(display_name="depth_maps"),
+                io.Custom("EXTRINSICS").Output(display_name="extrinsics"),
+                io.Custom("INTRINSICS").Output(display_name="intrinsics"),
+                io.Image.Output(display_name="alignment_maps"),
+            ],
+        )
 
-    RETURN_TYPES = ("IMAGE", "EXTRINSICS", "INTRINSICS", "IMAGE",)
-    RETURN_NAMES = ("depth_maps", "extrinsics", "intrinsics", "alignment_maps",)
-    FUNCTION = "predict_depth"
-    CATEGORY = "SHARP"
-    DESCRIPTION = "Generate depth maps from images using SHARP. Optionally align to reference depth (e.g., DepthAnythingV3) using learned dense alignment."
-
+    @classmethod
     @torch.no_grad()
-    def predict_depth(
-        self,
+    def execute(
+        cls,
         model,
         image: torch.Tensor,
         extrinsics: torch.Tensor = None,
@@ -64,11 +65,12 @@ class SharpPredictDepth:
         If reference_depth is provided, uses SHARP's learned dense alignment.
         """
         import comfy.model_management
+        from .load_model import _load_sharp_model
 
-        # model is a ModelPatcher from LoadSharpModel
-        comfy.model_management.load_models_gpu([model])
-        predictor = model.model
-        device = model.load_device
+        # model is a config dict from LoadSharpModel — load on-demand
+        patcher = _load_sharp_model(model)
+        predictor = patcher.model
+        device = patcher.load_device
 
         # Handle batch dimension
         if image.dim() == 3:
@@ -98,6 +100,11 @@ class SharpPredictDepth:
         # SHARP processes at 1536x1536 internally
         # We output depth at native disparity resolution (1536x1536)
         internal_shape = (1536, 1536)
+
+        # Load to GPU with dynamic memory budget based on input shape
+        input_shape = [1, 3, internal_shape[0], internal_shape[1]]
+        memory_required = patcher.memory_required(input_shape)
+        comfy.model_management.load_models_gpu([patcher], memory_required=memory_required)
 
         all_depth_maps = []
         all_alignment_maps = []
@@ -250,7 +257,7 @@ class SharpPredictDepth:
                 intrinsics_scaled[1, 2] *= scale_factor  # cy
                 intrinsics = intrinsics_scaled
 
-        return (depth_maps_batch, extrinsics, intrinsics, alignment_maps_batch,)
+        return io.NodeOutput(depth_maps_batch, extrinsics, intrinsics, alignment_maps_batch)
 
 
 NODE_CLASS_MAPPINGS = {

@@ -11,6 +11,8 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
+from comfy_api.latest import io
+
 log = logging.getLogger("sharp")
 
 
@@ -582,7 +584,7 @@ def draw_sample_borders(
     return panorama_rgb
 
 
-class ProjectDepthToPanorama:
+class ProjectDepthToPanorama(io.ComfyNode):
     """Project depth maps from perspective views back to equirectangular panorama.
 
     Combines depth maps with blending and optional debug visualization.
@@ -590,51 +592,43 @@ class ProjectDepthToPanorama:
     """
 
     @classmethod
-    def INPUT_TYPES(cls):
-        return {
-            "required": {
-                "depth_maps": ("IMAGE",),
-                "extrinsics": ("EXTRINSICS",),
-                "intrinsics": ("INTRINSICS",),
-            },
-            "optional": {
-                "panorama_width": ("INT", {
-                    "default": 2048,
-                    "min": 512,
-                    "max": 8192,
-                    "step": 64,
-                    "tooltip": "Output panorama width (height = width/2)"
-                }),
-                "blend_mode": (["gaussian", "cosine", "quadratic", "linear", "feather", "none"], {
-                    "default": "gaussian",
-                    "tooltip": "Blending algorithm: gaussian (smoothest), cosine, quadratic, linear, feather (hard center), none"
-                }),
-                "show_borders": ("BOOLEAN", {
-                    "default": True,
-                    "tooltip": "Draw borders around sample regions for debugging"
-                }),
-                "border_color": (["red", "green", "blue", "white", "yellow"], {
-                    "default": "red",
-                    "tooltip": "Color for sample region borders"
-                }),
-                "disagreement_scale": ("FLOAT", {
-                    "default": 0.2,
-                    "min": 0.01,
-                    "max": 1.0,
-                    "step": 0.01,
-                    "tooltip": "Max relative disagreement for heatmap color scale (0.2 = 20%)"
-                }),
-            }
-        }
+    def define_schema(cls):
+        return io.Schema(
+            node_id="ProjectDepthToPanorama",
+            display_name="Project Depth to Panorama",
+            category="SHARP",
+            description="Project depth maps to panorama. Outputs disagreement heatmap showing where views mismatch (blue=good, red=bad).",
+            inputs=[
+                io.Image.Input("depth_maps"),
+                io.Custom("EXTRINSICS").Input("extrinsics"),
+                io.Custom("INTRINSICS").Input("intrinsics"),
+                io.Int.Input("panorama_width", default=2048, min=512, max=8192, step=64,
+                             optional=True,
+                             tooltip="Output panorama width (height = width/2)"),
+                io.Combo.Input("blend_mode",
+                               options=["gaussian", "cosine", "quadratic", "linear", "feather", "none"],
+                               default="gaussian", optional=True,
+                               tooltip="Blending algorithm: gaussian (smoothest), cosine, quadratic, linear, feather (hard center), none"),
+                io.Boolean.Input("show_borders", default=True, optional=True,
+                                 tooltip="Draw borders around sample regions for debugging"),
+                io.Combo.Input("border_color",
+                               options=["red", "green", "blue", "white", "yellow"],
+                               default="red", optional=True,
+                               tooltip="Color for sample region borders"),
+                io.Float.Input("disagreement_scale", default=0.2, min=0.01, max=1.0, step=0.01,
+                               optional=True,
+                               tooltip="Max relative disagreement for heatmap color scale (0.2 = 20%)"),
+            ],
+            outputs=[
+                io.Image.Output(display_name="panoramic_depth"),
+                io.Image.Output(display_name="debug_overlay"),
+                io.Image.Output(display_name="disagreement_heatmap"),
+            ],
+        )
 
-    RETURN_TYPES = ("IMAGE", "IMAGE", "IMAGE",)
-    RETURN_NAMES = ("panoramic_depth", "debug_overlay", "disagreement_heatmap",)
-    FUNCTION = "project"
-    CATEGORY = "SHARP"
-    DESCRIPTION = "Project depth maps to panorama. Outputs disagreement heatmap showing where views mismatch (blue=good, red=bad)."
-
-    def project(
-        self,
+    @classmethod
+    def execute(
+        cls,
         depth_maps: torch.Tensor,
         extrinsics: torch.Tensor,
         intrinsics: torch.Tensor,
@@ -704,7 +698,7 @@ class ProjectDepthToPanorama:
 
         log.info(f"Output shape: {panoramic_depth_out.shape}")
 
-        return (panoramic_depth_out, debug_overlay_out, disagreement_out,)
+        return io.NodeOutput(panoramic_depth_out, debug_overlay_out, disagreement_out)
 
 
 NODE_CLASS_MAPPINGS = {
