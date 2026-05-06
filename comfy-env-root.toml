@@ -1,2 +1,6 @@
 [node_reqs]
 ComfyUI-GeometryPack = "PozzettiAndrea/ComfyUI-GeometryPack"
+
+[dependencies]
+av = "*"
+ffmpeg = "*"
