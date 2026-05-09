@@ -1,0 +1,39 @@
+{
+  "models_dir": "/workspaces/Sharp-1642/ComfyUI/models",
+  "summary": {
+    "total_files": 4,
+    "total_size_bytes": 2809738548,
+    "total_size_human": "2.6 GB"
+  },
+  "folders": {
+    "sharp": {
+      "total_size_bytes": 2809738548,
+      "total_size_human": "2.6 GB",
+      "source": {
+        "type": "unknown"
+      },
+      "files": [
+        {
+          "path": "sharp_2572gikvuh.pt",
+          "size_bytes": 2809738232,
+          "size_human": "2.6 GB"
+        },
+        {
+          "path": ".cache/huggingface/CACHEDIR.TAG",
+          "size_bytes": 191,
+          "size_human": "191.0 B"
+        },
+        {
+          "path": ".cache/huggingface/download/sharp_2572gikvuh.pt.metadata",
+          "size_bytes": 124,
+          "size_human": "124.0 B"
+        },
+        {
+          "path": ".cache/huggingface/.gitignore",
+          "size_bytes": 1,
+          "size_human": "1.0 B"
+        }
+      ]
+    }
+  }
+}

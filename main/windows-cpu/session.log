@@ -1,0 +1,208 @@
+[00:00] Crash dump logging enabled: D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1140\windows-cpu\crash_dump.log
+[00:00] 
+[00:00] [1/3] REGISTRATION
+[00:00] ----------------------------------------
+[00:00] 
+[DEBUG] server=None, server_url=http://127.0.0.1:8188, api=None
+[00:00] 
+Connecting to existing server at http://127.0.0.1:8188...
+[00:00] Connecting to existing server at http://127.0.0.1:8188...
+[00:00] Connected to server! (attempt 1, 0.0s)
+[00:00] Checking for import errors in server logs...
+[00:00] No import errors detected
+[00:00] Found 834 registered nodes
+[00:00] [REGISTRATION] PASSED
+[00:00] 
+[00:00] [2/3] INSTANTIATION
+[00:00] ----------------------------------------
+[00:00] 
+[DEBUG] server=<comfy_test.comfyui.server.ExternalComfyUIServer object at 0x0000016E97EF9160>, server_url=http://127.0.0.1:8188, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x0000016E97EF92B0>
+[00:00] Testing node constructors...
+[00:03] All 8 node(s) instantiated successfully!
+[00:03] [INSTANTIATION] PASSED
+[00:03] 
+[00:03] [3/3] EXECUTION
+[00:03] ----------------------------------------
+[00:03] 
+[DEBUG] server=<comfy_test.comfyui.server.ExternalComfyUIServer object at 0x0000016E97EF9160>, server_url=http://127.0.0.1:8188, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x0000016E97EF92B0>
+[00:03] CPU runner - will execute 2 workflow(s)
+[00:03] Running 3 workflow(s) (all with videos)...
+[00:03] Starting headless browser...
+[00:04]   Downloading Mesa llvmpipe for Windows...
+[00:08]   Copied opengl32.dll to Chromium dir
+[00:08]   Copied libgallium_wgl.dll to Chromium dir
+[00:08]   Using Mesa llvmpipe (desktop GL) — multithreaded CPU rendering
+[00:10]   [1/3] SKIPPED (not in cpu list) pano.json
+[00:10] Capturing execution frames: sharp_basic.json
+[00:16]   Frame 1 saved (frame_000.jpg, t=0.0s)
+[00:16]   Validating workflow...
+[00:16]   Queuing workflow for execution...
+[00:19]   Frame 2 saved (frame_001.jpg, t=2.3s)
+[00:19]   [capture-periodic] freeze=5ms shot=151ms unfreeze=5ms saved=True
+[00:21]   Frame 3 saved (frame_002.jpg, t=4.6s)
+[00:21]   [capture-periodic] freeze=5ms shot=140ms unfreeze=6ms saved=True
+[00:23]   [capture-loop] iter=50 t=6.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=4.9/16.0GB (31%) swap=0.2/2.9GB (8%) cpu=44% browser_rss=0.69GB
+[00:29]   [capture-loop] iter=100 t=12.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=5.0/16.0GB (31%) swap=0.2/2.9GB (8%) cpu=71% browser_rss=0.69GB
+[00:32]   Frame 4 saved (frame_003.jpg, t=15.7s)
+[00:32]   [capture-periodic] freeze=35ms shot=216ms unfreeze=6ms saved=True
+[00:35]   Frame 5 saved (frame_004.jpg, t=18.1s)
+[00:35]   [capture-periodic] freeze=72ms shot=221ms unfreeze=47ms saved=True
+[00:36]   [capture-loop] iter=150 t=20.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=31 ram=6.4/16.0GB (40%) swap=0.2/2.9GB (8%) cpu=93% browser_rss=0.75GB
+[00:37]   Frame 6 saved (frame_005.jpg, t=20.5s)
+[00:37]   [capture-periodic] freeze=43ms shot=254ms unfreeze=6ms saved=True
+[00:39]   Frame 7 saved (frame_006.jpg, t=22.9s)
+[00:39]   [capture-periodic] freeze=4ms shot=155ms unfreeze=4ms saved=True
+[00:42]   Frame 8 saved (frame_007.jpg, t=25.2s)
+[00:42]   [capture-periodic] freeze=4ms shot=132ms unfreeze=6ms saved=True
+[00:43]   [capture-loop] iter=200 t=26.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=5.6/16.0GB (35%) swap=0.2/2.9GB (8%) cpu=80% browser_rss=0.75GB
+[00:49]   [capture-loop] iter=250 t=32.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.1/16.0GB (50%) swap=0.2/2.9GB (8%) cpu=42% browser_rss=0.74GB
+[00:55]   [capture-loop] iter=300 t=39.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=8.1/16.0GB (50%) swap=0.2/2.9GB (8%) cpu=89% browser_rss=0.68GB
+[01:01]   [capture-loop] iter=350 t=45.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.0/16.0GB (50%) swap=0.2/2.9GB (8%) cpu=92% browser_rss=0.68GB
+[01:08]   [capture-loop] iter=400 t=51.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=7.9/16.0GB (50%) swap=0.2/2.9GB (8%) cpu=93% browser_rss=0.68GB
+[01:14]   [capture-loop] iter=450 t=57.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.0/16.0GB (50%) swap=0.2/2.9GB (8%) cpu=91% browser_rss=0.66GB
+[01:20]   [capture-loop] iter=500 t=63.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.7/16.0GB (48%) swap=0.2/2.9GB (8%) cpu=93% browser_rss=0.64GB
+[01:26]   [capture-loop] iter=550 t=69.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.7/16.0GB (48%) swap=0.2/2.9GB (8%) cpu=92% browser_rss=0.65GB
+[01:32]   [capture-loop] iter=600 t=76.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.7/16.0GB (48%) swap=0.2/2.9GB (8%) cpu=92% browser_rss=0.64GB
+[01:38]   [capture-loop] iter=650 t=82.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=17 ram=7.8/16.0GB (48%) swap=0.2/2.9GB (8%) cpu=91% browser_rss=0.64GB
+[01:45]   [capture-loop] iter=700 t=88.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=14 ram=7.7/16.0GB (48%) swap=0.2/2.9GB (8%) cpu=92% browser_rss=0.65GB
+[01:51]   [capture-loop] iter=750 t=94.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.7/16.0GB (48%) swap=0.2/2.9GB (8%) cpu=90% browser_rss=0.65GB
+[01:57]   [capture-loop] iter=800 t=100.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=7.8/16.0GB (49%) swap=0.2/2.9GB (8%) cpu=93% browser_rss=0.64GB
+[02:03]   [capture-loop] iter=850 t=106.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=11 ram=7.8/16.0GB (49%) swap=0.2/2.9GB (8%) cpu=91% browser_rss=0.64GB
+[02:09]   [capture-loop] iter=900 t=112.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.9/16.0GB (50%) swap=0.2/2.9GB (8%) cpu=92% browser_rss=0.63GB
+[02:15]   [capture-loop] iter=950 t=119.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=8 ram=7.8/16.0GB (49%) swap=0.2/2.9GB (8%) cpu=92% browser_rss=0.63GB
+[02:21]   [capture-loop] iter=1000 t=125.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=15 ram=7.8/16.0GB (49%) swap=0.2/2.9GB (8%) cpu=91% browser_rss=0.62GB
+[02:27]   [capture-loop] iter=1050 t=131.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.8/16.0GB (49%) swap=0.2/2.9GB (8%) cpu=91% browser_rss=0.63GB
+[02:34]   [capture-loop] iter=1100 t=137.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=11 ram=7.8/16.0GB (49%) swap=0.2/2.9GB (8%) cpu=92% browser_rss=0.63GB
+[02:40]   [capture-loop] iter=1150 t=143.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.0/16.0GB (50%) swap=0.2/2.9GB (8%) cpu=91% browser_rss=0.62GB
+[02:46]   [capture-loop] iter=1200 t=149.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.8/16.0GB (49%) swap=0.2/2.9GB (8%) cpu=92% browser_rss=0.61GB
+[02:52]   [capture-loop] iter=1250 t=155.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=10 ram=7.8/16.0GB (49%) swap=0.2/2.9GB (8%) cpu=92% browser_rss=0.61GB
+[02:58]   [capture-loop] iter=1300 t=161.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=9 ram=7.8/16.0GB (49%) swap=0.2/2.9GB (8%) cpu=90% browser_rss=0.61GB
+[03:04]   [capture-loop] iter=1350 t=168.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=19 ram=7.8/16.0GB (49%) swap=0.2/2.9GB (8%) cpu=91% browser_rss=0.60GB
+[03:11]   [capture-loop] iter=1400 t=174.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=16 ram=7.7/16.0GB (48%) swap=0.4/2.9GB (13%) cpu=91% browser_rss=0.59GB
+[03:17]   [capture-loop] iter=1450 t=180.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=14 ram=7.6/16.0GB (47%) swap=0.5/2.9GB (17%) cpu=91% browser_rss=0.59GB
+[03:23]   [capture-loop] iter=1500 t=186.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.6/16.0GB (47%) swap=0.5/2.9GB (17%) cpu=90% browser_rss=0.58GB
+[03:29]   [capture-loop] iter=1550 t=192.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.6/16.0GB (47%) swap=0.5/2.9GB (17%) cpu=87% browser_rss=0.57GB
+[03:35]   [capture-loop] iter=1600 t=198.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.6/16.0GB (47%) swap=0.5/2.9GB (17%) cpu=82% browser_rss=0.56GB
+[03:41]   [capture-loop] iter=1650 t=204.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.8/16.0GB (49%) swap=0.5/2.9GB (17%) cpu=82% browser_rss=0.55GB
+[03:47]   [capture-loop] iter=1700 t=210.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.0/16.0GB (50%) swap=0.6/2.9GB (22%) cpu=84% browser_rss=0.54GB
+[03:53]   [capture-loop] iter=1750 t=216.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=8.5/16.0GB (53%) swap=0.6/2.9GB (22%) cpu=89% browser_rss=0.54GB
+[03:59]   [capture-loop] iter=1800 t=222.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.9/16.0GB (55%) swap=0.7/2.9GB (26%) cpu=89% browser_rss=0.53GB
+[04:05]   [capture-loop] iter=1850 t=228.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.9/16.0GB (56%) swap=0.7/2.9GB (26%) cpu=82% browser_rss=0.53GB
+[04:11]   [capture-loop] iter=1900 t=235.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=10.5/16.0GB (66%) swap=0.8/2.9GB (29%) cpu=84% browser_rss=0.52GB
+[04:17]   [capture-loop] iter=1950 t=240.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=10 ram=10.4/16.0GB (65%) swap=0.9/2.9GB (32%) cpu=82% browser_rss=0.51GB
+[04:23]   [capture-loop] iter=2000 t=246.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=13 ram=8.4/16.0GB (52%) swap=0.9/2.9GB (32%) cpu=82% browser_rss=0.49GB
+[04:29]   [capture-loop] iter=2050 t=253.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.9/16.0GB (62%) swap=1.2/2.9GB (41%) cpu=85% browser_rss=0.49GB
+[04:35]   [capture-loop] iter=2100 t=258.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.2/16.0GB (51%) swap=1.1/2.9GB (40%) cpu=79% browser_rss=0.47GB
+[04:41]   [capture-loop] iter=2150 t=264.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=9.1/16.0GB (57%) swap=1.3/2.9GB (44%) cpu=84% browser_rss=0.46GB
+[04:47]   [capture-loop] iter=2200 t=270.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.5/16.0GB (59%) swap=1.3/2.9GB (44%) cpu=84% browser_rss=0.44GB
+[04:53]   [capture-loop] iter=2250 t=276.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.8/16.0GB (55%) swap=1.3/2.9GB (44%) cpu=85% browser_rss=0.44GB
+[04:59]   [capture-loop] iter=2300 t=282.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.8/16.0GB (49%) swap=1.3/2.9GB (44%) cpu=85% browser_rss=0.42GB
+[05:05]   Frame 9 saved (frame_008.jpg, t=288.3s)
+[05:05]   [capture-periodic] freeze=4ms shot=127ms unfreeze=5ms saved=True
+[05:05]   [capture-loop] iter=2350 t=288.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.6/16.0GB (47%) swap=1.2/2.9GB (43%) cpu=59% browser_rss=0.44GB
+[05:11]   [capture-loop] iter=2400 t=294.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=7.8/16.0GB (49%) swap=1.2/2.9GB (43%) cpu=48% browser_rss=0.44GB
+[05:17]   [capture-loop] iter=2450 t=300.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=8.0/16.0GB (50%) swap=1.2/2.9GB (43%) cpu=49% browser_rss=0.44GB
+[05:17]   Node executed (1 total), capturing...
+[05:17]   Frame 10 saved (frame_009.jpg, t=300.7s)
+[05:17]   [capture-node] freeze=4ms shot=127ms unfreeze=0ms saved=True
+[05:17]   Execution complete (t=300.7s)
+[05:17]   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
+[05:17]   [3d-wait] Phase 1 done in 0.0s
+[05:17]   [3d-wait] Phase 2: iframes=1
+[05:17]   [3d-wait] iframe viewer_ready=False (matched 0 console logs)
+[05:17]   [3d-wait] Waiting for 'Loaded successfully' console message (timeout=60s)...
+[05:19]   [3d-wait] Got 'Loaded successfully' after 2.2s
+[05:20]   [3d-wait] Unfrozen in 0.175s, rendering for 5s...
+[05:29]   [3d-wait] JS halted via CDP after 10.0s
+[05:58]   [3d-wait] Re-frozen in 38.9s
+[05:58]   [3d-wait] Total 3D wait: 41.1s
+[05:58]   Captured 10 unique frames over 342.02s
+[05:58]   [debug] iframes: 1
+[05:58]   [debug]   iframe[0]: src=http://127.0.0.1:8188/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=177, canvas=1536x1024, rafFrozen=True
+[05:58]   [timing] trigger_3d_previews: 0.0s
+[06:01]   Saved high-quality screenshot: sharp_basic_executed.png
+[06:01]   [timing] final_screenshot: 0.3s
+[06:01] Capturing execution frames: sharp_exif.json
+[06:08]   Frame 1 saved (frame_000.jpg, t=0.0s)
+[06:08]   Validating workflow...
+[06:08]   Queuing workflow for execution...
+[06:10]   Frame 2 saved (frame_001.jpg, t=2.2s)
+[06:10]   [capture-periodic] freeze=5ms shot=141ms unfreeze=4ms saved=True
+[06:12]   Frame 3 saved (frame_002.jpg, t=4.5s)
+[06:12]   [capture-periodic] freeze=5ms shot=185ms unfreeze=4ms saved=True
+[06:13]   [capture-loop] iter=50 t=6.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=4.5/16.0GB (28%) swap=0.8/2.9GB (28%) cpu=79% browser_rss=0.67GB
+[06:17]   Frame 4 saved (frame_003.jpg, t=8.9s)
+[06:17]   [capture-periodic] freeze=8ms shot=151ms unfreeze=4ms saved=True
+[06:19]   Frame 5 saved (frame_004.jpg, t=11.2s)
+[06:19]   [capture-periodic] freeze=4ms shot=134ms unfreeze=4ms saved=True
+[06:19]   [capture-loop] iter=100 t=12.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.2/16.0GB (33%) swap=0.8/2.9GB (28%) cpu=54% browser_rss=0.60GB
+[06:25]   [capture-loop] iter=150 t=17.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=11 ram=7.4/16.0GB (46%) swap=0.8/2.9GB (28%) cpu=45% browser_rss=0.60GB
+[06:31]   [capture-loop] iter=200 t=23.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.5/16.0GB (47%) swap=0.8/2.9GB (28%) cpu=85% browser_rss=0.60GB
+[06:37]   [capture-loop] iter=250 t=29.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.5/16.0GB (47%) swap=0.8/2.9GB (28%) cpu=83% browser_rss=0.60GB
+[06:43]   [capture-loop] iter=300 t=35.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=8 ram=7.6/16.0GB (48%) swap=0.8/2.9GB (28%) cpu=84% browser_rss=0.60GB
+[06:49]   [capture-loop] iter=350 t=41.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.5/16.0GB (47%) swap=0.8/2.9GB (28%) cpu=85% browser_rss=0.60GB
+[06:55]   [capture-loop] iter=400 t=47.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.6/16.0GB (47%) swap=0.8/2.9GB (28%) cpu=84% browser_rss=0.60GB
+[07:01]   [capture-loop] iter=450 t=53.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=7.6/16.0GB (47%) swap=0.8/2.9GB (28%) cpu=82% browser_rss=0.60GB
+[07:07]   [capture-loop] iter=500 t=59.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.6/16.0GB (47%) swap=0.8/2.9GB (28%) cpu=83% browser_rss=0.60GB
+[07:13]   [capture-loop] iter=550 t=65.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.6/16.0GB (48%) swap=0.8/2.9GB (28%) cpu=82% browser_rss=0.60GB
+[07:19]   [capture-loop] iter=600 t=71.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.7/16.0GB (48%) swap=0.8/2.9GB (28%) cpu=81% browser_rss=0.60GB
+[07:25]   [capture-loop] iter=650 t=77.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.6/16.0GB (48%) swap=0.8/2.9GB (28%) cpu=84% browser_rss=0.59GB
+[07:31]   [capture-loop] iter=700 t=83.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.7/16.0GB (48%) swap=0.8/2.9GB (28%) cpu=83% browser_rss=0.60GB
+[07:37]   [capture-loop] iter=750 t=89.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.7/16.0GB (48%) swap=0.8/2.9GB (28%) cpu=82% browser_rss=0.59GB
+[07:43]   [capture-loop] iter=800 t=95.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=8 ram=7.7/16.0GB (48%) swap=0.8/2.9GB (28%) cpu=82% browser_rss=0.59GB
+[07:49]   [capture-loop] iter=850 t=101.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.7/16.0GB (48%) swap=0.8/2.9GB (28%) cpu=83% browser_rss=0.60GB
+[07:55]   [capture-loop] iter=900 t=107.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=7.7/16.0GB (48%) swap=0.8/2.9GB (28%) cpu=80% browser_rss=0.59GB
+[08:01]   [capture-loop] iter=950 t=113.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.8/16.0GB (48%) swap=0.8/2.9GB (28%) cpu=81% browser_rss=0.59GB
+[08:07]   [capture-loop] iter=1000 t=119.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.8/16.0GB (48%) swap=0.8/2.9GB (28%) cpu=83% browser_rss=0.59GB
+[08:13]   [capture-loop] iter=1050 t=125.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=9 ram=7.7/16.0GB (48%) swap=0.8/2.9GB (28%) cpu=83% browser_rss=0.59GB
+[08:19]   [capture-loop] iter=1100 t=131.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.8/16.0GB (49%) swap=0.8/2.9GB (28%) cpu=84% browser_rss=0.60GB
+[08:25]   [capture-loop] iter=1150 t=137.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.8/16.0GB (49%) swap=0.8/2.9GB (28%) cpu=82% browser_rss=0.60GB
+[08:31]   [capture-loop] iter=1200 t=143.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.8/16.0GB (49%) swap=0.8/2.9GB (28%) cpu=83% browser_rss=0.59GB
+[08:37]   [capture-loop] iter=1250 t=149.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=7.8/16.0GB (49%) swap=0.8/2.9GB (27%) cpu=83% browser_rss=0.59GB
+[08:43]   [capture-loop] iter=1300 t=155.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.5/16.0GB (47%) swap=0.8/2.9GB (27%) cpu=82% browser_rss=0.59GB
+[08:49]   [capture-loop] iter=1350 t=161.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=8.3/16.0GB (52%) swap=0.8/2.9GB (27%) cpu=86% browser_rss=0.60GB
+[08:55]   [capture-loop] iter=1400 t=167.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=8 ram=8.6/16.0GB (54%) swap=0.8/2.9GB (27%) cpu=84% browser_rss=0.60GB
+[09:01]   [capture-loop] iter=1450 t=173.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.8/16.0GB (55%) swap=0.8/2.9GB (27%) cpu=86% browser_rss=0.59GB
+[09:07]   [capture-loop] iter=1500 t=179.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=12 ram=9.2/16.0GB (57%) swap=1.1/2.9GB (40%) cpu=86% browser_rss=0.57GB
+[09:13]   [capture-loop] iter=1550 t=185.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.2/16.0GB (58%) swap=1.1/2.9GB (40%) cpu=80% browser_rss=0.55GB
+[09:19]   [capture-loop] iter=1600 t=191.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=11.0/16.0GB (69%) swap=1.2/2.9GB (43%) cpu=79% browser_rss=0.54GB
+[09:25]   [capture-loop] iter=1650 t=197.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=11.0/16.0GB (69%) swap=1.2/2.9GB (43%) cpu=82% browser_rss=0.53GB
+[09:31]   [capture-loop] iter=1700 t=203.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.0/16.0GB (56%) swap=1.2/2.9GB (43%) cpu=82% browser_rss=0.52GB
+[09:37]   [capture-loop] iter=1750 t=209.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.3/16.0GB (52%) swap=1.2/2.9GB (43%) cpu=85% browser_rss=0.50GB
+[09:43]   [capture-loop] iter=1800 t=215.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.3/16.0GB (58%) swap=1.2/2.9GB (42%) cpu=84% browser_rss=0.50GB
+[09:49]   [capture-loop] iter=1850 t=221.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.8/16.0GB (55%) swap=1.3/2.9GB (46%) cpu=83% browser_rss=0.48GB
+[09:55]   [capture-loop] iter=1900 t=227.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=10.1/16.0GB (63%) swap=1.3/2.9GB (46%) cpu=84% browser_rss=0.46GB
+[10:01]   [capture-loop] iter=1950 t=233.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.0/16.0GB (56%) swap=1.3/2.9GB (46%) cpu=93% browser_rss=0.45GB
+[10:07]   [capture-loop] iter=2000 t=239.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.2/16.0GB (51%) swap=1.3/2.9GB (46%) cpu=90% browser_rss=0.45GB
+[10:12]   Frame 6 saved (frame_005.jpg, t=244.3s)
+[10:12]   [capture-periodic] freeze=5ms shot=187ms unfreeze=3ms saved=True
+[10:13]   [capture-loop] iter=2050 t=245.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=7.9/16.0GB (50%) swap=1.2/2.9GB (41%) cpu=72% browser_rss=0.46GB
+[10:14]   Frame 7 saved (frame_006.jpg, t=246.6s)
+[10:14]   [capture-periodic] freeze=7ms shot=135ms unfreeze=4ms saved=True
+[10:19]   [capture-loop] iter=2100 t=251.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=8.1/16.0GB (51%) swap=1.2/2.9GB (40%) cpu=52% browser_rss=0.44GB
+[10:20]   Node executed (1 total), capturing...
+[10:20]   Frame 8 saved (frame_007.jpg, t=252.8s)
+[10:20]   [capture-node] freeze=5ms shot=150ms unfreeze=0ms saved=True
+[10:20]   Execution complete (t=252.8s)
+[10:20]   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
+[10:20]   [3d-wait] Phase 1 done in 0.0s
+[10:20]   [3d-wait] Phase 2: iframes=1
+[10:20]   [3d-wait] iframe viewer_ready=False (matched 0 console logs)
+[10:20]   [3d-wait] Waiting for 'Loaded successfully' console message (timeout=60s)...
+[10:22]   [3d-wait] Got 'Loaded successfully' after 1.6s
+[10:22]   [3d-wait] Unfrozen in 0.165s, rendering for 5s...
+[10:37]   [3d-wait] JS halted via CDP after 14.7s
+[11:20]   [3d-wait] Re-frozen in 57.8s
+[11:20]   [3d-wait] Total 3D wait: 59.5s
+[11:20]   Captured 8 unique frames over 312.48s
+[11:20]   [debug] iframes: 1
+[11:20]   [debug]   iframe[0]: src=http://127.0.0.1:8188/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=177, canvas=3040x2022, rafFrozen=True
+[11:20]   [timing] trigger_3d_previews: 0.0s
+[11:22]   Saved high-quality screenshot: sharp_exif_executed.png
+[11:22]   [timing] final_screenshot: 0.3s
+[11:23] Results saved to D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1140\windows-cpu\results.json
+[11:23] Model report: 4 files, 2.6 GB -> D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1140\windows-cpu\models.json
+[11:23] Saved: D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1140\windows-cpu\index.html
+[11:23] [EXECUTION] PASSED
+[11:23] 
+windows: PASSED

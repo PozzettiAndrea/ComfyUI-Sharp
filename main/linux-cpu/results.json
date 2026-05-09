@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-05-09T11:47:50.339867+00:00",
+  "platform": "linux",
+  "hardware": {
+    "os": "Linux-6.17.0-1010-azure-x86_64-with-glibc2.39",
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
+  },
+  "commit_hash": "e9dd8d8858478b5744e05174889d143ed436106f",
+  "success": true,
+  "summary": {
+    "total": 3,
+    "passed": 2,
+    "failed": 0
+  },
+  "workflows": [
+    {
+      "name": "pano",
+      "status": "skipped",
+      "duration_seconds": 0,
+      "error": "Not configured for CPU runner",
+      "hardware": null
+    },
+    {
+      "name": "sharp_basic",
+      "status": "pass",
+      "duration_seconds": 408.44,
+      "error": null,
+      "hardware": {
+        "os": "Linux-6.17.0-1010-azure-x86_64-with-glibc2.39",
+        "cpu": "AMD EPYC 9V74 80-Core Processor"
+      },
+      "resources": {
+        "ram": {
+          "peak": 10.06,
+          "avg": 6.12
+        },
+        "total_ram_gb": 15.6,
+        "samples": 409
+      }
+    },
+    {
+      "name": "sharp_exif",
+      "status": "pass",
+      "duration_seconds": 412.94,
+      "error": null,
+      "hardware": {
+        "os": "Linux-6.17.0-1010-azure-x86_64-with-glibc2.39",
+        "cpu": "AMD EPYC 9V74 80-Core Processor"
+      },
+      "resources": {
+        "ram": {
+          "peak": 10.45,
+          "avg": 6.8
+        },
+        "total_ram_gb": 15.6,
+        "samples": 413
+      }
+    }
+  ]
+}

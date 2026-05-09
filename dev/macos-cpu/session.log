@@ -1,0 +1,137 @@
+[00:00] Crash dump logging enabled: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-1715/macos-cpu/crash_dump.log
+[00:00] 
+[00:00] [1/3] REGISTRATION
+[00:00] ----------------------------------------
+[00:00] 
+[DEBUG] server=None, server_url=http://127.0.0.1:8188, api=None
+[00:00] 
+Connecting to existing server at http://127.0.0.1:8188...
+[00:00] Connecting to existing server at http://127.0.0.1:8188...
+[00:00] Connected to server! (attempt 1, 0.0s)
+[00:00] Checking for import errors in server logs...
+[00:00] No import errors detected
+[00:00] Found 834 registered nodes
+[00:00] [REGISTRATION] PASSED
+[00:00] 
+[00:00] [2/3] INSTANTIATION
+[00:00] ----------------------------------------
+[00:00] 
+[DEBUG] server=<comfy_test.comfyui.server.ExternalComfyUIServer object at 0x104c4fdd0>, server_url=http://127.0.0.1:8188, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x10356c740>
+[00:00] Testing node constructors...
+[00:01] All 8 node(s) instantiated successfully!
+[00:01] [INSTANTIATION] PASSED
+[00:01] 
+[00:01] [3/3] EXECUTION
+[00:01] ----------------------------------------
+[00:01] 
+[DEBUG] server=<comfy_test.comfyui.server.ExternalComfyUIServer object at 0x104c4fdd0>, server_url=http://127.0.0.1:8188, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x10356c740>
+[00:01] CPU runner - will execute 2 workflow(s)
+[00:01] Running 3 workflow(s) (all with videos)...
+[00:01] Starting headless browser...
+[00:01]   macOS — using Apple Metal GPU via ANGLE
+[00:03]   [1/3] SKIPPED (not in cpu list) pano.json
+[00:03] Capturing execution frames: sharp_basic.json
+[00:12]   Frame 1 saved (frame_000.jpg, t=0.0s)
+[00:12]   Validating workflow...
+[00:12]   Queuing workflow for execution...
+[00:14]   Frame 2 saved (frame_001.jpg, t=2.7s)
+[00:14]   [capture-periodic] freeze=8ms shot=174ms unfreeze=22ms saved=True
+[00:16]   Frame 3 saved (frame_002.jpg, t=5.0s)
+[00:16]   [capture-periodic] freeze=3ms shot=200ms unfreeze=14ms saved=True
+[00:18]   [capture-loop] iter=50 t=6.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=3.8/7.0GB (60%) swap=0.0/0.0GB (0%) cpu=50% browser_rss=0.59GB
+[00:25]   Frame 4 saved (frame_003.jpg, t=12.4s)
+[00:25]   [capture-periodic] freeze=9ms shot=842ms unfreeze=220ms saved=True
+[00:27]   [capture-loop] iter=100 t=15.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=200 ram=3.6/7.0GB (63%) swap=0.0/0.0GB (0%) cpu=85% browser_rss=0.56GB
+[00:38]   Frame 5 saved (frame_004.jpg, t=25.9s)
+[00:38]   [capture-periodic] freeze=7ms shot=581ms unfreeze=15ms saved=True
+[00:39]   [capture-loop] iter=150 t=27.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=3.4/7.0GB (66%) swap=0.0/0.0GB (0%) cpu=89% browser_rss=0.56GB
+[00:40]   Frame 6 saved (frame_005.jpg, t=28.6s)
+[00:40]   [capture-periodic] freeze=6ms shot=318ms unfreeze=12ms saved=True
+[00:42]   Frame 7 saved (frame_006.jpg, t=31.0s)
+[00:42]   [capture-periodic] freeze=4ms shot=202ms unfreeze=21ms saved=True
+[00:49]   [capture-loop] iter=200 t=38.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=16 ram=2.3/7.0GB (82%) swap=0.0/0.0GB (0%) cpu=58% browser_rss=0.22GB
+[00:56]   [capture-loop] iter=250 t=45.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=4.9/7.0GB (81%) swap=0.5/1.0GB (46%) cpu=53% browser_rss=0.22GB
+[01:07]   [capture-loop] iter=300 t=55.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=12 ram=5.7/7.0GB (92%) swap=0.5/1.0GB (46%) cpu=22% browser_rss=0.23GB
+[01:19]   Frame 8 saved (frame_007.jpg, t=61.7s)
+[01:19]   [capture-periodic] freeze=3ms shot=5638ms unfreeze=38ms saved=True
+[01:21]   Frame 9 saved (frame_008.jpg, t=69.5s)
+[01:21]   [capture-periodic] freeze=3ms shot=351ms unfreeze=12ms saved=True
+[01:42]   Frame 10 saved (frame_009.jpg, t=72.0s)
+[01:42]   [capture-periodic] freeze=3ms shot=17560ms unfreeze=485ms saved=True
+[01:42]   [capture-loop] iter=350 t=90.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=70 ram=3.5/7.0GB (78%) swap=4.1/5.0GB (83%) cpu=42% browser_rss=0.15GB
+[01:50]   Frame 11 saved (frame_010.jpg, t=92.8s)
+[01:50]   [capture-periodic] freeze=6ms shot=6047ms unfreeze=253ms saved=True
+[02:02]   Frame 12 saved (frame_011.jpg, t=101.4s)
+[02:02]   [capture-periodic] freeze=33ms shot=8856ms unfreeze=22ms saved=True
+[02:03]   [capture-loop] iter=400 t=112.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=4.1/7.0GB (90%) swap=4.0/5.0GB (80%) cpu=44% browser_rss=0.19GB
+[02:13]   Frame 13 saved (frame_012.jpg, t=112.3s)
+[02:13]   [capture-periodic] freeze=3ms shot=8907ms unfreeze=58ms saved=True
+[02:19]   [capture-loop] iter=450 t=128.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=4.3/7.0GB (83%) swap=6.0/7.0GB (86%) cpu=50% browser_rss=0.21GB
+[02:25]   Frame 14 saved (frame_013.jpg, t=133.1s)
+[02:25]   [capture-periodic] freeze=3ms shot=413ms unfreeze=6ms saved=True
+[02:26]   [capture-loop] iter=500 t=134.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=3.1/7.0GB (71%) swap=6.0/7.0GB (85%) cpu=42% browser_rss=0.23GB
+[02:27]   Frame 15 saved (frame_014.jpg, t=135.7s)
+[02:27]   [capture-periodic] freeze=2ms shot=236ms unfreeze=41ms saved=True
+[02:32]   Node executed (1 total), capturing...
+[02:32]   Frame 16 saved (frame_015.jpg, t=140.6s)
+[02:32]   [capture-node] freeze=30ms shot=268ms unfreeze=0ms saved=True
+[02:32]   Execution complete (t=140.6s)
+[02:32]   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
+[02:32]   [3d-wait] Phase 1 done in 0.0s
+[02:32]   [3d-wait] Phase 2: iframes=1
+[02:32]   [3d-wait] iframe viewer_ready=False (matched 0 console logs)
+[02:32]   [3d-wait] Waiting for 'Loaded successfully' console message (timeout=60s)...
+[02:38]   [3d-wait] Got 'Loaded successfully' after 5.5s
+[02:38]   [3d-wait] Unfrozen in 0.295s, rendering for 5s...
+[02:43]   [3d-wait] JS halted via CDP after 5.5s
+[02:44]   [3d-wait] Re-frozen in 6.7s
+[02:44]   [3d-wait] Total 3D wait: 12.1s
+[02:44]   Captured 16 unique frames over 153.12s
+[02:44]   [debug] iframes: 1
+[02:44]   [debug]   iframe[0]: src=http://127.0.0.1:8188/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=177, canvas=1536x1024, rafFrozen=True
+[02:44]   [timing] trigger_3d_previews: 0.0s
+[02:47]   Saved high-quality screenshot: sharp_basic_executed.png
+[02:47]   [timing] final_screenshot: 0.5s
+[02:47] Capturing execution frames: sharp_exif.json
+[02:55]   Frame 1 saved (frame_000.jpg, t=0.0s)
+[02:55]   Validating workflow...
+[02:55]   Queuing workflow for execution...
+[02:59]   Frame 2 saved (frame_001.jpg, t=2.5s)
+[02:59]   [capture-periodic] freeze=14ms shot=1571ms unfreeze=8ms saved=True
+[03:18]   Frame 3 saved (frame_002.jpg, t=6.3s)
+[03:18]   [capture-periodic] freeze=3ms shot=17694ms unfreeze=56ms saved=True
+[03:20]   [capture-loop] iter=50 t=25.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=13 ram=5.6/7.0GB (93%) swap=1.3/2.0GB (64%) cpu=41% browser_rss=0.28GB
+[03:58]   [capture-loop] iter=100 t=64.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=3.5/7.0GB (88%) swap=4.4/5.0GB (88%) cpu=42% browser_rss=0.15GB
+[04:28]   [capture-loop] iter=150 t=93.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=3.6/7.0GB (90%) swap=5.2/6.0GB (87%) cpu=49% browser_rss=0.16GB
+[04:41]   Frame 4 saved (frame_003.jpg, t=105.5s)
+[04:41]   [capture-periodic] freeze=17ms shot=419ms unfreeze=17ms saved=True
+[04:41]   [capture-loop] iter=200 t=106.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=4.0/7.0GB (81%) swap=6.3/7.0GB (91%) cpu=45% browser_rss=0.24GB
+[04:45]   Frame 5 saved (frame_004.jpg, t=108.2s)
+[04:45]   [capture-periodic] freeze=28ms shot=1777ms unfreeze=43ms saved=True
+[04:50]   [capture-loop] iter=250 t=115.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=2.2/7.0GB (82%) swap=6.6/7.0GB (94%) cpu=54% browser_rss=0.24GB
+[04:53]   Node executed (1 total), capturing...
+[04:54]   Frame 6 saved (frame_005.jpg, t=119.0s)
+[04:54]   [capture-node] freeze=4ms shot=347ms unfreeze=0ms saved=True
+[04:54]   Execution complete (t=119.0s)
+[04:54]   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
+[04:54]   [3d-wait] Phase 1 done in 0.0s
+[04:54]   [3d-wait] Phase 2: iframes=1
+[04:54]   [3d-wait] iframe viewer_ready=False (matched 0 console logs)
+[04:54]   [3d-wait] Waiting for 'Loaded successfully' console message (timeout=60s)...
+[04:58]   [3d-wait] Got 'Loaded successfully' after 3.8s
+[04:58]   [3d-wait] Unfrozen in 0.229s, rendering for 5s...
+[05:03]   [3d-wait] JS halted via CDP after 5.3s
+[05:04]   [3d-wait] Re-frozen in 6.5s
+[05:04]   [3d-wait] Total 3D wait: 10.3s
+[05:04]   Captured 6 unique frames over 129.77s
+[05:04]   [debug] iframes: 1
+[05:04]   [debug]   iframe[0]: src=http://127.0.0.1:8188/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=177, canvas=3040x2022, rafFrozen=True
+[05:04]   [timing] trigger_3d_previews: 0.0s
+[05:07]   Saved high-quality screenshot: sharp_exif_executed.png
+[05:07]   [timing] final_screenshot: 0.5s
+[05:08] Results saved to /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-1715/macos-cpu/results.json
+[05:08] Model report: 4 files, 2.6 GB -> /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-1715/macos-cpu/models.json
+[05:08] Saved: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-1715/macos-cpu/index.html
+[05:08] [EXECUTION] PASSED
+[05:08] 
+macos: PASSED

@@ -1,0 +1,35 @@
+Capturing execution frames: pano.json
+  [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+  [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+  [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+  [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+  [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+  [Console-warning] WARNING: Multiple instances of Three.js being imported.
+  [Console-warning] [ComfyUI Deprecated] Importing from "scripts/ui.js" is deprecated and will be removed in v1.34.
+  [Console-warning] [MaskEditor] ComfyApp.open_maskeditor is deprecated. Plugins should migrate to using the command system or direct node context menu integration.
+  [Console-warning] [ComfyUI Deprecated] Importing from "scripts/ui/components/buttonGroup.js" is deprecated and will be removed in v1.34.
+  [Console-warning] [ComfyUI Deprecated] Importing from "scripts/ui/components/button.js" is deprecated and will be removed in v1.34.
+  Frame 1 saved (frame_000.jpg, t=0.0s)
+  Validating workflow...
+  Queuing workflow for execution...
+  Frame 2 saved (frame_001.jpg, t=2.9s)
+  Frame 3 saved (frame_002.jpg, t=21.0s)
+  Node executed (1 total), capturing...
+  Frame 4 saved (frame_003.jpg, t=23.7s)
+  Frame 5 saved (frame_004.jpg, t=82.8s)
+  Frame 6 saved (frame_005.jpg, t=126.9s)
+  Node executed (2 total), capturing...
+  Frame 7 saved (frame_006.jpg, t=141.8s)
+  Node executed (4 total), capturing...
+  Frame 8 saved (frame_007.jpg, t=143.0s)
+  Frame 9 saved (frame_008.jpg, t=200.3s)
+  Frame 10 saved (frame_009.jpg, t=213.5s)
+  Node executed (6 total), capturing...
+  Frame 11 saved (frame_010.jpg, t=214.5s)
+  Execution complete (t=214.5s)
+  Captured 11 unique frames over 215.31s
+  [debug] iframes: 0
+  [timing] trigger_3d_previews: 4.1s
+  Saved high-quality screenshot: pano_executed.png
+  [timing] final_screenshot: 2.5s
+    Captured 12 video frames

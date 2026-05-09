@@ -1,0 +1,39 @@
+{
+  "models_dir": "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\ComfyUI\\models",
+  "summary": {
+    "total_files": 4,
+    "total_size_bytes": 2809738556,
+    "total_size_human": "2.6 GB"
+  },
+  "folders": {
+    "sharp": {
+      "total_size_bytes": 2809738556,
+      "total_size_human": "2.6 GB",
+      "source": {
+        "type": "unknown"
+      },
+      "files": [
+        {
+          "path": "sharp_2572gikvuh.pt",
+          "size_bytes": 2809738232,
+          "size_human": "2.6 GB"
+        },
+        {
+          "path": ".cache\\huggingface\\CACHEDIR.TAG",
+          "size_bytes": 195,
+          "size_human": "195.0 B"
+        },
+        {
+          "path": ".cache\\huggingface\\download\\sharp_2572gikvuh.pt.metadata",
+          "size_bytes": 128,
+          "size_human": "128.0 B"
+        },
+        {
+          "path": ".cache\\huggingface\\.gitignore",
+          "size_bytes": 1,
+          "size_human": "1.0 B"
+        }
+      ]
+    }
+  }
+}

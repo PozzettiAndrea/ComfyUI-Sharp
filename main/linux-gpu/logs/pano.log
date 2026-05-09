@@ -1,0 +1,44 @@
+Capturing execution frames: pano.json
+  [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+  [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+  [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+  [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+  [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+  [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+  [Console-warning] WARNING: Multiple instances of Three.js being imported.
+  [Console-warning] [ComfyUI Deprecated] Importing from "scripts/ui.js" is deprecated and will be removed in v1.34.
+  [Console-warning] [MaskEditor] ComfyApp.open_maskeditor is deprecated. Plugins should migrate to using the command system or direct node context menu integration.
+  [Console-warning] [ComfyUI Deprecated] Importing from "scripts/ui/components/buttonGroup.js" is deprecated and will be removed in v1.34.
+  [Console-warning] [ComfyUI Deprecated] Importing from "scripts/ui/components/button.js" is deprecated and will be removed in v1.34.
+  Frame 1 saved (frame_000.jpg, t=0.0s)
+  Validating workflow...
+  Queuing workflow for execution...
+  Frame 2 saved (frame_001.jpg, t=4.8s)
+  Frame 3 saved (frame_002.jpg, t=11.5s)
+  Frame 4 saved (frame_003.jpg, t=45.9s)
+  Node executed (1 total), capturing...
+  Frame 5 saved (frame_004.jpg, t=53.9s)
+  Frame 6 saved (frame_005.jpg, t=192.6s)
+  Frame 7 saved (frame_006.jpg, t=275.5s)
+  Node executed (2 total), capturing...
+  Frame 8 saved (frame_007.jpg, t=291.9s)
+  Node executed (4 total), capturing...
+  Frame 9 saved (frame_008.jpg, t=295.6s)
+  Frame 10 saved (frame_009.jpg, t=353.3s)
+  Node executed (5 total), capturing...
+  Frame 11 saved (frame_010.jpg, t=366.7s)
+  Node executed (6 total), capturing...
+  Frame 12 saved (frame_011.jpg, t=370.5s)
+  Execution complete (t=370.5s)
+  [3d-wait] viewer_ready=False, matching_logs=[], total_console_logs=55
+  [3d-wait] Waiting for '[GaussianViewer] Loaded successfully' console message (timeout=60s)...
+  [3d-wait] Exception: Timeout 60000ms exceeded while waiting for event "console"
+=========================== logs ===========================
+waiting for event "console"
+============================================================
+  Captured 12 unique frames over 432.23s
+  [debug] iframes: 0
+  [timing] trigger_3d_previews: 0.1s
+  Saved high-quality screenshot: pano_executed.png
+  [timing] final_screenshot: 7.7s
+    Captured 13 video frames

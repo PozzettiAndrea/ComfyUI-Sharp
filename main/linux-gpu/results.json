@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-05-09T12:12:32.072926+00:00",
+  "platform": "linux",
+  "hardware": {
+    "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "gpu": "NVIDIA GeForce RTX 5060"
+  },
+  "commit_hash": "e9dd8d8858478b5744e05174889d143ed436106f",
+  "success": true,
+  "summary": {
+    "total": 3,
+    "passed": 2,
+    "failed": 0
+  },
+  "workflows": [
+    {
+      "name": "pano",
+      "status": "skipped",
+      "duration_seconds": 0,
+      "error": "Not configured for GPU runner",
+      "hardware": null
+    },
+    {
+      "name": "sharp_basic",
+      "status": "pass",
+      "duration_seconds": 316.13,
+      "error": null,
+      "hardware": {
+        "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
+        "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+        "gpu": "NVIDIA GeForce RTX 5060"
+      },
+      "resources": {
+        "ram": {
+          "peak": 8.88,
+          "avg": 7.8
+        },
+        "total_ram_gb": 31.3,
+        "samples": 304,
+        "vram": {
+          "peak": 5.63,
+          "avg": 3.87
+        }
+      }
+    },
+    {
+      "name": "sharp_exif",
+      "status": "pass",
+      "duration_seconds": 114.44,
+      "error": null,
+      "hardware": {
+        "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
+        "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+        "gpu": "NVIDIA GeForce RTX 5060"
+      },
+      "resources": {
+        "ram": {
+          "peak": 9.01,
+          "avg": 8.52
+        },
+        "total_ram_gb": 31.3,
+        "samples": 110,
+        "vram": {
+          "peak": 5.65,
+          "avg": 4.51
+        }
+      }
+    }
+  ]
+}
