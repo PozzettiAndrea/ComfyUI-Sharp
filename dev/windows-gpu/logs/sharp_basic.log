@@ -5,9 +5,9 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] === /validate endpoint called ===
   [ComfyUI] Received JSON with keys: ['prompt']
   [ComfyUI] Received JSON with keys: ['prompt']
-  [ComfyUI] Prompt has 4 nodes
-  [ComfyUI] Prompt has 4 nodes
   Queuing workflow for execution...
+  [ComfyUI] Prompt has 4 nodes
+  [ComfyUI] Prompt has 4 nodes
   [ComfyUI]   Node 1: LoadImage
   [ComfyUI]   Node 1: LoadImage
   [ComfyUI]     Inputs: {"image": "beach.jpg"}
@@ -24,8 +24,8 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI]   Node 5: SharpPredict
   [ComfyUI]     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
   [ComfyUI]     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
-  [ComfyUI] Generated prompt_id: 82078cd9-f4cc-4acb-976d-b405328564c8
-  [ComfyUI] Generated prompt_id: 82078cd9-f4cc-4acb-976d-b405328564c8
+  [ComfyUI] Generated prompt_id: 534ebaf9-a6ae-49fc-9bfc-e87848218df4
+  [ComfyUI] Generated prompt_id: 534ebaf9-a6ae-49fc-9bfc-e87848218df4
   [ComfyUI] Calling execution.validate_prompt()...
   [ComfyUI] Calling execution.validate_prompt()...
   [ComfyUI] Validation result: valid=True
@@ -36,31 +36,31 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] got prompt
   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
-  [ComfyUI] [comfy-env] SubprocessWorker: C:\workspaces\Sharp-0640\ComfyUI\.ce\.pixi\envs\sharp-nodes\python.exe
-  [ComfyUI] [comfy-env] SubprocessWorker: C:\workspaces\Sharp-0640\ComfyUI\.ce\.pixi\envs\sharp-nodes\python.exe
+  [ComfyUI] [comfy-env] SubprocessWorker: C:\workspaces\Sharp-1554\ComfyUI\.ce\.pixi\envs\sharp-nodes\python.exe
+  [ComfyUI] [comfy-env] SubprocessWorker: C:\workspaces\Sharp-1554\ComfyUI\.ce\.pixi\envs\sharp-nodes\python.exe
   [ComfyUI] [VRAM] Before LoadSharpModel: 1271 / 24575 MB
   [ComfyUI] [VRAM] Before LoadSharpModel: 1271 / 24575 MB
-  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': 'C:\\workspaces\\Sharp-0640\\ComfyUI'}
-  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': 'C:\\workspaces\\Sharp-0640\\ComfyUI'}
+  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': 'C:\\workspaces\\Sharp-1554\\ComfyUI'}
+  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': 'C:\\workspaces\\Sharp-1554\\ComfyUI'}
   [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
-  [ComfyUI] [ComfyUI-Sharp] python: C:\workspaces\Sharp-0640\ComfyUI\.ce\.pixi\envs\sharp-nodes\python.exe
-  [ComfyUI] [ComfyUI-Sharp] python: C:\workspaces\Sharp-0640\ComfyUI\.ce\.pixi\envs\sharp-nodes\python.exe
   [ComfyUI] [comfy-env] sharp-nodes: Library/bin has 234 DLLs
   [ComfyUI] [comfy-env] sharp-nodes: Library/bin has 234 DLLs
-  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['C:\\workspaces\\Sharp-0640\\ComfyUI', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\.ce\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
-  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['C:\\workspaces\\Sharp-0640\\ComfyUI', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\.ce\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
-  [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\workspaces\Sharp-0640\ComfyUI\.ce\.pixi\envs\sharp-nodes\python.exe
-  [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\workspaces\Sharp-0640\ComfyUI\.ce\.pixi\envs\sharp-nodes\python.exe
-  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\ContainerAdministrator\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\.ce\\pixi.toml', '-e', 'sharp-nodes', 'python', 'C:\\Users\\ContainerAdministrator\\AppData\\Local\\Temp\\comfyui_pvenv_5ae_jjwg\\persistent_worker.py', 'tcp://127.0.0.1:58478']...
-  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\ContainerAdministrator\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\.ce\\pixi.toml', '-e', 'sharp-nodes', 'python', 'C:\\Users\\ContainerAdministrator\\AppData\\Local\\Temp\\comfyui_pvenv_5ae_jjwg\\persistent_worker.py', 'tcp://127.0.0.1:58478']...
-  Frame 2 saved (frame_001.jpg, t=2.4s)
-  [capture-periodic] freeze=4ms shot=143ms unfreeze=5ms saved=True
-  Frame 3 saved (frame_002.jpg, t=4.6s)
-  [capture-periodic] freeze=4ms shot=126ms unfreeze=5ms saved=True
-  [capture-loop] iter=50 t=6.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=8.2/31.9GB (26%) swap=1.1/11.5GB (9%) cpu=8% browser_rss=0.71GB
+  [ComfyUI] [ComfyUI-Sharp] python: C:\workspaces\Sharp-1554\ComfyUI\.ce\.pixi\envs\sharp-nodes\python.exe
+  [ComfyUI] [ComfyUI-Sharp] python: C:\workspaces\Sharp-1554\ComfyUI\.ce\.pixi\envs\sharp-nodes\python.exe
+  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['C:\\workspaces\\Sharp-1554\\ComfyUI', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\.ce\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
+  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['C:\\workspaces\\Sharp-1554\\ComfyUI', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\.ce\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\workspaces\Sharp-1554\ComfyUI\.ce\.pixi\envs\sharp-nodes\python.exe
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\workspaces\Sharp-1554\ComfyUI\.ce\.pixi\envs\sharp-nodes\python.exe
+  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\ContainerAdministrator\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\.ce\\pixi.toml', '-e', 'sharp-nodes', 'python', 'C:\\Users\\ContainerAdministrator\\AppData\\Local\\Temp\\comfyui_pvenv_h3uzclhr\\persistent_worker.py', 'tcp://127.0.0.1:64873']...
+  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\ContainerAdministrator\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\.ce\\pixi.toml', '-e', 'sharp-nodes', 'python', 'C:\\Users\\ContainerAdministrator\\AppData\\Local\\Temp\\comfyui_pvenv_h3uzclhr\\persistent_worker.py', 'tcp://127.0.0.1:64873']...
+  Frame 2 saved (frame_001.jpg, t=2.3s)
+  [capture-periodic] freeze=4ms shot=141ms unfreeze=5ms saved=True
+  Frame 3 saved (frame_002.jpg, t=4.5s)
+  [capture-periodic] freeze=4ms shot=128ms unfreeze=4ms saved=True
+  [capture-loop] iter=50 t=6.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=10.0/31.9GB (31%) swap=0.0/5.0GB (0%) cpu=8% browser_rss=0.71GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: WARNING: You need pytorch with cu130 or higher to use optimized CUDA operations.
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: WARNING: You need pytorch with cu130 or higher to use optimized CUDA operations.
   [ComfyUI] [SubprocessWorker] worker started/confirmed
@@ -73,125 +73,119 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] [SubprocessWorker] sending request via socket...
   [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
   [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
-  [capture-loop] iter=100 t=12.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=8.4/31.9GB (26%) swap=1.1/11.5GB (9%) cpu=9% browser_rss=0.71GB
+  [capture-loop] iter=100 t=12.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=10.1/31.9GB (32%) swap=0.0/5.0GB (0%) cpu=8% browser_rss=0.71GB
+  [ComfyUI] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  [ComfyUI] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
   [ComfyUI] 
   [ComfyUI] 
   [ComfyUI] sharp_2572gikvuh.pt:   0%|          | 0.00/2.81G [00:00<?, ?B/s]
   [ComfyUI] sharp_2572gikvuh.pt:   0%|          | 0.00/2.81G [00:00<?, ?B/s]
-  [ComfyUI] sharp_2572gikvuh.pt:   2%|▏         | 67.1M/2.81G [00:03<02:33, 17.8MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:   2%|▏         | 67.1M/2.81G [00:03<02:33, 17.8MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:   2%|▏         | 67.1M/2.81G [00:04<03:14, 14.1MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:   2%|▏         | 67.1M/2.81G [00:04<03:14, 14.1MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:   9%|▉         | 256M/2.81G [00:04<00:31, 81.8MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:   9%|▉         | 256M/2.81G [00:04<00:31, 81.8MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
-  Frame 4 saved (frame_003.jpg, t=17.8s)
-  [capture-periodic] freeze=4ms shot=154ms unfreeze=5ms saved=True
-  [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=1
-  [capture-loop] iter=150 t=18.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.8/31.9GB (28%) swap=1.1/11.5GB (9%) cpu=12% browser_rss=0.71GB
-  Frame 5 saved (frame_004.jpg, t=20.1s)
-  [capture-periodic] freeze=5ms shot=158ms unfreeze=5ms saved=True
+  [ComfyUI] sharp_2572gikvuh.pt:   8%|▊         | 225M/2.81G [00:05<00:45, 57.2MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:   8%|▊         | 225M/2.81G [00:05<00:45, 57.2MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+  [capture-loop] iter=150 t=18.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=10.4/31.9GB (33%) swap=0.0/5.0GB (0%) cpu=12% browser_rss=0.72GB
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:08<00:54, 44.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:08<00:54, 44.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  10%|█         | 292M/2.81G [00:05<00:32, 76.3MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  10%|█         | 292M/2.81G [00:05<00:32, 76.3MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 4 saved (frame_003.jpg, t=20.0s)
+  [capture-periodic] freeze=4ms shot=146ms unfreeze=5ms saved=True
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  15%|█▌        | 427M/2.81G [00:08<00:41, 57.1MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  15%|█▌        | 427M/2.81G [00:08<00:41, 57.1MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:08<00:56, 43.5MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:08<00:56, 43.5MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 5 saved (frame_004.jpg, t=22.2s)
+  [capture-periodic] freeze=6ms shot=140ms unfreeze=8ms saved=True
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:09<00:31, 71.5MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:09<00:31, 71.5MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  Frame 6 saved (frame_005.jpg, t=22.3s)
-  [capture-periodic] freeze=4ms shot=163ms unfreeze=6ms saved=True
+  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:10<00:33, 67.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:10<00:33, 67.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 6 saved (frame_005.jpg, t=24.4s)
+  [capture-periodic] freeze=5ms shot=176ms unfreeze=5ms saved=True
+  [capture-loop] iter=200 t=25.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=10.9/31.9GB (34%) swap=0.0/5.0GB (0%) cpu=16% browser_rss=0.66GB
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  22%|██▏       | 628M/2.81G [00:11<00:40, 53.8MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  22%|██▏       | 628M/2.81G [00:11<00:40, 53.8MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  Frame 7 saved (frame_006.jpg, t=24.6s)
-  [capture-periodic] freeze=8ms shot=152ms unfreeze=5ms saved=True
+  [ComfyUI] sharp_2572gikvuh.pt:  27%|██▋       | 768M/2.81G [00:15<00:42, 48.3MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  27%|██▋       | 768M/2.81G [00:15<00:42, 48.3MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 7 saved (frame_006.jpg, t=31.2s)
+  [capture-periodic] freeze=7ms shot=152ms unfreeze=5ms saved=True
+  [capture-loop] iter=250 t=31.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=11.4/31.9GB (36%) swap=0.0/5.0GB (0%) cpu=15% browser_rss=0.66GB
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  27%|██▋       | 768M/2.81G [00:12<00:23, 85.8MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  27%|██▋       | 768M/2.81G [00:12<00:23, 85.8MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [capture-loop] iter=200 t=25.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=9.1/31.9GB (29%) swap=1.1/11.5GB (9%) cpu=17% browser_rss=0.66GB
-  Frame 8 saved (frame_007.jpg, t=26.9s)
-  [capture-periodic] freeze=4ms shot=157ms unfreeze=5ms saved=True
+  [ComfyUI] sharp_2572gikvuh.pt:  32%|███▏      | 896M/2.81G [00:19<00:43, 44.2MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  32%|███▏      | 896M/2.81G [00:19<00:43, 44.2MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  30%|██▉       | 829M/2.81G [00:16<00:46, 42.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  30%|██▉       | 829M/2.81G [00:16<00:46, 42.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  Frame 9 saved (frame_008.jpg, t=29.2s)
-  [capture-periodic] freeze=5ms shot=150ms unfreeze=5ms saved=True
+  [ComfyUI] sharp_2572gikvuh.pt:  34%|███▍      | 963M/2.81G [00:19<00:35, 51.9MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  34%|███▍      | 963M/2.81G [00:19<00:35, 51.9MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 8 saved (frame_007.jpg, t=33.5s)
+  [capture-periodic] freeze=4ms shot=160ms unfreeze=8ms saved=True
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  32%|███▏      | 896M/2.81G [00:16<00:35, 53.5MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  32%|███▏      | 896M/2.81G [00:16<00:35, 53.5MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  39%|███▉      | 1.10G/2.81G [00:23<00:40, 42.7MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  39%|███▉      | 1.10G/2.81G [00:23<00:40, 42.7MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [capture-loop] iter=300 t=38.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=11.6/31.9GB (36%) swap=0.0/5.0GB (0%) cpu=25% browser_rss=0.66GB
+  Frame 9 saved (frame_008.jpg, t=38.0s)
+  [capture-periodic] freeze=5ms shot=156ms unfreeze=5ms saved=True
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  37%|███▋      | 1.03G/2.81G [00:16<00:21, 84.7MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  37%|███▋      | 1.03G/2.81G [00:16<00:21, 84.7MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  41%|████▏     | 1.16G/2.81G [00:25<00:37, 44.4MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  41%|████▏     | 1.16G/2.81G [00:25<00:37, 44.4MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  41%|████▏     | 1.16G/2.81G [00:17<00:16, 98.0MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  41%|████▏     | 1.16G/2.81G [00:17<00:16, 98.0MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  Frame 10 saved (frame_009.jpg, t=31.4s)
-  [capture-periodic] freeze=4ms shot=157ms unfreeze=5ms saved=True
-  [capture-loop] iter=250 t=31.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=8 ram=9.5/31.9GB (30%) swap=1.1/11.5GB (9%) cpu=16% browser_rss=0.66GB
+  [ComfyUI] sharp_2572gikvuh.pt:  46%|████▌     | 1.30G/2.81G [00:25<00:22, 65.8MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  46%|████▌     | 1.30G/2.81G [00:25<00:22, 65.8MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  44%|████▍     | 1.23G/2.81G [00:24<00:45, 34.4MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  44%|████▍     | 1.23G/2.81G [00:24<00:45, 34.4MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  53%|█████▎    | 1.50G/2.81G [00:25<00:11, 109MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  53%|█████▎    | 1.50G/2.81G [00:25<00:11, 109MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  51%|█████     | 1.43G/2.81G [00:24<00:21, 62.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  51%|█████     | 1.43G/2.81G [00:24<00:21, 62.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  58%|█████▊    | 1.63G/2.81G [00:25<00:08, 142MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  58%|█████▊    | 1.63G/2.81G [00:25<00:08, 142MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  56%|█████▌    | 1.57G/2.81G [00:25<00:14, 86.2MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  56%|█████▌    | 1.57G/2.81G [00:25<00:14, 86.2MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [capture-loop] iter=300 t=38.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.8/31.9GB (31%) swap=1.1/11.5GB (9%) cpu=22% browser_rss=0.66GB
+  [ComfyUI] sharp_2572gikvuh.pt:  65%|██████▌   | 1.83G/2.81G [00:26<00:04, 208MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  65%|██████▌   | 1.83G/2.81G [00:26<00:04, 208MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  63%|██████▎   | 1.77G/2.81G [00:25<00:07, 134MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  63%|██████▎   | 1.77G/2.81G [00:25<00:07, 134MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
-  Frame 11 saved (frame_010.jpg, t=38.1s)
-  [capture-periodic] freeze=4ms shot=140ms unfreeze=5ms saved=True
+  [ComfyUI] sharp_2572gikvuh.pt:  72%|███████▏  | 2.04G/2.81G [00:26<00:02, 282MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  72%|███████▏  | 2.04G/2.81G [00:26<00:02, 282MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  68%|██████▊   | 1.90G/2.81G [00:25<00:05, 170MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  68%|██████▊   | 1.90G/2.81G [00:25<00:05, 170MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  77%|███████▋  | 2.17G/2.81G [00:26<00:01, 321MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  77%|███████▋  | 2.17G/2.81G [00:26<00:01, 321MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 10 saved (frame_009.jpg, t=40.2s)
+  [capture-periodic] freeze=8ms shot=144ms unfreeze=7ms saved=True
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  72%|███████▏  | 2.04G/2.81G [00:25<00:03, 210MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  72%|███████▏  | 2.04G/2.81G [00:25<00:03, 210MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  84%|████████▍ | 2.37G/2.81G [00:26<00:01, 407MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  84%|████████▍ | 2.37G/2.81G [00:26<00:01, 407MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  80%|███████▉  | 2.24G/2.81G [00:26<00:01, 291MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  80%|███████▉  | 2.24G/2.81G [00:26<00:01, 291MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  89%|████████▉ | 2.51G/2.81G [00:27<00:00, 432MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  89%|████████▉ | 2.51G/2.81G [00:27<00:00, 432MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  84%|████████▍ | 2.37G/2.81G [00:26<00:01, 331MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  84%|████████▍ | 2.37G/2.81G [00:26<00:01, 331MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  96%|█████████▋| 2.71G/2.81G [00:27<00:00, 515MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  96%|█████████▋| 2.71G/2.81G [00:27<00:00, 515MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  92%|█████████▏| 2.57G/2.81G [00:26<00:00, 420MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  92%|█████████▏| 2.57G/2.81G [00:26<00:00, 420MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:27<00:00, 568MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:27<00:00, 568MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  96%|█████████▋| 2.71G/2.81G [00:26<00:00, 445MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  96%|█████████▋| 2.71G/2.81G [00:26<00:00, 445MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:26<00:00, 105MB/s]
-  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:26<00:00, 105MB/s]
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:27<00:00, 103MB/s]
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:27<00:00, 103MB/s]
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [SubprocessWorker] got response: ok
-  [ComfyUI] [comfy-env] LoadSharpModel done (39.42s): result: NodeOutput
-  [ComfyUI] [comfy-env] LoadSharpModel done (39.42s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadSharpModel done (40.90s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadSharpModel done (40.90s): result: NodeOutput
   [ComfyUI] [VRAM] After LoadSharpModel: 1271 / 24575 MB
   [ComfyUI] [VRAM] After LoadSharpModel: 1271 / 24575 MB
   [ComfyUI] [comfy-env] Running SharpPredict: focal_length_mm: 30.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,1024,1536,3] cpu
@@ -224,27 +218,27 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZE TensorRef: tensor_size=[1, 1024, 1536, 3]
   [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 1024, 1536, 3])
   [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 1024, 1536, 3])
-  Frame 12 saved (frame_011.jpg, t=40.3s)
-  [capture-periodic] freeze=4ms shot=129ms unfreeze=4ms saved=True
-  [capture-loop] iter=350 t=44.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=11.1/31.9GB (35%) swap=1.1/11.5GB (9%) cpu=10% browser_rss=0.66GB
+  Frame 11 saved (frame_010.jpg, t=42.5s)
+  [capture-periodic] freeze=6ms shot=130ms unfreeze=5ms saved=True
+  [capture-loop] iter=350 t=44.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=11.0/31.9GB (34%) swap=0.0/5.0GB (0%) cpu=14% browser_rss=0.67GB
   [ComfyUI] [SubprocessWorker] callback 'request_vram_budget' from call_id=2
   [ComfyUI] [SubprocessWorker] callback 'request_vram_budget' from call_id=2
   [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 24.44GB
   [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 24.44GB
   [ComfyUI] [comfy-env] VRAM after eviction: 24.44GB
   [ComfyUI] [comfy-env] VRAM after eviction: 24.44GB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +202MB (now 202MB) reserved=224MB peak=202MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +202MB (now 202MB) reserved=224MB peak=202MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +1937MB (now 2140MB) reserved=2144MB peak=2140MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +1937MB (now 2140MB) reserved=2144MB peak=2140MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +250MB (now 250MB) reserved=256MB peak=250MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +250MB (now 250MB) reserved=256MB peak=250MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +1985MB (now 2236MB) reserved=2240MB peak=2236MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +1985MB (now 2236MB) reserved=2240MB peak=2236MB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] start: 2.69 GB, input=[1, 3, 1536, 1536]
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] start: 2.69 GB, input=[1, 3, 1536, 1536]
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] patches: 2.75 GB, x0=25 x1=9 x2=1 total=35
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] patches: 2.75 GB, x0=25 x1=9 x2=1 total=35
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after first chunk (4/35): 3.15 GB, chunk_size=4
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after first chunk (4/35): 3.15 GB, chunk_size=4
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +1165MB (now 3305MB) reserved=3456MB peak=3305MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +1165MB (now 3305MB) reserved=3456MB peak=3305MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +1069MB (now 3305MB) reserved=3456MB peak=3305MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +1069MB (now 3305MB) reserved=3456MB peak=3305MB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after all chunks + cache clear: 3.09 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after all chunks + cache clear: 3.09 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge intermediates: 2.85 GB
@@ -253,18 +247,19 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge all: 2.89 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after image_encoder: 2.90 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after image_encoder: 2.90 GB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +354MB (now 3659MB) reserved=4032MB peak=3659MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +354MB (now 3659MB) reserved=4032MB peak=3659MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +493MB (now 3798MB) reserved=4032MB peak=3798MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +493MB (now 3798MB) reserved=4032MB peak=3798MB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after upsample: 3.61 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after upsample: 3.61 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after SPN encoder + cache clear: 3.51 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after SPN encoder + cache clear: 3.51 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after decoder: 4.08 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after decoder: 4.08 GB
+  [capture-loop] iter=400 t=50.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=12.5/31.9GB (39%) swap=0.0/5.0GB (0%) cpu=10% browser_rss=0.66GB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +365MB (now 4164MB) reserved=7712MB peak=7055MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +365MB (now 4164MB) reserved=7712MB peak=7055MB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] start: 4.07 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] start: 4.07 GB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +504MB (now 4164MB) reserved=4384MB peak=7055MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +504MB (now 4164MB) reserved=4384MB peak=7055MB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after depth_alignment: 4.10 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after depth_alignment: 4.10 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after init_model: 4.18 GB
@@ -273,47 +268,47 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after feature_model: 4.32 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after prediction_head: 4.38 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after prediction_head: 4.38 GB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +246MB (now 4411MB) reserved=6880MB peak=7055MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +246MB (now 4411MB) reserved=6880MB peak=7055MB
-  [capture-loop] iter=400 t=50.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=11.9/31.9GB (37%) swap=1.1/11.5GB (9%) cpu=11% browser_rss=0.66GB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +216MB (now 4380MB) reserved=6880MB peak=7055MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +216MB (now 4380MB) reserved=6880MB peak=7055MB
   [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=2
   [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=2
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [comfy-env] Created 1 model patchers: ['RGBGaussianPredictor_1']
   [ComfyUI] [comfy-env] Created 1 model patchers: ['RGBGaussianPredictor_1']
-  [ComfyUI] [comfy-env] SharpPredict done (10.64s): result: NodeOutput
-  [ComfyUI] [comfy-env] SharpPredict done (10.64s): result: NodeOutput
-  [ComfyUI] [comfy-env] SubprocessWorker: C:\workspaces\Sharp-0640\ComfyUI\.ce\.pixi\envs\geometrypack-nodes\python.exe
-  [ComfyUI] [comfy-env] SubprocessWorker: C:\workspaces\Sharp-0640\ComfyUI\.ce\.pixi\envs\geometrypack-nodes\python.exe
+  [ComfyUI] [comfy-env] SharpPredict done (10.69s): result: NodeOutput
+  [ComfyUI] [comfy-env] SharpPredict done (10.69s): result: NodeOutput
+  [ComfyUI] [comfy-env] SubprocessWorker: C:\workspaces\Sharp-1554\ComfyUI\.ce\.pixi\envs\geometrypack-nodes\python.exe
+  [ComfyUI] [comfy-env] SubprocessWorker: C:\workspaces\Sharp-1554\ComfyUI\.ce\.pixi\envs\geometrypack-nodes\python.exe
   [ComfyUI] [VRAM] After SharpPredict: 1271 / 24575 MB
   [ComfyUI] [VRAM] After SharpPredict: 1271 / 24575 MB
-  [ComfyUI] [comfy-env] env_vars: {'KMP_DUPLICATE_LIB_OK': 'TRUE', 'OMP_NUM_THREADS': '1', 'COMFYUI_BASE': 'C:\\workspaces\\Sharp-0640\\ComfyUI'}
-  [ComfyUI] [comfy-env] env_vars: {'KMP_DUPLICATE_LIB_OK': 'TRUE', 'OMP_NUM_THREADS': '1', 'COMFYUI_BASE': 'C:\\workspaces\\Sharp-0640\\ComfyUI'}
+  [ComfyUI] [comfy-env] env_vars: {'KMP_DUPLICATE_LIB_OK': 'TRUE', 'OMP_NUM_THREADS': '1', 'COMFYUI_BASE': 'C:\\workspaces\\Sharp-1554\\ComfyUI'}
+  [ComfyUI] [comfy-env] env_vars: {'KMP_DUPLICATE_LIB_OK': 'TRUE', 'OMP_NUM_THREADS': '1', 'COMFYUI_BASE': 'C:\\workspaces\\Sharp-1554\\ComfyUI'}
   [ComfyUI] [VRAM] Loaded: SubprocessModel (2679 MB)
   [ComfyUI] [VRAM] Loaded: SubprocessModel (2679 MB)
-  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: 'C:\\workspaces\\Sharp-0640\\ComfyUI\\output\\sharp_17783..., extrinsics: list[4], intrinsics: list[3]
-  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: 'C:\\workspaces\\Sharp-0640\\ComfyUI\\output\\sharp_17783..., extrinsics: list[4], intrinsics: list[3]
+  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: 'C:\\workspaces\\Sharp-1554\\ComfyUI\\output\\sharp_17784..., extrinsics: list[4], intrinsics: list[3]
+  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: 'C:\\workspaces\\Sharp-1554\\ComfyUI\\output\\sharp_17784..., extrinsics: list[4], intrinsics: list[3]
   [ComfyUI] [VRAM] Before GeomPackPreviewGaussian: 1271 / 24575 MB
   [ComfyUI] [VRAM] Before GeomPackPreviewGaussian: 1271 / 24575 MB
-  [ComfyUI] [ComfyUI-GeometryPack] python: C:\workspaces\Sharp-0640\ComfyUI\.ce\.pixi\envs\geometrypack-nodes\python.exe
-  [ComfyUI] [ComfyUI-GeometryPack] python: C:\workspaces\Sharp-0640\ComfyUI\.ce\.pixi\envs\geometrypack-nodes\python.exe
+  [ComfyUI] [ComfyUI-GeometryPack] python: C:\workspaces\Sharp-1554\ComfyUI\.ce\.pixi\envs\geometrypack-nodes\python.exe
+  [ComfyUI] [ComfyUI-GeometryPack] python: C:\workspaces\Sharp-1554\ComfyUI\.ce\.pixi\envs\geometrypack-nodes\python.exe
   [ComfyUI] [VRAM] Loaded: SubprocessModel (2679 MB)
   [ComfyUI] [VRAM] Loaded: SubprocessModel (2679 MB)
-  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['C:\\workspaces\\Sharp-0640\\ComfyUI', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\.ce\\.pixi\\envs\\geometrypack-nodes\\Lib\\site-packages', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack']
-  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['C:\\workspaces\\Sharp-0640\\ComfyUI', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\.ce\\.pixi\\envs\\geometrypack-nodes\\Lib\\site-packages', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack']
+  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['C:\\workspaces\\Sharp-1554\\ComfyUI', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\.ce\\.pixi\\envs\\geometrypack-nodes\\Lib\\site-packages', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack']
+  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['C:\\workspaces\\Sharp-1554\\ComfyUI', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\.ce\\.pixi\\envs\\geometrypack-nodes\\Lib\\site-packages', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack']
   [ComfyUI] [SubprocessWorker] call_method: nodes.visualization.preview_gaussian.PreviewGaussianNode.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] call_method: nodes.visualization.preview_gaussian.PreviewGaussianNode.EXECUTE_NORMALIZED
-  [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\workspaces\Sharp-0640\ComfyUI\.ce\.pixi\envs\geometrypack-nodes\python.exe
-  [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\workspaces\Sharp-0640\ComfyUI\.ce\.pixi\envs\geometrypack-nodes\python.exe
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\workspaces\Sharp-1554\ComfyUI\.ce\.pixi\envs\geometrypack-nodes\python.exe
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\workspaces\Sharp-1554\ComfyUI\.ce\.pixi\envs\geometrypack-nodes\python.exe
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
-  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\ContainerAdministrator\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\.ce\\pixi.toml', '-e', 'geometrypack-nodes', 'python', 'C:\\Users\\ContainerAdministrator\\AppData\\Local\\Temp\\comfyui_pvenv_u0rn7et3\\persistent_worker.py', 'tcp://127.0.0.1:64604']...
-  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\ContainerAdministrator\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\workspaces\\Sharp-0640\\ComfyUI\\.ce\\pixi.toml', '-e', 'geometrypack-nodes', 'python', 'C:\\Users\\ContainerAdministrator\\AppData\\Local\\Temp\\comfyui_pvenv_u0rn7et3\\persistent_worker.py', 'tcp://127.0.0.1:64604']...
+  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\ContainerAdministrator\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\.ce\\pixi.toml', '-e', 'geometrypack-nodes', 'python', 'C:\\Users\\ContainerAdministrator\\AppData\\Local\\Temp\\comfyui_pvenv_onraayc_\\persistent_worker.py', 'tcp://127.0.0.1:50445']...
+  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\ContainerAdministrator\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\workspaces\\Sharp-1554\\ComfyUI\\.ce\\pixi.toml', '-e', 'geometrypack-nodes', 'python', 'C:\\Users\\ContainerAdministrator\\AppData\\Local\\Temp\\comfyui_pvenv_onraayc_\\persistent_worker.py', 'tcp://127.0.0.1:50445']...
   [ComfyUI] [comfy-env] geometrypack-nodes: Library/bin has 609 DLLs
   [ComfyUI] [comfy-env] geometrypack-nodes: Library/bin has 609 DLLs
-  Frame 13 saved (frame_012.jpg, t=51.2s)
-  [capture-periodic] freeze=4ms shot=142ms unfreeze=5ms saved=True
+  Frame 12 saved (frame_011.jpg, t=53.5s)
+  [capture-periodic] freeze=4ms shot=135ms unfreeze=5ms saved=True
+  [capture-loop] iter=450 t=56.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=13.9/31.9GB (43%) swap=0.0/5.0GB (0%) cpu=10% browser_rss=0.65GB
   [ComfyUI] [worker:ComfyUI-GeometryPack] WARNING: WARNING: You need pytorch with cu130 or higher to use optimized CUDA operations.
   [ComfyUI] [worker:ComfyUI-GeometryPack] WARNING: WARNING: You need pytorch with cu130 or higher to use optimized CUDA operations.
   [ComfyUI] [SubprocessWorker] worker started/confirmed
@@ -326,37 +321,36 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] [SubprocessWorker] sending request via socket...
   [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
   [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
-  [capture-loop] iter=450 t=56.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=12.4/31.9GB (39%) swap=1.1/11.5GB (9%) cpu=8% browser_rss=0.65GB
-  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778388512516.ply (63.00 MB)
-  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778388512516.ply (63.00 MB)
+  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778421724965.ply (63.00 MB)
+  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778421724965.ply (63.00 MB)
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [SubprocessWorker] got response: ok
-  [ComfyUI] [comfy-env] GeomPackPreviewGaussian done (7.88s): result: NodeOutput
-  [ComfyUI] [comfy-env] GeomPackPreviewGaussian done (7.88s): result: NodeOutput
+  [ComfyUI] [comfy-env] GeomPackPreviewGaussian done (7.48s): result: NodeOutput
+  [ComfyUI] [comfy-env] GeomPackPreviewGaussian done (7.48s): result: NodeOutput
   [ComfyUI] [VRAM] After GeomPackPreviewGaussian: 1271 / 24575 MB
   [ComfyUI] [VRAM] After GeomPackPreviewGaussian: 1271 / 24575 MB
   [ComfyUI] [VRAM] Loaded: SubprocessModel (2679 MB)
   [ComfyUI] [VRAM] Loaded: SubprocessModel (2679 MB)
-  [ComfyUI] Prompt executed in 58.02 seconds
-  [ComfyUI] Prompt executed in 58.02 seconds
+  [ComfyUI] Prompt executed in 59.13 seconds
+  [ComfyUI] Prompt executed in 59.13 seconds
   Node executed (1 total), capturing...
-  Frame 14 saved (frame_013.jpg, t=58.5s)
-  [capture-node] freeze=5ms shot=146ms unfreeze=0ms saved=True
-  Execution complete (t=58.5s)
+  Frame 13 saved (frame_012.jpg, t=59.6s)
+  [capture-node] freeze=7ms shot=145ms unfreeze=0ms saved=True
+  Execution complete (t=59.6s)
   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
   [3d-wait] Phase 1 done in 0.0s
   [3d-wait] Phase 2: iframes=1
   [3d-wait] iframe viewer_ready=False (matched 0 console logs)
   [3d-wait] Waiting for 'Loaded successfully' console message (timeout=60s)...
   [3d-wait] Got 'Loaded successfully' after 1.4s
-  [3d-wait] Unfrozen in 0.258s, rendering for 5s...
-  [3d-wait] JS halted via CDP after 15.8s
-  [3d-wait] Re-frozen in 65.1s
-  [3d-wait] Total 3D wait: 66.5s
-  Captured 14 unique frames over 125.19s
+  [3d-wait] Unfrozen in 0.240s, rendering for 5s...
+  [3d-wait] JS halted via CDP after 16.8s
+  [3d-wait] Re-frozen in 68.1s
+  [3d-wait] Total 3D wait: 69.6s
+  Captured 13 unique frames over 129.44s
   [debug] iframes: 1
-  [debug]   iframe[0]: src=http://127.0.0.1:41897/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=1536x1024, rafFrozen=True
+  [debug]   iframe[0]: src=http://127.0.0.1:41883/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=1536x1024, rafFrozen=True
   [timing] trigger_3d_previews: 0.0s
   Saved high-quality screenshot: sharp_basic_executed.png
   [timing] final_screenshot: 0.4s
-    Captured 15 video frames
+    Captured 14 video frames
