@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-10T20:31:22.104781+00:00",
+  "timestamp": "2026-05-10T20:38:46.150971+00:00",
   "platform": "macos",
   "hardware": {
-    "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
+    "os": "macOS-15.7.4-arm64-arm-64bit",
     "cpu": "arm"
   },
-  "commit_hash": "b28d88169ec84aef09a3632ce004afaeb2543eae",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25638981165",
+  "commit_hash": "f929ebdf7eb02f6c5ddbd194a2bbca13b39387be",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25639145555",
   "success": false,
   "summary": {
     "total": 3,
@@ -24,16 +24,16 @@
     {
       "name": "sharp_basic",
       "status": "fail",
-      "duration_seconds": 7.04,
-      "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,5], sample: {\"inputs\":{\"image\":\"beach.jpg\"},\"class_type\":\"LoadImage\",\"_meta\":{\"title\":\"Load Image\"}}",
+      "duration_seconds": 6.81,
+      "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [4], sample: {\"inputs\":{\"image\":\"beach.jpg\"},\"class_type\":\"LoadImage\",\"_meta\":{\"title\":\"Load Image\"}}",
       "hardware": {
-        "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
+        "os": "macOS-15.7.4-arm64-arm-64bit",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 0.57,
-          "avg": 0.55
+          "peak": 0.51,
+          "avg": 0.49
         },
         "total_ram_gb": 7.0,
         "samples": 7
@@ -42,16 +42,16 @@
     {
       "name": "sharp_exif",
       "status": "fail",
-      "duration_seconds": 4.81,
-      "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,7,9], sample: {\"inputs\":{\"UNKNOWN\":\"\"},\"_meta\":{}}",
+      "duration_seconds": 4.72,
+      "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [8], sample: {\"inputs\":{\"precision\":\"auto\"},\"class_type\":\"LoadSharpModel\",\"_meta\":{\"title\":\"(Down)Load SHARP Model\"}}",
       "hardware": {
-        "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
+        "os": "macOS-15.7.4-arm64-arm-64bit",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 0.54,
-          "avg": 0.54
+          "peak": 0.48,
+          "avg": 0.48
         },
         "total_ram_gb": 7.0,
         "samples": 5

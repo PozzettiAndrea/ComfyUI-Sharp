@@ -1,7 +1,7 @@
 Capturing execution frames: sharp_basic.json
   Frame 1 saved (frame_000.jpg, t=0.0s)
   Validating workflow...
-  Validation failed: graphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,5], sample: {"inputs":{"image":"beach.jpg"},"class_type":"LoadImage","_meta":{"title":"Load Image"}}
+  Validation failed: graphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [4], sample: {"inputs":{"image":"beach.jpg"},"class_type":"LoadImage","_meta":{"title":"Load Image"}}
     Status: FAILED
     Error: Workflow validation failed
-    Details: graphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,5], sample: {"inputs":{"image":"beach.jpg"},"class_type":"LoadImage","_meta":{"title":"Load Image"}}
+    Details: graphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [4], sample: {"inputs":{"image":"beach.jpg"},"class_type":"LoadImage","_meta":{"title":"Load Image"}}
