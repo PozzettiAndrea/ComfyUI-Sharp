@@ -1,4 +1,4 @@
-[00:00] Crash dump logging enabled: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-2028/dev/linux-cpu/crash_dump.log
+[00:00] Crash dump logging enabled: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-2035/dev/linux-cpu/crash_dump.log
 [00:00] 
 [00:00] [1/5] SYNTAX
 [00:00] ----------------------------------------
@@ -17,186 +17,158 @@
 [00:00] 
 Setting up ComfyUI...
 [00:00] Creating virtual environment...
-[00:00] Running: uv venv /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv --python 3.13
-[00:01] Cloning ComfyUI (latest)...
-[00:01] Running: git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI
-[00:02] Installing ComfyUI requirements...
-[00:02] Running: uv pip install --python /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/bin/python -r /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/requirements.txt
+[00:00] Running: uv venv /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv --python 3.12
+[00:00] Cloning ComfyUI (latest)...
+[00:00] Running: git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI
+[00:01] Installing ComfyUI requirements...
+[00:01] Running: uv pip install --python /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/bin/python -r /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/requirements.txt
 [00:21] 
 Installing custom node...
 [00:21] Copying ComfyUI-Sharp to custom_nodes/...
 [00:21] Installing node requirements...
-[00:21] Running: uv pip install --python /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/bin/python -r /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp/requirements.txt
+[00:21] Running: uv pip install --python /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/bin/python -r /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp/requirements.txt
 [00:22] 
 Running install.py...
-[00:22] Running: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/bin/python /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp/install.py
-[00:23]   
-[00:23]   Installing 1 node dependencies...
-[00:23]     Cloning ComfyUI-GeometryPack...
+[00:22] Running: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/bin/python /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp/install.py
+[00:22]   
+[00:22]   Installing 1 node dependencies...
+[00:22]     Cloning ComfyUI-GeometryPack...
 [00:24]     Installing requirements for ComfyUI-GeometryPack...
-[00:25]     Running install.py for ComfyUI-GeometryPack...
-[00:25]   [comfy-env] _discover: scanning /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes
+[00:24]     Running install.py for ComfyUI-GeometryPack...
+[00:25]   [comfy-env] _discover: scanning /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes
 [00:25]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes/ComfyUI-GeometryPack/nodes/comfy-env.toml)
 [00:25]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes/ComfyUI-Sharp/nodes/comfy-env.toml)
-[00:25]   [comfy-env] Workspace: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/.ce
-[00:25]   [comfy-env] ComfyUI: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI
+[00:25]   [comfy-env] Workspace: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/.ce
+[00:25]   [comfy-env] ComfyUI: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI
 [00:25]   [comfy-env] Found 2 node config(s):
 [00:25]     - geometrypack-nodes <- custom_nodes/ComfyUI-GeometryPack/nodes/comfy-env.toml (python=host)
 [00:25]     - sharp-nodes <- custom_nodes/ComfyUI-Sharp/nodes/comfy-env.toml (python=host)
-[00:25]   [comfy-env] Bootstrap interpreter has python 3.13 + torch 2.11.0 (cpu). Looking for cuda-only wheels matching cpu/torch2.11/cp313.
+[00:25]   [comfy-env] Bootstrap interpreter has python 3.12 + torch 2.11.0 (cpu). Looking for cuda-only wheels matching cpu/torch2.11/cp312.
 [00:28]   [comfy-env] GPU: No GPU detected
 [00:28]   [comfy-env] No CUDA detected -- pinning comfyui torch to CPU index
 [00:28]   [comfy-env] Root conda deps from ComfyUI-GeometryPack: ['av', 'ffmpeg']
 [00:28]   [comfy-env] Comfyui feature pin: torch ==2.11.0, torchvision ==0.26.*, torchaudio ==2.11.*
 [00:28]   [comfy-env] Host glibc 2.39 -> system-requirements
 [00:28]   [comfy-env] Root conda deps (comfyui env only): ['av', 'ffmpeg']
-[00:28]   [comfy-env] comfyui env: python 3.13, torch from https://download.pytorch.org/whl/cpu
-[00:28]   Generated /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/.ce/pixi.toml
+[00:28]   [comfy-env] comfyui env: python 3.12, torch from https://download.pytorch.org/whl/cpu
+[00:28]   Generated /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/.ce/pixi.toml
 [00:28]   [comfy-env] Installing 2 environment(s):
 [00:28]     - geometrypack-nodes (python=host, 13 pypi deps, 1 cuda wheels)
-[00:28]     - sharp-nodes (python=host, 5 pypi deps)
+[00:28]     - sharp-nodes (python=host, 4 pypi deps)
 [00:28]   [comfy-env] Running `pixi install --all`...
-[00:36]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
-[00:36]     	- bin/.librsvg-pre-unlink.sh
-[00:36]     To enable them, run:
-[00:36]     	pixi config set --local run-post-link-scripts insecure
-[00:36]     More info:
-[00:36]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
-[00:55]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
-[00:55]     	- bin/.librsvg-pre-unlink.sh
-[00:55]     To enable them, run:
-[00:55]     	pixi config set --local run-post-link-scripts insecure
-[00:55]     More info:
-[00:55]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
-[00:58]     ✔ The following environments have been installed: default, comfyui, geometrypack-nodes, sharp-nodes.
-[00:58]   [comfy-env] Note: env `default` is on disk but no node declares it in this run. Leaving as-is. Remove via `pixi clean --environment default` if intended.
-[00:58]   [comfy-env] Install log: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/.ce/install.log
-[00:58]   
-[00:58]   Installation complete!
-[00:59]   
-[00:59]   [requirements] Re-installing main package requirements...
-[00:59]     Installing requirements for ComfyUI-Sharp...
-[00:59]   [comfy-env] _discover: scanning /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes
-[00:59]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes/ComfyUI-GeometryPack/nodes/comfy-env.toml)
-[00:59]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes/ComfyUI-Sharp/nodes/comfy-env.toml)
-[00:59]   [comfy-env] Workspace: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/.ce
-[00:59]   [comfy-env] ComfyUI: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI
-[00:59]   [comfy-env] Found 2 node config(s):
-[00:59]     - geometrypack-nodes <- custom_nodes/ComfyUI-GeometryPack/nodes/comfy-env.toml (python=host)
-[00:59]     - sharp-nodes <- custom_nodes/ComfyUI-Sharp/nodes/comfy-env.toml (python=host)
-[00:59]   [comfy-env] Bootstrap interpreter has python 3.13 + torch 2.11.0 (cpu). Looking for cuda-only wheels matching cpu/torch2.11/cp313.
-[01:00]   [comfy-env] GPU: No GPU detected
-[01:00]   [comfy-env] No CUDA detected -- pinning comfyui torch to CPU index
-[01:00]   [comfy-env] Root conda deps from ComfyUI-GeometryPack: ['av', 'ffmpeg']
-[01:00]   [comfy-env] Comfyui feature pin: torch ==2.11.0, torchvision ==0.26.*, torchaudio ==2.11.*
-[01:00]   [comfy-env] Host glibc 2.39 -> system-requirements
-[01:00]   [comfy-env] Root conda deps (comfyui env only): ['av', 'ffmpeg']
-[01:00]   [comfy-env] comfyui env: python 3.13, torch from https://download.pytorch.org/whl/cpu
-[01:00]   Generated /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/.ce/pixi.toml
-[01:00]   [comfy-env] Installing 2 environment(s):
-[01:00]     - geometrypack-nodes (python=host, 13 pypi deps, 1 cuda wheels)
-[01:00]     - sharp-nodes (python=host, 5 pypi deps)
-[01:00]   [comfy-env] Running `pixi install --all`...
+[00:48]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
+[00:48]     	- bin/.librsvg-pre-unlink.sh
+[00:48]     To enable them, run:
+[00:48]     	pixi config set --local run-post-link-scripts insecure
+[00:48]     More info:
+[00:48]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
+[00:49]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
+[00:49]     	- bin/.librsvg-pre-unlink.sh
+[00:49]     To enable them, run:
+[00:49]     	pixi config set --local run-post-link-scripts insecure
+[00:49]     More info:
+[00:49]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
+[00:50]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
+[00:50]     	- bin/.librsvg-pre-unlink.sh
+[00:50]     To enable them, run:
+[00:50]     	pixi config set --local run-post-link-scripts insecure
+[00:50]     More info:
+[00:50]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
 [01:00]     ✔ The following environments have been installed: default, comfyui, geometrypack-nodes, sharp-nodes.
 [01:00]   [comfy-env] Note: env `default` is on disk but no node declares it in this run. Leaving as-is. Remove via `pixi clean --environment default` if intended.
-[01:00]   [comfy-env] Install log: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/.ce/install.log
+[01:00]   [comfy-env] Install log: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/.ce/install.log
 [01:00]   
 [01:00]   Installation complete!
-[01:00] Installing 1 node dependency(ies)...
-[01:00]   ComfyUI-GeometryPack from PozzettiAndrea/ComfyUI-GeometryPack
-[01:00]   ComfyUI-GeometryPack already exists, skipping...
-[01:00] Installing validation endpoint...
-[01:00]   Cloning PozzettiAndrea/ComfyUI-validate-endpoint...
-[01:00] Running: git clone --depth 1 https://github.com/PozzettiAndrea/ComfyUI-validate-endpoint.git /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-validate-endpoint
-[01:00] [INSTALL] PASSED
-[01:00] 
-[01:00] [3/5] REGISTRATION
-[01:00] ----------------------------------------
-[01:00] 
+[01:00]   
+[01:00]   [requirements] Re-installing main package requirements...
+[01:00]     Installing requirements for ComfyUI-Sharp...
+[01:00]   [comfy-env] _discover: scanning /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes
+[01:00]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes/ComfyUI-GeometryPack/nodes/comfy-env.toml)
+[01:00]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes/ComfyUI-Sharp/nodes/comfy-env.toml)
+[01:00]   [comfy-env] Workspace: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/.ce
+[01:00]   [comfy-env] ComfyUI: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI
+[01:00]   [comfy-env] Found 2 node config(s):
+[01:00]     - geometrypack-nodes <- custom_nodes/ComfyUI-GeometryPack/nodes/comfy-env.toml (python=host)
+[01:00]     - sharp-nodes <- custom_nodes/ComfyUI-Sharp/nodes/comfy-env.toml (python=host)
+[01:00]   [comfy-env] Bootstrap interpreter has python 3.12 + torch 2.11.0 (cpu). Looking for cuda-only wheels matching cpu/torch2.11/cp312.
+[01:02]   [comfy-env] GPU: No GPU detected
+[01:02]   [comfy-env] No CUDA detected -- pinning comfyui torch to CPU index
+[01:02]   [comfy-env] Root conda deps from ComfyUI-GeometryPack: ['av', 'ffmpeg']
+[01:02]   [comfy-env] Comfyui feature pin: torch ==2.11.0, torchvision ==0.26.*, torchaudio ==2.11.*
+[01:02]   [comfy-env] Host glibc 2.39 -> system-requirements
+[01:02]   [comfy-env] Root conda deps (comfyui env only): ['av', 'ffmpeg']
+[01:02]   [comfy-env] comfyui env: python 3.12, torch from https://download.pytorch.org/whl/cpu
+[01:02]   Generated /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/.ce/pixi.toml
+[01:02]   [comfy-env] Installing 2 environment(s):
+[01:02]     - geometrypack-nodes (python=host, 13 pypi deps, 1 cuda wheels)
+[01:02]     - sharp-nodes (python=host, 4 pypi deps)
+[01:02]   [comfy-env] Running `pixi install --all`...
+[01:02]     ✔ The following environments have been installed: default, comfyui, geometrypack-nodes, sharp-nodes.
+[01:02]   [comfy-env] Note: env `default` is on disk but no node declares it in this run. Leaving as-is. Remove via `pixi clean --environment default` if intended.
+[01:02]   [comfy-env] Install log: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/.ce/install.log
+[01:02]   
+[01:02]   Installation complete!
+[01:02] Installing 1 node dependency(ies)...
+[01:02]   ComfyUI-GeometryPack from PozzettiAndrea/ComfyUI-GeometryPack
+[01:02]   ComfyUI-GeometryPack already exists, skipping...
+[01:02] Installing validation endpoint...
+[01:02]   Cloning PozzettiAndrea/ComfyUI-validate-endpoint...
+[01:02] Running: git clone --depth 1 https://github.com/PozzettiAndrea/ComfyUI-validate-endpoint.git /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-validate-endpoint
+[01:02] [INSTALL] PASSED
+[01:02] 
+[01:02] [3/5] REGISTRATION
+[01:02] ----------------------------------------
+[01:02] 
 [DEBUG] server=None, server_url=None, api=None
-[01:00] 
+[01:02] 
 Starting ComfyUI server...
-[01:00] Starting ComfyUI server on port 41889...
-[01:00] Starting ComfyUI server on port 41889...
-[01:00] Waiting for server to be ready (timeout: 600s)...
-[01:02]   [ComfyUI] setup plugin alembic.autogenerate.schemas
-[01:02]   [ComfyUI] setup plugin alembic.autogenerate.tables
-[01:02]   [ComfyUI] setup plugin alembic.autogenerate.types
-[01:02]   [ComfyUI] setup plugin alembic.autogenerate.constraints
-[01:02]   [ComfyUI] setup plugin alembic.autogenerate.defaults
-[01:02]   [ComfyUI] setup plugin alembic.autogenerate.comments
-[01:02]   [ComfyUI] [comfy-env] ComfyUI-Sharp: 1 isolation env(s):
-[01:02]   [ComfyUI] [comfy-env]   nodes -> /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes
-[01:02]   [ComfyUI] [comfy-env] prestartup complete
-[01:02]   [ComfyUI] [comfy-env] ComfyUI-GeometryPack: 1 isolation env(s):
-[01:02]   [ComfyUI] [comfy-env]   nodes -> /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-GeometryPack/nodes
-[01:02]   [ComfyUI] [comfy-env] prestartup complete
-[01:02]   [ComfyUI] 
-[01:02]   [ComfyUI] Prestartup times for custom nodes:
-[01:02]   [ComfyUI]    0.0 seconds: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-GeometryPack
-[01:02]   [ComfyUI]    0.1 seconds: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp
-[01:02]   [ComfyUI] 
-[01:06]   [ComfyUI] Found comfy_kitchen backend cuda: {'available': False, 'disabled': False, 'unavailable_reason': 'CUDA not available on this system', 'capabilities': []}
-[01:06]   [ComfyUI] Found comfy_kitchen backend eager: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_mxfp8', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'scaled_mm_mxfp8', 'scaled_mm_nvfp4']}
-[01:06]   [ComfyUI] Found comfy_kitchen backend triton: {'available': False, 'disabled': True, 'unavailable_reason': 'Neither CUDA nor XPU available on this system', 'capabilities': []}
-[01:06]   [ComfyUI] Checkpoint files will always be loaded safely.
-[01:06]   [ComfyUI] Total VRAM 15990 MB, total RAM 15990 MB
-[01:06]   [ComfyUI] pytorch version: 2.11.0+cu130
-[01:06]   [ComfyUI] Set vram state to: DISABLED
-[01:06]   [ComfyUI] Device: cpu
-[01:07]   [ComfyUI] Using sub quadratic optimization for attention, if you have memory or speed issues try using: --use-split-cross-attention
-[01:12]   [ComfyUI] Python version: 3.13.13 (main, May  8 2026, 18:32:55) [Clang 22.1.3 ]
-[01:12]   [ComfyUI] ComfyUI version: 0.20.1
-[01:12]   [ComfyUI] comfy-aimdo version: 0.3.0
-[01:12]   [ComfyUI] comfy-kitchen version: 0.2.8
-[01:12]   [ComfyUI] ****** User settings have been changed to be stored on the server instead of browser storage. ******
-[01:12]   [ComfyUI] ****** For multi-user setups add the --multi-user CLI argument to enable multiple user profiles. ******
-[01:12]   [ComfyUI] ComfyUI frontend version: 1.43.18
-[01:12]   [ComfyUI] [Prompt Server] web root: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/lib/python3.13/site-packages/comfyui_frontend_package/static
-[01:12]   [ComfyUI] Asset seeder disabled
-[01:15]   [ComfyUI] [comfy-env] Version: 0.3.80
-[01:15]   [ComfyUI] [comfy-env] register_nodes: ComfyUI-Sharp
-[01:15]   [ComfyUI] [comfy-env] ComfyUI source dir: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI
-[01:15]   [ComfyUI] [comfy-env] Found 1 isolation env(s)
-[01:15]   [ComfyUI] [comfy-env] Scanning nodes metadata (isolation root)...
-[01:15]   [ComfyUI] [comfy-env] Metadata scan: /home/runner/.pixi/bin/pixi run --as-is --manifest-path /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/.ce/pixi.toml -e sharp-nodes python /tmp/comfy_meta_hq1qkzrm.py /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp nodes
-[01:15]   [ComfyUI] [comfy-env] Scan env PATH for nodes:
-[01:15]   [ComfyUI] [comfy-env]   [0] /opt/hostedtoolcache/Python/3.11.15/x64/bin
-[01:15]   [ComfyUI] [comfy-env]   [1] /opt/hostedtoolcache/Python/3.11.15/x64
-[01:15]   [ComfyUI] [comfy-env]   [2] /snap/bin
-[01:15]   [ComfyUI] [comfy-env]   [3] /home/runner/.local/bin
-[01:15]   [ComfyUI] [comfy-env]   [4] /opt/pipx_bin
-[01:15]   [ComfyUI] [comfy-env]   [5] /home/runner/.cargo/bin
-[01:15]   [ComfyUI] [comfy-env]   [6] /home/runner/.config/composer/vendor/bin
-[01:15]   [ComfyUI] [comfy-env]   [7] /usr/local/.ghcup/bin
-[01:15]   [ComfyUI] [comfy-env]   [8] /home/runner/.dotnet/tools
-[01:15]   [ComfyUI] [comfy-env]   [9] /usr/local/sbin
-[01:15]   [ComfyUI] [comfy-env]   [10] /usr/local/bin
-[01:15]   [ComfyUI] [comfy-env]   [11] /usr/sbin
-[01:15]   [ComfyUI] [comfy-env]   [12] /usr/bin
-[01:15]   [ComfyUI] [comfy-env]   [13] /sbin
-[01:15]   [ComfyUI] [comfy-env]   [14] /bin
-[01:15]   [ComfyUI] [comfy-env]   [15] /usr/games
-[01:15]   [ComfyUI] [comfy-env]   [16] /usr/local/games
-[01:15]   [ComfyUI] [comfy-env]   [17] /snap/bin
-[01:19]   [ComfyUI] [comfy-env] Metadata scan stderr for nodes:
-[01:19]   [ComfyUI] [comfy-env]   [meta-scan] importing nodes from /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp
-[01:19]   [ComfyUI] [comfy-env]   [meta-scan] import OK
-[01:19]   [ComfyUI] [comfy-env] Scanned nodes: 8 nodes (3.7s)
-[01:19]   [ComfyUI] [comfy-env] Scanned nodes root: 8 nodes (3.8s)
-[01:19]   [ComfyUI] [comfy-env] Imported nodes root: 8 nodes (isolation)
-[01:19]   [ComfyUI] [comfy-env] Registered 8 total nodes
-[01:19]   [ComfyUI] loading...
-[01:19]   [ComfyUI] calling register_nodes
+[01:02] Starting ComfyUI server on port 41885...
+[01:02] Starting ComfyUI server on port 41885...
+[01:02] Waiting for server to be ready (timeout: 600s)...
+[01:04]   [ComfyUI] setup plugin alembic.autogenerate.schemas
+[01:04]   [ComfyUI] setup plugin alembic.autogenerate.tables
+[01:04]   [ComfyUI] setup plugin alembic.autogenerate.types
+[01:04]   [ComfyUI] setup plugin alembic.autogenerate.constraints
+[01:04]   [ComfyUI] setup plugin alembic.autogenerate.defaults
+[01:04]   [ComfyUI] setup plugin alembic.autogenerate.comments
+[01:04]   [ComfyUI] [comfy-env] ComfyUI-Sharp: 1 isolation env(s):
+[01:04]   [ComfyUI] [comfy-env]   nodes -> /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes
+[01:04]   [ComfyUI] [comfy-env] prestartup complete
+[01:04]   [ComfyUI] [comfy-env] ComfyUI-GeometryPack: 1 isolation env(s):
+[01:04]   [ComfyUI] [comfy-env]   nodes -> /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-GeometryPack/nodes
+[01:04]   [ComfyUI] [comfy-env] prestartup complete
+[01:04]   [ComfyUI] 
+[01:04]   [ComfyUI] Prestartup times for custom nodes:
+[01:04]   [ComfyUI]    0.1 seconds: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-GeometryPack
+[01:04]   [ComfyUI]    0.2 seconds: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp
+[01:04]   [ComfyUI] 
+[01:09]   [ComfyUI] Found comfy_kitchen backend triton: {'available': False, 'disabled': True, 'unavailable_reason': 'Neither CUDA nor XPU available on this system', 'capabilities': []}
+[01:09]   [ComfyUI] Found comfy_kitchen backend eager: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_mxfp8', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'scaled_mm_mxfp8', 'scaled_mm_nvfp4']}
+[01:09]   [ComfyUI] Found comfy_kitchen backend cuda: {'available': False, 'disabled': False, 'unavailable_reason': 'CUDA not available on this system', 'capabilities': []}
+[01:10]   [ComfyUI] Checkpoint files will always be loaded safely.
+[01:10]   [ComfyUI] Total VRAM 15990 MB, total RAM 15990 MB
+[01:10]   [ComfyUI] pytorch version: 2.11.0+cu130
+[01:10]   [ComfyUI] Set vram state to: DISABLED
+[01:10]   [ComfyUI] Device: cpu
+[01:10]   [ComfyUI] Using sub quadratic optimization for attention, if you have memory or speed issues try using: --use-split-cross-attention
+[01:16]   [ComfyUI] Python version: 3.12.3 (main, Mar  3 2026, 12:15:18) [GCC 13.3.0]
+[01:16]   [ComfyUI] ComfyUI version: 0.20.1
+[01:16]   [ComfyUI] comfy-aimdo version: 0.3.0
+[01:16]   [ComfyUI] comfy-kitchen version: 0.2.8
+[01:16]   [ComfyUI] ****** User settings have been changed to be stored on the server instead of browser storage. ******
+[01:16]   [ComfyUI] ****** For multi-user setups add the --multi-user CLI argument to enable multiple user profiles. ******
+[01:16]   [ComfyUI] ComfyUI frontend version: 1.43.18
+[01:16]   [ComfyUI] [Prompt Server] web root: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/lib/python3.12/site-packages/comfyui_frontend_package/static
+[01:16]   [ComfyUI] Asset seeder disabled
 [01:19]   [ComfyUI] [comfy-env] Version: 0.3.80
-[01:19]   [ComfyUI] [comfy-env] register_nodes: ComfyUI-GeometryPack
-[01:19]   [ComfyUI] [comfy-env] ComfyUI source dir: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI
+[01:19]   [ComfyUI] [comfy-env] register_nodes: ComfyUI-Sharp
+[01:19]   [ComfyUI] [comfy-env] ComfyUI source dir: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI
 [01:19]   [ComfyUI] [comfy-env] Found 1 isolation env(s)
 [01:19]   [ComfyUI] [comfy-env] Scanning nodes metadata (isolation root)...
-[01:19]   [ComfyUI] [comfy-env] Metadata scan: /home/runner/.pixi/bin/pixi run --as-is --manifest-path /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/.ce/pixi.toml -e geometrypack-nodes python /tmp/comfy_meta_5ihmai5j.py /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-GeometryPack nodes
+[01:19]   [ComfyUI] [comfy-env] Metadata scan: /home/runner/.pixi/bin/pixi run --as-is --manifest-path /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/.ce/pixi.toml -e sharp-nodes python /tmp/comfy_meta_s95ppck7.py /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp nodes
 [01:19]   [ComfyUI] [comfy-env] Scan env PATH for nodes:
-[01:19]   [ComfyUI] [comfy-env]   [0] /opt/hostedtoolcache/Python/3.11.15/x64/bin
-[01:19]   [ComfyUI] [comfy-env]   [1] /opt/hostedtoolcache/Python/3.11.15/x64
+[01:19]   [ComfyUI] [comfy-env]   [0] /opt/hostedtoolcache/Python/3.13.13/x64/bin
+[01:19]   [ComfyUI] [comfy-env]   [1] /opt/hostedtoolcache/Python/3.13.13/x64
 [01:19]   [ComfyUI] [comfy-env]   [2] /snap/bin
 [01:19]   [ComfyUI] [comfy-env]   [3] /home/runner/.local/bin
 [01:19]   [ComfyUI] [comfy-env]   [4] /opt/pipx_bin
@@ -213,265 +185,299 @@ Starting ComfyUI server...
 [01:19]   [ComfyUI] [comfy-env]   [15] /usr/games
 [01:19]   [ComfyUI] [comfy-env]   [16] /usr/local/games
 [01:19]   [ComfyUI] [comfy-env]   [17] /snap/bin
-[01:25]   [ComfyUI] [comfy-env] Metadata scan stderr for nodes:
-[01:25]   [ComfyUI] [comfy-env]   [meta-scan] importing nodes from /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-GeometryPack
-[01:25]   [ComfyUI] [comfy-env]   ERROR:root:Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
-[01:25]   [ComfyUI] [comfy-env]   [meta-scan] import OK
-[01:25]   [ComfyUI] [comfy-env] Scanned nodes: 125 nodes (6.0s)
-[01:25]   [ComfyUI] [comfy-env] Scanned nodes root: 125 nodes (6.1s)
-[01:25]   [ComfyUI] [comfy-env] Imported nodes root: 125 nodes (isolation)
-[01:25]   [ComfyUI] [comfy-env] Registered 125 total nodes
-[01:25]   [ComfyUI] 
-[01:25]   [ComfyUI] Import times for custom nodes:
-[01:25]   [ComfyUI]    0.0 seconds: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/websocket_image_save.py
-[01:25]   [ComfyUI]    0.0 seconds: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-validate-endpoint
-[01:25]   [ComfyUI]    4.0 seconds: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp
-[01:25]   [ComfyUI]    6.2 seconds: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-GeometryPack
-[01:25]   [ComfyUI] 
-[01:25]   [ComfyUI] Context impl SQLiteImpl.
-[01:25]   [ComfyUI] Will assume non-transactional DDL.
-[01:25]   [ComfyUI] Context impl SQLiteImpl.
-[01:25]   [ComfyUI] Will assume non-transactional DDL.
-[01:25]   [ComfyUI] Running upgrade  -> 0001_assets, Initial assets schema
-[01:25]   [ComfyUI] Revision ID: 0001_assets
-[01:25]   [ComfyUI] Revises: None
-[01:25]   [ComfyUI] Create Date: 2025-12-10 00:00:00
-[01:25]   [ComfyUI] Running upgrade 0001_assets -> 0002_merge_to_asset_references, Merge AssetInfo and AssetCacheState into unified asset_references table.
-[01:25]   [ComfyUI] Running upgrade 0002_merge_to_asset_references -> 0003_add_metadata_job_id, Add system_metadata and job_id columns to asset_references.
-[01:25]   [ComfyUI] Change preview_id FK from assets.id to asset_references.id.
-[01:25]   [ComfyUI] Database upgraded from None to 0003_add_metadata_job_id
-[01:25]   [ComfyUI] Starting server
-[01:25]   [ComfyUI] 
-[01:25]   [ComfyUI] To see the GUI go to: http://127.0.0.1:41889
-[01:25] Server responding, waiting for nodes to load...
-[01:45] Server is ready!
-[01:45] Checking for import errors in server logs...
-[01:45] No import errors detected
-[01:45] Found 838 registered nodes
-[01:45] [REGISTRATION] PASSED
-[01:45] 
-[01:45] [4/5] INSTANTIATION
-[01:45] ----------------------------------------
-[01:45] 
-[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x7fa3ec8d99d0>, server_url=None, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x7fa3ec8da090>
-[01:45] Testing node constructors...
-[01:47] All 8 node(s) instantiated successfully!
-[01:47] [INSTANTIATION] PASSED
-[01:47] 
-[01:47] [5/5] EXECUTION
-[01:47] ----------------------------------------
-[01:47] 
-[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x7fa3ec8d99d0>, server_url=None, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x7fa3ec8da090>
-[01:47] CPU runner - will execute 2 workflow(s)
-[01:47] Running 3 workflow(s) (all with videos)...
-[01:47] Installing screenshot dependencies (playwright, pillow)...
-[01:48]   Packages installed, downloading chromium browser...
-[01:57]   Screenshot dependencies installed successfully
-[01:57] Starting headless browser...
-[01:57]   Installing Mesa llvmpipe (apt)...
-[02:08]   Mesa install failed: E: Unable to locate package libegl1-mesa
+[01:23]   [ComfyUI] [comfy-env] Metadata scan stderr for nodes:
+[01:23]   [ComfyUI] [comfy-env]   [meta-scan] importing nodes from /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp
+[01:23]   [ComfyUI] [comfy-env]   [meta-scan] import OK
+[01:23]   [ComfyUI] [comfy-env] Scanned nodes: 8 nodes (3.7s)
+[01:23]   [ComfyUI] [comfy-env] Scanned nodes root: 8 nodes (3.7s)
+[01:23]   [ComfyUI] [comfy-env] Imported nodes root: 8 nodes (isolation)
+[01:23]   [ComfyUI] [comfy-env] Registered 8 total nodes
+[01:23]   [ComfyUI] loading...
+[01:23]   [ComfyUI] calling register_nodes
+[01:23]   [ComfyUI] [comfy-env] Version: 0.3.80
+[01:23]   [ComfyUI] [comfy-env] register_nodes: ComfyUI-GeometryPack
+[01:23]   [ComfyUI] [comfy-env] ComfyUI source dir: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI
+[01:23]   [ComfyUI] [comfy-env] Found 1 isolation env(s)
+[01:23]   [ComfyUI] [comfy-env] Scanning nodes metadata (isolation root)...
+[01:23]   [ComfyUI] [comfy-env] Metadata scan: /home/runner/.pixi/bin/pixi run --as-is --manifest-path /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/.ce/pixi.toml -e geometrypack-nodes python /tmp/comfy_meta_65as_jmk.py /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-GeometryPack nodes
+[01:23]   [ComfyUI] [comfy-env] Scan env PATH for nodes:
+[01:23]   [ComfyUI] [comfy-env]   [0] /opt/hostedtoolcache/Python/3.13.13/x64/bin
+[01:23]   [ComfyUI] [comfy-env]   [1] /opt/hostedtoolcache/Python/3.13.13/x64
+[01:23]   [ComfyUI] [comfy-env]   [2] /snap/bin
+[01:23]   [ComfyUI] [comfy-env]   [3] /home/runner/.local/bin
+[01:23]   [ComfyUI] [comfy-env]   [4] /opt/pipx_bin
+[01:23]   [ComfyUI] [comfy-env]   [5] /home/runner/.cargo/bin
+[01:23]   [ComfyUI] [comfy-env]   [6] /home/runner/.config/composer/vendor/bin
+[01:23]   [ComfyUI] [comfy-env]   [7] /usr/local/.ghcup/bin
+[01:23]   [ComfyUI] [comfy-env]   [8] /home/runner/.dotnet/tools
+[01:23]   [ComfyUI] [comfy-env]   [9] /usr/local/sbin
+[01:23]   [ComfyUI] [comfy-env]   [10] /usr/local/bin
+[01:23]   [ComfyUI] [comfy-env]   [11] /usr/sbin
+[01:23]   [ComfyUI] [comfy-env]   [12] /usr/bin
+[01:23]   [ComfyUI] [comfy-env]   [13] /sbin
+[01:23]   [ComfyUI] [comfy-env]   [14] /bin
+[01:23]   [ComfyUI] [comfy-env]   [15] /usr/games
+[01:23]   [ComfyUI] [comfy-env]   [16] /usr/local/games
+[01:23]   [ComfyUI] [comfy-env]   [17] /snap/bin
+[01:29]   [ComfyUI] [comfy-env] Metadata scan stderr for nodes:
+[01:29]   [ComfyUI] [comfy-env]   [meta-scan] importing nodes from /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-GeometryPack
+[01:29]   [ComfyUI] [comfy-env]   ERROR:root:Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+[01:29]   [ComfyUI] [comfy-env]   [meta-scan] import OK
+[01:29]   [ComfyUI] [comfy-env] Scanned nodes: 125 nodes (6.6s)
+[01:29]   [ComfyUI] [comfy-env] Scanned nodes root: 125 nodes (6.7s)
+[01:29]   [ComfyUI] [comfy-env] Imported nodes root: 125 nodes (isolation)
+[01:29]   [ComfyUI] [comfy-env] Registered 125 total nodes
+[01:29]   [ComfyUI] 
+[01:29]   [ComfyUI] Import times for custom nodes:
+[01:29]   [ComfyUI]    0.0 seconds: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/websocket_image_save.py
+[01:29]   [ComfyUI]    0.0 seconds: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-validate-endpoint
+[01:29]   [ComfyUI]    4.0 seconds: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp
+[01:29]   [ComfyUI]    6.7 seconds: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-GeometryPack
+[01:29]   [ComfyUI] 
+[01:29]   [ComfyUI] Context impl SQLiteImpl.
+[01:29]   [ComfyUI] Will assume non-transactional DDL.
+[01:29]   [ComfyUI] Context impl SQLiteImpl.
+[01:29]   [ComfyUI] Will assume non-transactional DDL.
+[01:29]   [ComfyUI] Running upgrade  -> 0001_assets, Initial assets schema
+[01:29]   [ComfyUI] Revision ID: 0001_assets
+[01:29]   [ComfyUI] Revises: None
+[01:29]   [ComfyUI] Create Date: 2025-12-10 00:00:00
+[01:30]   [ComfyUI] Running upgrade 0001_assets -> 0002_merge_to_asset_references, Merge AssetInfo and AssetCacheState into unified asset_references table.
+[01:30]   [ComfyUI] Running upgrade 0002_merge_to_asset_references -> 0003_add_metadata_job_id, Add system_metadata and job_id columns to asset_references.
+[01:30]   [ComfyUI] Change preview_id FK from assets.id to asset_references.id.
+[01:30]   [ComfyUI] Database upgraded from None to 0003_add_metadata_job_id
+[01:30]   [ComfyUI] Starting server
+[01:30]   [ComfyUI] 
+[01:30]   [ComfyUI] To see the GUI go to: http://127.0.0.1:41885
+[01:30] Server responding, waiting for nodes to load...
+[01:50] Server is ready!
+[01:50] Checking for import errors in server logs...
+[01:50] No import errors detected
+[01:50] Found 838 registered nodes
+[01:50] [REGISTRATION] PASSED
+[01:50] 
+[01:50] [4/5] INSTANTIATION
+[01:50] ----------------------------------------
+[01:50] 
+[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x7f8d5bba17f0>, server_url=None, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x7f8d5bba1d30>
+[01:50] Testing node constructors...
+[01:52] All 8 node(s) instantiated successfully!
+[01:52] [INSTANTIATION] PASSED
+[01:52] 
+[01:52] [5/5] EXECUTION
+[01:52] ----------------------------------------
+[01:52] 
+[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x7f8d5bba17f0>, server_url=None, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x7f8d5bba1d30>
+[01:52] CPU runner - will execute 2 workflow(s)
+[01:52] Running 3 workflow(s) (all with videos)...
+[01:52] Installing screenshot dependencies (playwright, pillow)...
+[01:53]   Packages installed, downloading chromium browser...
+[02:01]   Screenshot dependencies installed successfully
+[02:02] Starting headless browser...
+[02:02]   Installing Mesa llvmpipe (apt)...
+[02:13]   Mesa install failed: E: Unable to locate package libegl1-mesa
 
-[02:08]   No GPU, no Mesa -- using SwiftShader software rendering
-[02:10]   [1/3] SKIPPED (not in cpu list) pano.json
-[02:10] Capturing execution frames: sharp_basic.json
-[02:17]   Frame 1 saved (frame_000.jpg, t=0.0s)
-[02:17]   Validating workflow...
-[02:17]   [ComfyUI] === /validate endpoint called ===
-[02:17]   [ComfyUI] Received JSON with keys: ['prompt']
-[02:17]   [ComfyUI] Prompt has 4 nodes
-[02:17]   [ComfyUI]   Node 1: LoadImage
-[02:17]   [ComfyUI]     Inputs: {"image": "beach.jpg"}
-[02:17]   [ComfyUI]   Node 2: LoadSharpModel
-[02:17]   [ComfyUI]     Inputs: {"precision": "auto"}
-[02:17]   [ComfyUI]   Node 4: GeomPackPreviewGaussian
-[02:17]   [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
-[02:17]   [ComfyUI]   Node 5: SharpPredict
-[02:17]   [ComfyUI]     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
-[02:17]   [ComfyUI] Generated prompt_id: 60156a4d-9ae3-4ecf-a9c5-f0c61cdbd066
-[02:17]   Queuing workflow for execution...
-[02:17]   [ComfyUI] Calling execution.validate_prompt()...
-[02:17]   [ComfyUI] Validation result: valid=True
-[02:17]   [ComfyUI] === Validation PASSED ===
-[02:17]   [ComfyUI] got prompt
-[02:17]   [ComfyUI] [comfy-env] SubprocessWorker: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/.ce/.pixi/envs/sharp-nodes/bin/python
-[02:17]   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
-[02:17]   [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
-[02:17]   [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI'}
-[02:17]   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
-[02:17]   [ComfyUI] [ComfyUI-Sharp] python: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/.ce/.pixi/envs/sharp-nodes/bin/python
-[02:17]   [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.13/site-packages', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp']
-[02:17]   [ComfyUI] [SubprocessWorker] is_pixi=True, python=/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/.ce/.pixi/envs/sharp-nodes/bin/python
-[02:17]   [ComfyUI] [SubprocessWorker] launching cmd=['/home/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/tmp/comfyui_pvenv_gxmskba3/persistent_worker.py', 'abstract://comfy_worker_0df459f56389']...
-[02:17]   [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_0df459f56389 (abstract, no filesystem path)
-[02:18]   [ComfyUI] [worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
-[02:18]   [ComfyUI] [SubprocessWorker] worker started/confirmed
-[02:18]   [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
-[02:18]   [ComfyUI] [SubprocessWorker] created 0 shm blocks
-[02:18]   [ComfyUI] [SubprocessWorker] sending request via socket...
-[02:18]   [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
-[02:18]   [ComfyUI] [SubprocessWorker] got response: error
-[02:18]   [ComfyUI] !!! Exception during processing !!! No module named 'psutil'
-[02:19]   [ComfyUI] 
-[02:19]   [ComfyUI] Worker traceback:
-[02:19]   [ComfyUI] Traceback (most recent call last):
-[02:19]   [ComfyUI]   File "/tmp/comfyui_pvenv_gxmskba3/persistent_worker.py", line 1762, in main
-[02:19]   [ComfyUI]     result = method(**inputs)
-[02:19]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
-[02:19]   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
-[02:19]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
-[02:19]   [ComfyUI]     import comfy.model_management
-[02:19]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy/model_management.py", line 19, in <module>
-[02:19]   [ComfyUI]     import psutil
-[02:19]   [ComfyUI] ModuleNotFoundError: No module named 'psutil'
-[02:19]   [ComfyUI] 
-[02:19]   [ComfyUI] Traceback (most recent call last):
-[02:19]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 535, in execute
-[02:19]   [ComfyUI]     output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
-[02:19]   [ComfyUI]                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[02:19]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 335, in get_output_data
-[02:19]   [ComfyUI]     return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
-[02:19]   [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[02:19]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 309, in _async_map_node_over_list
-[02:19]   [ComfyUI]     await process_inputs(input_dict, i)
-[02:19]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 297, in process_inputs
-[02:19]   [ComfyUI]     result = f(**inputs)
-[02:19]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/lib/python3.13/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy
-[02:19]   [ComfyUI]     result = worker.call_method(
-[02:19]   [ComfyUI]         module_name=mod,
-[02:19]   [ComfyUI]     ...<4 lines>...
-[02:19]   [ComfyUI]         timeout=600.0,
-[02:19]   [ComfyUI]     )
-[02:19]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/lib/python3.13/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method
-[02:19]   [ComfyUI]     raise WorkerError(
-[02:19]   [ComfyUI]     ...<2 lines>...
-[02:19]   [ComfyUI]     )
-[02:19]   [ComfyUI] comfy_env.isolation.workers.base.WorkerError: No module named 'psutil'
-[02:19]   [ComfyUI] 
-[02:19]   [ComfyUI] Worker traceback:
-[02:19]   [ComfyUI] Traceback (most recent call last):
-[02:19]   [ComfyUI]   File "/tmp/comfyui_pvenv_gxmskba3/persistent_worker.py", line 1762, in main
-[02:19]   [ComfyUI]     result = method(**inputs)
-[02:19]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
-[02:19]   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
-[02:19]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
-[02:19]   [ComfyUI]     import comfy.model_management
-[02:19]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy/model_management.py", line 19, in <module>
-[02:19]   [ComfyUI]     import psutil
-[02:19]   [ComfyUI] ModuleNotFoundError: No module named 'psutil'
-[02:19]   [ComfyUI] 
-[02:19]   [ComfyUI] 
-[02:19]   [ComfyUI] Prompt executed in 1.61 seconds
-[02:19]   Execution complete (t=1.9s)
-[02:19]   Execution error: {'prompt_id': '9e4710fd-2688-44b2-862f-aee1650a7fcc', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['1'], 'exception_message': 'No module named \'psutil\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "/tmp/comfyui_pvenv_gxmskba3/persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute\n    import comfy.model_management\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy/model_management.py", line 19, in <module>\n    import psutil\nModuleNotFoundError: No module named \'psutil\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 297, in process_inputs\n    result = f(**inputs)\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/lib/python3.13/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy\n    result = worker.call_method(\n        module_name=mod,\n    ...<4 lines>...\n        timeout=600.0,\n    )\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/lib/python3.13/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method\n    raise WorkerError(\n    ...<2 lines>...\n    )\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['1', '2', '5', '4'], 'timestamp': 1778445066897}
-[02:19] Capturing execution frames: sharp_exif.json
-[02:25]   Frame 1 saved (frame_000.jpg, t=0.0s)
-[02:25]   Validating workflow...
-[02:25]   [ComfyUI] === /validate endpoint called ===
-[02:25]   [ComfyUI] Received JSON with keys: ['prompt']
-[02:25]   [ComfyUI] Prompt has 4 nodes
-[02:25]   [ComfyUI]   Node 2: LoadSharpModel
-[02:25]   [ComfyUI]     Inputs: {"precision": "auto"}
-[02:25]   [ComfyUI]   Node 7: SharpPredict
-[02:25]   [ComfyUI]     Inputs: {"focal_length_mm": ["9", 2], "output_prefix": "sharp", "model": ["2", 0], "image": ["9", 0]}
-[02:25]   [ComfyUI]   Node 8: GeomPackPreviewGaussian
-[02:25]   [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["7", 0], "extrinsics": ["7", 1], "intrinsics": ["7", 2]}
-[02:25]   [ComfyUI]   Node 9: LoadImageWithExif
-[02:25]   [ComfyUI]     Inputs: {"image": "eth3d.png", "default_focal_mm": 30}
-[02:25]   [ComfyUI] Generated prompt_id: 5dd38ebf-1986-4fad-8de6-0ac88657e322
-[02:25]   [ComfyUI] Calling execution.validate_prompt()...
-[02:25]   [ComfyUI] Validation result: valid=True
-[02:25]   [ComfyUI] === Validation PASSED ===
-[02:25]   Queuing workflow for execution...
-[02:25]   [ComfyUI] got prompt
-[02:25]   [ComfyUI] [comfy-env] Running LoadImageWithExif: image: 'eth3d.png', default_focal_mm: 30.0
-[02:25]   [ComfyUI] [SubprocessWorker] call_method: nodes.load_image_exif.LoadImageWithExif.EXECUTE_NORMALIZED
-[02:25]   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
-[02:25]   [ComfyUI] [ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
-[02:25]   [ComfyUI] [ComfyUI-Sharp] Health check: ok
-[02:25]   [ComfyUI] [SubprocessWorker] worker started/confirmed
-[02:25]   [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
-[02:25]   [ComfyUI] [SubprocessWorker] created 0 shm blocks
-[02:25]   [ComfyUI] [SubprocessWorker] sending request via socket...
-[02:25]   [ComfyUI] [SubprocessWorker] call_id=2 sending call_method
-[02:25]   [ComfyUI] [SubprocessWorker] got response: ok
-[02:25]   [ComfyUI] [comfy-env] LoadImageWithExif done (0.35s): result: NodeOutput
-[02:25]   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
-[02:25]   [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
-[02:25]   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
-[02:25]   [ComfyUI] [ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
-[02:25]   [ComfyUI] [ComfyUI-Sharp] Health check: ok
-[02:25]   [ComfyUI] [SubprocessWorker] worker started/confirmed
-[02:25]   [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
-[02:25]   [ComfyUI] [SubprocessWorker] created 0 shm blocks
-[02:25]   [ComfyUI] [SubprocessWorker] sending request via socket...
-[02:25]   [ComfyUI] [SubprocessWorker] call_id=3 sending call_method
-[02:25]   [ComfyUI] [SubprocessWorker] got response: error
-[02:25]   [ComfyUI] !!! Exception during processing !!! No module named 'psutil'
-[02:25]   [ComfyUI] 
-[02:25]   [ComfyUI] Worker traceback:
-[02:25]   [ComfyUI] Traceback (most recent call last):
-[02:25]   [ComfyUI]   File "/tmp/comfyui_pvenv_gxmskba3/persistent_worker.py", line 1762, in main
-[02:25]   [ComfyUI]     result = method(**inputs)
-[02:25]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
-[02:25]   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
-[02:25]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
-[02:25]   [ComfyUI]     import comfy.model_management
-[02:25]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy/model_management.py", line 19, in <module>
-[02:25]   [ComfyUI]     import psutil
-[02:25]   [ComfyUI] ModuleNotFoundError: No module named 'psutil'
-[02:25]   [ComfyUI] 
-[02:25]   [ComfyUI] Traceback (most recent call last):
-[02:25]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 535, in execute
-[02:25]   [ComfyUI]     output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
-[02:25]   [ComfyUI]                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[02:25]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 335, in get_output_data
-[02:25]   [ComfyUI]     return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
-[02:25]   [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-[02:25]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 309, in _async_map_node_over_list
-[02:25]   [ComfyUI]     await process_inputs(input_dict, i)
-[02:25]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 297, in process_inputs
-[02:25]   [ComfyUI]     result = f(**inputs)
-[02:25]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/lib/python3.13/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy
-[02:25]   [ComfyUI]     result = worker.call_method(
-[02:25]   [ComfyUI]         module_name=mod,
-[02:25]   [ComfyUI]     ...<4 lines>...
-[02:25]   [ComfyUI]         timeout=600.0,
-[02:25]   [ComfyUI]     )
-[02:25]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/lib/python3.13/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method
-[02:25]   [ComfyUI]     raise WorkerError(
-[02:25]   [ComfyUI]     ...<2 lines>...
-[02:25]   [ComfyUI]     )
-[02:25]   [ComfyUI] comfy_env.isolation.workers.base.WorkerError: No module named 'psutil'
-[02:25]   [ComfyUI] 
-[02:25]   [ComfyUI] Worker traceback:
-[02:25]   [ComfyUI] Traceback (most recent call last):
-[02:25]   [ComfyUI]   File "/tmp/comfyui_pvenv_gxmskba3/persistent_worker.py", line 1762, in main
-[02:25]   [ComfyUI]     result = method(**inputs)
-[02:25]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
-[02:25]   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
-[02:25]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
-[02:25]   [ComfyUI]     import comfy.model_management
-[02:25]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy/model_management.py", line 19, in <module>
-[02:25]   [ComfyUI]     import psutil
-[02:25]   [ComfyUI] ModuleNotFoundError: No module named 'psutil'
-[02:25]   [ComfyUI] 
-[02:25]   [ComfyUI] 
-[02:25]   [ComfyUI] Prompt executed in 0.36 seconds
-[02:25]   Execution complete (t=0.6s)
-[02:25]   Execution error: {'prompt_id': 'b001a952-461a-4a4d-9f94-dae854fa6f9c', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['9'], 'exception_message': 'No module named \'psutil\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "/tmp/comfyui_pvenv_gxmskba3/persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute\n    import comfy.model_management\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy/model_management.py", line 19, in <module>\n    import psutil\nModuleNotFoundError: No module named \'psutil\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 297, in process_inputs\n    result = f(**inputs)\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/lib/python3.13/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy\n    result = worker.call_method(\n        module_name=mod,\n    ...<4 lines>...\n        timeout=600.0,\n    )\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/lib/python3.13/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method\n    raise WorkerError(\n    ...<2 lines>...\n    )\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['8', '2', '9', '7'], 'timestamp': 1778445073555}
-[02:25] Results saved to /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-2028/dev/linux-cpu/results.json
-[02:25] Saved: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-2028/dev/linux-cpu/index.html
-[02:25] 
+[02:13]   No GPU, no Mesa -- using SwiftShader software rendering
+[02:13]   [1/3] SKIPPED (not in cpu list) pano.json
+[02:14] Capturing execution frames: sharp_basic.json
+[02:20]   Frame 1 saved (frame_000.jpg, t=0.0s)
+[02:20]   Validating workflow...
+[02:20]   [ComfyUI] === /validate endpoint called ===
+[02:20]   [ComfyUI] Received JSON with keys: ['prompt']
+[02:20]   [ComfyUI] Prompt has 4 nodes
+[02:20]   [ComfyUI]   Node 1: LoadImage
+[02:20]   [ComfyUI]     Inputs: {"image": "beach.jpg"}
+[02:20]   [ComfyUI]   Node 2: LoadSharpModel
+[02:20]   [ComfyUI]     Inputs: {"precision": "auto"}
+[02:20]   [ComfyUI]   Node 4: GeomPackPreviewGaussian
+[02:20]   [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
+[02:20]   [ComfyUI]   Node 5: SharpPredict
+[02:20]   [ComfyUI]     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
+[02:20]   [ComfyUI] Generated prompt_id: 1e61786b-32a7-4997-a0ac-d2bb357e1cd6
+[02:20]   [ComfyUI] Calling execution.validate_prompt()...
+[02:20]   Queuing workflow for execution...
+[02:20]   [ComfyUI] Validation result: valid=True
+[02:20]   [ComfyUI] === Validation PASSED ===
+[02:20]   [ComfyUI] got prompt
+[02:20]   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
+[02:20]   [ComfyUI] [comfy-env] SubprocessWorker: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/.ce/.pixi/envs/sharp-nodes/bin/python
+[02:20]   [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI'}
+[02:20]   [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
+[02:20]   [ComfyUI] [ComfyUI-Sharp] python: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/.ce/.pixi/envs/sharp-nodes/bin/python
+[02:20]   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+[02:20]   [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp']
+[02:20]   [ComfyUI] [SubprocessWorker] is_pixi=True, python=/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/.ce/.pixi/envs/sharp-nodes/bin/python
+[02:20]   [ComfyUI] [SubprocessWorker] launching cmd=['/home/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/tmp/comfyui_pvenv_e2pe2jdm/persistent_worker.py', 'abstract://comfy_worker_6a0bf9e1372d']...
+[02:20]   [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_6a0bf9e1372d (abstract, no filesystem path)
+[02:22]   [ComfyUI] [worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+[02:22]   [ComfyUI] [SubprocessWorker] worker started/confirmed
+[02:22]   [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+[02:22]   [ComfyUI] [SubprocessWorker] created 0 shm blocks
+[02:22]   [ComfyUI] [SubprocessWorker] sending request via socket...
+[02:22]   [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
+[02:22]   [ComfyUI] [SubprocessWorker] got response: error
+[02:22]   [ComfyUI] !!! Exception during processing !!! No module named 'psutil'
+[02:22]   [ComfyUI] 
+[02:22]   [ComfyUI] Worker traceback:
+[02:22]   [ComfyUI] Traceback (most recent call last):
+[02:22]   [ComfyUI]   File "/tmp/comfyui_pvenv_e2pe2jdm/persistent_worker.py", line 1762, in main
+[02:22]   [ComfyUI]     result = method(**inputs)
+[02:22]   [ComfyUI]              ^^^^^^^^^^^^^^^^
+[02:22]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
+[02:22]   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
+[02:22]   [ComfyUI]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[02:22]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
+[02:22]   [ComfyUI]     import comfy.model_management
+[02:22]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy/model_management.py", line 19, in <module>
+[02:22]   [ComfyUI]     import psutil
+[02:22]   [ComfyUI] ModuleNotFoundError: No module named 'psutil'
+[02:22]   [ComfyUI] 
+[02:22]   [ComfyUI] Traceback (most recent call last):
+[02:22]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 535, in execute
+[02:22]   [ComfyUI]     output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
+[02:22]   [ComfyUI]                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[02:22]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 335, in get_output_data
+[02:22]   [ComfyUI]     return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
+[02:22]   [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[02:22]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 309, in _async_map_node_over_list
+[02:22]   [ComfyUI]     await process_inputs(input_dict, i)
+[02:22]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 297, in process_inputs
+[02:22]   [ComfyUI]     result = f(**inputs)
+[02:22]   [ComfyUI]              ^^^^^^^^^^^
+[02:22]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/lib/python3.12/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy
+[02:22]   [ComfyUI]     result = worker.call_method(
+[02:22]   [ComfyUI]              ^^^^^^^^^^^^^^^^^^^
+[02:22]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/lib/python3.12/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method
+[02:22]   [ComfyUI]     raise WorkerError(
+[02:22]   [ComfyUI] comfy_env.isolation.workers.base.WorkerError: No module named 'psutil'
+[02:22]   [ComfyUI] 
+[02:22]   [ComfyUI] Worker traceback:
+[02:22]   [ComfyUI] Traceback (most recent call last):
+[02:22]   [ComfyUI]   File "/tmp/comfyui_pvenv_e2pe2jdm/persistent_worker.py", line 1762, in main
+[02:22]   [ComfyUI]     result = method(**inputs)
+[02:22]   [ComfyUI]              ^^^^^^^^^^^^^^^^
+[02:22]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
+[02:22]   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
+[02:22]   [ComfyUI]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[02:22]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
+[02:22]   [ComfyUI]     import comfy.model_management
+[02:22]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy/model_management.py", line 19, in <module>
+[02:22]   [ComfyUI]     import psutil
+[02:22]   [ComfyUI] ModuleNotFoundError: No module named 'psutil'
+[02:22]   [ComfyUI] 
+[02:22]   [ComfyUI] 
+[02:22]   [ComfyUI] Prompt executed in 1.81 seconds
+[02:22]   Execution complete (t=2.2s)
+[02:22]   Execution error: {'prompt_id': '9c537c12-12c1-4f97-bb69-25d6d6580489', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['1'], 'exception_message': 'No module named \'psutil\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "/tmp/comfyui_pvenv_e2pe2jdm/persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n             ^^^^^^^^^^^^^^^^\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute\n    import comfy.model_management\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy/model_management.py", line 19, in <module>\n    import psutil\nModuleNotFoundError: No module named \'psutil\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 297, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/lib/python3.12/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy\n    result = worker.call_method(\n             ^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/lib/python3.12/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method\n    raise WorkerError(\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['5', '1', '4', '2'], 'timestamp': 1778445502255}
+[02:23] Capturing execution frames: sharp_exif.json
+[02:29]   Frame 1 saved (frame_000.jpg, t=0.0s)
+[02:29]   Validating workflow...
+[02:29]   [ComfyUI] === /validate endpoint called ===
+[02:29]   [ComfyUI] Received JSON with keys: ['prompt']
+[02:29]   [ComfyUI] Prompt has 4 nodes
+[02:29]   [ComfyUI]   Node 2: LoadSharpModel
+[02:29]   [ComfyUI]     Inputs: {"precision": "auto"}
+[02:29]   [ComfyUI]   Node 7: SharpPredict
+[02:29]   [ComfyUI]     Inputs: {"focal_length_mm": ["9", 2], "output_prefix": "sharp", "model": ["2", 0], "image": ["9", 0]}
+[02:29]   [ComfyUI]   Node 8: GeomPackPreviewGaussian
+[02:29]   [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["7", 0], "extrinsics": ["7", 1], "intrinsics": ["7", 2]}
+[02:29]   [ComfyUI]   Node 9: LoadImageWithExif
+[02:29]   [ComfyUI]     Inputs: {"image": "eth3d.png", "default_focal_mm": 30}
+[02:29]   [ComfyUI] Generated prompt_id: c6945775-1801-447d-9acf-b90a35bae760
+[02:29]   [ComfyUI] Calling execution.validate_prompt()...
+[02:29]   [ComfyUI] Validation result: valid=True
+[02:29]   [ComfyUI] === Validation PASSED ===
+[02:29]   Queuing workflow for execution...
+[02:29]   [ComfyUI] got prompt
+[02:29]   [ComfyUI] [comfy-env] Running LoadImageWithExif: image: 'eth3d.png', default_focal_mm: 30.0
+[02:29]   [ComfyUI] [SubprocessWorker] call_method: nodes.load_image_exif.LoadImageWithExif.EXECUTE_NORMALIZED
+[02:29]   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+[02:29]   [ComfyUI] [ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
+[02:29]   [ComfyUI] [ComfyUI-Sharp] Health check: ok
+[02:29]   [ComfyUI] [SubprocessWorker] worker started/confirmed
+[02:29]   [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+[02:29]   [ComfyUI] [SubprocessWorker] created 0 shm blocks
+[02:29]   [ComfyUI] [SubprocessWorker] sending request via socket...
+[02:29]   [ComfyUI] [SubprocessWorker] call_id=2 sending call_method
+[02:29]   [ComfyUI] [SubprocessWorker] got response: ok
+[02:29]   [ComfyUI] [comfy-env] LoadImageWithExif done (0.30s): result: NodeOutput
+[02:29]   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
+[02:29]   [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
+[02:29]   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+[02:29]   [ComfyUI] [ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
+[02:29]   [ComfyUI] [ComfyUI-Sharp] Health check: ok
+[02:29]   [ComfyUI] [SubprocessWorker] worker started/confirmed
+[02:29]   [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+[02:29]   [ComfyUI] [SubprocessWorker] created 0 shm blocks
+[02:29]   [ComfyUI] [SubprocessWorker] sending request via socket...
+[02:29]   [ComfyUI] [SubprocessWorker] call_id=3 sending call_method
+[02:29]   [ComfyUI] [SubprocessWorker] got response: error
+[02:29]   [ComfyUI] !!! Exception during processing !!! No module named 'psutil'
+[02:29]   [ComfyUI] 
+[02:29]   [ComfyUI] Worker traceback:
+[02:29]   [ComfyUI] Traceback (most recent call last):
+[02:29]   [ComfyUI]   File "/tmp/comfyui_pvenv_e2pe2jdm/persistent_worker.py", line 1762, in main
+[02:29]   [ComfyUI]     result = method(**inputs)
+[02:29]   [ComfyUI]              ^^^^^^^^^^^^^^^^
+[02:29]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
+[02:29]   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
+[02:29]   [ComfyUI]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[02:29]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
+[02:29]   [ComfyUI]     import comfy.model_management
+[02:29]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy/model_management.py", line 19, in <module>
+[02:29]   [ComfyUI]     import psutil
+[02:29]   [ComfyUI] ModuleNotFoundError: No module named 'psutil'
+[02:29]   [ComfyUI] 
+[02:29]   [ComfyUI] Traceback (most recent call last):
+[02:29]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 535, in execute
+[02:29]   [ComfyUI]     output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
+[02:29]   [ComfyUI]                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[02:29]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 335, in get_output_data
+[02:29]   [ComfyUI]     return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
+[02:29]   [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[02:29]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 309, in _async_map_node_over_list
+[02:29]   [ComfyUI]     await process_inputs(input_dict, i)
+[02:29]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 297, in process_inputs
+[02:29]   [ComfyUI]     result = f(**inputs)
+[02:29]   [ComfyUI]              ^^^^^^^^^^^
+[02:29]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/lib/python3.12/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy
+[02:29]   [ComfyUI]     result = worker.call_method(
+[02:29]   [ComfyUI]              ^^^^^^^^^^^^^^^^^^^
+[02:29]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/lib/python3.12/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method
+[02:29]   [ComfyUI]     raise WorkerError(
+[02:29]   [ComfyUI] comfy_env.isolation.workers.base.WorkerError: No module named 'psutil'
+[02:29]   [ComfyUI] 
+[02:29]   [ComfyUI] Worker traceback:
+[02:29]   [ComfyUI] Traceback (most recent call last):
+[02:29]   [ComfyUI]   File "/tmp/comfyui_pvenv_e2pe2jdm/persistent_worker.py", line 1762, in main
+[02:29]   [ComfyUI]     result = method(**inputs)
+[02:29]   [ComfyUI]              ^^^^^^^^^^^^^^^^
+[02:29]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
+[02:29]   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
+[02:29]   [ComfyUI]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[02:29]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
+[02:29]   [ComfyUI]     import comfy.model_management
+[02:29]   [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy/model_management.py", line 19, in <module>
+[02:29]   [ComfyUI]     import psutil
+[02:29]   [ComfyUI] ModuleNotFoundError: No module named 'psutil'
+[02:29]   [ComfyUI] 
+[02:29]   [ComfyUI] 
+[02:29]   [ComfyUI] Prompt executed in 0.32 seconds
+[02:29]   Execution complete (t=0.6s)
+[02:29]   Execution error: {'prompt_id': '407d3be3-d24a-4270-84d9-4f1e434bc990', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['9'], 'exception_message': 'No module named \'psutil\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "/tmp/comfyui_pvenv_e2pe2jdm/persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n             ^^^^^^^^^^^^^^^^\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute\n    import comfy.model_management\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy/model_management.py", line 19, in <module>\n    import psutil\nModuleNotFoundError: No module named \'psutil\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 297, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/lib/python3.12/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy\n    result = worker.call_method(\n             ^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/lib/python3.12/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method\n    raise WorkerError(\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['8', '7', '9', '2'], 'timestamp': 1778445509229}
+[02:29] Results saved to /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-2035/dev/linux-cpu/results.json
+[02:29] Saved: /home/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-2035/dev/linux-cpu/index.html
+[02:29] 
 linux: FAILED
-[02:25] Error: Workflow execution failed (2 error(s))
-[02:25] Details: sharp_basic.json: Workflow execution failed: {'prompt_id': '9e4710fd-2688-44b2-862f-aee1650a7fcc', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['1'], 'exception_message': 'No module named \'psutil\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "/tmp/comfyui_pvenv_gxmskba3/persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute\n    import comfy.model_management\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy/model_management.py", line 19, in <module>\n    import psutil\nModuleNotFoundError: No module named \'psutil\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 297, in process_inputs\n    result = f(**inputs)\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/lib/python3.13/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy\n    result = worker.call_method(\n        module_name=mod,\n    ...<4 lines>...\n        timeout=600.0,\n    )\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/lib/python3.13/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method\n    raise WorkerError(\n    ...<2 lines>...\n    )\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['1', '2', '5', '4'], 'timestamp': 1778445066897}
+[02:29] Error: Workflow execution failed (2 error(s))
+[02:29] Details: sharp_basic.json: Workflow execution failed: {'prompt_id': '9c537c12-12c1-4f97-bb69-25d6d6580489', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['1'], 'exception_message': 'No module named \'psutil\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "/tmp/comfyui_pvenv_e2pe2jdm/persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n             ^^^^^^^^^^^^^^^^\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute\n    import comfy.model_management\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy/model_management.py", line 19, in <module>\n    import psutil\nModuleNotFoundError: No module named \'psutil\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 297, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/lib/python3.12/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy\n    result = worker.call_method(\n             ^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/lib/python3.12/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method\n    raise WorkerError(\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['5', '1', '4', '2'], 'timestamp': 1778445502255}
 
 Details:
-Workflow: /tmp/comfy-test-run-bzhp9jtz/ComfyUI-Sharp/workflows/sharp_basic.json
+Workflow: /tmp/comfy-test-run-xykvrfzi/ComfyUI-Sharp/workflows/sharp_basic.json
 Node error: LoadSharpModel
-sharp_exif.json: Workflow execution failed: {'prompt_id': 'b001a952-461a-4a4d-9f94-dae854fa6f9c', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['9'], 'exception_message': 'No module named \'psutil\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "/tmp/comfyui_pvenv_gxmskba3/persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute\n    import comfy.model_management\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/comfy/model_management.py", line 19, in <module>\n    import psutil\nModuleNotFoundError: No module named \'psutil\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/ComfyUI/execution.py", line 297, in process_inputs\n    result = f(**inputs)\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/lib/python3.13/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy\n    result = worker.call_method(\n        module_name=mod,\n    ...<4 lines>...\n        timeout=600.0,\n    )\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2028/.venv/lib/python3.13/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method\n    raise WorkerError(\n    ...<2 lines>...\n    )\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['8', '2', '9', '7'], 'timestamp': 1778445073555}
+sharp_exif.json: Workflow execution failed: {'prompt_id': '407d3be3-d24a-4270-84d9-4f1e434bc990', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['9'], 'exception_message': 'No module named \'psutil\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "/tmp/comfyui_pvenv_e2pe2jdm/persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n             ^^^^^^^^^^^^^^^^\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute\n    import comfy.model_management\n  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/comfy/model_management.py", line 19, in <module>\n    import psutil\nModuleNotFoundError: No module named \'psutil\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/ComfyUI/execution.py", line 297, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/lib/python3.12/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy\n    result = worker.call_method(\n             ^^^^^^^^^^^^^^^^^^^\n', '  File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2035/.venv/lib/python3.12/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method\n    raise WorkerError(\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['8', '7', '9', '2'], 'timestamp': 1778445509229}
 
 Details:
-Workflow: /tmp/comfy-test-run-bzhp9jtz/ComfyUI-Sharp/workflows/sharp_exif.json
+Workflow: /tmp/comfy-test-run-xykvrfzi/ComfyUI-Sharp/workflows/sharp_exif.json
 Node error: LoadSharpModel
-[02:25] Stopping ComfyUI server...
+[02:29] Stopping ComfyUI server...
