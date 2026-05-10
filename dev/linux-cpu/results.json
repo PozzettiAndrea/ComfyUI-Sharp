@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-05-09T16:32:40.822462+00:00",
+  "timestamp": "2026-05-10T03:12:57.125006+00:00",
   "platform": "linux",
   "hardware": {
     "os": "Linux-6.17.0-1010-azure-x86_64-with-glibc2.39",
-    "cpu": "AMD EPYC 9V74 80-Core Processor"
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz"
   },
-  "commit_hash": "ac4628bf6a2f4a2116544bcdd9d62cdd85b4b3e1",
+  "commit_hash": "e96712e0db150112155eb60540de9f99ac201fa0",
   "success": true,
   "summary": {
     "total": 3,
@@ -23,37 +23,37 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 437.13,
+      "duration_seconds": 278.18,
       "error": null,
       "hardware": {
         "os": "Linux-6.17.0-1010-azure-x86_64-with-glibc2.39",
-        "cpu": "AMD EPYC 9V74 80-Core Processor"
+        "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz"
       },
       "resources": {
         "ram": {
-          "peak": 9.89,
-          "avg": 6.11
+          "peak": 9.22,
+          "avg": 5.32
         },
         "total_ram_gb": 15.6,
-        "samples": 437
+        "samples": 278
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 537.42,
+      "duration_seconds": 284.04,
       "error": null,
       "hardware": {
         "os": "Linux-6.17.0-1010-azure-x86_64-with-glibc2.39",
-        "cpu": "AMD EPYC 9V74 80-Core Processor"
+        "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz"
       },
       "resources": {
         "ram": {
-          "peak": 10.61,
-          "avg": 6.98
+          "peak": 10.22,
+          "avg": 6.34
         },
         "total_ram_gb": 15.6,
-        "samples": 538
+        "samples": 283
       }
     }
   ]
