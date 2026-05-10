@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-09T13:27:06.190692+00:00",
+  "timestamp": "2026-05-10T14:17:47.069390+00:00",
   "platform": "windows_portable",
   "hardware": {
-    "os": "Windows-10-10.0.26200-SP0",
-    "cpu": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel",
-    "gpu": "NVIDIA GeForce RTX 3060"
+    "os": "Windows-11-10.0.26200-SP0",
+    "cpu": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel"
   },
-  "commit_hash": "e9dd8d8858478b5744e05174889d143ed436106f",
+  "commit_hash": "ca852e5ab5d437ec1e50eea503eed9b9f181787b",
+  "run_url": null,
   "success": true,
   "summary": {
     "total": 3,
@@ -24,47 +24,37 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 73.73,
+      "duration_seconds": 133.82,
       "error": null,
       "hardware": {
-        "os": "Windows-10-10.0.26200-SP0",
-        "cpu": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel",
-        "gpu": "NVIDIA GeForce RTX 3060"
+        "os": "Windows-11-10.0.26200-SP0",
+        "cpu": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel"
       },
       "resources": {
         "ram": {
-          "peak": 8.27,
-          "avg": 3.74
+          "peak": 5.79,
+          "avg": 4.28
         },
         "total_ram_gb": 31.9,
-        "samples": 64,
-        "vram": {
-          "peak": 5.53,
-          "avg": 1.74
-        }
+        "samples": 125
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 34.1,
+      "duration_seconds": 93.02,
       "error": null,
       "hardware": {
-        "os": "Windows-10-10.0.26200-SP0",
-        "cpu": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel",
-        "gpu": "NVIDIA GeForce RTX 3060"
+        "os": "Windows-11-10.0.26200-SP0",
+        "cpu": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel"
       },
       "resources": {
         "ram": {
-          "peak": 8.27,
-          "avg": 6.22
+          "peak": 5.79,
+          "avg": 2.81
         },
         "total_ram_gb": 31.9,
-        "samples": 30,
-        "vram": {
-          "peak": 5.73,
-          "avg": 3.48
-        }
+        "samples": 92
       }
     }
   ]

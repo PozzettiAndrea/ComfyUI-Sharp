@@ -1,11 +1,29 @@
 {
+  "timestamp": "2026-05-10T03:27:20.310002+00:00",
+  "platform": "windows_desktop",
+  "hardware": {
+    "os": "Windows-2025Server-10.0.26100-SP0",
+    "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
+  },
+  "commit_hash": "92cf0ea1da13e5da1f3ca3906d59613e4a6374f8",
+  "success": true,
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0
+  },
   "workflows": [
     {
-      "name": "system",
+      "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 0,
-      "error": null,
-      "hardware": null
+      "duration_seconds": 291,
+      "error": null
+    },
+    {
+      "name": "sharp_exif",
+      "status": "pass",
+      "duration_seconds": 233,
+      "error": null
     }
   ]
 }
