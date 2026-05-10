@@ -1,63 +1,423 @@
 Capturing execution frames: sharp_basic.json
   Frame 1 saved (frame_000.jpg, t=0.0s)
   Validating workflow...
+  [ComfyUI] === /validate endpoint called ===
+  [ComfyUI] === /validate endpoint called ===
+  [ComfyUI] Received JSON with keys: ['prompt']
+  [ComfyUI] Received JSON with keys: ['prompt']
+  [ComfyUI] Prompt has 4 nodes
+  [ComfyUI] Prompt has 4 nodes
+  [ComfyUI]   Node 1: LoadImage
+  [ComfyUI]   Node 1: LoadImage
+  [ComfyUI]     Inputs: {"image": "beach.jpg"}
+  [ComfyUI]     Inputs: {"image": "beach.jpg"}
+  [ComfyUI]   Node 2: LoadSharpModel
+  [ComfyUI]   Node 2: LoadSharpModel
+  [ComfyUI]     Inputs: {"precision": "auto"}
+  [ComfyUI]     Inputs: {"precision": "auto"}
+  [ComfyUI]   Node 4: GeomPackPreviewGaussian
+  [ComfyUI]   Node 4: GeomPackPreviewGaussian
+  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
+  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
+  [ComfyUI]   Node 5: SharpPredict
+  [ComfyUI]   Node 5: SharpPredict
+  [ComfyUI]     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
+  [ComfyUI]     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
+  [ComfyUI] Generated prompt_id: aa54d907-c517-425e-8779-2fc2ed57d042
+  [ComfyUI] Generated prompt_id: aa54d907-c517-425e-8779-2fc2ed57d042
+  [ComfyUI] Calling execution.validate_prompt()...
+  [ComfyUI] Calling execution.validate_prompt()...
+  [ComfyUI] Validation result: valid=True
+  [ComfyUI] Validation result: valid=True
+  [ComfyUI] === Validation PASSED ===
+  [ComfyUI] === Validation PASSED ===
   Queuing workflow for execution...
-  Frame 2 saved (frame_001.jpg, t=2.7s)
-  [capture-periodic] freeze=8ms shot=174ms unfreeze=22ms saved=True
-  Frame 3 saved (frame_002.jpg, t=5.0s)
-  [capture-periodic] freeze=3ms shot=200ms unfreeze=14ms saved=True
-  [capture-loop] iter=50 t=6.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=3.8/7.0GB (60%) swap=0.0/0.0GB (0%) cpu=50% browser_rss=0.59GB
-  Frame 4 saved (frame_003.jpg, t=12.4s)
-  [capture-periodic] freeze=9ms shot=842ms unfreeze=220ms saved=True
-  [capture-loop] iter=100 t=15.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=200 ram=3.6/7.0GB (63%) swap=0.0/0.0GB (0%) cpu=85% browser_rss=0.56GB
-  Frame 5 saved (frame_004.jpg, t=25.9s)
-  [capture-periodic] freeze=7ms shot=581ms unfreeze=15ms saved=True
-  [capture-loop] iter=150 t=27.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=3.4/7.0GB (66%) swap=0.0/0.0GB (0%) cpu=89% browser_rss=0.56GB
-  Frame 6 saved (frame_005.jpg, t=28.6s)
-  [capture-periodic] freeze=6ms shot=318ms unfreeze=12ms saved=True
-  Frame 7 saved (frame_006.jpg, t=31.0s)
-  [capture-periodic] freeze=4ms shot=202ms unfreeze=21ms saved=True
-  [capture-loop] iter=200 t=38.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=16 ram=2.3/7.0GB (82%) swap=0.0/0.0GB (0%) cpu=58% browser_rss=0.22GB
-  [capture-loop] iter=250 t=45.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=4.9/7.0GB (81%) swap=0.5/1.0GB (46%) cpu=53% browser_rss=0.22GB
-  [capture-loop] iter=300 t=55.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=12 ram=5.7/7.0GB (92%) swap=0.5/1.0GB (46%) cpu=22% browser_rss=0.23GB
-  Frame 8 saved (frame_007.jpg, t=61.7s)
-  [capture-periodic] freeze=3ms shot=5638ms unfreeze=38ms saved=True
-  Frame 9 saved (frame_008.jpg, t=69.5s)
-  [capture-periodic] freeze=3ms shot=351ms unfreeze=12ms saved=True
-  Frame 10 saved (frame_009.jpg, t=72.0s)
-  [capture-periodic] freeze=3ms shot=17560ms unfreeze=485ms saved=True
-  [capture-loop] iter=350 t=90.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=70 ram=3.5/7.0GB (78%) swap=4.1/5.0GB (83%) cpu=42% browser_rss=0.15GB
-  Frame 11 saved (frame_010.jpg, t=92.8s)
-  [capture-periodic] freeze=6ms shot=6047ms unfreeze=253ms saved=True
-  Frame 12 saved (frame_011.jpg, t=101.4s)
-  [capture-periodic] freeze=33ms shot=8856ms unfreeze=22ms saved=True
-  [capture-loop] iter=400 t=112.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=4.1/7.0GB (90%) swap=4.0/5.0GB (80%) cpu=44% browser_rss=0.19GB
-  Frame 13 saved (frame_012.jpg, t=112.3s)
-  [capture-periodic] freeze=3ms shot=8907ms unfreeze=58ms saved=True
-  [capture-loop] iter=450 t=128.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=4.3/7.0GB (83%) swap=6.0/7.0GB (86%) cpu=50% browser_rss=0.21GB
-  Frame 14 saved (frame_013.jpg, t=133.1s)
-  [capture-periodic] freeze=3ms shot=413ms unfreeze=6ms saved=True
-  [capture-loop] iter=500 t=134.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=3.1/7.0GB (71%) swap=6.0/7.0GB (85%) cpu=42% browser_rss=0.23GB
-  Frame 15 saved (frame_014.jpg, t=135.7s)
-  [capture-periodic] freeze=2ms shot=236ms unfreeze=41ms saved=True
+  [ComfyUI] got prompt
+  [ComfyUI] got prompt
+  [ComfyUI] [comfy-env] SubprocessWorker: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/bin/python
+  [ComfyUI] [comfy-env] SubprocessWorker: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/bin/python
+  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI'}
+  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI'}
+  [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
+  [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
+  [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
+  [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
+  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+  [ComfyUI] [ComfyUI-Sharp] python: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/bin/python
+  [ComfyUI] [ComfyUI-Sharp] python: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/bin/python
+  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.1/site-packages', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp']
+  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.1/site-packages', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp']
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/bin/python
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/bin/python
+  [ComfyUI] [SubprocessWorker] launching cmd=['/Users/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py', 'unix:///var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_worker_bb28b2bc08c0.sock']...
+  [ComfyUI] [SubprocessWorker] launching cmd=['/Users/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py', 'unix:///var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_worker_bb28b2bc08c0.sock']...
+  [ComfyUI] [SubprocessWorker] socket_addr=unix:///var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_worker_bb28b2bc08c0.sock exists=True
+  [ComfyUI] [SubprocessWorker] socket_addr=unix:///var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_worker_bb28b2bc08c0.sock exists=True
+  Frame 2 saved (frame_001.jpg, t=2.3s)
+  [capture-periodic] freeze=3ms shot=145ms unfreeze=6ms saved=True
+  Frame 3 saved (frame_002.jpg, t=4.6s)
+  [capture-periodic] freeze=2ms shot=90ms unfreeze=2ms saved=True
+  [capture-loop] iter=50 t=6.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=3.8/7.0GB (60%) swap=0.0/0.0GB (0%) cpu=68% browser_rss=0.59GB
+  [ComfyUI] [SubprocessWorker] worker started/confirmed
+  [ComfyUI] [SubprocessWorker] worker started/confirmed
+  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+  [ComfyUI] [SubprocessWorker] created 0 shm blocks
+  [ComfyUI] [SubprocessWorker] created 0 shm blocks
+  [ComfyUI] [SubprocessWorker] sending request via socket...
+  [ComfyUI] [SubprocessWorker] sending request via socket...
+  [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
+  [ComfyUI] 
+  [ComfyUI] 
+  [capture-loop] iter=100 t=11.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=3.8/7.0GB (60%) swap=0.0/0.0GB (0%) cpu=55% browser_rss=0.56GB
+  [ComfyUI] sharp_2572gikvuh.pt:   0%|          | 0.00/2.81G [00:00<?, ?B/s]
+  [ComfyUI] sharp_2572gikvuh.pt:   0%|          | 0.00/2.81G [00:00<?, ?B/s]
+  [ComfyUI] sharp_2572gikvuh.pt:   9%|▉         | 256M/2.81G [00:03<00:32, 78.4MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:   9%|▉         | 256M/2.81G [00:03<00:32, 78.4MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] sharp_2572gikvuh.pt:  10%|█         | 292M/2.81G [00:04<00:38, 65.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  10%|█         | 292M/2.81G [00:04<00:38, 65.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:05<00:34, 71.5MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:05<00:34, 71.5MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 4 saved (frame_003.jpg, t=15.7s)
+  [capture-periodic] freeze=11ms shot=310ms unfreeze=8ms saved=True
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:06<00:23, 95.9MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:06<00:23, 95.9MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] sharp_2572gikvuh.pt:  25%|██▍       | 695M/2.81G [00:07<00:18, 116MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  25%|██▍       | 695M/2.81G [00:07<00:18, 116MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 5 saved (frame_004.jpg, t=18.3s)
+  [capture-periodic] freeze=10ms shot=299ms unfreeze=11ms saved=True
+  [capture-loop] iter=150 t=19.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=20 ram=3.8/7.0GB (61%) swap=0.0/0.0GB (0%) cpu=99% browser_rss=0.50GB
+  Frame 6 saved (frame_005.jpg, t=20.8s)
+  [capture-periodic] freeze=7ms shot=401ms unfreeze=30ms saved=True
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] sharp_2572gikvuh.pt:  37%|███▋      | 1.03G/2.81G [00:15<00:32, 55.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  37%|███▋      | 1.03G/2.81G [00:15<00:32, 55.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 7 saved (frame_006.jpg, t=26.4s)
+  [capture-periodic] freeze=9ms shot=371ms unfreeze=15ms saved=True
+  Frame 8 saved (frame_007.jpg, t=29.1s)
+  [capture-periodic] freeze=9ms shot=415ms unfreeze=8ms saved=True
+  [capture-loop] iter=200 t=30.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=10 ram=3.5/7.0GB (67%) swap=0.0/0.0GB (0%) cpu=100% browser_rss=0.46GB
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] sharp_2572gikvuh.pt:  46%|████▌     | 1.30G/2.81G [00:21<00:29, 50.9MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  46%|████▌     | 1.30G/2.81G [00:21<00:29, 50.9MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 9 saved (frame_008.jpg, t=34.1s)
+  [capture-periodic] freeze=9ms shot=433ms unfreeze=8ms saved=True
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] sharp_2572gikvuh.pt:  51%|█████     | 1.43G/2.81G [00:25<00:30, 45.7MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  51%|█████     | 1.43G/2.81G [00:25<00:30, 45.7MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 10 saved (frame_009.jpg, t=36.9s)
+  [capture-periodic] freeze=8ms shot=178ms unfreeze=6ms saved=True
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] sharp_2572gikvuh.pt:  58%|█████▊    | 1.63G/2.81G [00:27<00:20, 57.9MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  58%|█████▊    | 1.63G/2.81G [00:27<00:20, 57.9MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [capture-loop] iter=250 t=38.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=3.3/7.0GB (69%) swap=0.0/0.0GB (0%) cpu=100% browser_rss=0.46GB
+  Frame 11 saved (frame_010.jpg, t=39.2s)
+  [capture-periodic] freeze=10ms shot=149ms unfreeze=12ms saved=True
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:29<00:00, 164MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:29<00:00, 164MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:29<00:00, 95.3MB/s]
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:29<00:00, 95.3MB/s]
+  [ComfyUI] [SubprocessWorker] got response: ok
+  [ComfyUI] [SubprocessWorker] got response: ok
+  [ComfyUI] [comfy-env] LoadSharpModel done (39.33s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadSharpModel done (39.33s): result: NodeOutput
+  [ComfyUI] [comfy-env] Running SharpPredict: focal_length_mm: 30.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,1024,1536,3] cpu
+  [ComfyUI] [comfy-env] Running SharpPredict: focal_length_mm: 30.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,1024,1536,3] cpu
+  [ComfyUI] [SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
+  [ComfyUI] [SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
+  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+  [ComfyUI] [ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
+  [ComfyUI] [ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
+  [ComfyUI] [ComfyUI-Sharp] Health check: ok
+  [ComfyUI] [ComfyUI-Sharp] Health check: ok
+  [ComfyUI] [SubprocessWorker] worker started/confirmed
+  [ComfyUI] [SubprocessWorker] worker started/confirmed
+  [ComfyUI] [comfy-env] PRE-SERIALIZE 'image' shape: torch.Size([1, 1024, 1536, 3])
+  [ComfyUI] [comfy-env] PRE-SERIALIZE 'image' shape: torch.Size([1, 1024, 1536, 3])
+  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+  [ComfyUI] [SubprocessWorker] created 0 shm blocks
+  [ComfyUI] [SubprocessWorker] created 0 shm blocks
+  [ComfyUI] [SubprocessWorker] sending request via socket...
+  [ComfyUI] [SubprocessWorker] sending request via socket...
+  [ComfyUI] [SubprocessWorker] call_id=2 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=2 sending call_method
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] _from_shm got dict with keys: ['__type__', 'strategy', 'manager_path', 'storage_key', 'storage_size']
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] _from_shm got dict with keys: ['__type__', 'strategy', 'manager_path', 'storage_key', 'storage_size']
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZE TensorRef: tensor_size=[1, 1024, 1536, 3]
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZE TensorRef: tensor_size=[1, 1024, 1536, 3]
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 1024, 1536, 3])
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 1024, 1536, 3])
+  Frame 12 saved (frame_011.jpg, t=41.5s)
+  [capture-periodic] freeze=2ms shot=139ms unfreeze=6ms saved=True
+  Frame 13 saved (frame_012.jpg, t=43.7s)
+  [capture-periodic] freeze=3ms shot=175ms unfreeze=11ms saved=True
+  [capture-loop] iter=300 t=44.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=3.6/7.0GB (64%) swap=0.0/0.0GB (0%) cpu=65% browser_rss=0.46GB
+  [capture-loop] iter=350 t=53.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=2.4/7.0GB (81%) swap=0.0/0.0GB (0%) cpu=86% browser_rss=0.19GB
+  [ComfyUI] [SubprocessWorker] callback 'request_vram_budget' from call_id=2
+  [ComfyUI] [SubprocessWorker] callback 'request_vram_budget' from call_id=2
+  [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 1.43GB
+  [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 1.43GB
+  [ComfyUI] [comfy-env] VRAM after eviction: 1.45GB
+  [ComfyUI] [comfy-env] VRAM after eviction: 1.45GB
+  [capture-loop] iter=400 t=60.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=3.9/7.0GB (77%) swap=0.4/1.0GB (41%) cpu=80% browser_rss=0.17GB
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] === WATCHDOG TICK 1 ===
+  [ComfyUI] === WATCHDOG TICK 1 ===
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x000000016d587000 (most recent call first):
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x000000016d587000 (most recent call first):
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] Current thread 0x000000016c257000 (most recent call first):
+  [ComfyUI] Current thread 0x000000016c257000 (most recent call first):
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] Thread 0x00000002035ea240 (most recent call first):
+  [ComfyUI] Thread 0x00000002035ea240 (most recent call first):
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1370 in convert
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1370 in convert
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 965 in _apply
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 965 in _apply
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1384 in to
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1384 in to
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 1341 in _hooked_to
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 1341 in _hooked_to
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy/model_patcher.py", line 885 in load
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy/model_patcher.py", line 885 in load
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy/model_patcher.py", line 1079 in partially_load
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy/model_patcher.py", line 1079 in partially_load
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy/model_management.py", line 607 in model_use_more_vram
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy/model_management.py", line 607 in model_use_more_vram
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy/model_management.py", line 579 in model_load
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy/model_management.py", line 579 in model_load
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy/model_management.py", line 817 in load_models_gpu
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy/model_management.py", line 817 in load_models_gpu
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 1539 in _shimmed_load_models_gpu
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 1539 in _shimmed_load_models_gpu
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 252 in _predict_image_cached
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 252 in _predict_image_cached
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 1807 in <module>
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 1807 in <module>
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] start: 0.00 GB, input=[1, 3, 1536, 1536]
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] start: 0.00 GB, input=[1, 3, 1536, 1536]
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] patches: 0.00 GB, x0=25 x1=9 x2=1 total=35
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] patches: 0.00 GB, x0=25 x1=9 x2=1 total=35
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after first chunk (4/35): 0.00 GB, chunk_size=4
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after first chunk (4/35): 0.00 GB, chunk_size=4
+  [capture-loop] iter=450 t=67.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.6/7.0GB (93%) swap=0.4/1.0GB (40%) cpu=70% browser_rss=0.18GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after all chunks + cache clear: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after all chunks + cache clear: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge intermediates: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge intermediates: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge all: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge all: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after image_encoder: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after image_encoder: 0.00 GB
+  [capture-loop] iter=500 t=79.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.6/7.0GB (93%) swap=0.4/1.0GB (38%) cpu=51% browser_rss=0.16GB
+  Frame 14 saved (frame_013.jpg, t=80.4s)
+  [capture-periodic] freeze=2416ms shot=3365ms unfreeze=21ms saved=True
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after upsample: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after upsample: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after SPN encoder + cache clear: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after SPN encoder + cache clear: 0.00 GB
+  Frame 15 saved (frame_014.jpg, t=88.4s)
+  [capture-periodic] freeze=3ms shot=708ms unfreeze=32ms saved=True
+  Frame 16 saved (frame_015.jpg, t=91.2s)
+  [capture-periodic] freeze=18ms shot=18036ms unfreeze=133ms saved=True
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after decoder: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after decoder: 0.00 GB
+  [capture-loop] iter=550 t=110.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=3.8/7.0GB (76%) swap=3.8/5.0GB (76%) cpu=50% browser_rss=0.15GB
+  Frame 17 saved (frame_016.jpg, t=119.5s)
+  [capture-periodic] freeze=6ms shot=1256ms unfreeze=5ms saved=True
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] === WATCHDOG TICK 2 ===
+  [ComfyUI] === WATCHDOG TICK 2 ===
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x000000016d587000 (most recent call first):
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x000000016d587000 (most recent call first):
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] Current thread 0x000000016c257000 (most recent call first):
+  [ComfyUI] Current thread 0x000000016c257000 (most recent call first):
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] Thread 0x00000002035ea240 (most recent call first):
+  [ComfyUI] Thread 0x00000002035ea240 (most recent call first):
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 42 in _monodepth_to
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 42 in _monodepth_to
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 292 in _predict_image_cached
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 292 in _predict_image_cached
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 1807 in <module>
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_kcx8s8gq/persistent_worker.py", line 1807 in <module>
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
+  [ComfyUI] 
+  [ComfyUI] 
+  Frame 18 saved (frame_017.jpg, t=122.9s)
+  [capture-periodic] freeze=2ms shot=7091ms unfreeze=1337ms saved=True
+  [capture-loop] iter=600 t=134.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=21 ram=2.0/7.0GB (90%) swap=4.3/5.0GB (86%) cpu=43% browser_rss=0.21GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] start: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] start: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after depth_alignment: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after depth_alignment: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after init_model: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after init_model: 0.00 GB
+  Frame 19 saved (frame_018.jpg, t=137.8s)
+  [capture-periodic] freeze=7ms shot=775ms unfreeze=3ms saved=True
+  [capture-loop] iter=650 t=146.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=10 ram=4.6/7.0GB (90%) swap=6.5/7.0GB (93%) cpu=60% browser_rss=0.15GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after feature_model: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after feature_model: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after prediction_head: 0.00 GB
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after prediction_head: 0.00 GB
+  [capture-loop] iter=700 t=153.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.1/7.0GB (85%) swap=6.4/7.0GB (92%) cpu=59% browser_rss=0.16GB
+  [capture-loop] iter=750 t=159.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=3.8/7.0GB (71%) swap=6.4/7.0GB (91%) cpu=69% browser_rss=0.16GB
+  [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=2
+  [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=2
+  [ComfyUI] [SubprocessWorker] got response: ok
+  [ComfyUI] [SubprocessWorker] got response: ok
+  [ComfyUI] [comfy-env] SharpPredict done (120.71s): result: NodeOutput
+  [ComfyUI] [comfy-env] SharpPredict done (120.71s): result: NodeOutput
+  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_worksp..., extrinsics: list[4], intrinsics: list[3]
+  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_worksp..., extrinsics: list[4], intrinsics: list[3]
+  [ComfyUI] [comfy-env] SubprocessWorker: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/geometrypack-nodes/bin/python
+  [ComfyUI] [comfy-env] SubprocessWorker: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/geometrypack-nodes/bin/python
+  [ComfyUI] [comfy-env] env_vars: {'KMP_DUPLICATE_LIB_OK': 'TRUE', 'OMP_NUM_THREADS': '1', 'COMFYUI_BASE': '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI'}
+  [ComfyUI] [comfy-env] env_vars: {'KMP_DUPLICATE_LIB_OK': 'TRUE', 'OMP_NUM_THREADS': '1', 'COMFYUI_BASE': '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI'}
+  [ComfyUI] [SubprocessWorker] call_method: nodes.visualization.preview_gaussian.PreviewGaussianNode.EXECUTE_NORMALIZED
+  [ComfyUI] [SubprocessWorker] call_method: nodes.visualization.preview_gaussian.PreviewGaussianNode.EXECUTE_NORMALIZED
+  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+  [ComfyUI] [ComfyUI-GeometryPack] python: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/geometrypack-nodes/bin/python
+  [ComfyUI] [ComfyUI-GeometryPack] python: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/geometrypack-nodes/bin/python
+  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-GeometryPack', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/geometrypack-nodes/lib/python3.1/site-packages', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-GeometryPack']
+  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-GeometryPack', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/geometrypack-nodes/lib/python3.1/site-packages', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/custom_nodes/ComfyUI-GeometryPack']
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/geometrypack-nodes/bin/python
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/.pixi/envs/geometrypack-nodes/bin/python
+  [ComfyUI] [SubprocessWorker] launching cmd=['/Users/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/pixi.toml', '-e', 'geometrypack-nodes', 'python', '/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_wt7kaaod/persistent_worker.py', 'unix:///var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_worker_3811e827ce40.sock']...
+  [ComfyUI] [SubprocessWorker] launching cmd=['/Users/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0834/ComfyUI/.ce/pixi.toml', '-e', 'geometrypack-nodes', 'python', '/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_wt7kaaod/persistent_worker.py', 'unix:///var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_worker_3811e827ce40.sock']...
+  [ComfyUI] [SubprocessWorker] socket_addr=unix:///var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_worker_3811e827ce40.sock exists=True
+  [ComfyUI] [SubprocessWorker] socket_addr=unix:///var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_worker_3811e827ce40.sock exists=True
+  Frame 20 saved (frame_019.jpg, t=161.5s)
+  [capture-periodic] freeze=8ms shot=198ms unfreeze=3ms saved=True
+  Frame 21 saved (frame_020.jpg, t=163.8s)
+  [capture-periodic] freeze=2ms shot=1210ms unfreeze=3ms saved=True
+  [capture-loop] iter=800 t=167.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=2.2/7.0GB (82%) swap=6.5/7.0GB (93%) cpu=57% browser_rss=0.20GB
+  [ComfyUI] [SubprocessWorker] worker started/confirmed
+  [ComfyUI] [SubprocessWorker] worker started/confirmed
+  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+  [ComfyUI] [SubprocessWorker] created 0 shm blocks
+  [ComfyUI] [SubprocessWorker] created 0 shm blocks
+  [ComfyUI] [SubprocessWorker] sending request via socket...
+  [ComfyUI] [SubprocessWorker] sending request via socket...
+  [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
+  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778402306862.ply (63.00 MB)
+  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778402306862.ply (63.00 MB)
+  [ComfyUI] [SubprocessWorker] got response: ok
+  [ComfyUI] [SubprocessWorker] got response: ok
+  [ComfyUI] [comfy-env] GeomPackPreviewGaussian done (11.45s): result: NodeOutput
+  [ComfyUI] [comfy-env] GeomPackPreviewGaussian done (11.45s): result: NodeOutput
+  [ComfyUI] Prompt executed in 172.36 seconds
+  [ComfyUI] Prompt executed in 172.36 seconds
   Node executed (1 total), capturing...
-  Frame 16 saved (frame_015.jpg, t=140.6s)
-  [capture-node] freeze=30ms shot=268ms unfreeze=0ms saved=True
-  Execution complete (t=140.6s)
+  Frame 22 saved (frame_021.jpg, t=173.0s)
+  [capture-node] freeze=2ms shot=114ms unfreeze=6ms saved=True
+  Execution complete (t=173.3s)
   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
   [3d-wait] Phase 1 done in 0.0s
   [3d-wait] Phase 2: iframes=1
   [3d-wait] iframe viewer_ready=False (matched 0 console logs)
   [3d-wait] Waiting for 'Loaded successfully' console message (timeout=60s)...
-  [3d-wait] Got 'Loaded successfully' after 5.5s
-  [3d-wait] Unfrozen in 0.295s, rendering for 5s...
-  [3d-wait] JS halted via CDP after 5.5s
+  [3d-wait] Got 'Loaded successfully' after 3.3s
+  [3d-wait] Unfrozen in 0.364s, rendering for 5s...
+  [3d-wait] JS halted via CDP after 5.6s
   [3d-wait] Re-frozen in 6.7s
-  [3d-wait] Total 3D wait: 12.1s
-  Captured 16 unique frames over 153.12s
+  [3d-wait] Total 3D wait: 10.0s
+  Captured 22 unique frames over 183.31s
   [debug] iframes: 1
-  [debug]   iframe[0]: src=http://127.0.0.1:8188/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=177, canvas=1536x1024, rafFrozen=True
+  [debug]   iframe[0]: src=http://127.0.0.1:41888/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=1536x1024, rafFrozen=True
   [timing] trigger_3d_previews: 0.0s
   Saved high-quality screenshot: sharp_basic_executed.png
-  [timing] final_screenshot: 0.5s
-    Captured 17 video frames
+  [timing] final_screenshot: 0.7s
+    Captured 23 video frames

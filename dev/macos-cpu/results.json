@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-05-09T17:20:43.356107+00:00",
+  "timestamp": "2026-05-10T08:43:53.473929+00:00",
   "platform": "macos",
   "hardware": {
     "os": "macOS-15.7.4-arm64-arm-64bit",
     "cpu": "arm"
   },
-  "commit_hash": "ac4628bf6a2f4a2116544bcdd9d62cdd85b4b3e1",
+  "commit_hash": "e96712e0db150112155eb60540de9f99ac201fa0",
   "success": true,
   "summary": {
     "total": 3,
@@ -23,7 +23,7 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 163.49,
+      "duration_seconds": 194.06,
       "error": null,
       "hardware": {
         "os": "macOS-15.7.4-arm64-arm-64bit",
@@ -31,17 +31,17 @@
       },
       "resources": {
         "ram": {
-          "peak": 6.12,
-          "avg": 3.73
+          "peak": 2.25,
+          "avg": 0.58
         },
         "total_ram_gb": 7.0,
-        "samples": 150
+        "samples": 171
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 139.46,
+      "duration_seconds": 192.7,
       "error": null,
       "hardware": {
         "os": "macOS-15.7.4-arm64-arm-64bit",
@@ -49,11 +49,11 @@
       },
       "resources": {
         "ram": {
-          "peak": 6.15,
-          "avg": 3.54
+          "peak": 2.51,
+          "avg": 0.4
         },
         "total_ram_gb": 7.0,
-        "samples": 127
+        "samples": 173
       }
     }
   ]
