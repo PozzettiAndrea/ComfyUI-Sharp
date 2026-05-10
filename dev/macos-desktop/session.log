@@ -1,0 +1,323 @@
+[   0s] CDP targets: 1
+[   0s]   page: file:///Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/desktop-ui/index.html#/welcome | ComfyUI
+[   1s] Main page: file:///Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/desktop-ui/index.html#/welcome | ComfyUI
+[   1s] Buttons: ['Get Started']
+[   1s]   wizard: COMFY_TEST_GPU=0 platform=darwin preferred=['Apple Silicon', 'MPS', 'M4', 'M3', 'M2', 'M1']
+[   2s]   clicked [BTN|Get Started]
+[   4s]   url: file:///Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/desktop-ui/index.html#/welcome -> file:///Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/desktop-ui/index.html#/install
+[   4s]   clicked [BTN|Next]
+[  11s]   clicked [BTN|Next]
+[  14s]   clicked [BTN|Install]
+[  15s]   url: file:///Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/desktop-ui/index.html#/install -> file:///Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/desktop-ui/index.html#/server-start
+[ 145s]   /system_stats up after 143s
+[ 145s]   app: waiting for backend stability (continuous /system_stats up for 30s)
+[ 145s]   app: /system_stats up; awaiting 30s of stability
+[ 176s]   app: backend stable for 30s; proceeding
+[ 176s]   capturing canvas load...
+[ 184s]   post: waiting for Cloud upsell
+[ 185s]   post: clicked Cloud upsell via [button:has-text("Continue Locally"):visible]
+[ 187s]   post: waiting for Close Templates
+[ 195s]   post: Close Templates not found, skipping
+[ 195s]   post: pressed Escape (Close Templates fallback)
+[ 197s]   post: waiting for Extensions
+[ 198s]   post: clicked Extensions via [button[aria-label="Extensions"]:visible]
+[ 201s]   ext: node meta = display='Sharp' publisher='pznodes' version='0.1.8'
+[ 204s]   ext: searching "Sharp"
+[ 207s]   ext: clicking Sharp by pznodes tile
+[ 211s]   ext: scrolling to + opening version selector
+[ 215s]   ext: selected 0.1.8
+[ 216s]   ext: clicking right-panel Install
+[ 218s]   ext: clicked Install (last of 8 visible)
+[ 226s]   ext: waiting for "Apply Changes" toast
+[ 290s]   ext: clicked Apply Changes
+[ 296s]   app: Apply Changes already triggered in-app restart, skipping pkill
+[ 301s]   app: relaunching with CDP
+[ 301s]   app: waiting for CDP
+[ 301s]   app: CDP up after 1s
+[ 301s]   app: reconnecting Playwright
+[ 302s]   app: attached to http://127.0.0.1:8000/
+[ 333s]   app: server ready after 14s
+[ 333s]   app: waiting for main canvas (window.app.graph)
+[ 333s]   app: canvas ready after 1s (http://127.0.0.1:8000/)
+[ 338s]   app: forcing renderer reload to refresh node-pack manifest
+[ 340s]   app: canvas re-ready after reload in 2s
+[ 343s]   ext: closing Nodes Manager dialog
+[ 343s]   ext: dismissing What's New popup
+[ 344s]   ext: closed What's New popup
+[ 346s]   ext: dismissing Node Pack Issues modal (if present)
+[ 346s]   ext: Node Pack Issues modal not present
+[ 346s]   ext: opening Templates sidebar
+[ 347s]   ext: clicked Templates
+[ 351s]   ext: locating "comfyui-sharp" section in Templates panel
+[ 353s]   ext: clicked comfyui-sharp section
+[ 355s]   ext: fetching comfy-test.toml from https://raw.githubusercontent.com/PozzettiAndrea/ComfyUI-Sharp/main/comfy-test.toml
+[ 356s]   ext: cpu spec = exclude ['pano']
+[ 356s]   ext: picking first matching comfyui-sharp template
+[ 356s]   ext: 3 visible cards
+[ 356s]   ext: skipping pano (not in CPU list)
+[ 358s]   ext: clicked template sharp_basic
+[ 363s]   ext: installing WS execution listener
+[ 363s]   ext: clicking Run
+[ 363s]   ext: clicked Run
+[ 363s]   ext: waiting for execution_success / execution_error
+[ 603s]   ext: WS events=40 elapsed=239s
+[ 603s]     ws: {'type': 'progress_state', 'ts': 1778381580694}
+[ 603s]     ws: {'type': 'progress', 'ts': 1778381580695}
+[ 603s]     ws: {'type': 'progress_state', 'ts': 1778381580804}
+[ 603s]     ws: {'type': 'progress_state', 'ts': 1778381580810}
+[ 603s]     ws: {'type': 'executing', 'ts': 1778381580830}
+[ 603s]     ws: {'type': 'progress_state', 'ts': 1778381748742}
+[ 603s]     ws: {'type': 'progress', 'ts': 1778381748858}
+[ 603s]     ws: {'type': 'progress_state', 'ts': 1778381748891}
+[ 603s]     ws: {'type': 'progress_state', 'ts': 1778381748906}
+[ 603s]     ws: {'type': 'executing', 'ts': 1778381748908}
+[ 603s]     ws: {'type': 'executed', 'ts': 1778381778992}
+[ 603s]     ws: {'type': 'progress_state', 'ts': 1778381779010}
+[ 603s]     ws: {'type': 'execution_success', 'ts': 1778381779143}
+[ 603s]     ws: {'type': 'status', 'ts': 1778381779166}
+[ 603s]     ws: {'type': 'executing', 'ts': 1778381779166}
+[ 603s]   ext: execution_success after 239s
+[ 611s]   ext: fetching comfy-test.toml from https://raw.githubusercontent.com/PozzettiAndrea/ComfyUI-Sharp/main/comfy-test.toml
+[ 612s]   ext: cpu spec = exclude ['pano']
+[ 612s]   loop: workflows/ from $COMFY_TEST_WORKFLOWS -> ['pano', 'sharp_basic', 'sharp_exif']
+[ 612s]   loop: spec=exclude items=['pano'] -> 2 workflow(s) ['sharp_basic', 'sharp_exif']
+[ 612s]   loop: matching=2 first_ran='sharp_basic' remaining=1 -> ['sharp_exif']
+[ 612s]   loop: full restart for workflow 2/2 (sharp_exif)
+[ 612s]   loop: closing current browser
+[ 612s]   loop: killing ComfyUI process
+[ 618s]   loop: launching ComfyUI with --remote-debugging-port=0
+[ 619s]   loop: waiting for DevToolsActivePort at /Users/runner/Library/Application Support/ComfyUI/DevToolsActivePort
+[ 621s]   loop: DevToolsActivePort -> 50017 after 3s
+[ 621s]   loop: reconnecting Playwright on port 50017
+[ 623s]   loop: attached to file:///Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/desktop-ui/index.html#/server-start
+[ 645s]   loop: server ready after 14s
+[ 648s]   loop: canvas ready after 2s
+[ 648s]   loop: forcing renderer reload
+[ 651s]   loop: canvas ready after 2s
+[ 654s]   ext: closing Nodes Manager dialog
+[ 654s]   ext: dismissing What's New popup
+[ 654s]   ext: What's New popup not present
+[ 654s]   ext: dismissing Node Pack Issues modal (if present)
+[ 654s]   ext: Node Pack Issues modal not present
+[ 654s]   ext: opening Templates sidebar
+[ 655s]   ext: clicked Templates
+[ 659s]   ext: locating "comfyui-sharp" section in Templates panel
+[ 663s]   ext: clicked comfyui-sharp section
+[ 665s]   ext: clicking template sharp_exif
+[ 668s]   ext: clicked template sharp_exif
+[ 673s]   ext: installing WS execution listener
+[ 673s]   ext: clicking Run
+[ 675s]   ext: clicked Run
+[ 675s]   ext: waiting for execution_success / execution_error
+[ 904s]   ext: WS events=20 elapsed=228s
+[ 904s]     ws: {'type': 'executing', 'ts': 1778381851873}
+[ 904s]     ws: {'type': 'progress_state', 'ts': 1778381870027}
+[ 904s]     ws: {'type': 'progress_state', 'ts': 1778381870081}
+[ 904s]     ws: {'type': 'executing', 'ts': 1778381870117}
+[ 904s]     ws: {'type': 'progress_state', 'ts': 1778381870930}
+[ 904s]     ws: {'type': 'progress_state', 'ts': 1778381870976}
+[ 904s]     ws: {'type': 'executing', 'ts': 1778381871089}
+[ 904s]     ws: {'type': 'progress_state', 'ts': 1778382047539}
+[ 904s]     ws: {'type': 'progress', 'ts': 1778382047809}
+[ 904s]     ws: {'type': 'progress_state', 'ts': 1778382047903}
+[ 904s]     ws: {'type': 'progress_state', 'ts': 1778382047974}
+[ 904s]     ws: {'type': 'executing', 'ts': 1778382047978}
+[ 904s]     ws: {'type': 'executed', 'ts': 1778382080636}
+[ 904s]     ws: {'type': 'progress_state', 'ts': 1778382080803}
+[ 904s]     ws: {'type': 'execution_success', 'ts': 1778382080856}
+[ 904s]   ext: execution_success after 228s
+[ 916s] Captured 629 frames
+[ 917s] Wrote /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0245/dev/macos-desktop/results.json (2 workflow(s))
+ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with Apple clang version 13.1.6 (clang-1316.0.21.2.5)
+  configuration: --prefix=/Volumes/tempdisk/sw --extra-cflags=-fno-stack-check --arch=arm64 --cc=/usr/bin/clang --enable-gpl --enable-libvmaf --enable-libopenjpeg --enable-libopus --enable-libmp3lame --enable-libx264 --enable-libx265 --enable-libvpx --enable-libwebp --enable-libass --enable-libfreetype --enable-fontconfig --enable-libtheora --enable-libvorbis --enable-libsnappy --enable-libaom --enable-libvidstab --enable-libzimg --enable-libsvtav1 --enable-libharfbuzz --enable-libkvazaar --pkg-config-flags=--static --enable-ffplay --enable-postproc --enable-neon --enable-runtime-cpudetect --disable-indev=qtkit --disable-indev=x11grab_xcb
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, image2, from '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0245/dev/macos-desktop/debug/electron_inspect/frames/frame_%06d.png':
+  Duration: 00:02:05.80, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc, gbr/bt709/iec61966-2-1), 1024x653, 5 fps, 5 tbr, 5 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x12ae055d0] using cpu capabilities: ARMv8 NEON
+[libx264 @ 0x12ae055d0] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0x12ae055d0] 264 - core 164 r3190 7ed753b - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=4 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0245/dev/macos-desktop/debug/electron_inspect/driver.mp4':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, unknown/bt709/iec61966-2-1, progressive), 1024x654, q=2-31, 5 fps, 10240 tbn
+      Metadata:
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
+frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
+frame=   23 fps= 12 q=23.0 size=       0KiB time=00:00:04.20 bitrate=   0.1kbits/s speed=2.15x    
+frame=   49 fps= 19 q=23.0 size=       0KiB time=00:00:09.40 bitrate=   0.0kbits/s speed=3.61x    
+frame=   67 fps= 21 q=23.0 size=       0KiB time=00:00:13.00 bitrate=   0.0kbits/s speed=   4x    
+frame=   81 fps= 21 q=23.0 size=     256KiB time=00:00:15.80 bitrate= 132.8kbits/s speed=4.05x    
+frame=   99 fps= 22 q=23.0 size=     256KiB time=00:00:19.40 bitrate= 108.1kbits/s speed=4.29x    
+frame=  115 fps= 23 q=23.0 size=     256KiB time=00:00:22.60 bitrate=  92.8kbits/s speed=4.48x    
+frame=  135 fps= 24 q=23.0 size=     512KiB time=00:00:26.60 bitrate= 157.7kbits/s speed=4.67x    
+frame=  157 fps= 25 q=23.0 size=     512KiB time=00:00:31.00 bitrate= 135.3kbits/s speed=4.89x    
+frame=  184 fps= 26 q=23.0 size=     512KiB time=00:00:36.40 bitrate= 115.2kbits/s speed= 5.2x    
+frame=  208 fps= 28 q=23.0 size=     512KiB time=00:00:41.20 bitrate= 101.8kbits/s speed=5.49x    
+frame=  233 fps= 29 q=23.0 size=     512KiB time=00:00:46.20 bitrate=  90.8kbits/s speed=5.77x    
+frame=  258 fps= 30 q=23.0 size=     512KiB time=00:00:51.20 bitrate=  81.9kbits/s speed=5.94x    
+frame=  267 fps= 29 q=23.0 size=     512KiB time=00:00:53.00 bitrate=  79.1kbits/s speed=5.78x    
+frame=  279 fps= 29 q=23.0 size=     512KiB time=00:00:55.40 bitrate=  75.7kbits/s speed=5.67x    
+frame=  300 fps= 29 q=23.0 size=     512KiB time=00:00:59.60 bitrate=  70.4kbits/s speed=5.72x    
+frame=  318 fps= 29 q=23.0 size=     512KiB time=00:01:03.20 bitrate=  66.4kbits/s speed=5.73x    
+frame=  331 fps= 29 q=23.0 size=     512KiB time=00:01:05.80 bitrate=  63.7kbits/s speed=5.68x    
+frame=  344 fps= 28 q=20.0 size=     768KiB time=00:01:08.40 bitrate=  92.0kbits/s speed=5.65x    
+frame=  358 fps= 28 q=20.0 size=     768KiB time=00:01:11.20 bitrate=  88.4kbits/s speed=5.63x    
+frame=  367 fps= 28 q=23.0 size=     768KiB time=00:01:13.00 bitrate=  86.2kbits/s speed=5.49x    
+frame=  383 fps= 27 q=23.0 size=    1024KiB time=00:01:16.20 bitrate= 110.1kbits/s speed=5.46x    
+frame=  405 fps= 28 q=23.0 size=    1024KiB time=00:01:20.60 bitrate= 104.1kbits/s speed=5.52x    
+frame=  428 fps= 28 q=23.0 size=    1024KiB time=00:01:25.20 bitrate=  98.5kbits/s speed=5.64x    
+[vf#0:0 @ 0x600002830be0] Reconfiguring filter graph because video parameters changed to rgb24(pc, gbr), 1024x656
+frame=  451 fps= 29 q=23.0 size=    1024KiB time=00:01:29.80 bitrate=  93.4kbits/s speed=5.71x    
+frame=  474 fps= 29 q=23.0 size=    1024KiB time=00:01:34.40 bitrate=  88.9kbits/s speed=5.77x    
+frame=  494 fps= 29 q=23.0 size=    1024KiB time=00:01:38.40 bitrate=  85.3kbits/s speed=5.78x    
+frame=  505 fps= 29 q=23.0 size=    1024KiB time=00:01:40.60 bitrate=  83.4kbits/s speed=5.69x    
+frame=  513 fps= 28 q=23.0 size=    1280KiB time=00:01:42.20 bitrate= 102.6kbits/s speed= 5.6x    
+frame=  523 fps= 28 q=23.0 size=    1280KiB time=00:01:44.20 bitrate= 100.6kbits/s speed=5.55x    
+frame=  546 fps= 28 q=23.0 size=    1280KiB time=00:01:48.80 bitrate=  96.4kbits/s speed=5.61x    
+frame=  574 fps= 29 q=23.0 size=    1280KiB time=00:01:54.40 bitrate=  91.7kbits/s speed=5.71x    
+frame=  627 fps= 30 q=-1.0 size=    1280KiB time=00:02:05.00 bitrate=  83.9kbits/s speed=6.05x    
+[out#0/mp4 @ 0x600002c34000] video:1531KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.533071%
+frame=  629 fps= 30 q=-1.0 Lsize=    1539KiB time=00:02:05.40 bitrate= 100.6kbits/s speed=6.06x    
+[libx264 @ 0x12ae055d0] frame I:12    Avg QP:10.13  size: 44572
+[libx264 @ 0x12ae055d0] frame P:174   Avg QP:15.35  size:  4117
+[libx264 @ 0x12ae055d0] frame B:443   Avg QP:21.19  size:   714
+[libx264 @ 0x12ae055d0] consecutive B-frames:  4.1%  4.8%  3.3% 87.8%
+[libx264 @ 0x12ae055d0] mb I  I16..4: 44.1% 27.7% 28.3%
+[libx264 @ 0x12ae055d0] mb P  I16..4:  2.8%  2.5%  2.7%  P16..4:  2.3%  0.8%  0.5%  0.0%  0.0%    skip:88.4%
+[libx264 @ 0x12ae055d0] mb B  I16..4:  0.3%  0.4%  0.2%  B16..8:  3.4%  0.5%  0.2%  direct: 0.2%  skip:94.9%  L0:54.0% L1:43.1% BI: 2.9%
+[libx264 @ 0x12ae055d0] 8x8 transform intra:31.4% inter:49.9%
+[libx264 @ 0x12ae055d0] coded y,uvDC,uvAC intra: 35.5% 17.8% 14.2% inter: 0.9% 0.5% 0.1%
+[libx264 @ 0x12ae055d0] i16 v,h,dc,p: 61% 35%  1%  3%
+[libx264 @ 0x12ae055d0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 35% 19% 34%  1%  2%  2%  2%  2%  3%
+[libx264 @ 0x12ae055d0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 34% 30% 17%  2%  3%  3%  4%  3%  4%
+[libx264 @ 0x12ae055d0] i8c dc,h,v,p: 79% 12%  6%  3%
+[libx264 @ 0x12ae055d0] Weighted P-Frames: Y:0.6% UV:0.6%
+[libx264 @ 0x12ae055d0] ref P L0: 57.9%  4.2% 16.7% 21.2%
+[libx264 @ 0x12ae055d0] ref B L0: 65.9% 31.3%  2.8%
+[libx264 @ 0x12ae055d0] ref B L1: 93.1%  6.9%
+[libx264 @ 0x12ae055d0] kb/s:99.68
+[ 938s] Wrote /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0245/dev/macos-desktop/debug/electron_inspect/driver.mp4
+ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with Apple clang version 13.1.6 (clang-1316.0.21.2.5)
+  configuration: --prefix=/Volumes/tempdisk/sw --extra-cflags=-fno-stack-check --arch=arm64 --cc=/usr/bin/clang --enable-gpl --enable-libvmaf --enable-libopenjpeg --enable-libopus --enable-libmp3lame --enable-libx264 --enable-libx265 --enable-libvpx --enable-libwebp --enable-libass --enable-libfreetype --enable-fontconfig --enable-libtheora --enable-libvorbis --enable-libsnappy --enable-libaom --enable-libvidstab --enable-libzimg --enable-libsvtav1 --enable-libharfbuzz --enable-libkvazaar --pkg-config-flags=--static --enable-ffplay --enable-postproc --enable-neon --enable-runtime-cpudetect --disable-indev=qtkit --disable-indev=x11grab_xcb
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, image2, from '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0245/dev/macos-desktop/debug/electron_inspect/frames/frame_%06d.png':
+  Duration: 00:00:48.20, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc, gbr/bt709/iec61966-2-1), 1024x653, 5 fps, 5 tbr, 5 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x12d6067d0] using cpu capabilities: ARMv8 NEON
+[libx264 @ 0x12d6067d0] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0x12d6067d0] 264 - core 164 r3190 7ed753b - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=4 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0245/dev/macos-desktop/videos/sharp_basic/driver.mp4':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, unknown/bt709/iec61966-2-1, progressive), 1024x654, q=2-31, 5 fps, 10240 tbn
+      Metadata:
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
+frame=   16 fps= 13 q=23.0 size=       0KiB time=00:00:02.80 bitrate=   0.1kbits/s speed=2.23x    
+frame=   39 fps= 22 q=23.0 size=       0KiB time=00:00:07.40 bitrate=   0.1kbits/s speed=4.17x    
+frame=   70 fps= 29 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
+[out#0/mp4 @ 0x600002c1c0c0] video:81KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 2.612578%
+frame=  109 fps= 39 q=-1.0 Lsize=      83KiB time=00:00:21.40 bitrate=  31.9kbits/s speed=7.56x    
+[libx264 @ 0x12d6067d0] frame I:1     Avg QP: 9.75  size: 55474
+[libx264 @ 0x12d6067d0] frame P:27    Avg QP:14.19  size:   718
+[libx264 @ 0x12d6067d0] frame B:81    Avg QP:23.55  size:    93
+[libx264 @ 0x12d6067d0] consecutive B-frames:  0.9%  0.0%  0.0% 99.1%
+[libx264 @ 0x12d6067d0] mb I  I16..4: 47.0% 21.8% 31.2%
+[libx264 @ 0x12d6067d0] mb P  I16..4:  0.5%  0.1%  0.3%  P16..4:  0.9%  0.1%  0.1%  0.0%  0.0%    skip:98.0%
+[libx264 @ 0x12d6067d0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  1.1%  0.0%  0.0%  direct: 0.0%  skip:98.8%  L0:43.6% L1:56.2% BI: 0.2%
+[libx264 @ 0x12d6067d0] 8x8 transform intra:20.4% inter:46.8%
+[libx264 @ 0x12d6067d0] coded y,uvDC,uvAC intra: 41.8% 14.4% 11.2% inter: 0.1% 0.1% 0.0%
+[libx264 @ 0x12d6067d0] i16 v,h,dc,p: 52% 48%  0%  0%
+[libx264 @ 0x12d6067d0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 45% 36% 19%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x12d6067d0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 37% 35% 13%  2%  2%  2%  3%  2%  4%
+[libx264 @ 0x12d6067d0] i8c dc,h,v,p: 74% 18%  7%  1%
+[libx264 @ 0x12d6067d0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x12d6067d0] ref P L0: 80.9%  1.2% 15.3%  2.7%
+[libx264 @ 0x12d6067d0] ref B L0: 76.8% 21.2%  2.0%
+[libx264 @ 0x12d6067d0] ref B L1: 91.5%  8.5%
+[libx264 @ 0x12d6067d0] kb/s:30.24
+[ 941s]   videos/sharp_basic/driver.mp4 placed (frames 389..497)
+[ 941s]   screenshots/sharp_basic_executed.png placed
+ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers
+  built with Apple clang version 13.1.6 (clang-1316.0.21.2.5)
+  configuration: --prefix=/Volumes/tempdisk/sw --extra-cflags=-fno-stack-check --arch=arm64 --cc=/usr/bin/clang --enable-gpl --enable-libvmaf --enable-libopenjpeg --enable-libopus --enable-libmp3lame --enable-libx264 --enable-libx265 --enable-libvpx --enable-libwebp --enable-libass --enable-libfreetype --enable-fontconfig --enable-libtheora --enable-libvorbis --enable-libsnappy --enable-libaom --enable-libvidstab --enable-libzimg --enable-libsvtav1 --enable-libharfbuzz --enable-libkvazaar --pkg-config-flags=--static --enable-ffplay --enable-postproc --enable-neon --enable-runtime-cpudetect --disable-indev=qtkit --disable-indev=x11grab_xcb
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, image2, from '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0245/dev/macos-desktop/debug/electron_inspect/frames/frame_%06d.png':
+  Duration: 00:00:19.80, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc, gbr/bt709/iec61966-2-1), 1024x656, 5 fps, 5 tbr, 5 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x14e705500] using cpu capabilities: ARMv8 NEON
+[libx264 @ 0x14e705500] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0x14e705500] 264 - core 164 r3190 7ed753b - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=4 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0245/dev/macos-desktop/videos/sharp_exif/driver.mp4':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, unknown/bt709/iec61966-2-1, progressive), 1024x656, q=2-31, 5 fps, 10240 tbn
+      Metadata:
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
+frame=   16 fps= 13 q=23.0 size=       0KiB time=00:00:02.80 bitrate=   0.1kbits/s speed=2.25x    
+frame=   32 fps= 18 q=23.0 size=       0KiB time=00:00:06.00 bitrate=   0.1kbits/s speed=3.35x    
+frame=   64 fps= 27 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
+[out#0/mp4 @ 0x6000016bc000] video:101KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.957141%
+frame=   99 fps= 36 q=-1.0 Lsize=     103KiB time=00:00:19.40 bitrate=  43.7kbits/s speed=7.01x    
+[libx264 @ 0x14e705500] frame I:2     Avg QP:13.84  size: 32108
+[libx264 @ 0x14e705500] frame P:25    Avg QP:13.46  size:  1085
+[libx264 @ 0x14e705500] frame B:72    Avg QP:22.46  size:   165
+[libx264 @ 0x14e705500] consecutive B-frames:  3.0%  0.0%  0.0% 97.0%
+[libx264 @ 0x14e705500] mb I  I16..4: 47.0% 30.8% 22.1%
+[libx264 @ 0x14e705500] mb P  I16..4:  1.0%  0.2%  0.5%  P16..4:  1.2%  0.1%  0.1%  0.0%  0.0%    skip:96.9%
+[libx264 @ 0x14e705500] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  4.2%  0.1%  0.0%  direct: 0.0%  skip:95.6%  L0:62.8% L1:37.1% BI: 0.1%
+[libx264 @ 0x14e705500] 8x8 transform intra:27.7% inter:56.1%
+[libx264 @ 0x14e705500] coded y,uvDC,uvAC intra: 22.0% 14.9% 10.6% inter: 0.1% 0.2% 0.1%
+[libx264 @ 0x14e705500] i16 v,h,dc,p: 56% 40%  0%  3%
+[libx264 @ 0x14e705500] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 59% 13% 25%  0%  1%  1%  1%  0%  0%
+[libx264 @ 0x14e705500] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 34% 33% 17%  2%  3%  2%  3%  2%  3%
+[libx264 @ 0x14e705500] i8c dc,h,v,p: 74% 15%  8%  3%
+[libx264 @ 0x14e705500] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x14e705500] ref P L0: 84.0%  0.7% 13.0%  2.3%
+[libx264 @ 0x14e705500] ref B L0: 52.1% 47.2%  0.7%
+[libx264 @ 0x14e705500] ref B L1: 98.2%  1.8%
+[libx264 @ 0x14e705500] kb/s:41.69
+[ 944s]   videos/sharp_exif/driver.mp4 placed (frames 531..629)
+[ 944s]   screenshots/sharp_exif_executed.png placed
+[ 945s]   removed /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0245/dev/macos-desktop/debug/electron_inspect/frames after successful encode

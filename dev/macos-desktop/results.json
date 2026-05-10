@@ -1,11 +1,16 @@
 {
   "workflows": [
     {
-      "name": "system",
+      "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 0,
-      "error": null,
-      "hardware": null
+      "duration_seconds": 239,
+      "error": null
+    },
+    {
+      "name": "sharp_exif",
+      "status": "pass",
+      "duration_seconds": 228,
+      "error": null
     }
   ]
 }
