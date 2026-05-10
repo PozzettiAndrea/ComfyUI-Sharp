@@ -1,5 +1,13 @@
+[dependencies]
+av = "*"
+
 [pypi-dependencies]
 plyfile = "*"
 pillow-heif = ">=0.10.0"
 huggingface_hub = ">=0.16.0"
 hf_xet = "*"
+psutil = "*"
+safetensors = "*"
+einops = "*"
+comfy-aimdo = "*"
+scipy = "*"
