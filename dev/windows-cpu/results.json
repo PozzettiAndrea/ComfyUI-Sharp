@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-05-10T20:51:06.938130+00:00",
+  "timestamp": "2026-05-10T21:54:14.971665+00:00",
   "platform": "windows",
   "hardware": {
     "os": "Windows-10-10.0.26100-SP0",
     "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
   },
-  "commit_hash": "9a2263a0115b3b5eac8a8cb4f919d50800f6675c",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25639333063",
-  "success": false,
+  "commit_hash": "49f7747be5d8f6e19afce68ff2a1a2309b02ab47",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25640428467",
+  "success": true,
   "summary": {
     "total": 3,
-    "passed": 0,
-    "failed": 2
+    "passed": 2,
+    "failed": 0
   },
   "workflows": [
     {
@@ -23,38 +23,38 @@
     },
     {
       "name": "sharp_basic",
-      "status": "fail",
-      "duration_seconds": 12.69,
-      "error": "Workflow execution failed: {'prompt_id': '66197ac6-590a-4ca4-858c-050d8d50a72c', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['1'], 'exception_message': 'No module named \\'einops\\'\\n\\nWorker traceback:\\nTraceback (most recent call last):\\n  File \"C:\\\\Users\\\\RUNNER~1\\\\AppData\\\\Local\\\\Temp\\\\comfyui_pvenv_0pnvblyr\\\\persistent_worker.py\", line 1762, in main\\n    result = method(**inputs)\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\comfy_api\\\\latest\\\\_io.py\", line 1833, in EXECUTE_NORMALIZED\\n    to_return = cls.execute(*args, **kwargs)\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\custom_nodes\\\\ComfyUI-Sharp\\\\nodes\\\\load_model.py\", line 170, in execute\\n    import comfy.model_management\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\comfy\\\\model_management.py\", line 32, in <module>\\n    import comfy.utils\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\comfy\\\\utils.py\", line 33, in <module>\\n    from einops import rearrange\\nModuleNotFoundError: No module named \\'einops\\'\\n\\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\execution.py\", line 535, in execute\\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\execution.py\", line 335, in get_output_data\\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\execution.py\", line 309, in _async_map_node_over_list\\n    await process_inputs(input_dict, i)\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\execution.py\", line 297, in process_inputs\\n    result = f(**inputs)\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\.venv\\\\lib\\\\site-packages\\\\comfy_env\\\\isolation\\\\metadata.py\", line 536, in proxy\\n    result = worker.call_method(\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\.venv\\\\lib\\\\site-packages\\\\comfy_env\\\\isolation\\\\workers\\\\subprocess.py\", line 674, in call_method\\n    raise WorkerError(\\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['5', '1', '4', '2'], 'timestamp': 1778446257359}\n\nDetails:\nWorkflow: C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\comfy-test-run-s736p8m5\\ComfyUI-Sharp\\workflows\\sharp_basic.json\nNode error: LoadSharpModel",
+      "status": "pass",
+      "duration_seconds": 344.71,
+      "error": null,
       "hardware": {
         "os": "Windows-10-10.0.26100-SP0",
         "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 0.69,
-          "avg": 0.5
+          "peak": 7.54,
+          "avg": 4.02
         },
         "total_ram_gb": 16.0,
-        "samples": 13
+        "samples": 342
       }
     },
     {
       "name": "sharp_exif",
-      "status": "fail",
-      "duration_seconds": 8.75,
-      "error": "Workflow execution failed: {'prompt_id': '6ae0cd5c-9bed-4349-aa6c-3cdd736b852d', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['9'], 'exception_message': 'No module named \\'einops\\'\\n\\nWorker traceback:\\nTraceback (most recent call last):\\n  File \"C:\\\\Users\\\\RUNNER~1\\\\AppData\\\\Local\\\\Temp\\\\comfyui_pvenv_0pnvblyr\\\\persistent_worker.py\", line 1762, in main\\n    result = method(**inputs)\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\comfy_api\\\\latest\\\\_io.py\", line 1833, in EXECUTE_NORMALIZED\\n    to_return = cls.execute(*args, **kwargs)\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\custom_nodes\\\\ComfyUI-Sharp\\\\nodes\\\\load_model.py\", line 170, in execute\\n    import comfy.model_management\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\comfy\\\\model_management.py\", line 32, in <module>\\n    import comfy.utils\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\comfy\\\\utils.py\", line 33, in <module>\\n    from einops import rearrange\\nModuleNotFoundError: No module named \\'einops\\'\\n\\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\execution.py\", line 535, in execute\\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\execution.py\", line 335, in get_output_data\\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\execution.py\", line 309, in _async_map_node_over_list\\n    await process_inputs(input_dict, i)\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\ComfyUI\\\\execution.py\", line 297, in process_inputs\\n    result = f(**inputs)\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\.venv\\\\lib\\\\site-packages\\\\comfy_env\\\\isolation\\\\metadata.py\", line 536, in proxy\\n    result = worker.call_method(\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2045\\\\.venv\\\\lib\\\\site-packages\\\\comfy_env\\\\isolation\\\\workers\\\\subprocess.py\", line 674, in call_method\\n    raise WorkerError(\\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['8', '2', '9', '7'], 'timestamp': 1778446266614}\n\nDetails:\nWorkflow: C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\comfy-test-run-s736p8m5\\ComfyUI-Sharp\\workflows\\sharp_exif.json\nNode error: LoadSharpModel",
+      "status": "pass",
+      "duration_seconds": 317.61,
+      "error": null,
       "hardware": {
         "os": "Windows-10-10.0.26100-SP0",
         "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 0.78,
-          "avg": 0.72
+          "peak": 8.1,
+          "avg": 4.61
         },
         "total_ram_gb": 16.0,
-        "samples": 9
+        "samples": 315
       }
     }
   ]
