@@ -1,12 +1,13 @@
 {
-  "timestamp": "2026-05-10T03:40:51.980250+00:00",
+  "timestamp": "2026-05-10T14:48:40.299141+00:00",
   "platform": "linux",
   "hardware": {
     "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
     "cpu": "AMD Ryzen 5 3600 6-Core Processor",
     "gpu": "NVIDIA GeForce RTX 5060"
   },
-  "commit_hash": "e96712e0db150112155eb60540de9f99ac201fa0",
+  "commit_hash": "ca852e5ab5d437ec1e50eea503eed9b9f181787b",
+  "run_url": null,
   "success": true,
   "summary": {
     "total": 3,
@@ -24,7 +25,7 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 200.85,
+      "duration_seconds": 130.99,
       "error": null,
       "hardware": {
         "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
@@ -33,21 +34,21 @@
       },
       "resources": {
         "ram": {
-          "peak": 8.4,
-          "avg": 5.37
+          "peak": 9.12,
+          "avg": 6.84
         },
         "total_ram_gb": 31.3,
-        "samples": 186,
+        "samples": 127,
         "vram": {
           "peak": 5.63,
-          "avg": 2.71
+          "avg": 3.15
         }
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 214.0,
+      "duration_seconds": 89.7,
       "error": null,
       "hardware": {
         "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
@@ -56,14 +57,14 @@
       },
       "resources": {
         "ram": {
-          "peak": 8.52,
-          "avg": 7.45
+          "peak": 9.24,
+          "avg": 8.66
         },
         "total_ram_gb": 31.3,
-        "samples": 197,
+        "samples": 87,
         "vram": {
           "peak": 5.65,
-          "avg": 4.35
+          "avg": 4.19
         }
       }
     }
