@@ -1,16 +1,17 @@
 {
-  "timestamp": "2026-05-10T08:43:53.473929+00:00",
+  "timestamp": "2026-05-10T20:31:22.104781+00:00",
   "platform": "macos",
   "hardware": {
-    "os": "macOS-15.7.4-arm64-arm-64bit",
+    "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
     "cpu": "arm"
   },
-  "commit_hash": "e96712e0db150112155eb60540de9f99ac201fa0",
-  "success": true,
+  "commit_hash": "b28d88169ec84aef09a3632ce004afaeb2543eae",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25638981165",
+  "success": false,
   "summary": {
     "total": 3,
-    "passed": 2,
-    "failed": 0
+    "passed": 0,
+    "failed": 2
   },
   "workflows": [
     {
@@ -22,38 +23,38 @@
     },
     {
       "name": "sharp_basic",
-      "status": "pass",
-      "duration_seconds": 194.06,
-      "error": null,
+      "status": "fail",
+      "duration_seconds": 7.04,
+      "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,5], sample: {\"inputs\":{\"image\":\"beach.jpg\"},\"class_type\":\"LoadImage\",\"_meta\":{\"title\":\"Load Image\"}}",
       "hardware": {
-        "os": "macOS-15.7.4-arm64-arm-64bit",
+        "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 2.25,
-          "avg": 0.58
+          "peak": 0.57,
+          "avg": 0.55
         },
         "total_ram_gb": 7.0,
-        "samples": 171
+        "samples": 7
       }
     },
     {
       "name": "sharp_exif",
-      "status": "pass",
-      "duration_seconds": 192.7,
-      "error": null,
+      "status": "fail",
+      "duration_seconds": 4.81,
+      "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,7,9], sample: {\"inputs\":{\"UNKNOWN\":\"\"},\"_meta\":{}}",
       "hardware": {
-        "os": "macOS-15.7.4-arm64-arm-64bit",
+        "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 2.51,
-          "avg": 0.4
+          "peak": 0.54,
+          "avg": 0.54
         },
         "total_ram_gb": 7.0,
-        "samples": 173
+        "samples": 5
       }
     }
   ]
