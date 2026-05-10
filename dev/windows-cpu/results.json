@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-05-10T17:19:31.925273+00:00",
+  "timestamp": "2026-05-10T20:35:03.380660+00:00",
   "platform": "windows",
   "hardware": {
     "os": "Windows-2025Server-10.0.26100-SP0",
     "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
   },
-  "commit_hash": "ca852e5ab5d437ec1e50eea503eed9b9f181787b",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25634513545",
-  "success": true,
+  "commit_hash": "b28d88169ec84aef09a3632ce004afaeb2543eae",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25638979889",
+  "success": false,
   "summary": {
     "total": 3,
-    "passed": 2,
-    "failed": 0
+    "passed": 0,
+    "failed": 2
   },
   "workflows": [
     {
@@ -23,38 +23,38 @@
     },
     {
       "name": "sharp_basic",
-      "status": "pass",
-      "duration_seconds": 320.23,
-      "error": null,
+      "status": "fail",
+      "duration_seconds": 12.25,
+      "error": "Workflow execution failed: {'prompt_id': '1cb61700-c017-4781-8140-0b131f7a3f71', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['1'], 'exception_message': 'No module named \\'psutil\\'\\n\\nWorker traceback:\\nTraceback (most recent call last):\\n  File \"C:\\\\Users\\\\RUNNER~1\\\\AppData\\\\Local\\\\Temp\\\\comfyui_pvenv_tjg_cq2z\\\\persistent_worker.py\", line 1762, in main\\n    result = method(**inputs)\\n             ^^^^^^^^^^^^^^^^\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\comfy_api\\\\latest\\\\_io.py\", line 1833, in EXECUTE_NORMALIZED\\n    to_return = cls.execute(*args, **kwargs)\\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\custom_nodes\\\\ComfyUI-Sharp\\\\nodes\\\\load_model.py\", line 170, in execute\\n    import comfy.model_management\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\comfy\\\\model_management.py\", line 19, in <module>\\n    import psutil\\nModuleNotFoundError: No module named \\'psutil\\'\\n\\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\execution.py\", line 535, in execute\\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\execution.py\", line 335, in get_output_data\\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\execution.py\", line 309, in _async_map_node_over_list\\n    await process_inputs(input_dict, i)\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\execution.py\", line 297, in process_inputs\\n    result = f(**inputs)\\n             ^^^^^^^^^^^\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\.venv\\\\Lib\\\\site-packages\\\\comfy_env\\\\isolation\\\\metadata.py\", line 536, in proxy\\n    result = worker.call_method(\\n             ^^^^^^^^^^^^^^^^^^^\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\.venv\\\\Lib\\\\site-packages\\\\comfy_env\\\\isolation\\\\workers\\\\subprocess.py\", line 674, in call_method\\n    raise WorkerError(\\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['5', '1', '4', '2'], 'timestamp': 1778445296052}\n\nDetails:\nWorkflow: C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\comfy-test-run-d7mvdvp8\\ComfyUI-Sharp\\workflows\\sharp_basic.json\nNode error: LoadSharpModel",
       "hardware": {
         "os": "Windows-2025Server-10.0.26100-SP0",
         "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 8.12,
-          "avg": 4.28
+          "peak": 0.77,
+          "avg": 0.56
         },
         "total_ram_gb": 16.0,
-        "samples": 317
+        "samples": 13
       }
     },
     {
       "name": "sharp_exif",
-      "status": "pass",
-      "duration_seconds": 315.76,
-      "error": null,
+      "status": "fail",
+      "duration_seconds": 6.54,
+      "error": "Workflow execution failed: {'prompt_id': 'fd32225d-3fab-4a9d-9a76-81e552522245', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['9'], 'exception_message': 'No module named \\'psutil\\'\\n\\nWorker traceback:\\nTraceback (most recent call last):\\n  File \"C:\\\\Users\\\\RUNNER~1\\\\AppData\\\\Local\\\\Temp\\\\comfyui_pvenv_tjg_cq2z\\\\persistent_worker.py\", line 1762, in main\\n    result = method(**inputs)\\n             ^^^^^^^^^^^^^^^^\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\comfy_api\\\\latest\\\\_io.py\", line 1833, in EXECUTE_NORMALIZED\\n    to_return = cls.execute(*args, **kwargs)\\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\custom_nodes\\\\ComfyUI-Sharp\\\\nodes\\\\load_model.py\", line 170, in execute\\n    import comfy.model_management\\n  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\comfy\\\\model_management.py\", line 19, in <module>\\n    import psutil\\nModuleNotFoundError: No module named \\'psutil\\'\\n\\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\execution.py\", line 535, in execute\\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\execution.py\", line 335, in get_output_data\\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\execution.py\", line 309, in _async_map_node_over_list\\n    await process_inputs(input_dict, i)\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\ComfyUI\\\\execution.py\", line 297, in process_inputs\\n    result = f(**inputs)\\n             ^^^^^^^^^^^\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\.venv\\\\Lib\\\\site-packages\\\\comfy_env\\\\isolation\\\\metadata.py\", line 536, in proxy\\n    result = worker.call_method(\\n             ^^^^^^^^^^^^^^^^^^^\\n', '  File \"D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-2029\\\\.venv\\\\Lib\\\\site-packages\\\\comfy_env\\\\isolation\\\\workers\\\\subprocess.py\", line 674, in call_method\\n    raise WorkerError(\\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['9', '7', '8', '2'], 'timestamp': 1778445303052}\n\nDetails:\nWorkflow: C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\comfy-test-run-d7mvdvp8\\ComfyUI-Sharp\\workflows\\sharp_exif.json\nNode error: LoadSharpModel",
       "hardware": {
         "os": "Windows-2025Server-10.0.26100-SP0",
         "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 8.21,
-          "avg": 4.74
+          "peak": 0.76,
+          "avg": 0.75
         },
         "total_ram_gb": 16.0,
-        "samples": 310
+        "samples": 7
       }
     }
   ]
