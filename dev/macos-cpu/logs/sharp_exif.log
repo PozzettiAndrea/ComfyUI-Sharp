@@ -13,25 +13,25 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI]     Inputs: {"precision": "auto"}
   [ComfyUI]   Node 7: SharpPredict
   [ComfyUI]   Node 7: SharpPredict
-  [ComfyUI]     Inputs: {"focal_length_mm": ["9", 2], "output_prefix": "sharp", "model": ["2", 0], "image": ["9", 0]}
-  [ComfyUI]     Inputs: {"focal_length_mm": ["9", 2], "output_prefix": "sharp", "model": ["2", 0], "image": ["9", 0]}
-  [ComfyUI]   Node 8: GeomPackPreviewGaussian
-  [ComfyUI]   Node 8: GeomPackPreviewGaussian
-  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["7", 0], "extrinsics": ["7", 1], "intrinsics": ["7", 2]}
-  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["7", 0], "extrinsics": ["7", 1], "intrinsics": ["7", 2]}
-  [ComfyUI]   Node 9: LoadImageWithExif
-  [ComfyUI]   Node 9: LoadImageWithExif
-  [ComfyUI]     Inputs: {"image": "eth3d.png", "default_focal_mm": 30}
-  [ComfyUI]     Inputs: {"image": "eth3d.png", "default_focal_mm": 30}
-  [ComfyUI] Generated prompt_id: 3c42040c-6913-4440-9176-7124f8a62943
-  [ComfyUI] Generated prompt_id: 3c42040c-6913-4440-9176-7124f8a62943
-  [ComfyUI] Calling execution.validate_prompt()...
-  [ComfyUI] Calling execution.validate_prompt()...
-  [ComfyUI] Validation result: valid=True
-  [ComfyUI] Validation result: valid=True
-  [ComfyUI] === Validation PASSED ===
-  [ComfyUI] === Validation PASSED ===
   Queuing workflow for execution...
+  [ComfyUI]     Inputs: {"focal_length_mm": ["9", 2], "output_prefix": "sharp", "model": ["2", 0], "image": ["9", 0]}
+  [ComfyUI]     Inputs: {"focal_length_mm": ["9", 2], "output_prefix": "sharp", "model": ["2", 0], "image": ["9", 0]}
+  [ComfyUI]   Node 8: GeomPackPreviewGaussian
+  [ComfyUI]   Node 8: GeomPackPreviewGaussian
+  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["7", 0], "extrinsics": ["7", 1], "intrinsics": ["7", 2]}
+  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["7", 0], "extrinsics": ["7", 1], "intrinsics": ["7", 2]}
+  [ComfyUI]   Node 9: LoadImageWithExif
+  [ComfyUI]   Node 9: LoadImageWithExif
+  [ComfyUI]     Inputs: {"image": "eth3d.png", "default_focal_mm": 30}
+  [ComfyUI]     Inputs: {"image": "eth3d.png", "default_focal_mm": 30}
+  [ComfyUI] Generated prompt_id: bc122c1e-0ee9-4bf1-b34a-3ac0850a7b0b
+  [ComfyUI] Generated prompt_id: bc122c1e-0ee9-4bf1-b34a-3ac0850a7b0b
+  [ComfyUI] Calling execution.validate_prompt()...
+  [ComfyUI] Calling execution.validate_prompt()...
+  [ComfyUI] Validation result: valid=True
+  [ComfyUI] Validation result: valid=True
+  [ComfyUI] === Validation PASSED ===
+  [ComfyUI] === Validation PASSED ===
   [ComfyUI] got prompt
   [ComfyUI] got prompt
   [ComfyUI] [comfy-env] Running LoadImageWithExif: image: 'eth3d.png', default_focal_mm: 30.0
@@ -56,8 +56,8 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [SubprocessWorker] call_id=2 sending call_method
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [SubprocessWorker] got response: ok
-  [ComfyUI] [comfy-env] LoadImageWithExif done (0.57s): result: NodeOutput
-  [ComfyUI] [comfy-env] LoadImageWithExif done (0.57s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadImageWithExif done (0.89s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadImageWithExif done (0.89s): result: NodeOutput
   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
   [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
@@ -80,119 +80,111 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [SubprocessWorker] call_id=3 sending call_method
   [ComfyUI] [SubprocessWorker] got response: error
   [ComfyUI] [SubprocessWorker] got response: error
-  [ComfyUI] !!! Exception during processing !!! No module named 'einops'
-  [ComfyUI] !!! Exception during processing !!! No module named 'einops'
+  [ComfyUI] !!! Exception during processing !!! No module named 'comfy_aimdo'
+  [ComfyUI] !!! Exception during processing !!! No module named 'comfy_aimdo'
   [ComfyUI] 
   [ComfyUI] 
   [ComfyUI] Worker traceback:
   [ComfyUI] Worker traceback:
   [ComfyUI] Traceback (most recent call last):
   [ComfyUI] Traceback (most recent call last):
-  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_yqi7b5xn/persistent_worker.py", line 1762, in main
-  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_yqi7b5xn/persistent_worker.py", line 1762, in main
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_p_bn9hdx/persistent_worker.py", line 1762, in main
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_p_bn9hdx/persistent_worker.py", line 1762, in main
   [ComfyUI]     result = method(**inputs)
   [ComfyUI]     result = method(**inputs)
   [ComfyUI]              ^^^^^^^^^^^^^^^^
   [ComfyUI]              ^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
   [ComfyUI]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   [ComfyUI]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
   [ComfyUI]     import comfy.model_management
   [ComfyUI]     import comfy.model_management
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy/model_management.py", line 32, in <module>
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy/model_management.py", line 32, in <module>
-  [ComfyUI]     import comfy.utils
-  [ComfyUI]     import comfy.utils
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy/utils.py", line 33, in <module>
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy/utils.py", line 33, in <module>
-  [ComfyUI]     from einops import rearrange
-  [ComfyUI]     from einops import rearrange
-  [ComfyUI] ModuleNotFoundError: No module named 'einops'
-  [ComfyUI] ModuleNotFoundError: No module named 'einops'
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/comfy/model_management.py", line 34, in <module>
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/comfy/model_management.py", line 34, in <module>
+  [ComfyUI]     import comfy_aimdo.vram_buffer
+  [ComfyUI]     import comfy_aimdo.vram_buffer
+  [ComfyUI] ModuleNotFoundError: No module named 'comfy_aimdo'
+  [ComfyUI] ModuleNotFoundError: No module named 'comfy_aimdo'
   [ComfyUI] 
   [ComfyUI] 
   [ComfyUI] Traceback (most recent call last):
   [ComfyUI] Traceback (most recent call last):
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 535, in execute
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 535, in execute
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 535, in execute
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 535, in execute
   [ComfyUI]     output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
   [ComfyUI]     output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
   [ComfyUI]                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   [ComfyUI]                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 335, in get_output_data
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 335, in get_output_data
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 335, in get_output_data
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 335, in get_output_data
   [ComfyUI]     return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
   [ComfyUI]     return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
   [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 309, in _async_map_node_over_list
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 309, in _async_map_node_over_list
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 309, in _async_map_node_over_list
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 309, in _async_map_node_over_list
   [ComfyUI]     await process_inputs(input_dict, i)
   [ComfyUI]     await process_inputs(input_dict, i)
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 297, in process_inputs
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 297, in process_inputs
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 297, in process_inputs
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 297, in process_inputs
   [ComfyUI]     result = f(**inputs)
   [ComfyUI]     result = f(**inputs)
   [ComfyUI]              ^^^^^^^^^^^
   [ComfyUI]              ^^^^^^^^^^^
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/venv/lib/python3.11/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/venv/lib/python3.11/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/venv/lib/python3.11/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/venv/lib/python3.11/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy
   [ComfyUI]     result = worker.call_method(
   [ComfyUI]     result = worker.call_method(
   [ComfyUI]              ^^^^^^^^^^^^^^^^^^^
   [ComfyUI]              ^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/venv/lib/python3.11/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/venv/lib/python3.11/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/venv/lib/python3.11/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/venv/lib/python3.11/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method
   [ComfyUI]     raise WorkerError(
   [ComfyUI]     raise WorkerError(
-  [ComfyUI] comfy_env.isolation.workers.base.WorkerError: No module named 'einops'
-  [ComfyUI] comfy_env.isolation.workers.base.WorkerError: No module named 'einops'
+  [ComfyUI] comfy_env.isolation.workers.base.WorkerError: No module named 'comfy_aimdo'
+  [ComfyUI] comfy_env.isolation.workers.base.WorkerError: No module named 'comfy_aimdo'
   [ComfyUI] 
   [ComfyUI] 
   [ComfyUI] Worker traceback:
   [ComfyUI] Worker traceback:
   [ComfyUI] Traceback (most recent call last):
   [ComfyUI] Traceback (most recent call last):
-  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_yqi7b5xn/persistent_worker.py", line 1762, in main
-  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_yqi7b5xn/persistent_worker.py", line 1762, in main
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_p_bn9hdx/persistent_worker.py", line 1762, in main
+  [ComfyUI]   File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_p_bn9hdx/persistent_worker.py", line 1762, in main
   [ComfyUI]     result = method(**inputs)
   [ComfyUI]     result = method(**inputs)
   [ComfyUI]              ^^^^^^^^^^^^^^^^
   [ComfyUI]              ^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED
   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
   [ComfyUI]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   [ComfyUI]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute
   [ComfyUI]     import comfy.model_management
   [ComfyUI]     import comfy.model_management
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy/model_management.py", line 32, in <module>
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy/model_management.py", line 32, in <module>
-  [ComfyUI]     import comfy.utils
-  [ComfyUI]     import comfy.utils
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy/utils.py", line 33, in <module>
-  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy/utils.py", line 33, in <module>
-  [ComfyUI]     from einops import rearrange
-  [ComfyUI]     from einops import rearrange
-  [ComfyUI] ModuleNotFoundError: No module named 'einops'
-  [ComfyUI] ModuleNotFoundError: No module named 'einops'
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/comfy/model_management.py", line 34, in <module>
+  [ComfyUI]   File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/comfy/model_management.py", line 34, in <module>
+  [ComfyUI]     import comfy_aimdo.vram_buffer
+  [ComfyUI]     import comfy_aimdo.vram_buffer
+  [ComfyUI] ModuleNotFoundError: No module named 'comfy_aimdo'
+  [ComfyUI] ModuleNotFoundError: No module named 'comfy_aimdo'
   [ComfyUI] 
   [ComfyUI] 
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Prompt executed in 0.58 seconds
-  [ComfyUI] Prompt executed in 0.58 seconds
-  Execution complete (t=0.9s)
-  Execution error: {'prompt_id': 'fec8ecd2-99a6-47cf-bdad-d2048b61d55d', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['9'], 'exception_message': 'No module named \'einops\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_yqi7b5xn/persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n             ^^^^^^^^^^^^^^^^\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute\n    import comfy.model_management\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy/model_management.py", line 32, in <module>\n    import comfy.utils\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy/utils.py", line 33, in <module>\n    from einops import rearrange\nModuleNotFoundError: No module named \'einops\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 297, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/venv/lib/python3.11/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy\n    result = worker.call_method(\n             ^^^^^^^^^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/venv/lib/python3.11/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method\n    raise WorkerError(\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['7', '2', '8', '9'], 'timestamp': 1778446068267}
+  [ComfyUI] Prompt executed in 0.91 seconds
+  [ComfyUI] Prompt executed in 0.91 seconds
+  Execution complete (t=1.2s)
+  Execution error: {'prompt_id': 'fd096b93-79a5-4760-a3bd-4d4ae6d01d1c', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['9'], 'exception_message': 'No module named \'comfy_aimdo\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_p_bn9hdx/persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n             ^^^^^^^^^^^^^^^^\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute\n    import comfy.model_management\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/comfy/model_management.py", line 34, in <module>\n    import comfy_aimdo.vram_buffer\nModuleNotFoundError: No module named \'comfy_aimdo\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 297, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/venv/lib/python3.11/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy\n    result = worker.call_method(\n             ^^^^^^^^^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/venv/lib/python3.11/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method\n    raise WorkerError(\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['7', '2', '9', '8'], 'timestamp': 1778446380531}
     Status: FAILED
-    Error: Workflow execution failed: {'prompt_id': 'fec8ecd2-99a6-47cf-bdad-d2048b61d55d', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['9'], 'exception_message': 'No module named \'einops\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_yqi7b5xn/persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n             ^^^^^^^^^^^^^^^^\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute\n    import comfy.model_management\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy/model_management.py", line 32, in <module>\n    import comfy.utils\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/comfy/utils.py", line 33, in <module>\n    from einops import rearrange\nModuleNotFoundError: No module named \'einops\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/ComfyUI/execution.py", line 297, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/venv/lib/python3.11/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy\n    result = worker.call_method(\n             ^^^^^^^^^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2045/venv/lib/python3.11/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method\n    raise WorkerError(\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['7', '2', '8', '9'], 'timestamp': 1778446068267}
-    Details: Workflow: /private/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy-test-run-7kx0r41u/ComfyUI-Sharp/workflows/sharp_exif.json
+    Error: Workflow execution failed: {'prompt_id': 'fd096b93-79a5-4760-a3bd-4d4ae6d01d1c', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['9'], 'exception_message': 'No module named \'comfy_aimdo\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfyui_pvenv_p_bn9hdx/persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n             ^^^^^^^^^^^^^^^^\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/comfy_api/latest/_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 170, in execute\n    import comfy.model_management\n  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/comfy/model_management.py", line 34, in <module>\n    import comfy_aimdo.vram_buffer\nModuleNotFoundError: No module named \'comfy_aimdo\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/ComfyUI/execution.py", line 297, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/venv/lib/python3.11/site-packages/comfy_env/isolation/metadata.py", line 536, in proxy\n    result = worker.call_method(\n             ^^^^^^^^^^^^^^^^^^^\n', '  File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-2049/venv/lib/python3.11/site-packages/comfy_env/isolation/workers/subprocess.py", line 674, in call_method\n    raise WorkerError(\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['7', '2', '9', '8'], 'timestamp': 1778446380531}
+    Details: Workflow: /private/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy-test-run-dj36k1wc/ComfyUI-Sharp/workflows/sharp_exif.json
 Node error: LoadSharpModel
