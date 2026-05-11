@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-05-11T09:31:50.138544+00:00",
+  "timestamp": "2026-05-11T10:31:54.008537+00:00",
   "platform": "macos_desktop",
   "hardware": {
     "os": "macOS-15.7.4-arm64-arm-64bit",
     "cpu": "arm"
   },
-  "commit_hash": "0b5d7f334f2c4cf56d1b8fdeec95e5632dc7acf6",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25661484756",
-  "success": false,
+  "commit_hash": "02ae67c305a82a4b812d4a002c73439ce79766c1",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25663882484",
+  "success": true,
   "summary": {
     "total": 2,
-    "passed": 0,
-    "failed": 2
+    "passed": 2,
+    "failed": 0
   },
   "workflows": [
     {
       "name": "sharp_basic",
-      "status": "fail",
-      "duration_seconds": 0,
-      "error": "Templates+section not openable after restart"
+      "status": "pass",
+      "duration_seconds": 180,
+      "error": null
     },
     {
       "name": "sharp_exif",
-      "status": "fail",
-      "duration_seconds": 0,
-      "error": "Templates+section not openable after restart"
+      "status": "pass",
+      "duration_seconds": 209,
+      "error": null
     }
   ]
 }
