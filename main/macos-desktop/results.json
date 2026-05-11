@@ -1,28 +1,29 @@
 {
-  "timestamp": "2026-05-10T03:28:06.568239+00:00",
+  "timestamp": "2026-05-10T22:25:38.521506+00:00",
   "platform": "macos_desktop",
   "hardware": {
     "os": "macOS-15.7.4-arm64-arm-64bit",
     "cpu": "arm"
   },
-  "commit_hash": "92cf0ea1da13e5da1f3ca3906d59613e4a6374f8",
+  "commit_hash": "da293b55a1db056ca9302a4c62c5718c181c1ec8",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25641165209",
   "success": true,
   "summary": {
     "total": 2,
-    "passed": 1,
+    "passed": 2,
     "failed": 0
   },
   "workflows": [
     {
       "name": "sharp_basic",
-      "status": "timeout",
-      "duration_seconds": 600,
-      "error": "no execution_success/error in 10min"
+      "status": "pass",
+      "duration_seconds": 253,
+      "error": null
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 102,
+      "duration_seconds": 162,
       "error": null
     }
   ]
