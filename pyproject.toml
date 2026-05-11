@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-sharp"
 description = "ComfyUI wrapper around Apple's latest SHARP model (ml-sharp). Monocular 3D Gaussian Splatting in under 1 second. Generate 3D Gaussians from a single image using Apple's SHARP model."
-version = "0.1.9"
+version = "0.1.11"
 
 license = {file = "LICENSE"}
 
@@ -11,4 +11,4 @@ Repository = "https://github.com/PozzettiAndrea/ComfyUI-Sharp"
 [tool.comfy]
 PublisherId = "pznodes"
 DisplayName = "Sharp"
-Icon = ""
+Icon = "https://raw.githubusercontent.com/PozzettiAndrea/ComfyUI-Sharp/main/assets/icon.png"
