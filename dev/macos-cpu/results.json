@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-05-10T21:45:49.831453+00:00",
+  "timestamp": "2026-05-11T00:38:05.959429+00:00",
   "platform": "macos",
   "hardware": {
     "os": "macOS-15.7.4-arm64-arm-64bit",
     "cpu": "arm"
   },
-  "commit_hash": "49f7747be5d8f6e19afce68ff2a1a2309b02ab47",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25640429288",
-  "success": true,
+  "commit_hash": "c09e722c8b4142ed8f3ab836fff8ff47fc64ff60",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25644115279",
+  "success": false,
   "summary": {
     "total": 3,
-    "passed": 2,
-    "failed": 0
+    "passed": 0,
+    "failed": 2
   },
   "workflows": [
     {
@@ -23,38 +23,38 @@
     },
     {
       "name": "sharp_basic",
-      "status": "pass",
-      "duration_seconds": 231.99,
-      "error": null,
+      "status": "fail",
+      "duration_seconds": 7.33,
+      "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [4], sample: {\"inputs\":{\"image\":\"beach.jpg\"},\"class_type\":\"LoadImage\",\"_meta\":{\"title\":\"Load Image\"}}",
       "hardware": {
         "os": "macOS-15.7.4-arm64-arm-64bit",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 2.81,
-          "avg": 0.45
+          "peak": 0.51,
+          "avg": 0.51
         },
         "total_ram_gb": 7.0,
-        "samples": 208
+        "samples": 7
       }
     },
     {
       "name": "sharp_exif",
-      "status": "pass",
-      "duration_seconds": 162.48,
-      "error": null,
+      "status": "fail",
+      "duration_seconds": 5.26,
+      "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [8], sample: {\"inputs\":{\"precision\":\"auto\"},\"class_type\":\"LoadSharpModel\",\"_meta\":{\"title\":\"(Down)Load SHARP Model\"}}",
       "hardware": {
         "os": "macOS-15.7.4-arm64-arm-64bit",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 0.95,
-          "avg": 0.26
+          "peak": 0.49,
+          "avg": 0.47
         },
         "total_ram_gb": 7.0,
-        "samples": 145
+        "samples": 5
       }
     }
   ]
