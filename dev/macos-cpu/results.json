@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-05-11T00:38:05.959429+00:00",
+  "timestamp": "2026-05-11T17:55:54.589243+00:00",
   "platform": "macos",
   "hardware": {
-    "os": "macOS-15.7.4-arm64-arm-64bit",
+    "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
     "cpu": "arm"
   },
-  "commit_hash": "c09e722c8b4142ed8f3ab836fff8ff47fc64ff60",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25644115279",
-  "success": false,
+  "commit_hash": "f172d71cd5d8515b199ee9c023d68e5ec7edbb02",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25687118995",
+  "success": true,
   "summary": {
     "total": 3,
-    "passed": 0,
-    "failed": 2
+    "passed": 2,
+    "failed": 0
   },
   "workflows": [
     {
@@ -23,38 +23,38 @@
     },
     {
       "name": "sharp_basic",
-      "status": "fail",
-      "duration_seconds": 7.33,
-      "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [4], sample: {\"inputs\":{\"image\":\"beach.jpg\"},\"class_type\":\"LoadImage\",\"_meta\":{\"title\":\"Load Image\"}}",
+      "status": "pass",
+      "duration_seconds": 274.35,
+      "error": null,
       "hardware": {
-        "os": "macOS-15.7.4-arm64-arm-64bit",
+        "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 0.51,
-          "avg": 0.51
+          "peak": 2.54,
+          "avg": 0.46
         },
         "total_ram_gb": 7.0,
-        "samples": 7
+        "samples": 241
       }
     },
     {
       "name": "sharp_exif",
-      "status": "fail",
-      "duration_seconds": 5.26,
-      "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [8], sample: {\"inputs\":{\"precision\":\"auto\"},\"class_type\":\"LoadSharpModel\",\"_meta\":{\"title\":\"(Down)Load SHARP Model\"}}",
+      "status": "pass",
+      "duration_seconds": 158.81,
+      "error": null,
       "hardware": {
-        "os": "macOS-15.7.4-arm64-arm-64bit",
+        "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 0.49,
-          "avg": 0.47
+          "peak": 2.32,
+          "avg": 0.38
         },
         "total_ram_gb": 7.0,
-        "samples": 5
+        "samples": 139
       }
     }
   ]
