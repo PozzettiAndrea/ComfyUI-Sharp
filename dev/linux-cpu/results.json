@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-11T09:34:17.760926+00:00",
+  "timestamp": "2026-05-11T10:22:58.652025+00:00",
   "platform": "linux",
   "hardware": {
     "os": "Linux-6.17.0-1010-azure-x86_64-with-glibc2.39",
-    "cpu": "AMD EPYC 7763 64-Core Processor"
+    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz"
   },
-  "commit_hash": "a89640eef3ae21e0b90b17d605b84a09eab02f54",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25661472981",
+  "commit_hash": "f172d71cd5d8515b199ee9c023d68e5ec7edbb02",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25663870875",
   "success": true,
   "summary": {
     "total": 3,
@@ -24,37 +24,37 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 378.37,
+      "duration_seconds": 313.0,
       "error": null,
       "hardware": {
         "os": "Linux-6.17.0-1010-azure-x86_64-with-glibc2.39",
-        "cpu": "AMD EPYC 7763 64-Core Processor"
+        "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz"
       },
       "resources": {
         "ram": {
-          "peak": 9.15,
-          "avg": 5.13
+          "peak": 9.1,
+          "avg": 5.2
         },
         "total_ram_gb": 15.6,
-        "samples": 377
+        "samples": 312
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 377.61,
+      "duration_seconds": 306.44,
       "error": null,
       "hardware": {
         "os": "Linux-6.17.0-1010-azure-x86_64-with-glibc2.39",
-        "cpu": "AMD EPYC 7763 64-Core Processor"
+        "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz"
       },
       "resources": {
         "ram": {
-          "peak": 9.97,
-          "avg": 6.19
+          "peak": 10.02,
+          "avg": 6.27
         },
         "total_ram_gb": 15.6,
-        "samples": 376
+        "samples": 306
       }
     }
   ]
