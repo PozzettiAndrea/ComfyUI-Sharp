@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-05-11T10:43:49.758073+00:00",
+  "timestamp": "2026-05-13T12:47:33.022280+00:00",
   "platform": "linux",
   "hardware": {
     "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
     "cpu": "AMD Ryzen 5 3600 6-Core Processor",
     "gpu": "NVIDIA GeForce RTX 5060"
   },
-  "commit_hash": "f172d71cd5d8515b199ee9c023d68e5ec7edbb02",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25663872317",
+  "commit_hash": "a957ef25c4804365b05416cedb37265336318884",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25799230969",
   "success": true,
   "summary": {
     "total": 3,
@@ -25,7 +25,7 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 129.31,
+      "duration_seconds": 185.91,
       "error": null,
       "hardware": {
         "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
@@ -34,21 +34,21 @@
       },
       "resources": {
         "ram": {
-          "peak": 8.92,
-          "avg": 6.67
+          "peak": 8.99,
+          "avg": 5.77
         },
         "total_ram_gb": 31.3,
-        "samples": 125,
+        "samples": 180,
         "vram": {
           "peak": 5.63,
-          "avg": 3.13
+          "avg": 2.27
         }
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 193.57,
+      "duration_seconds": 110.53,
       "error": null,
       "hardware": {
         "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
@@ -57,14 +57,14 @@
       },
       "resources": {
         "ram": {
-          "peak": 9.05,
-          "avg": 8.78
+          "peak": 9.16,
+          "avg": 8.64
         },
         "total_ram_gb": 31.3,
-        "samples": 185,
+        "samples": 106,
         "vram": {
           "peak": 5.65,
-          "avg": 4.41
+          "avg": 4.23
         }
       }
     }
