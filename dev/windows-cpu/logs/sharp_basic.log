@@ -15,17 +15,17 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI]   Node 2: LoadSharpModel
   [ComfyUI]     Inputs: {"precision": "auto"}
   [ComfyUI]     Inputs: {"precision": "auto"}
+  [ComfyUI]   Node 4: GeomPackPreviewGaussian
+  [ComfyUI]   Node 4: GeomPackPreviewGaussian
+  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
+  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
   Queuing workflow for execution...
-  [ComfyUI]   Node 4: GeomPackPreviewGaussian
-  [ComfyUI]   Node 4: GeomPackPreviewGaussian
-  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
-  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
   [ComfyUI]   Node 5: SharpPredict
   [ComfyUI]   Node 5: SharpPredict
   [ComfyUI]     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
   [ComfyUI]     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
-  [ComfyUI] Generated prompt_id: 91fa69bd-a3a0-4951-8933-081cd96330a3
-  [ComfyUI] Generated prompt_id: 91fa69bd-a3a0-4951-8933-081cd96330a3
+  [ComfyUI] Generated prompt_id: 0d1be8d3-9c78-4d37-85ce-856d246ff005
+  [ComfyUI] Generated prompt_id: 0d1be8d3-9c78-4d37-85ce-856d246ff005
   [ComfyUI] Calling execution.validate_prompt()...
   [ComfyUI] Calling execution.validate_prompt()...
   [ComfyUI] Validation result: valid=True
@@ -38,168 +38,154 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
   [ComfyUI] [comfy-env] SubprocessWorker: C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
   [ComfyUI] [comfy-env] SubprocessWorker: C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
-  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI'}
-  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI'}
+  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI'}
+  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI'}
   [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
-  [ComfyUI] [comfy-env] sharp-nodes: Library/bin has 237 DLLs
-  [ComfyUI] [comfy-env] sharp-nodes: Library/bin has 237 DLLs
+  [ComfyUI] [comfy-env] sharp-nodes: Library/bin has 236 DLLs
+  [ComfyUI] [comfy-env] sharp-nodes: Library/bin has 236 DLLs
   [ComfyUI] [ComfyUI-Sharp] python: C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
   [ComfyUI] [ComfyUI-Sharp] python: C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
-  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\Users\\runneradmin\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
-  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\Users\\runneradmin\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
+  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\Users\\runneradmin\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
+  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\Users\\runneradmin\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
   [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
   [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
-  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\runneradmin\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\runneradmin\\AppData\\Local\\Programs\\comfy-env\\pixi.toml', '-e', 'sharp-nodes', 'python', 'C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\comfyui_pvenv_3xmq2ani\\persistent_worker.py', 'tcp://127.0.0.1:51977']...
-  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\runneradmin\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\runneradmin\\AppData\\Local\\Programs\\comfy-env\\pixi.toml', '-e', 'sharp-nodes', 'python', 'C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\comfyui_pvenv_3xmq2ani\\persistent_worker.py', 'tcp://127.0.0.1:51977']...
-  Frame 2 saved (frame_001.jpg, t=2.5s)
-  [capture-periodic] freeze=4ms shot=140ms unfreeze=7ms saved=True
+  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\runneradmin\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\runneradmin\\AppData\\Local\\Programs\\comfy-env\\pixi.toml', '-e', 'sharp-nodes', 'python', 'C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\comfyui_pvenv_673nc73q\\persistent_worker.py', 'tcp://127.0.0.1:57385']...
+  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\runneradmin\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\runneradmin\\AppData\\Local\\Programs\\comfy-env\\pixi.toml', '-e', 'sharp-nodes', 'python', 'C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\comfyui_pvenv_673nc73q\\persistent_worker.py', 'tcp://127.0.0.1:57385']...
+  Frame 2 saved (frame_001.jpg, t=2.4s)
+  [capture-periodic] freeze=7ms shot=127ms unfreeze=7ms saved=True
   [ComfyUI] [worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
   [ComfyUI] [worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+  [ComfyUI] [SubprocessWorker] worker started/confirmed
+  [ComfyUI] [SubprocessWorker] worker started/confirmed
+  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+  [ComfyUI] [SubprocessWorker] created 0 shm blocks
+  [ComfyUI] [SubprocessWorker] created 0 shm blocks
+  [ComfyUI] [SubprocessWorker] sending request via socket...
+  [ComfyUI] [SubprocessWorker] sending request via socket...
+  [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
+  [ComfyUI] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  [ComfyUI] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  [ComfyUI] 
+  [ComfyUI] 
   Frame 3 saved (frame_002.jpg, t=4.7s)
-  [capture-periodic] freeze=4ms shot=107ms unfreeze=3ms saved=True
-  [ComfyUI] [SubprocessWorker] worker started/confirmed
-  [ComfyUI] [SubprocessWorker] worker started/confirmed
-  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
-  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
-  [ComfyUI] [SubprocessWorker] created 0 shm blocks
-  [ComfyUI] [SubprocessWorker] created 0 shm blocks
-  [ComfyUI] [SubprocessWorker] sending request via socket...
-  [ComfyUI] [SubprocessWorker] sending request via socket...
-  [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
-  [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
-  [capture-loop] iter=50 t=6.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=4.9/16.0GB (31%) swap=0.2/2.9GB (7%) cpu=44% browser_rss=0.71GB
-  [ComfyUI] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-  [ComfyUI] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-  [ComfyUI] 
-  [ComfyUI] 
+  [capture-periodic] freeze=6ms shot=125ms unfreeze=6ms saved=True
+  [capture-loop] iter=50 t=6.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=8 ram=5.1/16.0GB (32%) swap=0.2/2.9GB (6%) cpu=47% browser_rss=0.70GB
   [ComfyUI] sharp_2572gikvuh.pt:   0%|          | 0.00/2.81G [00:00<?, ?B/s]
   [ComfyUI] sharp_2572gikvuh.pt:   0%|          | 0.00/2.81G [00:00<?, ?B/s]
-  [ComfyUI] sharp_2572gikvuh.pt:   3%|▎         | 91.2M/2.81G [00:03<01:29, 30.3MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:   3%|▎         | 91.2M/2.81G [00:03<01:29, 30.3MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:   6%|▌         | 158M/2.81G [00:03<00:50, 52.7MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:   6%|▌         | 158M/2.81G [00:03<00:50, 52.7MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:   6%|▌         | 158M/2.81G [00:03<00:47, 55.7MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:   6%|▌         | 158M/2.81G [00:03<00:47, 55.7MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
-  Frame 4 saved (frame_003.jpg, t=11.3s)
-  [capture-periodic] freeze=15ms shot=226ms unfreeze=9ms saved=True
+  [ComfyUI] sharp_2572gikvuh.pt:  10%|█         | 292M/2.81G [00:03<00:24, 104MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  10%|█         | 292M/2.81G [00:03<00:24, 104MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:   8%|▊         | 225M/2.81G [00:03<00:33, 77.2MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:   8%|▊         | 225M/2.81G [00:03<00:33, 77.2MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:04<00:29, 82.3MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:04<00:29, 82.3MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:04<00:18, 135MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:04<00:18, 135MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  15%|█▌        | 427M/2.81G [00:05<00:26, 90.9MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  15%|█▌        | 427M/2.81G [00:05<00:26, 90.9MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 4 saved (frame_003.jpg, t=9.5s)
+  [capture-periodic] freeze=29ms shot=246ms unfreeze=88ms saved=True
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  15%|█▌        | 427M/2.81G [00:04<00:14, 160MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  15%|█▌        | 427M/2.81G [00:04<00:14, 160MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:05<00:15, 144MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:05<00:15, 144MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  18%|█▊        | 494M/2.81G [00:04<00:13, 170MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  18%|█▊        | 494M/2.81G [00:04<00:13, 170MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  22%|██▏       | 628M/2.81G [00:05<00:12, 168MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  22%|██▏       | 628M/2.81G [00:05<00:12, 168MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:04<00:11, 204MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:04<00:11, 204MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  25%|██▍       | 695M/2.81G [00:05<00:11, 182MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  25%|██▍       | 695M/2.81G [00:05<00:11, 182MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  22%|██▏       | 628M/2.81G [00:05<00:12, 176MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  22%|██▏       | 628M/2.81G [00:05<00:12, 176MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [capture-loop] iter=100 t=13.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=23 ram=5.8/16.0GB (36%) swap=0.2/2.9GB (6%) cpu=67% browser_rss=0.71GB
-  Frame 5 saved (frame_004.jpg, t=13.6s)
-  [capture-periodic] freeze=36ms shot=224ms unfreeze=26ms saved=True
+  [ComfyUI] sharp_2572gikvuh.pt:  27%|██▋       | 768M/2.81G [00:06<00:14, 142MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  27%|██▋       | 768M/2.81G [00:06<00:14, 142MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  25%|██▍       | 695M/2.81G [00:06<00:20, 102MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  25%|██▍       | 695M/2.81G [00:06<00:20, 102MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  30%|██▉       | 829M/2.81G [00:06<00:12, 159MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  30%|██▉       | 829M/2.81G [00:06<00:12, 159MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  27%|██▋       | 768M/2.81G [00:06<00:15, 129MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  27%|██▋       | 768M/2.81G [00:06<00:15, 129MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  32%|███▏      | 896M/2.81G [00:07<00:09, 202MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  32%|███▏      | 896M/2.81G [00:07<00:09, 202MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  32%|███▏      | 896M/2.81G [00:07<00:10, 187MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  32%|███▏      | 896M/2.81G [00:07<00:10, 187MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
   [ComfyUI] sharp_2572gikvuh.pt:  34%|███▍      | 963M/2.81G [00:07<00:09, 199MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] sharp_2572gikvuh.pt:  34%|███▍      | 963M/2.81G [00:07<00:09, 199MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  39%|███▉      | 1.10G/2.81G [00:07<00:06, 278MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  39%|███▉      | 1.10G/2.81G [00:07<00:06, 278MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  39%|███▉      | 1.10G/2.81G [00:07<00:05, 297MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  39%|███▉      | 1.10G/2.81G [00:07<00:05, 297MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 5 saved (frame_004.jpg, t=12.0s)
+  [capture-periodic] freeze=10ms shot=183ms unfreeze=6ms saved=True
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  44%|████▍     | 1.23G/2.81G [00:07<00:04, 353MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  44%|████▍     | 1.23G/2.81G [00:07<00:04, 353MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  44%|████▍     | 1.23G/2.81G [00:07<00:04, 360MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  44%|████▍     | 1.23G/2.81G [00:07<00:04, 360MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  46%|████▌     | 1.30G/2.81G [00:08<00:04, 313MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  46%|████▌     | 1.30G/2.81G [00:08<00:04, 313MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  Frame 6 saved (frame_005.jpg, t=15.9s)
-  [capture-periodic] freeze=18ms shot=252ms unfreeze=6ms saved=True
+  [ComfyUI] sharp_2572gikvuh.pt:  51%|█████     | 1.43G/2.81G [00:08<00:02, 481MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  51%|█████     | 1.43G/2.81G [00:08<00:02, 481MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  51%|█████     | 1.43G/2.81G [00:08<00:03, 376MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  51%|█████     | 1.43G/2.81G [00:08<00:03, 376MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  56%|█████▌    | 1.57G/2.81G [00:08<00:02, 497MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  56%|█████▌    | 1.57G/2.81G [00:08<00:02, 497MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  53%|█████▎    | 1.50G/2.81G [00:08<00:03, 369MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  53%|█████▎    | 1.50G/2.81G [00:08<00:03, 369MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  63%|██████▎   | 1.77G/2.81G [00:08<00:01, 586MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  63%|██████▎   | 1.77G/2.81G [00:08<00:01, 586MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  56%|█████▌    | 1.57G/2.81G [00:09<00:04, 264MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  56%|█████▌    | 1.57G/2.81G [00:09<00:04, 264MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  68%|██████▊   | 1.90G/2.81G [00:08<00:01, 571MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  68%|██████▊   | 1.90G/2.81G [00:08<00:01, 571MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  63%|██████▎   | 1.77G/2.81G [00:09<00:02, 397MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  63%|██████▎   | 1.77G/2.81G [00:09<00:02, 397MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  72%|███████▏  | 2.04G/2.81G [00:09<00:01, 561MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  72%|███████▏  | 2.04G/2.81G [00:09<00:01, 561MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  68%|██████▊   | 1.90G/2.81G [00:09<00:02, 434MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  68%|██████▊   | 1.90G/2.81G [00:09<00:02, 434MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  77%|███████▋  | 2.17G/2.81G [00:09<00:01, 553MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  77%|███████▋  | 2.17G/2.81G [00:09<00:01, 553MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  72%|███████▏  | 2.04G/2.81G [00:09<00:01, 461MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  72%|███████▏  | 2.04G/2.81G [00:09<00:01, 461MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  82%|████████▏ | 2.30G/2.81G [00:09<00:00, 549MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  82%|████████▏ | 2.30G/2.81G [00:09<00:00, 549MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  77%|███████▋  | 2.17G/2.81G [00:10<00:01, 482MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  77%|███████▋  | 2.17G/2.81G [00:10<00:01, 482MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  87%|████████▋ | 2.44G/2.81G [00:09<00:00, 545MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  87%|████████▋ | 2.44G/2.81G [00:09<00:00, 545MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 6 saved (frame_005.jpg, t=14.2s)
+  [capture-periodic] freeze=5ms shot=128ms unfreeze=4ms saved=True
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  82%|████████▏ | 2.30G/2.81G [00:10<00:01, 498MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  82%|████████▏ | 2.30G/2.81G [00:10<00:01, 498MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  Frame 7 saved (frame_006.jpg, t=18.3s)
-  [capture-periodic] freeze=7ms shot=125ms unfreeze=5ms saved=True
+  [ComfyUI] sharp_2572gikvuh.pt:  92%|█████████▏| 2.57G/2.81G [00:10<00:00, 543MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  92%|█████████▏| 2.57G/2.81G [00:10<00:00, 543MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  87%|████████▋ | 2.44G/2.81G [00:10<00:00, 509MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  87%|████████▋ | 2.44G/2.81G [00:10<00:00, 509MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  92%|█████████▏| 2.57G/2.81G [00:10<00:00, 517MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  92%|█████████▏| 2.57G/2.81G [00:10<00:00, 517MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  99%|█████████▊| 2.77G/2.81G [00:11<00:00, 601MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  99%|█████████▊| 2.77G/2.81G [00:11<00:00, 601MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  96%|█████████▋| 2.71G/2.81G [00:10<00:00, 540MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  96%|█████████▋| 2.71G/2.81G [00:10<00:00, 540MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:11<00:00, 254MB/s]
-  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:11<00:00, 254MB/s]
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:10<00:00, 272MB/s]
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:10<00:00, 272MB/s]
+  [capture-loop] iter=100 t=15.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=5.3/16.0GB (33%) swap=0.2/2.9GB (5%) cpu=78% browser_rss=0.75GB
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [SubprocessWorker] got response: ok
-  [ComfyUI] [comfy-env] LoadSharpModel done (18.67s): result: NodeOutput
-  [ComfyUI] [comfy-env] LoadSharpModel done (18.67s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadSharpModel done (15.35s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadSharpModel done (15.35s): result: NodeOutput
   [ComfyUI] [comfy-env] Running SharpPredict: focal_length_mm: 30.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,1024,1536,3] cpu
   [ComfyUI] [comfy-env] Running SharpPredict: focal_length_mm: 30.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,1024,1536,3] cpu
   [ComfyUI] [SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
@@ -228,12 +214,11 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZE TensorRef: tensor_size=[1, 1024, 1536, 3]
   [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 1024, 1536, 3])
   [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 1024, 1536, 3])
-  [capture-loop] iter=150 t=20.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.5/16.0GB (34%) swap=0.2/2.9GB (6%) cpu=71% browser_rss=0.72GB
+  Frame 7 saved (frame_006.jpg, t=16.5s)
+  [capture-periodic] freeze=5ms shot=109ms unfreeze=4ms saved=True
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: No comfy kitchen, using old apply_rope functions.
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: No comfy kitchen, using old apply_rope functions.
-  Frame 8 saved (frame_007.jpg, t=20.5s)
-  [capture-periodic] freeze=7ms shot=108ms unfreeze=4ms saved=True
-  [capture-loop] iter=200 t=26.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=5.4/16.0GB (34%) swap=0.2/2.9GB (6%) cpu=45% browser_rss=0.65GB
+  [capture-loop] iter=150 t=20.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=5.3/16.0GB (33%) swap=0.2/2.9GB (5%) cpu=38% browser_rss=0.75GB
   [ComfyUI] [SubprocessWorker] got response: error
   [ComfyUI] [SubprocessWorker] got response: error
   [ComfyUI] !!! Exception during processing !!! No module named 'transformers'
@@ -244,52 +229,52 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] Worker traceback:
   [ComfyUI] Traceback (most recent call last):
   [ComfyUI] Traceback (most recent call last):
-  [ComfyUI]   File "C:\Users\RUNNER~1\AppData\Local\Temp\comfyui_pvenv_3xmq2ani\persistent_worker.py", line 1762, in main
-  [ComfyUI]   File "C:\Users\RUNNER~1\AppData\Local\Temp\comfyui_pvenv_3xmq2ani\persistent_worker.py", line 1762, in main
+  [ComfyUI]   File "C:\Users\RUNNER~1\AppData\Local\Temp\comfyui_pvenv_673nc73q\persistent_worker.py", line 1762, in main
+  [ComfyUI]   File "C:\Users\RUNNER~1\AppData\Local\Temp\comfyui_pvenv_673nc73q\persistent_worker.py", line 1762, in main
   [ComfyUI]     result = method(**inputs)
   [ComfyUI]     result = method(**inputs)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy_api\latest\_io.py", line 1833, in EXECUTE_NORMALIZED
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy_api\latest\_io.py", line 1833, in EXECUTE_NORMALIZED
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy_api\latest\_io.py", line 1833, in EXECUTE_NORMALIZED
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy_api\latest\_io.py", line 1833, in EXECUTE_NORMALIZED
   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
-  [ComfyUI]   File "C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
-  [ComfyUI]   File "C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+  [ComfyUI]   File "C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+  [ComfyUI]   File "C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
   [ComfyUI]     return func(*args, **kwargs)
   [ComfyUI]     return func(*args, **kwargs)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 111, in execute
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 111, in execute
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 111, in execute
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 111, in execute
   [ComfyUI]     patcher = _load_sharp_model(model)
   [ComfyUI]     patcher = _load_sharp_model(model)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 75, in _load_sharp_model
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 75, in _load_sharp_model
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 75, in _load_sharp_model
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 75, in _load_sharp_model
   [ComfyUI]     import comfy.model_patcher
   [ComfyUI]     import comfy.model_patcher
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\model_patcher.py", line 32, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\model_patcher.py", line 32, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\model_patcher.py", line 32, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\model_patcher.py", line 32, in <module>
   [ComfyUI]     import comfy.hooks
   [ComfyUI]     import comfy.hooks
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\hooks.py", line 14, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\hooks.py", line 14, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\hooks.py", line 14, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\hooks.py", line 14, in <module>
   [ComfyUI]     import comfy.lora
   [ComfyUI]     import comfy.lora
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\lora.py", line 23, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\lora.py", line 23, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\lora.py", line 23, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\lora.py", line 23, in <module>
   [ComfyUI]     import comfy.model_base
   [ComfyUI]     import comfy.model_base
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\model_base.py", line 61, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\model_base.py", line 61, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\model_base.py", line 61, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\model_base.py", line 61, in <module>
   [ComfyUI]     import comfy.ldm.hidream_o1.model
   [ComfyUI]     import comfy.ldm.hidream_o1.model
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\ldm\hidream_o1\model.py", line 20, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\ldm\hidream_o1\model.py", line 20, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\ldm\hidream_o1\model.py", line 20, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\ldm\hidream_o1\model.py", line 20, in <module>
   [ComfyUI]     from comfy.text_encoders.qwen35 import Qwen35VisionModel
   [ComfyUI]     from comfy.text_encoders.qwen35 import Qwen35VisionModel
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\text_encoders\qwen35.py", line 10, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\text_encoders\qwen35.py", line 10, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\text_encoders\qwen35.py", line 10, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\text_encoders\qwen35.py", line 10, in <module>
   [ComfyUI]     from comfy import sd1_clip
   [ComfyUI]     from comfy import sd1_clip
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\sd1_clip.py", line 3, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\sd1_clip.py", line 3, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\sd1_clip.py", line 3, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\sd1_clip.py", line 3, in <module>
   [ComfyUI]     from transformers import CLIPTokenizer
   [ComfyUI]     from transformers import CLIPTokenizer
   [ComfyUI] ModuleNotFoundError: No module named 'transformers'
@@ -298,46 +283,30 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] 
   [ComfyUI] Traceback (most recent call last):
   [ComfyUI] Traceback (most recent call last):
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\execution.py", line 535, in execute
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\execution.py", line 535, in execute
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\execution.py", line 535, in execute
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\execution.py", line 535, in execute
   [ComfyUI]     output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
   [ComfyUI]     output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
-  [ComfyUI]                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\execution.py", line 335, in get_output_data
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\execution.py", line 335, in get_output_data
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\execution.py", line 335, in get_output_data
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\execution.py", line 335, in get_output_data
   [ComfyUI]     return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
   [ComfyUI]     return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
-  [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\execution.py", line 309, in _async_map_node_over_list
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\execution.py", line 309, in _async_map_node_over_list
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\execution.py", line 309, in _async_map_node_over_list
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\execution.py", line 309, in _async_map_node_over_list
   [ComfyUI]     await process_inputs(input_dict, i)
   [ComfyUI]     await process_inputs(input_dict, i)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\execution.py", line 297, in process_inputs
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\execution.py", line 297, in process_inputs
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\execution.py", line 297, in process_inputs
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\execution.py", line 297, in process_inputs
   [ComfyUI]     result = f(**inputs)
   [ComfyUI]     result = f(**inputs)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\.venv\Lib\site-packages\comfy_env\isolation\metadata.py", line 556, in proxy
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\.venv\Lib\site-packages\comfy_env\isolation\metadata.py", line 556, in proxy
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\.venv\lib\site-packages\comfy_env\isolation\metadata.py", line 556, in proxy
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\.venv\lib\site-packages\comfy_env\isolation\metadata.py", line 556, in proxy
   [ComfyUI]     result = worker.call_method(
   [ComfyUI]     result = worker.call_method(
-  [ComfyUI]         module_name=mod,
-  [ComfyUI]         module_name=mod,
-  [ComfyUI]     ...<4 lines>...
-  [ComfyUI]     ...<4 lines>...
-  [ComfyUI]         timeout=600.0,
-  [ComfyUI]         timeout=600.0,
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\.venv\Lib\site-packages\comfy_env\isolation\workers\subprocess.py", line 674, in call_method
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\.venv\Lib\site-packages\comfy_env\isolation\workers\subprocess.py", line 674, in call_method
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\.venv\lib\site-packages\comfy_env\isolation\workers\subprocess.py", line 674, in call_method
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\.venv\lib\site-packages\comfy_env\isolation\workers\subprocess.py", line 674, in call_method
   [ComfyUI]     raise WorkerError(
   [ComfyUI]     raise WorkerError(
-  [ComfyUI]     ...<2 lines>...
-  [ComfyUI]     ...<2 lines>...
-  [ComfyUI]     )
-  [ComfyUI]     )
   [ComfyUI] comfy_env.isolation.workers.base.WorkerError: No module named 'transformers'
   [ComfyUI] comfy_env.isolation.workers.base.WorkerError: No module named 'transformers'
   [ComfyUI] 
@@ -346,52 +315,52 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] Worker traceback:
   [ComfyUI] Traceback (most recent call last):
   [ComfyUI] Traceback (most recent call last):
-  [ComfyUI]   File "C:\Users\RUNNER~1\AppData\Local\Temp\comfyui_pvenv_3xmq2ani\persistent_worker.py", line 1762, in main
-  [ComfyUI]   File "C:\Users\RUNNER~1\AppData\Local\Temp\comfyui_pvenv_3xmq2ani\persistent_worker.py", line 1762, in main
+  [ComfyUI]   File "C:\Users\RUNNER~1\AppData\Local\Temp\comfyui_pvenv_673nc73q\persistent_worker.py", line 1762, in main
+  [ComfyUI]   File "C:\Users\RUNNER~1\AppData\Local\Temp\comfyui_pvenv_673nc73q\persistent_worker.py", line 1762, in main
   [ComfyUI]     result = method(**inputs)
   [ComfyUI]     result = method(**inputs)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy_api\latest\_io.py", line 1833, in EXECUTE_NORMALIZED
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy_api\latest\_io.py", line 1833, in EXECUTE_NORMALIZED
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy_api\latest\_io.py", line 1833, in EXECUTE_NORMALIZED
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy_api\latest\_io.py", line 1833, in EXECUTE_NORMALIZED
   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
   [ComfyUI]     to_return = cls.execute(*args, **kwargs)
-  [ComfyUI]   File "C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
-  [ComfyUI]   File "C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+  [ComfyUI]   File "C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+  [ComfyUI]   File "C:\Users\runneradmin\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
   [ComfyUI]     return func(*args, **kwargs)
   [ComfyUI]     return func(*args, **kwargs)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 111, in execute
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 111, in execute
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 111, in execute
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 111, in execute
   [ComfyUI]     patcher = _load_sharp_model(model)
   [ComfyUI]     patcher = _load_sharp_model(model)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 75, in _load_sharp_model
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 75, in _load_sharp_model
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 75, in _load_sharp_model
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 75, in _load_sharp_model
   [ComfyUI]     import comfy.model_patcher
   [ComfyUI]     import comfy.model_patcher
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\model_patcher.py", line 32, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\model_patcher.py", line 32, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\model_patcher.py", line 32, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\model_patcher.py", line 32, in <module>
   [ComfyUI]     import comfy.hooks
   [ComfyUI]     import comfy.hooks
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\hooks.py", line 14, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\hooks.py", line 14, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\hooks.py", line 14, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\hooks.py", line 14, in <module>
   [ComfyUI]     import comfy.lora
   [ComfyUI]     import comfy.lora
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\lora.py", line 23, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\lora.py", line 23, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\lora.py", line 23, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\lora.py", line 23, in <module>
   [ComfyUI]     import comfy.model_base
   [ComfyUI]     import comfy.model_base
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\model_base.py", line 61, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\model_base.py", line 61, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\model_base.py", line 61, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\model_base.py", line 61, in <module>
   [ComfyUI]     import comfy.ldm.hidream_o1.model
   [ComfyUI]     import comfy.ldm.hidream_o1.model
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\ldm\hidream_o1\model.py", line 20, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\ldm\hidream_o1\model.py", line 20, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\ldm\hidream_o1\model.py", line 20, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\ldm\hidream_o1\model.py", line 20, in <module>
   [ComfyUI]     from comfy.text_encoders.qwen35 import Qwen35VisionModel
   [ComfyUI]     from comfy.text_encoders.qwen35 import Qwen35VisionModel
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\text_encoders\qwen35.py", line 10, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\text_encoders\qwen35.py", line 10, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\text_encoders\qwen35.py", line 10, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\text_encoders\qwen35.py", line 10, in <module>
   [ComfyUI]     from comfy import sd1_clip
   [ComfyUI]     from comfy import sd1_clip
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\sd1_clip.py", line 3, in <module>
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0757\ComfyUI\comfy\sd1_clip.py", line 3, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\sd1_clip.py", line 3, in <module>
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0800\ComfyUI\comfy\sd1_clip.py", line 3, in <module>
   [ComfyUI]     from transformers import CLIPTokenizer
   [ComfyUI]     from transformers import CLIPTokenizer
   [ComfyUI] ModuleNotFoundError: No module named 'transformers'
@@ -400,11 +369,11 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] 
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Prompt executed in 27.88 seconds
-  [ComfyUI] Prompt executed in 27.88 seconds
-  Execution complete (t=28.3s)
-  Execution error: {'prompt_id': 'e2eb66a0-bb54-4f43-8918-14996e3946ad', 'node_id': '5', 'node_type': 'SharpPredict', 'executed': ['2', '1'], 'exception_message': 'No module named \'transformers\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\comfyui_pvenv_3xmq2ani\\persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy_api\\latest\\_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n  File "C:\\Users\\runneradmin\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\torch\\utils\\_contextlib.py", line 124, in decorate_context\n    return func(*args, **kwargs)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\custom_nodes\\ComfyUI-Sharp\\nodes\\predict.py", line 111, in execute\n    patcher = _load_sharp_model(model)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\custom_nodes\\ComfyUI-Sharp\\nodes\\load_model.py", line 75, in _load_sharp_model\n    import comfy.model_patcher\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\model_patcher.py", line 32, in <module>\n    import comfy.hooks\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\hooks.py", line 14, in <module>\n    import comfy.lora\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\lora.py", line 23, in <module>\n    import comfy.model_base\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\model_base.py", line 61, in <module>\n    import comfy.ldm.hidream_o1.model\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\ldm\\hidream_o1\\model.py", line 20, in <module>\n    from comfy.text_encoders.qwen35 import Qwen35VisionModel\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\text_encoders\\qwen35.py", line 10, in <module>\n    from comfy import sd1_clip\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\sd1_clip.py", line 3, in <module>\n    from transformers import CLIPTokenizer\nModuleNotFoundError: No module named \'transformers\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\execution.py", line 297, in process_inputs\n    result = f(**inputs)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\.venv\\Lib\\site-packages\\comfy_env\\isolation\\metadata.py", line 556, in proxy\n    result = worker.call_method(\n        module_name=mod,\n    ...<4 lines>...\n        timeout=600.0,\n    )\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\.venv\\Lib\\site-packages\\comfy_env\\isolation\\workers\\subprocess.py", line 674, in call_method\n    raise WorkerError(\n    ...<2 lines>...\n    )\n'], 'current_inputs': {'focal_length_mm': [30], 'output_prefix': ['sharp'], 'model': ["{'model_path': 'D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-0757\\\\ComfyUI\\\\models\\\\sharp\\\\sharp_2572gikvuh.pt', 'precision': 'auto', 'dtype': 'fp32'}"], 'image': ['tensor([[[[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         [[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         [[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         ...,\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5098, 0.4627, 0.4235],\n          [0.5098, 0.4627, 0.4235],\n          [0.5098, 0.4627, 0.4235]],\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5059, 0.4588, 0.4392],\n          [0.5059, 0.4627, 0.4314],\n          [0.5059, 0.4627, 0.4314]],\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5059, 0.4588, 0.4392],\n          [0.5059, 0.4627, 0.4314],\n          [0.5059, 0.4627, 0.4314]]]])'], 'prompt': ["{'1': {'inputs': {'image': 'beach.jpg'}, 'class_type': 'LoadImage', '_meta': {'title': 'Load Image'}, 'is_changed': ['ee4f94632a5ec7038826e875829a62a81dc2a9b85ed59440f2eaa37b3704fa24']}, '2': {'inputs': {'precision': 'auto'}, 'class_type': 'LoadSharpModel', '_meta': {'title': '(Down)Load SHARP Model'}}, '4': {'inputs': {'preview_gaussian': '', 'ply_path': ['5', 0], 'extrinsics': ['5', 1], 'intrinsics': ['5', 2]}, 'class_type': 'GeomPackPreviewGaussian', '_meta': {'title': 'Preview Gaussian'}}, '5': {'inputs': {'focal_length_mm': 30.0, 'output_prefix': 'sharp', 'model': ['2', 0], 'image': ['1', 0]}, 'class_type': 'SharpPredict', '_meta': {'title': 'SHARP Predict (Image to PLY)'}}}"], 'extra_pnginfo': ["{'workflow': {'id': 'sharp-basic-workflow', 'revision': 0, 'last_node_id': 5, 'last_link_id': 10, 'nodes': [{'id': 2, 'type': 'LoadSharpModel', 'pos': [-150, -400], 'size': [270, 106.65625], 'flags': {}, 'order': 0, 'mode': 0, 'inputs': [], 'outputs': [{'name': 'model_config', 'type': 'SHARP_MODEL_CONFIG', 'links': [6]}], 'properties': {'Node name for S&R': 'LoadSharpModel', 'aux_id': 'PozzettiAndrea/ComfyUI-Sharp', 'ver': '9f1b9c726e2cfc0118866c3df783e7f6bc895226'}, 'widgets_values': ['auto']}, {'id': 1, 'type': 'LoadImage', 'pos': [-150, -100], 'size': [274, 340], 'flags': {}, 'order': 1, 'mode': 0, 'inputs': [], 'outputs': [{'name': 'IMAGE', 'type': 'IMAGE', 'links': [7]}, {'name': 'MASK', 'type': 'MASK', 'links': []}], 'properties': {'Node name for S&R': 'LoadImage', 'cnr_id': 'comfy-core', 'ver': '0.5.1'}, 'widgets_values': ['beach.jpg', 'image']}, {'id': 5, 'type': 'SharpPredict', 'pos': [181.546875, -251.55078125], 'size': [298.890625, 212], 'flags': {}, 'order': 2, 'mode': 0, 'inputs': [{'name': 'model', 'type': 'SHARP_MODEL_CONFIG', 'link': 6}, {'name': 'image', 'type': 'IMAGE', 'link': 7}, {'name': 'extrinsics', 'shape': 7, 'type': 'EXTRINSICS', 'link': None}, {'name': 'intrinsics', 'shape': 7, 'type': 'INTRINSICS', 'link': None}], 'outputs': [{'name': 'ply_path', 'type': 'STRING', 'links': [8]}, {'name': 'extrinsics', 'type': 'EXTRINSICS', 'links': [9]}, {'name': 'intrinsics', 'type': 'INTRINSICS', 'links': [10]}], 'properties': {'Node name for S&R': 'SharpPredict', 'aux_id': 'PozzettiAndrea/ComfyUI-Sharp', 'ver': 'aa98b213e3d0770477bbf46046094c5cb8ff6052'}, 'widgets_values': [30, 'sharp']}, {'id': 4, 'type': 'GeomPackPreviewGaussian', 'pos': [629.92578125, -322.046875], 'size': [512, 658], 'flags': {}, 'order': 3, 'mode': 0, 'inputs': [{'name': 'ply_path', 'type': 'STRING', 'link': 8}, {'name': 'extrinsics', 'shape': 7, 'type': 'EXTRINSICS', 'link': 9}, {'name': 'intrinsics', 'shape': 7, 'type': 'INTRINSICS', 'link': 10}], 'outputs': [], 'properties': {'Node name for S&R': 'GeomPackPreviewGaussian', 'aux_id': 'PozzettiAndrea/ComfyUI-GeometryPack', 'ver': 'b7df285fc5b3fef7aad434d8b6e8698efed6358b', 'cnr_id': 'comfyui-geometrypack'}, 'widgets_values': ['']}], 'links': [[6, 2, 0, 5, 0, 'SHARP_MODEL'], [7, 1, 0, 5, 1, 'IMAGE'], [8, 5, 0, 4, 0, 'STRING'], [9, 5, 1, 4, 1, 'EXTRINSICS'], [10, 5, 2, 4, 2, 'INTRINSICS']], 'groups': [], 'config': {}, 'extra': {'ds': {'scale': 1, 'offset': [300.79296875, 604.72265625]}, 'workflowRendererVersion': 'LG', 'frontendVersion': '1.43.18'}, 'version': 0.4}}"]}, 'current_outputs': ['2', '4', '1', '5'], 'timestamp': 1778659457544}
+  [ComfyUI] Prompt executed in 24.14 seconds
+  [ComfyUI] Prompt executed in 24.14 seconds
+  Execution complete (t=24.5s)
+  Execution error: {'prompt_id': 'dbfa75e8-edb0-438e-a8bb-39ec68a69d59', 'node_id': '5', 'node_type': 'SharpPredict', 'executed': ['2', '1'], 'exception_message': 'No module named \'transformers\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\comfyui_pvenv_673nc73q\\persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy_api\\latest\\_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n  File "C:\\Users\\runneradmin\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\lib\\site-packages\\torch\\utils\\_contextlib.py", line 124, in decorate_context\n    return func(*args, **kwargs)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\custom_nodes\\ComfyUI-Sharp\\nodes\\predict.py", line 111, in execute\n    patcher = _load_sharp_model(model)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\custom_nodes\\ComfyUI-Sharp\\nodes\\load_model.py", line 75, in _load_sharp_model\n    import comfy.model_patcher\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\model_patcher.py", line 32, in <module>\n    import comfy.hooks\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\hooks.py", line 14, in <module>\n    import comfy.lora\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\lora.py", line 23, in <module>\n    import comfy.model_base\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\model_base.py", line 61, in <module>\n    import comfy.ldm.hidream_o1.model\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\ldm\\hidream_o1\\model.py", line 20, in <module>\n    from comfy.text_encoders.qwen35 import Qwen35VisionModel\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\text_encoders\\qwen35.py", line 10, in <module>\n    from comfy import sd1_clip\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\sd1_clip.py", line 3, in <module>\n    from transformers import CLIPTokenizer\nModuleNotFoundError: No module named \'transformers\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\execution.py", line 297, in process_inputs\n    result = f(**inputs)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\.venv\\lib\\site-packages\\comfy_env\\isolation\\metadata.py", line 556, in proxy\n    result = worker.call_method(\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\.venv\\lib\\site-packages\\comfy_env\\isolation\\workers\\subprocess.py", line 674, in call_method\n    raise WorkerError(\n'], 'current_inputs': {'focal_length_mm': [30], 'output_prefix': ['sharp'], 'model': ["{'model_path': 'D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-0800\\\\ComfyUI\\\\models\\\\sharp\\\\sharp_2572gikvuh.pt', 'precision': 'auto', 'dtype': 'fp32'}"], 'image': ['tensor([[[[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         [[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         [[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         ...,\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5098, 0.4627, 0.4235],\n          [0.5098, 0.4627, 0.4235],\n          [0.5098, 0.4627, 0.4235]],\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5059, 0.4588, 0.4392],\n          [0.5059, 0.4627, 0.4314],\n          [0.5059, 0.4627, 0.4314]],\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5059, 0.4588, 0.4392],\n          [0.5059, 0.4627, 0.4314],\n          [0.5059, 0.4627, 0.4314]]]])'], 'prompt': ["{'1': {'inputs': {'image': 'beach.jpg'}, 'class_type': 'LoadImage', '_meta': {'title': 'Load Image'}, 'is_changed': ['ee4f94632a5ec7038826e875829a62a81dc2a9b85ed59440f2eaa37b3704fa24']}, '2': {'inputs': {'precision': 'auto'}, 'class_type': 'LoadSharpModel', '_meta': {'title': '(Down)Load SHARP Model'}}, '4': {'inputs': {'preview_gaussian': '', 'ply_path': ['5', 0], 'extrinsics': ['5', 1], 'intrinsics': ['5', 2]}, 'class_type': 'GeomPackPreviewGaussian', '_meta': {'title': 'Preview Gaussian'}}, '5': {'inputs': {'focal_length_mm': 30.0, 'output_prefix': 'sharp', 'model': ['2', 0], 'image': ['1', 0]}, 'class_type': 'SharpPredict', '_meta': {'title': 'SHARP Predict (Image to PLY)'}}}"], 'extra_pnginfo': ["{'workflow': {'id': 'sharp-basic-workflow', 'revision': 0, 'last_node_id': 5, 'last_link_id': 10, 'nodes': [{'id': 2, 'type': 'LoadSharpModel', 'pos': [-150, -400], 'size': [270, 106.65625], 'flags': {}, 'order': 0, 'mode': 0, 'inputs': [], 'outputs': [{'name': 'model_config', 'type': 'SHARP_MODEL_CONFIG', 'links': [6]}], 'properties': {'Node name for S&R': 'LoadSharpModel', 'aux_id': 'PozzettiAndrea/ComfyUI-Sharp', 'ver': '9f1b9c726e2cfc0118866c3df783e7f6bc895226'}, 'widgets_values': ['auto']}, {'id': 1, 'type': 'LoadImage', 'pos': [-150, -100], 'size': [274, 340], 'flags': {}, 'order': 1, 'mode': 0, 'inputs': [], 'outputs': [{'name': 'IMAGE', 'type': 'IMAGE', 'links': [7]}, {'name': 'MASK', 'type': 'MASK', 'links': []}], 'properties': {'Node name for S&R': 'LoadImage', 'cnr_id': 'comfy-core', 'ver': '0.5.1'}, 'widgets_values': ['beach.jpg', 'image']}, {'id': 5, 'type': 'SharpPredict', 'pos': [181.546875, -251.55078125], 'size': [298.890625, 212], 'flags': {}, 'order': 2, 'mode': 0, 'inputs': [{'name': 'model', 'type': 'SHARP_MODEL_CONFIG', 'link': 6}, {'name': 'image', 'type': 'IMAGE', 'link': 7}, {'name': 'extrinsics', 'shape': 7, 'type': 'EXTRINSICS', 'link': None}, {'name': 'intrinsics', 'shape': 7, 'type': 'INTRINSICS', 'link': None}], 'outputs': [{'name': 'ply_path', 'type': 'STRING', 'links': [8]}, {'name': 'extrinsics', 'type': 'EXTRINSICS', 'links': [9]}, {'name': 'intrinsics', 'type': 'INTRINSICS', 'links': [10]}], 'properties': {'Node name for S&R': 'SharpPredict', 'aux_id': 'PozzettiAndrea/ComfyUI-Sharp', 'ver': 'aa98b213e3d0770477bbf46046094c5cb8ff6052'}, 'widgets_values': [30, 'sharp']}, {'id': 4, 'type': 'GeomPackPreviewGaussian', 'pos': [629.92578125, -322.046875], 'size': [512, 658], 'flags': {}, 'order': 3, 'mode': 0, 'inputs': [{'name': 'ply_path', 'type': 'STRING', 'link': 8}, {'name': 'extrinsics', 'shape': 7, 'type': 'EXTRINSICS', 'link': 9}, {'name': 'intrinsics', 'shape': 7, 'type': 'INTRINSICS', 'link': 10}], 'outputs': [], 'properties': {'Node name for S&R': 'GeomPackPreviewGaussian', 'aux_id': 'PozzettiAndrea/ComfyUI-GeometryPack', 'ver': 'b7df285fc5b3fef7aad434d8b6e8698efed6358b', 'cnr_id': 'comfyui-geometrypack'}, 'widgets_values': ['']}], 'links': [[6, 2, 0, 5, 0, 'SHARP_MODEL'], [7, 1, 0, 5, 1, 'IMAGE'], [8, 5, 0, 4, 0, 'STRING'], [9, 5, 1, 4, 1, 'EXTRINSICS'], [10, 5, 2, 4, 2, 'INTRINSICS']], 'groups': [], 'config': {}, 'extra': {'ds': {'scale': 1, 'offset': [300.79296875, 604.72265625]}, 'workflowRendererVersion': 'LG', 'frontendVersion': '1.43.18'}, 'version': 0.4}}"]}, 'current_outputs': ['4', '2', '5', '1'], 'timestamp': 1778659649707}
     Status: FAILED
-    Error: Workflow execution failed: {'prompt_id': 'e2eb66a0-bb54-4f43-8918-14996e3946ad', 'node_id': '5', 'node_type': 'SharpPredict', 'executed': ['2', '1'], 'exception_message': 'No module named \'transformers\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\comfyui_pvenv_3xmq2ani\\persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy_api\\latest\\_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n  File "C:\\Users\\runneradmin\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\torch\\utils\\_contextlib.py", line 124, in decorate_context\n    return func(*args, **kwargs)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\custom_nodes\\ComfyUI-Sharp\\nodes\\predict.py", line 111, in execute\n    patcher = _load_sharp_model(model)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\custom_nodes\\ComfyUI-Sharp\\nodes\\load_model.py", line 75, in _load_sharp_model\n    import comfy.model_patcher\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\model_patcher.py", line 32, in <module>\n    import comfy.hooks\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\hooks.py", line 14, in <module>\n    import comfy.lora\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\lora.py", line 23, in <module>\n    import comfy.model_base\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\model_base.py", line 61, in <module>\n    import comfy.ldm.hidream_o1.model\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\ldm\\hidream_o1\\model.py", line 20, in <module>\n    from comfy.text_encoders.qwen35 import Qwen35VisionModel\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\text_encoders\\qwen35.py", line 10, in <module>\n    from comfy import sd1_clip\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\comfy\\sd1_clip.py", line 3, in <module>\n    from transformers import CLIPTokenizer\nModuleNotFoundError: No module named \'transformers\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\ComfyUI\\execution.py", line 297, in process_inputs\n    result = f(**inputs)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\.venv\\Lib\\site-packages\\comfy_env\\isolation\\metadata.py", line 556, in proxy\n    result = worker.call_method(\n        module_name=mod,\n    ...<4 lines>...\n        timeout=600.0,\n    )\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0757\\.venv\\Lib\\site-packages\\comfy_env\\isolation\\workers\\subprocess.py", line 674, in call_method\n    raise WorkerError(\n    ...<2 lines>...\n    )\n'], 'current_inputs': {'focal_length_mm': [30], 'output_prefix': ['sharp'], 'model': ["{'model_path': 'D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-0757\\\\ComfyUI\\\\models\\\\sharp\\\\sharp_2572gikvuh.pt', 'precision': 'auto', 'dtype': 'fp32'}"], 'image': ['tensor([[[[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         [[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         [[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         ...,\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5098, 0.4627, 0.4235],\n          [0.5098, 0.4627, 0.4235],\n          [0.5098, 0.4627, 0.4235]],\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5059, 0.4588, 0.4392],\n          [0.5059, 0.4627, 0.4314],\n          [0.5059, 0.4627, 0.4314]],\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5059, 0.4588, 0.4392],\n          [0.5059, 0.4627, 0.4314],\n          [0.5059, 0.4627, 0.4314]]]])'], 'prompt': ["{'1': {'inputs': {'image': 'beach.jpg'}, 'class_type': 'LoadImage', '_meta': {'title': 'Load Image'}, 'is_changed': ['ee4f94632a5ec7038826e875829a62a81dc2a9b85ed59440f2eaa37b3704fa24']}, '2': {'inputs': {'precision': 'auto'}, 'class_type': 'LoadSharpModel', '_meta': {'title': '(Down)Load SHARP Model'}}, '4': {'inputs': {'preview_gaussian': '', 'ply_path': ['5', 0], 'extrinsics': ['5', 1], 'intrinsics': ['5', 2]}, 'class_type': 'GeomPackPreviewGaussian', '_meta': {'title': 'Preview Gaussian'}}, '5': {'inputs': {'focal_length_mm': 30.0, 'output_prefix': 'sharp', 'model': ['2', 0], 'image': ['1', 0]}, 'class_type': 'SharpPredict', '_meta': {'title': 'SHARP Predict (Image to PLY)'}}}"], 'extra_pnginfo': ["{'workflow': {'id': 'sharp-basic-workflow', 'revision': 0, 'last_node_id': 5, 'last_link_id': 10, 'nodes': [{'id': 2, 'type': 'LoadSharpModel', 'pos': [-150, -400], 'size': [270, 106.65625], 'flags': {}, 'order': 0, 'mode': 0, 'inputs': [], 'outputs': [{'name': 'model_config', 'type': 'SHARP_MODEL_CONFIG', 'links': [6]}], 'properties': {'Node name for S&R': 'LoadSharpModel', 'aux_id': 'PozzettiAndrea/ComfyUI-Sharp', 'ver': '9f1b9c726e2cfc0118866c3df783e7f6bc895226'}, 'widgets_values': ['auto']}, {'id': 1, 'type': 'LoadImage', 'pos': [-150, -100], 'size': [274, 340], 'flags': {}, 'order': 1, 'mode': 0, 'inputs': [], 'outputs': [{'name': 'IMAGE', 'type': 'IMAGE', 'links': [7]}, {'name': 'MASK', 'type': 'MASK', 'links': []}], 'properties': {'Node name for S&R': 'LoadImage', 'cnr_id': 'comfy-core', 'ver': '0.5.1'}, 'widgets_values': ['beach.jpg', 'image']}, {'id': 5, 'type': 'SharpPredict', 'pos': [181.546875, -251.55078125], 'size': [298.890625, 212], 'flags': {}, 'order': 2, 'mode': 0, 'inputs': [{'name': 'model', 'type': 'SHARP_MODEL_CONFIG', 'link': 6}, {'name': 'image', 'type': 'IMAGE', 'link': 7}, {'name': 'extrinsics', 'shape': 7, 'type': 'EXTRINSICS', 'link': None}, {'name': 'intrinsics', 'shape': 7, 'type': 'INTRINSICS', 'link': None}], 'outputs': [{'name': 'ply_path', 'type': 'STRING', 'links': [8]}, {'name': 'extrinsics', 'type': 'EXTRINSICS', 'links': [9]}, {'name': 'intrinsics', 'type': 'INTRINSICS', 'links': [10]}], 'properties': {'Node name for S&R': 'SharpPredict', 'aux_id': 'PozzettiAndrea/ComfyUI-Sharp', 'ver': 'aa98b213e3d0770477bbf46046094c5cb8ff6052'}, 'widgets_values': [30, 'sharp']}, {'id': 4, 'type': 'GeomPackPreviewGaussian', 'pos': [629.92578125, -322.046875], 'size': [512, 658], 'flags': {}, 'order': 3, 'mode': 0, 'inputs': [{'name': 'ply_path', 'type': 'STRING', 'link': 8}, {'name': 'extrinsics', 'shape': 7, 'type': 'EXTRINSICS', 'link': 9}, {'name': 'intrinsics', 'shape': 7, 'type': 'INTRINSICS', 'link': 10}], 'outputs': [], 'properties': {'Node name for S&R': 'GeomPackPreviewGaussian', 'aux_id': 'PozzettiAndrea/ComfyUI-GeometryPack', 'ver': 'b7df285fc5b3fef7aad434d8b6e8698efed6358b', 'cnr_id': 'comfyui-geometrypack'}, 'widgets_values': ['']}], 'links': [[6, 2, 0, 5, 0, 'SHARP_MODEL'], [7, 1, 0, 5, 1, 'IMAGE'], [8, 5, 0, 4, 0, 'STRING'], [9, 5, 1, 4, 1, 'EXTRINSICS'], [10, 5, 2, 4, 2, 'INTRINSICS']], 'groups': [], 'config': {}, 'extra': {'ds': {'scale': 1, 'offset': [300.79296875, 604.72265625]}, 'workflowRendererVersion': 'LG', 'frontendVersion': '1.43.18'}, 'version': 0.4}}"]}, 'current_outputs': ['2', '4', '1', '5'], 'timestamp': 1778659457544}
-    Details: Workflow: C:\Users\RUNNER~1\AppData\Local\Temp\comfy-test-run-50ml6u2s\ComfyUI-Sharp\workflows\sharp_basic.json
+    Error: Workflow execution failed: {'prompt_id': 'dbfa75e8-edb0-438e-a8bb-39ec68a69d59', 'node_id': '5', 'node_type': 'SharpPredict', 'executed': ['2', '1'], 'exception_message': 'No module named \'transformers\'\n\nWorker traceback:\nTraceback (most recent call last):\n  File "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\comfyui_pvenv_673nc73q\\persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy_api\\latest\\_io.py", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n  File "C:\\Users\\runneradmin\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\lib\\site-packages\\torch\\utils\\_contextlib.py", line 124, in decorate_context\n    return func(*args, **kwargs)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\custom_nodes\\ComfyUI-Sharp\\nodes\\predict.py", line 111, in execute\n    patcher = _load_sharp_model(model)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\custom_nodes\\ComfyUI-Sharp\\nodes\\load_model.py", line 75, in _load_sharp_model\n    import comfy.model_patcher\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\model_patcher.py", line 32, in <module>\n    import comfy.hooks\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\hooks.py", line 14, in <module>\n    import comfy.lora\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\lora.py", line 23, in <module>\n    import comfy.model_base\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\model_base.py", line 61, in <module>\n    import comfy.ldm.hidream_o1.model\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\ldm\\hidream_o1\\model.py", line 20, in <module>\n    from comfy.text_encoders.qwen35 import Qwen35VisionModel\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\text_encoders\\qwen35.py", line 10, in <module>\n    from comfy import sd1_clip\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\comfy\\sd1_clip.py", line 3, in <module>\n    from transformers import CLIPTokenizer\nModuleNotFoundError: No module named \'transformers\'\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\execution.py", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\execution.py", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\execution.py", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\ComfyUI\\execution.py", line 297, in process_inputs\n    result = f(**inputs)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\.venv\\lib\\site-packages\\comfy_env\\isolation\\metadata.py", line 556, in proxy\n    result = worker.call_method(\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-0800\\.venv\\lib\\site-packages\\comfy_env\\isolation\\workers\\subprocess.py", line 674, in call_method\n    raise WorkerError(\n'], 'current_inputs': {'focal_length_mm': [30], 'output_prefix': ['sharp'], 'model': ["{'model_path': 'D:\\\\a\\\\comfy-gpu-ci\\\\comfy-gpu-ci\\\\test_workspaces\\\\Sharp-0800\\\\ComfyUI\\\\models\\\\sharp\\\\sharp_2572gikvuh.pt', 'precision': 'auto', 'dtype': 'fp32'}"], 'image': ['tensor([[[[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         [[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         [[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         ...,\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5098, 0.4627, 0.4235],\n          [0.5098, 0.4627, 0.4235],\n          [0.5098, 0.4627, 0.4235]],\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5059, 0.4588, 0.4392],\n          [0.5059, 0.4627, 0.4314],\n          [0.5059, 0.4627, 0.4314]],\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5059, 0.4588, 0.4392],\n          [0.5059, 0.4627, 0.4314],\n          [0.5059, 0.4627, 0.4314]]]])'], 'prompt': ["{'1': {'inputs': {'image': 'beach.jpg'}, 'class_type': 'LoadImage', '_meta': {'title': 'Load Image'}, 'is_changed': ['ee4f94632a5ec7038826e875829a62a81dc2a9b85ed59440f2eaa37b3704fa24']}, '2': {'inputs': {'precision': 'auto'}, 'class_type': 'LoadSharpModel', '_meta': {'title': '(Down)Load SHARP Model'}}, '4': {'inputs': {'preview_gaussian': '', 'ply_path': ['5', 0], 'extrinsics': ['5', 1], 'intrinsics': ['5', 2]}, 'class_type': 'GeomPackPreviewGaussian', '_meta': {'title': 'Preview Gaussian'}}, '5': {'inputs': {'focal_length_mm': 30.0, 'output_prefix': 'sharp', 'model': ['2', 0], 'image': ['1', 0]}, 'class_type': 'SharpPredict', '_meta': {'title': 'SHARP Predict (Image to PLY)'}}}"], 'extra_pnginfo': ["{'workflow': {'id': 'sharp-basic-workflow', 'revision': 0, 'last_node_id': 5, 'last_link_id': 10, 'nodes': [{'id': 2, 'type': 'LoadSharpModel', 'pos': [-150, -400], 'size': [270, 106.65625], 'flags': {}, 'order': 0, 'mode': 0, 'inputs': [], 'outputs': [{'name': 'model_config', 'type': 'SHARP_MODEL_CONFIG', 'links': [6]}], 'properties': {'Node name for S&R': 'LoadSharpModel', 'aux_id': 'PozzettiAndrea/ComfyUI-Sharp', 'ver': '9f1b9c726e2cfc0118866c3df783e7f6bc895226'}, 'widgets_values': ['auto']}, {'id': 1, 'type': 'LoadImage', 'pos': [-150, -100], 'size': [274, 340], 'flags': {}, 'order': 1, 'mode': 0, 'inputs': [], 'outputs': [{'name': 'IMAGE', 'type': 'IMAGE', 'links': [7]}, {'name': 'MASK', 'type': 'MASK', 'links': []}], 'properties': {'Node name for S&R': 'LoadImage', 'cnr_id': 'comfy-core', 'ver': '0.5.1'}, 'widgets_values': ['beach.jpg', 'image']}, {'id': 5, 'type': 'SharpPredict', 'pos': [181.546875, -251.55078125], 'size': [298.890625, 212], 'flags': {}, 'order': 2, 'mode': 0, 'inputs': [{'name': 'model', 'type': 'SHARP_MODEL_CONFIG', 'link': 6}, {'name': 'image', 'type': 'IMAGE', 'link': 7}, {'name': 'extrinsics', 'shape': 7, 'type': 'EXTRINSICS', 'link': None}, {'name': 'intrinsics', 'shape': 7, 'type': 'INTRINSICS', 'link': None}], 'outputs': [{'name': 'ply_path', 'type': 'STRING', 'links': [8]}, {'name': 'extrinsics', 'type': 'EXTRINSICS', 'links': [9]}, {'name': 'intrinsics', 'type': 'INTRINSICS', 'links': [10]}], 'properties': {'Node name for S&R': 'SharpPredict', 'aux_id': 'PozzettiAndrea/ComfyUI-Sharp', 'ver': 'aa98b213e3d0770477bbf46046094c5cb8ff6052'}, 'widgets_values': [30, 'sharp']}, {'id': 4, 'type': 'GeomPackPreviewGaussian', 'pos': [629.92578125, -322.046875], 'size': [512, 658], 'flags': {}, 'order': 3, 'mode': 0, 'inputs': [{'name': 'ply_path', 'type': 'STRING', 'link': 8}, {'name': 'extrinsics', 'shape': 7, 'type': 'EXTRINSICS', 'link': 9}, {'name': 'intrinsics', 'shape': 7, 'type': 'INTRINSICS', 'link': 10}], 'outputs': [], 'properties': {'Node name for S&R': 'GeomPackPreviewGaussian', 'aux_id': 'PozzettiAndrea/ComfyUI-GeometryPack', 'ver': 'b7df285fc5b3fef7aad434d8b6e8698efed6358b', 'cnr_id': 'comfyui-geometrypack'}, 'widgets_values': ['']}], 'links': [[6, 2, 0, 5, 0, 'SHARP_MODEL'], [7, 1, 0, 5, 1, 'IMAGE'], [8, 5, 0, 4, 0, 'STRING'], [9, 5, 1, 4, 1, 'EXTRINSICS'], [10, 5, 2, 4, 2, 'INTRINSICS']], 'groups': [], 'config': {}, 'extra': {'ds': {'scale': 1, 'offset': [300.79296875, 604.72265625]}, 'workflowRendererVersion': 'LG', 'frontendVersion': '1.43.18'}, 'version': 0.4}}"]}, 'current_outputs': ['4', '2', '5', '1'], 'timestamp': 1778659649707}
+    Details: Workflow: C:\Users\RUNNER~1\AppData\Local\Temp\comfy-test-run-17ziq1kb\ComfyUI-Sharp\workflows\sharp_basic.json
 Node error: SharpPredict
