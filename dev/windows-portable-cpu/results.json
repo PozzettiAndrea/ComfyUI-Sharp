@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-13T08:39:23.747125+00:00",
+  "timestamp": "2026-05-15T05:45:49.180075+00:00",
   "platform": "windows_portable",
   "hardware": {
-    "os": "Windows-10-10.0.26100-SP0",
-    "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
+    "os": "Windows-2025Server-10.0.26100-SP0",
+    "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
   },
-  "commit_hash": "34a5ac7a2dd2e29ba868b685216b596cbb5f4935",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25787132569",
+  "commit_hash": "e63db66b516a4a08a507d157b09d202f7696e080",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25901860224",
   "success": true,
   "summary": {
     "total": 3,
@@ -24,37 +24,37 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 319.36,
+      "duration_seconds": 274.66,
       "error": null,
       "hardware": {
-        "os": "Windows-10-10.0.26100-SP0",
-        "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
+        "os": "Windows-2025Server-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 8.91,
-          "avg": 5.13
+          "peak": 9.07,
+          "avg": 5.12
         },
         "total_ram_gb": 16.0,
-        "samples": 315
+        "samples": 273
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 316.72,
+      "duration_seconds": 269.68,
       "error": null,
       "hardware": {
-        "os": "Windows-10-10.0.26100-SP0",
-        "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
+        "os": "Windows-2025Server-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 8.62,
-          "avg": 5.39
+          "peak": 8.65,
+          "avg": 5.46
         },
         "total_ram_gb": 16.0,
-        "samples": 314
+        "samples": 268
       }
     }
   ]
