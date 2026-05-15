@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-15T07:50:47.127725+00:00",
+  "timestamp": "2026-05-15T11:43:26.015450+00:00",
   "platform": "windows",
   "hardware": {
-    "os": "Windows-2025Server-10.0.26100-SP0",
-    "cpu": "Intel64 Family 6 Model 106 Stepping 6, GenuineIntel"
+    "os": "Windows-10-10.0.26100-SP0",
+    "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
   },
-  "commit_hash": "03f1f97c252e89e1ad74e68b5aca94e7e23ddb70",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25906256895",
+  "commit_hash": "164f0e71c084a3e1ce126c069d8849b90a632226",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25915266202",
   "success": true,
   "summary": {
     "total": 3,
@@ -24,37 +24,37 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 326.79,
+      "duration_seconds": 353.54,
       "error": null,
       "hardware": {
-        "os": "Windows-2025Server-10.0.26100-SP0",
-        "cpu": "Intel64 Family 6 Model 106 Stepping 6, GenuineIntel"
+        "os": "Windows-10-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 8.26,
-          "avg": 4.3
+          "peak": 8.18,
+          "avg": 4.09
         },
         "total_ram_gb": 16.0,
-        "samples": 323
+        "samples": 351
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 293.86,
+      "duration_seconds": 299.02,
       "error": null,
       "hardware": {
-        "os": "Windows-2025Server-10.0.26100-SP0",
-        "cpu": "Intel64 Family 6 Model 106 Stepping 6, GenuineIntel"
+        "os": "Windows-10-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 8.51,
-          "avg": 4.72
+          "peak": 8.31,
+          "avg": 4.59
         },
         "total_ram_gb": 16.0,
-        "samples": 291
+        "samples": 297
       }
     }
   ]
