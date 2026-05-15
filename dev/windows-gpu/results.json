@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-13T13:16:26.451857+00:00",
+  "timestamp": "2026-05-15T13:08:48.210043+00:00",
   "platform": "windows",
   "hardware": {
     "os": "Windows-11-10.0.26200-SP0",
     "cpu": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel"
   },
-  "commit_hash": "a957ef25c4804365b05416cedb37265336318884",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25799232204",
+  "commit_hash": "164f0e71c084a3e1ce126c069d8849b90a632226",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25915395518",
   "success": true,
   "summary": {
     "total": 3,
@@ -24,7 +24,7 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 356.07,
+      "duration_seconds": 137.25,
       "error": null,
       "hardware": {
         "os": "Windows-11-10.0.26200-SP0",
@@ -32,17 +32,17 @@
       },
       "resources": {
         "ram": {
-          "peak": 5.76,
-          "avg": 3.22
+          "peak": 5.65,
+          "avg": 4.12
         },
         "total_ram_gb": 31.9,
-        "samples": 351
+        "samples": 127
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 95.83,
+      "duration_seconds": 95.57,
       "error": null,
       "hardware": {
         "os": "Windows-11-10.0.26200-SP0",
@@ -50,8 +50,8 @@
       },
       "resources": {
         "ram": {
-          "peak": 8.36,
-          "avg": 6.98
+          "peak": 5.66,
+          "avg": 2.61
         },
         "total_ram_gb": 31.9,
         "samples": 95
