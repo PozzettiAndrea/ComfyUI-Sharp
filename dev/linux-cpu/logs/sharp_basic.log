@@ -13,21 +13,21 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI]     Inputs: {"image": "beach.jpg"}
   [ComfyUI]   Node 2: LoadSharpModel
   [ComfyUI]   Node 2: LoadSharpModel
-  [ComfyUI]     Inputs: {"precision": "auto"}
-  [ComfyUI]     Inputs: {"precision": "auto"}
-  [ComfyUI]   Node 4: GeomPackPreviewGaussian
-  [ComfyUI]   Node 4: GeomPackPreviewGaussian
-  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
-  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
-  [ComfyUI]   Node 5: SharpPredict
-  [ComfyUI]   Node 5: SharpPredict
-  [ComfyUI]     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
-  [ComfyUI]     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
-  [ComfyUI] Generated prompt_id: 09d14bbe-d559-4d61-9be5-0ec52445baf6
-  [ComfyUI] Generated prompt_id: 09d14bbe-d559-4d61-9be5-0ec52445baf6
-  [ComfyUI] Calling execution.validate_prompt()...
-  [ComfyUI] Calling execution.validate_prompt()...
   Queuing workflow for execution...
+  [ComfyUI]     Inputs: {"precision": "auto"}
+  [ComfyUI]     Inputs: {"precision": "auto"}
+  [ComfyUI]   Node 4: GeomPackPreviewGaussian
+  [ComfyUI]   Node 4: GeomPackPreviewGaussian
+  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
+  [ComfyUI]     Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
+  [ComfyUI]   Node 5: SharpPredict
+  [ComfyUI]   Node 5: SharpPredict
+  [ComfyUI]     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
+  [ComfyUI]     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
+  [ComfyUI] Generated prompt_id: 82f0d847-7df7-41d0-9b87-c3f2c5fa7b92
+  [ComfyUI] Generated prompt_id: 82f0d847-7df7-41d0-9b87-c3f2c5fa7b92
+  [ComfyUI] Calling execution.validate_prompt()...
+  [ComfyUI] Calling execution.validate_prompt()...
   [ComfyUI] Validation result: valid=True
   [ComfyUI] Validation result: valid=True
   [ComfyUI] === Validation PASSED ===
@@ -36,24 +36,24 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] got prompt
   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
-  [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
-  [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
-  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
-  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
   [ComfyUI] [comfy-env] SubprocessWorker: /home/runner/.ce/.pixi/envs/sharp-nodes/bin/python
   [ComfyUI] [comfy-env] SubprocessWorker: /home/runner/.ce/.pixi/envs/sharp-nodes/bin/python
-  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI'}
-  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI'}
+  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI'}
+  [ComfyUI] [comfy-env] env_vars: {'COMFYUI_BASE': '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI'}
+  [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
+  [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
   [ComfyUI] [ComfyUI-Sharp] python: /home/runner/.ce/.pixi/envs/sharp-nodes/bin/python
   [ComfyUI] [ComfyUI-Sharp] python: /home/runner/.ce/.pixi/envs/sharp-nodes/bin/python
-  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp', '/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp']
-  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp', '/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp']
+  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp', '/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp']
+  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp', '/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp']
   [ComfyUI] [SubprocessWorker] is_pixi=True, python=/home/runner/.ce/.pixi/envs/sharp-nodes/bin/python
   [ComfyUI] [SubprocessWorker] is_pixi=True, python=/home/runner/.ce/.pixi/envs/sharp-nodes/bin/python
-  [ComfyUI] [SubprocessWorker] launching cmd=['/home/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/home/runner/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py', 'abstract://comfy_worker_f071d3b5eb5a']...
-  [ComfyUI] [SubprocessWorker] launching cmd=['/home/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/home/runner/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py', 'abstract://comfy_worker_f071d3b5eb5a']...
-  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_f071d3b5eb5a (abstract, no filesystem path)
-  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_f071d3b5eb5a (abstract, no filesystem path)
+  [ComfyUI] [SubprocessWorker] launching cmd=['/home/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/home/runner/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py', 'abstract://comfy_worker_87e185642e0b']...
+  [ComfyUI] [SubprocessWorker] launching cmd=['/home/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/home/runner/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py', 'abstract://comfy_worker_87e185642e0b']...
+  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_87e185642e0b (abstract, no filesystem path)
+  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_87e185642e0b (abstract, no filesystem path)
   [ComfyUI] [worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
   [ComfyUI] [worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
   [ComfyUI] [SubprocessWorker] worker started/confirmed
@@ -68,68 +68,78 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
   [ComfyUI] 
   [ComfyUI] 
-  Frame 2 saved (frame_001.jpg, t=2.3s)
-  [capture-periodic] freeze=2ms shot=131ms unfreeze=3ms saved=True
+  Frame 2 saved (frame_001.jpg, t=2.4s)
+  [capture-periodic] freeze=3ms shot=113ms unfreeze=3ms saved=True
   [ComfyUI] sharp_2572gikvuh.pt:   0%|          | 0.00/2.81G [00:00<?, ?B/s]
   [ComfyUI] sharp_2572gikvuh.pt:   0%|          | 0.00/2.81G [00:00<?, ?B/s]
-  [ComfyUI] sharp_2572gikvuh.pt:   6%|▌         | 158M/2.81G [00:01<00:25, 104MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:   6%|▌         | 158M/2.81G [00:01<00:25, 104MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  10%|█         | 292M/2.81G [00:02<00:21, 116MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  10%|█         | 292M/2.81G [00:02<00:21, 116MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 3 saved (frame_002.jpg, t=4.6s)
+  [capture-periodic] freeze=3ms shot=176ms unfreeze=10ms saved=True
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:02<00:14, 172MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:02<00:14, 172MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  Frame 3 saved (frame_002.jpg, t=4.5s)
-  [capture-periodic] freeze=6ms shot=154ms unfreeze=9ms saved=True
+  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:02<00:18, 135MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:02<00:18, 135MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  15%|█▌        | 427M/2.81G [00:03<00:16, 141MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  15%|█▌        | 427M/2.81G [00:03<00:16, 141MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  18%|█▊        | 494M/2.81G [00:03<00:11, 195MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  18%|█▊        | 494M/2.81G [00:03<00:11, 195MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:03<00:11, 201MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:03<00:11, 201MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:03<00:10, 209MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:03<00:10, 209MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [capture-loop] iter=50 t=6.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=2.5/15.6GB (16%) swap=0.0/3.0GB (0%) cpu=36% browser_rss=0.91GB
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  27%|██▋       | 768M/2.81G [00:03<00:06, 312MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  27%|██▋       | 768M/2.81G [00:03<00:06, 312MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  25%|██▍       | 695M/2.81G [00:03<00:09, 229MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  25%|██▍       | 695M/2.81G [00:03<00:09, 229MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  32%|███▏      | 896M/2.81G [00:04<00:06, 293MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  32%|███▏      | 896M/2.81G [00:04<00:06, 293MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [capture-loop] iter=50 t=6.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=47 ram=2.5/15.6GB (16%) swap=0.0/3.0GB (0%) cpu=37% browser_rss=0.91GB
+  [ComfyUI] sharp_2572gikvuh.pt:  27%|██▋       | 768M/2.81G [00:04<00:08, 241MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  27%|██▋       | 768M/2.81G [00:04<00:08, 241MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  44%|████▍     | 1.23G/2.81G [00:04<00:03, 496MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  44%|████▍     | 1.23G/2.81G [00:04<00:03, 496MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=1
-  Frame 4 saved (frame_003.jpg, t=6.8s)
-  [capture-periodic] freeze=12ms shot=187ms unfreeze=5ms saved=True
+  [ComfyUI] sharp_2572gikvuh.pt:  34%|███▍      | 963M/2.81G [00:04<00:05, 357MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  34%|███▍      | 963M/2.81G [00:04<00:05, 357MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  61%|██████    | 1.70G/2.81G [00:06<00:04, 270MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  61%|██████    | 1.70G/2.81G [00:06<00:04, 270MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  Frame 5 saved (frame_004.jpg, t=9.1s)
-  [capture-periodic] freeze=218ms shot=180ms unfreeze=5ms saved=True
+  [ComfyUI] sharp_2572gikvuh.pt:  37%|███▋      | 1.03G/2.81G [00:04<00:05, 336MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  37%|███▋      | 1.03G/2.81G [00:04<00:05, 336MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt:  82%|████████▏ | 2.30G/2.81G [00:07<00:01, 368MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt:  82%|████████▏ | 2.30G/2.81G [00:07<00:01, 368MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  44%|████▍     | 1.23G/2.81G [00:05<00:04, 363MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  44%|████▍     | 1.23G/2.81G [00:05<00:04, 363MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 4 saved (frame_003.jpg, t=6.9s)
+  [capture-periodic] freeze=3ms shot=302ms unfreeze=27ms saved=True
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:09<00:00, 356MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:09<00:00, 356MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  49%|████▊     | 1.37G/2.81G [00:06<00:06, 237MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  49%|████▊     | 1.37G/2.81G [00:06<00:06, 237MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] sharp_2572gikvuh.pt:  53%|█████▎    | 1.50G/2.81G [00:06<00:04, 290MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  53%|█████▎    | 1.50G/2.81G [00:06<00:04, 290MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  Frame 5 saved (frame_004.jpg, t=9.4s)
+  [capture-periodic] freeze=162ms shot=134ms unfreeze=3ms saved=True
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] sharp_2572gikvuh.pt:  92%|█████████▏| 2.57G/2.81G [00:08<00:00, 490MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt:  92%|█████████▏| 2.57G/2.81G [00:08<00:00, 490MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:08<00:00, 487MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:08<00:00, 487MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
   Frame 6 saved (frame_005.jpg, t=12.1s)
-  [capture-periodic] freeze=2ms shot=123ms unfreeze=2ms saved=True
-  [capture-loop] iter=100 t=14.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=2.2/15.6GB (14%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.91GB
+  [capture-periodic] freeze=2ms shot=127ms unfreeze=3ms saved=True
+  [capture-loop] iter=100 t=14.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=2.3/15.6GB (14%) swap=0.0/3.0GB (0%) cpu=48% browser_rss=0.92GB
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:13<00:00, 209MB/s]
-  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:13<00:00, 209MB/s]
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:12<00:00, 224MB/s]
+  [ComfyUI] sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:12<00:00, 224MB/s]
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [SubprocessWorker] got response: ok
-  [ComfyUI] [comfy-env] LoadSharpModel done (15.45s): result: NodeOutput
-  [ComfyUI] [comfy-env] LoadSharpModel done (15.45s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadSharpModel done (14.53s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadSharpModel done (14.53s): result: NodeOutput
   [ComfyUI] [comfy-env] Running SharpPredict: focal_length_mm: 30.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,1024,1536,3] cpu
   [ComfyUI] [comfy-env] Running SharpPredict: focal_length_mm: 30.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,1024,1536,3] cpu
   [ComfyUI] [SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
@@ -160,585 +170,642 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 1024, 1536, 3])
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: No comfy kitchen, using old apply_rope functions.
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: No comfy kitchen, using old apply_rope functions.
-  Frame 7 saved (frame_006.jpg, t=16.8s)
-  [capture-periodic] freeze=3ms shot=102ms unfreeze=3ms saved=True
-  [capture-loop] iter=150 t=19.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=2.3/15.6GB (15%) swap=0.0/3.0GB (0%) cpu=37% browser_rss=0.92GB
+  Frame 7 saved (frame_006.jpg, t=16.9s)
+  [capture-periodic] freeze=2ms shot=113ms unfreeze=3ms saved=True
+  [capture-loop] iter=150 t=20.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=2.4/15.6GB (15%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.92GB
   [ComfyUI] [SubprocessWorker] callback 'request_vram_budget' from call_id=2
   [ComfyUI] [SubprocessWorker] callback 'request_vram_budget' from call_id=2
-  [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 11.50GB
-  [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 11.50GB
-  [ComfyUI] [comfy-env] VRAM after eviction: 11.50GB
-  [ComfyUI] [comfy-env] VRAM after eviction: 11.50GB
+  [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 11.43GB
+  [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 11.43GB
+  [ComfyUI] [comfy-env] VRAM after eviction: 11.43GB
+  [ComfyUI] [comfy-env] VRAM after eviction: 11.43GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] start: 0.00 GB, input=[1, 3, 1536, 1536]
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] start: 0.00 GB, input=[1, 3, 1536, 1536]
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] patches: 0.00 GB, x0=25 x1=9 x2=1 total=35
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] patches: 0.00 GB, x0=25 x1=9 x2=1 total=35
-  [capture-loop] iter=200 t=25.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.1/15.6GB (33%) swap=0.0/3.0GB (0%) cpu=48% browser_rss=0.84GB
-  [capture-loop] iter=250 t=31.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.84GB
-  [capture-loop] iter=300 t=36.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.1/15.6GB (33%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.84GB
-  [capture-loop] iter=350 t=42.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.1/15.6GB (33%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.84GB
+  [capture-loop] iter=200 t=26.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.2/15.6GB (33%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.84GB
+  [capture-loop] iter=250 t=31.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.2/15.6GB (33%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.84GB
+  [capture-loop] iter=300 t=37.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.2/15.6GB (33%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.84GB
+  [capture-loop] iter=350 t=43.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.2/15.6GB (33%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after first chunk (4/35): 0.00 GB, chunk_size=4
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after first chunk (4/35): 0.00 GB, chunk_size=4
-  [capture-loop] iter=400 t=47.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.2/15.6GB (33%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=450 t=53.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.2/15.6GB (33%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.84GB
-  [capture-loop] iter=500 t=59.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.2/15.6GB (33%) swap=0.0/3.0GB (0%) cpu=42% browser_rss=0.84GB
+  [capture-loop] iter=400 t=48.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.85GB
+  [capture-loop] iter=450 t=54.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=500 t=59.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.4/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.84GB
   [ComfyUI] [worker:ComfyUI-Sharp]
   [ComfyUI] [worker:ComfyUI-Sharp]
   [ComfyUI] === WATCHDOG TICK 1 ===
   [ComfyUI] === WATCHDOG TICK 1 ===
-  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007f208701e6c0 (most recent call first):
-  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007f208701e6c0 (most recent call first):
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 324 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 324 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 607 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 607 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007fbf1b23a6c0 (most recent call first):
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007fbf1b23a6c0 (most recent call first):
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Current thread 0x00007f208801f6c0 (most recent call first):
-  [ComfyUI] Current thread 0x00007f208801f6c0 (most recent call first):
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 52 in _watchdog
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 52 in _watchdog
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 953 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 953 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
+  [ComfyUI] Current thread 0x00007fbf1c23b6c0 (most recent call first):
+  [ComfyUI] Current thread 0x00007fbf1c23b6c0 (most recent call first):
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Thread 0x00007f2088afb740 (most recent call first):
-  [ComfyUI] Thread 0x00007f2088afb740 (most recent call first):
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 134 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 134 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ops.py", line 484 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ops.py", line 484 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 236 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 236 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 309 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 309 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1762 in main
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1762 in main
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1807 in <module>
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1807 in <module>
+  [ComfyUI] Thread 0x00007fbf1cd3d740 (most recent call first):
+  [ComfyUI] Thread 0x00007fbf1cd3d740 (most recent call first):
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy/ops.py", line 484 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy/ops.py", line 484 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 274 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 274 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 310 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 310 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1807 in <module>
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1807 in <module>
   [ComfyUI] 
   [ComfyUI] 
   [ComfyUI] [worker:ComfyUI-Sharp] === END ===
   [ComfyUI] [worker:ComfyUI-Sharp] === END ===
   [ComfyUI] 
   [ComfyUI] 
-  [capture-loop] iter=550 t=64.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.2/15.6GB (33%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.83GB
-  [capture-loop] iter=600 t=70.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.2/15.6GB (33%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.83GB
-  [capture-loop] iter=650 t=75.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.2/15.6GB (33%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.83GB
-  [capture-loop] iter=700 t=81.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.84GB
-  [capture-loop] iter=750 t=87.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.84GB
-  [capture-loop] iter=800 t=92.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.84GB
-  [capture-loop] iter=850 t=98.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.84GB
-  [capture-loop] iter=900 t=103.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.84GB
-  [capture-loop] iter=950 t=109.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.84GB
-  [capture-loop] iter=1000 t=115.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.84GB
+  [capture-loop] iter=550 t=65.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=5.2/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.84GB
+  [capture-loop] iter=600 t=71.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.83GB
+  [capture-loop] iter=650 t=76.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.84GB
+  [capture-loop] iter=700 t=82.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.84GB
+  [capture-loop] iter=750 t=87.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.4/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.84GB
+  [capture-loop] iter=800 t=93.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.4/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.84GB
+  [capture-loop] iter=850 t=99.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.84GB
+  [capture-loop] iter=900 t=104.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
+  [capture-loop] iter=950 t=110.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=5.4/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=1000 t=115.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.85GB
   [ComfyUI] [worker:ComfyUI-Sharp]
   [ComfyUI] [worker:ComfyUI-Sharp]
   [ComfyUI] === WATCHDOG TICK 2 ===
   [ComfyUI] === WATCHDOG TICK 2 ===
-  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007f208701e6c0 (most recent call first):
-  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007f208701e6c0 (most recent call first):
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 324 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 324 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 607 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 607 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007fbf1b23a6c0 (most recent call first):
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007fbf1b23a6c0 (most recent call first):
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Current thread 0x00007f208801f6c0 (most recent call first):
-  [ComfyUI] Current thread 0x00007f208801f6c0 (most recent call first):
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 52 in _watchdog
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 52 in _watchdog
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 953 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 953 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
+  [ComfyUI] Current thread 0x00007fbf1c23b6c0 (most recent call first):
+  [ComfyUI] Current thread 0x00007fbf1c23b6c0 (most recent call first):
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Thread 0x00007f2088afb740 (most recent call first):
-  [ComfyUI] Thread 0x00007f2088afb740 (most recent call first):
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 134 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 134 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ops.py", line 484 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ops.py", line 484 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 274 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 274 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 310 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 310 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1762 in main
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1762 in main
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1807 in <module>
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1807 in <module>
+  [ComfyUI] Thread 0x00007fbf1cd3d740 (most recent call first):
+  [ComfyUI] Thread 0x00007fbf1cd3d740 (most recent call first):
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy/ops.py", line 484 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy/ops.py", line 484 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 232 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 232 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 309 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 309 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1807 in <module>
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1807 in <module>
   [ComfyUI] 
   [ComfyUI] 
   [ComfyUI] [worker:ComfyUI-Sharp] === END ===
   [ComfyUI] [worker:ComfyUI-Sharp] === END ===
   [ComfyUI] 
   [ComfyUI] 
-  [capture-loop] iter=1050 t=120.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
-  [capture-loop] iter=1100 t=126.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
-  [capture-loop] iter=1150 t=131.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
-  [capture-loop] iter=1200 t=137.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.4/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=1250 t=143.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.4/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
-  [capture-loop] iter=1300 t=148.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.4/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
-  [capture-loop] iter=1350 t=154.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.4/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
-  [capture-loop] iter=1400 t=159.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.4/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=1450 t=165.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.4/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
-  [capture-loop] iter=1500 t=171.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.4/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
-  [capture-loop] iter=1550 t=176.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.4/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
+  [capture-loop] iter=1050 t=121.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.85GB
+  [capture-loop] iter=1100 t=127.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.4/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
+  [capture-loop] iter=1150 t=132.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.85GB
+  [capture-loop] iter=1200 t=138.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=1250 t=144.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.85GB
+  [capture-loop] iter=1300 t=149.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.4/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=1350 t=155.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.4/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
+  [capture-loop] iter=1400 t=160.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=1450 t=166.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=1500 t=172.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.4/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.85GB
+  [capture-loop] iter=1550 t=177.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.85GB
   [ComfyUI] [worker:ComfyUI-Sharp]
   [ComfyUI] [worker:ComfyUI-Sharp]
   [ComfyUI] === WATCHDOG TICK 3 ===
   [ComfyUI] === WATCHDOG TICK 3 ===
-  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007f208701e6c0 (most recent call first):
-  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007f208701e6c0 (most recent call first):
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 324 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 324 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 607 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 607 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007fbf1b23a6c0 (most recent call first):
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007fbf1b23a6c0 (most recent call first):
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Current thread 0x00007f208801f6c0 (most recent call first):
-  [ComfyUI] Current thread 0x00007f208801f6c0 (most recent call first):
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 52 in _watchdog
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 52 in _watchdog
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 953 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 953 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
+  [ComfyUI] Current thread 0x00007fbf1c23b6c0 (most recent call first):
+  [ComfyUI] Current thread 0x00007fbf1c23b6c0 (most recent call first):
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Thread 0x00007f2088afb740 (most recent call first):
-  [ComfyUI] Thread 0x00007f2088afb740 (most recent call first):
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ldm/modules/sub_quadratic_attention.py", line 170 in _get_attention_scores_no_kv_chunking
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ldm/modules/sub_quadratic_attention.py", line 170 in _get_attention_scores_no_kv_chunking
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ldm/modules/sub_quadratic_attention.py", line 259 in efficient_dot_product_attention
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ldm/modules/sub_quadratic_attention.py", line 259 in efficient_dot_product_attention
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ldm/modules/attention.py", line 275 in attention_sub_quad
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ldm/modules/attention.py", line 275 in attention_sub_quad
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ldm/modules/attention.py", line 139 in wrapper
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ldm/modules/attention.py", line 139 in wrapper
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 234 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 234 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 309 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 309 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1762 in main
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1762 in main
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1807 in <module>
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1807 in <module>
+  [ComfyUI] Thread 0x00007fbf1cd3d740 (most recent call first):
+  [ComfyUI] Thread 0x00007fbf1cd3d740 (most recent call first):
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy/ops.py", line 484 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy/ops.py", line 484 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 232 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 232 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 309 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 309 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1807 in <module>
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1807 in <module>
   [ComfyUI] 
   [ComfyUI] 
   [ComfyUI] [worker:ComfyUI-Sharp] === END ===
   [ComfyUI] [worker:ComfyUI-Sharp] === END ===
   [ComfyUI] 
   [ComfyUI] 
-  [capture-loop] iter=1600 t=182.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.4/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=1650 t=188.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
-  [capture-loop] iter=1700 t=193.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
-  [capture-loop] iter=1750 t=199.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.4/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=1800 t=204.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=1850 t=210.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=1900 t=216.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.5/15.6GB (36%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=1950 t=221.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
-  [capture-loop] iter=2000 t=227.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.7/15.6GB (36%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
-  [capture-loop] iter=2050 t=232.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
+  [capture-loop] iter=1600 t=183.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=1650 t=189.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.85GB
+  [capture-loop] iter=1700 t=194.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=1750 t=200.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.5/15.6GB (36%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
+  [capture-loop] iter=1800 t=205.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.5/15.6GB (36%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=1850 t=211.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.5/15.6GB (35%) swap=0.0/3.0GB (0%) cpu=47% browser_rss=0.85GB
+  [capture-loop] iter=1900 t=217.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=5.5/15.6GB (36%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
+  [capture-loop] iter=1950 t=222.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.6/15.6GB (36%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=2000 t=228.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.6/15.6GB (36%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
+  [capture-loop] iter=2050 t=234.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.6/15.6GB (36%) swap=0.0/3.0GB (0%) cpu=47% browser_rss=0.85GB
+  [capture-loop] iter=2100 t=239.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.6/15.6GB (36%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] === WATCHDOG TICK 4 ===
+  [ComfyUI] === WATCHDOG TICK 4 ===
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007fbf1b23a6c0 (most recent call first):
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007fbf1b23a6c0 (most recent call first):
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] Current thread 0x00007fbf1c23b6c0 (most recent call first):
+  [ComfyUI] Current thread 0x00007fbf1c23b6c0 (most recent call first):
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] Thread 0x00007fbf1cd3d740 (most recent call first):
+  [ComfyUI] Thread 0x00007fbf1cd3d740 (most recent call first):
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy/ops.py", line 484 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy/ops.py", line 484 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 274 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 274 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 310 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 310 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 685 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1807 in <module>
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1807 in <module>
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
+  [ComfyUI] 
+  [ComfyUI] 
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after all chunks + cache clear: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after all chunks + cache clear: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge intermediates: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge intermediates: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge all: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge all: 0.00 GB
-  [capture-loop] iter=2100 t=238.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.2/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [ComfyUI] [worker:ComfyUI-Sharp]
-  [ComfyUI] [worker:ComfyUI-Sharp]
-  [ComfyUI] === WATCHDOG TICK 4 ===
-  [ComfyUI] === WATCHDOG TICK 4 ===
-  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007f208701e6c0 (most recent call first):
-  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007f208701e6c0 (most recent call first):
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 324 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 324 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 607 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 607 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] Current thread 0x00007f208801f6c0 (most recent call first):
-  [ComfyUI] Current thread 0x00007f208801f6c0 (most recent call first):
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 52 in _watchdog
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 52 in _watchdog
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 953 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 953 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] Thread 0x00007f2088afb740 (most recent call first):
-  [ComfyUI] Thread 0x00007f2088afb740 (most recent call first):
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 134 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 134 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ops.py", line 484 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ops.py", line 484 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 268 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 268 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 310 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 310 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 412 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 729 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 729 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1109 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1762 in main
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1762 in main
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1807 in <module>
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1807 in <module>
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
-  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
-  [ComfyUI] 
-  [ComfyUI] 
+  [capture-loop] iter=2150 t=245.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.3/15.6GB (34%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after image_encoder: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after image_encoder: 0.00 GB
-  [capture-loop] iter=2150 t=244.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.9/15.6GB (38%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after upsample: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after upsample: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after SPN encoder + cache clear: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after SPN encoder + cache clear: 0.00 GB
-  [capture-loop] iter=2200 t=249.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=6.1/15.6GB (39%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=2250 t=255.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=6.3/15.6GB (40%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
-  [capture-loop] iter=2300 t=260.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=6.8/15.6GB (44%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=2350 t=266.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=7.4/15.6GB (48%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
-  [capture-loop] iter=2400 t=272.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=7.4/15.6GB (48%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=2450 t=277.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=7.2/15.6GB (46%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
-  [capture-loop] iter=2500 t=283.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=7.6/15.6GB (48%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
-  [capture-loop] iter=2550 t=289.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=9.2/15.6GB (59%) swap=0.0/3.0GB (0%) cpu=47% browser_rss=0.85GB
-  [capture-loop] iter=2600 t=294.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.2/15.6GB (52%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=2650 t=300.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=9.2/15.6GB (59%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
+  [capture-loop] iter=2200 t=250.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=5.9/15.6GB (38%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
+  [capture-loop] iter=2250 t=256.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=6.2/15.6GB (40%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
+  [capture-loop] iter=2300 t=261.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=6.5/15.6GB (42%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
+  [capture-loop] iter=2350 t=267.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=6.9/15.6GB (44%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=2400 t=273.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=7.2/15.6GB (46%) swap=0.0/3.0GB (0%) cpu=47% browser_rss=0.85GB
+  [capture-loop] iter=2450 t=278.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=7.6/15.6GB (49%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
+  [capture-loop] iter=2500 t=284.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.4/15.6GB (48%) swap=0.0/3.0GB (0%) cpu=42% browser_rss=0.85GB
+  [capture-loop] iter=2550 t=290.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=8.7/15.6GB (56%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=2600 t=295.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=9.3/15.6GB (60%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.85GB
   [ComfyUI] [worker:ComfyUI-Sharp]
   [ComfyUI] [worker:ComfyUI-Sharp]
   [ComfyUI] === WATCHDOG TICK 5 ===
   [ComfyUI] === WATCHDOG TICK 5 ===
-  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007f208701e6c0 (most recent call first):
-  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007f208701e6c0 (most recent call first):
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 324 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 324 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 607 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 607 in wait
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/tqdm/_monitor.py", line 60 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007fbf1b23a6c0 (most recent call first):
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007fbf1b23a6c0 (most recent call first):
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Current thread 0x00007f208801f6c0 (most recent call first):
-  [ComfyUI] Current thread 0x00007f208801f6c0 (most recent call first):
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 52 in _watchdog
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 52 in _watchdog
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 953 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 953 in run
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 1016 in _bootstrap_inner
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/threading.py", line 973 in _bootstrap
+  [ComfyUI] Current thread 0x00007fbf1c23b6c0 (most recent call first):
+  [ComfyUI] Current thread 0x00007fbf1c23b6c0 (most recent call first):
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Thread 0x00007f2088afb740 (most recent call first):
-  [ComfyUI] Thread 0x00007f2088afb740 (most recent call first):
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 548 in _conv_forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 548 in _conv_forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 553 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 553 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ops.py", line 518 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy/ops.py", line 518 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/container.py", line 253 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 766 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 766 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 860 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 860 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 970 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 970 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1118 in forward
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1118 in forward
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
-  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
-  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1762 in main
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1762 in main
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1807 in <module>
-  [ComfyUI]   File "/tmp/comfyui_pvenv_z_mb74_4/persistent_worker.py", line 1807 in <module>
+  [ComfyUI] Thread 0x00007fbf1cd3d740 (most recent call first):
+  [ComfyUI] Thread 0x00007fbf1cd3d740 (most recent call first):
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 548 in _conv_forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 548 in _conv_forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 553 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 553 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy/ops.py", line 518 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy/ops.py", line 518 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/container.py", line 253 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/container.py", line 253 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 766 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 766 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 860 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 860 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 970 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 970 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1118 in forward
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 1118 in forward
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790 in _call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779 in _wrapped_call_impl
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/model.py", line 2006 in encode
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 287 in _predict_image_cached
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1807 in <module>
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1807 in <module>
   [ComfyUI] 
   [ComfyUI] 
   [ComfyUI] [worker:ComfyUI-Sharp] === END ===
   [ComfyUI] [worker:ComfyUI-Sharp] === END ===
   [ComfyUI] 
   [ComfyUI] 
+  [capture-loop] iter=2650 t=301.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=9.1/15.6GB (58%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
+  [capture-loop] iter=2700 t=306.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=9.3/15.6GB (60%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after decoder: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after decoder: 0.00 GB
-  [capture-loop] iter=2700 t=305.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=7.1/15.6GB (46%) swap=0.0/3.0GB (0%) cpu=42% browser_rss=0.85GB
-  [capture-loop] iter=2750 t=311.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=9.0/15.6GB (57%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
+  [capture-loop] iter=2750 t=312.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=7.4/15.6GB (47%) swap=0.0/3.0GB (0%) cpu=43% browser_rss=0.85GB
+  [capture-loop] iter=2800 t=318.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=8.7/15.6GB (56%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.85GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] start: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] start: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after depth_alignment: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after depth_alignment: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after init_model: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after init_model: 0.00 GB
-  [capture-loop] iter=2800 t=317.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=6.6/15.6GB (42%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
-  [capture-loop] iter=2850 t=322.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=7.5/15.6GB (48%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=2900 t=328.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=7.6/15.6GB (49%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=2950 t=333.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.2/15.6GB (46%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=3000 t=339.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=8.4/15.6GB (54%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
-  [capture-loop] iter=3050 t=345.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=7.5/15.6GB (48%) swap=0.0/3.0GB (0%) cpu=42% browser_rss=0.85GB
-  [capture-loop] iter=3100 t=350.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.0/15.6GB (51%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
+  [capture-loop] iter=2850 t=323.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=6.8/15.6GB (44%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
+  [capture-loop] iter=2900 t=329.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=7.6/15.6GB (48%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=2950 t=334.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.4/15.6GB (54%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.85GB
+  [capture-loop] iter=3000 t=340.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=7.8/15.6GB (50%) swap=0.0/3.0GB (0%) cpu=46% browser_rss=0.85GB
+  [capture-loop] iter=3050 t=346.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=8.5/15.6GB (54%) swap=0.0/3.0GB (0%) cpu=44% browser_rss=0.85GB
+  [capture-loop] iter=3100 t=351.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=7.6/15.6GB (48%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after feature_model: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after feature_model: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after prediction_head: 0.00 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after prediction_head: 0.00 GB
-  [capture-loop] iter=3150 t=356.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=6.7/15.6GB (43%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.85GB
+  [capture-loop] iter=3150 t=357.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=7.0/15.6GB (45%) swap=0.0/3.0GB (0%) cpu=49% browser_rss=0.85GB
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] === WATCHDOG TICK 6 ===
+  [ComfyUI] === WATCHDOG TICK 6 ===
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007fbf1b23a6c0 (most recent call first):
+  [ComfyUI] [worker:ComfyUI-Sharp] Thread 0x00007fbf1b23a6c0 (most recent call first):
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 359 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 655 in wait
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/tqdm/_monitor.py", line 60 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] Current thread 0x00007fbf1c23b6c0 (most recent call first):
+  [ComfyUI] Current thread 0x00007fbf1c23b6c0 (most recent call first):
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1012 in run
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1075 in _bootstrap_inner
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/threading.py", line 1032 in _bootstrap
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] Thread 0x00007fbf1cd3d740 (most recent call first):
+  [ComfyUI] Thread 0x00007fbf1cd3d740 (most recent call first):
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/gaussians.py", line 156 in decompose_covariance_matrices
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/gaussians.py", line 156 in decompose_covariance_matrices
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/gaussians.py", line 122 in apply_transform
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/gaussians.py", line 122 in apply_transform
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/gaussians.py", line 96 in unproject_gaussians
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/sharp/gaussians.py", line 96 in unproject_gaussians
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 335 in _predict_image_cached
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 335 in _predict_image_cached
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/predict.py", line 184 in execute
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/home/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/comfy_api/latest/_io.py", line 1833 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1807 in <module>
+  [ComfyUI]   File "/tmp/comfyui_pvenv_x3quatkx/persistent_worker.py", line 1807 in <module>
+  [ComfyUI] 
+  [ComfyUI] 
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
+  [ComfyUI] 
+  [ComfyUI] 
   [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=2
   [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=2
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [SubprocessWorker] got response: ok
-  [ComfyUI] [comfy-env] SharpPredict done (341.41s): result: NodeOutput
-  [ComfyUI] [comfy-env] SharpPredict done (341.41s): result: NodeOutput
-  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspa..., extrinsics: list[4], intrinsics: list[3]
-  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspa..., extrinsics: list[4], intrinsics: list[3]
+  [ComfyUI] [comfy-env] SharpPredict done (346.65s): result: NodeOutput
+  [ComfyUI] [comfy-env] SharpPredict done (346.65s): result: NodeOutput
   [ComfyUI] [comfy-env] SubprocessWorker: /home/runner/.ce/.pixi/envs/geometrypack-nodes/bin/python
   [ComfyUI] [comfy-env] SubprocessWorker: /home/runner/.ce/.pixi/envs/geometrypack-nodes/bin/python
+  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspa..., extrinsics: list[4], intrinsics: list[3]
+  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspa..., extrinsics: list[4], intrinsics: list[3]
+  [ComfyUI] [comfy-env] env_vars: {'KMP_DUPLICATE_LIB_OK': 'TRUE', 'OMP_NUM_THREADS': '1', 'COMFYUI_BASE': '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI'}
+  [ComfyUI] [comfy-env] env_vars: {'KMP_DUPLICATE_LIB_OK': 'TRUE', 'OMP_NUM_THREADS': '1', 'COMFYUI_BASE': '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI'}
   [ComfyUI] [SubprocessWorker] call_method: nodes.visualization.preview_gaussian.PreviewGaussianNode.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] call_method: nodes.visualization.preview_gaussian.PreviewGaussianNode.EXECUTE_NORMALIZED
-  [ComfyUI] [comfy-env] env_vars: {'KMP_DUPLICATE_LIB_OK': 'TRUE', 'OMP_NUM_THREADS': '1', 'COMFYUI_BASE': '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI'}
-  [ComfyUI] [comfy-env] env_vars: {'KMP_DUPLICATE_LIB_OK': 'TRUE', 'OMP_NUM_THREADS': '1', 'COMFYUI_BASE': '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI'}
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
   [ComfyUI] [ComfyUI-GeometryPack] python: /home/runner/.ce/.pixi/envs/geometrypack-nodes/bin/python
   [ComfyUI] [ComfyUI-GeometryPack] python: /home/runner/.ce/.pixi/envs/geometrypack-nodes/bin/python
-  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-GeometryPack', '/home/runner/.ce/.pixi/envs/geometrypack-nodes/lib/python3.10/site-packages', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-GeometryPack']
-  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-GeometryPack', '/home/runner/.ce/.pixi/envs/geometrypack-nodes/lib/python3.10/site-packages', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-GeometryPack']
+  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-GeometryPack', '/home/runner/.ce/.pixi/envs/geometrypack-nodes/lib/python3.12/site-packages', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-GeometryPack']
+  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-GeometryPack', '/home/runner/.ce/.pixi/envs/geometrypack-nodes/lib/python3.12/site-packages', '/home/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0734/ComfyUI/custom_nodes/ComfyUI-GeometryPack']
   [ComfyUI] [SubprocessWorker] is_pixi=True, python=/home/runner/.ce/.pixi/envs/geometrypack-nodes/bin/python
   [ComfyUI] [SubprocessWorker] is_pixi=True, python=/home/runner/.ce/.pixi/envs/geometrypack-nodes/bin/python
-  [ComfyUI] [SubprocessWorker] launching cmd=['/home/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/home/runner/.ce/pixi.toml', '-e', 'geometrypack-nodes', 'python', '/tmp/comfyui_pvenv_58_zzk04/persistent_worker.py', 'abstract://comfy_worker_ccdca7e0931b']...
-  [ComfyUI] [SubprocessWorker] launching cmd=['/home/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/home/runner/.ce/pixi.toml', '-e', 'geometrypack-nodes', 'python', '/tmp/comfyui_pvenv_58_zzk04/persistent_worker.py', 'abstract://comfy_worker_ccdca7e0931b']...
-  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_ccdca7e0931b (abstract, no filesystem path)
-  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_ccdca7e0931b (abstract, no filesystem path)
-  Frame 8 saved (frame_007.jpg, t=357.6s)
-  [capture-periodic] freeze=2ms shot=105ms unfreeze=3ms saved=True
+  [ComfyUI] [SubprocessWorker] launching cmd=['/home/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/home/runner/.ce/pixi.toml', '-e', 'geometrypack-nodes', 'python', '/tmp/comfyui_pvenv_tjsogave/persistent_worker.py', 'abstract://comfy_worker_89b0b4fa3e21']...
+  [ComfyUI] [SubprocessWorker] launching cmd=['/home/runner/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/home/runner/.ce/pixi.toml', '-e', 'geometrypack-nodes', 'python', '/tmp/comfyui_pvenv_tjsogave/persistent_worker.py', 'abstract://comfy_worker_89b0b4fa3e21']...
+  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_89b0b4fa3e21 (abstract, no filesystem path)
+  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_89b0b4fa3e21 (abstract, no filesystem path)
+  Frame 8 saved (frame_007.jpg, t=361.5s)
+  [capture-periodic] freeze=3ms shot=111ms unfreeze=3ms saved=True
+  [capture-loop] iter=3200 t=363.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=6.8/15.6GB (43%) swap=0.0/3.0GB (0%) cpu=45% browser_rss=0.86GB
   [ComfyUI] [worker:ComfyUI-GeometryPack] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
   [ComfyUI] [worker:ComfyUI-GeometryPack] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
   [ComfyUI] [SubprocessWorker] worker started/confirmed
@@ -751,31 +818,29 @@ Capturing execution frames: sharp_basic.json
   [ComfyUI] [SubprocessWorker] sending request via socket...
   [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
   [ComfyUI] [SubprocessWorker] call_id=1 sending call_method
-  [ComfyUI] Failed to open dir (No such file or directory): /run/user/1001/gvfs/
-  [ComfyUI] Failed to open dir (No such file or directory): /run/user/1001/gvfs/
-  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778822776819.ply (63.00 MB)
-  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778822776819.ply (63.00 MB)
+  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778830620136.ply (63.00 MB)
+  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778830620136.ply (63.00 MB)
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [SubprocessWorker] got response: ok
-  [ComfyUI] [comfy-env] GeomPackPreviewGaussian done (2.58s): result: NodeOutput
-  [ComfyUI] [comfy-env] GeomPackPreviewGaussian done (2.58s): result: NodeOutput
-  [ComfyUI] Prompt executed in 359.50 seconds
-  [ComfyUI] Prompt executed in 359.50 seconds
+  [ComfyUI] [comfy-env] GeomPackPreviewGaussian done (3.02s): result: NodeOutput
+  [ComfyUI] [comfy-env] GeomPackPreviewGaussian done (3.02s): result: NodeOutput
+  [ComfyUI] Prompt executed in 364.24 seconds
+  [ComfyUI] Prompt executed in 364.24 seconds
   Node executed (1 total), capturing...
-  Frame 9 saved (frame_008.jpg, t=360.2s)
-  [capture-node] freeze=936ms shot=302ms unfreeze=0ms saved=True
-  Execution complete (t=360.2s)
+  Frame 9 saved (frame_008.jpg, t=364.7s)
+  [capture-node] freeze=3ms shot=163ms unfreeze=12ms saved=True
+  Execution complete (t=366.0s)
   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
   [3d-wait] Phase 1 done in 0.0s
   [3d-wait] Phase 2: iframes=1
   [3d-wait] iframe viewer_ready=True (matched 1 console logs)
   [3d-wait] Unfrozen in 0.002s, rendering for 5s...
   [3d-wait] JS halted via CDP after 10.4s
-  [3d-wait] Re-frozen in 41.3s
-  [3d-wait] Total 3D wait: 41.3s
-  Captured 9 unique frames over 402.82s
+  [3d-wait] Re-frozen in 41.0s
+  [3d-wait] Total 3D wait: 41.1s
+  Captured 9 unique frames over 407.24s
   [debug] iframes: 1
-  [debug]   iframe[0]: src=http://127.0.0.1:41880/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=1536x1024, rafFrozen=True
+  [debug]   iframe[0]: src=http://127.0.0.1:41898/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=1536x1024, rafFrozen=True
   [timing] trigger_3d_previews: 0.0s
   Saved high-quality screenshot: sharp_basic_executed.png
   [timing] final_screenshot: 0.3s
