@@ -8,8 +8,10 @@
 [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
 [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
 [Console-warning] WARNING: Multiple instances of Three.js being imported.
-[Console-log] [VTK Bundle] GLTFImporter included in bundle
-[Console-log] [GeomPack Multi JS] Loading mesh_preview_multi.js extension
+[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension
+[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension...
+[Console-log] [CompareSMPLBVH] Extension registered: comfy3d.comparesmplbvh
+[Console-log] [GeomPack Gaussian] Loading extension...
 [Console-log] [FBX Preview] Auto-registering for all known FBX preview node types...
 [Console-log] [UniRig] Loading FBX mesh preview extension...
 [Console-log] [UniRig] Detected extension folder: ComfyUI-GeometryPack
@@ -23,61 +25,25 @@
 [Console-log] [MotionCapture] Loading FBX mesh preview extension...
 [Console-log] [MotionCapture] Detected extension folder: ComfyUI-GeometryPack
 [Console-log] [MotionCapture] FBX mesh preview extension registered
-[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension
-[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension...
-[Console-log] [CompareSMPLBVH] Extension registered: comfy3d.comparesmplbvh
-[Console-log] [GeomPack Gaussian] Loading extension...
-[Console-log] [BVHViewer] Loading BVH Viewer extension
-[Console-log] [BVHViewer] Loading BVH viewer extension...
-[Console-log] [BVHViewer] Extension registered: comfy3d.bvhviewer
+[Console-log] [UniRig Debug] Loading FBX mesh preview extension...
+[Console-log] [UniRig Debug] Detected extension folder: ComfyUI-GeometryPack
+[Console-log] [UniRig Debug] FBX mesh preview extension registered
 [Console-log] [GeomPack] Loading VTK.js textured mesh preview extension...
 [Console-log] [GeomPack] VTK.js textured mesh preview extension registered
-[Console-log] [GeomPack] Loading mesh preview extension...
-[Console-log] [GeomPack] Mesh preview extension registered
-[Console-log] [GeomPack] Loading UV mesh preview extension...
-[Console-log] [GeomPack] UV mesh preview extension registered
 [Console-log] [UniRig Compare] Loading compare skeleton widget...
 [Console-log] [UniRig Compare] Detected extension folder: ComfyUI-GeometryPack
 [Console-log] [UniRig Compare] Compare skeleton widget registered
 [Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension
 [Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension...
 [Console-log] [FBXAnimationViewer] Extension registered: comfy3d.fbxanimationviewer
-[Console-log] [UniRig Debug] Loading FBX mesh preview extension...
-[Console-log] [UniRig Debug] Detected extension folder: ComfyUI-GeometryPack
-[Console-log] [UniRig Debug] FBX mesh preview extension registered
+[Console-log] [GeomPack] Loading UV mesh preview extension...
+[Console-log] [GeomPack] UV mesh preview extension registered
+[Console-log] [GeomPack] Loading mesh preview extension...
+[Console-log] [GeomPack] Mesh preview extension registered
+[Console-log] [BVHViewer] Loading BVH Viewer extension
+[Console-log] [BVHViewer] Loading BVH viewer extension...
+[Console-log] [BVHViewer] Extension registered: comfy3d.bvhviewer
+[Console-log] [GeomPack Multi JS] Loading mesh_preview_multi.js extension
+[Console-log] [VTK Bundle] GLTFImporter included in bundle
 [Console-warning] [MaskEditor] ComfyApp.open_maskeditor is deprecated. Plugins should migrate to using the command system or direct node context menu integration.
-[Console-log] [GeomPack] Registering Preview Mesh node
-[Console-log] [GeomPack] Registering Preview Mesh UV node
-[Console-log] [GeomPack Gaussian] Registering Preview Gaussian node
-[Console-log] [GaussianViewer] Initialized successfully
-[Console-log] [GaussianViewer] Ready - waiting for LOAD_MESH message
-[Console-log] [GaussianViewer] Initialized successfully
-[Console-log] [GaussianViewer] Ready - waiting for LOAD_MESH message
-[Console-log] [comfy-test] graphToPrompt: 4 nodes, missing class_type: [], sample: {"inputs":{"precision":"auto"},"class_type":"LoadSharpModel","_meta":{"title":"(Down)Load SHARP Model"}}
-[Console-log] [GeomPack Gaussian] onExecuted called with: {ply_file: Array(1), filename: Array(1), file_size_mb: Array(1), extrinsics: Array(1), intrinsics: Array(1)}
-[Console-log] [GeomPack Gaussian] Resized node to: 512 x 401 (aspect ratio: 1.50 )
-[Console-log] [GaussianViewer] Received LOAD_MESH_URL: /view?filename=sharp_1778660689353.ply&type=output&subfolder=
-[Console-log] [GaussianViewer] Pre-calculated scale compensation: 62.55 x
-[Console-log] [GaussianViewer] Loading from URL: /view?filename=sharp_1778660689353.ply&type=output&subfolder=
-[Console-log] [GaussianViewer] Scene bounds center: 0.13648128509521484 -0.7381453514099121 5.254858911037445
-[Console-log] [GaussianViewer] Scene bounds size: 8.46774959564209 4.465202331542969 8.500492215156555
-[Console-log] [GaussianViewer] Applied scale compensation: 62.55 x, 1179648 gaussians
-[Console-log] [GaussianViewer] Setting camera from extrinsics/intrinsics
-[Console-log] [GaussianViewer] Extrinsics: [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]
-[Console-log] [GaussianViewer] Intrinsics: [[1687.6932621209776,0,1520],[0,1687.6932621209776,1011],[0,0,1]]
-[Console-log] [GaussianViewer] Computed camera position from extrinsics: 0 0 0
-[Console-log] [GaussianViewer] Intrinsics: fx= 1687.6932621209776 fy= 1687.6932621209776 cx= 1520 cy= 1011
-[Console-log] [GaussianViewer] Image dimensions (from intrinsics): 3040 x 2022
-[Console-log] [GaussianViewer] Locking resolution to native: 3040x2022
-[Console-log] [GaussianViewer] Native resolution: 3040 x 2022
-[Console-log] [GaussianViewer] Container size: 486 x 197
-[Console-log] [GaussianViewer] Gaussian scale compensation (with 3x boost): 18.77 x
-[Console-log] [GaussianViewer] Calculated FOV: 61.84680192071069 degrees
-[Console-log] [GaussianViewer] Target Z distance: 1.6693306252433013
-[Console-log] [GaussianViewer] Scene center: 0.13648128509521484 0.7381453514099121 5.254858911037445
-[Console-log] [GaussianViewer] Closest point Z: 1.0
-[Console-log] [GaussianViewer] Orbit center Z: 1.5 (closest + 50%)
-[Console-log] [GaussianViewer] Camera set to position: 0 0 0
-[Console-log] [GaussianViewer] Looking at target: 0 0 5.254858911037445
-[Console-log] [GaussianViewer] This should match the original input image view
-[Console-log] [GaussianViewer] Loaded successfully from URL
+[Console-log] [comfy-test] graphToPrompt: 4 nodes, missing class_type: [2,7,8,9], sample: {"inputs":{"UNKNOWN":""},"_meta":{}}

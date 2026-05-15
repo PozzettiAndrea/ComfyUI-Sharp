@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-05-13T08:27:12.264570+00:00",
+  "timestamp": "2026-05-15T05:21:42.405701+00:00",
   "platform": "macos",
   "hardware": {
-    "os": "macOS-15.7.4-arm64-arm-64bit",
+    "os": "macOS-15.7.5-arm64-arm-64bit",
     "cpu": "arm"
   },
-  "commit_hash": "34a5ac7a2dd2e29ba868b685216b596cbb5f4935",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25787133871",
-  "success": true,
+  "commit_hash": "e63db66b516a4a08a507d157b09d202f7696e080",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25901702155",
+  "success": false,
   "summary": {
     "total": 3,
-    "passed": 2,
-    "failed": 0
+    "passed": 0,
+    "failed": 2
   },
   "workflows": [
     {
@@ -23,38 +23,38 @@
     },
     {
       "name": "sharp_basic",
-      "status": "pass",
-      "duration_seconds": 205.85,
-      "error": null,
+      "status": "fail",
+      "duration_seconds": 7.7,
+      "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,4,5], sample: {\"inputs\":{\"image\":\"beach.jpg\"},\"class_type\":\"LoadImage\",\"_meta\":{\"title\":\"Load Image\"}}",
       "hardware": {
-        "os": "macOS-15.7.4-arm64-arm-64bit",
+        "os": "macOS-15.7.5-arm64-arm-64bit",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 2.67,
+          "peak": 0.5,
           "avg": 0.49
         },
         "total_ram_gb": 7.0,
-        "samples": 185
+        "samples": 7
       }
     },
     {
       "name": "sharp_exif",
-      "status": "pass",
-      "duration_seconds": 174.76,
-      "error": null,
+      "status": "fail",
+      "duration_seconds": 5.5,
+      "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,7,8,9], sample: {\"inputs\":{\"UNKNOWN\":\"\"},\"_meta\":{}}",
       "hardware": {
-        "os": "macOS-15.7.4-arm64-arm-64bit",
+        "os": "macOS-15.7.5-arm64-arm-64bit",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 2.28,
-          "avg": 0.33
+          "peak": 0.49,
+          "avg": 0.48
         },
         "total_ram_gb": 7.0,
-        "samples": 155
+        "samples": 6
       }
     }
   ]
