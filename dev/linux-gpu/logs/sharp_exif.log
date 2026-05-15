@@ -7,9 +7,9 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] Received JSON with keys: ['prompt']
   [ComfyUI] Prompt has 4 nodes
   [ComfyUI] Prompt has 4 nodes
+  [ComfyUI]   Node 2: LoadSharpModel
+  [ComfyUI]   Node 2: LoadSharpModel
   Queuing workflow for execution...
-  [ComfyUI]   Node 2: LoadSharpModel
-  [ComfyUI]   Node 2: LoadSharpModel
   [ComfyUI]     Inputs: {"precision": "auto"}
   [ComfyUI]     Inputs: {"precision": "auto"}
   [ComfyUI]   Node 7: SharpPredict
@@ -24,8 +24,8 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI]   Node 9: LoadImageWithExif
   [ComfyUI]     Inputs: {"image": "eth3d.png", "default_focal_mm": 30}
   [ComfyUI]     Inputs: {"image": "eth3d.png", "default_focal_mm": 30}
-  [ComfyUI] Generated prompt_id: 4ff9a552-2388-4ace-9fa1-e91ac5aa313b
-  [ComfyUI] Generated prompt_id: 4ff9a552-2388-4ace-9fa1-e91ac5aa313b
+  [ComfyUI] Generated prompt_id: e3867c75-b19d-4909-9d0c-7ed444d55809
+  [ComfyUI] Generated prompt_id: e3867c75-b19d-4909-9d0c-7ed444d55809
   [ComfyUI] Calling execution.validate_prompt()...
   [ComfyUI] Calling execution.validate_prompt()...
   [ComfyUI] Validation result: valid=True
@@ -36,8 +36,8 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] got prompt
   [ComfyUI] [comfy-env] Running LoadImageWithExif: image: 'eth3d.png', default_focal_mm: 30.0
   [ComfyUI] [comfy-env] Running LoadImageWithExif: image: 'eth3d.png', default_focal_mm: 30.0
-  [ComfyUI] [VRAM] Before LoadImageWithExif: 4724 / 7703 MB
-  [ComfyUI] [VRAM] Before LoadImageWithExif: 4724 / 7703 MB
+  [ComfyUI] [VRAM] Before LoadImageWithExif: 5472 / 7672 MB
+  [ComfyUI] [VRAM] Before LoadImageWithExif: 5472 / 7672 MB
   [ComfyUI] [SubprocessWorker] call_method: nodes.load_image_exif.LoadImageWithExif.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] call_method: nodes.load_image_exif.LoadImageWithExif.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
@@ -50,14 +50,14 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [ComfyUI-Sharp] Socket unhealthy, restarting worker...
   [ComfyUI] [ComfyUI-Sharp] python: /root/.ce/.pixi/envs/sharp-nodes/bin/python
   [ComfyUI] [ComfyUI-Sharp] python: /root/.ce/.pixi/envs/sharp-nodes/bin/python
-  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/workspaces/Sharp-1238/ComfyUI', '/workspaces/Sharp-1238/ComfyUI/custom_nodes/ComfyUI-Sharp', '/root/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages', '/workspaces/Sharp-1238/ComfyUI/custom_nodes/ComfyUI-Sharp']
-  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/workspaces/Sharp-1238/ComfyUI', '/workspaces/Sharp-1238/ComfyUI/custom_nodes/ComfyUI-Sharp', '/root/.ce/.pixi/envs/sharp-nodes/lib/python3.12/site-packages', '/workspaces/Sharp-1238/ComfyUI/custom_nodes/ComfyUI-Sharp']
+  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/workspaces/Sharp-1205/ComfyUI', '/workspaces/Sharp-1205/ComfyUI/custom_nodes/ComfyUI-Sharp', '/root/.ce/.pixi/envs/sharp-nodes/lib/python3.13/site-packages', '/workspaces/Sharp-1205/ComfyUI/custom_nodes/ComfyUI-Sharp']
+  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/workspaces/Sharp-1205/ComfyUI', '/workspaces/Sharp-1205/ComfyUI/custom_nodes/ComfyUI-Sharp', '/root/.ce/.pixi/envs/sharp-nodes/lib/python3.13/site-packages', '/workspaces/Sharp-1205/ComfyUI/custom_nodes/ComfyUI-Sharp']
   [ComfyUI] [SubprocessWorker] is_pixi=True, python=/root/.ce/.pixi/envs/sharp-nodes/bin/python
   [ComfyUI] [SubprocessWorker] is_pixi=True, python=/root/.ce/.pixi/envs/sharp-nodes/bin/python
-  [ComfyUI] [SubprocessWorker] launching cmd=['/root/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/root/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/tmp/comfyui_pvenv_15lzwq7z/persistent_worker.py', 'abstract://comfy_worker_6e889c11e2e6']...
-  [ComfyUI] [SubprocessWorker] launching cmd=['/root/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/root/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/tmp/comfyui_pvenv_15lzwq7z/persistent_worker.py', 'abstract://comfy_worker_6e889c11e2e6']...
-  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_6e889c11e2e6 (abstract, no filesystem path)
-  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_6e889c11e2e6 (abstract, no filesystem path)
+  [ComfyUI] [SubprocessWorker] launching cmd=['/root/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/root/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/tmp/comfyui_pvenv_ewmydu2j/persistent_worker.py', 'abstract://comfy_worker_7d9606e39389']...
+  [ComfyUI] [SubprocessWorker] launching cmd=['/root/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/root/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/tmp/comfyui_pvenv_ewmydu2j/persistent_worker.py', 'abstract://comfy_worker_7d9606e39389']...
+  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_7d9606e39389 (abstract, no filesystem path)
+  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_7d9606e39389 (abstract, no filesystem path)
   [ComfyUI] [worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
   [ComfyUI] [worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
   [ComfyUI] [SubprocessWorker] worker started/confirmed
@@ -74,12 +74,12 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [comfy-env] LoadImageWithExif done (2.12s): result: NodeOutput
   [ComfyUI] [comfy-env] LoadImageWithExif done (2.12s): result: NodeOutput
-  [ComfyUI] [VRAM] After LoadImageWithExif: 388 / 7703 MB
-  [ComfyUI] [VRAM] After LoadImageWithExif: 388 / 7703 MB
+  [ComfyUI] [VRAM] After LoadImageWithExif: 848 / 7672 MB
+  [ComfyUI] [VRAM] After LoadImageWithExif: 848 / 7672 MB
   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
-  [ComfyUI] [VRAM] Before LoadSharpModel: 388 / 7703 MB
-  [ComfyUI] [VRAM] Before LoadSharpModel: 388 / 7703 MB
+  [ComfyUI] [VRAM] Before LoadSharpModel: 848 / 7672 MB
+  [ComfyUI] [VRAM] Before LoadSharpModel: 848 / 7672 MB
   [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
@@ -99,17 +99,17 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [SubprocessWorker] call_id=4 sending call_method
   [ComfyUI] [SubprocessWorker] call_id=4 sending call_method
   Frame 2 saved (frame_001.jpg, t=2.3s)
-  [capture-periodic] freeze=2ms shot=137ms unfreeze=2ms saved=True
+  [capture-periodic] freeze=1ms shot=137ms unfreeze=6ms saved=True
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [SubprocessWorker] got response: ok
-  [ComfyUI] [comfy-env] LoadSharpModel done (0.25s): result: NodeOutput
-  [ComfyUI] [comfy-env] LoadSharpModel done (0.25s): result: NodeOutput
-  [ComfyUI] [VRAM] After LoadSharpModel: 388 / 7703 MB
-  [ComfyUI] [VRAM] After LoadSharpModel: 388 / 7703 MB
+  [ComfyUI] [comfy-env] LoadSharpModel done (0.20s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadSharpModel done (0.20s): result: NodeOutput
+  [ComfyUI] [VRAM] After LoadSharpModel: 848 / 7672 MB
+  [ComfyUI] [VRAM] After LoadSharpModel: 848 / 7672 MB
   [ComfyUI] [comfy-env] Running SharpPredict: focal_length_mm: 20.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,2022,3040,3] cpu
   [ComfyUI] [comfy-env] Running SharpPredict: focal_length_mm: 20.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,2022,3040,3] cpu
-  [ComfyUI] [VRAM] Before SharpPredict: 388 / 7703 MB
-  [ComfyUI] [VRAM] Before SharpPredict: 388 / 7703 MB
+  [ComfyUI] [VRAM] Before SharpPredict: 848 / 7672 MB
+  [ComfyUI] [VRAM] Before SharpPredict: 848 / 7672 MB
   [ComfyUI] [SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
@@ -138,33 +138,33 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 2022, 3040, 3])
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: No comfy kitchen, using old apply_rope functions.
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: No comfy kitchen, using old apply_rope functions.
-  Frame 3 saved (frame_002.jpg, t=4.6s)
-  [capture-periodic] freeze=1ms shot=173ms unfreeze=3ms saved=True
-  [capture-loop] iter=50 t=5.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=6.2/31.3GB (20%) swap=0.0/32.0GB (0%) cpu=82% browser_rss=0.96GB
+  Frame 3 saved (frame_002.jpg, t=4.5s)
+  [capture-periodic] freeze=6ms shot=165ms unfreeze=2ms saved=True
+  [capture-loop] iter=50 t=5.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=7.5/23.4GB (32%) swap=1.8/32.0GB (6%) cpu=81% browser_rss=0.96GB
   [ComfyUI] [SubprocessWorker] callback 'request_vram_budget' from call_id=5
   [ComfyUI] [SubprocessWorker] callback 'request_vram_budget' from call_id=5
-  [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 7.67GB
-  [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 7.67GB
-  [ComfyUI] [comfy-env] VRAM after eviction: 7.67GB
-  [ComfyUI] [comfy-env] VRAM after eviction: 7.67GB
+  [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 7.16GB
+  [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 7.16GB
+  [ComfyUI] [comfy-env] VRAM after eviction: 7.16GB
+  [ComfyUI] [comfy-env] VRAM after eviction: 7.16GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] start: 0.12 GB, input=[1, 3, 1536, 1536]
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] start: 0.12 GB, input=[1, 3, 1536, 1536]
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] patches: 0.18 GB, x0=25 x1=9 x2=1 total=35
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] patches: 0.18 GB, x0=25 x1=9 x2=1 total=35
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +251MB (now 251MB) reserved=320MB peak=251MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +251MB (now 251MB) reserved=320MB peak=251MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +242MB (now 242MB) reserved=320MB peak=242MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +242MB (now 242MB) reserved=320MB peak=242MB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after first chunk (4/35): 0.61 GB, chunk_size=4
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after first chunk (4/35): 0.61 GB, chunk_size=4
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +405MB (now 656MB) reserved=896MB peak=683MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +405MB (now 656MB) reserved=896MB peak=683MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +432MB (now 674MB) reserved=896MB peak=674MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +432MB (now 674MB) reserved=896MB peak=674MB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after all chunks + cache clear: 0.55 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after all chunks + cache clear: 0.55 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge intermediates: 0.32 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge intermediates: 0.32 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge all: 0.36 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after merge all: 0.36 GB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] -283MB (now 374MB) reserved=736MB peak=683MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] -283MB (now 374MB) reserved=736MB peak=683MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] -301MB (now 374MB) reserved=736MB peak=728MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] -301MB (now 374MB) reserved=736MB peak=728MB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after image_encoder: 0.36 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after image_encoder: 0.36 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [SPN] after upsample: 1.07 GB
@@ -173,35 +173,35 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after SPN encoder + cache clear: 0.98 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after decoder: 1.54 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Monodepth] after decoder: 1.54 GB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +1195MB (now 1569MB) reserved=5344MB peak=4458MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +1195MB (now 1569MB) reserved=5344MB peak=4458MB
-  [capture-loop] iter=100 t=11.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=8.8/31.3GB (28%) swap=0.0/32.0GB (0%) cpu=17% browser_rss=0.88GB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +1195MB (now 1569MB) reserved=5248MB peak=3036MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +1195MB (now 1569MB) reserved=5248MB peak=3036MB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] start: 1.53 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] start: 1.53 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after depth_alignment: 1.57 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after depth_alignment: 1.57 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after init_model: 1.64 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after init_model: 1.64 GB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +976MB (now 2545MB) reserved=4192MB peak=4458MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +976MB (now 2545MB) reserved=4192MB peak=4458MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +976MB (now 2545MB) reserved=4800MB peak=3036MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +976MB (now 2545MB) reserved=4800MB peak=3036MB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after feature_model: 1.78 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after feature_model: 1.78 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after prediction_head: 1.84 GB
   [ComfyUI] [worker:ComfyUI-Sharp] WARNING: [Decode] after prediction_head: 1.84 GB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] -761MB (now 1785MB) reserved=4192MB peak=4458MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] -761MB (now 1785MB) reserved=4192MB peak=4458MB
+  [capture-loop] iter=100 t=11.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=10.4/23.4GB (45%) swap=1.8/32.0GB (6%) cpu=18% browser_rss=0.88GB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] -761MB (now 1785MB) reserved=4800MB peak=3036MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] -761MB (now 1785MB) reserved=4800MB peak=3036MB
   [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=5
   [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=5
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [SubprocessWorker] got response: ok
-  [ComfyUI] [comfy-env] SharpPredict done (10.93s): result: NodeOutput
-  [ComfyUI] [comfy-env] SharpPredict done (10.93s): result: NodeOutput
-  [ComfyUI] [VRAM] After SharpPredict: 4756 / 7703 MB
-  [ComfyUI] [VRAM] After SharpPredict: 4756 / 7703 MB
-  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: '/workspaces/Sharp-1238/ComfyUI/output/sharp_177867635461..., extrinsics: list[4], intrinsics: list[3]
-  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: '/workspaces/Sharp-1238/ComfyUI/output/sharp_177867635461..., extrinsics: list[4], intrinsics: list[3]
-  [ComfyUI] [VRAM] Before GeomPackPreviewGaussian: 4756 / 7703 MB
-  [ComfyUI] [VRAM] Before GeomPackPreviewGaussian: 4756 / 7703 MB
+  [ComfyUI] [comfy-env] SharpPredict done (10.24s): result: NodeOutput
+  [ComfyUI] [comfy-env] SharpPredict done (10.24s): result: NodeOutput
+  [ComfyUI] [VRAM] After SharpPredict: 5824 / 7672 MB
+  [ComfyUI] [VRAM] After SharpPredict: 5824 / 7672 MB
+  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: '/workspaces/Sharp-1205/ComfyUI/output/sharp_177884708629..., extrinsics: list[4], intrinsics: list[3]
+  [ComfyUI] [comfy-env] Running GeomPackPreviewGaussian: ply_path: '/workspaces/Sharp-1205/ComfyUI/output/sharp_177884708629..., extrinsics: list[4], intrinsics: list[3]
+  [ComfyUI] [VRAM] Before GeomPackPreviewGaussian: 5824 / 7672 MB
+  [ComfyUI] [VRAM] Before GeomPackPreviewGaussian: 5824 / 7672 MB
   [ComfyUI] [SubprocessWorker] call_method: nodes.visualization.preview_gaussian.PreviewGaussianNode.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] call_method: nodes.visualization.preview_gaussian.PreviewGaussianNode.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
@@ -210,20 +210,20 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [ComfyUI-GeometryPack] Health check: ping (timeout=5.0s)...
   [ComfyUI] [ComfyUI-GeometryPack] Health check: failed
   [ComfyUI] [ComfyUI-GeometryPack] Health check: failed
-  [ComfyUI] [ComfyUI-GeometryPack] python: /root/.ce/.pixi/envs/geometrypack-nodes/bin/python
-  [ComfyUI] [ComfyUI-GeometryPack] python: /root/.ce/.pixi/envs/geometrypack-nodes/bin/python
   [ComfyUI] [ComfyUI-GeometryPack] Socket unhealthy, restarting worker...
   [ComfyUI] [ComfyUI-GeometryPack] Socket unhealthy, restarting worker...
-  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['/workspaces/Sharp-1238/ComfyUI', '/workspaces/Sharp-1238/ComfyUI/custom_nodes/ComfyUI-GeometryPack', '/root/.ce/.pixi/envs/geometrypack-nodes/lib/python3.12/site-packages', '/workspaces/Sharp-1238/ComfyUI/custom_nodes/ComfyUI-GeometryPack']
-  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['/workspaces/Sharp-1238/ComfyUI', '/workspaces/Sharp-1238/ComfyUI/custom_nodes/ComfyUI-GeometryPack', '/root/.ce/.pixi/envs/geometrypack-nodes/lib/python3.12/site-packages', '/workspaces/Sharp-1238/ComfyUI/custom_nodes/ComfyUI-GeometryPack']
+  [ComfyUI] [ComfyUI-GeometryPack] python: /root/.ce/.pixi/envs/geometrypack-nodes/bin/python
+  [ComfyUI] [ComfyUI-GeometryPack] python: /root/.ce/.pixi/envs/geometrypack-nodes/bin/python
+  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['/workspaces/Sharp-1205/ComfyUI', '/workspaces/Sharp-1205/ComfyUI/custom_nodes/ComfyUI-GeometryPack', '/root/.ce/.pixi/envs/geometrypack-nodes/lib/python3.13/site-packages', '/workspaces/Sharp-1205/ComfyUI/custom_nodes/ComfyUI-GeometryPack']
+  [ComfyUI] [ComfyUI-GeometryPack] sys_path sent to worker: ['/workspaces/Sharp-1205/ComfyUI', '/workspaces/Sharp-1205/ComfyUI/custom_nodes/ComfyUI-GeometryPack', '/root/.ce/.pixi/envs/geometrypack-nodes/lib/python3.13/site-packages', '/workspaces/Sharp-1205/ComfyUI/custom_nodes/ComfyUI-GeometryPack']
   [ComfyUI] [SubprocessWorker] is_pixi=True, python=/root/.ce/.pixi/envs/geometrypack-nodes/bin/python
   [ComfyUI] [SubprocessWorker] is_pixi=True, python=/root/.ce/.pixi/envs/geometrypack-nodes/bin/python
-  [ComfyUI] [SubprocessWorker] launching cmd=['/root/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/root/.ce/pixi.toml', '-e', 'geometrypack-nodes', 'python', '/tmp/comfyui_pvenv_e9ow9k1f/persistent_worker.py', 'abstract://comfy_worker_f2e67aee6276']...
-  [ComfyUI] [SubprocessWorker] launching cmd=['/root/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/root/.ce/pixi.toml', '-e', 'geometrypack-nodes', 'python', '/tmp/comfyui_pvenv_e9ow9k1f/persistent_worker.py', 'abstract://comfy_worker_f2e67aee6276']...
-  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_f2e67aee6276 (abstract, no filesystem path)
-  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_f2e67aee6276 (abstract, no filesystem path)
-  Frame 4 saved (frame_003.jpg, t=13.6s)
-  [capture-periodic] freeze=1ms shot=157ms unfreeze=6ms saved=True
+  [ComfyUI] [SubprocessWorker] launching cmd=['/root/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/root/.ce/pixi.toml', '-e', 'geometrypack-nodes', 'python', '/tmp/comfyui_pvenv_exj2jngp/persistent_worker.py', 'abstract://comfy_worker_6d7efbd96885']...
+  [ComfyUI] [SubprocessWorker] launching cmd=['/root/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/root/.ce/pixi.toml', '-e', 'geometrypack-nodes', 'python', '/tmp/comfyui_pvenv_exj2jngp/persistent_worker.py', 'abstract://comfy_worker_6d7efbd96885']...
+  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_6d7efbd96885 (abstract, no filesystem path)
+  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_6d7efbd96885 (abstract, no filesystem path)
+  Frame 4 saved (frame_003.jpg, t=13.4s)
+  [capture-periodic] freeze=1ms shot=152ms unfreeze=4ms saved=True
   [ComfyUI] [worker:ComfyUI-GeometryPack] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
   [ComfyUI] [worker:ComfyUI-GeometryPack] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
   [ComfyUI] [SubprocessWorker] worker started/confirmed
@@ -236,31 +236,31 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [SubprocessWorker] sending request via socket...
   [ComfyUI] [SubprocessWorker] call_id=2 sending call_method
   [ComfyUI] [SubprocessWorker] call_id=2 sending call_method
-  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778676354610.ply (63.00 MB)
-  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778676354610.ply (63.00 MB)
+  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778847086299.ply (63.00 MB)
+  [ComfyUI] [worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1778847086299.ply (63.00 MB)
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [comfy-env] GeomPackPreviewGaussian done (2.25s): result: NodeOutput
   [ComfyUI] [comfy-env] GeomPackPreviewGaussian done (2.25s): result: NodeOutput
-  [ComfyUI] [VRAM] After GeomPackPreviewGaussian: 4756 / 7703 MB
-  [ComfyUI] [VRAM] After GeomPackPreviewGaussian: 4756 / 7703 MB
-  [ComfyUI] Prompt executed in 15.56 seconds
-  [ComfyUI] Prompt executed in 15.56 seconds
+  [ComfyUI] [VRAM] After GeomPackPreviewGaussian: 5824 / 7672 MB
+  [ComfyUI] [VRAM] After GeomPackPreviewGaussian: 5824 / 7672 MB
+  [ComfyUI] Prompt executed in 14.81 seconds
+  [ComfyUI] Prompt executed in 14.81 seconds
   Node executed (1 total), capturing...
-  Frame 5 saved (frame_004.jpg, t=17.6s)
-  [capture-node] freeze=185ms shot=170ms unfreeze=0ms saved=True
-  Execution complete (t=17.6s)
+  Frame 5 saved (frame_004.jpg, t=15.7s)
+  [capture-node] freeze=1005ms shot=500ms unfreeze=0ms saved=True
+  Execution complete (t=15.7s)
   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
   [3d-wait] Phase 1 done in 0.0s
   [3d-wait] Phase 2: iframes=1
   [3d-wait] iframe viewer_ready=True (matched 1 console logs)
   [3d-wait] Unfrozen in 0.001s, rendering for 5s...
   [3d-wait] JS halted via CDP after 19.6s
-  [3d-wait] Re-frozen in 84.3s
-  [3d-wait] Total 3D wait: 84.3s
-  Captured 5 unique frames over 102.31s
+  [3d-wait] Re-frozen in 79.0s
+  [3d-wait] Total 3D wait: 79.0s
+  Captured 5 unique frames over 96.27s
   [debug] iframes: 1
-  [debug]   iframe[0]: src=http://127.0.0.1:41891/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=3040x2022, rafFrozen=True
+  [debug]   iframe[0]: src=http://127.0.0.1:41881/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=3040x2022, rafFrozen=True
   [timing] trigger_3d_previews: 0.0s
   Saved high-quality screenshot: sharp_exif_executed.png
   [timing] final_screenshot: 0.4s
