@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-05-15T06:21:30.612109+00:00",
+  "timestamp": "2026-05-15T06:30:06.978447+00:00",
   "platform": "macos",
   "hardware": {
-    "os": "macOS-15.7.4-arm64-arm-64bit",
+    "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
     "cpu": "arm"
   },
   "commit_hash": "03f1f97c252e89e1ad74e68b5aca94e7e23ddb70",
@@ -24,37 +24,37 @@
     {
       "name": "sharp_basic",
       "status": "fail",
-      "duration_seconds": 8.02,
+      "duration_seconds": 9.98,
       "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [4], sample: {\"inputs\":{\"image\":\"beach.jpg\"},\"class_type\":\"LoadImage\",\"_meta\":{\"title\":\"Load Image\"}}",
       "hardware": {
-        "os": "macOS-15.7.4-arm64-arm-64bit",
+        "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 0.49,
-          "avg": 0.46
+          "peak": 0.51,
+          "avg": 0.51
         },
         "total_ram_gb": 7.0,
-        "samples": 8
+        "samples": 9
       }
     },
     {
       "name": "sharp_exif",
       "status": "fail",
-      "duration_seconds": 5.17,
+      "duration_seconds": 5.74,
       "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [8], sample: {\"inputs\":{\"precision\":\"auto\"},\"class_type\":\"LoadSharpModel\",\"_meta\":{\"title\":\"(Down)Load SHARP Model\"}}",
       "hardware": {
-        "os": "macOS-15.7.4-arm64-arm-64bit",
+        "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 0.45,
-          "avg": 0.45
+          "peak": 0.51,
+          "avg": 0.51
         },
         "total_ram_gb": 7.0,
-        "samples": 5
+        "samples": 6
       }
     }
   ]
