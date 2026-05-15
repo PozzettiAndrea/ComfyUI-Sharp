@@ -1,9 +1,9 @@
-[00:00] Crash dump logging enabled: D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-0524\dev\windows-portable-cpu\crash_dump.log
+[00:00] Crash dump logging enabled: D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1125\dev\windows-portable-cpu\crash_dump.log
 [00:00] 
 [00:00] [1/5] SYNTAX
 [00:00] ----------------------------------------
 [00:00] 
-[DEBUG] server=None, server_url=None, api=None
+[DEBUG] server=None, api=None
 [00:00] Found pyproject.toml (modern format)
 [00:00] Found requirements.txt (legacy format)
 [00:00] Unicode check: OK (all characters cp1252-safe)
@@ -13,306 +13,320 @@
 [00:00] [2/5] INSTALL
 [00:00] ----------------------------------------
 [00:00] 
-[DEBUG] server=None, server_url=None, api=None
+[DEBUG] server=None, api=None
 [00:00] 
 Setting up ComfyUI...
 [00:00] Fetching latest release version...
 [00:00] Latest version: v0.21.1
 [00:00] Downloading portable ComfyUI from https://github.com/comfyanonymous/ComfyUI/releases/download/v0.21.1/ComfyUI_windows_portable_nvidia.7z...
-[00:02]   Downloaded: 10%
-[00:03]   Downloaded: 20%
-[00:04]   Downloaded: 30%
-[00:06]   Downloaded: 40%
-[00:07]   Downloaded: 50%
-[00:08]   Downloaded: 60%
-[00:09]   Downloaded: 70%
-[00:10]   Downloaded: 80%
-[00:12]   Downloaded: 90%
-[00:13]   Downloaded: 100%
-[00:13] Downloaded to C:\Users\stduser\.comfy-test\cache\portable\ComfyUI_portable_v0.21.1.7z
-[00:13] Extracting to cache: C:\Users\stduser\.comfy-test\cache\portable\ComfyUI_portable_v0.21.1
-[00:13] Extracting ComfyUI_portable_v0.21.1.7z...
-[00:13] Using 7z: 7z
-[02:54] Extracted to C:\Users\stduser\.comfy-test\cache\portable\ComfyUI_portable_v0.21.1
-[02:54] Copying from cache to: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0524\portable-comfyui
-[05:16] Installing uv into embedded Python...
-[05:16] Running: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0524\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe -m pip install uv
-[05:20] Installing ComfyUI requirements...
-[05:20] Running: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0524\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe -m uv pip install -r D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0524\portable-comfyui\ComfyUI_windows_portable\ComfyUI\requirements.txt
-[05:20] 
+[00:03]   Downloaded: 10%
+[00:04]   Downloaded: 20%
+[00:06]   Downloaded: 30%
+[00:07]   Downloaded: 40%
+[00:08]   Downloaded: 50%
+[00:10]   Downloaded: 60%
+[00:11]   Downloaded: 70%
+[00:13]   Downloaded: 80%
+[00:14]   Downloaded: 90%
+[00:15]   Downloaded: 100%
+[00:15] Downloaded to C:\Users\stduser\.comfy-test\cache\portable\ComfyUI_portable_v0.21.1.7z
+[00:15] Extracting to cache: C:\Users\stduser\.comfy-test\cache\portable\ComfyUI_portable_v0.21.1
+[00:15] Extracting ComfyUI_portable_v0.21.1.7z...
+[00:15] Using 7z: 7z
+[02:40] Extracted to C:\Users\stduser\.comfy-test\cache\portable\ComfyUI_portable_v0.21.1
+[02:40] Copying from cache to: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1125\portable-comfyui
+[04:54] Installing uv into embedded Python...
+[04:54] Running: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1125\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe -m pip install uv
+[04:58] Installing ComfyUI requirements...
+[04:58] Running: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1125\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe -m uv pip install -r D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1125\portable-comfyui\ComfyUI_windows_portable\ComfyUI\requirements.txt
+[04:58] 
 Installing custom node...
-[05:20] Copying ComfyUI-Sharp to custom_nodes/...
-[05:20] Installing node requirements...
-[05:20] Running: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0524\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe -m pip install -r D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0524\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\requirements.txt
-[05:24] 
+[04:58] Copying ComfyUI-Sharp to custom_nodes/...
+[04:58] Installing node requirements...
+[04:58] Running: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1125\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe -m pip install -r D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1125\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\requirements.txt
+[05:02] 
 Running install.py...
-[05:24] Running: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0524\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0524\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\install.py
-[05:24]   
-[05:24]   Installing 1 node dependencies...
-[05:24]     Cloning ComfyUI-GeometryPack...
-[05:27]     Installing requirements for ComfyUI-GeometryPack...
-[05:28]     Running install.py for ComfyUI-GeometryPack...
-[05:30]   [comfy-env] _discover: scanning D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0524\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes
-[05:30]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes\ComfyUI-GeometryPack\nodes\comfy-env.toml)
-[05:30]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes\ComfyUI-Sharp\nodes\comfy-env.toml)
-[05:30]   [comfy-env] Workspace: C:\Users\stduser\AppData\Local\Programs\comfy-env
-[05:30]   [comfy-env] ComfyUI: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0524\portable-comfyui\ComfyUI_windows_portable\ComfyUI
-[05:30]   [comfy-env] Found 2 node config(s):
-[05:30]     - geometrypack-nodes <- custom_nodes\ComfyUI-GeometryPack\nodes\comfy-env.toml (python=host)
-[05:30]     - sharp-nodes <- custom_nodes\ComfyUI-Sharp\nodes\comfy-env.toml (python=host)
-[05:30]   [comfy-env] Bootstrap interpreter has python 3.13 + torch 2.11.0 (cu130). Looking for cuda-only wheels matching cu130/torch2.11/cp313.
-[05:32]   [comfy-env] GPU: No GPU detected
-[05:32]   [comfy-env] Comfyui feature -> torch 2.11.0 from https://download.pytorch.org/whl/cu130 (CUDA 13.0 via bootstrap torch)
-[05:32]   [comfy-env] cuda-wheels: 1 package(s) need a matched (cuda, torch, python) combo: ['cumesh']
-[05:32]   [comfy-env] cuda-wheels tier 1 (bootstrap): probing cu13.0/torch2.11/cp313
-[05:32]   [cuda-wheels] Looking up cumesh: cu130 torch2.11 cp313 win_amd64
-[05:32]   [cuda-wheels]   Found: cumesh-0.0.1+cu130torch2.11-cp313-cp313-win_amd64.whl
-[05:32]   [comfy-env] cuda-wheels combo: cu13.0/torch2.11 (bootstrap matches; per-node envs will pin to this)
-[05:32]   [cuda-wheels] Looking up cumesh: cu130 torch2.11 cp313 win_amd64
-[05:32]   [cuda-wheels]   Found: cumesh-0.0.1+cu130torch2.11-cp313-cp313-win_amd64.whl
-[05:32]   [comfy-env] geometrypack-nodes: cuda-wheels deferred for post-pixi install (cumesh)
-[05:32]   Generated C:\Users\stduser\AppData\Local\Programs\comfy-env\pixi.toml
-[05:32]   [comfy-env] Installing 2 environment(s):
-[05:32]     - geometrypack-nodes (python=host, 14 pypi deps, 1 cuda wheels)
-[05:32]     - sharp-nodes (python=host, 10 pypi deps)
-[05:32]   [comfy-env] Running `pixi install -e geometrypack-nodes -e sharp-nodes`...
-[09:11]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
-[09:11]     	- Scripts/.librsvg-pre-unlink.bat
-[09:11]     To enable them, run:
-[09:11]     	pixi config set --local run-post-link-scripts insecure
-[09:11]     More info:
-[09:11]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
-[09:37]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
-[09:37]     	- Scripts/.librsvg-pre-unlink.bat
-[09:37]     To enable them, run:
-[09:37]     	pixi config set --local run-post-link-scripts insecure
-[09:37]     More info:
-[09:37]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
-[10:40]     The following environments have been installed: geometrypack-nodes, sharp-nodes.
-[10:40]   [comfy-env] geometrypack-nodes: installing cuda-wheels with --no-deps (cumesh)
-[10:40]     Using Python 3.13.13 environment at: .pixi\envs\geometrypack-nodes
-[10:41]     Resolved 1 package in 620ms
-[10:41]     Downloading cumesh (3.8MiB)
-[10:41]      Downloaded cumesh
-[10:41]     Prepared 1 package in 142ms
-[10:41]     Installed 1 package in 13ms
-[10:41]      + cumesh==0.0.1+cu130torch2.11 (from https://github.com/PozzettiAndrea/cuda-wheels/releases/download/cumesh-latest/cumesh-0.0.1%2Bcu130torch2.11-cp313-cp313-win_amd64.whl)
-[10:41]   [comfy-env] Recorded install hash d2c5021d3600 -> C:\Users\stduser\AppData\Local\Programs\comfy-env\install.hash
-[10:41]   [comfy-env] Install log: C:\Users\stduser\AppData\Local\Programs\comfy-env\install.log
-[10:41]   
-[10:41]   Installation complete!
-[10:43]   
-[10:43]   [requirements] Re-installing main package requirements...
-[10:43]     Installing requirements for ComfyUI-Sharp...
-[10:43]   [comfy-env] _discover: scanning D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0524\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes
-[10:43]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes\ComfyUI-GeometryPack\nodes\comfy-env.toml)
-[10:43]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes\ComfyUI-Sharp\nodes\comfy-env.toml)
-[10:43]   [comfy-env] Workspace inputs unchanged (hash d2c5021d3600) -- skipping install. Delete C:\Users\stduser\AppData\Local\Programs\comfy-env\install.hash to force.
-[10:43]   
-[10:43]   Installation complete!
-[10:43] Installing 1 node dependency(ies)...
-[10:43]   ComfyUI-GeometryPack from PozzettiAndrea/ComfyUI-GeometryPack
-[10:43]   ComfyUI-GeometryPack already exists, skipping...
-[10:43] Installing validation endpoint...
-[10:43]   Cloning PozzettiAndrea/ComfyUI-validate-endpoint...
-[10:43] Running: git clone --depth 1 https://github.com/PozzettiAndrea/ComfyUI-validate-endpoint.git D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0524\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-validate-endpoint
-[10:44] [INSTALL] PASSED
+[05:02] Running: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1125\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1125\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\install.py
+[05:03]   
+[05:03]   Installing 1 node dependencies...
+[05:03]     Cloning ComfyUI-GeometryPack...
+[05:05]     Installing requirements for ComfyUI-GeometryPack...
+[05:07]     Running install.py for ComfyUI-GeometryPack...
+[05:09]   [comfy-env] _discover: scanning D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1125\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes
+[05:09]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes\ComfyUI-GeometryPack\nodes\comfy-env.toml)
+[05:09]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes\ComfyUI-Sharp\nodes\comfy-env.toml)
+[05:09]   [comfy-env] Workspace: C:\Users\stduser\AppData\Local\Programs\comfy-env
+[05:09]   [comfy-env] ComfyUI: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1125\portable-comfyui\ComfyUI_windows_portable\ComfyUI
+[05:09]   [comfy-env] Found 2 node config(s):
+[05:09]     - geometrypack-nodes <- custom_nodes\ComfyUI-GeometryPack\nodes\comfy-env.toml (python=host)
+[05:09]     - sharp-nodes <- custom_nodes\ComfyUI-Sharp\nodes\comfy-env.toml (python=host)
+[05:09]   [comfy-env] Bootstrap interpreter has python 3.13 + torch 2.11.0 (cu130). Looking for cuda-only wheels matching cu130/torch2.11/cp313.
+[05:11]   [comfy-env] GPU: No GPU detected
+[05:11]   [comfy-env] Comfyui feature -> torch 2.11.0 from https://download.pytorch.org/whl/cu130 (CUDA 13.0 via bootstrap torch)
+[05:11]   [comfy-env] cuda-wheels: 1 package(s) need a matched (cuda, torch, python) combo: ['cumesh']
+[05:11]   [comfy-env] cuda-wheels tier 1 (bootstrap): probing cu13.0/torch2.11/cp313
+[05:11]   [cuda-wheels] Looking up cumesh: cu130 torch2.11 cp313 win_amd64
+[05:11]   [cuda-wheels]   Found: cumesh-0.0.1+cu130torch2.11-cp313-cp313-win_amd64.whl
+[05:11]   [comfy-env] cuda-wheels combo: cu13.0/torch2.11 (bootstrap matches; per-node envs will pin to this)
+[05:11]   [cuda-wheels] Looking up cumesh: cu130 torch2.11 cp313 win_amd64
+[05:11]   [cuda-wheels]   Found: cumesh-0.0.1+cu130torch2.11-cp313-cp313-win_amd64.whl
+[05:11]   [comfy-env] geometrypack-nodes: cuda-wheels deferred for post-pixi install (cumesh)
+[05:11]   Generated C:\Users\stduser\AppData\Local\Programs\comfy-env\pixi.toml
+[05:11]   [comfy-env] Installing 2 environment(s):
+[05:11]     - geometrypack-nodes (python=host, 14 pypi deps, 1 cuda wheels)
+[05:11]     - sharp-nodes (python=host, 10 pypi deps)
+[05:11]   [comfy-env] Running `pixi install -e geometrypack-nodes -e sharp-nodes`...
+[07:58]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
+[07:58]     	- Scripts/.librsvg-pre-unlink.bat
+[07:58]     To enable them, run:
+[07:58]     	pixi config set --local run-post-link-scripts insecure
+[07:58]     More info:
+[07:58]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
+[08:17]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
+[08:17]     	- Scripts/.librsvg-pre-unlink.bat
+[08:17]     To enable them, run:
+[08:17]     	pixi config set --local run-post-link-scripts insecure
+[08:17]     More info:
+[08:17]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
+[09:40]     The following environments have been installed: geometrypack-nodes, sharp-nodes.
+[09:40]   [comfy-env] geometrypack-nodes: installing cuda-wheels with --no-deps (cumesh)
+[09:40]     Using Python 3.13.13 environment at: .pixi\envs\geometrypack-nodes
+[09:41]     Resolved 1 package in 690ms
+[09:41]     Downloading cumesh (3.8MiB)
+[09:41]      Downloaded cumesh
+[09:41]     Prepared 1 package in 153ms
+[09:41]     Installed 1 package in 17ms
+[09:41]      + cumesh==0.0.1+cu130torch2.11 (from https://github.com/PozzettiAndrea/cuda-wheels/releases/download/cumesh-latest/cumesh-0.0.1%2Bcu130torch2.11-cp313-cp313-win_amd64.whl)
+[09:41]   [comfy-env] Recorded install hash 289ba018900b -> C:\Users\stduser\AppData\Local\Programs\comfy-env\install.hash
+[09:41]   [comfy-env] Install log: C:\Users\stduser\AppData\Local\Programs\comfy-env\install.log
+[09:41]   
+[09:41]   Installation complete!
+[09:42]   
+[09:42]   [requirements] Re-installing main package requirements...
+[09:42]     Installing requirements for ComfyUI-Sharp...
+[09:42]   [comfy-env] _discover: scanning D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1125\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes
+[09:42]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes\ComfyUI-GeometryPack\nodes\comfy-env.toml)
+[09:42]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes\ComfyUI-Sharp\nodes\comfy-env.toml)
+[09:42]   [comfy-env] Workspace inputs unchanged (hash 289ba018900b) -- skipping install. Delete C:\Users\stduser\AppData\Local\Programs\comfy-env\install.hash to force.
+[09:42]   
+[09:42]   Installation complete!
+[09:42] Installing 1 node dependency(ies)...
+[09:42]   ComfyUI-GeometryPack from PozzettiAndrea/ComfyUI-GeometryPack
+[09:42]   ComfyUI-GeometryPack already exists, skipping...
+[09:42] Installing validation endpoint...
+[09:42]   Cloning PozzettiAndrea/ComfyUI-validate-endpoint...
+[09:42] Running: git clone --depth 1 https://x-access-token:***@github.com/PozzettiAndrea/ComfyUI-validate-endpoint.git D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1125\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-validate-endpoint
+[09:43] [INSTALL] PASSED
+[09:43] 
+[09:43] [3/5] REGISTRATION
+[09:43] ----------------------------------------
+[09:43] 
+[DEBUG] server=None, api=None
+[09:43] 
+Starting ComfyUI server...
+[09:43] Starting ComfyUI server on port 41888...
+[09:43] Starting ComfyUI server on port 41888...
+[09:43] Server stdout/stderr -> D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1125\server.log
+[09:43] Waiting for server to be ready (timeout: 600s)...
+[09:43]   [ComfyUI:stdout] reader thread died: AttributeError("'NoneType' object has no attribute 'readline'")
+[09:43]   [ComfyUI:stderr] reader thread died: AttributeError("'NoneType' object has no attribute 'readline'")
+[10:21] Server responding, waiting for nodes to load...
+[10:41] Server is ready!
+[10:41] Checking for import errors in server logs...
+[10:41] No import errors detected
+[10:41] Found 848 registered nodes
+[10:41] [REGISTRATION] PASSED
+[10:41] 
+[10:41] [4/5] INSTANTIATION
+[10:41] ----------------------------------------
+[10:41] 
+[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x00000202CEEF4410>, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x00000202CEF2DAC0>
+[10:41] Testing node constructors...
+[10:44] All 8 node(s) instantiated successfully!
+[10:44] [INSTANTIATION] PASSED
 [10:44] 
-[10:44] [3/5] REGISTRATION
+[10:44] [5/5] EXECUTION
 [10:44] ----------------------------------------
 [10:44] 
-[DEBUG] server=None, server_url=None, api=None
-[10:44] 
-Starting ComfyUI server...
-[10:44] Starting ComfyUI server on port 41890...
-[10:44] Starting ComfyUI server on port 41890...
-[10:44] Server stdout/stderr -> D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-0524\server.log
-[10:44] Waiting for server to be ready (timeout: 600s)...
-[10:44]   [ComfyUI:stdout] reader thread died: AttributeError("'NoneType' object has no attribute 'readline'")
-[10:44]   [ComfyUI:stderr] reader thread died: AttributeError("'NoneType' object has no attribute 'readline'")
-[11:19] Server responding, waiting for nodes to load...
-[11:39] Server is ready!
-[11:39] Checking for import errors in server logs...
-[11:39] No import errors detected
-[11:39] Found 848 registered nodes
-[11:39] [REGISTRATION] PASSED
-[11:39] 
-[11:39] [4/5] INSTANTIATION
-[11:39] ----------------------------------------
-[11:39] 
-[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x000002665A6CD940>, server_url=None, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x000002665A6CE900>
-[11:39] Testing node constructors...
-[11:41] All 8 node(s) instantiated successfully!
-[11:41] [INSTANTIATION] PASSED
-[11:41] 
-[11:41] [5/5] EXECUTION
-[11:41] ----------------------------------------
-[11:41] 
-[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x000002665A6CD940>, server_url=None, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x000002665A6CE900>
-[11:41] CPU runner - will execute 2 workflow(s)
-[11:41] Running 3 workflow(s) (all with videos)...
-[11:41] Installing screenshot dependencies (playwright, pillow)...
-[11:56]   Packages installed, downloading chromium browser...
-[12:12]   Screenshot dependencies installed successfully
-[12:20] Starting headless browser...
-[12:22]   Downloading Mesa llvmpipe for Windows...
-[12:26]   Copied opengl32.dll to Chromium dir
-[12:26]   Copied libgallium_wgl.dll to Chromium dir
-[12:26]   Using Mesa llvmpipe (desktop GL) -- multithreaded CPU rendering
-[12:27]   [1/3] SKIPPED (not in cpu list) pano.json
-[12:27] Capturing execution frames: sharp_basic.json
-[12:35]   Frame 1 saved (frame_000.jpg, t=0.0s)
-[12:35]   Validating workflow...
-[12:35]   Queuing workflow for execution...
-[12:38]   Frame 2 saved (frame_001.jpg, t=2.3s)
-[12:38]   [capture-periodic] freeze=4ms shot=100ms unfreeze=3ms saved=True
-[12:40]   Frame 3 saved (frame_002.jpg, t=4.4s)
-[12:40]   [capture-periodic] freeze=3ms shot=83ms unfreeze=3ms saved=True
-[12:41]   [capture-loop] iter=50 t=5.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.6/16.0GB (35%) swap=0.4/2.9GB (13%) cpu=18% browser_rss=0.67GB
-[12:42]   Frame 4 saved (frame_003.jpg, t=6.6s)
-[12:42]   [capture-periodic] freeze=24ms shot=178ms unfreeze=6ms saved=True
-[12:44]   Frame 5 saved (frame_004.jpg, t=8.9s)
-[12:44]   [capture-periodic] freeze=21ms shot=205ms unfreeze=13ms saved=True
-[12:47]   Frame 6 saved (frame_005.jpg, t=11.3s)
-[12:47]   [capture-periodic] freeze=17ms shot=185ms unfreeze=4ms saved=True
-[12:48]   [capture-loop] iter=100 t=13.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=7.0/16.0GB (44%) swap=0.4/2.9GB (13%) cpu=83% browser_rss=0.72GB
-[12:49]   Frame 7 saved (frame_006.jpg, t=13.6s)
-[12:49]   [capture-periodic] freeze=2ms shot=92ms unfreeze=3ms saved=True
-[12:51]   Frame 8 saved (frame_007.jpg, t=15.8s)
-[12:51]   [capture-periodic] freeze=3ms shot=88ms unfreeze=3ms saved=True
-[12:53]   Frame 9 saved (frame_008.jpg, t=17.9s)
-[12:53]   [capture-periodic] freeze=5ms shot=109ms unfreeze=4ms saved=True
-[12:54]   [capture-loop] iter=150 t=18.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=6.1/16.0GB (38%) swap=0.4/2.9GB (13%) cpu=26% browser_rss=0.74GB
-[12:55]   Frame 10 saved (frame_009.jpg, t=20.1s)
-[12:55]   [capture-periodic] freeze=2ms shot=87ms unfreeze=4ms saved=True
-[13:00]   [capture-loop] iter=200 t=25.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.8/16.0GB (36%) swap=0.4/2.9GB (13%) cpu=34% browser_rss=0.73GB
-[13:07]   [capture-loop] iter=250 t=31.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=6.4/16.0GB (40%) swap=0.4/2.9GB (13%) cpu=32% browser_rss=0.65GB
-[13:12]   [capture-loop] iter=300 t=37.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=8.1/16.0GB (51%) swap=0.4/2.9GB (13%) cpu=23% browser_rss=0.65GB
-[13:18]   [capture-loop] iter=350 t=42.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=8.4/16.0GB (52%) swap=0.4/2.9GB (13%) cpu=68% browser_rss=0.65GB
-[13:24]   [capture-loop] iter=400 t=48.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.2/16.0GB (51%) swap=0.4/2.9GB (13%) cpu=74% browser_rss=0.64GB
-[13:29]   [capture-loop] iter=450 t=54.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.4/16.0GB (52%) swap=0.4/2.9GB (13%) cpu=73% browser_rss=0.62GB
-[13:35]   [capture-loop] iter=500 t=60.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.2/16.0GB (51%) swap=0.4/2.9GB (13%) cpu=75% browser_rss=0.61GB
-[13:41]   [capture-loop] iter=550 t=65.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=8 ram=8.4/16.0GB (52%) swap=0.4/2.9GB (13%) cpu=73% browser_rss=0.61GB
-[13:47]   [capture-loop] iter=600 t=71.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=8.4/16.0GB (52%) swap=0.4/2.9GB (13%) cpu=74% browser_rss=0.61GB
-[13:52]   [capture-loop] iter=650 t=77.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.1/16.0GB (51%) swap=0.5/2.9GB (18%) cpu=74% browser_rss=0.60GB
-[13:58]   [capture-loop] iter=700 t=82.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.2/16.0GB (51%) swap=0.5/2.9GB (18%) cpu=72% browser_rss=0.61GB
-[14:04]   [capture-loop] iter=750 t=88.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.2/16.0GB (51%) swap=0.5/2.9GB (18%) cpu=75% browser_rss=0.61GB
-[14:10]   [capture-loop] iter=800 t=94.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.2/16.0GB (52%) swap=0.5/2.9GB (18%) cpu=75% browser_rss=0.61GB
-[14:15]   [capture-loop] iter=850 t=100.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.2/16.0GB (51%) swap=0.5/2.9GB (18%) cpu=73% browser_rss=0.60GB
-[14:21]   [capture-loop] iter=900 t=105.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.3/16.0GB (52%) swap=0.5/2.9GB (18%) cpu=72% browser_rss=0.60GB
-[14:27]   [capture-loop] iter=950 t=111.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.4/16.0GB (52%) swap=0.5/2.9GB (18%) cpu=76% browser_rss=0.60GB
-[14:33]   [capture-loop] iter=1000 t=117.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=9 ram=8.4/16.0GB (52%) swap=0.5/2.9GB (18%) cpu=75% browser_rss=0.60GB
-[14:38]   [capture-loop] iter=1050 t=123.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.3/16.0GB (52%) swap=0.5/2.9GB (18%) cpu=74% browser_rss=0.60GB
-[14:44]   [capture-loop] iter=1100 t=128.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.3/16.0GB (52%) swap=0.5/2.9GB (18%) cpu=72% browser_rss=0.59GB
-[14:50]   [capture-loop] iter=1150 t=134.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.4/16.0GB (53%) swap=0.5/2.9GB (18%) cpu=73% browser_rss=0.59GB
-[14:56]   [capture-loop] iter=1200 t=140.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.3/16.0GB (52%) swap=0.5/2.9GB (18%) cpu=73% browser_rss=0.59GB
-[15:01]   [capture-loop] iter=1250 t=146.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.4/16.0GB (53%) swap=0.5/2.9GB (18%) cpu=75% browser_rss=0.59GB
-[15:07]   [capture-loop] iter=1300 t=151.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.3/16.0GB (52%) swap=0.5/2.9GB (18%) cpu=71% browser_rss=0.59GB
-[15:13]   [capture-loop] iter=1350 t=157.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.0/16.0GB (50%) swap=0.6/2.9GB (22%) cpu=68% browser_rss=0.59GB
-[15:18]   [capture-loop] iter=1400 t=163.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.6/16.0GB (54%) swap=0.6/2.9GB (22%) cpu=70% browser_rss=0.57GB
-[15:24]   [capture-loop] iter=1450 t=169.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=9.4/16.0GB (59%) swap=0.6/2.9GB (22%) cpu=75% browser_rss=0.57GB
-[15:30]   [capture-loop] iter=1500 t=174.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=9.7/16.0GB (60%) swap=0.7/2.9GB (26%) cpu=73% browser_rss=0.56GB
-[15:36]   [capture-loop] iter=1550 t=180.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.9/16.0GB (62%) swap=0.7/2.9GB (26%) cpu=66% browser_rss=0.55GB
-[15:42]   [capture-loop] iter=1600 t=186.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=11.6/16.0GB (72%) swap=0.9/2.9GB (30%) cpu=71% browser_rss=0.55GB
-[15:47]   [capture-loop] iter=1650 t=192.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=10.9/16.0GB (68%) swap=0.9/2.9GB (30%) cpu=76% browser_rss=0.54GB
-[15:53]   [capture-loop] iter=1700 t=197.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=10.4/16.0GB (65%) swap=1.0/2.9GB (35%) cpu=69% browser_rss=0.54GB
-[15:59]   [capture-loop] iter=1750 t=203.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=9.6/16.0GB (60%) swap=1.0/2.9GB (34%) cpu=67% browser_rss=0.53GB
-[16:04]   [capture-loop] iter=1800 t=209.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=9.9/16.0GB (62%) swap=1.0/2.9GB (34%) cpu=66% browser_rss=0.53GB
-[16:10]   [capture-loop] iter=1850 t=215.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=9.7/16.0GB (60%) swap=1.0/2.9GB (34%) cpu=66% browser_rss=0.51GB
-[16:16]   [capture-loop] iter=1900 t=220.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=8.6/16.0GB (54%) swap=1.0/2.9GB (34%) cpu=65% browser_rss=0.50GB
-[16:21]   [capture-loop] iter=1950 t=226.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.6/16.0GB (54%) swap=1.0/2.9GB (34%) cpu=42% browser_rss=0.50GB
-[16:22]   Frame 11 saved (frame_010.jpg, t=226.9s)
-[16:22]   [capture-periodic] freeze=2ms shot=81ms unfreeze=3ms saved=True
-[16:27]   Node executed (1 total), capturing...
-[16:27]   Frame 12 saved (frame_011.jpg, t=232.0s)
-[16:27]   [capture-node] freeze=3ms shot=104ms unfreeze=3ms saved=True
-[16:27]   [capture-loop] iter=2000 t=232.2s state={'complete': True, 'error': None, 'executedCount': 1, 'wsState': 1} eval_ms=8 ram=9.2/16.0GB (58%) swap=1.0/2.9GB (34%) cpu=35% browser_rss=0.61GB
-[16:27]   Execution complete (t=232.2s)
-[16:27]   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
-[16:28]   [3d-wait] Phase 1 done in 0.8s
-[16:28]   [3d-wait] Phase 2: iframes=1
-[16:28]   [3d-wait] iframe viewer_ready=True (matched 1 console logs)
-[16:28]   [3d-wait] Unfrozen in 0.006s, rendering for 5s...
-[16:36]   [3d-wait] JS halted via CDP after 7.4s
-[16:58]   [3d-wait] Re-frozen in 29.3s
-[16:58]   [3d-wait] Total 3D wait: 30.3s
-[16:58]   Captured 12 unique frames over 262.58s
-[16:58]   [debug] iframes: 1
-[16:58]   [debug]   iframe[0]: src=http://127.0.0.1:41890/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=1536x1024, rafFrozen=True
-[16:58]   [timing] trigger_3d_previews: 0.0s
-[17:01]   Saved high-quality screenshot: sharp_basic_executed.png
-[17:01]   [timing] final_screenshot: 1.7s
-[17:02] Capturing execution frames: sharp_exif.json
-[17:25]   Frame 1 saved (frame_000.jpg, t=0.0s)
-[17:25]   Validating workflow...
-[17:25]   Queuing workflow for execution...
-[17:27]   Frame 2 saved (frame_001.jpg, t=2.3s)
-[17:27]   [capture-periodic] freeze=4ms shot=112ms unfreeze=3ms saved=True
-[17:29]   Frame 3 saved (frame_002.jpg, t=4.4s)
-[17:29]   [capture-periodic] freeze=3ms shot=111ms unfreeze=4ms saved=True
-[17:31]   [capture-loop] iter=50 t=5.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.0/16.0GB (31%) swap=1.1/2.9GB (36%) cpu=55% browser_rss=0.65GB
-[17:32]   Frame 4 saved (frame_003.jpg, t=6.6s)
-[17:32]   [capture-periodic] freeze=3ms shot=108ms unfreeze=3ms saved=True
-[17:36]   [capture-loop] iter=100 t=11.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.6/16.0GB (35%) swap=1.0/2.9GB (36%) cpu=46% browser_rss=0.59GB
-[17:42]   [capture-loop] iter=150 t=17.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=7.4/16.0GB (46%) swap=1.0/2.9GB (36%) cpu=30% browser_rss=0.58GB
-[17:48]   [capture-loop] iter=200 t=22.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=8.1/16.0GB (51%) swap=1.0/2.9GB (36%) cpu=58% browser_rss=0.58GB
-[17:53]   [capture-loop] iter=250 t=28.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.0/16.0GB (50%) swap=1.0/2.9GB (36%) cpu=68% browser_rss=0.58GB
-[17:59]   [capture-loop] iter=300 t=34.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.1/16.0GB (50%) swap=1.0/2.9GB (36%) cpu=67% browser_rss=0.58GB
-[18:05]   [capture-loop] iter=350 t=40.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.0/16.0GB (50%) swap=1.0/2.9GB (36%) cpu=68% browser_rss=0.58GB
-[18:11]   [capture-loop] iter=400 t=45.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.1/16.0GB (50%) swap=1.0/2.9GB (36%) cpu=66% browser_rss=0.58GB
-[18:16]   [capture-loop] iter=450 t=51.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.1/16.0GB (50%) swap=1.0/2.9GB (36%) cpu=68% browser_rss=0.58GB
-[18:22]   [capture-loop] iter=500 t=57.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.1/16.0GB (51%) swap=1.0/2.9GB (36%) cpu=67% browser_rss=0.58GB
-[18:28]   [capture-loop] iter=550 t=62.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.3/16.0GB (52%) swap=1.0/2.9GB (36%) cpu=68% browser_rss=0.58GB
-[18:34]   [capture-loop] iter=600 t=68.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=22 ram=8.2/16.0GB (51%) swap=1.0/2.9GB (36%) cpu=67% browser_rss=0.58GB
-[18:39]   [capture-loop] iter=650 t=74.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.1/16.0GB (51%) swap=1.0/2.9GB (36%) cpu=68% browser_rss=0.58GB
-[18:45]   [capture-loop] iter=700 t=80.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.1/16.0GB (51%) swap=1.0/2.9GB (36%) cpu=67% browser_rss=0.58GB
-[18:51]   [capture-loop] iter=750 t=85.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.2/16.0GB (51%) swap=1.0/2.9GB (36%) cpu=67% browser_rss=0.58GB
-[18:57]   [capture-loop] iter=800 t=91.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.2/16.0GB (51%) swap=1.0/2.9GB (36%) cpu=67% browser_rss=0.58GB
-[19:02]   [capture-loop] iter=850 t=97.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=8.2/16.0GB (51%) swap=1.0/2.9GB (36%) cpu=68% browser_rss=0.58GB
-[19:08]   [capture-loop] iter=900 t=103.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.2/16.0GB (52%) swap=1.0/2.9GB (36%) cpu=66% browser_rss=0.58GB
-[19:14]   [capture-loop] iter=950 t=108.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.2/16.0GB (52%) swap=1.0/2.9GB (36%) cpu=66% browser_rss=0.58GB
-[19:20]   [capture-loop] iter=1000 t=114.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.4/16.0GB (52%) swap=1.0/2.9GB (36%) cpu=67% browser_rss=0.58GB
-[19:25]   [capture-loop] iter=1050 t=120.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=8.3/16.0GB (52%) swap=1.0/2.9GB (36%) cpu=67% browser_rss=0.58GB
-[19:31]   [capture-loop] iter=1100 t=126.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.3/16.0GB (52%) swap=1.0/2.9GB (36%) cpu=68% browser_rss=0.58GB
-[19:37]   [capture-loop] iter=1150 t=131.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.2/16.0GB (51%) swap=1.0/2.9GB (36%) cpu=67% browser_rss=0.59GB
-[19:43]   [capture-loop] iter=1200 t=137.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=9.0/16.0GB (56%) swap=1.2/2.9GB (40%) cpu=79% browser_rss=0.59GB
-[19:48]   [capture-loop] iter=1250 t=143.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=10.2/16.0GB (64%) swap=1.2/2.9GB (40%) cpu=85% browser_rss=0.59GB
-[19:54]   [capture-loop] iter=1300 t=149.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=10.1/16.0GB (63%) swap=1.3/2.9GB (44%) cpu=81% browser_rss=0.59GB
-[20:00]   [capture-loop] iter=1350 t=155.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=11.2/16.0GB (70%) swap=1.4/2.9GB (48%) cpu=76% browser_rss=0.58GB
-[20:06]   [capture-loop] iter=1400 t=161.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=13 ram=11.1/16.0GB (70%) swap=1.6/2.9GB (55%) cpu=85% browser_rss=0.56GB
-[20:12]   [capture-loop] iter=1450 t=167.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=9.5/16.0GB (59%) swap=1.6/2.9GB (55%) cpu=85% browser_rss=0.55GB
-[20:18]   [capture-loop] iter=1500 t=172.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=8.8/16.0GB (55%) swap=1.6/2.9GB (55%) cpu=75% browser_rss=0.54GB
-[20:23]   [capture-loop] iter=1550 t=178.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=10.6/16.0GB (66%) swap=1.6/2.9GB (55%) cpu=69% browser_rss=0.53GB
-[20:29]   [capture-loop] iter=1600 t=184.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=10.3/16.0GB (64%) swap=1.7/2.9GB (59%) cpu=69% browser_rss=0.51GB
-[20:35]   [capture-loop] iter=1650 t=190.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=9.8/16.0GB (61%) swap=1.7/2.9GB (59%) cpu=68% browser_rss=0.51GB
-[20:41]   [capture-loop] iter=1700 t=195.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.5/16.0GB (53%) swap=1.7/2.9GB (59%) cpu=56% browser_rss=0.50GB
-[20:42]   Frame 5 saved (frame_004.jpg, t=197.0s)
-[20:42]   [capture-periodic] freeze=3ms shot=107ms unfreeze=3ms saved=True
-[20:46]   [capture-loop] iter=1750 t=201.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.7/16.0GB (54%) swap=1.4/2.9GB (50%) cpu=39% browser_rss=0.50GB
-[20:47]   Node executed (1 total), capturing...
-[20:47]   Frame 6 saved (frame_005.jpg, t=201.9s)
-[20:47]   [capture-node] freeze=3ms shot=108ms unfreeze=0ms saved=True
-[20:47]   Execution complete (t=201.9s)
-[20:47]   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
-[20:47]   [3d-wait] Phase 1 done in 0.0s
-[20:47]   [3d-wait] Phase 2: iframes=1
-[20:47]   [3d-wait] iframe viewer_ready=False (matched 0 console logs)
-[20:47]   [3d-wait] Waiting for 'Loaded successfully' console message (timeout=60s)...
-[20:48]   [3d-wait] Got 'Loaded successfully' after 1.2s
-[20:48]   [3d-wait] Unfrozen in 0.158s, rendering for 5s...
-[20:59]   [3d-wait] JS halted via CDP after 10.5s
-[21:29]   [3d-wait] Re-frozen in 41.1s
-[21:29]   [3d-wait] Total 3D wait: 42.3s
-[21:29]   Captured 6 unique frames over 244.34s
-[21:29]   [debug] iframes: 1
-[21:29]   [debug]   iframe[0]: src=http://127.0.0.1:41890/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=3040x2022, rafFrozen=True
-[21:29]   [timing] trigger_3d_previews: 0.0s
-[21:31]   Saved high-quality screenshot: sharp_exif_executed.png
-[21:31]   [timing] final_screenshot: 0.2s
-[21:33] Results saved to D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-0524\dev\windows-portable-cpu\results.json
-[21:33] Model report: 12 files, 2.6 GB -> D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-0524\dev\windows-portable-cpu\models.json
-[21:33] Saved: D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-0524\dev\windows-portable-cpu\index.html
-[21:33] [EXECUTION] PASSED
-[21:33] 
+[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x00000202CEEF4410>, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x00000202CEF2DAC0>
+[10:44] CPU runner - will execute 2 workflow(s)
+[10:44] Running 3 workflow(s) (all with videos)...
+[10:44] Installing screenshot dependencies (playwright, pillow)...
+[10:47]   Packages installed, downloading chromium browser...
+[11:03]   Screenshot dependencies installed successfully
+[11:04] Starting headless browser...
+[11:04]   Downloading Mesa llvmpipe for Windows...
+[11:08]   Copied opengl32.dll to Chromium dir
+[11:08]   Copied libgallium_wgl.dll to Chromium dir
+[11:08]   Using Mesa llvmpipe (desktop GL) -- multithreaded CPU rendering
+[11:09]   [1/3] SKIPPED (not in cpu list) pano.json
+[11:09] Capturing execution frames: sharp_basic.json
+[11:19]   Frame 1 saved (frame_000.jpg, t=0.0s)
+[11:19]   Validating workflow...
+[11:19]   Queuing workflow for execution...
+[11:21]   Frame 2 saved (frame_001.jpg, t=2.3s)
+[11:21]   [capture-periodic] freeze=5ms shot=163ms unfreeze=5ms saved=True
+[11:23]   Frame 3 saved (frame_002.jpg, t=4.6s)
+[11:23]   [capture-periodic] freeze=13ms shot=143ms unfreeze=14ms saved=True
+[11:25]   [capture-loop] iter=50 t=6.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=5.9/16.0GB (37%) swap=0.4/2.9GB (14%) cpu=66% browser_rss=0.71GB
+[11:28]   Frame 4 saved (frame_003.jpg, t=9.2s)
+[11:28]   [capture-periodic] freeze=31ms shot=301ms unfreeze=81ms saved=True
+[11:31]   Frame 5 saved (frame_004.jpg, t=11.8s)
+[11:31]   [capture-periodic] freeze=54ms shot=237ms unfreeze=6ms saved=True
+[11:33]   Frame 6 saved (frame_005.jpg, t=14.3s)
+[11:33]   [capture-periodic] freeze=32ms shot=347ms unfreeze=132ms saved=True
+[11:35]   [capture-loop] iter=100 t=16.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=50 ram=6.9/16.0GB (43%) swap=0.4/2.9GB (14%) cpu=99% browser_rss=0.71GB
+[11:36]   Frame 7 saved (frame_006.jpg, t=16.9s)
+[11:36]   [capture-periodic] freeze=122ms shot=352ms unfreeze=7ms saved=True
+[11:38]   Frame 8 saved (frame_007.jpg, t=19.5s)
+[11:38]   [capture-periodic] freeze=4ms shot=137ms unfreeze=4ms saved=True
+[11:40]   Frame 9 saved (frame_008.jpg, t=21.7s)
+[11:40]   [capture-periodic] freeze=5ms shot=127ms unfreeze=7ms saved=True
+[11:42]   [capture-loop] iter=150 t=23.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=5.8/16.0GB (36%) swap=0.4/2.9GB (14%) cpu=78% browser_rss=0.65GB
+[11:48]   [capture-loop] iter=200 t=29.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=5.8/16.0GB (36%) swap=0.4/2.9GB (14%) cpu=51% browser_rss=0.65GB
+[11:54]   [capture-loop] iter=250 t=35.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=7.4/16.0GB (46%) swap=0.4/2.9GB (14%) cpu=45% browser_rss=0.65GB
+[12:00]   [capture-loop] iter=300 t=41.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.4/16.0GB (52%) swap=0.4/2.9GB (14%) cpu=58% browser_rss=0.65GB
+[12:06]   [capture-loop] iter=350 t=47.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.3/16.0GB (52%) swap=0.4/2.9GB (14%) cpu=77% browser_rss=0.65GB
+[12:11]   [capture-loop] iter=400 t=52.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.3/16.0GB (52%) swap=0.4/2.9GB (14%) cpu=76% browser_rss=0.62GB
+[12:17]   [capture-loop] iter=450 t=58.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=21 ram=8.3/16.0GB (52%) swap=0.4/2.9GB (14%) cpu=78% browser_rss=0.62GB
+[12:24]   [capture-loop] iter=500 t=65.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.3/16.0GB (52%) swap=0.4/2.9GB (14%) cpu=86% browser_rss=0.61GB
+[12:30]   [capture-loop] iter=550 t=71.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=11 ram=8.3/16.0GB (52%) swap=0.4/2.9GB (14%) cpu=95% browser_rss=0.61GB
+[12:36]   [capture-loop] iter=600 t=77.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.6/16.0GB (54%) swap=0.4/2.9GB (14%) cpu=96% browser_rss=0.61GB
+[12:42]   [capture-loop] iter=650 t=83.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=8.6/16.0GB (54%) swap=0.4/2.9GB (14%) cpu=95% browser_rss=0.60GB
+[12:49]   [capture-loop] iter=700 t=90.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=14 ram=8.6/16.0GB (54%) swap=0.4/2.9GB (14%) cpu=94% browser_rss=0.60GB
+[12:55]   [capture-loop] iter=750 t=96.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=8.5/16.0GB (53%) swap=0.5/2.9GB (18%) cpu=95% browser_rss=0.60GB
+[13:01]   [capture-loop] iter=800 t=102.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=13 ram=8.6/16.0GB (54%) swap=0.5/2.9GB (18%) cpu=95% browser_rss=0.59GB
+[13:08]   [capture-loop] iter=850 t=109.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=10 ram=8.6/16.0GB (54%) swap=0.5/2.9GB (18%) cpu=96% browser_rss=0.59GB
+[13:14]   [capture-loop] iter=900 t=115.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=20 ram=8.7/16.0GB (54%) swap=0.5/2.9GB (18%) cpu=95% browser_rss=0.59GB
+[13:20]   [capture-loop] iter=950 t=121.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.6/16.0GB (54%) swap=0.5/2.9GB (18%) cpu=95% browser_rss=0.59GB
+[13:27]   [capture-loop] iter=1000 t=128.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=8.7/16.0GB (54%) swap=0.5/2.9GB (18%) cpu=94% browser_rss=0.59GB
+[13:33]   [capture-loop] iter=1050 t=134.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=13 ram=8.8/16.0GB (55%) swap=0.5/2.9GB (18%) cpu=96% browser_rss=0.59GB
+[13:39]   [capture-loop] iter=1100 t=140.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=14 ram=8.7/16.0GB (54%) swap=0.5/2.9GB (18%) cpu=94% browser_rss=0.58GB
+[13:45]   [capture-loop] iter=1150 t=146.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.6/16.0GB (54%) swap=0.5/2.9GB (18%) cpu=95% browser_rss=0.58GB
+[13:51]   [capture-loop] iter=1200 t=152.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=10 ram=8.5/16.0GB (53%) swap=0.6/2.9GB (22%) cpu=94% browser_rss=0.58GB
+[13:58]   [capture-loop] iter=1250 t=159.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=25 ram=8.5/16.0GB (53%) swap=0.6/2.9GB (22%) cpu=94% browser_rss=0.57GB
+[14:04]   [capture-loop] iter=1300 t=165.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=9 ram=8.5/16.0GB (53%) swap=0.6/2.9GB (22%) cpu=95% browser_rss=0.56GB
+[14:10]   [capture-loop] iter=1350 t=171.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.5/16.0GB (53%) swap=0.6/2.9GB (22%) cpu=80% browser_rss=0.55GB
+[14:16]   [capture-loop] iter=1400 t=177.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=8.5/16.0GB (53%) swap=0.6/2.9GB (22%) cpu=77% browser_rss=0.55GB
+[14:22]   [capture-loop] iter=1450 t=183.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.3/16.0GB (52%) swap=0.7/2.9GB (26%) cpu=75% browser_rss=0.55GB
+[14:28]   [capture-loop] iter=1500 t=189.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.4/16.0GB (53%) swap=0.7/2.9GB (26%) cpu=71% browser_rss=0.55GB
+[14:34]   [capture-loop] iter=1550 t=195.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.0/16.0GB (50%) swap=0.7/2.9GB (26%) cpu=72% browser_rss=0.54GB
+[14:40]   [capture-loop] iter=1600 t=201.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=9.1/16.0GB (57%) swap=0.9/2.9GB (30%) cpu=77% browser_rss=0.53GB
+[14:46]   [capture-loop] iter=1650 t=207.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=9.3/16.0GB (58%) swap=0.9/2.9GB (30%) cpu=76% browser_rss=0.51GB
+[14:52]   [capture-loop] iter=1700 t=213.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.7/16.0GB (60%) swap=1.0/2.9GB (33%) cpu=84% browser_rss=0.50GB
+[14:58]   [capture-loop] iter=1750 t=219.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=13 ram=9.7/16.0GB (60%) swap=1.0/2.9GB (33%) cpu=94% browser_rss=0.49GB
+[15:05]   [capture-loop] iter=1800 t=226.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=14 ram=11.4/16.0GB (71%) swap=1.0/2.9GB (33%) cpu=95% browser_rss=0.49GB
+[15:11]   [capture-loop] iter=1850 t=232.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=17 ram=11.2/16.0GB (70%) swap=1.1/2.9GB (37%) cpu=96% browser_rss=0.48GB
+[15:17]   [capture-loop] iter=1900 t=238.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=10.6/16.0GB (66%) swap=1.1/2.9GB (40%) cpu=95% browser_rss=0.48GB
+[15:24]   [capture-loop] iter=1950 t=245.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=11.6/16.0GB (73%) swap=1.3/2.9GB (44%) cpu=94% browser_rss=0.47GB
+[15:30]   [capture-loop] iter=2000 t=251.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=8.8/16.0GB (55%) swap=1.3/2.9GB (47%) cpu=91% browser_rss=0.46GB
+[15:36]   [capture-loop] iter=2050 t=257.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=12 ram=9.6/16.0GB (60%) swap=1.5/2.9GB (53%) cpu=93% browser_rss=0.45GB
+[15:42]   [capture-loop] iter=2100 t=263.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=13 ram=9.6/16.0GB (60%) swap=1.5/2.9GB (53%) cpu=94% browser_rss=0.44GB
+[15:48]   [capture-loop] iter=2150 t=269.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=13 ram=9.3/16.0GB (58%) swap=1.5/2.9GB (53%) cpu=94% browser_rss=0.43GB
+[15:54]   [capture-loop] iter=2200 t=275.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.5/16.0GB (59%) swap=1.5/2.9GB (53%) cpu=93% browser_rss=0.42GB
+[16:00]   [capture-loop] iter=2250 t=281.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.5/16.0GB (53%) swap=1.5/2.9GB (53%) cpu=79% browser_rss=0.42GB
+[16:03]   Frame 10 saved (frame_009.jpg, t=284.7s)
+[16:03]   [capture-periodic] freeze=3ms shot=135ms unfreeze=4ms saved=True
+[16:06]   [capture-loop] iter=2300 t=287.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.6/16.0GB (54%) swap=1.5/2.9GB (52%) cpu=65% browser_rss=0.42GB
+[16:12]   [capture-loop] iter=2350 t=293.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.9/16.0GB (55%) swap=1.5/2.9GB (52%) cpu=58% browser_rss=0.41GB
+[16:13]   Node executed (1 total), capturing...
+[16:14]   Frame 11 saved (frame_010.jpg, t=295.1s)
+[16:14]   [capture-node] freeze=5ms shot=178ms unfreeze=0ms saved=True
+[16:14]   Execution complete (t=295.1s)
+[16:14]   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
+[16:14]   [3d-wait] Phase 1 done in 0.0s
+[16:14]   [3d-wait] Phase 2: iframes=1
+[16:14]   [3d-wait] iframe viewer_ready=False (matched 0 console logs)
+[16:14]   [3d-wait] Waiting for 'Loaded successfully' console message (timeout=60s)...
+[16:15]   [3d-wait] Got 'Loaded successfully' after 1.5s
+[16:16]   [3d-wait] Unfrozen in 0.185s, rendering for 5s...
+[16:27]   [3d-wait] JS halted via CDP after 11.8s
+[17:01]   [3d-wait] Re-frozen in 45.4s
+[17:01]   [3d-wait] Total 3D wait: 46.9s
+[17:01]   Captured 11 unique frames over 342.21s
+[17:01]   [debug] iframes: 1
+[17:01]   [debug]   iframe[0]: src=http://127.0.0.1:41888/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=1536x1024, rafFrozen=True
+[17:01]   [timing] trigger_3d_previews: 0.0s
+[17:03]   Saved high-quality screenshot: sharp_basic_executed.png
+[17:03]   [timing] final_screenshot: 0.3s
+[17:03] Capturing execution frames: sharp_exif.json
+[17:11]   Frame 1 saved (frame_000.jpg, t=0.0s)
+[17:11]   Validating workflow...
+[17:11]   Queuing workflow for execution...
+[17:13]   Frame 2 saved (frame_001.jpg, t=2.3s)
+[17:13]   [capture-periodic] freeze=5ms shot=141ms unfreeze=5ms saved=True
+[17:15]   Frame 3 saved (frame_002.jpg, t=4.6s)
+[17:15]   [capture-periodic] freeze=4ms shot=147ms unfreeze=5ms saved=True
+[17:16]   [capture-loop] iter=50 t=6.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=5.3/16.0GB (33%) swap=1.1/2.9GB (37%) cpu=88% browser_rss=0.67GB
+[17:17]   Frame 4 saved (frame_003.jpg, t=6.8s)
+[17:17]   [capture-periodic] freeze=4ms shot=136ms unfreeze=4ms saved=True
+[17:22]   [capture-loop] iter=100 t=12.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=5.3/16.0GB (33%) swap=1.1/2.9GB (36%) cpu=49% browser_rss=0.60GB
+[17:28]   [capture-loop] iter=150 t=17.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.5/16.0GB (47%) swap=1.1/2.9GB (36%) cpu=32% browser_rss=0.60GB
+[17:34]   [capture-loop] iter=200 t=23.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.2/16.0GB (51%) swap=1.1/2.9GB (36%) cpu=61% browser_rss=0.60GB
+[17:40]   [capture-loop] iter=250 t=29.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.2/16.0GB (51%) swap=1.1/2.9GB (36%) cpu=70% browser_rss=0.59GB
+[17:46]   [capture-loop] iter=300 t=36.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=9 ram=8.3/16.0GB (52%) swap=1.0/2.9GB (36%) cpu=91% browser_rss=0.59GB
+[17:52]   [capture-loop] iter=350 t=42.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=12 ram=8.3/16.0GB (52%) swap=1.0/2.9GB (36%) cpu=93% browser_rss=0.60GB
+[17:59]   [capture-loop] iter=400 t=48.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=8.4/16.0GB (53%) swap=1.0/2.9GB (36%) cpu=94% browser_rss=0.59GB
+[18:05]   [capture-loop] iter=450 t=54.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=8 ram=8.4/16.0GB (53%) swap=1.0/2.9GB (36%) cpu=91% browser_rss=0.60GB
+[18:11]   [capture-loop] iter=500 t=60.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=13 ram=8.4/16.0GB (53%) swap=1.0/2.9GB (36%) cpu=92% browser_rss=0.60GB
+[18:17]   [capture-loop] iter=550 t=66.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.4/16.0GB (53%) swap=1.0/2.9GB (36%) cpu=93% browser_rss=0.59GB
+[18:23]   [capture-loop] iter=600 t=72.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=12 ram=8.5/16.0GB (53%) swap=1.0/2.9GB (36%) cpu=93% browser_rss=0.59GB
+[18:29]   [capture-loop] iter=650 t=79.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=9 ram=8.5/16.0GB (53%) swap=1.0/2.9GB (36%) cpu=93% browser_rss=0.58GB
+[18:36]   [capture-loop] iter=700 t=85.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=14 ram=8.5/16.0GB (53%) swap=1.0/2.9GB (36%) cpu=93% browser_rss=0.58GB
+[18:42]   [capture-loop] iter=750 t=91.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=8.5/16.0GB (53%) swap=1.0/2.9GB (36%) cpu=93% browser_rss=0.58GB
+[18:48]   [capture-loop] iter=800 t=97.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=18 ram=8.5/16.0GB (53%) swap=1.0/2.9GB (36%) cpu=92% browser_rss=0.58GB
+[18:54]   [capture-loop] iter=850 t=103.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=13 ram=8.6/16.0GB (54%) swap=1.0/2.9GB (36%) cpu=93% browser_rss=0.59GB
+[19:00]   [capture-loop] iter=900 t=109.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.5/16.0GB (53%) swap=1.0/2.9GB (36%) cpu=93% browser_rss=0.59GB
+[19:06]   [capture-loop] iter=950 t=115.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.5/16.0GB (53%) swap=1.1/2.9GB (39%) cpu=93% browser_rss=0.59GB
+[19:12]   [capture-loop] iter=1000 t=122.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=11 ram=8.5/16.0GB (53%) swap=1.2/2.9GB (40%) cpu=93% browser_rss=0.59GB
+[19:19]   [capture-loop] iter=1050 t=128.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=8.5/16.0GB (53%) swap=1.2/2.9GB (40%) cpu=94% browser_rss=0.59GB
+[19:25]   [capture-loop] iter=1100 t=134.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=8.5/16.0GB (53%) swap=1.2/2.9GB (40%) cpu=93% browser_rss=0.59GB
+[19:31]   [capture-loop] iter=1150 t=140.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=14 ram=8.5/16.0GB (53%) swap=1.2/2.9GB (40%) cpu=94% browser_rss=0.59GB
+[19:37]   [capture-loop] iter=1200 t=147.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=15 ram=8.5/16.0GB (53%) swap=1.2/2.9GB (40%) cpu=94% browser_rss=0.59GB
+[19:43]   [capture-loop] iter=1250 t=153.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=10 ram=8.5/16.0GB (53%) swap=1.2/2.9GB (40%) cpu=94% browser_rss=0.59GB
+[19:50]   [capture-loop] iter=1300 t=159.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.5/16.0GB (53%) swap=1.1/2.9GB (40%) cpu=86% browser_rss=0.59GB
+[19:56]   [capture-loop] iter=1350 t=165.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.2/16.0GB (52%) swap=1.1/2.9GB (40%) cpu=83% browser_rss=0.59GB
+[20:02]   [capture-loop] iter=1400 t=171.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=17 ram=8.8/16.0GB (55%) swap=1.3/2.9GB (44%) cpu=84% browser_rss=0.58GB
+[20:08]   [capture-loop] iter=1450 t=177.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=9.0/16.0GB (56%) swap=1.4/2.9GB (49%) cpu=78% browser_rss=0.56GB
+[20:14]   [capture-loop] iter=1500 t=183.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=10.0/16.0GB (63%) swap=1.5/2.9GB (53%) cpu=78% browser_rss=0.54GB
+[20:20]   [capture-loop] iter=1550 t=189.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=9.8/16.0GB (62%) swap=1.6/2.9GB (57%) cpu=80% browser_rss=0.53GB
+[20:26]   [capture-loop] iter=1600 t=195.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=10.0/16.0GB (62%) swap=1.6/2.9GB (57%) cpu=70% browser_rss=0.51GB
+[20:32]   [capture-loop] iter=1650 t=201.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=11.6/16.0GB (72%) swap=1.7/2.9GB (61%) cpu=75% browser_rss=0.50GB
+[20:38]   [capture-loop] iter=1700 t=207.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=11.4/16.0GB (71%) swap=1.7/2.9GB (61%) cpu=76% browser_rss=0.50GB
+[20:44]   [capture-loop] iter=1750 t=213.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=40 ram=11.3/16.0GB (71%) swap=1.7/2.9GB (61%) cpu=84% browser_rss=0.49GB
+[20:50]   [capture-loop] iter=1800 t=219.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=8 ram=8.9/16.0GB (56%) swap=1.8/2.9GB (64%) cpu=95% browser_rss=0.48GB
+[20:56]   [capture-loop] iter=1850 t=226.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=12 ram=9.8/16.0GB (62%) swap=1.8/2.9GB (64%) cpu=95% browser_rss=0.47GB
+[21:03]   [capture-loop] iter=1900 t=232.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=13 ram=10.0/16.0GB (62%) swap=1.8/2.9GB (64%) cpu=93% browser_rss=0.45GB
+[21:09]   [capture-loop] iter=1950 t=238.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=10.0/16.0GB (63%) swap=1.8/2.9GB (64%) cpu=94% browser_rss=0.45GB
+[21:15]   [capture-loop] iter=2000 t=244.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=13 ram=10.3/16.0GB (64%) swap=1.8/2.9GB (64%) cpu=95% browser_rss=0.44GB
+[21:21]   [capture-loop] iter=2050 t=250.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.9/16.0GB (55%) swap=1.8/2.9GB (64%) cpu=83% browser_rss=0.43GB
+[21:24]   Frame 5 saved (frame_004.jpg, t=253.6s)
+[21:24]   [capture-periodic] freeze=24ms shot=160ms unfreeze=6ms saved=True
+[21:27]   [capture-loop] iter=2100 t=256.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.7/16.0GB (55%) swap=1.5/2.9GB (52%) cpu=73% browser_rss=0.45GB
+[21:32]   Node executed (1 total), capturing...
+[21:32]   Frame 6 saved (frame_005.jpg, t=261.5s)
+[21:32]   [capture-node] freeze=5ms shot=165ms unfreeze=5ms saved=True
+[21:33]   Execution complete (t=262.2s)
+[21:33]   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
+[21:33]   [3d-wait] Phase 1 done in 0.0s
+[21:33]   [3d-wait] Phase 2: iframes=1
+[21:33]   [3d-wait] iframe viewer_ready=False (matched 0 console logs)
+[21:33]   [3d-wait] Waiting for 'Loaded successfully' console message (timeout=60s)...
+[21:34]   [3d-wait] Got 'Loaded successfully' after 1.3s
+[21:34]   [3d-wait] Unfrozen in 0.300s, rendering for 5s...
+[21:50]   [3d-wait] JS halted via CDP after 16.1s
+[22:37]   [3d-wait] Re-frozen in 63.1s
+[22:37]   [3d-wait] Total 3D wait: 64.5s
+[22:37]   Captured 6 unique frames over 326.72s
+[22:37]   [debug] iframes: 1
+[22:37]   [debug]   iframe[0]: src=http://127.0.0.1:41888/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=3040x2022, rafFrozen=True
+[22:37]   [timing] trigger_3d_previews: 0.0s
+[22:39]   Saved high-quality screenshot: sharp_exif_executed.png
+[22:39]   [timing] final_screenshot: 0.3s
+[22:40] Results saved to D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1125\dev\windows-portable-cpu\results.json
+[22:40] Model report: 12 files, 2.6 GB -> D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1125\dev\windows-portable-cpu\models.json
+[22:40] Saved: D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1125\dev\windows-portable-cpu\index.html
+[22:40] [EXECUTION] PASSED
+[22:40] 
 windows_portable: PASSED
-[21:33] Stopping ComfyUI server...
+[22:40] Stopping ComfyUI server...
