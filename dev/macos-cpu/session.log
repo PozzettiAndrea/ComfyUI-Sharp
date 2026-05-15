@@ -1,4 +1,4 @@
-[00:00] Crash dump logging enabled: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0519/dev/macos-cpu/crash_dump.log
+[00:00] Crash dump logging enabled: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0523/dev/macos-cpu/crash_dump.log
 [00:00] 
 [00:00] [1/5] SYNTAX
 [00:00] ----------------------------------------
@@ -17,329 +17,331 @@
 [00:00] 
 Setting up ComfyUI...
 [00:00] Cloning ComfyUI (latest)...
-[00:00] Running: git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI
+[00:00] Running: git clone --depth 1 https://github.com/comfyanonymous/ComfyUI.git /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI
 [00:01] Creating virtual environment...
-[00:01] Running: /Library/Frameworks/Python.framework/Versions/3.10/bin/python -m venv /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/venv
+[00:01] Running: /Library/Frameworks/Python.framework/Versions/3.13/bin/python -m venv /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/venv
 [00:03] Installing uv into venv...
-[00:03] Running: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/venv/bin/python -m pip install uv
-[00:05] Installing PyTorch...
-[00:05] Running: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/venv/bin/python -m uv pip install torch torchvision torchaudio
-[00:13] Installing ComfyUI requirements...
-[00:13] Running: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/venv/bin/python -m uv pip install -r /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/requirements.txt
-[00:22] 
+[00:03] Running: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/venv/bin/python -m pip install uv
+[00:04] Installing PyTorch...
+[00:04] Running: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/venv/bin/python -m uv pip install torch torchvision torchaudio
+[00:12] Installing ComfyUI requirements...
+[00:12] Running: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/venv/bin/python -m uv pip install -r /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/requirements.txt
+[00:23] 
 Installing custom node...
-[00:22] Copying ComfyUI-Sharp to custom_nodes/...
-[00:22] Installing node requirements...
-[00:22] Running: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/venv/bin/python -m uv pip install -r /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-Sharp/requirements.txt
-[00:22] 
+[00:23] Copying ComfyUI-Sharp to custom_nodes/...
+[00:23] Installing node requirements...
+[00:23] Running: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/venv/bin/python -m uv pip install -r /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/requirements.txt
+[00:24] 
 Running install.py...
-[00:22] Running: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/venv/bin/python /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-Sharp/install.py
-[00:23]   
-[00:23]   Installing 1 node dependencies...
-[00:23]     Cloning ComfyUI-GeometryPack...
-[00:25]     Installing requirements for ComfyUI-GeometryPack...
-[00:26]     Running install.py for ComfyUI-GeometryPack...
-[00:27]   [comfy-env] _discover: scanning /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes
-[00:27]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes/ComfyUI-GeometryPack/nodes/comfy-env.toml)
-[00:27]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes/ComfyUI-Sharp/nodes/comfy-env.toml)
-[00:27]   [comfy-env] Workspace: /Users/runner/.ce
-[00:27]   [comfy-env] ComfyUI: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI
-[00:27]   [comfy-env] Found 2 node config(s):
-[00:27]     - geometrypack-nodes <- custom_nodes/ComfyUI-GeometryPack/nodes/comfy-env.toml (python=host)
-[00:27]     - sharp-nodes <- custom_nodes/ComfyUI-Sharp/nodes/comfy-env.toml (python=host)
-[00:27]   [comfy-env] Bootstrap interpreter has python 3.10 + torch 2.12.0 (cpu). Looking for cuda-only wheels matching cpu/torch2.12/cp310.
-[00:27]   Generated /Users/runner/.ce/pixi.toml
-[00:27]   [comfy-env] Installing 2 environment(s):
-[00:27]     - geometrypack-nodes (python=host, 14 pypi deps, 1 cuda wheels)
-[00:27]     - sharp-nodes (python=host, 10 pypi deps)
-[00:27]   [comfy-env] Running `pixi install -e geometrypack-nodes -e sharp-nodes`...
-[01:00]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
-[01:00]     	- bin/.librsvg-pre-unlink.sh
-[01:00]     To enable them, run:
-[01:00]     	pixi config set --local run-post-link-scripts insecure
-[01:00]     More info:
-[01:00]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
-[01:03]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
-[01:03]     	- bin/.librsvg-pre-unlink.sh
-[01:03]     To enable them, run:
-[01:03]     	pixi config set --local run-post-link-scripts insecure
-[01:03]     More info:
-[01:03]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
-[01:07]     ✔ The following environments have been installed: geometrypack-nodes, sharp-nodes.
-[01:07]   [comfy-env] geometrypack-nodes: deduped libomp
-[01:07]   [comfy-env] sharp-nodes: deduped libomp
-[01:07]   [comfy-env] Recorded install hash 3536ff80e155 -> /Users/runner/.ce/install.hash
-[01:07]   [comfy-env] Install log: /Users/runner/.ce/install.log
-[01:07]   
-[01:07]   Installation complete!
-[01:08]   
-[01:08]   [requirements] Re-installing main package requirements...
-[01:08]     Installing requirements for ComfyUI-Sharp...
-[01:08]   [comfy-env] _discover: scanning /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes
-[01:08]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes/ComfyUI-GeometryPack/nodes/comfy-env.toml)
-[01:08]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes/ComfyUI-Sharp/nodes/comfy-env.toml)
-[01:08]   [comfy-env] Workspace inputs unchanged (hash 3536ff80e155) -- skipping install. Delete /Users/runner/.ce/install.hash to force.
-[01:08]   
-[01:08]   Installation complete!
-[01:08] Installing 1 node dependency(ies)...
-[01:08]   ComfyUI-GeometryPack from PozzettiAndrea/ComfyUI-GeometryPack
-[01:08]   ComfyUI-GeometryPack already exists, skipping...
-[01:08] Installing validation endpoint...
-[01:08]   Cloning PozzettiAndrea/ComfyUI-validate-endpoint...
-[01:08] Running: git clone --depth 1 https://github.com/PozzettiAndrea/ComfyUI-validate-endpoint.git /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-validate-endpoint
-[01:08] [INSTALL] PASSED
-[01:08] 
-[01:08] [3/5] REGISTRATION
-[01:08] ----------------------------------------
-[01:08] 
+[00:24] Running: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/venv/bin/python /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/install.py
+[00:25]   
+[00:25]   Installing 1 node dependencies...
+[00:25]     Cloning ComfyUI-GeometryPack...
+[00:27]     Installing requirements for ComfyUI-GeometryPack...
+[00:27]     Running install.py for ComfyUI-GeometryPack...
+[00:28]   [comfy-env] _discover: scanning /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes
+[00:28]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes/ComfyUI-GeometryPack/nodes/comfy-env.toml)
+[00:28]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes/ComfyUI-Sharp/nodes/comfy-env.toml)
+[00:28]   [comfy-env] Workspace: /Users/runner/.ce
+[00:28]   [comfy-env] ComfyUI: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI
+[00:28]   [comfy-env] Found 2 node config(s):
+[00:28]     - geometrypack-nodes <- custom_nodes/ComfyUI-GeometryPack/nodes/comfy-env.toml (python=host)
+[00:28]     - sharp-nodes <- custom_nodes/ComfyUI-Sharp/nodes/comfy-env.toml (python=host)
+[00:28]   [comfy-env] Bootstrap interpreter has python 3.13 + torch 2.12.0 (cpu). Looking for cuda-only wheels matching cpu/torch2.12/cp313.
+[00:28]   Generated /Users/runner/.ce/pixi.toml
+[00:28]   [comfy-env] Installing 2 environment(s):
+[00:28]     - geometrypack-nodes (python=host, 14 pypi deps, 1 cuda wheels)
+[00:28]     - sharp-nodes (python=host, 10 pypi deps)
+[00:28]   [comfy-env] Running `pixi install -e geometrypack-nodes -e sharp-nodes`...
+[01:08]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
+[01:08]     	- bin/.librsvg-pre-unlink.sh
+[01:08]     To enable them, run:
+[01:08]     	pixi config set --local run-post-link-scripts insecure
+[01:08]     More info:
+[01:08]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
+[01:13]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
+[01:13]     	- bin/.librsvg-pre-unlink.sh
+[01:13]     To enable them, run:
+[01:13]     	pixi config set --local run-post-link-scripts insecure
+[01:13]     More info:
+[01:13]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
+[01:19]     ✔ The following environments have been installed: geometrypack-nodes, sharp-nodes.
+[01:19]   [comfy-env] geometrypack-nodes: deduped libomp
+[01:19]   [comfy-env] sharp-nodes: deduped libomp
+[01:19]   [comfy-env] Recorded install hash 3536ff80e155 -> /Users/runner/.ce/install.hash
+[01:19]   [comfy-env] Install log: /Users/runner/.ce/install.log
+[01:19]   
+[01:19]   Installation complete!
+[01:19]   
+[01:19]   [requirements] Re-installing main package requirements...
+[01:19]     Installing requirements for ComfyUI-Sharp...
+[01:19]   [comfy-env] _discover: scanning /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes
+[01:19]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes/ComfyUI-GeometryPack/nodes/comfy-env.toml)
+[01:19]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes/ComfyUI-Sharp/nodes/comfy-env.toml)
+[01:19]   [comfy-env] Workspace inputs unchanged (hash 3536ff80e155) -- skipping install. Delete /Users/runner/.ce/install.hash to force.
+[01:19]   
+[01:19]   Installation complete!
+[01:19] Installing 1 node dependency(ies)...
+[01:19]   ComfyUI-GeometryPack from PozzettiAndrea/ComfyUI-GeometryPack
+[01:19]   ComfyUI-GeometryPack already exists, skipping...
+[01:19] Installing validation endpoint...
+[01:19]   Cloning PozzettiAndrea/ComfyUI-validate-endpoint...
+[01:19] Running: git clone --depth 1 https://github.com/PozzettiAndrea/ComfyUI-validate-endpoint.git /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-validate-endpoint
+[01:20] [INSTALL] PASSED
+[01:20] 
+[01:20] [3/5] REGISTRATION
+[01:20] ----------------------------------------
+[01:20] 
 [DEBUG] server=None, server_url=None, api=None
-[01:08] 
+[01:20] 
 Starting ComfyUI server...
-[01:08] Starting ComfyUI server on port 41896...
-[01:08] Starting ComfyUI server on port 41896...
-[01:08] Waiting for server to be ready (timeout: 600s)...
-[01:10]   [ComfyUI] setup plugin alembic.autogenerate.schemas
-[01:10]   [ComfyUI] setup plugin alembic.autogenerate.tables
-[01:10]   [ComfyUI] setup plugin alembic.autogenerate.types
-[01:10]   [ComfyUI] setup plugin alembic.autogenerate.constraints
-[01:10]   [ComfyUI] setup plugin alembic.autogenerate.defaults
-[01:10]   [ComfyUI] setup plugin alembic.autogenerate.comments
-[01:10]   [ComfyUI] Could not autodetect AIMDO implementation, assuming Nvidia
-[01:10]   [ComfyUI] comfy-aimdo unsupported operating system: Darwin
-[01:10]   [ComfyUI] NOTE: comfy-aimdo currently only supports Windows and Linux
-[01:10]   [ComfyUI] [comfy-env] ComfyUI-Sharp: 1 isolation env(s):
-[01:10]   [ComfyUI] [comfy-env]   nodes -> /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes
-[01:10]   [ComfyUI] [comfy-env] Workspace: /Users/runner/.ce
-[01:10]   [ComfyUI] [comfy-env]     env: /Users/runner/.ce/.pixi/envs/sharp-nodes  [OK]
-[01:12]   [ComfyUI] [comfy-env] prestartup complete
-[01:12]   [ComfyUI] [comfy-env] ComfyUI-GeometryPack: 1 isolation env(s):
-[01:12]   [ComfyUI] [comfy-env]   nodes -> /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-GeometryPack/nodes
-[01:12]   [ComfyUI] [comfy-env]     env: /Users/runner/.ce/.pixi/envs/geometrypack-nodes  [OK]
-[01:12]   [ComfyUI] [comfy-env] prestartup complete
-[01:12]   [ComfyUI] 
-[01:12]   [ComfyUI] Prestartup times for custom nodes:
-[01:12]   [ComfyUI]    0.2 seconds: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-GeometryPack
-[01:12]   [ComfyUI]    2.4 seconds: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-Sharp
-[01:12]   [ComfyUI] 
-[01:12]   [ComfyUI] WARNING: Potential Error in code: Torch already imported, torch should never be imported before this point.
-[01:15]   [ComfyUI] Found comfy_kitchen backend eager: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_mxfp8', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'scaled_mm_mxfp8', 'scaled_mm_nvfp4']}
-[01:15]   [ComfyUI] Found comfy_kitchen backend cuda: {'available': False, 'disabled': True, 'unavailable_reason': 'Extension file not found: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/venv/lib/python3.10/site-packages/comfy_kitchen/backends/cuda/_C.abi3.so', 'capabilities': []}
-[01:15]   [ComfyUI] Found comfy_kitchen backend triton: {'available': False, 'disabled': True, 'unavailable_reason': "ImportError: No module named 'triton'", 'capabilities': []}
-[01:15]   [ComfyUI] Checkpoint files will always be loaded safely.
-[01:15]   [ComfyUI] Total VRAM 7168 MB, total RAM 7168 MB
-[01:15]   [ComfyUI] pytorch version: 2.12.0
-[01:15]   [ComfyUI] Mac Version (15, 7, 5)
-[01:15]   [ComfyUI] Set vram state to: SHARED
-[01:15]   [ComfyUI] Device: mps
-[01:16]   [ComfyUI] Using sub quadratic optimization for attention, if you have memory or speed issues try using: --use-split-cross-attention
-[01:21]   [ComfyUI] Python version: 3.10.11 (v3.10.11:7d4cc5aa85, Apr  4 2023, 19:05:19) [Clang 13.0.0 (clang-1300.0.29.30)]
-[01:21]   [ComfyUI] ComfyUI version: 0.21.1
-[01:21]   [ComfyUI] comfy-aimdo version: 0.3.0
-[01:21]   [ComfyUI] comfy-kitchen version: 0.2.8
-[01:21]   [ComfyUI] ****** User settings have been changed to be stored on the server instead of browser storage. ******
-[01:21]   [ComfyUI] ****** For multi-user setups add the --multi-user CLI argument to enable multiple user profiles. ******
-[01:21]   [ComfyUI] comfyui-frontend-package version: 1.43.18
-[01:21]   [ComfyUI] comfyui-workflow-templates version: 0.9.77
-[01:21]   [ComfyUI] comfyui-embedded-docs version: 0.5.0
-[01:21]   [ComfyUI] comfy-kitchen version: 0.2.8
-[01:21]   [ComfyUI] comfy-aimdo version: 0.3.0
-[01:21]   [ComfyUI] [Prompt Server] web root: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/venv/lib/python3.10/site-packages/comfyui_frontend_package/static
-[01:21]   [ComfyUI] Asset seeder disabled
-[01:23]   [ComfyUI] [comfy-env] Version: 0.3.88
-[01:23]   [ComfyUI] [comfy-env] register_nodes: ComfyUI-Sharp
-[01:23]   [ComfyUI] [comfy-env] ComfyUI source dir: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI
-[01:23]   [ComfyUI] [comfy-env] Found 1 isolation env(s)
-[01:23]   [ComfyUI] [comfy-env] Scanning nodes metadata (isolation root)...
-[01:23]   [ComfyUI] [comfy-env] Metadata scan: /Users/runner/.pixi/bin/pixi run --as-is --manifest-path /Users/runner/.ce/pixi.toml -e sharp-nodes python /var/folders/p1/6r4c82w967v9djw141qtq0vm0000gn/T/comfy_meta_0ldrx3lm.py /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-Sharp nodes /var/folders/p1/6r4c82w967v9djw141qtq0vm0000gn/T/comfy_meta_out_6vreko9t.pkl
-[01:23]   [ComfyUI] [comfy-env] Scan env PATH for nodes:
-[01:23]   [ComfyUI] [comfy-env]   [0] /Users/runner/hostedtoolcache/Python/3.10.11/arm64/bin
-[01:23]   [ComfyUI] [comfy-env]   [1] /Users/runner/hostedtoolcache/Python/3.10.11/arm64
-[01:23]   [ComfyUI] [comfy-env]   [2] /opt/homebrew/lib/ruby/gems/3.3.0/bin
-[01:23]   [ComfyUI] [comfy-env]   [3] /opt/homebrew/opt/ruby@3.3/bin
-[01:23]   [ComfyUI] [comfy-env]   [4] /Users/runner/.local/bin
-[01:23]   [ComfyUI] [comfy-env]   [5] /opt/homebrew/bin
-[01:23]   [ComfyUI] [comfy-env]   [6] /opt/homebrew/sbin
-[01:23]   [ComfyUI] [comfy-env]   [7] /Users/runner/.cargo/bin
-[01:23]   [ComfyUI] [comfy-env]   [8] /usr/local/opt/curl/bin
-[01:23]   [ComfyUI] [comfy-env]   [9] /usr/local/bin
-[01:23]   [ComfyUI] [comfy-env]   [10] /usr/local/sbin
-[01:23]   [ComfyUI] [comfy-env]   [11] /Users/runner/bin
-[01:23]   [ComfyUI] [comfy-env]   [12] /Users/runner/.yarn/bin
-[01:23]   [ComfyUI] [comfy-env]   [13] /Users/runner/Library/Android/sdk/tools
-[01:23]   [ComfyUI] [comfy-env]   [14] /Users/runner/Library/Android/sdk/platform-tools
-[01:23]   [ComfyUI] [comfy-env]   [15] /Library/Frameworks/Python.framework/Versions/Current/bin
-[01:23]   [ComfyUI] [comfy-env]   [16] /Library/Frameworks/Mono.framework/Versions/Current/Commands
-[01:23]   [ComfyUI] [comfy-env]   [17] /usr/bin
-[01:23]   [ComfyUI] [comfy-env]   [18] /bin
-[01:23]   [ComfyUI] [comfy-env]   [19] /usr/sbin
-[01:23]   [ComfyUI] [comfy-env]   [20] /sbin
-[01:23]   [ComfyUI] [comfy-env]   [21] /Users/runner/.dotnet/tools
-[01:23]   [ComfyUI] [comfy-env] Metadata scan stderr for nodes:
-[01:23]   [ComfyUI] [comfy-env]   [meta-scan] importing nodes from /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-Sharp
-[01:23]   [ComfyUI] [comfy-env]   Traceback (most recent call last):
-[01:23]   [ComfyUI] [comfy-env]     File "/var/folders/p1/6r4c82w967v9djw141qtq0vm0000gn/T/comfy_meta_0ldrx3lm.py", line 65, in <module>
-[01:23]   [ComfyUI] [comfy-env]       module = importlib.import_module(package_name)
-[01:23]   [ComfyUI] [comfy-env]     File "/Users/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.10/importlib/__init__.py", line 126, in import_module
-[01:23]   [ComfyUI] [comfy-env]       return _bootstrap._gcd_import(name[level:], package, level)
-[01:23]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-[01:23]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-[01:23]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
-[01:23]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-[01:23]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-[01:23]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-[01:23]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/__init__.py", line 3, in <module>
-[01:23]   [ComfyUI] [comfy-env]       from .load_model import NODE_CLASS_MAPPINGS as LOAD_MODEL_MAPPINGS
-[01:23]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 11, in <module>
-[01:23]   [ComfyUI] [comfy-env]       import torch
-[01:23]   [ComfyUI] [comfy-env]   ModuleNotFoundError: No module named 'torch'
-[01:23]   [ComfyUI] [comfy-env] Metadata scan failed for nodes (exit 1, 0.2s):
-[01:23]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-[01:23]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
-[01:23]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-[01:23]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-[01:23]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-[01:23]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/__init__.py", line 3, in <module>
-[01:23]   [ComfyUI] [comfy-env]       from .load_model import NODE_CLASS_MAPPINGS as LOAD_MODEL_MAPPINGS
-[01:23]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 11, in <module>
-[01:23]   [ComfyUI] [comfy-env]       import torch
-[01:23]   [ComfyUI] [comfy-env]   ModuleNotFoundError: No module named 'torch'
-[01:23]   [ComfyUI] [comfy-env] Scanned nodes root: 0 nodes (0.2s)
-[01:23]   [ComfyUI] [comfy-env] Imported nodes root: 0 nodes (isolation)
-[01:23]   [ComfyUI] [comfy-env] Registered 0 total nodes
-[01:23]   [ComfyUI] loading...
-[01:23]   [ComfyUI] calling register_nodes
-[01:23]   [ComfyUI] [comfy-env] Version: 0.3.88
-[01:23]   [ComfyUI] [comfy-env] register_nodes: ComfyUI-GeometryPack
-[01:23]   [ComfyUI] [comfy-env] ComfyUI source dir: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI
-[01:23]   [ComfyUI] [comfy-env] Found 1 isolation env(s)
-[01:23]   [ComfyUI] [comfy-env] Scanning nodes metadata (isolation root)...
-[01:23]   [ComfyUI] [comfy-env] Metadata scan: /Users/runner/.pixi/bin/pixi run --as-is --manifest-path /Users/runner/.ce/pixi.toml -e geometrypack-nodes python /var/folders/p1/6r4c82w967v9djw141qtq0vm0000gn/T/comfy_meta_sogkzkxi.py /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-GeometryPack nodes /var/folders/p1/6r4c82w967v9djw141qtq0vm0000gn/T/comfy_meta_out_meuo383g.pkl
-[01:23]   [ComfyUI] [comfy-env] Scan env PATH for nodes:
-[01:23]   [ComfyUI] [comfy-env]   [0] /Users/runner/hostedtoolcache/Python/3.10.11/arm64/bin
-[01:23]   [ComfyUI] [comfy-env]   [1] /Users/runner/hostedtoolcache/Python/3.10.11/arm64
-[01:23]   [ComfyUI] [comfy-env]   [2] /opt/homebrew/lib/ruby/gems/3.3.0/bin
-[01:23]   [ComfyUI] [comfy-env]   [3] /opt/homebrew/opt/ruby@3.3/bin
-[01:23]   [ComfyUI] [comfy-env]   [4] /Users/runner/.local/bin
-[01:23]   [ComfyUI] [comfy-env]   [5] /opt/homebrew/bin
-[01:23]   [ComfyUI] [comfy-env]   [6] /opt/homebrew/sbin
-[01:23]   [ComfyUI] [comfy-env]   [7] /Users/runner/.cargo/bin
-[01:23]   [ComfyUI] [comfy-env]   [8] /usr/local/opt/curl/bin
-[01:23]   [ComfyUI] [comfy-env]   [9] /usr/local/bin
-[01:23]   [ComfyUI] [comfy-env]   [10] /usr/local/sbin
-[01:23]   [ComfyUI] [comfy-env]   [11] /Users/runner/bin
-[01:23]   [ComfyUI] [comfy-env]   [12] /Users/runner/.yarn/bin
-[01:23]   [ComfyUI] [comfy-env]   [13] /Users/runner/Library/Android/sdk/tools
-[01:23]   [ComfyUI] [comfy-env]   [14] /Users/runner/Library/Android/sdk/platform-tools
-[01:23]   [ComfyUI] [comfy-env]   [15] /Library/Frameworks/Python.framework/Versions/Current/bin
-[01:23]   [ComfyUI] [comfy-env]   [16] /Library/Frameworks/Mono.framework/Versions/Current/Commands
-[01:23]   [ComfyUI] [comfy-env]   [17] /usr/bin
-[01:23]   [ComfyUI] [comfy-env]   [18] /bin
-[01:23]   [ComfyUI] [comfy-env]   [19] /usr/sbin
-[01:23]   [ComfyUI] [comfy-env]   [20] /sbin
-[01:23]   [ComfyUI] [comfy-env]   [21] /Users/runner/.dotnet/tools
-[01:28]   [ComfyUI] [comfy-env] Metadata scan stderr for nodes:
-[01:28]   [ComfyUI] [comfy-env]   [meta-scan] importing nodes from /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-GeometryPack
-[01:28]   [ComfyUI] [comfy-env]   Traceback (most recent call last):
-[01:28]   [ComfyUI] [comfy-env]     File "/var/folders/p1/6r4c82w967v9djw141qtq0vm0000gn/T/comfy_meta_sogkzkxi.py", line 65, in <module>
-[01:28]   [ComfyUI] [comfy-env]       module = importlib.import_module(package_name)
-[01:28]   [ComfyUI] [comfy-env]     File "/Users/runner/.ce/.pixi/envs/geometrypack-nodes/lib/python3.10/importlib/__init__.py", line 126, in import_module
-[01:28]   [ComfyUI] [comfy-env]       return _bootstrap._gcd_import(name[level:], package, level)
-[01:28]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
-[01:28]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
-[01:28]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
-[01:28]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-[01:28]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-[01:28]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-[01:28]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-GeometryPack/nodes/__init__.py", line 17, in <module>
-[01:28]   [ComfyUI] [comfy-env]       from . import blender_io
-[01:28]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-GeometryPack/nodes/blender_io/__init__.py", line 8, in <module>
-[01:28]   [ComfyUI] [comfy-env]       from .load_mesh_blend import NODE_CLASS_MAPPINGS as LOAD_MESH_BLEND_MAPS, NODE_DISPLAY_NAME_MAPPINGS as LOAD_MESH_BLEND_DISP
-[01:28]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-GeometryPack/nodes/blender_io/load_mesh_blend.py", line 29, in <module>
-[01:28]   [ComfyUI] [comfy-env]       from comfy_api.latest import io
-[01:28]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/comfy_api/latest/__init__.py", line 8, in <module>
-[01:28]   [ComfyUI] [comfy-env]       from ._input import ImageInput, AudioInput, MaskInput, LatentInput, VideoInput
-[01:28]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/comfy_api/latest/_input/__init__.py", line 1, in <module>
-[01:28]   [ComfyUI] [comfy-env]       from .basic_types import ImageInput, AudioInput, MaskInput, LatentInput
-[01:28]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/comfy_api/latest/_input/basic_types.py", line 1, in <module>
-[01:28]   [ComfyUI] [comfy-env]       import torch
-[01:28]   [ComfyUI] [comfy-env]   ModuleNotFoundError: No module named 'torch'
-[01:28]   [ComfyUI] [comfy-env] Metadata scan failed for nodes (exit 1, 4.3s):
-[01:28]   [ComfyUI] [comfy-env]       from .load_mesh_blend import NODE_CLASS_MAPPINGS as LOAD_MESH_BLEND_MAPS, NODE_DISPLAY_NAME_MAPPINGS as LOAD_MESH_BLEND_DISP
-[01:28]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-GeometryPack/nodes/blender_io/load_mesh_blend.py", line 29, in <module>
-[01:28]   [ComfyUI] [comfy-env]       from comfy_api.latest import io
-[01:28]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/comfy_api/latest/__init__.py", line 8, in <module>
-[01:28]   [ComfyUI] [comfy-env]       from ._input import ImageInput, AudioInput, MaskInput, LatentInput, VideoInput
-[01:28]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/comfy_api/latest/_input/__init__.py", line 1, in <module>
-[01:28]   [ComfyUI] [comfy-env]       from .basic_types import ImageInput, AudioInput, MaskInput, LatentInput
-[01:28]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/comfy_api/latest/_input/basic_types.py", line 1, in <module>
-[01:28]   [ComfyUI] [comfy-env]       import torch
-[01:28]   [ComfyUI] [comfy-env]   ModuleNotFoundError: No module named 'torch'
-[01:28]   [ComfyUI] [comfy-env] Scanned nodes root: 0 nodes (4.3s)
-[01:28]   [ComfyUI] [comfy-env] Imported nodes root: 0 nodes (isolation)
-[01:28]   [ComfyUI] [comfy-env] Registered 0 total nodes
-[01:28]   [ComfyUI] 
-[01:28]   [ComfyUI] Import times for custom nodes:
-[01:28]   [ComfyUI]    0.0 seconds: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-validate-endpoint
-[01:28]   [ComfyUI]    0.0 seconds: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/websocket_image_save.py
-[01:28]   [ComfyUI]    0.3 seconds: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-Sharp
-[01:28]   [ComfyUI]    4.4 seconds: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0519/ComfyUI/custom_nodes/ComfyUI-GeometryPack
-[01:28]   [ComfyUI] 
-[01:28]   [ComfyUI] Context impl SQLiteImpl.
-[01:28]   [ComfyUI] Will assume non-transactional DDL.
-[01:28]   [ComfyUI] Context impl SQLiteImpl.
-[01:28]   [ComfyUI] Will assume non-transactional DDL.
-[01:28]   [ComfyUI] Running upgrade  -> 0001_assets, Initial assets schema
-[01:28]   [ComfyUI] Revision ID: 0001_assets
-[01:28]   [ComfyUI] Revises: None
-[01:28]   [ComfyUI] Create Date: 2025-12-10 00:00:00
-[01:28]   [ComfyUI] Running upgrade 0001_assets -> 0002_merge_to_asset_references, Merge AssetInfo and AssetCacheState into unified asset_references table.
-[01:28]   [ComfyUI] Running upgrade 0002_merge_to_asset_references -> 0003_add_metadata_job_id, Add system_metadata and job_id columns to asset_references.
-[01:28]   [ComfyUI] Change preview_id FK from assets.id to asset_references.id.
-[01:28]   [ComfyUI] Database upgraded from None to 0003_add_metadata_job_id
-[01:28]   [ComfyUI] Starting server
-[01:28]   [ComfyUI] 
-[01:28]   [ComfyUI] To see the GUI go to: http://127.0.0.1:41896
-[01:28] Server responding, waiting for nodes to load...
-[01:48] Server is ready!
-[01:48] Checking for import errors in server logs...
-[01:48] No import errors detected
-[01:48] Found 720 registered nodes
-[01:48] [REGISTRATION] PASSED
-[01:48] 
-[01:48] [4/5] INSTANTIATION
-[01:48] ----------------------------------------
-[01:48] 
-[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x10270bd90>, server_url=None, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x10280c850>
-[01:48] Testing node constructors...
-[01:50] All 0 node(s) instantiated successfully!
-[01:50] [INSTANTIATION] PASSED
-[01:50] 
-[01:50] [5/5] EXECUTION
-[01:50] ----------------------------------------
-[01:50] 
-[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x10270bd90>, server_url=None, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x10280c850>
-[01:50] CPU runner - will execute 2 workflow(s)
-[01:50] Running 3 workflow(s) (all with videos)...
-[01:50] Installing screenshot dependencies (playwright, pillow)...
-[01:51]   Packages installed, downloading chromium browser...
-[02:01]   Screenshot dependencies installed successfully
-[02:01] Starting headless browser...
-[02:01]   macOS -- using Apple Metal GPU via ANGLE
-[02:02]   [1/3] SKIPPED (not in cpu list) pano.json
-[02:02] Capturing execution frames: sharp_basic.json
-[02:10]   Frame 1 saved (frame_000.jpg, t=0.0s)
-[02:10]   Validating workflow...
-[02:10]   Validation failed: graphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,4,5], sample: {"inputs":{"image":"beach.jpg"},"class_type":"LoadImage","_meta":{"title":"Load Image"}}
-[02:10] Capturing execution frames: sharp_exif.json
-[02:16]   Frame 1 saved (frame_000.jpg, t=0.0s)
-[02:16]   Validating workflow...
-[02:16]   Validation failed: graphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,7,8,9], sample: {"inputs":{"UNKNOWN":""},"_meta":{}}
-[02:16] Results saved to /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0519/dev/macos-cpu/results.json
-[02:16] Saved: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0519/dev/macos-cpu/index.html
-[02:16] 
+[01:20] Starting ComfyUI server on port 41886...
+[01:20] Starting ComfyUI server on port 41886...
+[01:20] Waiting for server to be ready (timeout: 600s)...
+[01:22]   [ComfyUI] setup plugin alembic.autogenerate.schemas
+[01:22]   [ComfyUI] setup plugin alembic.autogenerate.tables
+[01:22]   [ComfyUI] setup plugin alembic.autogenerate.types
+[01:22]   [ComfyUI] setup plugin alembic.autogenerate.constraints
+[01:22]   [ComfyUI] setup plugin alembic.autogenerate.defaults
+[01:22]   [ComfyUI] setup plugin alembic.autogenerate.comments
+[01:23]   [ComfyUI] Could not autodetect AIMDO implementation, assuming Nvidia
+[01:23]   [ComfyUI] comfy-aimdo unsupported operating system: Darwin
+[01:23]   [ComfyUI] NOTE: comfy-aimdo currently only supports Windows and Linux
+[01:23]   [ComfyUI] [comfy-env] ComfyUI-Sharp: 1 isolation env(s):
+[01:23]   [ComfyUI] [comfy-env]   nodes -> /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes
+[01:23]   [ComfyUI] [comfy-env] Workspace: /Users/runner/.ce
+[01:23]   [ComfyUI] [comfy-env]     env: /Users/runner/.ce/.pixi/envs/sharp-nodes  [OK]
+[01:26]   [ComfyUI] [comfy-env] prestartup complete
+[01:26]   [ComfyUI] [comfy-env] ComfyUI-GeometryPack: 1 isolation env(s):
+[01:26]   [ComfyUI] [comfy-env]   nodes -> /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-GeometryPack/nodes
+[01:26]   [ComfyUI] [comfy-env]     env: /Users/runner/.ce/.pixi/envs/geometrypack-nodes  [OK]
+[01:26]   [ComfyUI] [comfy-env] prestartup complete
+[01:26]   [ComfyUI] 
+[01:26]   [ComfyUI] Prestartup times for custom nodes:
+[01:26]   [ComfyUI]    0.2 seconds: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-GeometryPack
+[01:26]   [ComfyUI]    3.5 seconds: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp
+[01:26]   [ComfyUI] 
+[01:26]   [ComfyUI] WARNING: Potential Error in code: Torch already imported, torch should never be imported before this point.
+[01:31]   [ComfyUI] Found comfy_kitchen backend eager: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_mxfp8', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'scaled_mm_mxfp8', 'scaled_mm_nvfp4']}
+[01:31]   [ComfyUI] Found comfy_kitchen backend triton: {'available': False, 'disabled': True, 'unavailable_reason': "ImportError: No module named 'triton'", 'capabilities': []}
+[01:31]   [ComfyUI] Found comfy_kitchen backend cuda: {'available': False, 'disabled': True, 'unavailable_reason': 'Extension file not found: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/venv/lib/python3.13/site-packages/comfy_kitchen/backends/cuda/_C.abi3.so', 'capabilities': []}
+[01:31]   [ComfyUI] Checkpoint files will always be loaded safely.
+[01:31]   [ComfyUI] Total VRAM 7168 MB, total RAM 7168 MB
+[01:31]   [ComfyUI] pytorch version: 2.12.0
+[01:31]   [ComfyUI] Mac Version (15, 7, 4)
+[01:31]   [ComfyUI] Set vram state to: SHARED
+[01:31]   [ComfyUI] Device: mps
+[01:32]   [ComfyUI] Using sub quadratic optimization for attention, if you have memory or speed issues try using: --use-split-cross-attention
+[01:40]   [ComfyUI] Python version: 3.13.13 (v3.13.13:01104ce1beb, Apr  7 2026, 14:43:30) [Clang 16.0.0 (clang-1600.0.26.6)]
+[01:40]   [ComfyUI] ComfyUI version: 0.21.1
+[01:40]   [ComfyUI] comfy-aimdo version: 0.3.0
+[01:40]   [ComfyUI] comfy-kitchen version: 0.2.8
+[01:40]   [ComfyUI] ****** User settings have been changed to be stored on the server instead of browser storage. ******
+[01:40]   [ComfyUI] ****** For multi-user setups add the --multi-user CLI argument to enable multiple user profiles. ******
+[01:40]   [ComfyUI] comfyui-frontend-package version: 1.43.18
+[01:40]   [ComfyUI] comfyui-workflow-templates version: 0.9.77
+[01:40]   [ComfyUI] comfyui-embedded-docs version: 0.5.0
+[01:40]   [ComfyUI] comfy-kitchen version: 0.2.8
+[01:40]   [ComfyUI] comfy-aimdo version: 0.3.0
+[01:40]   [ComfyUI] [Prompt Server] web root: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/venv/lib/python3.13/site-packages/comfyui_frontend_package/static
+[01:40]   [ComfyUI] Asset seeder disabled
+[01:43]   [ComfyUI] [comfy-env] Version: 0.3.88
+[01:43]   [ComfyUI] [comfy-env] register_nodes: ComfyUI-Sharp
+[01:43]   [ComfyUI] [comfy-env] ComfyUI source dir: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI
+[01:43]   [ComfyUI] [comfy-env] Found 1 isolation env(s)
+[01:43]   [ComfyUI] [comfy-env] Scanning nodes metadata (isolation root)...
+[01:43]   [ComfyUI] [comfy-env] Metadata scan: /Users/runner/.pixi/bin/pixi run --as-is --manifest-path /Users/runner/.ce/pixi.toml -e sharp-nodes python /var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_meta_2dc7gvwh.py /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp nodes /var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_meta_out_0040wjxp.pkl
+[01:43]   [ComfyUI] [comfy-env] Scan env PATH for nodes:
+[01:43]   [ComfyUI] [comfy-env]   [0] /Users/runner/hostedtoolcache/Python/3.13.13/arm64/bin
+[01:43]   [ComfyUI] [comfy-env]   [1] /Users/runner/hostedtoolcache/Python/3.13.13/arm64
+[01:43]   [ComfyUI] [comfy-env]   [2] /opt/homebrew/lib/ruby/gems/3.3.0/bin
+[01:43]   [ComfyUI] [comfy-env]   [3] /opt/homebrew/opt/ruby@3.3/bin
+[01:43]   [ComfyUI] [comfy-env]   [4] /Users/runner/.local/bin
+[01:43]   [ComfyUI] [comfy-env]   [5] /opt/homebrew/bin
+[01:43]   [ComfyUI] [comfy-env]   [6] /opt/homebrew/sbin
+[01:43]   [ComfyUI] [comfy-env]   [7] /Users/runner/.cargo/bin
+[01:43]   [ComfyUI] [comfy-env]   [8] /usr/local/opt/curl/bin
+[01:43]   [ComfyUI] [comfy-env]   [9] /usr/local/bin
+[01:43]   [ComfyUI] [comfy-env]   [10] /usr/local/sbin
+[01:43]   [ComfyUI] [comfy-env]   [11] /Users/runner/bin
+[01:43]   [ComfyUI] [comfy-env]   [12] /Users/runner/.yarn/bin
+[01:43]   [ComfyUI] [comfy-env]   [13] /Users/runner/Library/Android/sdk/tools
+[01:43]   [ComfyUI] [comfy-env]   [14] /Users/runner/Library/Android/sdk/platform-tools
+[01:43]   [ComfyUI] [comfy-env]   [15] /Library/Frameworks/Python.framework/Versions/Current/bin
+[01:43]   [ComfyUI] [comfy-env]   [16] /Library/Frameworks/Mono.framework/Versions/Current/Commands
+[01:43]   [ComfyUI] [comfy-env]   [17] /usr/bin
+[01:43]   [ComfyUI] [comfy-env]   [18] /bin
+[01:43]   [ComfyUI] [comfy-env]   [19] /usr/sbin
+[01:43]   [ComfyUI] [comfy-env]   [20] /sbin
+[01:43]   [ComfyUI] [comfy-env]   [21] /Users/runner/.dotnet/tools
+[01:43]   [ComfyUI] [comfy-env] Metadata scan stderr for nodes:
+[01:43]   [ComfyUI] [comfy-env]   [meta-scan] importing nodes from /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp
+[01:43]   [ComfyUI] [comfy-env]   Traceback (most recent call last):
+[01:43]   [ComfyUI] [comfy-env]     File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_meta_2dc7gvwh.py", line 65, in <module>
+[01:43]   [ComfyUI] [comfy-env]       module = importlib.import_module(package_name)
+[01:43]   [ComfyUI] [comfy-env]     File "/Users/runner/.ce/.pixi/envs/sharp-nodes/lib/python3.13/importlib/__init__.py", line 88, in import_module
+[01:43]   [ComfyUI] [comfy-env]       return _bootstrap._gcd_import(name[level:], package, level)
+[01:43]   [ComfyUI] [comfy-env]              ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[01:43]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+[01:43]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+[01:43]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+[01:43]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+[01:43]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+[01:43]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+[01:43]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/__init__.py", line 3, in <module>
+[01:43]   [ComfyUI] [comfy-env]       from .load_model import NODE_CLASS_MAPPINGS as LOAD_MODEL_MAPPINGS
+[01:43]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 11, in <module>
+[01:43]   [ComfyUI] [comfy-env]       import torch
+[01:43]   [ComfyUI] [comfy-env]   ModuleNotFoundError: No module named 'torch'
+[01:43]   [ComfyUI] [comfy-env] Metadata scan failed for nodes (exit 1, 0.2s):
+[01:43]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+[01:43]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+[01:43]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+[01:43]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+[01:43]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+[01:43]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/__init__.py", line 3, in <module>
+[01:43]   [ComfyUI] [comfy-env]       from .load_model import NODE_CLASS_MAPPINGS as LOAD_MODEL_MAPPINGS
+[01:43]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp/nodes/load_model.py", line 11, in <module>
+[01:43]   [ComfyUI] [comfy-env]       import torch
+[01:43]   [ComfyUI] [comfy-env]   ModuleNotFoundError: No module named 'torch'
+[01:43]   [ComfyUI] [comfy-env] Scanned nodes root: 0 nodes (0.2s)
+[01:43]   [ComfyUI] [comfy-env] Imported nodes root: 0 nodes (isolation)
+[01:43]   [ComfyUI] [comfy-env] Registered 0 total nodes
+[01:43]   [ComfyUI] loading...
+[01:43]   [ComfyUI] calling register_nodes
+[01:43]   [ComfyUI] [comfy-env] Version: 0.3.88
+[01:43]   [ComfyUI] [comfy-env] register_nodes: ComfyUI-GeometryPack
+[01:43]   [ComfyUI] [comfy-env] ComfyUI source dir: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI
+[01:43]   [ComfyUI] [comfy-env] Found 1 isolation env(s)
+[01:43]   [ComfyUI] [comfy-env] Scanning nodes metadata (isolation root)...
+[01:43]   [ComfyUI] [comfy-env] Metadata scan: /Users/runner/.pixi/bin/pixi run --as-is --manifest-path /Users/runner/.ce/pixi.toml -e geometrypack-nodes python /var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_meta_k05oiurn.py /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-GeometryPack nodes /var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_meta_out_gdhlk2lj.pkl
+[01:43]   [ComfyUI] [comfy-env] Scan env PATH for nodes:
+[01:43]   [ComfyUI] [comfy-env]   [0] /Users/runner/hostedtoolcache/Python/3.13.13/arm64/bin
+[01:43]   [ComfyUI] [comfy-env]   [1] /Users/runner/hostedtoolcache/Python/3.13.13/arm64
+[01:43]   [ComfyUI] [comfy-env]   [2] /opt/homebrew/lib/ruby/gems/3.3.0/bin
+[01:43]   [ComfyUI] [comfy-env]   [3] /opt/homebrew/opt/ruby@3.3/bin
+[01:43]   [ComfyUI] [comfy-env]   [4] /Users/runner/.local/bin
+[01:43]   [ComfyUI] [comfy-env]   [5] /opt/homebrew/bin
+[01:43]   [ComfyUI] [comfy-env]   [6] /opt/homebrew/sbin
+[01:43]   [ComfyUI] [comfy-env]   [7] /Users/runner/.cargo/bin
+[01:43]   [ComfyUI] [comfy-env]   [8] /usr/local/opt/curl/bin
+[01:43]   [ComfyUI] [comfy-env]   [9] /usr/local/bin
+[01:43]   [ComfyUI] [comfy-env]   [10] /usr/local/sbin
+[01:43]   [ComfyUI] [comfy-env]   [11] /Users/runner/bin
+[01:43]   [ComfyUI] [comfy-env]   [12] /Users/runner/.yarn/bin
+[01:43]   [ComfyUI] [comfy-env]   [13] /Users/runner/Library/Android/sdk/tools
+[01:43]   [ComfyUI] [comfy-env]   [14] /Users/runner/Library/Android/sdk/platform-tools
+[01:43]   [ComfyUI] [comfy-env]   [15] /Library/Frameworks/Python.framework/Versions/Current/bin
+[01:43]   [ComfyUI] [comfy-env]   [16] /Library/Frameworks/Mono.framework/Versions/Current/Commands
+[01:43]   [ComfyUI] [comfy-env]   [17] /usr/bin
+[01:43]   [ComfyUI] [comfy-env]   [18] /bin
+[01:43]   [ComfyUI] [comfy-env]   [19] /usr/sbin
+[01:43]   [ComfyUI] [comfy-env]   [20] /sbin
+[01:43]   [ComfyUI] [comfy-env]   [21] /Users/runner/.dotnet/tools
+[01:49]   [ComfyUI] [comfy-env] Metadata scan stderr for nodes:
+[01:49]   [ComfyUI] [comfy-env]   [meta-scan] importing nodes from /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-GeometryPack
+[01:49]   [ComfyUI] [comfy-env]   Traceback (most recent call last):
+[01:49]   [ComfyUI] [comfy-env]     File "/var/folders/tb/y368xp_x10s3ty1b_mtl5mxr0000gn/T/comfy_meta_k05oiurn.py", line 65, in <module>
+[01:49]   [ComfyUI] [comfy-env]       module = importlib.import_module(package_name)
+[01:49]   [ComfyUI] [comfy-env]     File "/Users/runner/.ce/.pixi/envs/geometrypack-nodes/lib/python3.13/importlib/__init__.py", line 88, in import_module
+[01:49]   [ComfyUI] [comfy-env]       return _bootstrap._gcd_import(name[level:], package, level)
+[01:49]   [ComfyUI] [comfy-env]              ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[01:49]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+[01:49]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+[01:49]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+[01:49]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+[01:49]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+[01:49]   [ComfyUI] [comfy-env]     File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+[01:49]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-GeometryPack/nodes/__init__.py", line 17, in <module>
+[01:49]   [ComfyUI] [comfy-env]       from . import blender_io
+[01:49]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-GeometryPack/nodes/blender_io/__init__.py", line 8, in <module>
+[01:49]   [ComfyUI] [comfy-env]       from .load_mesh_blend import NODE_CLASS_MAPPINGS as LOAD_MESH_BLEND_MAPS, NODE_DISPLAY_NAME_MAPPINGS as LOAD_MESH_BLEND_DISP
+[01:49]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-GeometryPack/nodes/blender_io/load_mesh_blend.py", line 29, in <module>
+[01:49]   [ComfyUI] [comfy-env]       from comfy_api.latest import io
+[01:49]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/__init__.py", line 8, in <module>
+[01:49]   [ComfyUI] [comfy-env]       from ._input import ImageInput, AudioInput, MaskInput, LatentInput, VideoInput
+[01:49]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_input/__init__.py", line 1, in <module>
+[01:49]   [ComfyUI] [comfy-env]       from .basic_types import ImageInput, AudioInput, MaskInput, LatentInput
+[01:49]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_input/basic_types.py", line 1, in <module>
+[01:49]   [ComfyUI] [comfy-env]       import torch
+[01:49]   [ComfyUI] [comfy-env]   ModuleNotFoundError: No module named 'torch'
+[01:49]   [ComfyUI] [comfy-env] Metadata scan failed for nodes (exit 1, 6.1s):
+[01:49]   [ComfyUI] [comfy-env]       from .load_mesh_blend import NODE_CLASS_MAPPINGS as LOAD_MESH_BLEND_MAPS, NODE_DISPLAY_NAME_MAPPINGS as LOAD_MESH_BLEND_DISP
+[01:49]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-GeometryPack/nodes/blender_io/load_mesh_blend.py", line 29, in <module>
+[01:49]   [ComfyUI] [comfy-env]       from comfy_api.latest import io
+[01:49]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/__init__.py", line 8, in <module>
+[01:49]   [ComfyUI] [comfy-env]       from ._input import ImageInput, AudioInput, MaskInput, LatentInput, VideoInput
+[01:49]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_input/__init__.py", line 1, in <module>
+[01:49]   [ComfyUI] [comfy-env]       from .basic_types import ImageInput, AudioInput, MaskInput, LatentInput
+[01:49]   [ComfyUI] [comfy-env]     File "/Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/comfy_api/latest/_input/basic_types.py", line 1, in <module>
+[01:49]   [ComfyUI] [comfy-env]       import torch
+[01:49]   [ComfyUI] [comfy-env]   ModuleNotFoundError: No module named 'torch'
+[01:49]   [ComfyUI] [comfy-env] Scanned nodes root: 0 nodes (6.1s)
+[01:49]   [ComfyUI] [comfy-env] Imported nodes root: 0 nodes (isolation)
+[01:49]   [ComfyUI] [comfy-env] Registered 0 total nodes
+[01:49]   [ComfyUI] 
+[01:49]   [ComfyUI] Import times for custom nodes:
+[01:49]   [ComfyUI]    0.0 seconds: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-validate-endpoint
+[01:49]   [ComfyUI]    0.0 seconds: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/websocket_image_save.py
+[01:49]   [ComfyUI]    0.3 seconds: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-Sharp
+[01:49]   [ComfyUI]    6.3 seconds: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/test_workspaces/Sharp-0523/ComfyUI/custom_nodes/ComfyUI-GeometryPack
+[01:49]   [ComfyUI] 
+[01:49]   [ComfyUI] Context impl SQLiteImpl.
+[01:49]   [ComfyUI] Will assume non-transactional DDL.
+[01:49]   [ComfyUI] Context impl SQLiteImpl.
+[01:49]   [ComfyUI] Will assume non-transactional DDL.
+[01:49]   [ComfyUI] Running upgrade  -> 0001_assets, Initial assets schema
+[01:49]   [ComfyUI] Revision ID: 0001_assets
+[01:49]   [ComfyUI] Revises: None
+[01:49]   [ComfyUI] Create Date: 2025-12-10 00:00:00
+[01:49]   [ComfyUI] Running upgrade 0001_assets -> 0002_merge_to_asset_references, Merge AssetInfo and AssetCacheState into unified asset_references table.
+[01:49]   [ComfyUI] Running upgrade 0002_merge_to_asset_references -> 0003_add_metadata_job_id, Add system_metadata and job_id columns to asset_references.
+[01:49]   [ComfyUI] Change preview_id FK from assets.id to asset_references.id.
+[01:49]   [ComfyUI] Database upgraded from None to 0003_add_metadata_job_id
+[01:50]   [ComfyUI] Starting server
+[01:50]   [ComfyUI] 
+[01:50]   [ComfyUI] To see the GUI go to: http://127.0.0.1:41886
+[01:51] Server responding, waiting for nodes to load...
+[02:11] Server is ready!
+[02:11] Checking for import errors in server logs...
+[02:11] No import errors detected
+[02:11] Found 720 registered nodes
+[02:11] [REGISTRATION] PASSED
+[02:11] 
+[02:11] [4/5] INSTANTIATION
+[02:11] ----------------------------------------
+[02:11] 
+[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x101f20590>, server_url=None, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x101f21e80>
+[02:11] Testing node constructors...
+[02:12] All 0 node(s) instantiated successfully!
+[02:12] [INSTANTIATION] PASSED
+[02:12] 
+[02:12] [5/5] EXECUTION
+[02:12] ----------------------------------------
+[02:12] 
+[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x101f20590>, server_url=None, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x101f21e80>
+[02:12] CPU runner - will execute 2 workflow(s)
+[02:12] Running 3 workflow(s) (all with videos)...
+[02:12] Installing screenshot dependencies (playwright, pillow)...
+[02:13]   Packages installed, downloading chromium browser...
+[02:19]   Screenshot dependencies installed successfully
+[02:20] Starting headless browser...
+[02:20]   macOS -- using Apple Metal GPU via ANGLE
+[02:20]   [1/3] SKIPPED (not in cpu list) pano.json
+[02:21] Capturing execution frames: sharp_basic.json
+[02:28]   Frame 1 saved (frame_000.jpg, t=0.0s)
+[02:28]   Validating workflow...
+[02:28]   Validation failed: graphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,4,5], sample: {"inputs":{"image":"beach.jpg"},"class_type":"LoadImage","_meta":{"title":"Load Image"}}
+[02:28] Capturing execution frames: sharp_exif.json
+[02:33]   Frame 1 saved (frame_000.jpg, t=0.0s)
+[02:33]   Validating workflow...
+[02:33]   Validation failed: graphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,7,8,9], sample: {"inputs":{"UNKNOWN":""},"_meta":{}}
+[02:33] Results saved to /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0523/dev/macos-cpu/results.json
+[02:33] Saved: /Users/runner/work/comfy-gpu-ci/comfy-gpu-ci/comfy-test-logs/Sharp-0523/dev/macos-cpu/index.html
+[02:33] 
 macos: FAILED
-[02:16] Error: Workflow execution failed (2 error(s))
-[02:16] Details: sharp_basic.json: Workflow validation failed
+[02:33] Error: Workflow execution failed (2 error(s))
+[02:33] Details: sharp_basic.json: Workflow validation failed
 
 Details:
 graphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,4,5], sample: {"inputs":{"image":"beach.jpg"},"class_type":"LoadImage","_meta":{"title":"Load Image"}}
@@ -347,4 +349,4 @@ sharp_exif.json: Workflow validation failed
 
 Details:
 graphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,7,8,9], sample: {"inputs":{"UNKNOWN":""},"_meta":{}}
-[02:16] Stopping ComfyUI server...
+[02:33] Stopping ComfyUI server...

@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-15T05:21:42.405701+00:00",
+  "timestamp": "2026-05-15T05:26:24.615882+00:00",
   "platform": "macos",
   "hardware": {
-    "os": "macOS-15.7.5-arm64-arm-64bit",
+    "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
     "cpu": "arm"
   },
   "commit_hash": "e63db66b516a4a08a507d157b09d202f7696e080",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25901702155",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25901860804",
   "success": false,
   "summary": {
     "total": 3,
@@ -24,16 +24,16 @@
     {
       "name": "sharp_basic",
       "status": "fail",
-      "duration_seconds": 7.7,
+      "duration_seconds": 6.95,
       "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,4,5], sample: {\"inputs\":{\"image\":\"beach.jpg\"},\"class_type\":\"LoadImage\",\"_meta\":{\"title\":\"Load Image\"}}",
       "hardware": {
-        "os": "macOS-15.7.5-arm64-arm-64bit",
+        "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 0.5,
-          "avg": 0.49
+          "peak": 0.58,
+          "avg": 0.57
         },
         "total_ram_gb": 7.0,
         "samples": 7
@@ -42,19 +42,19 @@
     {
       "name": "sharp_exif",
       "status": "fail",
-      "duration_seconds": 5.5,
+      "duration_seconds": 4.76,
       "error": "Workflow validation failed\n\nDetails:\ngraphToPrompt produced nodes without class_type: graphToPrompt: 4 nodes, missing class_type: [2,7,8,9], sample: {\"inputs\":{\"UNKNOWN\":\"\"},\"_meta\":{}}",
       "hardware": {
-        "os": "macOS-15.7.5-arm64-arm-64bit",
+        "os": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
         "cpu": "arm"
       },
       "resources": {
         "ram": {
-          "peak": 0.49,
-          "avg": 0.48
+          "peak": 0.55,
+          "avg": 0.54
         },
         "total_ram_gb": 7.0,
-        "samples": 6
+        "samples": 5
       }
     }
   ]
