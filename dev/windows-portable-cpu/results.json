@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-15T11:48:27.024348+00:00",
+  "timestamp": "2026-05-16T20:01:50.678942+00:00",
   "platform": "windows_portable",
   "hardware": {
     "os": "Windows-2025Server-10.0.26100-SP0",
-    "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
+    "cpu": "Intel64 Family 6 Model 106 Stepping 6, GenuineIntel"
   },
-  "commit_hash": "164f0e71c084a3e1ce126c069d8849b90a632226",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25915267019",
+  "commit_hash": "6891efa5b5c38cb36d60d3e1da33ab612618fb62",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25971133011",
   "success": true,
   "summary": {
     "total": 3,
@@ -24,37 +24,37 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 353.87,
+      "duration_seconds": 315.27,
       "error": null,
       "hardware": {
         "os": "Windows-2025Server-10.0.26100-SP0",
-        "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
+        "cpu": "Intel64 Family 6 Model 106 Stepping 6, GenuineIntel"
       },
       "resources": {
         "ram": {
-          "peak": 8.27,
-          "avg": 4.97
+          "peak": 8.82,
+          "avg": 5.31
         },
         "total_ram_gb": 16.0,
-        "samples": 348
+        "samples": 312
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 335.98,
+      "duration_seconds": 306.72,
       "error": null,
       "hardware": {
         "os": "Windows-2025Server-10.0.26100-SP0",
-        "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
+        "cpu": "Intel64 Family 6 Model 106 Stepping 6, GenuineIntel"
       },
       "resources": {
         "ram": {
-          "peak": 8.42,
-          "avg": 5.26
+          "peak": 8.87,
+          "avg": 5.41
         },
         "total_ram_gb": 16.0,
-        "samples": 329
+        "samples": 298
       }
     }
   ]
