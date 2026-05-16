@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-05-15T12:12:59.213769+00:00",
+  "timestamp": "2026-05-16T20:52:37.155765+00:00",
   "platform": "linux",
   "hardware": {
     "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
-    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
-    "gpu": "NVIDIA GeForce RTX 5060"
+    "cpu": "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
+    "gpu": "NVIDIA GeForce RTX 3090"
   },
-  "commit_hash": "164f0e71c084a3e1ce126c069d8849b90a632226",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25915385054",
+  "commit_hash": "6891efa5b5c38cb36d60d3e1da33ab612618fb62",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25971131977",
   "success": true,
   "summary": {
     "total": 3,
@@ -25,46 +25,46 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 126.78,
+      "duration_seconds": 173.51,
       "error": null,
       "hardware": {
         "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
-        "cpu": "AMD Ryzen 5 3600 6-Core Processor",
-        "gpu": "NVIDIA GeForce RTX 5060"
+        "cpu": "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
+        "gpu": "NVIDIA GeForce RTX 3090"
       },
       "resources": {
         "ram": {
-          "peak": 9.04,
-          "avg": 6.63
+          "peak": 7.37,
+          "avg": 6.0
         },
-        "total_ram_gb": 23.4,
-        "samples": 123,
+        "total_ram_gb": 31.2,
+        "samples": 169,
         "vram": {
-          "peak": 5.42,
-          "avg": 3.25
+          "peak": 8.07,
+          "avg": 5.65
         }
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 104.34,
+      "duration_seconds": 90.87,
       "error": null,
       "hardware": {
         "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
-        "cpu": "AMD Ryzen 5 3600 6-Core Processor",
-        "gpu": "NVIDIA GeForce RTX 5060"
+        "cpu": "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
+        "gpu": "NVIDIA GeForce RTX 3090"
       },
       "resources": {
         "ram": {
-          "peak": 9.18,
-          "avg": 8.67
+          "peak": 8.0,
+          "avg": 3.14
         },
-        "total_ram_gb": 23.4,
-        "samples": 100,
+        "total_ram_gb": 31.2,
+        "samples": 89,
         "vram": {
-          "peak": 5.56,
-          "avg": 4.76
+          "peak": 8.45,
+          "avg": 1.27
         }
       }
     }
