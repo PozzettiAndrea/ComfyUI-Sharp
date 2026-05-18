@@ -2,51 +2,51 @@ Capturing execution frames: sharp_basic.json
   Frame 1 saved (frame_000.jpg, t=0.0s)
   Validating workflow...
   Queuing workflow for execution...
-  Frame 2 saved (frame_001.jpg, t=2.4s)
-  [capture-periodic] freeze=4ms shot=142ms unfreeze=5ms saved=True
-  Frame 3 saved (frame_002.jpg, t=4.6s)
-  [capture-periodic] freeze=4ms shot=124ms unfreeze=5ms saved=True
-  [capture-loop] iter=50 t=6.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.6/31.9GB (27%) swap=0.4/5.0GB (9%) cpu=6% browser_rss=0.72GB
-  Frame 4 saved (frame_003.jpg, t=11.3s)
-  [capture-periodic] freeze=5ms shot=175ms unfreeze=5ms saved=True
-  [capture-loop] iter=100 t=13.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.0/31.9GB (28%) swap=0.4/5.0GB (9%) cpu=19% browser_rss=0.73GB
-  Frame 5 saved (frame_004.jpg, t=13.5s)
-  [capture-periodic] freeze=5ms shot=172ms unfreeze=5ms saved=True
-  Frame 6 saved (frame_005.jpg, t=18.1s)
-  [capture-periodic] freeze=5ms shot=171ms unfreeze=5ms saved=True
-  [capture-loop] iter=150 t=19.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.6/31.9GB (30%) swap=0.4/5.0GB (9%) cpu=22% browser_rss=0.73GB
-  Frame 7 saved (frame_006.jpg, t=22.6s)
-  [capture-periodic] freeze=5ms shot=163ms unfreeze=10ms saved=True
-  [capture-loop] iter=200 t=26.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.9/31.9GB (31%) swap=0.4/5.0GB (9%) cpu=23% browser_rss=0.66GB
-  Frame 8 saved (frame_007.jpg, t=27.2s)
-  [capture-periodic] freeze=5ms shot=166ms unfreeze=6ms saved=True
-  Frame 9 saved (frame_008.jpg, t=29.5s)
-  [capture-periodic] freeze=4ms shot=151ms unfreeze=6ms saved=True
-  Frame 10 saved (frame_009.jpg, t=31.8s)
-  [capture-periodic] freeze=5ms shot=145ms unfreeze=5ms saved=True
-  [capture-loop] iter=250 t=32.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.1/31.9GB (28%) swap=0.4/5.0GB (9%) cpu=16% browser_rss=0.67GB
-  [capture-loop] iter=300 t=38.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=9.1/31.9GB (28%) swap=0.4/5.0GB (9%) cpu=5% browser_rss=0.67GB
-  [capture-loop] iter=350 t=44.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=10.4/31.9GB (32%) swap=0.4/5.0GB (9%) cpu=6% browser_rss=0.67GB
-  [capture-loop] iter=400 t=50.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=11.9/31.9GB (37%) swap=0.4/5.0GB (9%) cpu=8% browser_rss=0.67GB
-  Frame 11 saved (frame_010.jpg, t=55.7s)
-  [capture-periodic] freeze=4ms shot=129ms unfreeze=5ms saved=True
-  [capture-loop] iter=450 t=56.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=14.9/31.9GB (47%) swap=0.4/5.0GB (9%) cpu=7% browser_rss=0.66GB
+  Frame 2 saved (frame_001.jpg, t=2.3s)
+  [capture-periodic] freeze=2ms shot=101ms unfreeze=3ms saved=True
+  Frame 3 saved (frame_002.jpg, t=4.5s)
+  [capture-periodic] freeze=10ms shot=106ms unfreeze=8ms saved=True
+  [capture-loop] iter=50 t=5.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=10.9/31.9GB (34%) swap=0.0/5.0GB (0%) cpu=21% browser_rss=0.71GB
+  Frame 4 saved (frame_003.jpg, t=8.7s)
+  [capture-periodic] freeze=3ms shot=82ms unfreeze=3ms saved=True
+  [capture-loop] iter=100 t=12.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=11.4/31.9GB (36%) swap=0.0/5.0GB (0%) cpu=28% browser_rss=0.71GB
+  Frame 5 saved (frame_004.jpg, t=13.1s)
+  [capture-periodic] freeze=2ms shot=83ms unfreeze=3ms saved=True
+  Frame 6 saved (frame_005.jpg, t=17.5s)
+  [capture-periodic] freeze=4ms shot=88ms unfreeze=6ms saved=True
+  [capture-loop] iter=150 t=17.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=11.8/31.9GB (37%) swap=0.0/5.0GB (0%) cpu=34% browser_rss=0.71GB
+  Frame 7 saved (frame_006.jpg, t=19.7s)
+  [capture-periodic] freeze=3ms shot=96ms unfreeze=3ms saved=True
+  [capture-loop] iter=200 t=23.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=12.0/31.9GB (38%) swap=0.0/5.0GB (0%) cpu=35% browser_rss=0.72GB
+  Frame 8 saved (frame_007.jpg, t=24.1s)
+  [capture-periodic] freeze=3ms shot=104ms unfreeze=4ms saved=True
+  Frame 9 saved (frame_008.jpg, t=26.3s)
+  [capture-periodic] freeze=2ms shot=99ms unfreeze=3ms saved=True
+  Frame 10 saved (frame_009.jpg, t=28.5s)
+  [capture-periodic] freeze=2ms shot=72ms unfreeze=2ms saved=True
+  [capture-loop] iter=250 t=29.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=10.9/31.9GB (34%) swap=0.0/5.0GB (0%) cpu=32% browser_rss=0.66GB
+  [capture-loop] iter=300 t=35.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=12.2/31.9GB (38%) swap=0.0/5.0GB (0%) cpu=22% browser_rss=0.66GB
+  [capture-loop] iter=350 t=40.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=15.8/31.9GB (49%) swap=0.0/5.0GB (0%) cpu=27% browser_rss=0.66GB
+  Frame 11 saved (frame_010.jpg, t=41.5s)
+  [capture-periodic] freeze=2ms shot=71ms unfreeze=4ms saved=True
   Node executed (1 total), capturing...
-  Frame 12 saved (frame_011.jpg, t=59.7s)
-  [capture-node] freeze=4ms shot=149ms unfreeze=27ms saved=True
-  Execution complete (t=60.1s)
+  Frame 12 saved (frame_011.jpg, t=44.4s)
+  [capture-node] freeze=2ms shot=93ms unfreeze=0ms saved=True
+  Execution complete (t=44.3s)
   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
-  [3d-wait] Phase 1 done in 0.3s
+  [3d-wait] Phase 1 done in 0.0s
   [3d-wait] Phase 2: iframes=1
-  [3d-wait] iframe viewer_ready=True (matched 1 console logs)
-  [3d-wait] Unfrozen in 0.008s, rendering for 5s...
-  [3d-wait] JS halted via CDP after 15.9s
-  [3d-wait] Re-frozen in 65.2s
-  [3d-wait] Total 3D wait: 65.5s
-  Captured 12 unique frames over 126.9s
+  [3d-wait] iframe viewer_ready=False (matched 0 console logs)
+  [3d-wait] Waiting for 'Loaded successfully' console message (timeout=60s)...
+  [3d-wait] Got 'Loaded successfully' after 0.6s
+  [3d-wait] Unfrozen in 0.144s, rendering for 5s...
+  [3d-wait] JS halted via CDP after 7.3s
+  [3d-wait] Re-frozen in 30.9s
+  [3d-wait] Total 3D wait: 31.5s
+  Captured 12 unique frames over 76.0s
   [debug] iframes: 1
-  [debug]   iframe[0]: src=http://127.0.0.1:41881/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=1536x1024, rafFrozen=True
+  [debug]   iframe[0]: src=http://127.0.0.1:41882/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=1536x1024, rafFrozen=True
   [timing] trigger_3d_previews: 0.0s
   Saved high-quality screenshot: sharp_basic_executed.png
-  [timing] final_screenshot: 0.4s
+  [timing] final_screenshot: 0.2s
     Captured 13 video frames

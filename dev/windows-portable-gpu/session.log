@@ -1,4 +1,4 @@
-[00:00] Crash dump logging enabled: C:\logs\Sharp-1502\dev\windows-portable-gpu\crash_dump.log
+[00:00] Crash dump logging enabled: C:\logs\Sharp-1721\dev\windows-portable-gpu\crash_dump.log
 [00:00] 
 [00:00] [1/5] SYNTAX
 [00:00] ----------------------------------------
@@ -17,250 +17,244 @@
 [00:00] 
 Setting up ComfyUI...
 [00:00] Fetching latest release version...
-[00:00] Latest version: v0.21.1
-[00:00] Downloading portable ComfyUI from https://github.com/comfyanonymous/ComfyUI/releases/download/v0.21.1/ComfyUI_windows_portable_nvidia.7z...
-[00:04]   Downloaded: 10%
-[00:07]   Downloaded: 20%
-[00:11]   Downloaded: 30%
-[00:14]   Downloaded: 40%
-[00:18]   Downloaded: 50%
-[00:21]   Downloaded: 60%
-[00:25]   Downloaded: 70%
-[00:28]   Downloaded: 80%
-[00:31]   Downloaded: 90%
-[00:35]   Downloaded: 100%
-[00:35] Downloaded to C:\Users\ContainerAdministrator\.comfy-test\cache\portable\ComfyUI_portable_v0.21.1.7z
-[00:35] Extracting to cache: C:\Users\ContainerAdministrator\.comfy-test\cache\portable\ComfyUI_portable_v0.21.1
-[00:35] Extracting ComfyUI_portable_v0.21.1.7z...
-[00:35] Using 7z: C:\Program Files\7-Zip\7z.exe
-[02:09] Extracted to C:\Users\ContainerAdministrator\.comfy-test\cache\portable\ComfyUI_portable_v0.21.1
-[02:09] Copying from cache to: C:\workspaces\Sharp-1502\portable-comfyui
-[02:25] Installing uv into embedded Python...
-[02:25] Running: C:\workspaces\Sharp-1502\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe -m pip install uv
-[02:30] Installing ComfyUI requirements...
-[02:30] Running: C:\workspaces\Sharp-1502\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe -m uv pip install -r C:\workspaces\Sharp-1502\portable-comfyui\ComfyUI_windows_portable\ComfyUI\requirements.txt
-[02:31] 
+[00:01] Latest version: v0.21.1
+[00:01] Downloading portable ComfyUI from https://github.com/comfyanonymous/ComfyUI/releases/download/v0.21.1/ComfyUI_windows_portable_nvidia.7z...
+[00:10]   Downloaded: 10%
+[00:17]   Downloaded: 20%
+[00:24]   Downloaded: 30%
+[00:28]   Downloaded: 40%
+[00:32]   Downloaded: 50%
+[00:35]   Downloaded: 60%
+[00:39]   Downloaded: 70%
+[00:42]   Downloaded: 80%
+[00:46]   Downloaded: 90%
+[00:49]   Downloaded: 100%
+[00:49] Downloaded to C:\Users\ContainerUser\.comfy-test\cache\portable\ComfyUI_portable_v0.21.1.7z
+[00:49] Extracting to cache: C:\Users\ContainerUser\.comfy-test\cache\portable\ComfyUI_portable_v0.21.1
+[00:49] Extracting ComfyUI_portable_v0.21.1.7z...
+[00:49] Using 7z: C:\Program Files\7-Zip\7z.exe
+[01:41] Extracted to C:\Users\ContainerUser\.comfy-test\cache\portable\ComfyUI_portable_v0.21.1
+[01:41] Copying from cache to: C:\workspaces\Sharp-1721\portable-comfyui
+[01:53] Installing uv into embedded Python...
+[01:54] Running: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe -m pip install uv
+[01:57] Installing ComfyUI requirements...
+[01:57] Running: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe -m uv pip install -r C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\requirements.txt
+[01:58] 
 Installing custom node...
-[02:31] Copying ComfyUI-Sharp to custom_nodes/...
-[02:31] Installing node requirements...
-[02:31] Running: C:\workspaces\Sharp-1502\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe -m pip install -r C:\workspaces\Sharp-1502\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\requirements.txt
-[02:37] 
+[01:58] Copying ComfyUI-Sharp to custom_nodes/...
+[01:58] Installing node requirements...
+[01:58] Running: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe -m pip install -r C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\requirements.txt
+[02:02] 
 Running install.py...
-[02:37] Running: C:\workspaces\Sharp-1502\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe C:\workspaces\Sharp-1502\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\install.py
-[02:38]   
-[02:38]   Installing 1 node dependencies...
-[02:38]     Cloning ComfyUI-GeometryPack...
-[02:42]     Installing requirements for ComfyUI-GeometryPack...
-[02:43]     Running install.py for ComfyUI-GeometryPack...
-[02:46]   [comfy-env] _discover: scanning C:\workspaces\Sharp-1502\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes
-[02:46]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes\ComfyUI-GeometryPack\nodes\comfy-env.toml)
-[02:46]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes\ComfyUI-Sharp\nodes\comfy-env.toml)
-[02:46]   [comfy-env] Workspace: C:\Users\ContainerAdministrator\AppData\Local\Programs\comfy-env
-[02:46]   [comfy-env] ComfyUI: C:\workspaces\Sharp-1502\portable-comfyui\ComfyUI_windows_portable\ComfyUI
-[02:46]   [comfy-env] Found 2 node config(s):
-[02:46]     - geometrypack-nodes <- custom_nodes\ComfyUI-GeometryPack\nodes\comfy-env.toml (python=host)
-[02:46]     - sharp-nodes <- custom_nodes\ComfyUI-Sharp\nodes\comfy-env.toml (python=host)
-[02:47]   [comfy-env] Bootstrap interpreter has python 3.13 + torch 2.11.0 (cu130). Looking for cuda-only wheels matching cu130/torch2.11/cp313.
-[03:12]   [comfy-env] GPU: Detection: torch
-[03:12]   Recommended: CUDA 13.0
-[03:12]   
-[03:12]     GPU 0: NVIDIA GeForce RTX 3060 (sm_86) [Ampere] 12287MB
-[03:12]   [comfy-env] Comfyui feature -> torch 2.11.0 from https://download.pytorch.org/whl/cu130 (CUDA 13.0 via bootstrap torch)
-[03:12]   [comfy-env] cuda-wheels: 1 package(s) need a matched (cuda, torch, python) combo: ['cumesh']
-[03:12]   [comfy-env] cuda-wheels tier 1 (bootstrap): probing cu13.0/torch2.11/cp313
-[03:12]   [cuda-wheels] Looking up cumesh: cu130 torch2.11 cp313 win_amd64
-[03:13]   [cuda-wheels]   Found: cumesh-0.0.1+cu130torch2.11-cp313-cp313-win_amd64.whl
-[03:13]   [comfy-env] cuda-wheels combo: cu13.0/torch2.11 (bootstrap matches; per-node envs will pin to this)
-[03:13]   [cuda-wheels] Looking up cumesh: cu130 torch2.11 cp313 win_amd64
-[03:13]   [cuda-wheels]   Found: cumesh-0.0.1+cu130torch2.11-cp313-cp313-win_amd64.whl
-[03:13]   [comfy-env] geometrypack-nodes: cuda-wheels deferred for post-pixi install (cumesh)
-[03:13]   Generated C:\Users\ContainerAdministrator\AppData\Local\Programs\comfy-env\pixi.toml
-[03:13]   [comfy-env] Patched C:\Users\ContainerAdministrator\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\Lib\platform.py for conda-forge compat
-[03:13]   [comfy-env] Patched C:\Users\ContainerAdministrator\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\Lib\platform.py for conda-forge compat
-[03:13]   [comfy-env] Patched C:\Users\ContainerAdministrator\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\platform.py for conda-forge compat
-[03:13]   [comfy-env] Patched C:\Users\ContainerAdministrator\AppData\Roaming\uv\python\cpython-3.11.15-windows-x86_64-none\Lib\platform.py for conda-forge compat
-[03:13]   [comfy-env] Patched C:\Users\ContainerAdministrator\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\platform.py for conda-forge compat
-[03:13]   [comfy-env] Patched C:\Users\ContainerAdministrator\AppData\Roaming\uv\python\cpython-3.12.13-windows-x86_64-none\Lib\platform.py for conda-forge compat
-[03:13]   [comfy-env] Patched C:\Users\ContainerAdministrator\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\platform.py for conda-forge compat
-[03:13]   [comfy-env] Patched C:\Users\ContainerAdministrator\AppData\Roaming\uv\python\cpython-3.13.13-windows-x86_64-none\Lib\platform.py for conda-forge compat
-[03:13]   [comfy-env] Installing 2 environment(s):
-[03:13]     - geometrypack-nodes (python=host, 14 pypi deps, 1 cuda wheels)
-[03:13]     - sharp-nodes (python=host, 10 pypi deps)
-[03:13]   [comfy-env] Running `pixi install -e geometrypack-nodes -e sharp-nodes`...
-[04:03]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
-[04:03]     	- Scripts/.librsvg-pre-unlink.bat
-[04:03]     To enable them, run:
-[04:03]     	pixi config set --local run-post-link-scripts insecure
-[04:03]     More info:
-[04:03]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
-[04:08]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
-[04:08]     	- Scripts/.librsvg-pre-unlink.bat
-[04:08]     To enable them, run:
-[04:08]     	pixi config set --local run-post-link-scripts insecure
-[04:08]     More info:
-[04:08]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
-[05:00]     The following environments have been installed: geometrypack-nodes, sharp-nodes.
-[05:00]   [comfy-env] geometrypack-nodes: installing cuda-wheels with --no-deps (cumesh)
-[05:01]     Using Python 3.13.13 environment at: .pixi\envs\geometrypack-nodes
-[05:01]     Resolved 1 package in 591ms
-[05:01]     Downloading cumesh (3.8MiB)
-[05:01]      Downloaded cumesh
-[05:01]     Prepared 1 package in 92ms
-[05:01]     Installed 1 package in 12ms
-[05:01]      + cumesh==0.0.1+cu130torch2.11 (from https://github.com/PozzettiAndrea/cuda-wheels/releases/download/cumesh-latest/cumesh-0.0.1%2Bcu130torch2.11-cp313-cp313-win_amd64.whl)
-[05:01]   [comfy-env] Recorded install hash 289ba018900b -> C:\Users\ContainerAdministrator\AppData\Local\Programs\comfy-env\install.hash
-[05:01]   [comfy-env] Install log: C:\Users\ContainerAdministrator\AppData\Local\Programs\comfy-env\install.log
-[05:01]   
-[05:01]   Installation complete!
-[05:02]   
-[05:02]   [requirements] Re-installing main package requirements...
-[05:02]     Installing requirements for ComfyUI-Sharp...
-[05:02]   [comfy-env] _discover: scanning C:\workspaces\Sharp-1502\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes
-[05:02]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes\ComfyUI-GeometryPack\nodes\comfy-env.toml)
-[05:02]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes\ComfyUI-Sharp\nodes\comfy-env.toml)
-[05:02]   [comfy-env] Workspace inputs unchanged (hash 289ba018900b) -- skipping install. Delete C:\Users\ContainerAdministrator\AppData\Local\Programs\comfy-env\install.hash to force.
-[05:02]   
-[05:02]   Installation complete!
-[05:02] Installing 1 node dependency(ies)...
-[05:02]   ComfyUI-GeometryPack from PozzettiAndrea/ComfyUI-GeometryPack
-[05:02]   ComfyUI-GeometryPack already exists, skipping...
-[05:02] Installing validation endpoint...
-[05:02]   Cloning PozzettiAndrea/ComfyUI-validate-endpoint...
-[05:02] Running: git clone --depth 1 https://x-access-token:***@github.com/PozzettiAndrea/ComfyUI-validate-endpoint.git C:\workspaces\Sharp-1502\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-validate-endpoint
-[05:03] [INSTALL] PASSED
-[05:03] 
-[05:03] [3/5] REGISTRATION
-[05:03] ----------------------------------------
-[05:03] 
+[02:02] Running: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\python_embeded\python.exe C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\install.py
+[02:02]   
+[02:02]   Installing 1 node dependencies...
+[02:02]     Cloning ComfyUI-GeometryPack...
+[02:07]     Installing requirements for ComfyUI-GeometryPack...
+[02:08]     Running install.py for ComfyUI-GeometryPack...
+[02:10]   [comfy-env] _discover: scanning C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes
+[02:10]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes\ComfyUI-GeometryPack\nodes\comfy-env.toml)
+[02:10]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes\ComfyUI-Sharp\nodes\comfy-env.toml)
+[02:10]   [comfy-env] Workspace: C:\Users\ContainerUser\AppData\Local\Programs\comfy-env
+[02:10]   [comfy-env] ComfyUI: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI
+[02:10]   [comfy-env] Found 2 node config(s):
+[02:10]     - geometrypack-nodes <- custom_nodes\ComfyUI-GeometryPack\nodes\comfy-env.toml (python=host)
+[02:10]     - sharp-nodes <- custom_nodes\ComfyUI-Sharp\nodes\comfy-env.toml (python=host)
+[02:10]   [comfy-env] Bootstrap interpreter has python 3.13 + torch 2.11.0 (cu130). Looking for cuda-only wheels matching cu130/torch2.11/cp313.
+[02:25]   [comfy-env] GPU: Detection: torch
+[02:25]   Recommended: CUDA 13.1
+[02:25]   
+[02:25]     GPU 0: NVIDIA GeForce RTX 4060 Ti (sm_89) [Ada] 16379MB
+[02:25]   [comfy-env] Comfyui feature -> torch 2.11.0 from https://download.pytorch.org/whl/cu130 (CUDA 13.0 via bootstrap torch)
+[02:25]   [comfy-env] cuda-wheels: 1 package(s) need a matched (cuda, torch, python) combo: ['cumesh']
+[02:25]   [comfy-env] cuda-wheels tier 1 (bootstrap): probing cu13.0/torch2.11/cp313
+[02:25]   [cuda-wheels] Looking up cumesh: cu130 torch2.11 cp313 win_amd64
+[02:25]   [cuda-wheels]   GH Pages index unreachable, falling back to GitHub Releases API...
+[02:26]   [cuda-wheels]   Found via API: cumesh-0.0.1+cu130torch2.11-cp313-cp313-win_amd64.whl
+[02:26]   [comfy-env] cuda-wheels combo: cu13.0/torch2.11 (bootstrap matches; per-node envs will pin to this)
+[02:26]   [cuda-wheels] Looking up cumesh: cu130 torch2.11 cp313 win_amd64
+[02:26]   [cuda-wheels]   GH Pages index unreachable, falling back to GitHub Releases API...
+[02:27]   [cuda-wheels]   Found via API: cumesh-0.0.1+cu130torch2.11-cp313-cp313-win_amd64.whl
+[02:27]   [comfy-env] geometrypack-nodes: cuda-wheels deferred for post-pixi install (cumesh)
+[02:27]   Generated C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\pixi.toml
+[02:27]   [comfy-env] Patched C:\Users\ContainerUser\AppData\Roaming\uv\python\cpython-3.10-windows-x86_64-none\Lib\platform.py for conda-forge compat
+[02:27]   [comfy-env] Patched C:\Users\ContainerUser\AppData\Roaming\uv\python\cpython-3.10.20-windows-x86_64-none\Lib\platform.py for conda-forge compat
+[02:27]   [comfy-env] Patched C:\Users\ContainerUser\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\platform.py for conda-forge compat
+[02:27]   [comfy-env] Patched C:\Users\ContainerUser\AppData\Roaming\uv\python\cpython-3.11.15-windows-x86_64-none\Lib\platform.py for conda-forge compat
+[02:27]   [comfy-env] Patched C:\Users\ContainerUser\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\platform.py for conda-forge compat
+[02:27]   [comfy-env] Patched C:\Users\ContainerUser\AppData\Roaming\uv\python\cpython-3.12.13-windows-x86_64-none\Lib\platform.py for conda-forge compat
+[02:27]   [comfy-env] Patched C:\Users\ContainerUser\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\Lib\platform.py for conda-forge compat
+[02:27]   [comfy-env] Patched C:\Users\ContainerUser\AppData\Roaming\uv\python\cpython-3.13.13-windows-x86_64-none\Lib\platform.py for conda-forge compat
+[02:27]   [comfy-env] Installing 2 environment(s):
+[02:27]     - geometrypack-nodes (python=host, 14 pypi deps, 1 cuda wheels)
+[02:27]     - sharp-nodes (python=host, 10 pypi deps)
+[02:27]   [comfy-env] Running `pixi install -e geometrypack-nodes -e sharp-nodes`...
+[03:43]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
+[03:43]     	- Scripts/.librsvg-pre-unlink.bat
+[03:43]     To enable them, run:
+[03:43]     	pixi config set --local run-post-link-scripts insecure
+[03:43]     More info:
+[03:43]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
+[03:47]      WARN Skipped running the post-link scripts because `run-post-link-scripts` = `false`
+[03:47]     	- Scripts/.librsvg-pre-unlink.bat
+[03:47]     To enable them, run:
+[03:47]     	pixi config set --local run-post-link-scripts insecure
+[03:47]     More info:
+[03:47]     	https://pixi.sh/latest/reference/pixi_configuration/#run-post-link-scripts
+[04:37]     The following environments have been installed: geometrypack-nodes, sharp-nodes.
+[04:37]   [comfy-env] geometrypack-nodes: installing cuda-wheels with --no-deps (cumesh)
+[04:38]     Using Python 3.13.13 environment at: .pixi\envs\geometrypack-nodes
+[04:38]     Resolved 1 package in 547ms
+[04:38]     Downloading cumesh (3.8MiB)
+[04:38]      Downloaded cumesh
+[04:38]     Prepared 1 package in 80ms
+[04:38]     Installed 1 package in 6ms
+[04:38]      + cumesh==0.0.1+cu130torch2.11 (from https://github.com/PozzettiAndrea/cuda-wheels/releases/download/cumesh-latest/cumesh-0.0.1%2Bcu130torch2.11-cp313-cp313-win_amd64.whl)
+[04:38]   [comfy-env] Recorded install hash 289ba018900b -> C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\install.hash
+[04:38]   [comfy-env] Install log: C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\install.log
+[04:38]   
+[04:38]   Installation complete!
+[04:39]   
+[04:39]   [requirements] Re-installing main package requirements...
+[04:39]     Installing requirements for ComfyUI-Sharp...
+[04:39]   [comfy-env] _discover: scanning C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes
+[04:39]   [comfy-env] _discover: ComfyUI-GeometryPack -> geometrypack-nodes (custom_nodes\ComfyUI-GeometryPack\nodes\comfy-env.toml)
+[04:39]   [comfy-env] _discover: ComfyUI-Sharp -> sharp-nodes (custom_nodes\ComfyUI-Sharp\nodes\comfy-env.toml)
+[04:39]   [comfy-env] Workspace inputs unchanged (hash 289ba018900b) -- skipping install. Delete C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\install.hash to force.
+[04:39]   
+[04:39]   Installation complete!
+[04:39] Installing 1 node dependency(ies)...
+[04:39]   ComfyUI-GeometryPack from PozzettiAndrea/ComfyUI-GeometryPack
+[04:39]   ComfyUI-GeometryPack already exists, skipping...
+[04:39] Installing validation endpoint...
+[04:39]   Cloning PozzettiAndrea/ComfyUI-validate-endpoint...
+[04:39] Running: git clone --depth 1 https://x-access-token:***@github.com/PozzettiAndrea/ComfyUI-validate-endpoint.git C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-validate-endpoint
+[04:40] [INSTALL] PASSED
+[04:40] 
+[04:40] [3/5] REGISTRATION
+[04:40] ----------------------------------------
+[04:40] 
 [DEBUG] server=None, api=None
-[05:03] 
+[04:40] 
 Starting ComfyUI server...
-[05:03] Starting ComfyUI server on port 41881...
-[05:03] Starting ComfyUI server on port 41881...
-[05:03] Server stdout/stderr -> C:\workspaces\Sharp-1502\server.log
-[05:03] Waiting for server to be ready (timeout: 600s)...
-[05:03]   [ComfyUI:stdout] reader thread died: AttributeError("'NoneType' object has no attribute 'readline'")
-[05:03]   [ComfyUI:stderr] reader thread died: AttributeError("'NoneType' object has no attribute 'readline'")
-[06:14] Server responding, waiting for nodes to load...
-[06:34] Server is ready!
-[06:34] Checking for import errors in server logs...
-[06:34] No import errors detected
-[06:35] Found 848 registered nodes
-[06:35] [REGISTRATION] PASSED
-[06:35] 
-[06:35] [4/5] INSTANTIATION
-[06:35] ----------------------------------------
-[06:35] 
-[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x000002371EF65940>, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x000002371EF663C0>
-[06:35] Testing node constructors...
-[06:35] All 8 node(s) instantiated successfully!
-[06:35] [INSTANTIATION] PASSED
-[06:35] 
-[06:35] [5/5] EXECUTION
-[06:35] ----------------------------------------
-[06:35] 
-[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x000002371EF65940>, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x000002371EF663C0>
-[06:35] GPU runner - will execute 2 workflow(s)
-[06:35] Running 3 workflow(s) (all with videos)...
-[06:35] Installing screenshot dependencies (playwright, pillow)...
-[06:37]   Packages installed, downloading chromium browser...
-[06:55]   Screenshot dependencies installed successfully
-[06:56] Starting headless browser...
-[06:56]   Downloading Mesa llvmpipe for Windows...
-[06:56]   Mesa download error: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>
-[06:56]   Mesa unavailable -- falling back to SwiftShader
-[07:01]   [1/3] SKIPPED (not in gpu list) pano.json
-[07:01] Capturing execution frames: sharp_basic.json
-[07:09]   Frame 1 saved (frame_000.jpg, t=0.0s)
-[07:09]   Validating workflow...
-[07:09]   Queuing workflow for execution...
-[07:11]   Frame 2 saved (frame_001.jpg, t=2.4s)
-[07:11]   [capture-periodic] freeze=4ms shot=142ms unfreeze=5ms saved=True
-[07:14]   Frame 3 saved (frame_002.jpg, t=4.6s)
-[07:14]   [capture-periodic] freeze=4ms shot=124ms unfreeze=5ms saved=True
-[07:16]   [capture-loop] iter=50 t=6.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.6/31.9GB (27%) swap=0.4/5.0GB (9%) cpu=6% browser_rss=0.72GB
-[07:20]   Frame 4 saved (frame_003.jpg, t=11.3s)
-[07:20]   [capture-periodic] freeze=5ms shot=175ms unfreeze=5ms saved=True
-[07:22]   [capture-loop] iter=100 t=13.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.0/31.9GB (28%) swap=0.4/5.0GB (9%) cpu=19% browser_rss=0.73GB
-[07:23]   Frame 5 saved (frame_004.jpg, t=13.5s)
-[07:23]   [capture-periodic] freeze=5ms shot=172ms unfreeze=5ms saved=True
-[07:27]   Frame 6 saved (frame_005.jpg, t=18.1s)
-[07:27]   [capture-periodic] freeze=5ms shot=171ms unfreeze=5ms saved=True
-[07:29]   [capture-loop] iter=150 t=19.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.6/31.9GB (30%) swap=0.4/5.0GB (9%) cpu=22% browser_rss=0.73GB
-[07:32]   Frame 7 saved (frame_006.jpg, t=22.6s)
-[07:32]   [capture-periodic] freeze=5ms shot=163ms unfreeze=10ms saved=True
-[07:35]   [capture-loop] iter=200 t=26.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.9/31.9GB (31%) swap=0.4/5.0GB (9%) cpu=23% browser_rss=0.66GB
-[07:36]   Frame 8 saved (frame_007.jpg, t=27.2s)
-[07:36]   [capture-periodic] freeze=5ms shot=166ms unfreeze=6ms saved=True
-[07:39]   Frame 9 saved (frame_008.jpg, t=29.5s)
-[07:39]   [capture-periodic] freeze=4ms shot=151ms unfreeze=6ms saved=True
-[07:41]   Frame 10 saved (frame_009.jpg, t=31.8s)
-[07:41]   [capture-periodic] freeze=5ms shot=145ms unfreeze=5ms saved=True
-[07:42]   [capture-loop] iter=250 t=32.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.1/31.9GB (28%) swap=0.4/5.0GB (9%) cpu=16% browser_rss=0.67GB
-[07:48]   [capture-loop] iter=300 t=38.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=9.1/31.9GB (28%) swap=0.4/5.0GB (9%) cpu=5% browser_rss=0.67GB
-[07:54]   [capture-loop] iter=350 t=44.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=10.4/31.9GB (32%) swap=0.4/5.0GB (9%) cpu=6% browser_rss=0.67GB
-[08:00]   [capture-loop] iter=400 t=50.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=11.9/31.9GB (37%) swap=0.4/5.0GB (9%) cpu=8% browser_rss=0.67GB
-[08:05]   Frame 11 saved (frame_010.jpg, t=55.7s)
-[08:05]   [capture-periodic] freeze=4ms shot=129ms unfreeze=5ms saved=True
-[08:06]   [capture-loop] iter=450 t=56.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=14.9/31.9GB (47%) swap=0.4/5.0GB (9%) cpu=7% browser_rss=0.66GB
-[08:08]   Node executed (1 total), capturing...
-[08:09]   Frame 12 saved (frame_011.jpg, t=59.7s)
-[08:09]   [capture-node] freeze=4ms shot=149ms unfreeze=27ms saved=True
-[08:09]   Execution complete (t=60.1s)
-[08:10]   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
-[08:11]   [3d-wait] Phase 1 done in 0.3s
-[08:11]   [3d-wait] Phase 2: iframes=1
-[08:11]   [3d-wait] iframe viewer_ready=True (matched 1 console logs)
-[08:11]   [3d-wait] Unfrozen in 0.008s, rendering for 5s...
-[08:26]   [3d-wait] JS halted via CDP after 15.9s
-[09:16]   [3d-wait] Re-frozen in 65.2s
-[09:16]   [3d-wait] Total 3D wait: 65.5s
-[09:16]   Captured 12 unique frames over 126.9s
-[09:16]   [debug] iframes: 1
-[09:16]   [debug]   iframe[0]: src=http://127.0.0.1:41881/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=1536x1024, rafFrozen=True
-[09:16]   [timing] trigger_3d_previews: 0.0s
-[09:18]   Saved high-quality screenshot: sharp_basic_executed.png
-[09:18]   [timing] final_screenshot: 0.4s
-[09:19] Capturing execution frames: sharp_exif.json
-[09:25]   Frame 1 saved (frame_000.jpg, t=0.0s)
-[09:25]   Validating workflow...
-[09:25]   Queuing workflow for execution...
-[09:28]   Frame 2 saved (frame_001.jpg, t=2.3s)
-[09:28]   [capture-periodic] freeze=4ms shot=147ms unfreeze=5ms saved=True
-[09:30]   Frame 3 saved (frame_002.jpg, t=4.5s)
-[09:30]   [capture-periodic] freeze=4ms shot=138ms unfreeze=5ms saved=True
-[09:31]   [capture-loop] iter=50 t=6.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.4/31.9GB (29%) swap=0.4/5.0GB (9%) cpu=29% browser_rss=0.82GB
-[09:32]   Frame 4 saved (frame_003.jpg, t=6.8s)
-[09:32]   [capture-periodic] freeze=4ms shot=137ms unfreeze=5ms saved=True
-[09:38]   [capture-loop] iter=100 t=12.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=12.0/31.9GB (38%) swap=0.4/5.0GB (9%) cpu=10% browser_rss=0.75GB
-[09:44]   [capture-loop] iter=150 t=18.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=14.9/31.9GB (47%) swap=0.4/5.0GB (9%) cpu=11% browser_rss=0.75GB
-[09:45]   Frame 5 saved (frame_004.jpg, t=20.1s)
-[09:45]   [capture-periodic] freeze=6ms shot=154ms unfreeze=5ms saved=True
-[09:50]   [capture-loop] iter=200 t=24.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=15.1/31.9GB (48%) swap=0.4/5.0GB (9%) cpu=9% browser_rss=0.76GB
-[09:51]   Node executed (1 total), capturing...
-[09:51]   Frame 6 saved (frame_005.jpg, t=25.6s)
-[09:51]   [capture-node] freeze=5ms shot=148ms unfreeze=0ms saved=True
-[09:51]   Execution complete (t=25.6s)
-[09:51]   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
-[09:51]   [3d-wait] Phase 1 done in 0.0s
-[09:51]   [3d-wait] Phase 2: iframes=1
-[09:51]   [3d-wait] iframe viewer_ready=False (matched 0 console logs)
-[09:51]   [3d-wait] Waiting for 'Loaded successfully' console message (timeout=60s)...
-[09:53]   [3d-wait] Got 'Loaded successfully' after 1.4s
-[09:53]   [3d-wait] Unfrozen in 0.251s, rendering for 5s...
-[10:09]   [3d-wait] JS halted via CDP after 16.7s
-[10:57]   [3d-wait] Re-frozen in 64.3s
-[10:57]   [3d-wait] Total 3D wait: 65.8s
-[10:57]   Captured 6 unique frames over 91.65s
-[10:57]   [debug] iframes: 1
-[10:57]   [debug]   iframe[0]: src=http://127.0.0.1:41881/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=3040x2022, rafFrozen=True
-[10:57]   [timing] trigger_3d_previews: 0.0s
-[10:59]   Saved high-quality screenshot: sharp_exif_executed.png
-[10:59]   [timing] final_screenshot: 0.3s
-[11:00] Results saved to C:\logs\Sharp-1502\dev\windows-portable-gpu\results.json
-[11:00] Model report: 12 files, 2.6 GB -> C:\logs\Sharp-1502\dev\windows-portable-gpu\models.json
-[11:00] Saved: C:\logs\Sharp-1502\dev\windows-portable-gpu\index.html
-[11:00] [EXECUTION] PASSED
-[11:00] 
+[04:40] Starting ComfyUI server on port 41882...
+[04:40] Starting ComfyUI server on port 41882...
+[04:40] Server stdout/stderr -> C:\workspaces\Sharp-1721\server.log
+[04:40] Waiting for server to be ready (timeout: 600s)...
+[04:40]   [ComfyUI:stdout] reader thread died: AttributeError("'NoneType' object has no attribute 'readline'")
+[04:40]   [ComfyUI:stderr] reader thread died: AttributeError("'NoneType' object has no attribute 'readline'")
+[05:18] Server responding, waiting for nodes to load...
+[05:38] Server is ready!
+[05:38] Checking for import errors in server logs...
+[05:38] No import errors detected
+[05:38] Found 848 registered nodes
+[05:38] [REGISTRATION] PASSED
+[05:38] 
+[05:39] [4/5] INSTANTIATION
+[05:39] ----------------------------------------
+[05:39] 
+[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x000002447D335A90>, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x000002447D336510>
+[05:39] Testing node constructors...
+[05:39] All 8 node(s) instantiated successfully!
+[05:39] [INSTANTIATION] PASSED
+[05:39] 
+[05:39] [5/5] EXECUTION
+[05:39] ----------------------------------------
+[05:39] 
+[DEBUG] server=<comfy_test.comfyui.server.ComfyUIServer object at 0x000002447D335A90>, api=<comfy_test.comfyui.api.ComfyUIAPI object at 0x000002447D336510>
+[05:39] GPU runner - will execute 2 workflow(s)
+[05:39] Running 3 workflow(s) (all with videos)...
+[05:39] Installing screenshot dependencies (playwright, pillow)...
+[05:40]   Packages installed, downloading chromium browser...
+[05:56]   Screenshot dependencies installed successfully
+[05:56] Starting headless browser...
+[05:56]   Downloading Mesa llvmpipe for Windows...
+[05:56]   Mesa download error: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>
+[05:56]   Mesa unavailable -- falling back to SwiftShader
+[05:59]   [1/3] SKIPPED (not in gpu list) pano.json
+[05:59] Capturing execution frames: sharp_basic.json
+[06:05]   Frame 1 saved (frame_000.jpg, t=0.0s)
+[06:05]   Validating workflow...
+[06:05]   Queuing workflow for execution...
+[06:07]   Frame 2 saved (frame_001.jpg, t=2.3s)
+[06:07]   [capture-periodic] freeze=2ms shot=101ms unfreeze=3ms saved=True
+[06:10]   Frame 3 saved (frame_002.jpg, t=4.5s)
+[06:10]   [capture-periodic] freeze=10ms shot=106ms unfreeze=8ms saved=True
+[06:11]   [capture-loop] iter=50 t=5.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=10.9/31.9GB (34%) swap=0.0/5.0GB (0%) cpu=21% browser_rss=0.71GB
+[06:14]   Frame 4 saved (frame_003.jpg, t=8.7s)
+[06:14]   [capture-periodic] freeze=3ms shot=82ms unfreeze=3ms saved=True
+[06:17]   [capture-loop] iter=100 t=12.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=11.4/31.9GB (36%) swap=0.0/5.0GB (0%) cpu=28% browser_rss=0.71GB
+[06:18]   Frame 5 saved (frame_004.jpg, t=13.1s)
+[06:18]   [capture-periodic] freeze=2ms shot=83ms unfreeze=3ms saved=True
+[06:23]   Frame 6 saved (frame_005.jpg, t=17.5s)
+[06:23]   [capture-periodic] freeze=4ms shot=88ms unfreeze=6ms saved=True
+[06:23]   [capture-loop] iter=150 t=17.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=11.8/31.9GB (37%) swap=0.0/5.0GB (0%) cpu=34% browser_rss=0.71GB
+[06:25]   Frame 7 saved (frame_006.jpg, t=19.7s)
+[06:25]   [capture-periodic] freeze=3ms shot=96ms unfreeze=3ms saved=True
+[06:29]   [capture-loop] iter=200 t=23.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=12.0/31.9GB (38%) swap=0.0/5.0GB (0%) cpu=35% browser_rss=0.72GB
+[06:29]   Frame 8 saved (frame_007.jpg, t=24.1s)
+[06:29]   [capture-periodic] freeze=3ms shot=104ms unfreeze=4ms saved=True
+[06:31]   Frame 9 saved (frame_008.jpg, t=26.3s)
+[06:31]   [capture-periodic] freeze=2ms shot=99ms unfreeze=3ms saved=True
+[06:34]   Frame 10 saved (frame_009.jpg, t=28.5s)
+[06:34]   [capture-periodic] freeze=2ms shot=72ms unfreeze=2ms saved=True
+[06:35]   [capture-loop] iter=250 t=29.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=10.9/31.9GB (34%) swap=0.0/5.0GB (0%) cpu=32% browser_rss=0.66GB
+[06:40]   [capture-loop] iter=300 t=35.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=12.2/31.9GB (38%) swap=0.0/5.0GB (0%) cpu=22% browser_rss=0.66GB
+[06:46]   [capture-loop] iter=350 t=40.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=15.8/31.9GB (49%) swap=0.0/5.0GB (0%) cpu=27% browser_rss=0.66GB
+[06:47]   Frame 11 saved (frame_010.jpg, t=41.5s)
+[06:47]   [capture-periodic] freeze=2ms shot=71ms unfreeze=4ms saved=True
+[06:49]   Node executed (1 total), capturing...
+[06:50]   Frame 12 saved (frame_011.jpg, t=44.4s)
+[06:50]   [capture-node] freeze=2ms shot=93ms unfreeze=0ms saved=True
+[06:50]   Execution complete (t=44.3s)
+[06:50]   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
+[06:50]   [3d-wait] Phase 1 done in 0.0s
+[06:50]   [3d-wait] Phase 2: iframes=1
+[06:50]   [3d-wait] iframe viewer_ready=False (matched 0 console logs)
+[06:50]   [3d-wait] Waiting for 'Loaded successfully' console message (timeout=60s)...
+[06:50]   [3d-wait] Got 'Loaded successfully' after 0.6s
+[06:50]   [3d-wait] Unfrozen in 0.144s, rendering for 5s...
+[06:58]   [3d-wait] JS halted via CDP after 7.3s
+[07:21]   [3d-wait] Re-frozen in 30.9s
+[07:21]   [3d-wait] Total 3D wait: 31.5s
+[07:21]   Captured 12 unique frames over 76.0s
+[07:21]   [debug] iframes: 1
+[07:21]   [debug]   iframe[0]: src=http://127.0.0.1:41882/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=1536x1024, rafFrozen=True
+[07:21]   [timing] trigger_3d_previews: 0.0s
+[07:23]   Saved high-quality screenshot: sharp_basic_executed.png
+[07:23]   [timing] final_screenshot: 0.2s
+[07:24] Capturing execution frames: sharp_exif.json
+[07:29]   Frame 1 saved (frame_000.jpg, t=0.0s)
+[07:29]   Validating workflow...
+[07:29]   Queuing workflow for execution...
+[07:31]   Frame 2 saved (frame_001.jpg, t=2.3s)
+[07:31]   [capture-periodic] freeze=2ms shot=95ms unfreeze=3ms saved=True
+[07:33]   Frame 3 saved (frame_002.jpg, t=4.5s)
+[07:33]   [capture-periodic] freeze=4ms shot=91ms unfreeze=2ms saved=True
+[07:35]   [capture-loop] iter=50 t=5.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=11.7/31.9GB (37%) swap=0.0/5.0GB (0%) cpu=72% browser_rss=0.82GB
+[07:40]   [capture-loop] iter=100 t=11.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=3 ram=16.3/31.9GB (51%) swap=0.0/5.0GB (0%) cpu=33% browser_rss=0.75GB
+[07:41]   Node executed (1 total), capturing...
+[07:41]   Frame 4 saved (frame_003.jpg, t=11.8s)
+[07:41]   [capture-node] freeze=6ms shot=734ms unfreeze=0ms saved=True
+[07:41]   Execution complete (t=11.8s)
+[07:42]   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
+[07:42]   [3d-wait] Phase 1 done in 0.0s
+[07:42]   [3d-wait] Phase 2: iframes=1
+[07:42]   [3d-wait] iframe viewer_ready=True (matched 1 console logs)
+[07:42]   [3d-wait] Unfrozen in 0.002s, rendering for 5s...
+[07:49]   [3d-wait] JS halted via CDP after 7.6s
+[08:12]   [3d-wait] Re-frozen in 30.4s
+[08:12]   [3d-wait] Total 3D wait: 30.4s
+[08:12]   Captured 4 unique frames over 43.13s
+[08:12]   [debug] iframes: 1
+[08:12]   [debug]   iframe[0]: src=http://127.0.0.1:41882/extensions/ComfyUI-GeometryPack/viewer_gaussian.html?v=17, canvas=3040x2022, rafFrozen=True
+[08:12]   [timing] trigger_3d_previews: 0.0s
+[08:14]   Saved high-quality screenshot: sharp_exif_executed.png
+[08:14]   [timing] final_screenshot: 0.2s
+[08:14] Results saved to C:\logs\Sharp-1721\dev\windows-portable-gpu\results.json
+[08:14] Model report: 12 files, 2.6 GB -> C:\logs\Sharp-1721\dev\windows-portable-gpu\models.json
+[08:14] Saved: C:\logs\Sharp-1721\dev\windows-portable-gpu\index.html
+[08:14] [EXECUTION] PASSED
+[08:14] 
 windows_portable: PASSED
-[11:00] Stopping ComfyUI server...
+[08:14] Stopping ComfyUI server...
