@@ -1,143 +1,227 @@
 [   2s] CDP targets: 1
-[   2s]   page: file:///C:/Users/runneradmin/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/not-supported | ComfyUI
-[   3s] Main page: file:///C:/Users/runneradmin/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/not-supported | ComfyUI
+[   2s]   page: file:///C:/Users/stduser/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/desktop-start | ComfyUI
+[   3s] Main page: file:///C:/Users/stduser/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/not-supported | ComfyUI
 [   3s] Buttons: ['Learn More', 'Report Issue', 'Continue']
 [   3s]   wizard: COMFY_TEST_GPU=0 platform=win32 preferred=['CPU']
 [   6s]   clicked [BTN|Continue]
-[   9s]   url: file:///C:/Users/runneradmin/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/not-supported -> file:///C:/Users/runneradmin/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/install
-[   9s]   clicked [TILE|CPU]
-[  13s]   clicked [BTN|Next]
-[  20s]   clicked [BTN|Next]
-[  24s]   clicked [BTN|Install]
-[  27s]   url: file:///C:/Users/runneradmin/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/install -> file:///C:/Users/runneradmin/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/server-start
-[ 131s]   /system_stats up after 127s
-[ 131s]   app: waiting for backend stability (continuous /system_stats up for 30s)
-[ 131s]   app: /system_stats up; awaiting 30s of stability
-[ 161s]   app: backend stable for 30s; proceeding
-[ 161s]   capturing canvas load...
-[ 169s]   post: waiting for Cloud upsell
-[ 202s]   post: Cloud upsell not found, skipping
-[ 202s]   post: pressed Escape (Cloud upsell fallback)
-[ 205s]   post: waiting for Close Templates
-[ 217s]   post: Close Templates not found, skipping
-[ 217s]   post: pressed Escape (Close Templates fallback)
-[ 219s]   post: waiting for Extensions
-[ 219s]   post: clicked Extensions via [button[aria-label="Extensions"]:visible]
-[ 222s]   ext: node meta = display='Sharp' publisher='pznodes' version='0.1.12'
-[ 225s]   ext: searching "Sharp"
-[ 228s]   ext: clicking Sharp by pznodes tile
-[ 232s]   ext: scrolling to + opening version selector
-[ 235s]   ext: selected 0.1.12
-[ 236s]   ext: clicking right-panel Install
-[ 238s]   ext: clicked Install (last of 8 visible)
-[ 246s]   ext: waiting for "Apply Changes" toast
-[ 247s]   ext: clicked Apply Changes
-[ 252s]   app: Apply Changes already triggered in-app restart, skipping pkill
-[ 257s]   app: relaunching with CDP
-[ 257s]   app: waiting for CDP
-[ 258s]   app: CDP up after 1s
-[ 258s]   app: reconnecting Playwright
-[ 259s]   app: attached to http://127.0.0.1:8000/
-[ 544s]   app: server ready after 70s
-[ 544s]   app: waiting for main canvas (window.app.graph)
-[ 544s]   app: canvas ready after 1s (http://127.0.0.1:8000/)
-[ 549s]   app: forcing renderer reload to refresh node-pack manifest
-[ 551s]   app: canvas re-ready after reload in 2s
-[ 554s]   ext: closing Nodes Manager dialog
-[ 554s]   ext: dismissing What's New popup
-[ 555s]   ext: closed What's New popup
-[ 557s]   ext: dismissing Node Pack Issues modal (if present)
-[ 557s]   ext: closed Node Pack Issues modal
-[ 560s]   ext: opening Templates sidebar
-[ 560s]   ext: clicked Templates
-[ 564s]   ext: locating "comfyui-sharp" section in Templates panel
-[ 566s]   ext: clicked comfyui-sharp section
-[ 568s]   ext: fetching comfy-test.toml from https://raw.githubusercontent.com/PozzettiAndrea/ComfyUI-Sharp/main/comfy-test.toml
-[ 568s]   ext: cpu spec = exclude ['pano']
-[ 568s]   ext: picking first matching comfyui-sharp template
-[ 568s]   ext: 3 visible cards
-[ 568s]   ext: skipping pano (not in CPU list)
-[ 571s]   ext: clicked template sharp_basic
-[ 577s]   ext: installing WS execution listener
-[ 577s]   ext: clicking Run
-[ 577s]   ext: clicked Run
-[ 577s]   ext: waiting for execution_success / execution_error
-[ 910s]   ext: WS events=109 elapsed=332s
-[ 910s]     ws: {'type': 'progress', 'ts': 1778494940287}
-[ 910s]     ws: {'type': 'progress_state', 'ts': 1778494940461}
-[ 910s]     ws: {'type': 'progress', 'ts': 1778494940461}
-[ 910s]     ws: {'type': 'progress_state', 'ts': 1778494940486}
-[ 910s]     ws: {'type': 'progress_state', 'ts': 1778494940498}
-[ 910s]     ws: {'type': 'executing', 'ts': 1778494940498}
-[ 910s]     ws: {'type': 'progress_state', 'ts': 1778495206326}
-[ 910s]     ws: {'type': 'progress', 'ts': 1778495206327}
-[ 910s]     ws: {'type': 'progress_state', 'ts': 1778495206359}
-[ 910s]     ws: {'type': 'progress_state', 'ts': 1778495206361}
-[ 910s]     ws: {'type': 'executing', 'ts': 1778495206362}
-[ 910s]     ws: {'type': 'executed', 'ts': 1778495232344}
-[ 910s]     ws: {'type': 'progress_state', 'ts': 1778495232383}
-[ 910s]     ws: {'type': 'execution_success', 'ts': 1778495232387}
-[ 910s]     ws: {'type': 'status', 'ts': 1778495232389}
-[ 910s]   ext: execution_success after 332s
-[ 923s]   ext: fetching comfy-test.toml from https://raw.githubusercontent.com/PozzettiAndrea/ComfyUI-Sharp/main/comfy-test.toml
-[ 923s]   ext: cpu spec = exclude ['pano']
-[ 923s]   loop: workflows/ from $COMFY_TEST_WORKFLOWS -> ['pano', 'sharp_basic', 'sharp_exif']
-[ 923s]   loop: spec=exclude items=['pano'] -> 2 workflow(s) ['sharp_basic', 'sharp_exif']
-[ 923s]   loop: matching=2 first_ran='sharp_basic' remaining=1 -> ['sharp_exif']
-[ 923s]   loop: full restart for workflow 2/2 (sharp_exif)
-[ 923s]   loop: closing current browser
-[ 923s]   loop: killing ComfyUI process
-[ 928s]   loop: launching ComfyUI with --remote-debugging-port=0
-[ 928s]   loop: waiting for DevToolsActivePort at C:\Users\runneradmin\AppData\Roaming\ComfyUI\DevToolsActivePort
-[ 930s]   loop: DevToolsActivePort -> 59615 after 3s
-[ 930s]   loop: reconnecting Playwright on port 59615
-[ 931s]   loop: attached to file:///C:/Users/runneradmin/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/desktop-start
-[ 931s]   loop: server ready after 1s
-[ 962s]   loop: canvas ready after 27s
-[ 962s]   loop: forcing renderer reload
-[ 965s]   loop: canvas ready after 3s
-[ 968s]   ext: closing Nodes Manager dialog
-[ 968s]   ext: dismissing What's New popup
-[ 968s]   ext: What's New popup not present
-[ 968s]   ext: dismissing Node Pack Issues modal (if present)
-[ 968s]   ext: Node Pack Issues modal not present
-[ 968s]   ext: opening Templates sidebar
-[ 969s]   ext: clicked Templates
-[ 973s]   ext: locating "comfyui-sharp" section in Templates panel
-[ 975s]   ext: clicked comfyui-sharp section
-[ 977s]   ext: clicking template sharp_exif
-[ 979s]   ext: clicked template sharp_exif
-[ 984s]   ext: installing WS execution listener
-[ 984s]   ext: clicking Run
-[ 985s]   ext: clicked Run
-[ 985s]   ext: waiting for execution_success / execution_error
-[1306s]   ext: WS events=20 elapsed=321s
-[1306s]     ws: {'type': 'executing', 'ts': 1778495307734}
-[1306s]     ws: {'type': 'progress_state', 'ts': 1778495315902}
-[1306s]     ws: {'type': 'progress_state', 'ts': 1778495315904}
-[1306s]     ws: {'type': 'executing', 'ts': 1778495315904}
-[1306s]     ws: {'type': 'progress_state', 'ts': 1778495316967}
-[1306s]     ws: {'type': 'progress_state', 'ts': 1778495316969}
-[1306s]     ws: {'type': 'executing', 'ts': 1778495316970}
-[1306s]     ws: {'type': 'progress_state', 'ts': 1778495621004}
-[1306s]     ws: {'type': 'progress', 'ts': 1778495621178}
-[1306s]     ws: {'type': 'progress_state', 'ts': 1778495621200}
-[1306s]     ws: {'type': 'progress_state', 'ts': 1778495621204}
-[1306s]     ws: {'type': 'executing', 'ts': 1778495621205}
-[1306s]     ws: {'type': 'executed', 'ts': 1778495629010}
-[1306s]     ws: {'type': 'progress_state', 'ts': 1778495629012}
-[1306s]     ws: {'type': 'execution_success', 'ts': 1778495629098}
-[1306s]   ext: execution_success after 321s
-[1389s]   frame: capture failed: Page.screenshot: Timeout 30000ms exceeded.
-Call log:
-  - taking page screenshot
-
-[1421s]   snap final: Page.screenshot: Timeout 30000ms exceeded.
-Call log:
-  - taking page screenshot
-
-[1421s] Captured 1415 frames
-[1422s] Wrote D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1011\dev\windows-desktop\results.json (2 workflow(s), sha=02ae67c305a8)
+[   9s]   url: file:///C:/Users/stduser/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/not-supported -> file:///C:/Users/stduser/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/install
+[  10s]   clicked [TILE|CPU]
+[  14s]   clicked [BTN|Next]
+[  21s]   clicked [BTN|Next]
+[  25s]   clicked [BTN|Install]
+[  28s]   url: file:///C:/Users/stduser/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/install -> file:///C:/Users/stduser/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/server-start
+[ 136s]   /system_stats up after 133s
+[ 136s]   app: waiting for backend stability (continuous /system_stats up for 30s)
+[ 136s]   app: /system_stats up; awaiting 30s of stability
+[ 167s]   app: backend stable for 30s; proceeding
+[ 167s]   capturing canvas load...
+[ 176s]   post: waiting for Cloud upsell
+[ 209s]   post: Cloud upsell not found, skipping
+[ 209s]   post: pressed Escape (Cloud upsell fallback)
+[ 211s]   post: waiting for Close Templates
+[ 223s]   post: Close Templates not found, skipping
+[ 223s]   post: pressed Escape (Close Templates fallback)
+[ 225s]   post: waiting for Extensions
+[ 226s]   post: clicked Extensions via [button[aria-label="Extensions"]:visible]
+[ 228s]   ext: node meta = display='Sharp' publisher='pznodes' version='0.1.12'
+[ 231s]   ext: searching "Sharp"
+[ 234s]   ext: clicking Sharp by pznodes tile
+[ 238s]   ext: scrolling to + opening version selector
+[ 242s]   ext: selected 0.1.12
+[ 243s]   ext: clicking right-panel Install
+[ 244s]   ext: clicked Install (last of 8 visible)
+[ 252s]   ext: waiting for "Apply Changes" toast
+[ 253s]   ext: clicked Apply Changes
+[ 258s]   app: Apply Changes already triggered in-app restart, skipping pkill
+[ 263s]   app: relaunching with CDP
+[ 263s]   app: waiting for CDP
+[ 264s]   app: CDP up after 1s
+[ 264s]   app: reconnecting Playwright
+[ 265s]   app: attached to http://127.0.0.1:8000/
+[ 522s]   app: server ready after 63s
+[ 522s]   app: waiting for main canvas (window.app.graph)
+[ 522s]   app: canvas ready after 1s (http://127.0.0.1:8000/)
+[ 527s]   app: forcing renderer reload to refresh node-pack manifest
+[ 529s]   app: canvas re-ready after reload in 2s
+[ 532s]   ext: closing Nodes Manager dialog
+[ 532s]   ext: dismissing What's New popup
+[ 533s]   ext: closed What's New popup
+[ 535s]   ext: dismissing Node Pack Issues modal (if present)
+[ 535s]   ext: Node Pack Issues modal not present
+[ 535s]   ext: opening Templates sidebar
+[ 536s]   ext: clicked Templates
+[ 540s]   ext: locating "comfyui-sharp" section in Templates panel
+[ 541s]   ext: clicked comfyui-sharp section
+[ 544s]   ext: fetching comfy-test.toml from https://raw.githubusercontent.com/PozzettiAndrea/ComfyUI-Sharp/main/comfy-test.toml
+[ 544s]   ext: cpu spec = exclude ['pano']
+[ 544s]   ext: picking first matching comfyui-sharp template
+[ 544s]   ext: 3 visible cards
+[ 544s]   ext: skipping pano (not in CPU list)
+[ 546s]   ext: clicked template sharp_basic
+[ 551s]   ext: installing WS execution listener
+[ 551s]   ext: clicking Run
+[ 552s]   ext: clicked Run
+[ 552s]   ext: waiting for execution_success / execution_error
+[ 616s]   ext: WS events=101 elapsed=64s
+[ 616s]     ws: {'type': 'progress', 'ts': 1779129549262}
+[ 616s]     ws: {'type': 'progress_state', 'ts': 1779129549763}
+[ 616s]     ws: {'type': 'progress', 'ts': 1779129549763}
+[ 616s]     ws: {'type': 'progress_state', 'ts': 1779129552012}
+[ 616s]     ws: {'type': 'progress', 'ts': 1779129552012}
+[ 616s]     ws: {'type': 'progress_state', 'ts': 1779129552513}
+[ 616s]     ws: {'type': 'progress', 'ts': 1779129552513}
+[ 616s]     ws: {'type': 'progress_state', 'ts': 1779129552663}
+[ 616s]     ws: {'type': 'progress', 'ts': 1779129552663}
+[ 616s]     ws: {'type': 'progress_state', 'ts': 1779129552686}
+[ 616s]     ws: {'type': 'progress_state', 'ts': 1779129552688}
+[ 616s]     ws: {'type': 'executing', 'ts': 1779129552700}
+[ 616s]     ws: {'type': 'execution_error', 'ts': 1779129561066}
+[ 616s]     ws: {'type': 'status', 'ts': 1779129561090}
+[ 616s]     ws: {'type': 'executing', 'ts': 1779129561446}
+[ 616s]   ext: execution_error data:
+[ 616s] {
+  "prompt_id": "300e5a6b-471c-4f00-8b2c-27edbb34e024",
+  "node_id": "5",
+  "node_type": "SharpPredict",
+  "executed": [
+    "1",
+    "2"
+  ],
+  "exception_message": "No module named 'transformers'\n\nWorker traceback:\nTraceback (most recent call last):\n  File \"C:\\Users\\stduser\\AppData\\Local\\Temp\\comfyui_pvenv_vn1p48t8\\persistent_worker.py\", line 1762, in main\n    result = method(**inputs)\n             ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy_api\\latest\\_io.py\", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\ce\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stduser\\Documents\\ComfyUI\\custom_nodes\\comfyui-sharp\\nodes\\predict.py\", line 111, in execute\n    patcher = _load_sharp_model(model)\n              ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stduser\\Documents\\ComfyUI\\custom_nodes\\comfyui-sharp\\nodes\\load_model.py\", line 75, in _load_sharp_model\n    import comfy.model_patcher\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\model_patcher.py\", line 32, in <module>\n    import comfy.hooks\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\hooks.py\", line 14, in <module>\n    import comfy.lora\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\lora.py\", line 23, in <module>\n    import comfy.model_base\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\model_base.py\", line 61, in <module>\n    import comfy.ldm.hidream_o1.model\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\ldm\\hidream_o1\\model.py\", line 20, in <module>\n    from comfy.text_encoders.qwen35 import Qwen35VisionModel\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\text_encoders\\qwen35.py\", line 10, in <module>\n    from comfy import sd1_clip\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\sd1_clip.py\", line 3, in <module>\n    from transformers import CLIPTokenizer\nModuleNotFoundError: No module named 'transformers'\n\n",
+  "exception_type": "comfy_env.isolation.workers.base.WorkerError",
+  "traceback": [
+    "  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n",
+    "  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 297, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n",
+    "  File \"C:\\Users\\stduser\\Documents\\ComfyUI\\.venv\\Lib\\site-packages\\comfy_env\\isolation\\metadata.py\", line 556, in proxy\n    result = worker.call_method(\n             ^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"C:\\Users\\stduser\\Documents\\ComfyUI\\.venv\\Lib\\site-packages\\comfy_env\\isolation\\workers\\subprocess.py\", line 674, in call_method\n    raise WorkerError(\n"
+  ],
+  "current_inputs": {
+    "focal_length_mm": [
+      30
+    ],
+    "output_prefix": [
+      "sharp"
+    ],
+    "model": [
+      "{'model_path': 'C:\\\\Users\\\\stduser\\\\.comfy-test-cache\\\\desktop\\\\ComfyUI\\\\resources\\\\ComfyUI\\\\models\\\\sharp\\\\sharp_2572gikvuh.pt', 'precision': 'auto', 'dtype': 'fp32'}"
+    ],
+    "image": [
+      "tensor([[[[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         [[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         [[0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          [0.0039, 0.4824, 0.9569],\n          ...,\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000],\n          [0.0510, 0.0275, 0.0000]],\n\n         ...,\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5098, 0.4627, 0.4235],\n          [0.5098, 0.4627, 0.4235],\n          [0.5098, 0.4627, 0.4235]],\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5059, 0.4588, 0.4392],\n          [0.5059, 0.4627, 0.4314],\n          [0.5059, 0.4627, 0.4314]],\n\n         [[0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          [0.6824, 0.6118, 0.5333],\n          ...,\n          [0.5059, 0.4588, 0.4392],\n          [0.5059, 0.4627, 0.4314],\n          [0.5059, 0.4627, 0.4314]]]])"
+    ],
+    "prompt": [
+      "{'1': {'inputs': {'image': 'beach.jpg'}, 'class_type': 'LoadImage', '_meta': {'title': 'Load Image'}, 'is_changed': ['ee4f94632a5ec7038826e875829a62a81dc2a9b85ed59440f2eaa37b3704fa24']}, '2': {'inputs': {'precision': 'auto'}, 'class_type': 'LoadSharpModel', '_meta': {'title': '(Down)Load SHARP Model'}}, '4': {'inputs': {'preview_gaussian': '', 'ply_path': ['5', 0], 'extrinsics': ['5', 1], 'intrinsics': ['5', 2]}, 'class_type': 'GeomPackPreviewGaussian', '_meta': {'title': 'Preview Gaussian'}}, '5': {'inputs': {'focal_length_mm': 30.0, 'output_prefix': 'sharp', 'model': ['2', 0], 'image': ['1', 0]}, 'class_type': 'SharpPredict', '_meta': {'title': 'SHARP Predict (Image to PLY)'}}}"
+    ],
+    "extra_pnginfo": [
+      "{'workflow': {'id': 'sharp-basic-workflow', 'revision': 0, 'last_node_id': 5, 'last_link_id': 10, 'nodes': [{'id': 2, 'type': 'LoadSharpModel', 'pos': [-150, -400], 'size': [270, 106.65625], 'flags': {}, 'order': 0, 'mode': 0, 'inputs': [], 'outputs': [{'name': 'model_config', 'type': 'SHARP_MODEL_CONFIG', 'links': [6]}], 'properties': {'Node name for S&R': 'LoadSharpModel', 'aux_id': 'PozzettiAndrea/ComfyUI-Sharp', 'ver': '9f1b9c726e2cfc0118866c3df783e7f6bc895226'}, 'widgets_values': ['auto']}, {'id': 1, 'type': 'LoadImage', 'pos': [-150, -100], 'size': [274, 340], 'flags': {}, 'order': 1, 'mode': 0, 'inputs': [], 'outputs': [{'name': 'IMAGE', 'type': 'IMAGE', 'links': [7]}, {'name': 'MASK', 'type': 'MASK', 'links': []}], 'properties': {'Node name for S&R': 'LoadImage', 'cnr_id': 'comfy-core', 'ver': '0.5.1'}, 'widgets_values': ['beach.jpg', 'image']}, {'id': 5, 'type': 'SharpPredict', 'pos': [181.546875, -251.55078125], 'size': [298.890625, 212], 'flags': {}, 'order': 2, 'mode': 0, 'inputs': [{'name': 'model', 'type': 'SHARP_MODEL_CONFIG', 'link': 6}, {'name': 'image', 'type': 'IMAGE', 'link': 7}, {'name': 'extrinsics', 'shape': 7, 'type': 'EXTRINSICS', 'link': None}, {'name': 'intrinsics', 'shape': 7, 'type': 'INTRINSICS', 'link': None}], 'outputs': [{'name': 'ply_path', 'type': 'STRING', 'links': [8]}, {'name': 'extrinsics', 'type': 'EXTRINSICS', 'links': [9]}, {'name': 'intrinsics', 'type': 'INTRINSICS', 'links': [10]}], 'properties': {'Node name for S&R': 'SharpPredict', 'aux_id': 'PozzettiAndrea/ComfyUI-Sharp', 'ver': 'aa98b213e3d0770477bbf46046094c5cb8ff6052'}, 'widgets_values': [30, 'sharp']}, {'id': 4, 'type': 'GeomPackPreviewGaussian', 'pos': [629.92578125, -322.046875], 'size': [512, 658], 'flags': {}, 'order': 3, 'mode': 0, 'inputs': [{'name': 'ply_path', 'type': 'STRING', 'link': 8}, {'name': 'extrinsics', 'shape': 7, 'type': 'EXTRINSICS', 'link': 9}, {'name': 'intrinsics', 'shape': 7, 'type': 'INTRINSICS', 'link': 10}], 'outputs': [], 'properties': {'Node name for S&R': 'GeomPackPreviewGaussian', 'aux_id': 'PozzettiAndrea/ComfyUI-GeometryPack', 'ver': 'b7df285fc5b3fef7aad434d8b6e8698efed6358b', 'cnr_id': 'comfyui-geometrypack'}, 'widgets_values': ['']}], 'links': [[6, 2, 0, 5, 0, 'SHARP_MODEL'], [7, 1, 0, 5, 1, 'IMAGE'], [8, 5, 0, 4, 0, 'STRING'], [9, 5, 1, 4, 1, 'EXTRINSICS'], [10, 5, 2, 4, 2, 'INTRINSICS']], 'groups': [], 'config': {}, 'extra': {'ds': {'scale': 0.5762521102982555, 'offset': [378.654296875, 637.91064453125]}, 'workflowRendererVersion': 'LG', 'frontendVersion': '1.43.18'}, 'version': 0.4}}"
+    ]
+  },
+  "current_outputs": [
+    "1",
+    "4",
+    "5",
+    "2"
+  ],
+  "timestamp": 1779129561050
+}
+[ 621s]   ext: fetching comfy-test.toml from https://raw.githubusercontent.com/PozzettiAndrea/ComfyUI-Sharp/main/comfy-test.toml
+[ 621s]   ext: cpu spec = exclude ['pano']
+[ 621s]   loop: workflows/ from $COMFY_TEST_WORKFLOWS -> ['pano', 'sharp_basic', 'sharp_exif']
+[ 621s]   loop: spec=exclude items=['pano'] -> 2 workflow(s) ['sharp_basic', 'sharp_exif']
+[ 621s]   loop: matching=2 first_ran='sharp_basic' remaining=1 -> ['sharp_exif']
+[ 621s]   loop: full restart for workflow 2/2 (sharp_exif)
+[ 621s]   loop: closing current browser
+[ 621s]   loop: killing ComfyUI process
+[ 626s]   loop: launching ComfyUI with --remote-debugging-port=0
+[ 626s]   loop: waiting for DevToolsActivePort at C:\Users\stduser\AppData\Roaming\ComfyUI\DevToolsActivePort
+[ 628s]   loop: DevToolsActivePort -> 50911 after 3s
+[ 628s]   loop: reconnecting Playwright on port 50911
+[ 629s]   loop: attached to file:///C:/Users/stduser/.comfy-test-cache/desktop/ComfyUI/resources/desktop-ui/index.html#/desktop-start
+[ 629s]   loop: server ready after 1s
+[ 663s]   loop: canvas ready after 28s
+[ 663s]   loop: forcing renderer reload
+[ 667s]   loop: canvas ready after 3s
+[ 670s]   ext: closing Nodes Manager dialog
+[ 670s]   ext: dismissing What's New popup
+[ 670s]   ext: What's New popup not present
+[ 670s]   ext: dismissing Node Pack Issues modal (if present)
+[ 670s]   ext: Node Pack Issues modal not present
+[ 670s]   ext: opening Templates sidebar
+[ 670s]   ext: clicked Templates
+[ 674s]   ext: locating "comfyui-sharp" section in Templates panel
+[ 676s]   ext: clicked comfyui-sharp section
+[ 678s]   ext: clicking template sharp_exif
+[ 681s]   ext: clicked template sharp_exif
+[ 686s]   ext: installing WS execution listener
+[ 686s]   ext: clicking Run
+[ 686s]   ext: clicked Run
+[ 686s]   ext: waiting for execution_success / execution_error
+[ 693s]   ext: WS events=15 elapsed=6s
+[ 693s]     ws: {'type': 'status', 'ts': 1779129631913}
+[ 693s]     ws: {'type': 'status', 'ts': 1779129631914}
+[ 693s]     ws: {'type': 'execution_start', 'ts': 1779129631923}
+[ 693s]     ws: {'type': 'execution_cached', 'ts': 1779129631942}
+[ 693s]     ws: {'type': 'progress_state', 'ts': 1779129631946}
+[ 693s]     ws: {'type': 'executing', 'ts': 1779129631946}
+[ 693s]     ws: {'type': 'progress_state', 'ts': 1779129635462}
+[ 693s]     ws: {'type': 'progress_state', 'ts': 1779129635464}
+[ 693s]     ws: {'type': 'executing', 'ts': 1779129635464}
+[ 693s]     ws: {'type': 'progress_state', 'ts': 1779129635942}
+[ 693s]     ws: {'type': 'progress_state', 'ts': 1779129635944}
+[ 693s]     ws: {'type': 'executing', 'ts': 1779129635944}
+[ 693s]     ws: {'type': 'execution_error', 'ts': 1779129638267}
+[ 693s]     ws: {'type': 'status', 'ts': 1779129638271}
+[ 693s]     ws: {'type': 'executing', 'ts': 1779129638572}
+[ 693s]   ext: execution_error data:
+[ 693s] {
+  "prompt_id": "d6133568-9097-47cf-aae3-98da8a37b68f",
+  "node_id": "7",
+  "node_type": "SharpPredict",
+  "executed": [
+    "9",
+    "2"
+  ],
+  "exception_message": "No module named 'transformers'\n\nWorker traceback:\nTraceback (most recent call last):\n  File \"C:\\Users\\stduser\\AppData\\Local\\Temp\\comfyui_pvenv_2co04joo\\persistent_worker.py\", line 1762, in main\n    result = method(**inputs)\n             ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy_api\\latest\\_io.py\", line 1833, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\ce\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\torch\\utils\\_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stduser\\Documents\\ComfyUI\\custom_nodes\\comfyui-sharp\\nodes\\predict.py\", line 111, in execute\n    patcher = _load_sharp_model(model)\n              ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\stduser\\Documents\\ComfyUI\\custom_nodes\\comfyui-sharp\\nodes\\load_model.py\", line 75, in _load_sharp_model\n    import comfy.model_patcher\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\model_patcher.py\", line 32, in <module>\n    import comfy.hooks\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\hooks.py\", line 14, in <module>\n    import comfy.lora\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\lora.py\", line 23, in <module>\n    import comfy.model_base\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\model_base.py\", line 61, in <module>\n    import comfy.ldm.hidream_o1.model\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\ldm\\hidream_o1\\model.py\", line 20, in <module>\n    from comfy.text_encoders.qwen35 import Qwen35VisionModel\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\text_encoders\\qwen35.py\", line 10, in <module>\n    from comfy import sd1_clip\n  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\comfy\\sd1_clip.py\", line 3, in <module>\n    from transformers import CLIPTokenizer\nModuleNotFoundError: No module named 'transformers'\n\n",
+  "exception_type": "comfy_env.isolation.workers.base.WorkerError",
+  "traceback": [
+    "  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 535, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 335, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 309, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n",
+    "  File \"C:\\Users\\stduser\\.comfy-test-cache\\desktop\\ComfyUI\\resources\\ComfyUI\\execution.py\", line 297, in process_inputs\n    result = f(**inputs)\n             ^^^^^^^^^^^\n",
+    "  File \"C:\\Users\\stduser\\Documents\\ComfyUI\\.venv\\Lib\\site-packages\\comfy_env\\isolation\\metadata.py\", line 556, in proxy\n    result = worker.call_method(\n             ^^^^^^^^^^^^^^^^^^^\n",
+    "  File \"C:\\Users\\stduser\\Documents\\ComfyUI\\.venv\\Lib\\site-packages\\comfy_env\\isolation\\workers\\subprocess.py\", line 674, in call_method\n    raise WorkerError(\n"
+  ],
+  "current_inputs": {
+    "focal_length_mm": [
+      20
+    ],
+    "output_prefix": [
+      "sharp"
+    ],
+    "model": [
+      "{'model_path': 'C:\\\\Users\\\\stduser\\\\.comfy-test-cache\\\\desktop\\\\ComfyUI\\\\resources\\\\ComfyUI\\\\models\\\\sharp\\\\sharp_2572gikvuh.pt', 'precision': 'auto', 'dtype': 'fp32'}"
+    ],
+    "image": [
+      "tensor([[[[0.2157, 0.1647, 0.1569],\n          [0.2275, 0.1608, 0.1608],\n          [0.2275, 0.1647, 0.1529],\n          ...,\n          [0.4471, 0.4745, 0.4863],\n          [0.4510, 0.4745, 0.4863],\n          [0.4431, 0.4745, 0.4745]],\n\n         [[0.2196, 0.1686, 0.1569],\n          [0.2314, 0.1647, 0.1608],\n          [0.2353, 0.1647, 0.1647],\n          ...,\n          [0.4549, 0.4784, 0.4706],\n          [0.4549, 0.4706, 0.4784],\n          [0.4431, 0.4706, 0.4667]],\n\n         [[0.2314, 0.1725, 0.1569],\n          [0.2510, 0.1725, 0.1608],\n          [0.2392, 0.1725, 0.1686],\n          ...,\n          [0.4588, 0.4745, 0.4627],\n          [0.4510, 0.4745, 0.4667],\n          [0.4471, 0.4706, 0.4627]],\n\n         ...,\n\n         [[0.1569, 0.1647, 0.1843],\n          [0.1647, 0.1725, 0.1882],\n          [0.1490, 0.1686, 0.1922],\n          ...,\n          [0.1020, 0.1137, 0.1373],\n          [0.1137, 0.1176, 0.1412],\n          [0.0863, 0.1176, 0.1373]],\n\n         [[0.1569, 0.1686, 0.1804],\n          [0.1569, 0.1647, 0.1961],\n          [0.1490, 0.1647, 0.1961],\n          ...,\n          [0.1059, 0.1216, 0.1294],\n          [0.1176, 0.1216, 0.1333],\n          [0.1059, 0.1137, 0.1373]],\n\n         [[0.1608, 0.1686, 0.1843],\n          [0.1608, 0.1686, 0.1882],\n          [0.1569, 0.1686, 0.1882],\n          ...,\n          [0.1059, 0.1176, 0.1333],\n          [0.1137, 0.1176, 0.1333],\n          [0.1333, 0.1176, 0.1333]]]])"
+    ],
+    "prompt": [
+      "{'2': {'inputs': {'precision': 'auto'}, 'class_type': 'LoadSharpModel', '_meta': {'title': '(Down)Load SHARP Model'}}, '7': {'inputs': {'focal_length_mm': ['9', 2], 'output_prefix': 'sharp', 'model': ['2', 0], 'image': ['9', 0]}, 'class_type': 'SharpPredict', '_meta': {'title': 'SHARP Predict (Image to PLY)'}}, '8': {'inputs': {'preview_gaussian': '', 'ply_path': ['7', 0], 'extrinsics': ['7', 1], 'intrinsics': ['7', 2]}, 'class_type': 'GeomPackPreviewGaussian', '_meta': {'title': 'Preview Gaussian'}}, '9': {'inputs': {'image': 'eth3d.png', 'default_focal_mm': 30.0}, 'class_type': 'LoadImageWithExif', '_meta': {'title': 'Load Image with EXIF (Focal Length)'}}}"
+    ],
+    "extra_pnginfo": [
+      "{'workflow': {'id': 'sharp-basic-workflow', 'revision': 0, 'last_node_id': 10, 'last_link_id': 21, 'nodes': [{'id': 2, 'type': 'LoadSharpModel', 'pos': [-150, -400], 'size': [270, 106.65625], 'flags': {}, 'order': 0, 'mode': 0, 'inputs': [], 'outputs': [{'name': 'model_config', 'type': 'SHARP_MODEL_CONFIG', 'links': [11]}], 'properties': {'Node name for S&R': 'LoadSharpModel', 'aux_id': 'PozzettiAndrea/ComfyUI-Sharp', 'ver': '9f1b9c726e2cfc0118866c3df783e7f6bc895226'}, 'widgets_values': ['auto']}, {'id': 9, 'type': 'LoadImageWithExif', 'pos': [-208.74978010739324, -99.02778023242435], 'size': [342.28125, 420], 'flags': {}, 'order': 1, 'mode': 0, 'inputs': [], 'outputs': [{'name': 'image', 'type': 'IMAGE', 'links': [19]}, {'name': 'mask', 'type': 'MASK', 'links': None}, {'name': 'focal_length_mm', 'type': 'FLOAT', 'links': [20]}], 'properties': {'Node name for S&R': 'LoadImageWithExif', 'aux_id': 'PozzettiAndrea/ComfyUI-Sharp', 'ver': 'c69751a59b587c3b83d0e37cfe2bab3bc838574a'}, 'widgets_values': ['eth3d.png', 30, 'image']}, {'id': 7, 'type': 'SharpPredict', 'pos': [226.15696022727278, -245.70490056818184], 'size': [298.890625, 212], 'flags': {}, 'order': 2, 'mode': 0, 'inputs': [{'name': 'model', 'type': 'SHARP_MODEL_CONFIG', 'link': 11}, {'name': 'image', 'type': 'IMAGE', 'link': 19}, {'name': 'extrinsics', 'shape': 7, 'type': 'EXTRINSICS', 'link': None}, {'name': 'intrinsics', 'shape': 7, 'type': 'INTRINSICS', 'link': None}, {'name': 'focal_length_mm', 'shape': 7, 'type': 'FLOAT', 'widget': {'name': 'focal_length_mm'}, 'link': 20}], 'outputs': [{'name': 'ply_path', 'type': 'STRING', 'links': [16]}, {'name': 'extrinsics', 'type': 'EXTRINSICS', 'links': [17]}, {'name': 'intrinsics', 'type': 'INTRINSICS', 'links': [18]}], 'properties': {'Node name for S&R': 'SharpPredict', 'aux_id': 'PozzettiAndrea/ComfyUI-Sharp', 'ver': 'c69751a59b587c3b83d0e37cfe2bab3bc838574a'}, 'widgets_values': [30, 'sharp']}, {'id': 8, 'type': 'GeomPackPreviewGaussian', 'pos': [641.9426914835157, -275.49795068697], 'size': [512, 658], 'flags': {}, 'order': 3, 'mode': 0, 'inputs': [{'name': 'ply_path', 'type': 'STRING', 'link': 16}, {'name': 'extrinsics', 'shape': 7, 'type': 'EXTRINSICS', 'link': 17}, {'name': 'intrinsics', 'shape': 7, 'type': 'INTRINSICS', 'link': 18}], 'outputs': [], 'properties': {'Node name for S&R': 'GeomPackPreviewGaussian', 'aux_id': 'PozzettiAndrea/ComfyUI-GeometryPack', 'ver': 'df6bf3d73d0dda9c6ad7428eb58a00dc8cbaf6ed', 'cnr_id': 'comfyui-geometrypack'}, 'widgets_values': ['']}], 'links': [[11, 2, 0, 7, 0, 'SHARP_MODEL'], [16, 7, 0, 8, 0, 'STRING'], [17, 7, 1, 8, 1, 'EXTRINSICS'], [18, 7, 2, 8, 2, 'INTRINSICS'], [19, 9, 0, 7, 1, 'IMAGE'], [20, 9, 2, 7, 4, 'FLOAT']], 'groups': [], 'config': {}, 'extra': {'ds': {'scale': 0.5467593232283645, 'offset': [449.19852537254474, 708.2741898208478]}, 'workflowRendererVersion': 'LG', 'frontendVersion': '1.43.18'}, 'version': 0.4}}"
+    ]
+  },
+  "current_outputs": [
+    "8",
+    "2",
+    "7",
+    "9"
+  ],
+  "timestamp": 1779129638256
+}
+[ 699s] Captured 588 frames
+[ 699s] Wrote D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1827\dev\windows-desktop\results.json (2 workflow(s), sha=02ae67c305a8)
 ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
   built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
   configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
@@ -149,16 +233,16 @@ ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFm
   libswscale      8.  3.100 /  8.  3.100
   libswresample   5.  3.100 /  5.  3.100
   libpostproc    58.  3.100 / 58.  3.100
-Input #0, image2, from 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1011\dev\windows-desktop\debug\electron_inspect\frames\frame_%06d.png':
-  Duration: 00:04:42.80, start: 0.000000, bitrate: N/A
+Input #0, image2, from 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1827\dev\windows-desktop\debug\electron_inspect\frames\frame_%06d.png':
+  Duration: 00:01:57.60, start: 0.000000, bitrate: N/A
   Stream #0:0: Video: png, rgb24(pc, gbr/bt709/iec61966-2-1), 1008x681, 5 fps, 5 tbr, 5 tbn
 Stream mapping:
   Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
 Press [q] to stop, [?] for help
-[libx264 @ 000001978b5b4840] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 000001978b5b4840] profile High, level 3.1, 4:2:0, 8-bit
-[libx264 @ 000001978b5b4840] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1011\dev\windows-desktop\debug\electron_inspect\driver.mp4':
+[libx264 @ 000002893d863d00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000002893d863d00] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 000002893d863d00] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1827\dev\windows-desktop\debug\electron_inspect\driver.mp4':
   Metadata:
     encoder         : Lavf61.7.100
   Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, unknown/bt709/iec61966-2-1, progressive), 1008x682, q=2-31, 5 fps, 10240 tbn
@@ -166,260 +250,47 @@ Output #0, mp4, to 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1011\de
         encoder         : Lavc61.19.100 libx264
       Side data:
         cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-[vf#0:0 @ 000001978b201380] Reconfiguring filter graph because video parameters changed to rgba(pc, gbr), 1008x681
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    2 fps=0.3 q=23.0 size=       0KiB time=00:00:00.00 bitrate=N/A speed=   0x    
-frame=    6 fps=0.9 q=23.0 size=       0KiB time=00:00:00.80 bitrate=   0.5kbits/s speed=0.121x    
-frame=   10 fps=1.4 q=23.0 size=       0KiB time=00:00:01.60 bitrate=   0.2kbits/s speed=0.225x    
-frame=   14 fps=1.8 q=23.0 size=       0KiB time=00:00:02.40 bitrate=   0.2kbits/s speed=0.315x    
-frame=   18 fps=2.2 q=20.0 size=       0KiB time=00:00:03.20 bitrate=   0.1kbits/s speed=0.392x    
-frame=   26 fps=2.9 q=23.0 size=       0KiB time=00:00:04.80 bitrate=   0.1kbits/s speed=0.53x    
-frame=   30 fps=3.1 q=23.0 size=       0KiB time=00:00:05.60 bitrate=   0.1kbits/s speed=0.573x    
-frame=   37 fps=3.5 q=23.0 size=       0KiB time=00:00:07.00 bitrate=   0.1kbits/s speed=0.659x    
-frame=   42 fps=3.7 q=23.0 size=       0KiB time=00:00:08.00 bitrate=   0.0kbits/s speed=0.696x    
-frame=   42 fps=3.5 q=23.0 size=       0KiB time=00:00:08.00 bitrate=   0.0kbits/s speed=0.664x    
-frame=   47 fps=3.6 q=23.0 size=       0KiB time=00:00:09.00 bitrate=   0.0kbits/s speed=0.683x    
-frame=   47 fps=3.4 q=23.0 size=       0KiB time=00:00:09.00 bitrate=   0.0kbits/s speed=0.657x    
-frame=   52 fps=3.7 q=23.0 size=     256KiB time=00:00:10.00 bitrate= 209.8kbits/s speed=0.703x    
-[vf#0:0 @ 000001978b201380] Reconfiguring filter graph because video parameters changed to rgb24(pc, gbr), 1008x681
-frame=   66 fps=4.5 q=23.0 size=     256KiB time=00:00:12.80 bitrate= 163.9kbits/s speed=0.869x    
-frame=   73 fps=4.6 q=23.0 size=     256KiB time=00:00:14.20 bitrate= 147.7kbits/s speed=0.899x    
-frame=   77 fps=4.7 q=23.0 size=     256KiB time=00:00:15.00 bitrate= 139.8kbits/s speed=0.915x    
-frame=   85 fps=5.0 q=23.0 size=     256KiB time=00:00:16.60 bitrate= 126.4kbits/s speed=0.97x    
-frame=   93 fps=5.2 q=23.0 size=     256KiB time=00:00:18.20 bitrate= 115.2kbits/s speed=1.01x    
-frame=   97 fps=5.3 q=23.0 size=     256KiB time=00:00:19.00 bitrate= 110.4kbits/s speed=1.03x    
-frame=  105 fps=5.5 q=23.0 size=     256KiB time=00:00:20.60 bitrate= 101.8kbits/s speed=1.07x    
-frame=  112 fps=5.6 q=23.0 size=     256KiB time=00:00:22.00 bitrate=  95.3kbits/s speed= 1.1x    
-frame=  117 fps=5.7 q=23.0 size=     256KiB time=00:00:23.00 bitrate=  91.2kbits/s speed=1.11x    
-frame=  121 fps=5.7 q=23.0 size=     256KiB time=00:00:23.80 bitrate=  88.1kbits/s speed=1.12x    
-frame=  125 fps=5.7 q=23.0 size=     256KiB time=00:00:24.60 bitrate=  85.3kbits/s speed=1.13x    
-frame=  133 fps=5.9 q=23.0 size=     256KiB time=00:00:26.20 bitrate=  80.1kbits/s speed=1.16x    
-frame=  136 fps=5.9 q=23.0 size=     256KiB time=00:00:26.80 bitrate=  78.3kbits/s speed=1.16x    
-frame=  138 fps=5.9 q=23.0 size=     256KiB time=00:00:27.20 bitrate=  77.1kbits/s speed=1.15x    
-frame=  144 fps=5.9 q=23.0 size=     512KiB time=00:00:28.40 bitrate= 147.7kbits/s speed=1.16x    
-frame=  157 fps=6.1 q=23.0 size=     512KiB time=00:00:31.00 bitrate= 135.3kbits/s speed= 1.2x    
-frame=  161 fps=6.1 q=23.0 size=     512KiB time=00:00:31.80 bitrate= 131.9kbits/s speed= 1.2x    
-frame=  169 fps=6.1 q=23.0 size=     512KiB time=00:00:33.40 bitrate= 125.6kbits/s speed=1.22x    
-frame=  175 fps=6.2 q=23.0 size=     512KiB time=00:00:34.60 bitrate= 121.2kbits/s speed=1.22x    
-frame=  178 fps=6.1 q=23.0 size=     512KiB time=00:00:35.20 bitrate= 119.2kbits/s speed=1.22x    
-frame=  186 fps=6.1 q=23.0 size=     512KiB time=00:00:36.80 bitrate= 114.0kbits/s speed=1.21x    
-frame=  196 fps=6.1 q=23.0 size=     512KiB time=00:00:38.80 bitrate= 108.1kbits/s speed=1.21x    
-frame=  206 fps=6.2 q=23.0 size=     512KiB time=00:00:40.80 bitrate= 102.8kbits/s speed=1.23x    
-frame=  211 fps=6.3 q=23.0 size=     512KiB time=00:00:41.80 bitrate= 100.4kbits/s speed=1.24x    
-frame=  221 fps=6.4 q=23.0 size=     512KiB time=00:00:43.80 bitrate=  95.8kbits/s speed=1.26x    
-frame=  232 fps=6.5 q=23.0 size=     512KiB time=00:00:46.00 bitrate=  91.2kbits/s speed=1.28x    
-frame=  245 fps=6.6 q=23.0 size=     512KiB time=00:00:48.60 bitrate=  86.3kbits/s speed= 1.3x    
-frame=  254 fps=6.6 q=23.0 size=     512KiB time=00:00:50.40 bitrate=  83.2kbits/s speed=1.31x    
-frame=  266 fps=6.7 q=23.0 size=     512KiB time=00:00:52.80 bitrate=  79.4kbits/s speed=1.33x    
-frame=  278 fps=6.8 q=23.0 size=     512KiB time=00:00:55.20 bitrate=  76.0kbits/s speed=1.35x    
-frame=  285 fps=6.8 q=23.0 size=     512KiB time=00:00:56.60 bitrate=  74.1kbits/s speed=1.35x    
-[vf#0:0 @ 000001978b201380] Reconfiguring filter graph because video parameters changed to rgba(pc, gbr), 1008x681
-frame=  293 fps=6.9 q=23.0 size=     512KiB time=00:00:58.20 bitrate=  72.1kbits/s speed=1.36x    
-frame=  297 fps=6.8 q=23.0 size=     512KiB time=00:00:59.00 bitrate=  71.1kbits/s speed=1.36x    
-[vf#0:0 @ 000001978b201380] Reconfiguring filter graph because video parameters changed to rgb24(pc, gbr), 1008x681
-frame=  301 fps=6.8 q=23.0 size=     512KiB time=00:00:59.80 bitrate=  70.1kbits/s speed=1.36x    
-frame=  305 fps=6.8 q=23.0 size=     512KiB time=00:01:00.60 bitrate=  69.2kbits/s speed=1.36x    
-frame=  309 fps=6.9 q=23.0 size=     512KiB time=00:01:01.40 bitrate=  68.3kbits/s speed=1.36x    
-[vf#0:0 @ 000001978b201380] Reconfiguring filter graph because video parameters changed to rgba(pc, gbr), 1008x681
-frame=  313 fps=6.9 q=23.0 size=     512KiB time=00:01:02.20 bitrate=  67.4kbits/s speed=1.36x    
-frame=  315 fps=6.8 q=20.0 size=     512KiB time=00:01:02.60 bitrate=  67.0kbits/s speed=1.35x    
-frame=  318 fps=6.8 q=23.0 size=     512KiB time=00:01:03.20 bitrate=  66.4kbits/s speed=1.35x    
-frame=  328 fps=6.8 q=20.0 size=     768KiB time=00:01:05.20 bitrate=  96.5kbits/s speed=1.36x    
-frame=  332 fps=6.9 q=23.0 size=     768KiB time=00:01:06.00 bitrate=  95.3kbits/s speed=1.36x    
-frame=  333 fps=6.8 q=23.0 size=     768KiB time=00:01:06.20 bitrate=  95.0kbits/s speed=1.35x    
-frame=  337 fps=6.8 q=23.0 size=     768KiB time=00:01:07.00 bitrate=  93.9kbits/s speed=1.35x    
-frame=  339 fps=6.8 q=23.0 size=     768KiB time=00:01:07.40 bitrate=  93.4kbits/s speed=1.35x    
-frame=  345 fps=6.8 q=23.0 size=     768KiB time=00:01:08.60 bitrate=  91.7kbits/s speed=1.35x    
-frame=  346 fps=6.7 q=23.0 size=     768KiB time=00:01:08.80 bitrate=  91.5kbits/s speed=1.34x    
-frame=  350 fps=6.7 q=23.0 size=     768KiB time=00:01:09.60 bitrate=  90.4kbits/s speed=1.33x    
-frame=  351 fps=6.6 q=23.0 size=     768KiB time=00:01:09.80 bitrate=  90.1kbits/s speed=1.32x    
-frame=  357 fps=6.6 q=23.0 size=    1024KiB time=00:01:11.00 bitrate= 118.2kbits/s speed=1.32x    
-frame=  359 fps=6.6 q=23.0 size=    1024KiB time=00:01:11.40 bitrate= 117.5kbits/s speed=1.31x    
-frame=  361 fps=6.6 q=23.0 size=    1024KiB time=00:01:11.80 bitrate= 116.8kbits/s speed=1.31x    
-frame=  368 fps=6.6 q=23.0 size=    1024KiB time=00:01:13.20 bitrate= 114.6kbits/s speed= 1.3x    
-frame=  376 fps=6.6 q=23.0 size=    1024KiB time=00:01:14.80 bitrate= 112.2kbits/s speed=1.31x    
-frame=  381 fps=6.6 q=23.0 size=    1024KiB time=00:01:15.80 bitrate= 110.7kbits/s speed=1.31x    
-frame=  389 fps=6.6 q=23.0 size=    1024KiB time=00:01:17.40 bitrate= 108.4kbits/s speed=1.31x    
-frame=  394 fps=6.6 q=23.0 size=    1024KiB time=00:01:18.40 bitrate= 107.0kbits/s speed=1.31x    
-frame=  400 fps=6.6 q=23.0 size=    1024KiB time=00:01:19.60 bitrate= 105.4kbits/s speed=1.32x    
-frame=  406 fps=6.6 q=23.0 size=    1024KiB time=00:01:20.80 bitrate= 103.8kbits/s speed=1.32x    
-frame=  408 fps=6.6 q=23.0 size=    1024KiB time=00:01:21.20 bitrate= 103.3kbits/s speed=1.31x    
-frame=  416 fps=6.6 q=23.0 size=    1024KiB time=00:01:22.80 bitrate= 101.3kbits/s speed=1.31x    
-frame=  419 fps=6.6 q=23.0 size=    1024KiB time=00:01:23.40 bitrate= 100.6kbits/s speed=1.31x    
-frame=  428 fps=6.6 q=23.0 size=    1024KiB time=00:01:25.20 bitrate=  98.5kbits/s speed=1.32x    
-frame=  436 fps=6.7 q=23.0 size=    1024KiB time=00:01:26.80 bitrate=  96.6kbits/s speed=1.32x    
-frame=  444 fps=6.7 q=23.0 size=    1024KiB time=00:01:28.40 bitrate=  94.9kbits/s speed=1.33x    
-frame=  451 fps=6.7 q=23.0 size=    1024KiB time=00:01:29.80 bitrate=  93.4kbits/s speed=1.33x    
-frame=  455 fps=6.7 q=23.0 size=    1024KiB time=00:01:30.60 bitrate=  92.6kbits/s speed=1.33x    
-frame=  461 fps=6.7 q=23.0 size=    1024KiB time=00:01:31.80 bitrate=  91.4kbits/s speed=1.33x    
-frame=  468 fps=6.7 q=23.0 size=    1024KiB time=00:01:33.20 bitrate=  90.0kbits/s speed=1.33x    
-frame=  473 fps=6.7 q=23.0 size=    1024KiB time=00:01:34.20 bitrate=  89.1kbits/s speed=1.33x    
-frame=  478 fps=6.7 q=23.0 size=    1024KiB time=00:01:35.20 bitrate=  88.1kbits/s speed=1.33x    
-frame=  485 fps=6.7 q=23.0 size=    1024KiB time=00:01:36.60 bitrate=  86.8kbits/s speed=1.33x    
-frame=  496 fps=6.7 q=23.0 size=    1024KiB time=00:01:38.80 bitrate=  84.9kbits/s speed=1.34x    
-frame=  504 fps=6.7 q=23.0 size=    1024KiB time=00:01:40.40 bitrate=  83.6kbits/s speed=1.34x    
-frame=  510 fps=6.7 q=23.0 size=    1024KiB time=00:01:41.60 bitrate=  82.6kbits/s speed=1.34x    
-frame=  522 fps=6.8 q=23.0 size=    1024KiB time=00:01:44.00 bitrate=  80.7kbits/s speed=1.35x    
-frame=  528 fps=6.8 q=23.0 size=    1024KiB time=00:01:45.20 bitrate=  79.7kbits/s speed=1.35x    
-frame=  533 fps=6.8 q=23.0 size=    1024KiB time=00:01:46.20 bitrate=  79.0kbits/s speed=1.35x    
-frame=  540 fps=6.8 q=23.0 size=    1024KiB time=00:01:47.60 bitrate=  78.0kbits/s speed=1.35x    
-frame=  545 fps=6.8 q=23.0 size=    1024KiB time=00:01:48.60 bitrate=  77.2kbits/s speed=1.35x    
-frame=  560 fps=6.9 q=23.0 size=    1024KiB time=00:01:51.60 bitrate=  75.2kbits/s speed=1.37x    
-frame=  566 fps=6.9 q=23.0 size=    1024KiB time=00:01:52.80 bitrate=  74.4kbits/s speed=1.37x    
-frame=  572 fps=6.9 q=23.0 size=    1024KiB time=00:01:54.00 bitrate=  73.6kbits/s speed=1.37x    
-frame=  577 fps=6.9 q=23.0 size=    1024KiB time=00:01:55.00 bitrate=  72.9kbits/s speed=1.37x    
-frame=  588 fps=6.9 q=23.0 size=    1024KiB time=00:01:57.20 bitrate=  71.6kbits/s speed=1.38x    
-frame=  598 fps=6.9 q=23.0 size=    1024KiB time=00:01:59.20 bitrate=  70.4kbits/s speed=1.38x    
-frame=  606 fps=6.9 q=23.0 size=    1024KiB time=00:02:00.80 bitrate=  69.4kbits/s speed=1.38x    
-frame=  615 fps=6.9 q=23.0 size=    1024KiB time=00:02:02.60 bitrate=  68.4kbits/s speed=1.38x    
-frame=  620 fps=7.0 q=23.0 size=    1024KiB time=00:02:03.60 bitrate=  67.9kbits/s speed=1.39x    
-frame=  626 fps=7.0 q=23.0 size=    1024KiB time=00:02:04.80 bitrate=  67.2kbits/s speed=1.39x    
-frame=  633 fps=7.0 q=23.0 size=    1024KiB time=00:02:06.20 bitrate=  66.5kbits/s speed=1.39x    
-frame=  637 fps=7.0 q=23.0 size=    1024KiB time=00:02:07.00 bitrate=  66.1kbits/s speed=1.39x    
-frame=  643 fps=7.0 q=23.0 size=    1024KiB time=00:02:08.20 bitrate=  65.4kbits/s speed=1.39x    
-frame=  654 fps=7.0 q=23.0 size=    1024KiB time=00:02:10.40 bitrate=  64.3kbits/s speed= 1.4x    
-frame=  659 fps=7.0 q=23.0 size=    1024KiB time=00:02:11.40 bitrate=  63.8kbits/s speed= 1.4x    
-frame=  670 fps=7.0 q=23.0 size=    1024KiB time=00:02:13.60 bitrate=  62.8kbits/s speed= 1.4x    
-frame=  673 fps=7.0 q=23.0 size=    1024KiB time=00:02:14.20 bitrate=  62.5kbits/s speed= 1.4x    
-frame=  674 fps=7.0 q=23.0 size=    1024KiB time=00:02:14.40 bitrate=  62.4kbits/s speed=1.39x    
-frame=  679 fps=7.0 q=23.0 size=    1024KiB time=00:02:15.40 bitrate=  62.0kbits/s speed=1.39x    
-frame=  694 fps=7.0 q=23.0 size=    1024KiB time=00:02:18.40 bitrate=  60.6kbits/s speed= 1.4x    
-frame=  702 fps=7.0 q=23.0 size=    1024KiB time=00:02:20.00 bitrate=  59.9kbits/s speed=1.41x    
-frame=  707 fps=7.0 q=23.0 size=    1024KiB time=00:02:21.00 bitrate=  59.5kbits/s speed= 1.4x    
-frame=  710 fps=7.0 q=23.0 size=    1024KiB time=00:02:21.60 bitrate=  59.2kbits/s speed= 1.4x    
-frame=  718 fps=7.0 q=23.0 size=    1024KiB time=00:02:23.20 bitrate=  58.6kbits/s speed= 1.4x    
-frame=  723 fps=7.0 q=23.0 size=    1024KiB time=00:02:24.20 bitrate=  58.2kbits/s speed= 1.4x    
-frame=  729 fps=7.1 q=23.0 size=    1024KiB time=00:02:25.40 bitrate=  57.7kbits/s speed=1.41x    
-frame=  735 fps=7.1 q=23.0 size=    1024KiB time=00:02:26.60 bitrate=  57.2kbits/s speed=1.41x    
-frame=  742 fps=7.1 q=23.0 size=    1024KiB time=00:02:28.00 bitrate=  56.7kbits/s speed=1.41x    
-frame=  753 fps=7.1 q=23.0 size=    1024KiB time=00:02:30.20 bitrate=  55.9kbits/s speed=1.41x    
-frame=  759 fps=7.1 q=23.0 size=    1280KiB time=00:02:31.40 bitrate=  69.3kbits/s speed=1.41x    
-frame=  766 fps=7.1 q=23.0 size=    1280KiB time=00:02:32.80 bitrate=  68.6kbits/s speed=1.42x    
-frame=  774 fps=7.1 q=23.0 size=    1280KiB time=00:02:34.40 bitrate=  67.9kbits/s speed=1.42x    
-frame=  784 fps=7.1 q=23.0 size=    1280KiB time=00:02:36.40 bitrate=  67.0kbits/s speed=1.42x    
-frame=  790 fps=7.1 q=23.0 size=    1280KiB time=00:02:37.60 bitrate=  66.5kbits/s speed=1.42x    
-frame=  795 fps=7.1 q=23.0 size=    1280KiB time=00:02:38.60 bitrate=  66.1kbits/s speed=1.42x    
-frame=  802 fps=7.1 q=23.0 size=    1280KiB time=00:02:40.00 bitrate=  65.5kbits/s speed=1.42x    
-[vf#0:0 @ 000001978b201380] Reconfiguring filter graph because video parameters changed to rgb24(pc, gbr), 1008x681
-frame=  807 fps=7.1 q=23.0 size=    1280KiB time=00:02:41.00 bitrate=  65.1kbits/s speed=1.42x    
-frame=  814 fps=7.2 q=23.0 size=    1280KiB time=00:02:42.40 bitrate=  64.6kbits/s speed=1.43x    
-frame=  818 fps=7.2 q=23.0 size=    1280KiB time=00:02:43.20 bitrate=  64.3kbits/s speed=1.43x    
-frame=  828 fps=7.2 q=23.0 size=    1280KiB time=00:02:45.20 bitrate=  63.5kbits/s speed=1.44x    
-frame=  836 fps=7.2 q=23.0 size=    1280KiB time=00:02:46.80 bitrate=  62.9kbits/s speed=1.44x    
-frame=  843 fps=7.2 q=23.0 size=    1280KiB time=00:02:48.20 bitrate=  62.3kbits/s speed=1.44x    
-[vf#0:0 @ 000001978b201380] Reconfiguring filter graph because video parameters changed to rgba(pc, gbr), 1008x681
-frame=  848 fps=7.2 q=23.0 size=    1280KiB time=00:02:49.20 bitrate=  62.0kbits/s speed=1.44x    
-[vf#0:0 @ 000001978b201380] Reconfiguring filter graph because video parameters changed to rgb24(pc, gbr), 1008x681
-frame=  860 fps=7.2 q=20.0 size=    1280KiB time=00:02:51.60 bitrate=  61.1kbits/s speed=1.44x    
-frame=  865 fps=7.2 q=23.0 size=    1280KiB time=00:02:52.60 bitrate=  60.8kbits/s speed=1.44x    
-[vf#0:0 @ 000001978b201380] Reconfiguring filter graph because video parameters changed to rgba(pc, gbr), 1008x681
-frame=  867 fps=7.2 q=23.0 size=    1280KiB time=00:02:53.00 bitrate=  60.6kbits/s speed=1.44x    
-frame=  872 fps=7.2 q=23.0 size=    1280KiB time=00:02:54.00 bitrate=  60.3kbits/s speed=1.44x    
-frame=  872 fps=7.2 q=23.0 size=    1280KiB time=00:02:54.00 bitrate=  60.3kbits/s speed=1.43x    
-frame=  881 fps=7.2 q=23.0 size=    1280KiB time=00:02:55.80 bitrate=  59.6kbits/s speed=1.43x    
-frame=  881 fps=7.1 q=23.0 size=    1280KiB time=00:02:55.80 bitrate=  59.6kbits/s speed=1.43x    
-frame=  889 fps=7.1 q=23.0 size=    1280KiB time=00:02:57.40 bitrate=  59.1kbits/s speed=1.42x    
-frame=  889 fps=7.1 q=23.0 size=    1280KiB time=00:02:57.40 bitrate=  59.1kbits/s speed=1.42x    
-frame=  898 fps=7.1 q=23.0 size=    1536KiB time=00:02:59.20 bitrate=  70.2kbits/s speed=1.42x    
-frame=  904 fps=7.1 q=23.0 size=    1536KiB time=00:03:00.40 bitrate=  69.8kbits/s speed=1.42x    
-frame=  910 fps=7.1 q=23.0 size=    1536KiB time=00:03:01.60 bitrate=  69.3kbits/s speed=1.42x    
-frame=  916 fps=7.1 q=23.0 size=    1536KiB time=00:03:02.80 bitrate=  68.8kbits/s speed=1.42x    
-frame=  916 fps=7.1 q=23.0 size=    1536KiB time=00:03:02.80 bitrate=  68.8kbits/s speed=1.41x    
-frame=  922 fps=7.1 q=23.0 size=    1536KiB time=00:03:04.00 bitrate=  68.4kbits/s speed=1.41x    
-frame=  935 fps=7.1 q=23.0 size=    1536KiB time=00:03:06.60 bitrate=  67.4kbits/s speed=1.42x    
-frame=  940 fps=7.1 q=23.0 size=    1536KiB time=00:03:07.60 bitrate=  67.1kbits/s speed=1.42x    
-frame=  945 fps=7.1 q=23.0 size=    1536KiB time=00:03:08.60 bitrate=  66.7kbits/s speed=1.42x    
-frame=  951 fps=7.1 q=23.0 size=    1536KiB time=00:03:09.80 bitrate=  66.3kbits/s speed=1.42x    
-frame=  956 fps=7.1 q=23.0 size=    1536KiB time=00:03:10.80 bitrate=  66.0kbits/s speed=1.42x    
-frame=  963 fps=7.1 q=23.0 size=    1536KiB time=00:03:12.20 bitrate=  65.5kbits/s speed=1.42x    
-frame=  971 fps=7.1 q=23.0 size=    1536KiB time=00:03:13.80 bitrate=  64.9kbits/s speed=1.43x    
-frame=  976 fps=7.1 q=23.0 size=    1536KiB time=00:03:14.80 bitrate=  64.6kbits/s speed=1.43x    
-frame=  983 fps=7.1 q=23.0 size=    1536KiB time=00:03:16.20 bitrate=  64.1kbits/s speed=1.43x    
-frame=  991 fps=7.2 q=23.0 size=    1536KiB time=00:03:17.80 bitrate=  63.6kbits/s speed=1.43x    
-frame=  999 fps=7.2 q=23.0 size=    1536KiB time=00:03:19.40 bitrate=  63.1kbits/s speed=1.43x    
-frame= 1008 fps=7.2 q=23.0 size=    1536KiB time=00:03:21.20 bitrate=  62.5kbits/s speed=1.43x    
-frame= 1015 fps=7.2 q=23.0 size=    1536KiB time=00:03:22.60 bitrate=  62.1kbits/s speed=1.43x    
-frame= 1020 fps=7.2 q=23.0 size=    1536KiB time=00:03:23.60 bitrate=  61.8kbits/s speed=1.44x    
-frame= 1027 fps=7.2 q=23.0 size=    1536KiB time=00:03:25.00 bitrate=  61.4kbits/s speed=1.44x    
-frame= 1032 fps=7.2 q=23.0 size=    1536KiB time=00:03:26.00 bitrate=  61.1kbits/s speed=1.44x    
-frame= 1038 fps=7.2 q=23.0 size=    1536KiB time=00:03:27.20 bitrate=  60.7kbits/s speed=1.44x    
-frame= 1043 fps=7.2 q=23.0 size=    1536KiB time=00:03:28.20 bitrate=  60.4kbits/s speed=1.44x    
-frame= 1049 fps=7.2 q=23.0 size=    1536KiB time=00:03:29.40 bitrate=  60.1kbits/s speed=1.44x    
-frame= 1055 fps=7.2 q=23.0 size=    1536KiB time=00:03:30.60 bitrate=  59.7kbits/s speed=1.44x    
-frame= 1063 fps=7.2 q=23.0 size=    1536KiB time=00:03:32.20 bitrate=  59.3kbits/s speed=1.44x    
-frame= 1078 fps=7.3 q=23.0 size=    1536KiB time=00:03:35.20 bitrate=  58.5kbits/s speed=1.45x    
-frame= 1084 fps=7.3 q=23.0 size=    1536KiB time=00:03:36.40 bitrate=  58.1kbits/s speed=1.45x    
-frame= 1091 fps=7.3 q=23.0 size=    1536KiB time=00:03:37.80 bitrate=  57.8kbits/s speed=1.45x    
-frame= 1098 fps=7.3 q=23.0 size=    1536KiB time=00:03:39.20 bitrate=  57.4kbits/s speed=1.45x    
-frame= 1103 fps=7.3 q=23.0 size=    1536KiB time=00:03:40.20 bitrate=  57.1kbits/s speed=1.45x    
-frame= 1109 fps=7.3 q=23.0 size=    1536KiB time=00:03:41.40 bitrate=  56.8kbits/s speed=1.45x    
-frame= 1120 fps=7.3 q=23.0 size=    1536KiB time=00:03:43.60 bitrate=  56.3kbits/s speed=1.46x    
-frame= 1122 fps=7.3 q=23.0 size=    1536KiB time=00:03:44.00 bitrate=  56.2kbits/s speed=1.45x    
-frame= 1128 fps=7.3 q=23.0 size=    1536KiB time=00:03:45.20 bitrate=  55.9kbits/s speed=1.45x    
-frame= 1141 fps=7.3 q=23.0 size=    1536KiB time=00:03:47.80 bitrate=  55.2kbits/s speed=1.46x    
-frame= 1148 fps=7.3 q=23.0 size=    1536KiB time=00:03:49.20 bitrate=  54.9kbits/s speed=1.46x    
-frame= 1156 fps=7.3 q=23.0 size=    1536KiB time=00:03:50.80 bitrate=  54.5kbits/s speed=1.46x    
-frame= 1164 fps=7.3 q=23.0 size=    1536KiB time=00:03:52.40 bitrate=  54.1kbits/s speed=1.46x    
-frame= 1171 fps=7.3 q=20.0 size=    1536KiB time=00:03:53.80 bitrate=  53.8kbits/s speed=1.46x    
-frame= 1175 fps=7.3 q=23.0 size=    1536KiB time=00:03:54.60 bitrate=  53.6kbits/s speed=1.46x    
-frame= 1181 fps=7.3 q=23.0 size=    1792KiB time=00:03:55.80 bitrate=  62.3kbits/s speed=1.46x    
-frame= 1186 fps=7.3 q=23.0 size=    1792KiB time=00:03:56.80 bitrate=  62.0kbits/s speed=1.46x    
-frame= 1193 fps=7.3 q=23.0 size=    1792KiB time=00:03:58.20 bitrate=  61.6kbits/s speed=1.46x    
-frame= 1210 fps=7.3 q=23.0 size=    1792KiB time=00:04:01.60 bitrate=  60.8kbits/s speed=1.47x    
-frame= 1221 fps=7.3 q=23.0 size=    1792KiB time=00:04:03.80 bitrate=  60.2kbits/s speed=1.47x    
-frame= 1226 fps=7.3 q=23.0 size=    1792KiB time=00:04:04.80 bitrate=  60.0kbits/s speed=1.47x    
-frame= 1234 fps=7.3 q=23.0 size=    1792KiB time=00:04:06.40 bitrate=  59.6kbits/s speed=1.47x    
-frame= 1244 fps=7.4 q=23.0 size=    1792KiB time=00:04:08.40 bitrate=  59.1kbits/s speed=1.47x    
-frame= 1251 fps=7.4 q=23.0 size=    1792KiB time=00:04:09.80 bitrate=  58.8kbits/s speed=1.47x    
-frame= 1257 fps=7.4 q=23.0 size=    1792KiB time=00:04:11.00 bitrate=  58.5kbits/s speed=1.47x    
-frame= 1263 fps=7.4 q=23.0 size=    1792KiB time=00:04:12.20 bitrate=  58.2kbits/s speed=1.47x    
-frame= 1270 fps=7.4 q=23.0 size=    1792KiB time=00:04:13.60 bitrate=  57.9kbits/s speed=1.47x    
-frame= 1278 fps=7.4 q=23.0 size=    1792KiB time=00:04:15.20 bitrate=  57.5kbits/s speed=1.47x    
-frame= 1281 fps=7.4 q=23.0 size=    1792KiB time=00:04:15.80 bitrate=  57.4kbits/s speed=1.47x    
-frame= 1289 fps=7.4 q=23.0 size=    1792KiB time=00:04:17.40 bitrate=  57.0kbits/s speed=1.48x    
-frame= 1292 fps=7.4 q=23.0 size=    1792KiB time=00:04:18.00 bitrate=  56.9kbits/s speed=1.48x    
-frame= 1298 fps=7.4 q=23.0 size=    1792KiB time=00:04:19.20 bitrate=  56.6kbits/s speed=1.48x    
-frame= 1311 fps=7.4 q=23.0 size=    1792KiB time=00:04:21.80 bitrate=  56.1kbits/s speed=1.48x    
-frame= 1320 fps=7.4 q=23.0 size=    1792KiB time=00:04:22.40 bitrate=  55.9kbits/s speed=1.48x    
-frame= 1329 fps=7.4 q=23.0 size=    1792KiB time=00:04:25.40 bitrate=  55.3kbits/s speed=1.48x    
-frame= 1329 fps=7.4 q=23.0 size=    1792KiB time=00:04:25.40 bitrate=  55.3kbits/s speed=1.48x    
-frame= 1339 fps=7.4 q=23.0 size=    1792KiB time=00:04:27.40 bitrate=  54.9kbits/s speed=1.48x    
-frame= 1347 fps=7.4 q=23.0 size=    1792KiB time=00:04:29.00 bitrate=  54.6kbits/s speed=1.48x    
-frame= 1361 fps=7.5 q=23.0 size=    1792KiB time=00:04:31.80 bitrate=  54.0kbits/s speed=1.49x    
-frame= 1369 fps=7.5 q=23.0 size=    1792KiB time=00:04:33.40 bitrate=  53.7kbits/s speed= 1.5x    
-frame= 1381 fps=7.5 q=23.0 size=    1792KiB time=00:04:35.80 bitrate=  53.2kbits/s speed=1.51x    
-frame= 1387 fps=7.6 q=23.0 size=    1792KiB time=00:04:37.00 bitrate=  53.0kbits/s speed=1.51x    
-frame= 1397 fps=7.6 q=23.0 size=    1792KiB time=00:04:39.00 bitrate=  52.6kbits/s speed=1.52x    
-frame= 1409 fps=7.6 q=23.0 size=    1792KiB time=00:04:41.40 bitrate=  52.2kbits/s speed=1.52x    
-[out#0/mp4 @ 000001978b21ed80] video:1864KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.926749%
-frame= 1414 fps=7.7 q=-1.0 Lsize=    1881KiB time=00:04:42.40 bitrate=  54.6kbits/s speed=1.53x    
-[libx264 @ 000001978b5b4840] frame I:16    Avg QP: 8.11  size: 43206
-[libx264 @ 000001978b5b4840] frame P:376   Avg QP:14.56  size:  2304
-[libx264 @ 000001978b5b4840] frame B:1022  Avg QP:22.39  size:   343
-[libx264 @ 000001978b5b4840] consecutive B-frames:  2.8%  1.8%  2.3% 93.1%
-[libx264 @ 000001978b5b4840] mb I  I16..4: 57.1% 13.1% 29.9%
-[libx264 @ 000001978b5b4840] mb P  I16..4:  2.2%  1.6%  1.5%  P16..4:  1.2%  0.3%  0.2%  0.0%  0.0%    skip:93.0%
-[libx264 @ 000001978b5b4840] mb B  I16..4:  0.1%  0.1%  0.1%  B16..8:  4.3%  0.2%  0.1%  direct: 0.1%  skip:95.2%  L0:65.8% L1:33.4% BI: 0.9%
-[libx264 @ 000001978b5b4840] 8x8 transform intra:24.2% inter:49.5%
-[libx264 @ 000001978b5b4840] coded y,uvDC,uvAC intra: 34.5% 12.9% 10.5% inter: 0.4% 0.2% 0.1%
-[libx264 @ 000001978b5b4840] i16 v,h,dc,p: 66% 31%  2%  1%
-[libx264 @ 000001978b5b4840] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 38% 16% 38%  1%  1%  1%  1%  1%  2%
-[libx264 @ 000001978b5b4840] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 41% 32% 12%  2%  3%  3%  3%  2%  3%
-[libx264 @ 000001978b5b4840] i8c dc,h,v,p: 83% 10%  5%  2%
-[libx264 @ 000001978b5b4840] Weighted P-Frames: Y:2.1% UV:1.6%
-[libx264 @ 000001978b5b4840] ref P L0: 65.1% 10.2% 16.0%  7.7%  1.0%
-[libx264 @ 000001978b5b4840] ref B L0: 44.2% 54.7%  1.1%
-[libx264 @ 000001978b5b4840] ref B L1: 97.8%  2.2%
-[libx264 @ 000001978b5b4840] kb/s:53.97
-[1608s] Wrote D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1011\dev\windows-desktop\debug\electron_inspect\driver.mp4
+[vf#0:0 @ 000002893d7b3300] Reconfiguring filter graph because video parameters changed to rgba(pc, gbr), 1008x681
+frame=   11 fps=0.0 q=23.0 size=       0KiB time=00:00:01.80 bitrate=   0.2kbits/s speed=3.56x    
+frame=   50 fps= 49 q=23.0 size=       0KiB time=00:00:09.60 bitrate=   0.0kbits/s speed=9.39x    
+[vf#0:0 @ 000002893d7b3300] Reconfiguring filter graph because video parameters changed to rgb24(pc, gbr), 1008x681
+frame=  112 fps= 73 q=23.0 size=     256KiB time=00:00:22.00 bitrate=  95.3kbits/s speed=14.3x    
+frame=  166 fps= 81 q=23.0 size=     512KiB time=00:00:32.80 bitrate= 127.9kbits/s speed=  16x    
+frame=  233 fps= 91 q=23.0 size=     512KiB time=00:00:46.20 bitrate=  90.8kbits/s speed=  18x    
+[vf#0:0 @ 000002893d7b3300] Reconfiguring filter graph because video parameters changed to rgba(pc, gbr), 1008x681
+[vf#0:0 @ 000002893d7b3300] Reconfiguring filter graph because video parameters changed to rgb24(pc, gbr), 1008x681
+frame=  298 fps= 97 q=23.0 size=     512KiB time=00:00:59.20 bitrate=  70.9kbits/s speed=19.2x    
+[vf#0:0 @ 000002893d7b3300] Reconfiguring filter graph because video parameters changed to rgba(pc, gbr), 1008x681
+frame=  340 fps= 94 q=23.0 size=     768KiB time=00:01:07.60 bitrate=  93.1kbits/s speed=18.7x    
+frame=  390 fps= 95 q=23.0 size=    1024KiB time=00:01:17.60 bitrate= 108.1kbits/s speed=18.8x    
+[vf#0:0 @ 000002893d7b3300] Reconfiguring filter graph because video parameters changed to rgb24(pc, gbr), 1008x681
+frame=  452 fps= 98 q=23.0 size=    1024KiB time=00:01:30.00 bitrate=  93.2kbits/s speed=19.4x    
+[vf#0:0 @ 000002893d7b3300] Reconfiguring filter graph because video parameters changed to rgba(pc, gbr), 1008x681
+[vf#0:0 @ 000002893d7b3300] Reconfiguring filter graph because video parameters changed to rgb24(pc, gbr), 1008x681
+[vf#0:0 @ 000002893d7b3300] Reconfiguring filter graph because video parameters changed to rgba(pc, gbr), 1008x681
+frame=  500 fps= 97 q=23.0 size=    1280KiB time=00:01:39.60 bitrate= 105.3kbits/s speed=19.3x    
+frame=  554 fps= 98 q=23.0 size=    1536KiB time=00:01:50.40 bitrate= 114.0kbits/s speed=19.5x    
+[out#0/mp4 @ 000002893f4b5580] video:1724KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.441117%
+frame=  588 fps=101 q=-1.0 Lsize=    1732KiB time=00:01:57.20 bitrate= 121.0kbits/s speed=20.2x    
+[libx264 @ 000002893d863d00] frame I:13    Avg QP: 7.86  size: 42474
+[libx264 @ 000002893d863d00] frame P:170   Avg QP:16.03  size:  4795
+[libx264 @ 000002893d863d00] frame B:405   Avg QP:22.02  size:   981
+[libx264 @ 000002893d863d00] consecutive B-frames:  6.0%  5.1%  4.6% 84.4%
+[libx264 @ 000002893d863d00] mb I  I16..4: 55.5% 14.4% 30.1%
+[libx264 @ 000002893d863d00] mb P  I16..4:  3.1%  2.8%  2.8%  P16..4:  1.9%  0.6%  0.4%  0.0%  0.0%    skip:88.4%
+[libx264 @ 000002893d863d00] mb B  I16..4:  0.4%  0.4%  0.3%  B16..8:  3.6%  0.3%  0.2%  direct: 0.2%  skip:94.6%  L0:57.5% L1:40.9% BI: 1.6%
+[libx264 @ 000002893d863d00] 8x8 transform intra:25.6% inter:40.2%
+[libx264 @ 000002893d863d00] coded y,uvDC,uvAC intra: 36.4% 19.1% 14.3% inter: 0.7% 0.5% 0.1%
+[libx264 @ 000002893d863d00] i16 v,h,dc,p: 68% 28%  2%  2%
+[libx264 @ 000002893d863d00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 32% 17% 35%  2%  2%  2%  3%  2%  4%
+[libx264 @ 000002893d863d00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 36% 30% 13%  3%  4%  4%  4%  3%  4%
+[libx264 @ 000002893d863d00] i8c dc,h,v,p: 78% 13%  7%  2%
+[libx264 @ 000002893d863d00] Weighted P-Frames: Y:1.8% UV:0.6%
+[libx264 @ 000002893d863d00] ref P L0: 69.3%  3.9% 13.4% 13.4%  0.0%
+[libx264 @ 000002893d863d00] ref B L0: 62.1% 34.4%  3.5%
+[libx264 @ 000002893d863d00] ref B L1: 97.1%  2.9%
+[libx264 @ 000002893d863d00] kb/s:120.04
+[ 705s] Wrote D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1827\dev\windows-desktop\debug\electron_inspect\driver.mp4
 ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
   built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
   configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
@@ -431,16 +302,16 @@ ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFm
   libswscale      8.  3.100 /  8.  3.100
   libswresample   5.  3.100 /  5.  3.100
   libpostproc    58.  3.100 / 58.  3.100
-Input #0, image2, from 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1011\dev\windows-desktop\debug\electron_inspect\frames\frame_%06d.png':
-  Duration: 00:03:27.80, start: 0.000000, bitrate: N/A
+Input #0, image2, from 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1827\dev\windows-desktop\debug\electron_inspect\frames\frame_%06d.png':
+  Duration: 00:00:43.00, start: 0.000000, bitrate: N/A
   Stream #0:0: Video: png, rgba(pc, gbr/bt709/iec61966-2-1), 1008x681, 5 fps, 5 tbr, 5 tbn
 Stream mapping:
   Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
 Press [q] to stop, [?] for help
-[libx264 @ 0000025285910300] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 0000025285910300] profile High, level 3.1, 4:2:0, 8-bit
-[libx264 @ 0000025285910300] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1011\dev\windows-desktop\videos\sharp_basic\driver.mp4':
+[libx264 @ 0000020acac40b00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000020acac40b00] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0000020acac40b00] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1827\dev\windows-desktop\videos\sharp_basic\driver.mp4':
   Metadata:
     encoder         : Lavf61.7.100
   Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, unknown/bt709/iec61966-2-1, progressive), 1008x682, q=2-31, 5 fps, 10240 tbn
@@ -448,105 +319,30 @@ Output #0, mp4, to 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1011\de
         encoder         : Lavc61.19.100 libx264
       Side data:
         cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    4 fps=0.8 q=23.0 size=       0KiB time=00:00:00.40 bitrate=   1.0kbits/s speed=0.0751x    
-frame=    8 fps=1.4 q=23.0 size=       0KiB time=00:00:01.20 bitrate=   0.3kbits/s speed=0.205x    
-frame=   12 fps=1.9 q=23.0 size=       0KiB time=00:00:02.00 bitrate=   0.2kbits/s speed=0.312x    
-frame=   16 fps=2.3 q=23.0 size=       0KiB time=00:00:02.80 bitrate=   0.1kbits/s speed=0.401x    
-frame=   21 fps=2.8 q=23.0 size=       0KiB time=00:00:03.80 bitrate=   0.1kbits/s speed=0.503x    
-frame=   25 fps=3.1 q=23.0 size=       0KiB time=00:00:04.60 bitrate=   0.1kbits/s speed=0.564x    
-frame=   28 fps=3.2 q=23.0 size=       0KiB time=00:00:05.20 bitrate=   0.1kbits/s speed=0.598x    
-frame=   32 fps=3.4 q=23.0 size=       0KiB time=00:00:06.00 bitrate=   0.1kbits/s speed=0.644x    
-frame=   36 fps=3.6 q=23.0 size=       0KiB time=00:00:06.80 bitrate=   0.1kbits/s speed=0.689x    
-frame=   39 fps=3.8 q=23.0 size=       0KiB time=00:00:07.40 bitrate=   0.1kbits/s speed=0.712x    
-frame=   42 fps=3.8 q=23.0 size=       0KiB time=00:00:08.00 bitrate=   0.0kbits/s speed=0.729x    
-frame=   45 fps=3.9 q=23.0 size=       0KiB time=00:00:08.60 bitrate=   0.0kbits/s speed=0.748x    
-frame=   58 fps=4.5 q=23.0 size=       0KiB time=00:00:11.20 bitrate=   0.0kbits/s speed=0.867x    
-frame=   66 fps=4.7 q=23.0 size=       0KiB time=00:00:12.80 bitrate=   0.0kbits/s speed=0.915x    
-frame=   74 fps=5.0 q=23.0 size=       0KiB time=00:00:14.40 bitrate=   0.0kbits/s speed=0.964x    
-frame=   80 fps=5.1 q=23.0 size=       0KiB time=00:00:15.60 bitrate=   0.0kbits/s speed=0.987x    
-frame=   95 fps=5.4 q=23.0 size=       0KiB time=00:00:18.60 bitrate=   0.0kbits/s speed=1.06x    
-frame=   98 fps=5.4 q=23.0 size=       0KiB time=00:00:19.20 bitrate=   0.0kbits/s speed=1.06x    
-frame=  103 fps=5.4 q=23.0 size=       0KiB time=00:00:20.20 bitrate=   0.0kbits/s speed=1.07x    
-frame=  111 fps=5.6 q=23.0 size=       0KiB time=00:00:21.80 bitrate=   0.0kbits/s speed=1.09x    
-frame=  118 fps=5.6 q=23.0 size=       0KiB time=00:00:23.20 bitrate=   0.0kbits/s speed=1.11x    
-frame=  123 fps=5.7 q=23.0 size=       0KiB time=00:00:24.20 bitrate=   0.0kbits/s speed=1.13x    
-frame=  141 fps=6.0 q=23.0 size=       0KiB time=00:00:27.80 bitrate=   0.0kbits/s speed=1.18x    
-frame=  147 fps=6.1 q=23.0 size=       0KiB time=00:00:29.00 bitrate=   0.0kbits/s speed= 1.2x    
-frame=  154 fps=6.1 q=23.0 size=       0KiB time=00:00:30.40 bitrate=   0.0kbits/s speed=1.21x    
-frame=  160 fps=6.2 q=23.0 size=       0KiB time=00:00:31.60 bitrate=   0.0kbits/s speed=1.22x    
-frame=  162 fps=6.1 q=23.0 size=       0KiB time=00:00:32.00 bitrate=   0.0kbits/s speed=1.21x    
-frame=  168 fps=6.1 q=23.0 size=       0KiB time=00:00:33.20 bitrate=   0.0kbits/s speed=1.21x    
-frame=  174 fps=6.2 q=23.0 size=       0KiB time=00:00:34.40 bitrate=   0.0kbits/s speed=1.22x    
-frame=  193 fps=6.5 q=23.0 size=       0KiB time=00:00:38.20 bitrate=   0.0kbits/s speed=1.29x    
-frame=  199 fps=6.5 q=23.0 size=       0KiB time=00:00:39.40 bitrate=   0.0kbits/s speed=1.29x    
-frame=  210 fps=6.6 q=23.0 size=       0KiB time=00:00:41.60 bitrate=   0.0kbits/s speed= 1.3x    
-frame=  218 fps=6.6 q=23.0 size=       0KiB time=00:00:43.20 bitrate=   0.0kbits/s speed=1.31x    
-frame=  226 fps=6.7 q=23.0 size=       0KiB time=00:00:44.80 bitrate=   0.0kbits/s speed=1.33x    
-frame=  234 fps=6.7 q=23.0 size=       0KiB time=00:00:46.40 bitrate=   0.0kbits/s speed=1.33x    
-frame=  242 fps=6.7 q=23.0 size=       0KiB time=00:00:48.00 bitrate=   0.0kbits/s speed=1.33x    
-frame=  245 fps=6.7 q=23.0 size=       0KiB time=00:00:48.60 bitrate=   0.0kbits/s speed=1.33x    
-frame=  250 fps=6.7 q=23.0 size=       0KiB time=00:00:49.60 bitrate=   0.0kbits/s speed=1.33x    
-frame=  255 fps=6.8 q=23.0 size=       0KiB time=00:00:50.60 bitrate=   0.0kbits/s speed=1.34x    
-frame=  260 fps=6.8 q=23.0 size=       0KiB time=00:00:51.60 bitrate=   0.0kbits/s speed=1.35x    
-frame=  268 fps=6.8 q=23.0 size=       0KiB time=00:00:53.20 bitrate=   0.0kbits/s speed=1.35x    
-frame=  275 fps=6.9 q=23.0 size=       0KiB time=00:00:54.60 bitrate=   0.0kbits/s speed=1.36x    
-frame=  280 fps=6.9 q=23.0 size=       0KiB time=00:00:55.60 bitrate=   0.0kbits/s speed=1.37x    
-frame=  287 fps=6.9 q=23.0 size=       0KiB time=00:00:57.00 bitrate=   0.0kbits/s speed=1.38x    
-frame=  294 fps=6.9 q=23.0 size=       0KiB time=00:00:58.40 bitrate=   0.0kbits/s speed=1.37x    
-frame=  301 fps=6.9 q=23.0 size=       0KiB time=00:00:59.80 bitrate=   0.0kbits/s speed=1.37x    
-frame=  310 fps=6.9 q=23.0 size=       0KiB time=00:01:01.60 bitrate=   0.0kbits/s speed=1.37x    
-frame=  326 fps=7.1 q=23.0 size=       0KiB time=00:01:04.80 bitrate=   0.0kbits/s speed=1.41x    
-frame=  332 fps=7.1 q=23.0 size=       0KiB time=00:01:06.00 bitrate=   0.0kbits/s speed=1.41x    
-frame=  337 fps=7.1 q=23.0 size=       0KiB time=00:01:07.00 bitrate=   0.0kbits/s speed=1.41x    
-frame=  346 fps=7.2 q=23.0 size=       0KiB time=00:01:08.80 bitrate=   0.0kbits/s speed=1.42x    
-frame=  356 fps=7.2 q=23.0 size=       0KiB time=00:01:10.80 bitrate=   0.0kbits/s speed=1.43x    
-frame=  360 fps=7.2 q=23.0 size=       0KiB time=00:01:11.60 bitrate=   0.0kbits/s speed=1.43x    
-frame=  368 fps=7.2 q=23.0 size=       0KiB time=00:01:13.20 bitrate=   0.0kbits/s speed=1.44x    
-frame=  368 fps=7.2 q=23.0 size=       0KiB time=00:01:13.20 bitrate=   0.0kbits/s speed=1.42x    
-frame=  376 fps=7.2 q=23.0 size=       0KiB time=00:01:14.80 bitrate=   0.0kbits/s speed=1.43x    
-frame=  384 fps=7.2 q=23.0 size=       0KiB time=00:01:16.40 bitrate=   0.0kbits/s speed=1.43x    
-frame=  389 fps=7.2 q=23.0 size=       0KiB time=00:01:17.40 bitrate=   0.0kbits/s speed=1.43x    
-frame=  394 fps=7.2 q=23.0 size=       0KiB time=00:01:18.40 bitrate=   0.0kbits/s speed=1.44x    
-frame=  400 fps=7.2 q=23.0 size=       0KiB time=00:01:19.60 bitrate=   0.0kbits/s speed=1.44x    
-frame=  408 fps=7.2 q=23.0 size=       0KiB time=00:01:21.20 bitrate=   0.0kbits/s speed=1.44x    
-frame=  413 fps=7.3 q=23.0 size=       0KiB time=00:01:22.20 bitrate=   0.0kbits/s speed=1.44x    
-frame=  420 fps=7.3 q=23.0 size=       0KiB time=00:01:23.60 bitrate=   0.0kbits/s speed=1.45x    
-frame=  428 fps=7.3 q=23.0 size=       0KiB time=00:01:25.20 bitrate=   0.0kbits/s speed=1.45x    
-frame=  434 fps=7.3 q=23.0 size=       0KiB time=00:01:26.40 bitrate=   0.0kbits/s speed=1.46x    
-frame=  440 fps=7.3 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=  446 fps=7.4 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=  456 fps=7.5 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=  470 fps=7.6 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-[out#0/mp4 @ 00000252852d5740] video:190KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 3.462190%
-frame=  489 fps=7.9 q=-1.0 Lsize=     196KiB time=00:01:37.40 bitrate=  16.5kbits/s speed=1.58x    
-[libx264 @ 0000025285910300] frame I:2     Avg QP: 8.94  size: 52484
-[libx264 @ 0000025285910300] frame P:123   Avg QP:14.58  size:   264
-[libx264 @ 0000025285910300] frame B:364   Avg QP:20.81  size:   154
-[libx264 @ 0000025285910300] consecutive B-frames:  0.6%  0.4%  0.0% 99.0%
-[libx264 @ 0000025285910300] mb I  I16..4: 59.9% 13.5% 26.6%
-[libx264 @ 0000025285910300] mb P  I16..4:  0.2%  0.0%  0.1%  P16..4:  0.4%  0.1%  0.0%  0.0%  0.0%    skip:99.2%
-[libx264 @ 0000025285910300] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  4.6%  0.1%  0.0%  direct: 0.0%  skip:95.3%  L0:73.8% L1:26.1% BI: 0.1%
-[libx264 @ 0000025285910300] 8x8 transform intra:14.7% inter:59.3%
-[libx264 @ 0000025285910300] coded y,uvDC,uvAC intra: 38.6% 15.0% 12.7% inter: 0.1% 0.1% 0.0%
-[libx264 @ 0000025285910300] i16 v,h,dc,p: 64% 36%  0%  0%
-[libx264 @ 0000025285910300] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 39% 14% 46%  0%  0%  0%  0%  0%  0%
-[libx264 @ 0000025285910300] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 37% 34% 13%  2%  2%  2%  3%  3%  4%
-[libx264 @ 0000025285910300] i8c dc,h,v,p: 75% 17%  8%  1%
-[libx264 @ 0000025285910300] Weighted P-Frames: Y:0.0% UV:0.0%
-[libx264 @ 0000025285910300] ref P L0: 75.2%  1.0% 17.9%  6.0%
-[libx264 @ 0000025285910300] ref B L0: 31.0% 68.6%  0.4%
-[libx264 @ 0000025285910300] ref B L1: 97.9%  2.1%
-[libx264 @ 0000025285910300] kb/s:15.84
-[1670s]   videos/sharp_basic/driver.mp4 placed (frames 376..864)
-[1670s]   screenshots/sharp_basic_executed.png placed
+frame=   12 fps=0.0 q=23.0 size=       0KiB time=00:00:02.00 bitrate=   0.2kbits/s speed=3.87x    
+frame=   76 fps= 74 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
+[out#0/mp4 @ 0000020aca6084c0] video:96KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 2.256549%
+frame=  113 fps= 91 q=-1.0 Lsize=      98KiB time=00:00:22.20 bitrate=  36.2kbits/s speed=17.9x    
+[libx264 @ 0000020acac40b00] frame I:1     Avg QP:10.55  size: 48610
+[libx264 @ 0000020acac40b00] frame P:29    Avg QP:14.57  size:  1031
+[libx264 @ 0000020acac40b00] frame B:83    Avg QP:21.85  size:   231
+[libx264 @ 0000020acac40b00] consecutive B-frames:  0.9%  3.5%  0.0% 95.6%
+[libx264 @ 0000020acac40b00] mb I  I16..4: 54.7% 19.3% 26.0%
+[libx264 @ 0000020acac40b00] mb P  I16..4:  0.7%  0.2%  0.3%  P16..4:  1.1%  0.2%  0.1%  0.0%  0.0%    skip:97.3%
+[libx264 @ 0000020acac40b00] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  5.0%  0.2%  0.0%  direct: 0.0%  skip:94.7%  L0:57.3% L1:42.2% BI: 0.5%
+[libx264 @ 0000020acac40b00] 8x8 transform intra:20.0% inter:36.5%
+[libx264 @ 0000020acac40b00] coded y,uvDC,uvAC intra: 32.1% 14.3% 11.3% inter: 0.2% 0.1% 0.0%
+[libx264 @ 0000020acac40b00] i16 v,h,dc,p: 62% 38%  0%  0%
+[libx264 @ 0000020acac40b00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 49% 12% 38%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0000020acac40b00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 36% 35% 11%  2%  2%  2%  3%  3%  4%
+[libx264 @ 0000020acac40b00] i8c dc,h,v,p: 73% 19%  8%  1%
+[libx264 @ 0000020acac40b00] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0000020acac40b00] ref P L0: 68.7%  0.9% 22.5%  7.9%
+[libx264 @ 0000020acac40b00] ref B L0: 56.8% 41.1%  2.0%
+[libx264 @ 0000020acac40b00] ref B L1: 96.7%  3.3%
+[libx264 @ 0000020acac40b00] kb/s:34.57
+[ 706s]   videos/sharp_basic/driver.mp4 placed (frames 374..486)
+[ 706s]   screenshots/sharp_basic_executed.png placed
 ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
   built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
   configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
@@ -558,16 +354,16 @@ ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFm
   libswscale      8.  3.100 /  8.  3.100
   libswresample   5.  3.100 /  5.  3.100
   libpostproc    58.  3.100 / 58.  3.100
-Input #0, image2, from 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1011\dev\windows-desktop\debug\electron_inspect\frames\frame_%06d.png':
-  Duration: 00:01:38.40, start: 0.000000, bitrate: N/A
+Input #0, image2, from 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1827\dev\windows-desktop\debug\electron_inspect\frames\frame_%06d.png':
+  Duration: 00:00:08.60, start: 0.000000, bitrate: N/A
   Stream #0:0: Video: png, rgba(pc, gbr/bt709/iec61966-2-1), 1008x681, 5 fps, 5 tbr, 5 tbn
 Stream mapping:
   Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
 Press [q] to stop, [?] for help
-[libx264 @ 000001a88e2f0dc0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 000001a88e2f0dc0] profile High, level 3.1, 4:2:0, 8-bit
-[libx264 @ 000001a88e2f0dc0] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1011\dev\windows-desktop\videos\sharp_exif\driver.mp4':
+[libx264 @ 000002ad81642e80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000002ad81642e80] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 000002ad81642e80] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=5 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1827\dev\windows-desktop\videos\sharp_exif\driver.mp4':
   Metadata:
     encoder         : Lavf61.7.100
   Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, unknown/bt709/iec61966-2-1, progressive), 1008x682, q=2-31, 5 fps, 10240 tbn
@@ -575,106 +371,27 @@ Output #0, mp4, to 'D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1011\de
         encoder         : Lavc61.19.100 libx264
       Side data:
         cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=    3 fps=0.6 q=23.0 size=       0KiB time=00:00:00.20 bitrate=   1.9kbits/s speed=0.0379x    
-frame=    9 fps=1.6 q=23.0 size=       0KiB time=00:00:01.40 bitrate=   0.3kbits/s speed=0.242x    
-frame=    9 fps=1.4 q=23.0 size=       0KiB time=00:00:01.40 bitrate=   0.3kbits/s speed=0.218x    
-frame=   15 fps=2.0 q=23.0 size=       0KiB time=00:00:02.60 bitrate=   0.1kbits/s speed=0.343x    
-frame=   21 fps=2.6 q=23.0 size=       0KiB time=00:00:03.80 bitrate=   0.1kbits/s speed=0.467x    
-frame=   27 fps=3.0 q=23.0 size=       0KiB time=00:00:05.00 bitrate=   0.1kbits/s speed=0.558x    
-frame=   33 fps=3.4 q=23.0 size=       0KiB time=00:00:06.20 bitrate=   0.1kbits/s speed=0.633x    
-frame=   38 fps=3.6 q=23.0 size=       0KiB time=00:00:07.20 bitrate=   0.1kbits/s speed=0.689x    
-frame=   50 fps=4.3 q=23.0 size=       0KiB time=00:00:09.60 bitrate=   0.0kbits/s speed=0.823x    
-frame=   58 fps=4.5 q=23.0 size=       0KiB time=00:00:11.20 bitrate=   0.0kbits/s speed=0.875x    
-frame=   61 fps=4.6 q=23.0 size=       0KiB time=00:00:11.80 bitrate=   0.0kbits/s speed=0.885x    
-frame=   67 fps=4.7 q=23.0 size=       0KiB time=00:00:13.00 bitrate=   0.0kbits/s speed=0.908x    
-frame=   73 fps=4.9 q=23.0 size=       0KiB time=00:00:14.20 bitrate=   0.0kbits/s speed=0.945x    
-frame=   79 fps=5.0 q=23.0 size=       0KiB time=00:00:15.40 bitrate=   0.0kbits/s speed=0.979x    
-frame=   89 fps=5.5 q=23.0 size=       0KiB time=00:00:17.40 bitrate=   0.0kbits/s speed=1.07x    
-frame=   97 fps=5.6 q=23.0 size=       0KiB time=00:00:19.00 bitrate=   0.0kbits/s speed=1.09x    
-frame=  105 fps=5.7 q=23.0 size=       0KiB time=00:00:20.60 bitrate=   0.0kbits/s speed=1.12x    
-frame=  111 fps=5.8 q=23.0 size=       0KiB time=00:00:21.80 bitrate=   0.0kbits/s speed=1.14x    
-frame=  119 fps=5.9 q=23.0 size=       0KiB time=00:00:23.40 bitrate=   0.0kbits/s speed=1.17x    
-frame=  127 fps=6.0 q=23.0 size=       0KiB time=00:00:25.00 bitrate=   0.0kbits/s speed=1.19x    
-frame=  137 fps=6.1 q=23.0 size=       0KiB time=00:00:27.00 bitrate=   0.0kbits/s speed=1.21x    
-frame=  140 fps=6.1 q=23.0 size=       0KiB time=00:00:27.60 bitrate=   0.0kbits/s speed=1.21x    
-frame=  147 fps=6.2 q=23.0 size=       0KiB time=00:00:28.80 bitrate=   0.0kbits/s speed=1.22x    
-frame=  153 fps=6.3 q=23.0 size=       0KiB time=00:00:30.20 bitrate=   0.0kbits/s speed=1.24x    
-frame=  162 fps=6.3 q=23.0 size=       0KiB time=00:00:32.00 bitrate=   0.0kbits/s speed=1.24x    
-frame=  169 fps=6.3 q=23.0 size=       0KiB time=00:00:33.40 bitrate=   0.0kbits/s speed=1.25x    
-frame=  175 fps=6.4 q=23.0 size=       0KiB time=00:00:34.60 bitrate=   0.0kbits/s speed=1.26x    
-frame=  181 fps=6.4 q=23.0 size=       0KiB time=00:00:35.80 bitrate=   0.0kbits/s speed=1.26x    
-frame=  186 fps=6.4 q=23.0 size=       0KiB time=00:00:36.80 bitrate=   0.0kbits/s speed=1.26x    
-frame=  193 fps=6.4 q=23.0 size=       0KiB time=00:00:38.20 bitrate=   0.0kbits/s speed=1.27x    
-frame=  198 fps=6.4 q=23.0 size=       0KiB time=00:00:39.20 bitrate=   0.0kbits/s speed=1.27x    
-frame=  201 fps=6.4 q=23.0 size=       0KiB time=00:00:39.80 bitrate=   0.0kbits/s speed=1.27x    
-frame=  210 fps=6.5 q=23.0 size=       0KiB time=00:00:41.60 bitrate=   0.0kbits/s speed=1.29x    
-frame=  220 fps=6.6 q=23.0 size=       0KiB time=00:00:43.60 bitrate=   0.0kbits/s speed=1.31x    
-frame=  225 fps=6.6 q=23.0 size=       0KiB time=00:00:44.60 bitrate=   0.0kbits/s speed=1.32x    
-frame=  231 fps=6.7 q=23.0 size=       0KiB time=00:00:45.80 bitrate=   0.0kbits/s speed=1.32x    
-frame=  239 fps=6.7 q=23.0 size=       0KiB time=00:00:47.40 bitrate=   0.0kbits/s speed=1.33x    
-frame=  246 fps=6.7 q=20.0 size=       0KiB time=00:00:48.80 bitrate=   0.0kbits/s speed=1.34x    
-frame=  250 fps=6.8 q=23.0 size=       0KiB time=00:00:49.60 bitrate=   0.0kbits/s speed=1.34x    
-frame=  255 fps=6.8 q=23.0 size=       0KiB time=00:00:50.60 bitrate=   0.0kbits/s speed=1.34x    
-frame=  260 fps=6.8 q=23.0 size=       0KiB time=00:00:51.60 bitrate=   0.0kbits/s speed=1.35x    
-frame=  266 fps=6.8 q=23.0 size=       0KiB time=00:00:52.80 bitrate=   0.0kbits/s speed=1.35x    
-frame=  274 fps=6.8 q=23.0 size=       0KiB time=00:00:54.40 bitrate=   0.0kbits/s speed=1.36x    
-frame=  281 fps=6.9 q=23.0 size=       0KiB time=00:00:55.80 bitrate=   0.0kbits/s speed=1.36x    
-frame=  292 fps=6.9 q=23.0 size=       0KiB time=00:00:58.00 bitrate=   0.0kbits/s speed=1.38x    
-frame=  298 fps=7.0 q=23.0 size=       0KiB time=00:00:59.20 bitrate=   0.0kbits/s speed=1.39x    
-frame=  306 fps=7.0 q=23.0 size=       0KiB time=00:01:00.80 bitrate=   0.0kbits/s speed=1.39x    
-frame=  312 fps=7.0 q=23.0 size=       0KiB time=00:01:02.00 bitrate=   0.0kbits/s speed= 1.4x    
-frame=  317 fps=7.0 q=23.0 size=       0KiB time=00:01:03.00 bitrate=   0.0kbits/s speed= 1.4x    
-frame=  325 fps=7.1 q=23.0 size=       0KiB time=00:01:04.60 bitrate=   0.0kbits/s speed= 1.4x    
-frame=  328 fps=7.0 q=23.0 size=       0KiB time=00:01:05.20 bitrate=   0.0kbits/s speed= 1.4x    
-frame=  333 fps=7.0 q=23.0 size=       0KiB time=00:01:06.20 bitrate=   0.0kbits/s speed= 1.4x    
-frame=  340 fps=7.0 q=23.0 size=       0KiB time=00:01:07.60 bitrate=   0.0kbits/s speed= 1.4x    
-frame=  362 fps=7.2 q=23.0 size=       0KiB time=00:01:12.00 bitrate=   0.0kbits/s speed=1.44x    
-frame=  369 fps=7.3 q=23.0 size=       0KiB time=00:01:13.40 bitrate=   0.0kbits/s speed=1.44x    
-frame=  376 fps=7.3 q=23.0 size=       0KiB time=00:01:14.80 bitrate=   0.0kbits/s speed=1.45x    
-frame=  384 fps=7.3 q=23.0 size=       0KiB time=00:01:16.40 bitrate=   0.0kbits/s speed=1.45x    
-frame=  387 fps=7.3 q=23.0 size=       0KiB time=00:01:17.00 bitrate=   0.0kbits/s speed=1.45x    
-frame=  394 fps=7.3 q=23.0 size=       0KiB time=00:01:18.20 bitrate=   0.0kbits/s speed=1.45x    
-frame=  396 fps=7.3 q=23.0 size=       0KiB time=00:01:18.80 bitrate=   0.0kbits/s speed=1.45x    
-frame=  402 fps=7.3 q=23.0 size=       0KiB time=00:01:20.00 bitrate=   0.0kbits/s speed=1.45x    
-frame=  408 fps=7.3 q=23.0 size=       0KiB time=00:01:21.20 bitrate=   0.0kbits/s speed=1.45x    
-frame=  413 fps=7.3 q=23.0 size=       0KiB time=00:01:22.20 bitrate=   0.0kbits/s speed=1.45x    
-frame=  416 fps=7.3 q=23.0 size=       0KiB time=00:01:22.80 bitrate=   0.0kbits/s speed=1.45x    
-frame=  424 fps=7.3 q=23.0 size=       0KiB time=00:01:24.40 bitrate=   0.0kbits/s speed=1.45x    
-frame=  436 fps=7.4 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=  436 fps=7.4 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=  443 fps=7.4 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=  452 fps=7.5 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=  465 fps=7.6 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=  479 fps=7.8 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-frame=  488 fps=7.9 q=-1.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
-[out#0/mp4 @ 000001a88e2f5740] video:214KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 3.087692%
-frame=  492 fps=7.9 q=-1.0 Lsize=     221KiB time=00:01:38.00 bitrate=  18.5kbits/s speed=1.57x    
-[libx264 @ 000001a88e2f0dc0] frame I:3     Avg QP:10.81  size: 43103
-[libx264 @ 000001a88e2f0dc0] frame P:124   Avg QP:14.10  size:   275
-[libx264 @ 000001a88e2f0dc0] frame B:365   Avg QP:22.91  size:   151
-[libx264 @ 000001a88e2f0dc0] consecutive B-frames:  0.8%  0.8%  0.0% 98.4%
-[libx264 @ 000001a88e2f0dc0] mb I  I16..4: 52.1% 24.5% 23.4%
-[libx264 @ 000001a88e2f0dc0] mb P  I16..4:  0.2%  0.0%  0.1%  P16..4:  0.4%  0.0%  0.0%  0.0%  0.0%    skip:99.2%
-[libx264 @ 000001a88e2f0dc0] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  4.4%  0.1%  0.0%  direct: 0.0%  skip:95.5%  L0:71.2% L1:28.8% BI: 0.0%
-[libx264 @ 000001a88e2f0dc0] 8x8 transform intra:23.6% inter:70.8%
-[libx264 @ 000001a88e2f0dc0] coded y,uvDC,uvAC intra: 33.5% 16.9% 14.2% inter: 0.0% 0.1% 0.0%
-[libx264 @ 000001a88e2f0dc0] i16 v,h,dc,p: 52% 46%  0%  2%
-[libx264 @ 000001a88e2f0dc0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 37% 11% 50%  0%  1%  1%  0%  0%  0%
-[libx264 @ 000001a88e2f0dc0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 36% 36% 13%  2%  3%  2%  3%  2%  3%
-[libx264 @ 000001a88e2f0dc0] i8c dc,h,v,p: 73% 17%  8%  2%
-[libx264 @ 000001a88e2f0dc0] Weighted P-Frames: Y:0.0% UV:0.0%
-[libx264 @ 000001a88e2f0dc0] ref P L0: 82.6%  0.7% 12.2%  4.4%
-[libx264 @ 000001a88e2f0dc0] ref B L0: 51.2% 48.5%  0.3%
-[libx264 @ 000001a88e2f0dc0] ref B L1: 98.8%  1.2%
-[libx264 @ 000001a88e2f0dc0] kb/s:17.77
-[1733s]   videos/sharp_exif/driver.mp4 placed (frames 923..1415)
-[1733s]   screenshots/sharp_exif_executed.png skipped -- frame 1415 not on disk
-[1735s]   removed D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1011\dev\windows-desktop\debug\electron_inspect\frames after successful encode
+frame=   25 fps=0.0 q=23.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
+[out#0/mp4 @ 000002ad816484c0] video:98KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.362214%
+frame=   43 fps=0.0 q=-1.0 Lsize=     100KiB time=00:00:08.20 bitrate=  99.5kbits/s speed=  14x    
+[libx264 @ 000002ad81642e80] frame I:2     Avg QP:13.10  size: 36528
+[libx264 @ 000002ad81642e80] frame P:11    Avg QP:15.13  size:  1859
+[libx264 @ 000002ad81642e80] frame B:30    Avg QP:22.50  size:   215
+[libx264 @ 000002ad81642e80] consecutive B-frames:  4.7%  4.7%  7.0% 83.7%
+[libx264 @ 000002ad81642e80] mb I  I16..4: 44.6% 32.8% 22.6%
+[libx264 @ 000002ad81642e80] mb P  I16..4:  1.2%  0.3%  0.9%  P16..4:  1.4%  0.2%  0.1%  0.0%  0.0%    skip:96.0%
+[libx264 @ 000002ad81642e80] mb B  I16..4:  0.1%  0.0%  0.0%  B16..8:  5.8%  0.2%  0.0%  direct: 0.0%  skip:93.9%  L0:63.5% L1:36.4% BI: 0.1%
+[libx264 @ 000002ad81642e80] 8x8 transform intra:30.3% inter:48.2%
+[libx264 @ 000002ad81642e80] coded y,uvDC,uvAC intra: 30.7% 16.4% 13.5% inter: 0.1% 0.2% 0.1%
+[libx264 @ 000002ad81642e80] i16 v,h,dc,p: 49% 48%  0%  3%
+[libx264 @ 000002ad81642e80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 51% 10% 37%  0%  1%  1%  0%  0%  0%
+[libx264 @ 000002ad81642e80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 37% 35% 12%  2%  3%  2%  3%  2%  3%
+[libx264 @ 000002ad81642e80] i8c dc,h,v,p: 72% 16%  9%  3%
+[libx264 @ 000002ad81642e80] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 000002ad81642e80] ref P L0: 67.9%  0.6% 12.0% 19.5%
+[libx264 @ 000002ad81642e80] ref B L0: 54.0% 45.4%  0.6%
+[libx264 @ 000002ad81642e80] ref B L1: 96.6%  3.4%
+[libx264 @ 000002ad81642e80] kb/s:92.98
+[ 707s]   videos/sharp_exif/driver.mp4 placed (frames 546..588)
+[ 707s]   screenshots/sharp_exif_executed.png placed
+[ 707s]   removed D:\a\comfy-gpu-ci\comfy-gpu-ci\comfy-test-logs\Sharp-1827\dev\windows-desktop\debug\electron_inspect\frames after successful encode
