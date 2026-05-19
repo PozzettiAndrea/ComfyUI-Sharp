@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-11T01:53:14.274429+00:00",
+  "timestamp": "2026-05-18T16:02:27.568533+00:00",
   "platform": "windows",
   "hardware": {
-    "os": "Windows-11-10.0.26200-SP0",
-    "cpu": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel"
+    "os": "Windows-11-10.0.26100-SP0",
+    "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
   },
-  "commit_hash": "c09e722c8b4142ed8f3ab836fff8ff47fc64ff60",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25644113763",
+  "commit_hash": "6891efa5b5c38cb36d60d3e1da33ab612618fb62",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/26042394513",
   "success": true,
   "summary": {
     "total": 3,
@@ -24,37 +24,37 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 135.83,
+      "duration_seconds": 86.33,
       "error": null,
       "hardware": {
-        "os": "Windows-11-10.0.26200-SP0",
-        "cpu": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel"
+        "os": "Windows-11-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 8.35,
-          "avg": 5.74
+          "peak": 7.83,
+          "avg": 4.75
         },
         "total_ram_gb": 31.9,
-        "samples": 134
+        "samples": 85
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 101.94,
+      "duration_seconds": 51.33,
       "error": null,
       "hardware": {
-        "os": "Windows-11-10.0.26200-SP0",
-        "cpu": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel"
+        "os": "Windows-11-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 8.36,
-          "avg": 7.4
+          "peak": 7.83,
+          "avg": 6.96
         },
         "total_ram_gb": 31.9,
-        "samples": 101
+        "samples": 51
       }
     }
   ]

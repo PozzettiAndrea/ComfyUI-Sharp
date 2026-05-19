@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-05-11T00:11:49.374781+00:00",
+  "timestamp": "2026-05-18T15:30:00.685166+00:00",
   "platform": "windows_portable",
   "hardware": {
-    "os": "Windows-11-10.0.26200-SP0",
-    "cpu": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel"
+    "os": "Windows-11-10.0.26100-SP0",
+    "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
   },
-  "commit_hash": "c09e722c8b4142ed8f3ab836fff8ff47fc64ff60",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25642377753",
+  "commit_hash": "6891efa5b5c38cb36d60d3e1da33ab612618fb62",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/26042382847",
   "success": true,
   "summary": {
     "total": 3,
@@ -24,37 +24,37 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 132.59,
+      "duration_seconds": 84.54,
       "error": null,
       "hardware": {
-        "os": "Windows-11-10.0.26200-SP0",
-        "cpu": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel"
+        "os": "Windows-11-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 5.72,
-          "avg": 4.13
+          "peak": 7.79,
+          "avg": 4.69
         },
         "total_ram_gb": 31.9,
-        "samples": 131
+        "samples": 84
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 238.07,
+      "duration_seconds": 50.63,
       "error": null,
       "hardware": {
-        "os": "Windows-11-10.0.26200-SP0",
-        "cpu": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel"
+        "os": "Windows-11-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 8.33,
-          "avg": 7.87
+          "peak": 7.8,
+          "avg": 6.95
         },
         "total_ram_gb": 31.9,
-        "samples": 236
+        "samples": 51
       }
     }
   ]

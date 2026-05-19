@@ -1,0 +1,345 @@
+setup plugin alembic.autogenerate.schemas
+setup plugin alembic.autogenerate.tables
+setup plugin alembic.autogenerate.types
+setup plugin alembic.autogenerate.constraints
+setup plugin alembic.autogenerate.defaults
+setup plugin alembic.autogenerate.comments
+[comfy-env] ComfyUI-GeometryPack: 1 isolation env(s):
+[comfy-env]   nodes -> C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack\nodes
+[comfy-env] Workspace: C:\Users\ContainerUser\AppData\Local\Programs\comfy-env
+[comfy-env]     env: C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\geometrypack-nodes  [OK]
+[comfy-env] prestartup complete
+[comfy-env] ComfyUI-Sharp: 1 isolation env(s):
+[comfy-env]   nodes -> C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes
+[comfy-env]     env: C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes  [OK]
+[comfy-env] prestartup complete
+
+Prestartup times for custom nodes:
+   0.0 seconds: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp
+   0.3 seconds: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack
+
+Found comfy_kitchen backend triton: {'available': False, 'disabled': True, 'unavailable_reason': "ImportError: No module named 'triton'", 'capabilities': []}
+Found comfy_kitchen backend cuda: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'scaled_mm_nvfp4']}
+Found comfy_kitchen backend eager: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_mxfp8', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'scaled_mm_mxfp8', 'scaled_mm_nvfp4']}
+Checkpoint files will always be loaded safely.
+Total VRAM 16380 MB, total RAM 32694 MB
+pytorch version: 2.11.0+cu130
+Set vram state to: NORMAL_VRAM
+Device: cuda:0 NVIDIA GeForce RTX 4060 Ti : cudaMallocAsync
+Using async weight offloading with 2 streams
+Enabled pinned memory 13077.0
+Using pytorch attention
+aimdo: src-win/cuda-detour.c:38:INFO:aimdo_setup_hooks: installing 6 hooks
+aimdo: src-win/cuda-detour.c:28:DEBUG:install_hook_entries: hooks successfully installed
+aimdo: src-win/shmem-detect.c:80:INFO:comfy-aimdo WDDM adapter match: NVIDIA GeForce RTX 4060 Ti runtime_luid=00000000:00620661 dxgi_luid=00000000:00620661
+aimdo: src/control.c:152:INFO:comfy-aimdo inited for GPU: NVIDIA GeForce RTX 4060 Ti (VRAM: 16379 MB)
+DynamicVRAM support detected and enabled
+Python version: 3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]
+ComfyUI version: 0.21.1
+comfy-aimdo version: 0.3.0
+comfy-kitchen version: 0.2.8
+****** User settings have been changed to be stored on the server instead of browser storage. ******
+****** For multi-user setups add the --multi-user CLI argument to enable multiple user profiles. ******
+ComfyUI frontend version: 1.43.18
+[Prompt Server] web root: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\python_embeded\Lib\site-packages\comfyui_frontend_package\static
+Asset seeder disabled
+loading...
+calling register_nodes
+[comfy-env] Version: 0.3.89
+[comfy-env] register_nodes: ComfyUI-GeometryPack
+[comfy-env] ComfyUI source dir: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI
+[comfy-env] Found 1 isolation env(s)
+[comfy-env] Scanning nodes metadata (isolation root)...
+[comfy-env] geometrypack-nodes: Library/bin has 613 DLLs
+[comfy-env] Metadata scan: C:\Users\ContainerUser\.pixi\bin\pixi.exe run --as-is --manifest-path C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\pixi.toml -e geometrypack-nodes python C:\Users\ContainerUser\AppData\Local\Temp\comfy_meta_b1atcygp.py C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack nodes C:\Users\ContainerUser\AppData\Local\Temp\comfy_meta_out_4o3btraj.pkl
+[comfy-env] Scan env PATH for nodes:
+[comfy-env]   [0] C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\geometrypack-nodes
+[comfy-env]   [1] C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\geometrypack-nodes\Library\bin
+[comfy-env]   [2] C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\geometrypack-nodes\Scripts
+[comfy-env]   [3] C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\geometrypack-nodes\Lib\site-packages\bpy
+[comfy-env]   [4] C:\Windows\System32
+[comfy-env]   [5] C:\Windows
+[comfy-env]   [6] C:\Windows\System32\Wbem
+[comfy-env] Metadata scan stderr for nodes:
+[comfy-env]   [meta-scan] importing nodes from C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack
+[comfy-env]   ERROR:root:Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+[comfy-env]   [meta-scan] import OK
+[comfy-env] Scanned nodes: 125 nodes (20.2s)
+[comfy-env] Scanned nodes root: 125 nodes (20.2s)
+[comfy-env] Imported nodes root: 125 nodes (isolation)
+[comfy-env] Registered 125 total nodes
+[comfy-env] Version: 0.3.89
+[comfy-env] register_nodes: ComfyUI-Sharp
+[comfy-env] ComfyUI source dir: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI
+[comfy-env] Found 1 isolation env(s)
+[comfy-env] Scanning nodes metadata (isolation root)...
+[comfy-env] sharp-nodes: Library/bin has 237 DLLs
+[comfy-env] Metadata scan: C:\Users\ContainerUser\.pixi\bin\pixi.exe run --as-is --manifest-path C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\pixi.toml -e sharp-nodes python C:\Users\ContainerUser\AppData\Local\Temp\comfy_meta_84fc11x1.py C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp nodes C:\Users\ContainerUser\AppData\Local\Temp\comfy_meta_out_pyx9_9ea.pkl
+[comfy-env] Scan env PATH for nodes:
+[comfy-env]   [0] C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes
+[comfy-env]   [1] C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Library\bin
+[comfy-env]   [2] C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Scripts
+[comfy-env]   [3] C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\bpy
+[comfy-env]   [4] C:\Windows\System32
+[comfy-env]   [5] C:\Windows
+[comfy-env]   [6] C:\Windows\System32\Wbem
+[comfy-env] Metadata scan stderr for nodes:
+[comfy-env]   [meta-scan] importing nodes from C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp
+[comfy-env]   [meta-scan] import OK
+[comfy-env] Scanned nodes: 8 nodes (5.3s)
+[comfy-env] Scanned nodes root: 8 nodes (5.3s)
+[comfy-env] Imported nodes root: 8 nodes (isolation)
+[comfy-env] Registered 8 total nodes
+
+Import times for custom nodes:
+   0.0 seconds: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\websocket_image_save.py
+   0.0 seconds: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-validate-endpoint
+   5.3 seconds: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp
+  20.7 seconds: C:\workspaces\Sharp-1721\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack
+
+Context impl SQLiteImpl.
+Will assume non-transactional DDL.
+Context impl SQLiteImpl.
+Will assume non-transactional DDL.
+Running upgrade  -> 0001_assets, Initial assets schema
+Revision ID: 0001_assets
+Revises: None
+Create Date: 2025-12-10 00:00:00
+Running upgrade 0001_assets -> 0002_merge_to_asset_references, Merge AssetInfo and AssetCacheState into unified asset_references table.
+Running upgrade 0002_merge_to_asset_references -> 0003_add_metadata_job_id, Add system_metadata and job_id columns to asset_references.
+Change preview_id FK from assets.id to asset_references.id.
+Database upgraded from None to 0003_add_metadata_job_id
+Starting server
+
+To see the GUI go to: http://127.0.0.1:41882
+=== /validate endpoint called ===
+Received JSON with keys: ['prompt']
+Prompt has 4 nodes
+  Node 1: LoadImage
+    Inputs: {"image": "beach.jpg"}
+  Node 2: LoadSharpModel
+    Inputs: {"precision": "auto"}
+  Node 4: GeomPackPreviewGaussian
+    Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
+  Node 5: SharpPredict
+    Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
+Generated prompt_id: 12c1e33f-8fa2-4038-8bbe-842d5e87e11e
+Calling execution.validate_prompt()...
+Validation result: valid=True
+=== Validation PASSED ===
+got prompt
+[comfy-env] Running LoadSharpModel: precision: 'auto'
+[VRAM] Before LoadSharpModel: 1156 / 16379 MB
+[comfy-env] SubprocessWorker: C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
+[comfy-env] env_vars: {'COMFYUI_BASE': 'C:\\workspaces\\Sharp-1721\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI'}
+[SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
+[SubprocessWorker] acquired lock, ensuring started...
+[comfy-env] sharp-nodes: Library/bin has 237 DLLs
+[ComfyUI-Sharp] python: C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
+[ComfyUI-Sharp] sys_path sent to worker: ['C:\\workspaces\\Sharp-1721\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI', 'C:\\workspaces\\Sharp-1721\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\Users\\ContainerUser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages', 'C:\\workspaces\\Sharp-1721\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
+[SubprocessWorker] is_pixi=True, python=C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
+[SubprocessWorker] launching cmd=['C:\\Users\\ContainerUser\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\ContainerUser\\AppData\\Local\\Programs\\comfy-env\\pixi.toml', '-e', 'sharp-nodes', 'python', 'C:\\Users\\ContainerUser\\AppData\\Local\\Temp\\comfyui_pvenv_8ijum8od\\persistent_worker.py', 'tcp://127.0.0.1:57607']...
+[worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+[SubprocessWorker] worker started/confirmed
+[SubprocessWorker] serializing kwargs to shm...
+[SubprocessWorker] created 0 shm blocks
+[SubprocessWorker] sending request via socket...
+[SubprocessWorker] call_id=1 sending call_method
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[worker:ComfyUI-Sharp] WARNING: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+sharp_2572gikvuh.pt:   0%|          | 0.00/2.81G [00:00<?, ?B/s]sharp_2572gikvuh.pt:   3%|▎         | 91.2M/2.81G [00:04<02:21, 19.2MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  10%|█         | 292M/2.81G [00:05<00:36, 69.2MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  18%|█▊        | 494M/2.81G [00:09<00:41, 55.8MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  22%|██▏       | 628M/2.81G [00:13<00:49, 44.5MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  30%|██▉       | 829M/2.81G [00:15<00:31, 63.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  34%|███▍      | 963M/2.81G [00:15<00:21, 84.7MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  37%|███▋      | 1.03G/2.81G [00:15<00:18, 95.8MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  41%|████▏     | 1.16G/2.81G [00:19<00:25, 64.4MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  51%|█████     | 1.43G/2.81G [00:22<00:20, 67.6MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  61%|██████    | 1.70G/2.81G [00:23<00:10, 109MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  63%|██████▎   | 1.77G/2.81G [00:23<00:08, 118MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  65%|██████▌   | 1.83G/2.81G [00:23<00:08, 121MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  77%|███████▋  | 2.17G/2.81G [00:24<00:02, 230MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  89%|████████▉ | 2.51G/2.81G [00:24<00:00, 354MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:24<00:00, 487MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:24<00:00, 115MB/s]
+[SubprocessWorker] got response: ok
+[comfy-env] LoadSharpModel done (27.39s): result: NodeOutput
+[VRAM] After LoadSharpModel: 1156 / 16379 MB
+[comfy-env] Running SharpPredict: focal_length_mm: 30.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,1024,1536,3] cpu
+[VRAM] Before SharpPredict: 1156 / 16379 MB
+[SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
+[SubprocessWorker] acquired lock, ensuring started...
+[ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
+[ComfyUI-Sharp] Health check: ok
+[SubprocessWorker] worker started/confirmed
+[comfy-env] PRE-SERIALIZE 'image' shape: torch.Size([1, 1024, 1536, 3])
+[SubprocessWorker] serializing kwargs to shm...
+[SubprocessWorker] created 0 shm blocks
+[SubprocessWorker] sending request via socket...
+[SubprocessWorker] call_id=2 sending call_method
+[worker:ComfyUI-Sharp] [comfy-env] _from_shm got dict with keys: ['__type__', 'strategy', 'manager_path', 'storage_key', 'storage_size']
+[worker:ComfyUI-Sharp] [comfy-env] DESERIALIZE TensorRef: tensor_size=[1, 1024, 1536, 3]
+[worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 1024, 1536, 3])
+[worker:ComfyUI-Sharp] WARNING: No comfy kitchen, using old apply_rope functions.
+[SubprocessWorker] callback 'request_vram_budget' from call_id=2
+[comfy-env] VRAM request: 2.81GB, free before eviction: 15.96GB
+[comfy-env] VRAM after eviction: 15.96GB
+[worker:ComfyUI-Sharp] [VRAM] +234MB (now 234MB) reserved=256MB peak=234MB
+[worker:ComfyUI-Sharp] WARNING: [SPN] start: 0.53 GB, input=[1, 3, 1536, 1536]
+[worker:ComfyUI-Sharp] WARNING: [SPN] patches: 0.59 GB, x0=25 x1=9 x2=1 total=35
+[worker:ComfyUI-Sharp] WARNING: [SPN] after first chunk (4/35): 1.03 GB, chunk_size=4
+[worker:ComfyUI-Sharp] [VRAM] +844MB (now 1079MB) reserved=1280MB peak=1088MB
+[worker:ComfyUI-Sharp] WARNING: [SPN] after all chunks + cache clear: 0.97 GB
+[worker:ComfyUI-Sharp] WARNING: [SPN] after merge intermediates: 0.73 GB
+[worker:ComfyUI-Sharp] WARNING: [SPN] after merge all: 0.77 GB
+[worker:ComfyUI-Sharp] [VRAM] -281MB (now 799MB) reserved=1152MB peak=1097MB
+[worker:ComfyUI-Sharp] WARNING: [SPN] after image_encoder: 0.78 GB
+[worker:ComfyUI-Sharp] WARNING: [SPN] after upsample: 1.49 GB
+[worker:ComfyUI-Sharp] WARNING: [Monodepth] after SPN encoder + cache clear: 1.39 GB
+[worker:ComfyUI-Sharp] WARNING: [Monodepth] after decoder: 1.95 GB
+[worker:ComfyUI-Sharp] [VRAM] +1193MB (now 1992MB) reserved=5184MB peak=4883MB
+[worker:ComfyUI-Sharp] WARNING: [Decode] start: 1.95 GB
+[worker:ComfyUI-Sharp] WARNING: [Decode] after depth_alignment: 1.98 GB
+[worker:ComfyUI-Sharp] WARNING: [Decode] after init_model: 2.06 GB
+[worker:ComfyUI-Sharp] WARNING: [Decode] after feature_model: 2.20 GB
+[worker:ComfyUI-Sharp] WARNING: [Decode] after prediction_head: 2.26 GB
+[worker:ComfyUI-Sharp] [VRAM] +216MB (now 2208MB) reserved=4640MB peak=4883MB
+[SubprocessWorker] callback 'report_progress' from call_id=2
+[SubprocessWorker] got response: ok
+[comfy-env] SharpPredict done (13.53s): result: NodeOutput
+[VRAM] After SharpPredict: 1156 / 16379 MB
+[comfy-env] Running GeomPackPreviewGaussian: ply_path: 'C:\\workspaces\\Sharp-1721\\portable-comfyui\\ComfyUI_wi..., extrinsics: list[4], intrinsics: list[3]
+[VRAM] Before GeomPackPreviewGaussian: 1156 / 16379 MB
+[comfy-env] SubprocessWorker: C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\geometrypack-nodes\python.exe
+[comfy-env] env_vars: {'KMP_DUPLICATE_LIB_OK': 'TRUE', 'OMP_NUM_THREADS': '1', 'COMFYUI_BASE': 'C:\\workspaces\\Sharp-1721\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI'}
+[SubprocessWorker] call_method: nodes.visualization.preview_gaussian.PreviewGaussianNode.EXECUTE_NORMALIZED
+[SubprocessWorker] acquired lock, ensuring started...
+[comfy-env] geometrypack-nodes: Library/bin has 613 DLLs
+[ComfyUI-GeometryPack] python: C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\geometrypack-nodes\python.exe
+[ComfyUI-GeometryPack] sys_path sent to worker: ['C:\\workspaces\\Sharp-1721\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI', 'C:\\workspaces\\Sharp-1721\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack', 'C:\\Users\\ContainerUser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\geometrypack-nodes\\Lib\\site-packages', 'C:\\workspaces\\Sharp-1721\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack']
+[SubprocessWorker] is_pixi=True, python=C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\geometrypack-nodes\python.exe
+[SubprocessWorker] launching cmd=['C:\\Users\\ContainerUser\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\ContainerUser\\AppData\\Local\\Programs\\comfy-env\\pixi.toml', '-e', 'geometrypack-nodes', 'python', 'C:\\Users\\ContainerUser\\AppData\\Local\\Temp\\comfyui_pvenv_c1cdma_k\\persistent_worker.py', 'tcp://127.0.0.1:58296']...
+[worker:ComfyUI-GeometryPack] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+[SubprocessWorker] worker started/confirmed
+[SubprocessWorker] serializing kwargs to shm...
+[SubprocessWorker] created 0 shm blocks
+[SubprocessWorker] sending request via socket...
+[SubprocessWorker] call_id=1 sending call_method
+[worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1779118107204.ply (63.00 MB)
+[SubprocessWorker] got response: ok
+[comfy-env] GeomPackPreviewGaussian done (3.01s): result: NodeOutput
+[VRAM] After GeomPackPreviewGaussian: 1156 / 16379 MB
+Prompt executed in 43.99 seconds
+=== /validate endpoint called ===
+Received JSON with keys: ['prompt']
+Prompt has 4 nodes
+  Node 2: LoadSharpModel
+    Inputs: {"precision": "auto"}
+  Node 7: SharpPredict
+    Inputs: {"focal_length_mm": ["9", 2], "output_prefix": "sharp", "model": ["2", 0], "image": ["9", 0]}
+  Node 8: GeomPackPreviewGaussian
+    Inputs: {"preview_gaussian": "", "ply_path": ["7", 0], "extrinsics": ["7", 1], "intrinsics": ["7", 2]}
+  Node 9: LoadImageWithExif
+    Inputs: {"image": "eth3d.png", "default_focal_mm": 30}
+Generated prompt_id: f90c1834-3759-406c-a2ee-3e6f44e7e356
+Calling execution.validate_prompt()...
+Validation result: valid=True
+=== Validation PASSED ===
+got prompt
+[comfy-env] Running LoadImageWithExif: image: 'eth3d.png', default_focal_mm: 30.0
+[VRAM] Before LoadImageWithExif: 1156 / 16379 MB
+[SubprocessWorker] call_method: nodes.load_image_exif.LoadImageWithExif.EXECUTE_NORMALIZED
+[SubprocessWorker] acquired lock, ensuring started...
+[ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
+[ComfyUI-Sharp] Health check: failed
+[ComfyUI-Sharp] Socket unhealthy, restarting worker...
+[comfy-env] sharp-nodes: Library/bin has 237 DLLs
+[ComfyUI-Sharp] python: C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
+[ComfyUI-Sharp] sys_path sent to worker: ['C:\\workspaces\\Sharp-1721\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI', 'C:\\workspaces\\Sharp-1721\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\Users\\ContainerUser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages', 'C:\\workspaces\\Sharp-1721\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
+[SubprocessWorker] is_pixi=True, python=C:\Users\ContainerUser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
+[SubprocessWorker] launching cmd=['C:\\Users\\ContainerUser\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\ContainerUser\\AppData\\Local\\Programs\\comfy-env\\pixi.toml', '-e', 'sharp-nodes', 'python', 'C:\\Users\\ContainerUser\\AppData\\Local\\Temp\\comfyui_pvenv_8ijum8od\\persistent_worker.py', 'tcp://127.0.0.1:50235']...
+[worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+[SubprocessWorker] worker started/confirmed
+[SubprocessWorker] serializing kwargs to shm...
+[SubprocessWorker] created 0 shm blocks
+[SubprocessWorker] sending request via socket...
+[SubprocessWorker] call_id=3 sending call_method
+[SubprocessWorker] got response: ok
+[comfy-env] LoadImageWithExif done (2.69s): result: NodeOutput
+[VRAM] After LoadImageWithExif: 1156 / 16379 MB
+[comfy-env] Running LoadSharpModel: precision: 'auto'
+[VRAM] Before LoadSharpModel: 1156 / 16379 MB
+[SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
+[SubprocessWorker] acquired lock, ensuring started...
+[ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
+[ComfyUI-Sharp] Health check: ok
+[SubprocessWorker] worker started/confirmed
+[SubprocessWorker] serializing kwargs to shm...
+[SubprocessWorker] created 0 shm blocks
+[SubprocessWorker] sending request via socket...
+[SubprocessWorker] call_id=4 sending call_method
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[worker:ComfyUI-Sharp] WARNING: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[SubprocessWorker] got response: ok
+[comfy-env] LoadSharpModel done (0.23s): result: NodeOutput
+[VRAM] After LoadSharpModel: 1156 / 16379 MB
+[comfy-env] Running SharpPredict: focal_length_mm: 20.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,2022,3040,3] cpu
+[VRAM] Before SharpPredict: 1156 / 16379 MB
+[SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
+[SubprocessWorker] acquired lock, ensuring started...
+[ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
+[ComfyUI-Sharp] Health check: ok
+[SubprocessWorker] worker started/confirmed
+[comfy-env] PRE-SERIALIZE 'image' shape: torch.Size([1, 2022, 3040, 3])
+[SubprocessWorker] serializing kwargs to shm...
+[SubprocessWorker] created 0 shm blocks
+[SubprocessWorker] sending request via socket...
+[SubprocessWorker] call_id=5 sending call_method
+[worker:ComfyUI-Sharp] [comfy-env] _from_shm got dict with keys: ['__type__', 'strategy', 'manager_path', 'storage_key', 'storage_size']
+[worker:ComfyUI-Sharp] [comfy-env] DESERIALIZE TensorRef: tensor_size=[1, 2022, 3040, 3]
+[worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 2022, 3040, 3])
+[worker:ComfyUI-Sharp] WARNING: No comfy kitchen, using old apply_rope functions.
+[SubprocessWorker] callback 'request_vram_budget' from call_id=5
+[comfy-env] VRAM request: 2.81GB, free before eviction: 15.96GB
+[comfy-env] VRAM after eviction: 15.96GB
+[worker:ComfyUI-Sharp] [VRAM] +378MB (now 378MB) reserved=384MB peak=378MB
+[worker:ComfyUI-Sharp] WARNING: [SPN] start: 0.59 GB, input=[1, 3, 1536, 1536]
+[worker:ComfyUI-Sharp] WARNING: [SPN] patches: 0.64 GB, x0=25 x1=9 x2=1 total=35
+[worker:ComfyUI-Sharp] WARNING: [SPN] after first chunk (4/35): 1.08 GB, chunk_size=4
+[worker:ComfyUI-Sharp] [VRAM] +761MB (now 1140MB) reserved=1344MB peak=1140MB
+[worker:ComfyUI-Sharp] WARNING: [SPN] after all chunks + cache clear: 1.02 GB
+[worker:ComfyUI-Sharp] WARNING: [SPN] after merge intermediates: 0.78 GB
+[worker:ComfyUI-Sharp] WARNING: [SPN] after merge all: 0.82 GB
+[worker:ComfyUI-Sharp] [VRAM] -283MB (now 858MB) reserved=1248MB peak=1194MB
+[worker:ComfyUI-Sharp] WARNING: [SPN] after image_encoder: 0.83 GB
+[worker:ComfyUI-Sharp] WARNING: [SPN] after upsample: 1.54 GB
+[worker:ComfyUI-Sharp] WARNING: [Monodepth] after SPN encoder + cache clear: 1.44 GB
+[worker:ComfyUI-Sharp] WARNING: [Monodepth] after decoder: 2.01 GB
+[worker:ComfyUI-Sharp] WARNING: [Decode] start: 2.00 GB
+[worker:ComfyUI-Sharp] WARNING: [Decode] after depth_alignment: 2.03 GB
+[worker:ComfyUI-Sharp] [VRAM] +1222MB (now 2080MB) reserved=2208MB peak=3506MB
+[worker:ComfyUI-Sharp] WARNING: [Decode] after init_model: 2.11 GB
+[worker:ComfyUI-Sharp] WARNING: [Decode] after feature_model: 2.25 GB
+[worker:ComfyUI-Sharp] WARNING: [Decode] after prediction_head: 2.31 GB
+[worker:ComfyUI-Sharp] [VRAM] -1407MB (now 673MB) reserved=4992MB peak=3506MB
+[SubprocessWorker] callback 'report_progress' from call_id=5
+[SubprocessWorker] got response: ok
+[comfy-env] SharpPredict done (8.55s): result: NodeOutput
+[VRAM] After SharpPredict: 1156 / 16379 MB
+[comfy-env] Running GeomPackPreviewGaussian: ply_path: 'C:\\workspaces\\Sharp-1721\\portable-comfyui\\ComfyUI_wi..., extrinsics: list[4], intrinsics: list[3]
+[VRAM] Before GeomPackPreviewGaussian: 1156 / 16379 MB
+[SubprocessWorker] call_method: nodes.visualization.preview_gaussian.PreviewGaussianNode.EXECUTE_NORMALIZED
+[SubprocessWorker] acquired lock, ensuring started...
+[ComfyUI-GeometryPack] Health check: ping (timeout=5.0s)...
+[ComfyUI-GeometryPack] Health check: ok
+[SubprocessWorker] worker started/confirmed
+[SubprocessWorker] serializing kwargs to shm...
+[SubprocessWorker] created 0 shm blocks
+[SubprocessWorker] sending request via socket...
+[SubprocessWorker] call_id=2 sending call_method
+[worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1779118161765.ply (63.00 MB)
+[SubprocessWorker] got response: ok
+[comfy-env] GeomPackPreviewGaussian done (0.01s): result: NodeOutput
+[VRAM] After GeomPackPreviewGaussian: 1156 / 16379 MB
+Prompt executed in 11.49 seconds

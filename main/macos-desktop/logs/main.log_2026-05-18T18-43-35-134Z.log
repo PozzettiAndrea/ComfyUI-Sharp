@@ -1,0 +1,881 @@
+[2026-05-18 18:28:55.304] [info]  ⠹ Preparing packages... (89/93)
+transformers                           ------------------------------ 7.22 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 26.87 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 63.16 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 35.62 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.346] [info]  ⠹ Preparing packages... (89/93)
+transformers                           ------------------------------ 7.28 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 26.94 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 63.35 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 35.69 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.388] [info]  ⠸ Preparing packages... (89/93)
+transformers                           ------------------------------ 7.34 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.00 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 63.54 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 35.75 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.429] [info]  ⠸ Preparing packages... (89/93)
+transformers                           ------------------------------ 7.41 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.06 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 63.73 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 35.81 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.480] [info]  ⠸ Preparing packages... (89/93)
+transformers                           ------------------------------ 7.50 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.16 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 63.98 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 35.91 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.529] [info]  ⠸ Preparing packages... (89/93)
+transformers                           ------------------------------ 7.56 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.25 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 64.28 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 35.97 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.582] [info]  ⠼ Preparing packages... (89/93)
+transformers                           ------------------------------ 7.66 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.31 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 64.53 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 36.06 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.642] [info]  ⠼ Preparing packages... (89/93)
+transformers                           ------------------------------ 7.72 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.37 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 64.73 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 36.12 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.685] [info]  ⠼ Preparing packages... (89/93)
+transformers                           ------------------------------ 7.78 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.44 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 64.91 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 36.19 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.730] [info]  ⠼ Preparing packages... (89/93)
+transformers                           ------------------------------ 7.84 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.53 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 65.12 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 36.25 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.779] [info]  ⠼ Preparing packages... (89/93)
+transformers                           ------------------------------ 7.94 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.59 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 65.41 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 36.34 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.853] [info]  ⠴ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.03 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.69 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 65.66 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 36.44 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.896] [info]  ⠴ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.09 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.75 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 65.85 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 36.50 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.954] [info]  ⠴ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.16 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.81 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 66.04 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 36.56 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:55.980] [info]  ⠴ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.22 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.87 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 66.23 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 36.62 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.030] [info]  ⠦ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.31 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 27.97 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 66.51 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 36.72 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.080] [info]  ⠦ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.37 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 28.06 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 66.72 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 36.78 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.130] [info]  ⠦ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.47 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 28.12 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 67.01 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 36.87 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.194] [info]  ⠦ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.53 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 28.19 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 67.23 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 36.94 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.236] [info]  ⠧ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.59 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 28.25 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 67.42 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.00 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.281] [info]  ⠧ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.66 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 28.31 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 67.67 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.06 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.330] [info]  ⠧ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.75 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 28.41 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 67.92 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.16 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.380] [info]  ⠧ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.81 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 28.50 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 68.16 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.22 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.449] [info]  ⠇ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.91 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 28.56 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 68.42 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.31 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.492] [info]  ⠇ Preparing packages... (89/93)
+transformers                           ------------------------------ 8.97 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 28.62 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 68.61 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.37 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.537] [info]  ⠇ Preparing packages... (89/93)
+transformers                           ------------------------------ 9.03 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 28.69 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 68.86 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.44 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.580] [info]  ⠇ Preparing packages... (89/93)
+transformers                           ------------------------------ 9.09 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 28.76 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 69.06 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.50 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.633] [info]  ⠋ Preparing packages... (89/93)
+transformers                           ------------------------------ 9.19 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 28.84 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 69.33 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.59 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.679] [info]  ⠋ Preparing packages... (89/93)
+transformers                           ------------------------------ 9.27 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 28.94 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 69.53 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.69 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.729] [info]  ⠋ Preparing packages... (89/93)
+transformers                           ------------------------------ 9.34 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 29.00 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 69.79 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.75 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.793] [info]  ⠋ Preparing packages... (89/93)
+transformers                           ------------------------------ 9.41 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 29.06 MiB/62.29 MiB
+comfyui-workflow-templates-media-image ------------------------------ 70.05 MiB/70.15 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.81 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.801] [info]  ⠋ Preparing packages... (89/93)
+transformers                           ------------------------------ 9.44 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 29.09 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.84 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.835] [info]  ⠙ Preparing packages... (90/93)
+transformers                           ------------------------------ 9.47 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 29.23 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.87 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.879] [info]  ⠙ Preparing packages... (90/93)
+transformers                           ------------------------------ 9.53 MiB/9.67 MiB
+comfyui-workflow-templates-media-other ------------------------------ 29.50 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 37.95 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.928] [info]  ⠙ Preparing packages... (90/93)
+comfyui-workflow-templates-media-other ------------------------------ 29.78 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.03 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.932] [info]  ⠙ Preparing packages... (90/93)
+comfyui-workflow-templates-media-other ------------------------------ 29.80 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.03 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:56.980] [info]  ⠙ Preparing packages... (90/93)
+comfyui-workflow-templates-media-other ------------------------------ 30.19 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.12 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.033] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 30.63 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.19 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.093] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 30.95 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.25 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.136] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 31.26 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.31 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.179] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 31.60 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.41 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.230] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 32.05 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.47 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.280] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 32.48 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.56 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.349] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 32.89 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.62 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.391] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 33.20 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.69 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.434] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 33.51 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.75 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.480] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 33.89 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.84 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.530] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 34.34 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 38.91 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.580] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 34.79 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.00 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.649] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 35.11 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.06 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.701] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 35.42 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.12 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.749] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 35.86 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.19 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.791] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 36.17 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.25 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.832] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 36.48 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.31 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.880] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 36.88 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.41 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:57.930] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 37.32 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.50 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.006] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 37.73 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.56 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.046] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 38.05 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.62 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.092] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 38.45 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.69 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.136] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 38.80 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.75 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.191] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 39.14 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.81 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.229] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 39.60 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 39.91 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.279] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 40.01 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.00 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.349] [info]  ⠇ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 40.42 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.06 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.391] [info]  ⠇ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 40.73 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.12 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.434] [info]  ⠇ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 41.08 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.19 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.479] [info]  ⠇ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 41.45 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.25 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.533] [info]  ⠋ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 41.92 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.34 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.580] [info]  ⠋ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 42.32 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.44 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.649] [info]  ⠋ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 42.73 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.50 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.692] [info]  ⠋ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 43.08 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.56 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.735] [info]  ⠙ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 43.39 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.62 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.779] [info]  ⠙ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 43.73 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.72 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.830] [info]  ⠙ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 44.17 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.78 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.879] [info]  ⠙ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 44.58 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.87 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.945] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 44.95 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 40.94 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:58.987] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 45.26 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.00 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.030] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 45.58 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.06 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.080] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 46.04 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.16 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.130] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 46.42 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.25 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.199] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 46.83 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.31 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.242] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 47.17 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.37 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.289] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 47.51 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.44 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.332] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 47.85 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.50 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.380] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 48.26 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.59 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.430] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 48.69 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.69 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.502] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 49.13 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.75 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.544] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 49.44 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.81 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.590] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 49.83 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.87 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.634] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 50.17 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 41.94 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.679] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 50.48 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.00 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.729] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 50.94 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.09 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.780] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 51.36 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.19 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.853] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 51.82 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.25 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.896] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 52.16 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.31 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.939] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 52.48 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.37 MiB/90.13 MiB                                                                       
+[2026-05-18 18:28:59.981] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 52.79 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.44 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.030] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 53.23 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.53 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.080] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 53.63 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.62 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.138] [info]  ⠇ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 54.04 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.69 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.207] [info]  ⠇ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 54.41 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.75 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.246] [info]  ⠇ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 54.73 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.81 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.289] [info]  ⠇ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 55.07 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.84 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.331] [info]  ⠇ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 55.41 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 42.91 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.380] [info]  ⠋ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 55.83 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 43.00 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.430] [info]  ⠋ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 56.25 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 43.06 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.488] [info]  ⠋ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 56.63 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 43.16 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.548] [info]  ⠋ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 57.08 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 43.22 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.590] [info]  ⠙ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 57.39 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 43.28 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.633] [info]  ⠙ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 57.70 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 43.36 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.679] [info]  ⠙ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 57.81 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 43.73 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.733] [info]  ⠙ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 57.87 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 44.14 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.780] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 57.97 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 44.54 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.845] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.03 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 44.95 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.889] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.09 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 45.29 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.932] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.16 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 45.61 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:00.980] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.25 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 46.04 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.033] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.31 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 46.45 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.080] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.41 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 46.83 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.150] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.47 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 47.29 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.198] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.53 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 47.69 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.243] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.59 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 48.01 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.291] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.66 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 48.39 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.338] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.72 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 48.79 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.380] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.78 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 49.11 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.429] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.87 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 49.56 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.480] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 58.97 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 49.98 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.553] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.03 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 50.42 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.587] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.09 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 50.74 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.639] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.16 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 51.08 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.681] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.22 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 51.39 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.735] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.31 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 51.73 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.779] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.37 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 52.10 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.830] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.44 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 52.58 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.900] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.50 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 52.98 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.943] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.56 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 53.30 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:01.986] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.62 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 53.61 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.030] [info]  ⠇ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.70 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 53.97 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.081] [info]  ⠇ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.78 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 54.44 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.129] [info]  ⠇ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.87 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 54.85 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.199] [info]  ⠇ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 59.94 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 55.23 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.243] [info]  ⠋ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.00 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 55.58 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.285] [info]  ⠋ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.06 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 55.89 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.329] [info]  ⠋ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.14 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 56.25 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.380] [info]  ⠋ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.22 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 56.73 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.429] [info]  ⠙ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.31 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 57.07 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.480] [info]  ⠙ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.37 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 57.55 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.546] [info]  ⠙ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.44 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 57.89 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.588] [info]  ⠙ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.50 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 58.20 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.630] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.56 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 58.51 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.680] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.66 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 58.95 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.730] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.75 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 59.36 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.801] [info]  ⠹ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.81 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 59.80 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.843] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.87 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 60.13 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.888] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 60.94 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 60.48 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.932] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.00 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 60.80 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:02.979] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.09 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 61.23 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.030] [info]  ⠸ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.16 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 61.70 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.079] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.25 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 62.11 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.148] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.31 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 62.51 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.191] [info]  ⠼ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.37 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 62.86 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.233] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.44 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 63.16 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.279] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.53 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 63.55 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.332] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.58 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 63.84 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.380] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.66 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 64.29 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.430] [info]  ⠴ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.72 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 64.76 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.480] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.81 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 65.20 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.548] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.87 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 65.55 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.590] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 61.94 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 65.86 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.634] [info]  ⠦ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 62.00 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 66.17 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.680] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 62.06 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 66.58 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.729] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 62.16 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 67.01 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.780] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-other ------------------------------ 62.26 MiB/62.29 MiB
+comfyui-workflow-templates-media-video ------------------------------ 67.41 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.783] [info]  ⠧ Preparing packages... (91/93)
+comfyui-workflow-templates-media-video ------------------------------ 67.44 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.850] [info]  ⠇ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 67.88 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.893] [info]  ⠇ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 68.26 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.937] [info]  ⠇ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 68.64 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:03.982] [info]  ⠇ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 69.05 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.030] [info]  ⠇ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 69.55 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.080] [info]  ⠋ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 70.10 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.130] [info]  ⠋ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 70.60 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.200] [info]  ⠋ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 71.05 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.247] [info]  ⠋ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 71.42 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.290] [info]  ⠙ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 71.83 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.336] [info]  ⠙ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 72.26 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.379] [info]  ⠙ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 72.69 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.440] [info]  ⠙ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 73.17 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.481] [info]  ⠹ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 73.55 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.530] [info]  ⠹ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 74.05 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.579] [info]  ⠹ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 74.58 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.651] [info]  ⠹ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 75.07 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.680] [info]  ⠸ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 75.42 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.736] [info]  ⠸ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 75.82 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.783] [info]  ⠸ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 76.23 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.830] [info]  ⠸ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 76.61 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.880] [info]  ⠸ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 77.13 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.931] [info]  ⠼ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 77.67 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:04.979] [info]  ⠼ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 78.17 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.047] [info]  ⠼ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 78.63 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.090] [info]  ⠴ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 78.98 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.133] [info]  ⠴ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 79.39 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.179] [info]  ⠴ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 79.86 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.229] [info]  ⠴ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 80.38 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.280] [info]  ⠴ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 80.91 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.329] [info]  ⠦ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 81.44 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.396] [info]  ⠦ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 81.85 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.439] [info]  ⠦ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 82.23 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.482] [info]  ⠦ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 82.61 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.529] [info]  ⠧ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 83.11 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.582] [info]  ⠧ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 83.61 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.630] [info]  ⠧ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 84.11 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.698] [info]  ⠧ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 84.58 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.741] [info]  ⠇ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 84.95 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.783] [info]  ⠇ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 85.33 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.829] [info]  ⠇ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 85.82 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.881] [info]  ⠇ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 86.32 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.930] [info]  ⠋ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 86.83 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:05.996] [info]  ⠋ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 87.23 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:06.038] [info]  ⠋ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 87.60 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:06.080] [info]  ⠋ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 87.98 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:06.130] [info]  ⠙ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 88.51 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:06.179] [info]  ⠙ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 88.98 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:06.251] [info]  ⠙ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 89.48 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:06.293] [info]  ⠙ Preparing packages... (92/93)
+comfyui-workflow-templates-media-video ------------------------------ 89.86 MiB/90.13 MiB                                                                       
+[2026-05-18 18:29:06.309] [info]  ⠙ Preparing packages... (92/93)                                                 
+[2026-05-18 18:29:06.309] [info]  Prepared 93 packages in 56.08s
+
+[2026-05-18 18:29:06.310] [info]  ░░░░░░░░░░░░░░░░░░░░ [0/0] Installing wheels...                                 ░░░░░░░░░░░░░░░░░░░░ [0/93] Installing wheels...                                
+[2026-05-18 18:29:06.333] [info]  ░░░░░░░░░░░░░░░░░░░░ [0/93] jinja2==3.1.6                                       ░░░░░░░░░░░░░░░░░░░░ [1/93] jinja2==3.1.6                                       ░░░░░░░░░░░░░░░░░░░░ [1/93] pydantic-settings==2.12.0                           ░░░░░░░░░░░░░░░░░░░░ [2/93] pydantic-settings==2.12.0                           
+[2026-05-18 18:29:06.334] [info]  ░░░░░░░░░░░░░░░░░░░░ [2/93] anyio==4.12.1                                       ░░░░░░░░░░░░░░░░░░░░ [3/93] anyio==4.12.1                                       
+[2026-05-18 18:29:06.345] [info]  ░░░░░░░░░░░░░░░░░░░░ [3/93] shellingham==1.5.4                                  ░░░░░░░░░░░░░░░░░░░░ [4/93] shellingham==1.5.4                                  ░░░░░░░░░░░░░░░░░░░░ [4/93] filelock==3.20.3                                    █░░░░░░░░░░░░░░░░░░░ [5/93] filelock==3.20.3                                    
+[2026-05-18 18:29:06.351] [info]  █░░░░░░░░░░░░░░░░░░░ [5/93] torchsde==0.2.6                                     █░░░░░░░░░░░░░░░░░░░ [6/93] torchsde==0.2.6                                     
+[2026-05-18 18:29:06.353] [info]  █░░░░░░░░░░░░░░░░░░░ [6/93] h11==0.16.0                                         █░░░░░░░░░░░░░░░░░░░ [7/93] h11==0.16.0                                         
+[2026-05-18 18:29:06.358] [info]  █░░░░░░░░░░░░░░░░░░░ [7/93] regex==2026.1.15                                    █░░░░░░░░░░░░░░░░░░░ [8/93] regex==2026.1.15                                    
+[2026-05-18 18:29:06.363] [info]  █░░░░░░░░░░░░░░░░░░░ [8/93] attrs==25.4.0                                       █░░░░░░░░░░░░░░░░░░░ [9/93] attrs==25.4.0                                       
+[2026-05-18 18:29:06.367] [info]  █░░░░░░░░░░░░░░░░░░░ [9/93] glfw==2.10.0                                        
+[2026-05-18 18:29:06.416] [info]  █████░░░░░░░░░░░░░░░ [26/93] certifi==2026.1.4                                  
+[2026-05-18 18:29:06.479] [info]  ██████░░░░░░░░░░░░░░ [32/93] mako==1.3.10                                       
+[2026-05-18 18:29:06.526] [info]  ████████░░░░░░░░░░░░ [38/93] httpcore==1.0.9                                    
+[2026-05-18 18:29:06.568] [info]  █████████░░░░░░░░░░░ [44/93] pyjwt==2.10.1                                      
+[2026-05-18 18:29:06.625] [info]  ███████████░░░░░░░░░ [53/93] click==8.3.1                                       
+[2026-05-18 18:29:06.666] [info]  ████████████░░░░░░░░ [56/93] pynacl==1.6.2                                      
+[2026-05-18 18:29:06.727] [info]  █████████████░░░░░░░ [62/93] torchaudio==2.10.0                                 
+[2026-05-18 18:29:06.776] [info]  █████████████░░░░░░░ [64/93] comfyui-manager==4.2.1                             
+[2026-05-18 18:29:07.060] [info]  █████████████░░░░░░░ [65/93] kornia==0.8.2                                      ██████████████░░░░░░ [66/93] kornia==0.8.2                                      
+[2026-05-18 18:29:07.073] [info]  ██████████████░░░░░░ [66/93] safetensors==0.7.0                                 ██████████████░░░░░░ [67/93] safetensors==0.7.0                                 
+[2026-05-18 18:29:07.094] [info]  ██████████████░░░░░░ [67/93] setuptools==80.10.2                                ██████████████░░░░░░ [68/93] setuptools==80.10.2                                
+[2026-05-18 18:29:07.126] [info]  ██████████████░░░░░░ [69/93] pydantic==2.12.5                                   
+[2026-05-18 18:29:07.169] [info]  ███████████████░░░░░ [70/93] aiohttp==3.13.3                                    
+[2026-05-18 18:29:07.269] [info]  ███████████████░░░░░ [71/93] huggingface-hub==1.3.5                             ███████████████░░░░░ [72/93] huggingface-hub==1.3.5                             
+[2026-05-18 18:29:07.389] [info]  ████████████████░░░░ [75/93] torchvision==0.25.0                                ████████████████░░░░ [76/93] torchvision==0.25.0                                
+[2026-05-18 18:29:07.517] [info]  ████████████████░░░░ [76/93] sympy==1.14.0                                      ████████████████░░░░ [77/93] sympy==1.14.0                                      
+[2026-05-18 18:29:07.777] [info]  ████████████████░░░░ [77/93] networkx==3.6.1                                    ████████████████░░░░ [78/93] networkx==3.6.1                                    
+[2026-05-18 18:29:07.926] [info]  ████████████████░░░░ [78/93] av==16.1.0                                         ████████████████░░░░ [79/93] av==16.1.0                                         
+[2026-05-18 18:29:08.149] [info]  ████████████████░░░░ [79/93] scipy==1.17.0                                      
+[2026-05-18 18:29:08.150] [info]  █████████████████░░░ [80/93] scipy==1.17.0                                      
+[2026-05-18 18:29:08.188] [info]  █████████████████░░░ [80/93] cryptography==46.0.4                               █████████████████░░░ [81/93] cryptography==46.0.4                               
+[2026-05-18 18:29:08.564] [info]  █████████████████░░░ [81/93] numpy==2.4.1                                       █████████████████░░░ [82/93] numpy==2.4.1                                       
+[2026-05-18 18:29:08.631] [info]  █████████████████░░░ [82/93] pillow==12.1.0                                     █████████████████░░░ [83/93] pillow==12.1.0                                     
+[2026-05-18 18:29:08.727] [info]  █████████████████░░░ [83/93] comfyui-workflow-templates-media-api==0.3.76       ██████████████████░░ [84/93] comfyui-workflow-templates-media-api==0.3.76       
+[2026-05-18 18:29:08.732] [info]  ██████████████████░░ [84/93] uv==0.9.28                                         ██████████████████░░ [85/93] uv==0.9.28                                         
+[2026-05-18 18:29:09.005] [info]  ██████████████████░░ [85/93] pyopengl==3.1.10                                   ██████████████████░░ [86/93] pyopengl==3.1.10                                   
+[2026-05-18 18:29:09.830] [info]  ██████████████████░░ [86/93] transformers==5.0.0                                ██████████████████░░ [87/93] transformers==5.0.0                                
+[2026-05-18 18:29:09.907] [info]  ██████████████████░░ [87/93] comfyui-workflow-templates-media-other==0.3.197    ██████████████████░░ [88/93] comfyui-workflow-templates-media-other==0.3.197    
+[2026-05-18 18:29:09.963] [info]  ██████████████████░░ [88/93] comfyui-workflow-templates-media-video==0.3.85     ███████████████████░ [89/93] comfyui-workflow-templates-media-video==0.3.85     
+[2026-05-18 18:29:10.905] [info]  ███████████████████░ [89/93] comfyui-embedded-docs==0.5.0                       ███████████████████░ [90/93] comfyui-embedded-docs==0.5.0                       
+[2026-05-18 18:29:11.025] [info]  ███████████████████░ [90/93] sqlalchemy==2.0.46                                 ███████████████████░ [91/93] sqlalchemy==2.0.46                                 
+[2026-05-18 18:29:12.862] [info]  ███████████████████░ [91/93] torch==2.10.0                                      ███████████████████░ [92/93] torch==2.10.0                                      
+[2026-05-18 18:29:12.985] [info]  ███████████████████░ [92/93] comfyui-workflow-templates-media-image==0.3.138    ████████████████████ [93/93] comfyui-workflow-templates-media-image==0.3.138    
+[2026-05-18 18:29:12.986] [info]  Installed 93 packages in 6.67s
+
+[2026-05-18 18:29:12.987] [info]   
+[2026-05-18 18:29:12.987] [info]  + aiohappyeyeballs==2.6.1
+ + aiohttp==3.13.3
+[2026-05-18 18:29:12.987] [info]  
+ + aiosignal==1.4.0
+ + alembic==1.18.3
+ + annotated-types==0.7.0
+ + anyio==4.12.1
+ + attrs
+[2026-05-18 18:29:12.988] [info]  ==25.4.0
+ + av
+[2026-05-18 18:29:12.988] [info]  ==16.1.0
+ + blake3==1.0.8
+ + certifi==2026.1.4
+ + cffi==2.0.0
+ + chardet==5.2.0
+ + charset-normalizer==3.4.4
+ +
+[2026-05-18 18:29:12.988] [info]   click==8.3.1
+ + comfy-aimdo==0.3.0
+ + comfy-kitchen==0.2.8
+ + comfyui-embedded-docs==0.5.0
+ 
+[2026-05-18 18:29:12.988] [info]  + comfyui-manager==4.2.1
+ + comfyui-workflow-templates==0.9.75
+ + comfyui-workflow-templates-core==0.3.231
+ + comfyui-workflow-templates-media-api==0.3.76
+ + comfyui-workflow-templates-media-image==0.3.138
+ + comfyui-workflow-templates-media-other==0.3.197
+ + comfyui-workflow-templates-media-video==0.3.85
+ 
+[2026-05-18 18:29:12.989] [info]  + cryptography==46.0.4
+ + einops==0.8.2
+ + filelock==3.20.3
+ + frozenlist==1.8.0
+ + fsspec==2026.1.0
+ + gitdb==4.0.12
+ +
+[2026-05-18 18:29:12.989] [info]   gitpython==3.1.46
+ + glfw==2.10.0
+ + h11==0.16.0
+ + hf-xet==1.2.0
+ + httpcore==1.0.9
+ + httpx==
+[2026-05-18 18:29:12.989] [info]  0.28.1
+ + huggingface-hub==1.3.5
+ + idna==3.11
+ + jinja2==3.1.6
+ + kornia==0.8.2
+ + kornia-rs==
+[2026-05-18 18:29:12.990] [info]  0.1.10
+ + mako==1.3.10
+ + markdown-it-py==4.0.0
+ + markupsafe==3.0.3
+ + mdurl==0.1.2
+ + mpmath==1.3.0
+ + multidict==6.7.1
+ + networkx==3.6.1
+ + numpy==2.4.1
+ + packaging==26.0
+ + pillow==12.1.0
+ + propcache==0.4.1
+ + psutil
+[2026-05-18 18:29:12.990] [info]  ==7.2.2
+ + pycparser==3.0
+ + pydantic==2.12.5
+ + pydantic-core==2.41.5
+ + pydantic-settings==2.12.0
+ + pygithub==2
+[2026-05-18 18:29:12.990] [info]  .8.1
+ + pygments==2.19.2
+ + pyjwt==2.10.1
+ + pynacl==1.6.2
+ + pyopengl==
+[2026-05-18 18:29:12.990] [info]  3.1.10
+ + python-dotenv==1.2.1
+ + pyyaml==6.0.3
+ + regex==2026.1.15
+ + requests==2.32.5
+ + rich
+[2026-05-18 18:29:12.991] [info]  ==14.3.1
+ + safetensors==0.7.0
+ + scipy==1.17.0
+ + sentencepiece==0.2.1
+ + setuptools==80.10.2
+ + shellingham==1.5.4
+ + simpleeval==1.0.3
+ + smmap==5.0.2
+ + spandrel==0.4.1
+ + sqlalchemy==2.0.46
+ + sympy==1.14.0
+ +
+[2026-05-18 18:29:12.991] [info]   tokenizers==0.22.2
+ + toml==0.10.2
+ + torch==2.10.0
+[2026-05-18 18:29:12.992] [info]  
+ + torchaudio==2.10.0
+ + torchsde==0.2.6
+ + torchvision==0.25.0
+ + tqdm==4.67.1
+ + trampoline==0.1.2
+ + transformers==5.0.0
+ + typer==0.21.1
+ + typer-slim==0.21.1
+ + typing-extensions
+[2026-05-18 18:29:12.992] [info]  ==4.15.0
+ + typing-inspection==0.4.2
+ + urllib3==2.6.3
+ + uv==0.9.28
+ + yarl==1.22.0
+
+[2026-05-18 18:29:13.019] [info]  %                                                                                
+[2026-05-18 18:29:13.020] [info]  sjc22-bm212-a225a830-3db3-4078-a72d-17f528a0cb9d-EE224D88AD91% 
+[2026-05-18 18:29:13.023] [info]  eecho "_-end-17791 228882880:$?"
+[2026-05-18 18:29:13.024] [info]  
+
+[2026-05-18 18:29:13.025] [info]  _-end-1779128882880:0
+%                                                                                
+[2026-05-18 18:29:13.030] [info]  Installing ComfyUIManager requirements from /Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/ComfyUI/manager_requirements.txt
+[2026-05-18 18:29:13.031] [info]  Running uv command: /Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/uv/macos/uv "pip" "install" "-r" "/Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/ComfyUI/manager_requirements.txt" "--index-url" "https://pypi.org/simple/" "--extra-index-url" "https://mirrors.aliyun.com/pypi/simple/" "--extra-index-url" "https://mirrors.cloud.tencent.com/pypi/simple/"
+[2026-05-18 18:29:13.038] [info]  //Users/runner/.co mmfy-test-cache/desktop/ComfyUI.app/Contents/Resources/uv/macos/uv "pip" "install "" "-r" "/Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/C oomfyUI/manager_requirements.txt" "--index-url" "https://pypi.org/simple/" "--ext rra-index-url" "https://mirrors.aliyun.com/pypi/simple/" "--extra-index-url" "htt pps:/
+[2026-05-18 18:29:13.041] [info]  /mirrors.cloud.tencent.com/pypi/simple/"
+
+[2026-05-18 18:29:13.122] [info]  Audited 1 package in 44ms
+
+[2026-05-18 18:29:13.125] [info]  %                                                                                
+[2026-05-18 18:29:13.125] [info]  sjc22-bm212-a225a830-3db3-4078-a72d-17f528a0cb9d-EE224D88AD91% eecho "_-end-17791 228953031:$?"
+
+[2026-05-18 18:29:13.126] [info]  _-end-1779128953031:0
+%                                                                                
+[2026-05-18 18:29:13.128] [info]  Successfully created virtual environment at /Users/runner/Documents/ComfyUI/.venv
+[2026-05-18 18:29:13.576] [info]  Server start
+[2026-05-18 18:29:13.594] [info]  Adding custom node extra_path to config /Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/ComfyUI/custom_nodes
+[2026-05-18 18:29:13.598] [info]  Created extra_model_paths.yaml at /Users/runner/Library/Application Support/ComfyUI/extra_models_config.yaml
+[2026-05-18 18:29:13.599] [error] Log rotation: cannot access log dir /Users/runner/Library/Logs/ComfyUI/comfyui.log
+[2026-05-18 18:29:13.601] [info]  Running command: /Users/runner/Documents/ComfyUI/.venv/bin/python /Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/ComfyUI/main.py --user-directory /Users/runner/Documents/ComfyUI/user --input-directory /Users/runner/Documents/ComfyUI/input --output-directory /Users/runner/Documents/ComfyUI/output --front-end-root /Users/runner/.comfy-test-cache/desktop/ComfyUI.app/Contents/Resources/ComfyUI/web_custom_versions/desktop_app --base-directory /Users/runner/Documents/ComfyUI --database-url sqlite:////Users/runner/Documents/ComfyUI/user/comfyui.db --extra-model-paths-config /Users/runner/Library/Application Support/ComfyUI/extra_models_config.yaml --log-stdout --listen 127.0.0.1 --port 8000 --enable-manager in /Users/runner/Documents/ComfyUI
+[2026-05-18 18:29:41.787] [info]  Python server is ready
+[2026-05-18 18:29:43.586] [error] @todesktop/runtime: alwaysResolve: Promise timed out after 30000ms
+[2026-05-18 18:29:43.742] [info]  @todesktop/runtime: Checking for update
+[2026-05-18 18:29:43.743] [info]  @todesktop/runtime: AutoUpdater: checking-for-update
+[2026-05-18 18:29:43.773] [info]  @todesktop/runtime: Generated new staging user ID: 25bbdd68-0dd9-5af4-8d7e-c4db51e5d58c
+[2026-05-18 18:29:44.187] [info]  @todesktop/runtime: Update for version 0.9.1 is not available (latest version: 0.9.1, downgrade is allowed).
+[2026-05-18 18:29:44.188] [info]  @todesktop/runtime: AutoUpdater: update-not-available {"version":"0.9.1","files":[{"url":"ComfyUI 0.9.1 - Build 260514248i6bhdm-arm64-mac.zip","sha512":"/AGMXyRyFma4KxmASmczGWuuDPNlg0Hab0mhmybNig0ocOq84jixGr+XVfyHwgwhJcGXrWWKbBJ7eg+qG/xe2g==","size":167218403},{"url":"ComfyUI 0.9.1 - Build 260514248i6bhdm-arm64.dmg","sha512":"hUyv2ya1Yz3PV6uVTYI7fJ16ZO4nbnCqRVmu33fzCXpnUOsq0yC5oMR9nwavZaqWc5RbKGX7KQAz/o9bvvgFiQ==","size":173433303}],"path":"ComfyUI 0.9.1 - Build 260514248i6bhdm-arm64-mac.zip","sha512":"/AGMXyRyFma4KxmASmczGWuuDPNlg0Hab0mhmybNig0ocOq84jixGr+XVfyHwgwhJcGXrWWKbBJ7eg+qG/xe2g==","releaseDate":"2026-05-14T00:39:36.265Z"}
+[2026-05-18 18:43:28.019] [info]  Before-quit: Killing Python server
+[2026-05-18 18:43:28.072] [info]  Killing ComfyUI python server.
+[2026-05-18 18:43:28.081] [info]  App window closed.
+[2026-05-18 18:43:28.192] [error] Python process exited with code null and signal SIGTERM
+[2026-05-18 18:43:34.556] [info]  Starting app v0.9.1
