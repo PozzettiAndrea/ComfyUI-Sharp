@@ -12,3 +12,12 @@ einops = "*"
 comfy-aimdo = "*"
 scipy = "*"
 transformers = "*"
+tqdm = "*"
+opencv-python = "*"
+
+# utils3d: used by the vendored MoGe LSMR depth-merge solver
+# (_vendor/worldgen/src/panorama_utils.py + _vendor/moge_panorama.py).
+# Same pin as WorldNav/WorldStereo so behavior is identical.
+[pypi-dependencies.utils3d]
+git = "https://github.com/EasternJournalist/utils3d.git"
+rev = "3fab839f0be9931dac7c8488eb0e1600c236e183"
