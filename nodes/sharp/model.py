@@ -628,7 +628,7 @@ class SlidingPyramidNetwork(nn.Module):
     def forward(self, x: torch.Tensor) -> list[torch.Tensor]:
         batch_size = x.shape[0]
         _dev = x.device
-        log.warning(f"[SPN] start: {self._vram_gb(_dev):.2f} GB, input={list(x.shape)}")
+        log.debug(f"[SPN] start: {self._vram_gb(_dev):.2f} GB, input={list(x.shape)}")
         x0, x1, x2 = self._create_pyramid(x)
 
         if self.use_patch_overlap:
@@ -647,7 +647,7 @@ class SlidingPyramidNetwork(nn.Module):
 
         x_pyramid_patches = torch.cat((x0_patches, x1_patches, x2_patches), dim=0)
         del x0, x1, x0_patches, x1_patches  # Free pyramid/patch tensors (x2_patches still needed)
-        log.warning(f"[SPN] patches: {self._vram_gb(_dev):.2f} GB, x0={x0_tile_size} x1={x1_tile_size} x2={x2_tile_size} total={x_pyramid_patches.shape[0]}")
+        log.debug(f"[SPN] patches: {self._vram_gb(_dev):.2f} GB, x0={x0_tile_size} x1={x1_tile_size} x2={x2_tile_size} total={x_pyramid_patches.shape[0]}")
 
         # Dynamic chunking based on free VRAM (same pattern as ComfyUI's attention_split)
         MAX_PATCH_CHUNK = 4
@@ -677,7 +677,7 @@ class SlidingPyramidNetwork(nn.Module):
             patch_intermediate_features[layer_id][:first_end] = feat
         del first_inter
 
-        log.warning(f"[SPN] after first chunk ({first_end}/{N}): {self._vram_gb(_dev):.2f} GB, chunk_size={chunk_size}")
+        log.debug(f"[SPN] after first chunk ({first_end}/{N}): {self._vram_gb(_dev):.2f} GB, chunk_size={chunk_size}")
 
         for i in range(first_end, N, chunk_size):
             comfy.model_management.throw_exception_if_processing_interrupted()
@@ -691,7 +691,7 @@ class SlidingPyramidNetwork(nn.Module):
         del x_pyramid_patches
         # Release cached CUDA blocks from ViT forward passes
         comfy.model_management.soft_empty_cache()
-        log.warning(f"[SPN] after all chunks + cache clear: {self._vram_gb(_dev):.2f} GB")
+        log.debug(f"[SPN] after all chunks + cache clear: {self._vram_gb(_dev):.2f} GB")
 
         # Merge intermediate features
         x_latent0_encodings = self.patch_encoder.reshape_feature(
@@ -710,7 +710,7 @@ class SlidingPyramidNetwork(nn.Module):
             batch_size=batch_size, padding=padding,
         )
         del patch_intermediate_features, x_latent0_encodings, x_latent1_encodings
-        log.warning(f"[SPN] after merge intermediates: {self._vram_gb(_dev):.2f} GB")
+        log.debug(f"[SPN] after merge intermediates: {self._vram_gb(_dev):.2f} GB")
 
         x0_encodings, x1_encodings, x2_encodings = torch.split(
             x_pyramid_encodings,
@@ -725,9 +725,9 @@ class SlidingPyramidNetwork(nn.Module):
         del x1_encodings
         x2_features = x2_encodings
 
-        log.warning(f"[SPN] after merge all: {self._vram_gb(_dev):.2f} GB")
+        log.debug(f"[SPN] after merge all: {self._vram_gb(_dev):.2f} GB")
         x_lowres_features, _ = self.image_encoder(x2_patches)
-        log.warning(f"[SPN] after image_encoder: {self._vram_gb(_dev):.2f} GB")
+        log.debug(f"[SPN] after image_encoder: {self._vram_gb(_dev):.2f} GB")
 
         x_latent0_features = self.upsample_latent0(x_latent0_features)
         x_latent1_features = self.upsample_latent1(x_latent1_features)
@@ -738,7 +738,7 @@ class SlidingPyramidNetwork(nn.Module):
         x_lowres_features = self.fuse_lowres(
             torch.cat((x2_features, x_lowres_features), dim=1)
         )
-        log.warning(f"[SPN] after upsample: {self._vram_gb(_dev):.2f} GB")
+        log.debug(f"[SPN] after upsample: {self._vram_gb(_dev):.2f} GB")
 
         return [
             x_latent0_features,
@@ -1109,14 +1109,14 @@ class MonodepthWithEncodingAdaptor(nn.Module):
         encoder_output = self.monodepth_predictor.encoder(inputs)
         # Release cached CUDA blocks from SPN's heavy ViT processing
         comfy.model_management.soft_empty_cache()
-        log.warning(f"[Monodepth] after SPN encoder + cache clear: {self._vram_gb(_dev):.2f} GB")
+        log.debug(f"[Monodepth] after SPN encoder + cache clear: {self._vram_gb(_dev):.2f} GB")
 
         num_encoder_features = len(self.monodepth_predictor.encoder.dims_encoder)
         encoder_features = encoder_output[:num_encoder_features]
         intermediate_features = encoder_output[num_encoder_features:]
         del encoder_output
         decoder_features = self.monodepth_predictor.decoder(encoder_features)
-        log.warning(f"[Monodepth] after decoder: {self._vram_gb(_dev):.2f} GB")
+        log.debug(f"[Monodepth] after decoder: {self._vram_gb(_dev):.2f} GB")
         disparity = self.monodepth_predictor.head(decoder_features)
 
         if self.num_monodepth_layers == 2 and self.sorting_monodepth:
@@ -2015,7 +2015,7 @@ class RGBGaussianPredictor(nn.Module):
     ) -> Gaussians3D:
         _dev = image.device
         _vram = lambda: torch.cuda.memory_allocated(_dev) / (1024 ** 3)
-        log.warning(f"[Decode] start: {_vram():.2f} GB")
+        log.debug(f"[Decode] start: {_vram():.2f} GB")
         monodepth_disparity = monodepth_output.disparity
         disparity_factor = disparity_factor[:, None, None, None]
         monodepth = disparity_factor / monodepth_disparity.clamp(min=1e-4, max=1e4)
@@ -2023,16 +2023,16 @@ class RGBGaussianPredictor(nn.Module):
         monodepth, _ = self.depth_alignment(
             monodepth, depth, monodepth_output.decoder_features,
         )
-        log.warning(f"[Decode] after depth_alignment: {_vram():.2f} GB")
+        log.debug(f"[Decode] after depth_alignment: {_vram():.2f} GB")
 
         init_output = self.init_model(image, monodepth)
-        log.warning(f"[Decode] after init_model: {_vram():.2f} GB")
+        log.debug(f"[Decode] after init_model: {_vram():.2f} GB")
         image_features = self.feature_model(
             init_output.feature_input, encodings=monodepth_output.output_features
         )
-        log.warning(f"[Decode] after feature_model: {_vram():.2f} GB")
+        log.debug(f"[Decode] after feature_model: {_vram():.2f} GB")
         delta_values = self.prediction_head(image_features)
-        log.warning(f"[Decode] after prediction_head: {_vram():.2f} GB")
+        log.debug(f"[Decode] after prediction_head: {_vram():.2f} GB")
         return self.gaussian_composer(
             delta=delta_values,
             base_values=init_output.gaussian_base_values,
