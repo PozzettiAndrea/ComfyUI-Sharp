@@ -53,7 +53,8 @@ Note: for PLY inference this model is good on its own, but for the Gaussian View
 
 Model auto-downloads on first run. For offline use, place `sharp_2572gikvuh.pt` in `ComfyUI/models/sharp/`.
 
-
+## Model architecture
+![Workflow](docs/sharp_arch.png)
 
 ## Nodes
 

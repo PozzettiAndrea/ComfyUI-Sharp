@@ -302,6 +302,35 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
             image = image.unsqueeze(0)
         B = image.shape[0]
 
+        # Auto-construct camera defaults when nothing is wired so the four
+        # camera output sockets are never None — downstream consumers
+        # (SharpImageAttrsToPLY, SharpDepthMerge, etc.) would otherwise
+        # crash on `np.asarray(None)`. The wired case (real per-face K
+        # from SharpPanoramaIcosahedronSplit) skips both branches.
+        # image is [B, H, W, 3] (ComfyUI IMAGE convention).
+        _img_H, _img_W = int(image.shape[1]), int(image.shape[2])
+        if extrinsics is None:
+            extrinsics = torch.eye(4, dtype=torch.float32).unsqueeze(0).repeat(B, 1, 1)
+        if intrinsics is None:
+            import math as _math
+            _f_px_default = (_img_W / 36.0) * max(0.1, float(focal_length_mm or 30.0))
+            _K_default = torch.tensor(
+                [
+                    [_f_px_default, 0.0,           _img_W / 2.0],
+                    [0.0,           _f_px_default, _img_H / 2.0],
+                    [0.0,           0.0,           1.0],
+                ],
+                dtype=torch.float32,
+            )
+            intrinsics = _K_default.unsqueeze(0).repeat(B, 1, 1)
+            _fov_deg = 2 * _math.degrees(_math.atan((_img_H / 2.0) / _f_px_default))
+            _p(
+                f"intrinsics not wired → using identity-style K "
+                f"(focal={_f_px_default:.1f}px, image={_img_W}×{_img_H}, "
+                f"~{_fov_deg:.1f}° FOV); pass intrinsics from "
+                f"SharpPanoramaIcosahedronSplit for accurate geometry."
+            )
+
         log.debug(
             f"[SharpPredictGaussianAttrs] processing {B} image(s); "
             f"output_resolution={predictor.output_resolution}, "
@@ -409,6 +438,38 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
         attrs0_batch = torch.cat(first_attrs, dim=0)  # [B, H, W, 14]
         attrs1_batch = torch.cat(second_attrs, dim=0)
         metric_batch = torch.stack(metric_depths, dim=0)  # [B, H, W]
+
+        # Layer-slice sanity check — sample 10 random pixels from batch 0,
+        # show layer-0 vs layer-1 positions. SHARP convention: layer 0 is
+        # the visible/front surface (smaller z = closer to camera), layer 1
+        # is the back/occluded surface (larger z = farther). If the median
+        # z-delta (l1.z - l0.z) is NEGATIVE, the layers are reversed.
+        try:
+            _h = attrs0_batch.shape[1]
+            _w = attrs0_batch.shape[2]
+            _N = 10
+            _g = torch.Generator().manual_seed(0)
+            _ys = torch.randint(0, _h, (_N,), generator=_g).tolist()
+            _xs = torch.randint(0, _w, (_N,), generator=_g).tolist()
+            _p("layer-slice sanity check (10 random pixels, batch[0]):")
+            _p(f"  {'pixel':>12} | {'layer0 (x, y, z)':>32} | {'layer1 (x, y, z)':>32} | dz=l1.z-l0.z")
+            _dzs = []
+            for _i, (_y, _x) in enumerate(zip(_ys, _xs)):
+                _p0 = attrs0_batch[0, _y, _x, 0:3].tolist()   # position x,y,z (NDC)
+                _p1 = attrs1_batch[0, _y, _x, 0:3].tolist()
+                _dz = _p1[2] - _p0[2]
+                _dzs.append(_dz)
+                _p(
+                    f"  ({_y:4d},{_x:4d}) | "
+                    f"({_p0[0]:+8.4f},{_p0[1]:+8.4f},{_p0[2]:+8.4f}) | "
+                    f"({_p1[0]:+8.4f},{_p1[1]:+8.4f},{_p1[2]:+8.4f}) | "
+                    f"{_dz:+8.4f}"
+                )
+            _dz_med = float(sorted(_dzs)[len(_dzs)//2])
+            _verdict = "OK (layer0 in front)" if _dz_med > 0 else "FLIPPED (layer0 is behind layer1 — slicing reversed!)"
+            _p(f"  median dz = {_dz_med:+.4f}  →  {_verdict}")
+        except Exception as _e:
+            _p(f"layer-slice sanity check failed: {_e!r}")
 
         # IMAGE format: [B, H, W, 3] depth broadcast over channels.
         d0_img = d0_batch.unsqueeze(-1).expand(-1, -1, -1, 3).contiguous()

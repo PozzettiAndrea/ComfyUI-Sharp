@@ -146,22 +146,43 @@ class SharpImageAttrsToPLY(io.ComfyNode):
             raise ValueError(f"need at least 14 channels, got {C}")
 
         # ---- normalize camera inputs ------------------------------------
-        ext = extrinsics.detach().float() if isinstance(extrinsics, torch.Tensor) \
-            else torch.as_tensor(np.asarray(extrinsics)).float()
-        intr = intrinsics.detach().float() if isinstance(intrinsics, torch.Tensor) \
-            else torch.as_tensor(np.asarray(intrinsics)).float()
-        if ext.dim() == 2:
-            ext = ext.unsqueeze(0)
-        if intr.dim() == 2:
-            intr = intr.unsqueeze(0)
-        if ext.shape[0] != B:
-            raise ValueError(
-                f"extrinsics batch {ext.shape[0]} != multiband batch {B}"
-            )
-        if intr.shape[0] != B:
-            raise ValueError(
-                f"intrinsics batch {intr.shape[0]} != multiband batch {B}"
-            )
+        # If extrinsics/intrinsics aren't wired (e.g. single-image debug
+        # path), fall back to identity / focal-length-derived K so the
+        # node still produces a usable PLY without forcing the user to
+        # construct a CameraSample upstream.
+        if extrinsics is None:
+            ext = torch.eye(4).float().unsqueeze(0).repeat(B, 1, 1)
+        else:
+            ext = extrinsics.detach().float() if isinstance(extrinsics, torch.Tensor) \
+                else torch.as_tensor(np.asarray(extrinsics, dtype=np.float32)).float()
+            if ext.dim() == 2:
+                ext = ext.unsqueeze(0)
+            if ext.shape[0] != B:
+                raise ValueError(
+                    f"extrinsics batch {ext.shape[0]} != multiband batch {B}"
+                )
+
+        if intrinsics is None:
+            f_px_default = float(focal_length_px) if focal_length_px > 0 \
+                else max(W, H) / 2.0  # ~90° FOV fallback
+            K_default = torch.tensor([
+                [f_px_default, 0.0,          W / 2.0],
+                [0.0,          f_px_default, H / 2.0],
+                [0.0,          0.0,          1.0],
+            ], dtype=torch.float32)
+            intr = K_default.unsqueeze(0).repeat(B, 1, 1)
+            _p(f"intrinsics not wired → using identity-style K (fx=fy={f_px_default:.1f}, "
+               f"cx={W/2:.1f}, cy={H/2:.1f}). Pass `intrinsics` from "
+               f"SharpPredictGaussianAttrs for correct geometry.")
+        else:
+            intr = intrinsics.detach().float() if isinstance(intrinsics, torch.Tensor) \
+                else torch.as_tensor(np.asarray(intrinsics, dtype=np.float32)).float()
+            if intr.dim() == 2:
+                intr = intr.unsqueeze(0)
+            if intr.shape[0] != B:
+                raise ValueError(
+                    f"intrinsics batch {intr.shape[0]} != multiband batch {B}"
+                )
 
         device = samples.device if samples.is_cuda else torch.device(
             "cuda" if torch.cuda.is_available() else "cpu"
