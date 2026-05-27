@@ -14,7 +14,6 @@ scipy = "*"
 transformers = "*"
 tqdm = "*"
 opencv-python = "*"
-open3d = "*"
 pyvista = "*"
 trimesh = "*"
 
