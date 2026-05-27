@@ -366,6 +366,34 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
         l0_mb = _build_multiband(attrs0_batch)
         l1_mb = _build_multiband(attrs1_batch)
 
+        # Rescale intrinsics so their pixel-space matches the emitted depth grid
+        # (H_grid x W_grid), not the input face shape. Without this the
+        # downstream merger normalizes K by the wrong W and ends up with the
+        # wrong effective FOV per face -> visible seams in the merged equirect.
+        if intrinsics is not None:
+            sx = float(W_grid) / float(width)
+            sy = float(H_grid) / float(height)
+            intr = intrinsics.detach().clone().float() if isinstance(intrinsics, torch.Tensor) \
+                else torch.as_tensor(np.asarray(intrinsics)).float().clone()
+            if intr.dim() == 2:
+                intr[0, :] *= sx
+                intr[1, :] *= sy
+                k_dbg = intr
+            elif intr.dim() == 3:
+                intr[:, 0, :] *= sx
+                intr[:, 1, :] *= sy
+                k_dbg = intr[0]
+            else:
+                raise ValueError(f"intrinsics must be (3,3) or (N,3,3), got {tuple(intr.shape)}")
+            intrinsics_out = intr
+            log.info(
+                f"[SharpPredictGaussianAttrs] intrinsics rescaled "
+                f"({width}x{height}) -> ({W_grid}x{H_grid}); sx={sx:.3f} sy={sy:.3f}; "
+                f"face[0] fx={float(k_dbg[0,0]):.2f} cx={float(k_dbg[0,2]):.2f}"
+            )
+        else:
+            intrinsics_out = None
+
         n_valid_l0 = int(d0_batch.gt(0).sum())
         n_valid_l1 = int(d1_batch.gt(0).sum())
         log.info(
@@ -381,7 +409,7 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
 
         return io.NodeOutput(
             d0_img, l0_mb, d1_img, l1_mb,
-            extrinsics, intrinsics,
+            extrinsics, intrinsics_out,
         )
 
 

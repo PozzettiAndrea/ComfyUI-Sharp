@@ -119,7 +119,12 @@ def _build_extrinsics_with_pole_fix(targets: torch.Tensor) -> torch.Tensor:
     `targets`: [N, 3] unit-sphere vectors (look-at targets from world
     origin). World up default = +Z. For vertices within ~2.5° of ±Z,
     swap up to +Y to avoid the cross-product singularity.
+
+    Always computes on CPU regardless of input device — 42 small
+    look-at matrices, the device round-trip dominates any GPU win.
+    Caller .to(device) on the return.
     """
+    targets = targets.detach().cpu().float()
     N = targets.shape[0]
     eye = torch.zeros(3, dtype=torch.float32)
     up_default = torch.tensor([0.0, 0.0, 1.0], dtype=torch.float32)
@@ -134,33 +139,100 @@ def _build_extrinsics_with_pole_fix(targets: torch.Tensor) -> torch.Tensor:
     return out
 
 
-def _make_debug_grid(face_images: torch.Tensor, tile_size: int = 96) -> torch.Tensor:
-    """Tile N face crops into a single [H, W, 3] preview image.
+def _hsv_color_bgr(idx: int, total: int) -> tuple[int, int, int]:
+    """Distinct BGR color per face index via HSV color wheel.
 
-    Output is a roughly-square grid (cols = ceil(sqrt(N)) by default).
-    Each tile is `tile_size`x`tile_size`, downsampled via bilinear. Used
-    to satisfy WorldNavPanoramaSplit's `debug_image` output convention.
+    Mirrors WorldNavPanoramaSplit's `_hsv_color`. cv2 expects BGR.
+    Hue in OpenCV is uint8 in [0, 179]; cycle through with full
+    saturation + value for maximum contrast.
     """
-    N, H, W, _ = face_images.shape
-    cols = int(math.ceil(math.sqrt(N)))
-    rows = int(math.ceil(N / cols))
+    import cv2
+    hue = int(round(180.0 * idx / max(total, 1))) % 180
+    hsv = np.array([[[hue, 255, 255]]], dtype=np.uint8)
+    bgr = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)[0, 0]
+    return int(bgr[0]), int(bgr[1]), int(bgr[2])
 
-    # Bilinear-resize each face to (tile_size, tile_size).
-    nchw = face_images.permute(0, 3, 1, 2)  # [N, 3, H, W]
-    tiled = F.interpolate(
-        nchw, size=(tile_size, tile_size), mode="bilinear", align_corners=False,
-    )  # [N, 3, T, T]
-    tiled = tiled.permute(0, 2, 3, 1)  # [N, T, T, 3]
 
-    grid = torch.zeros(rows * tile_size, cols * tile_size, 3, dtype=face_images.dtype)
+def _make_debug_overlay(
+    panorama: np.ndarray,
+    extrinsics: torch.Tensor,
+) -> np.ndarray:
+    """Draw each face's frustum edges on the panorama.
+
+    For each face: sample N=64 points along each of the 4 edges of the
+    90° camera image plane in camera space (corners at z=1: (±1, ±1, 1)),
+    transform to world via R_c2w = R_w2c^T, normalize to the unit
+    sphere, convert to (yaw, pitch), then to ERP pixel coords. Draw a
+    polyline per edge with a distinct HSV-wheel hue. Handle azimuth
+    wraparound by splitting any edge that crosses the ±π seam into
+    separate segments.
+
+    Sharp's coordinate convention (matches `_sample_perspective_from_equirect`):
+        world up = +Z
+        yaw    = atan2(ry, rx)         around Z
+        pitch  = asin(rz)              from XY plane
+        u_erp  = ((yaw / π) * 0.5 + 0.5) * W
+        v_erp  = (0.5 - pitch / π) * H
+
+    Args:
+        panorama: (H, W, 3) uint8 RGB.
+        extrinsics: (N, 4, 4) world-to-camera, CPU tensor.
+
+    Returns:
+        (H, W, 3) uint8 RGB with N face boundaries drawn on it.
+    """
+    import cv2
+    H, W = panorama.shape[:2]
+    debug_img = panorama.copy()
+    N = int(extrinsics.shape[0])
+    ext_np = extrinsics.detach().cpu().numpy().astype(np.float32)
+
+    S = 64
+    edge_corners = [
+        ([-1.0, -1.0], [+1.0, -1.0]),  # top
+        ([+1.0, -1.0], [+1.0, +1.0]),  # right
+        ([+1.0, +1.0], [-1.0, +1.0]),  # bottom
+        ([-1.0, +1.0], [-1.0, -1.0]),  # left
+    ]
+
     for i in range(N):
-        r, c = divmod(i, cols)
-        grid[
-            r * tile_size:(r + 1) * tile_size,
-            c * tile_size:(c + 1) * tile_size,
-            :,
-        ] = tiled[i]
-    return grid
+        R_w2c = ext_np[i, :3, :3]
+        R_c2w = R_w2c.T  # camera -> world (orthonormal rotation)
+
+        color = _hsv_color_bgr(i, N)
+        for (p0, p1) in edge_corners:
+            t = np.linspace(0.0, 1.0, S, dtype=np.float32)
+            xs = p0[0] + t * (p1[0] - p0[0])
+            ys = p0[1] + t * (p1[1] - p0[1])
+            cam_dirs = np.stack(
+                [xs, ys, np.ones_like(xs)], axis=-1,
+            )  # (S, 3)
+            # row * R_c2w^T = world-direction row (same as cam_col → R_c2w @ cam_col)
+            world_dirs = cam_dirs @ R_c2w.T
+            world_dirs /= np.maximum(
+                np.linalg.norm(world_dirs, axis=-1, keepdims=True), 1e-12,
+            )
+            # Sharp convention: world up = +Z, yaw around Z, pitch from XY.
+            yaw = np.arctan2(world_dirs[:, 1], world_dirs[:, 0])         # [-π, π]
+            pitch = np.arcsin(np.clip(world_dirs[:, 2], -1.0, 1.0))       # [-π/2, π/2]
+            u = ((yaw / np.pi) * 0.5 + 0.5) * W
+            v = (0.5 - pitch / np.pi) * H
+            pts = np.stack([u, v], axis=-1).astype(np.float32)
+
+            # Split at azimuth wraparound: any consecutive pair with
+            # |Δu| > W/2 wrapped the ±π seam.
+            du = np.abs(np.diff(pts[:, 0]))
+            breaks = np.where(du > W * 0.5)[0]
+            segments = np.split(pts, breaks + 1) if len(breaks) else [pts]
+            for seg in segments:
+                if len(seg) < 2:
+                    continue
+                seg_int = seg.astype(np.int32).reshape(-1, 1, 2)
+                cv2.polylines(
+                    debug_img, [seg_int], isClosed=False,
+                    color=color, thickness=2, lineType=cv2.LINE_AA,
+                )
+    return debug_img
 
 
 class SharpPanoramaIcosahedronSplit(io.ComfyNode):
@@ -272,9 +344,17 @@ class SharpPanoramaIcosahedronSplit(io.ComfyNode):
         intrinsics_t = K.unsqueeze(0).expand(N, -1, -1).contiguous()  # [N, 3, 3]
         extrinsics_t = extrinsics.contiguous()  # [N, 4, 4]
 
-        # Debug grid — small thumbnails so the preview node renders fast.
-        debug_grid = _make_debug_grid(face_images_t.cpu(), tile_size=96)
-        debug_image = debug_grid.unsqueeze(0)  # [1, H, W, 3]
+        # Debug overlay: panorama with each face's frustum edges drawn on it.
+        # Matches WorldNavPanoramaSplit's debug_image convention. uint8
+        # round-trip for cv2.polylines, then back to float [0,1] for the
+        # IMAGE socket.
+        pano_uint8 = (
+            pano.detach().cpu().clamp(0.0, 1.0).mul(255.0).to(torch.uint8).numpy()
+        )
+        debug_np = _make_debug_overlay(pano_uint8, extrinsics)  # (H, W, 3) uint8
+        debug_image = (
+            torch.from_numpy(debug_np.astype(np.float32) / 255.0).unsqueeze(0)
+        )  # [1, H, W, 3]
 
         log.info(
             f"[SharpPanoramaIcosahedronSplit] {N} faces "

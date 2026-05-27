@@ -14,6 +14,9 @@ scipy = "*"
 transformers = "*"
 tqdm = "*"
 opencv-python = "*"
+open3d = "*"
+pyvista = "*"
+trimesh = "*"
 
 # utils3d: used by the vendored MoGe LSMR depth-merge solver
 # (_vendor/worldgen/src/panorama_utils.py + _vendor/moge_panorama.py).

@@ -1,3 +1,10 @@
+# PEP 563 lazy annotations — without this, the o3d.geometry.TriangleMesh /
+# trimesh.PointCloud return-type annotations further down are evaluated at
+# module import, which crashes when those optional libs aren't installed
+# (o3d / trimesh = None below). With it, annotations are strings, only
+# evaluated by typing tools that explicitly resolve them.
+from __future__ import annotations
+
 from collections import defaultdict
 from typing import Optional, Literal, List
 

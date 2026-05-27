@@ -146,6 +146,32 @@ class SharpDepthMerge(io.ComfyNode):
         extr_list = [ex[i].astype(np.float32) for i in range(N)]
         intr_list = [intr[i].astype(np.float32) for i in range(N)]
 
+        # --- Normalize intrinsics for the MoGe LSMR solver ---
+        # Sharp's pipeline (panorama_cube_split.py, panorama_icosahedron_split.py,
+        # SharpPredict, SamplePanorama) emits PIXEL-space K: fx/fy in pixel
+        # units, cx/cy in pixel coords. That's the OpenCV/pytorch3d/gsplat
+        # convention.
+        #
+        # The vendored MoGe LSMR solver (panorama_utils.py:207-210) expects
+        # NORMALIZED K (fx/fy as image-fraction, cx/cy ≈ 0.5) — it
+        # multiplies by (w, h) internally to recover pixel coords. Feeding
+        # pixel-space K → solver overshoots by ~W and lands every ray
+        # outside the frustum → zero valid pixels → output = initial 1.0.
+        #
+        # Convert at the LSMR boundary so split nodes can stay in pixel-K
+        # land (which keeps SharpPredict / SamplePanorama wiring unchanged).
+        intr_norm_list = []
+        for k_pix in intr_list:
+            k = k_pix.copy()
+            k[0, :] /= float(fw)   # row 0: fx, skew, cx by image width
+            k[1, :] /= float(fh)   # row 1: skew, fy, cy by image height
+            intr_norm_list.append(k.astype(np.float32))
+        _p(f"K normalized for LSMR: face[0] PIXEL "
+           f"[fx={intr_list[0][0,0]:.2f} cx={intr_list[0][0,2]:.2f}] -> "
+           f"NORMALIZED [fx={intr_norm_list[0][0,0]:.4f} "
+           f"cx={intr_norm_list[0][0,2]:.4f}]  "
+           f"(image {fw}x{fh})")
+
         # --- valid_masks: (N, h, w, C) or None → list of (h, w) bool ---
         if face_valid_masks is None:
             pred_masks = [np.ones((fh, fw), dtype=bool) for _ in range(N)]
@@ -161,6 +187,47 @@ class SharpDepthMerge(io.ComfyNode):
                     f"doesn't match face_depths ({N}, {fh}, {fw})"
                 )
             pred_masks = [(v[i] > 0.5).astype(bool) for i in range(N)]
+
+        # --- Input depth stats (per-face + overall) ---
+        # Helps diagnose "all-white output" symptoms: if input depths are
+        # all very large (or very small), the equirect output is uniform.
+        # Compare INPUT stats vs OUTPUT stats below to see whether LSMR
+        # actually compressed/expanded the range or just passed it through.
+        all_in = np.concatenate([d.ravel() for d in distance_maps])
+        all_in_finite = all_in[np.isfinite(all_in) & (all_in > 0)]
+        if all_in_finite.size > 0:
+            in_min = float(all_in_finite.min())
+            in_med = float(np.median(all_in_finite))
+            in_max = float(all_in_finite.max())
+            in_p1 = float(np.quantile(all_in_finite, 0.01))
+            in_p99 = float(np.quantile(all_in_finite, 0.99))
+        else:
+            in_min = in_med = in_max = in_p1 = in_p99 = 0.0
+        _p(f"INPUT face_depths: {N} faces @ {fh}x{fw}, "
+           f"all-faces stats over valid+finite pixels: "
+           f"min={in_min:.3f} p1={in_p1:.3f} median={in_med:.3f} "
+           f"p99={in_p99:.3f} max={in_max:.3f}")
+        # Per-face quick scan — flag any face with wildly different median
+        # (likely the source of seams).
+        per_face_medians = []
+        for i, d_i in enumerate(distance_maps):
+            mask_i = pred_masks[i] & np.isfinite(d_i) & (d_i > 0)
+            if mask_i.any():
+                m = float(np.median(d_i[mask_i]))
+                per_face_medians.append(m)
+                if N <= 50:  # only spam per-face logs at moderate N
+                    _p(f"  face {i:2d}: median={m:.3f} valid={int(mask_i.sum())}/{mask_i.size}")
+            else:
+                per_face_medians.append(0.0)
+                _p(f"  face {i:2d}: NO VALID PIXELS (entire face masked out)")
+        pfm = np.array(per_face_medians, dtype=np.float32)
+        pfm_finite = pfm[pfm > 0]
+        if pfm_finite.size > 0:
+            _p(f"per-face medians: min={float(pfm_finite.min()):.3f} "
+               f"median={float(np.median(pfm_finite)):.3f} "
+               f"max={float(pfm_finite.max()):.3f} "
+               f"(spread = {float(pfm_finite.max() / max(pfm_finite.min(), 1e-6)):.2f}x — "
+               f"large spread = monocular scale ambiguity → seams expected)")
 
         _p(f"merging {N} faces @ {fh}x{fw} -> equirect {out_height}x{out_width} "
            f"(use_gpu={use_gpu})")
@@ -193,7 +260,7 @@ class SharpDepthMerge(io.ComfyNode):
             depth_np, mask_np = merge_panorama_depth_gpu(
                 out_w, out_h,
                 distance_maps, pred_masks,
-                extr_list, intr_list,
+                extr_list, intr_norm_list,
             )
         elif resolved == "vcycle":
             # V-cycle: solve the recursive pyramid up to 1920x960 (the
@@ -203,7 +270,7 @@ class SharpDepthMerge(io.ComfyNode):
             depth_low, mask_low = merge_panorama_depth_gpu(
                 1920, 960,
                 distance_maps, pred_masks,
-                extr_list, intr_list,
+                extr_list, intr_norm_list,
             )
             if (out_w, out_h) == (1920, 960):
                 depth_np, mask_np = depth_low, mask_low
@@ -225,7 +292,7 @@ class SharpDepthMerge(io.ComfyNode):
             depth_np, mask_np = merge_panorama_depth(
                 out_w, out_h,
                 distance_maps, pred_masks,
-                extr_list, intr_list,
+                extr_list, intr_norm_list,
                 pbar=pbar,
             )
         else:
@@ -250,9 +317,31 @@ class SharpDepthMerge(io.ComfyNode):
         depth_np = smooth_south_pole_depth(depth_np, smooth_height_ratio=0.05)
         # Belt-and-braces: trap any residual non-finite values that escaped.
         depth_np = np.nan_to_num(depth_np, nan=0.0, posinf=0.0, neginf=0.0)
-        _p(f"merged depth: shape {depth_np.shape}, min={float(depth_np.min()):.3f}, "
-           f"median={float(np.median(depth_np)):.3f}, max={float(depth_np.max()):.3f}; "
-           f"valid pixels: {int(mask_np.sum())} / {mask_np.size}")
+        out_min = float(depth_np.min())
+        out_med = float(np.median(depth_np))
+        out_mean = float(np.mean(depth_np))
+        out_max = float(depth_np.max())
+        out_p1 = float(np.quantile(depth_np, 0.01))
+        out_p99 = float(np.quantile(depth_np, 0.99))
+        _p(f"OUTPUT equirect depth: shape {depth_np.shape}, "
+           f"min={out_min:.3f} p1={out_p1:.3f} median={out_med:.3f} "
+           f"mean={out_mean:.3f} p99={out_p99:.3f} max={out_max:.3f}; "
+           f"valid: {int(mask_np.sum())}/{mask_np.size} "
+           f"({100*int(mask_np.sum())/mask_np.size:.1f}%)")
+        # Side-by-side INPUT vs OUTPUT comparison.
+        in_med_val = in_med if 'in_med' in dir() else 0.0
+        _p(f"INPUT median={in_med_val:.3f}  →  OUTPUT median={out_med:.3f}  "
+           f"(ratio {out_med/max(in_med_val, 1e-6):.3f})")
+        # "All-white image" hint — ComfyUI's IMAGE socket clips values
+        # to [0, 1] on preview. If your depths are in meters (typically
+        # 0.5 - 50), the preview will be saturated white. Need to
+        # normalize for viewing: divide by p99 / max, or apply a colormap.
+        if out_max > 1.5:
+            _p(f"NOTE: output depth max={out_max:.3f} > 1.0 — ComfyUI's "
+               f"IMAGE preview clips to [0,1] so will look WHITE. Wire "
+               f"through a depth-viz / normalize node before previewing "
+               f"(or divide by ~{out_p99:.2f} = 99th-percentile for an "
+               f"auto-normalized view).")
 
         # IMAGE convention: (B, H, W, C). Broadcast depth across 3 channels so
         # it composes with regular depth-viz nodes.
