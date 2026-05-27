@@ -267,11 +267,12 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
             image = image.unsqueeze(0)
         B = image.shape[0]
 
-        log.info(
+        log.debug(
             f"[SharpPredictGaussianAttrs] processing {B} image(s); "
             f"output_resolution={predictor.output_resolution}, "
             f"num_layers=2 (SHARP convention)"
         )
+        t_start = time.time()
 
         # Process per-image (matches existing SharpPredict structure).
         first_depths = []
@@ -299,11 +300,11 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
 
             # Cache logic — same as SharpPredict.
             if _encode_cache["image_hash"] == image_hash:
-                log.info(f"  [{b}] cache hit")
+                log.debug(f"  [{b}] cache hit")
                 monodepth_output = _monodepth_to(_encode_cache["monodepth_output"], device)
                 image_resized_pt = _encode_cache["image_resized"].to(device)
             else:
-                log.info(f"  [{b}] encoding...")
+                log.debug(f"  [{b}] encoding...")
                 _encode_cache["image_hash"] = None
                 image_pt = (
                     torch.from_numpy(img_np.copy()).float().to(device).permute(2, 0, 1) / 255.0
@@ -315,7 +316,7 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
                 )
                 t0 = time.time()
                 monodepth_output, _ = predictor.encode(image_resized_pt)
-                log.info(f"  [{b}] encode time: {time.time() - t0:.2f}s")
+                log.debug(f"  [{b}] encode time: {time.time() - t0:.2f}s")
                 _encode_cache["image_hash"] = image_hash
                 _encode_cache["monodepth_output"] = _monodepth_to(monodepth_output, "cpu")
                 _encode_cache["image_resized"] = image_resized_pt.cpu()
@@ -335,7 +336,7 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
             disparity_factor = torch.tensor([f_px / width]).float().to(device)
             t1 = time.time()
             gaussians_ndc = predictor.decode(monodepth_output, image_resized_pt, disparity_factor)
-            log.info(f"  [{b}] decode time: {time.time() - t1:.2f}s")
+            log.debug(f"  [{b}] decode time: {time.time() - t1:.2f}s")
 
             # Un-flatten to per-pixel grid + split layers.
             l0, l1 = _split_layers_from_flat_gaussians(
@@ -386,25 +387,22 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
             else:
                 raise ValueError(f"intrinsics must be (3,3) or (N,3,3), got {tuple(intr.shape)}")
             intrinsics_out = intr
-            log.info(
-                f"[SharpPredictGaussianAttrs] intrinsics rescaled "
-                f"({width}x{height}) -> ({W_grid}x{H_grid}); sx={sx:.3f} sy={sy:.3f}; "
-                f"face[0] fx={float(k_dbg[0,0]):.2f} cx={float(k_dbg[0,2]):.2f}"
-            )
+            k_fx_dbg = float(k_dbg[0, 0])
         else:
             intrinsics_out = None
+            k_fx_dbg = None
 
-        n_valid_l0 = int(d0_batch.gt(0).sum())
-        n_valid_l1 = int(d1_batch.gt(0).sum())
+        n_gaussians_total = B * num_layers * H_grid * W_grid
+        elapsed = time.time() - t_start
+        d0_med = float(d0_batch.median())
+        d1_med = float(d1_batch.median())
+        k_str = f", K fx→{k_fx_dbg:.1f}" if k_fx_dbg is not None else ""
         log.info(
-            f"[SharpPredictGaussianAttrs] done. "
-            f"shape: [{B}, {H_grid}, {W_grid}], "
-            f"layer0 depth: min={float(d0_batch.min()):.3f} "
-            f"median={float(d0_batch.median()):.3f} "
-            f"max={float(d0_batch.max()):.3f} (valid={n_valid_l0}), "
-            f"layer1 depth: min={float(d1_batch.min()):.3f} "
-            f"median={float(d1_batch.median()):.3f} "
-            f"max={float(d1_batch.max()):.3f} (valid={n_valid_l1})"
+            f"[SharpPredictGaussianAttrs] {B} face(s) → "
+            f"{n_gaussians_total/1e6:.2f}M gaussians "
+            f"({B}×{num_layers}×{H_grid}²); "
+            f"layer0/1 depth median={d0_med:.2f}m/{d1_med:.2f}m"
+            f"{k_str}; {elapsed:.1f}s"
         )
 
         return io.NodeOutput(

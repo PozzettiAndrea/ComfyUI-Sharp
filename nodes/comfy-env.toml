@@ -1,5 +1,6 @@
 [dependencies]
 av = "*"
+open3d = "*"
 
 [pypi-dependencies]
 plyfile = "*"
