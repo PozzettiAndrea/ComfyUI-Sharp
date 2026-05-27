@@ -343,6 +343,19 @@ class SharpDepthMerge(io.ComfyNode):
                f"(or divide by ~{out_p99:.2f} = 99th-percentile for an "
                f"auto-normalized view).")
 
+        # Roll by W/2 — restores the user's input-pano convention.
+        # MoGe's `spherical_uv_to_directions` (used by the vendored merge)
+        # puts east at u=0 and west at u=W/2 (center). Standard photo /
+        # SharpPanoramaIcosahedronSplit conventions put east at u=W/2
+        # (center) and west at the edges. These differ by a 180° yaw
+        # rotation = circular column shift of W/2. (NOT a horizontal
+        # flip: N/S poles agree between the two conventions; only E/W
+        # are swapped, which is a roll, not a mirror.)
+        _W = depth_np.shape[1]
+        _shift = _W // 2
+        depth_np = np.ascontiguousarray(np.roll(depth_np, _shift, axis=1))
+        mask_np = np.ascontiguousarray(np.roll(mask_np, _shift, axis=1))
+
         # IMAGE convention: (B, H, W, C). Broadcast depth across 3 channels so
         # it composes with regular depth-viz nodes.
         depth_img = (

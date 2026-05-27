@@ -230,6 +230,18 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
                     tooltip="Pass-through. If provided, overrides "
                             "focal_length_mm. Re-emitted on the intrinsics "
                             "output."),
+                io.Mask.Input(
+                    "mask", optional=True,
+                    tooltip="Optional per-pixel mask. Pixels with mask < 0.5 "
+                            "have their gaussian opacity set to 0 in both "
+                            "layer attrs outputs — effectively dropping "
+                            "those gaussians from any downstream renderer / "
+                            "PLY exporter that respects opacity. Shape "
+                            "[B, H, W] or [H, W]; auto-resized to the "
+                            "768² gaussian grid via nearest interpolation. "
+                            "The metric_depth output is left unmasked "
+                            "(useful for downstream LSMR-merge regardless "
+                            "of the gaussian filter)."),
             ],
             outputs=[
                 io.Image.Output(
@@ -289,6 +301,7 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
         focal_length_mm: float = 30.0,
         extrinsics: torch.Tensor | None = None,
         intrinsics: torch.Tensor | None = None,
+        mask: torch.Tensor | None = None,
     ):
         global _encode_cache
         import comfy.model_management
@@ -395,8 +408,12 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
                 intr_b = intrinsics[b] if intrinsics.dim() == 3 else intrinsics
                 f_px = float(intr_b[0, 0]) * (internal_shape[0] / width)
             else:
-                # 30mm 35mm-equiv focal length: f_px = (width / 36) * fl_mm
-                f_px = (width / 36.0) * max(0.1, float(focal_length_mm or 30.0))
+                # Match SharpPredict's `convert_focallength` formula (35mm
+                # diagonal: f_px = f_mm * sqrt(W² + H²) / sqrt(36² + 24²))
+                # so the gaussians here match what SharpPredict would
+                # produce for the same image input.
+                from .utils.image import convert_focallength as _cfl
+                f_px = float(_cfl(width, height, max(0.1, float(focal_length_mm or 30.0))))
 
             disparity_factor = torch.tensor([f_px / width]).float().to(device)
 
@@ -440,10 +457,12 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
         metric_batch = torch.stack(metric_depths, dim=0)  # [B, H, W]
 
         # Layer-slice sanity check — sample 10 random pixels from batch 0,
-        # show layer-0 vs layer-1 positions. SHARP convention: layer 0 is
-        # the visible/front surface (smaller z = closer to camera), layer 1
-        # is the back/occluded surface (larger z = farther). If the median
-        # z-delta (l1.z - l0.z) is NEGATIVE, the layers are reversed.
+        # show layer-0 vs layer-1 positions AND colors. SHARP's monodepth
+        # output is sorted post-head (`model.py:1122-1125` — first layer =
+        # max disparity = nearest), but the gaussian decoder adds an
+        # unconstrained delta_z + delta_color per layer, so per-pixel
+        # ordering and color identity are NOT guaranteed post-decode.
+        # This diagnostic shows how much the two layers actually differ.
         try:
             _h = attrs0_batch.shape[1]
             _w = attrs0_batch.shape[2]
@@ -452,24 +471,69 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
             _ys = torch.randint(0, _h, (_N,), generator=_g).tolist()
             _xs = torch.randint(0, _w, (_N,), generator=_g).tolist()
             _p("layer-slice sanity check (10 random pixels, batch[0]):")
-            _p(f"  {'pixel':>12} | {'layer0 (x, y, z)':>32} | {'layer1 (x, y, z)':>32} | dz=l1.z-l0.z")
+            _p(
+                f"  {'pixel':>12} | "
+                f"{'layer0 (x, y, z)':>32} | {'layer1 (x, y, z)':>32} | "
+                f"{'dz':>8} | "
+                f"{'layer0 rgb':>22} | {'layer1 rgb':>22} | {'drgb (l1-l0)':>22}"
+            )
             _dzs = []
-            for _i, (_y, _x) in enumerate(zip(_ys, _xs)):
-                _p0 = attrs0_batch[0, _y, _x, 0:3].tolist()   # position x,y,z (NDC)
+            _drgbs_l1 = []   # ‖rgb1 - rgb0‖₁ per sampled pixel
+            for _y, _x in zip(_ys, _xs):
+                _p0 = attrs0_batch[0, _y, _x, 0:3].tolist()    # position xyz (NDC)
                 _p1 = attrs1_batch[0, _y, _x, 0:3].tolist()
+                _c0 = attrs0_batch[0, _y, _x, 10:13].tolist()  # color rgb (post-activation)
+                _c1 = attrs1_batch[0, _y, _x, 10:13].tolist()
                 _dz = _p1[2] - _p0[2]
+                _dc = [_c1[0] - _c0[0], _c1[1] - _c0[1], _c1[2] - _c0[2]]
                 _dzs.append(_dz)
+                _drgbs_l1.append(abs(_dc[0]) + abs(_dc[1]) + abs(_dc[2]))
                 _p(
                     f"  ({_y:4d},{_x:4d}) | "
                     f"({_p0[0]:+8.4f},{_p0[1]:+8.4f},{_p0[2]:+8.4f}) | "
                     f"({_p1[0]:+8.4f},{_p1[1]:+8.4f},{_p1[2]:+8.4f}) | "
-                    f"{_dz:+8.4f}"
+                    f"{_dz:+8.4f} | "
+                    f"({_c0[0]:+6.3f},{_c0[1]:+6.3f},{_c0[2]:+6.3f}) | "
+                    f"({_c1[0]:+6.3f},{_c1[1]:+6.3f},{_c1[2]:+6.3f}) | "
+                    f"({_dc[0]:+6.3f},{_dc[1]:+6.3f},{_dc[2]:+6.3f})"
                 )
             _dz_med = float(sorted(_dzs)[len(_dzs)//2])
-            _verdict = "OK (layer0 in front)" if _dz_med > 0 else "FLIPPED (layer0 is behind layer1 — slicing reversed!)"
-            _p(f"  median dz = {_dz_med:+.4f}  →  {_verdict}")
+            _drgb_med = float(sorted(_drgbs_l1)[len(_drgbs_l1)//2])
+            _verdict_z = "layer0 in front" if _dz_med > 0 else "layer1 in front (decoder swapped at the sampled pixels)"
+            _p(f"  median dz = {_dz_med:+.4f}  →  {_verdict_z}")
+            _p(f"  median ‖rgb1 - rgb0‖₁ = {_drgb_med:+.4f}  (sum of abs RGB deltas; 0 = layers share color)")
         except Exception as _e:
             _p(f"layer-slice sanity check failed: {_e!r}")
+
+        # ---- Optional mask: zero opacity on both layers where mask < 0.5
+        if mask is not None:
+            _m = mask if isinstance(mask, torch.Tensor) \
+                else torch.as_tensor(np.asarray(mask)).float()
+            _m = _m.float()
+            if _m.dim() == 2:
+                _m = _m.unsqueeze(0)
+            # ComfyUI MASK is [B, H, W]; resize to gaussian grid (H_grid, W_grid)
+            # via nearest so we keep crisp binary edges.
+            _m_grid = F.interpolate(
+                _m.unsqueeze(1), size=(H_grid, W_grid), mode="nearest",
+            )[:, 0]                                                    # [B, H_grid, W_grid]
+            # Broadcast batch dim if the mask was [1, …] but B > 1.
+            if _m_grid.shape[0] == 1 and B > 1:
+                _m_grid = _m_grid.expand(B, -1, -1)
+            elif _m_grid.shape[0] != B:
+                raise ValueError(
+                    f"mask batch {_m_grid.shape[0]} doesn't match image batch {B}"
+                )
+            _keep = (_m_grid > 0.5).float()
+            # Channel 13 is opacity (see GAUSS_ATTR_CHANNEL_NAMES).
+            attrs0_batch[..., 13] = attrs0_batch[..., 13] * _keep
+            attrs1_batch[..., 13] = attrs1_batch[..., 13] * _keep
+            _kept_pct = 100.0 * float(_keep.mean().item())
+            _p(
+                f"mask applied: keeping {_kept_pct:.1f}% of pixels "
+                f"({int(_keep.sum().item())}/{B * H_grid * W_grid} per layer); "
+                f"masked-out pixels have opacity=0 in both layer attrs."
+            )
 
         # IMAGE format: [B, H, W, 3] depth broadcast over channels.
         d0_img = d0_batch.unsqueeze(-1).expand(-1, -1, -1, 3).contiguous()

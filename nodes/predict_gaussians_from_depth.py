@@ -1,11 +1,17 @@
 """SharpPredictGaussiansFromMetricDepth — image + external depth → PLY paths.
 
-Like SharpPredict, but feeds an externally-provided metric depth into
-`predictor.decode(..., depth=...)`. The decoder's depth_alignment module
-(`model.py:2023`) blends the raw monodepth with the external depth before
-init_model initializes gaussian base values, so the resulting gaussians
-share a consistent geometric scaffold across multiple views — fixes the
-per-face seams caused by per-view monocular scale ambiguity.
+Like SharpPredict, but **directly overrides SHARP's monodepth** with an
+externally-provided depth (e.g. from SharpDepthMerge after LSMR-merging
+per-face SharpPredictMetricDepth outputs). The learned `depth_alignment`
+scale-map UNet is BYPASSED entirely — the external depth feeds straight
+into `init_model` as the geometric scaffold, replacing both layer 0
+(front) and layer 1 (back) of SHARP's own monodepth.
+
+This is off-label vs the paper's recommended inference (which uses
+`depth=None`, no external supervision) — but it's the cleanest way to
+inject a multi-view-consistent depth into SHARP's gaussian decoder for
+panorama-merging workflows where SHARP's per-face monodepth has scale
+ambiguity that the depth_alignment module wasn't trained to handle.
 
 Output convention matches SharpPredict:
   - Single image  → single PLY file at OUTPUT_DIR/{prefix}_{ts}.ply
@@ -80,10 +86,19 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                 io.Image.Input(
                     "metric_depth",
                     tooltip="External per-face metric depth (any resolution; "
-                            "auto-resized to SHARP's internal 1536² before "
-                            "alignment). Typically: SharpPredictMetricDepth "
-                            "→ SharpDepthMerge → SharpPanoramaIcosahedronSplit "
-                            "(depth as IMAGE)."),
+                            "auto-resized to SHARP's internal 1536²). This "
+                            "depth REPLACES SHARP's own monodepth for BOTH "
+                            "layers (no learned scale-map alignment) — the "
+                            "gaussian decoder's `init_model` sees your depth "
+                            "directly as the scaffold for layer-0 AND layer-1 "
+                            "base values. Layer 1 gaussians end up on the "
+                            "same surface as layer 0 (no sky-backplate "
+                            "hallucination), the per-layer prediction head's "
+                            "deltas can still drift them sub-pixel in xy + "
+                            "color so layer 1 serves as a view-dependent "
+                            "appearance variation. Typically: "
+                            "SharpPredictMetricDepth → SharpDepthMerge → "
+                            "SharpPanoramaIcosahedronSplit (depth as IMAGE)."),
                 io.Float.Input(
                     "focal_length_mm", default=30.0, min=0.0, max=500.0,
                     step=0.1, optional=True,
@@ -104,6 +119,28 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                         "you'll voxel-dedup downstream anyway, or when the "
                         "scene has minimal occlusion (open outdoor)."
                     )),
+                io.Combo.Input(
+                    "snap_to_external_depth",
+                    options=["z_only", "xyz_full", "none"],
+                    default="z_only",
+                    tooltip=(
+                        "Force gaussian positions to exactly match the external "
+                        "depth in NDC space (applied after gaussian_composer, "
+                        "before unprojection).\n\n"
+                        "  z_only (recommended): scale each gaussian by "
+                        "target_z/current_z. The NDC xy ray is preserved (so "
+                        "the prediction head's sub-pixel xy drift survives — "
+                        "layer 1 still varies in appearance from layer 0), but "
+                        "depth is forced to match external.\n\n"
+                        "  xyz_full: reset xy to the pixel-grid identity AND "
+                        "set depth to external. Every gaussian sits exactly "
+                        "on the back-projected ray of its source pixel at the "
+                        "external depth — no learned drift at all. Most rigid; "
+                        "layer 0 and layer 1 collapse to identical positions.\n\n"
+                        "  none: skip the snap entirely — trust the gaussian "
+                        "decoder's predicted z (the direct-monodepth-override "
+                        "behavior is in effect but not enforced)."
+                    )),
                 io.Custom("EXTRINSICS").Input(
                     "extrinsics", optional=True,
                     tooltip="Per-face extrinsics from "
@@ -116,6 +153,21 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                             "ORIGINAL face image resolution, not the merged "
                             "depth resolution). If absent, focal_length_mm "
                             "is used."),
+                io.Float.Input(
+                    "edge_crop", default=0.0, min=0.0, max=0.5, step=0.01,
+                    optional=True,
+                    tooltip="Fraction of each edge to drop before saving the "
+                            "PLY (per side). 0.0 = no crop (default), 0.1 = "
+                            "drop the outer 10%% of width AND height (keep the "
+                            "central 80%% × 80%% gaussians). Useful to discard "
+                            "edge gaussians that SHARP often hallucinates "
+                            "at silhouettes / frame edges, especially when "
+                            "stitching panorama faces — adjacent faces "
+                            "overlap, so cropping a few percent off each "
+                            "removes the worst-quality region without losing "
+                            "scene coverage. Applied per-layer to the H×W "
+                            "pixel grid so both layer 0 and layer 1 keep "
+                            "the same central region."),
             ],
             outputs=[
                 io.String.Output(
@@ -144,6 +196,8 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
         focal_length_mm: float = 30.0,
         output_prefix: str = "sharp_aligned",
         save_background_layer: bool = True,
+        snap_to_external_depth: str = "z_only",
+        edge_crop: float = 0.0,
         extrinsics: torch.Tensor | None = None,
         intrinsics: torch.Tensor | None = None,
     ):
@@ -239,10 +293,14 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                 intr_b = intrinsics[b] if intrinsics.dim() == 3 else intrinsics
                 f_px = float(intr_b[0, 0]) * (internal_shape[0] / width)
             else:
-                f_px = (width / 36.0) * max(0.1, float(focal_length_mm or 30.0))
+                # Match SharpPredict's `convert_focallength` formula so the
+                # gaussian outputs are consistent across all Sharp predict
+                # nodes (was previously off by ~1.18× on square inputs).
+                from .utils.image import convert_focallength as _cfl
+                f_px = float(_cfl(width, height, max(0.1, float(focal_length_mm or 30.0))))
             disparity_factor = torch.tensor([f_px / width]).float().to(device)
 
-            # External depth → 1536² (alignment target).
+            # External depth → 1536², broadcast to BOTH layers.
             md_b = metric_depth[b]
             if md_b.dim() == 3:
                 md_b = md_b[..., 0]
@@ -250,12 +308,139 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
             external_depth = F.interpolate(
                 md_b, size=internal_shape, mode="bilinear", align_corners=True,
             )
+            # Both monodepth layers = external depth → no back-surface
+            # hallucination. Layer 1's gaussians collapse onto the same
+            # surface as layer 0; the prediction head's per-layer deltas
+            # can still drift them sub-pixel in xy and color, so layer 1
+            # serves as the view-dependent appearance variation rather
+            # than an occlusion backplate (consistent with how SHARP uses
+            # layer 1 as an SH-coefficient substitute per the paper).
+            monodepth_override = external_depth.repeat(1, 2, 1, 1)  # [1, 2, 1536, 1536]
 
-            # Decode WITH depth alignment.
-            gaussians_ndc = predictor.decode(
-                monodepth_output, image_resized_pt, disparity_factor,
-                depth=external_depth,
+            # Direct override: bypass `depth_alignment` (the learned scale-
+            # map UNet). The paper's recommended inference path passes
+            # depth=None, leaving alignment as identity and using SHARP's
+            # own monodepth. Here we instead replace monodepth entirely
+            # with the user's external depth — same code path init_model →
+            # feature_model → prediction_head → gaussian_composer that the
+            # official `decode()` runs, just with external monodepth
+            # instead of `disparity_factor / disparity`.
+            init_output = predictor.init_model(image_resized_pt, monodepth_override)
+            image_features = predictor.feature_model(
+                init_output.feature_input,
+                encodings=monodepth_output.output_features,
             )
+            delta_values = predictor.prediction_head(image_features)
+            gaussians_ndc = predictor.gaussian_composer(
+                delta=delta_values,
+                base_values=init_output.gaussian_base_values,
+                global_scale=init_output.global_scale,
+            )
+
+            # ----- Hard-snap gaussian positions to external depth (NDC). -----
+            # Compute target NDC state (target_z from external depth, target
+            # xy from the pixel-grid identity) for both stats logging and the
+            # actual snap. Composer flatten order is (layer, h, w).
+            N_total = int(gaussians_ndc.mean_vectors.shape[1])
+            num_layers = N_total // (H_grid * W_grid)
+
+            ext_at_grid = F.adaptive_avg_pool2d(
+                external_depth, output_size=(H_grid, W_grid),
+            )[0, 0]  # [H_grid, W_grid]
+            target_z_flat = (
+                ext_at_grid.unsqueeze(0)
+                .expand(num_layers, H_grid, W_grid)
+                .reshape(-1)
+            )  # [N_total]
+
+            stride = internal_shape[0] // H_grid
+            xs_ndc = torch.arange(
+                0.5 * stride, internal_shape[1], stride,
+                device=device, dtype=torch.float32,
+            )
+            ys_ndc = torch.arange(
+                0.5 * stride, internal_shape[0], stride,
+                device=device, dtype=torch.float32,
+            )
+            xs_ndc = 2.0 * xs_ndc / internal_shape[1] - 1.0
+            ys_ndc = 2.0 * ys_ndc / internal_shape[0] - 1.0
+            base_xx, base_yy = torch.meshgrid(xs_ndc, ys_ndc, indexing="xy")
+            base_xx_flat = (
+                base_xx.unsqueeze(0)
+                .expand(num_layers, H_grid, W_grid)
+                .reshape(-1)
+            )
+            base_yy_flat = (
+                base_yy.unsqueeze(0)
+                .expand(num_layers, H_grid, W_grid)
+                .reshape(-1)
+            )
+
+            # Current NDC state: mean_vectors = (xx_ndc*z, yy_ndc*z, z).
+            mv = gaussians_ndc.mean_vectors[0]  # [N_total, 3]
+            current_z = mv[:, 2].clamp(min=1e-6)
+            current_xx_ndc = mv[:, 0] / current_z
+            current_yy_ndc = mv[:, 1] / current_z
+
+            # Stats: report would-be shifts at 10 random gaussians + aggregate.
+            # Print once per face (we have up to 42 faces — full per-face dump
+            # would be noisy).
+            sample_g = torch.Generator(device="cpu").manual_seed(int(b))
+            sample_idx = torch.randperm(N_total, generator=sample_g)[:10]
+            _p(f"--- snap stats face {b} (mode={snap_to_external_depth}, "
+               f"would-be shifts at 10 random gaussians) ---")
+            _p(f"{'idx':>9} | {'lyr':>3} {'h':>4} {'w':>4} | "
+               f"{'z_now':>8} {'z_tgt':>8} {'dz':>8} | "
+               f"{'x_now':>7} {'x_tgt':>7} {'dx':>7} | "
+               f"{'y_now':>7} {'y_tgt':>7} {'dy':>7}")
+            for idx_t in sample_idx.tolist():
+                lyr = idx_t // (H_grid * W_grid)
+                rem = idx_t % (H_grid * W_grid)
+                hh = rem // W_grid
+                ww = rem % W_grid
+                z_now = float(current_z[idx_t])
+                z_tgt = float(target_z_flat[idx_t])
+                x_now = float(current_xx_ndc[idx_t])
+                x_tgt = float(base_xx_flat[idx_t])
+                y_now = float(current_yy_ndc[idx_t])
+                y_tgt = float(base_yy_flat[idx_t])
+                _p(f"{idx_t:>9d} | {lyr:>3d} {hh:>4d} {ww:>4d} | "
+                   f"{z_now:>8.3f} {z_tgt:>8.3f} {z_tgt - z_now:>+8.3f} | "
+                   f"{x_now:>+7.4f} {x_tgt:>+7.4f} {x_tgt - x_now:>+7.4f} | "
+                   f"{y_now:>+7.4f} {y_tgt:>+7.4f} {y_tgt - y_now:>+7.4f}")
+            dz_all = (target_z_flat - current_z).abs()
+            dx_all = (base_xx_flat - current_xx_ndc).abs()
+            dy_all = (base_yy_flat - current_yy_ndc).abs()
+            _p(f"aggregate |shift| over all {N_total} gaussians: "
+               f"|dz| mean={float(dz_all.mean()):.4f} "
+               f"max={float(dz_all.max()):.4f} | "
+               f"|dx_ndc| mean={float(dx_all.mean()):.5f} "
+               f"max={float(dx_all.max()):.5f} | "
+               f"|dy_ndc| mean={float(dy_all.mean()):.5f} "
+               f"max={float(dy_all.max()):.5f}")
+
+            if snap_to_external_depth == "z_only":
+                # Proportional rescale: mean_vectors *= target_z/current_z.
+                # (xx*z, yy*z, z) → (xx*target_z, yy*target_z, target_z).
+                scale = (target_z_flat / current_z).unsqueeze(0).unsqueeze(-1)
+                new_mean_vectors = gaussians_ndc.mean_vectors * scale
+                gaussians_ndc = gaussians_ndc._replace(
+                    mean_vectors=new_mean_vectors,
+                )
+            elif snap_to_external_depth == "xyz_full":
+                # Reset xy to pixel-grid identity AND set z to target.
+                new_mean_vectors = torch.stack(
+                    [
+                        base_xx_flat * target_z_flat,
+                        base_yy_flat * target_z_flat,
+                        target_z_flat,
+                    ],
+                    dim=-1,
+                ).unsqueeze(0)  # [1, N_total, 3]
+                gaussians_ndc = gaussians_ndc._replace(
+                    mean_vectors=new_mean_vectors,
+                )
+            # else: "none" → leave gaussians_ndc as-is.
 
             # Build extrinsics + intrinsics_resized for unprojection.
             if extrinsics is not None:
@@ -293,8 +478,8 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
             # Optionally drop layer 1 (back/occluded surface).
             # The gaussian_composer's flatten order is (layer, h, w), so the
             # first H_grid*W_grid entries are layer 0, the second are layer 1.
+            n_layer0 = H_grid * W_grid
             if not save_background_layer:
-                n_layer0 = H_grid * W_grid
                 gaussians = gaussians._replace(
                     mean_vectors=gaussians.mean_vectors[:, :n_layer0],
                     singular_values=gaussians.singular_values[:, :n_layer0],
@@ -302,6 +487,47 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                     colors=gaussians.colors[:, :n_layer0],
                     opacities=gaussians.opacities[:, :n_layer0],
                 )
+
+            # Optional edge crop: drop gaussians within `edge_crop` of any
+            # edge of the H_grid × W_grid pixel grid. Applied per-layer so
+            # both layers keep the same central region. Cheap (single
+            # boolean mask + tensor subset) and physically removes the
+            # cropped gaussians from the PLY (smaller file, faster render).
+            if edge_crop and edge_crop > 0.0:
+                crop_h = int(round(float(edge_crop) * H_grid))
+                crop_w = int(round(float(edge_crop) * W_grid))
+                if crop_h * 2 >= H_grid or crop_w * 2 >= W_grid:
+                    raise ValueError(
+                        f"edge_crop={edge_crop} crops entire grid "
+                        f"(crop_h={crop_h}, crop_w={crop_w}, "
+                        f"grid={H_grid}×{W_grid})"
+                    )
+                mask_2d = torch.zeros(
+                    H_grid, W_grid, dtype=torch.bool,
+                    device=gaussians.mean_vectors.device,
+                )
+                mask_2d[crop_h:H_grid - crop_h, crop_w:W_grid - crop_w] = True
+                mask_per_layer = mask_2d.flatten()              # [H*W]
+                # If layer 1 was kept, repeat the mask for the second layer.
+                if save_background_layer:
+                    keep_mask = torch.cat([mask_per_layer, mask_per_layer], dim=0)
+                else:
+                    keep_mask = mask_per_layer
+                n_before = int(gaussians.mean_vectors.shape[1])
+                gaussians = gaussians._replace(
+                    mean_vectors=gaussians.mean_vectors[:, keep_mask],
+                    singular_values=gaussians.singular_values[:, keep_mask],
+                    quaternions=gaussians.quaternions[:, keep_mask],
+                    colors=gaussians.colors[:, keep_mask],
+                    opacities=gaussians.opacities[:, keep_mask],
+                )
+                n_after = int(gaussians.mean_vectors.shape[1])
+                if b == 0:  # log once per batch to avoid spam on 42 faces
+                    _p(
+                        f"edge_crop={edge_crop:.3f} → crop_h={crop_h} crop_w={crop_w} "
+                        f"per side; kept {n_after}/{n_before} gaussians "
+                        f"({100.0 * n_after / max(n_before, 1):.1f}%) per face"
+                    )
 
             # Save PLY.
             if is_batch:
@@ -319,9 +545,12 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
         elapsed = time.time() - t_start
         loc = output_folder if is_batch else output_path
         layer_str = "layer0 only" if not save_background_layer else "both layers"
+        if edge_crop and edge_crop > 0.0:
+            layer_str += f", edge_crop={edge_crop:.3f}"
         _p(
             f"{B} face(s) → {n_gaussians_total/1e6:.2f}M gaussians total "
-            f"({layer_str}, depth-aligned); saved to {loc}; {elapsed:.1f}s"
+            f"({layer_str}, snap={snap_to_external_depth}); "
+            f"saved to {loc}; {elapsed:.1f}s"
         )
 
         # ply_folder is always the directory holding the PLYs (regardless

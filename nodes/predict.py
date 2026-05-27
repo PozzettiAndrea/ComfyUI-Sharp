@@ -78,6 +78,22 @@ class SharpPredict(io.ComfyNode):
                 io.String.Output(display_name="ply_path"),
                 io.Custom("EXTRINSICS").Output(display_name="extrinsics"),
                 io.Custom("INTRINSICS").Output(display_name="intrinsics"),
+                io.Image.Output(
+                    display_name="layer_0_refined_depth",
+                    tooltip="[B, 1536, 1536, 3] LAYER-0 (front/visible) metric "
+                            "depth at SHARP's native resolution — the front "
+                            "surface that feeds `init_model`'s layer-0 base "
+                            "values. Equivalent to `SharpPredictMetricDepth."
+                            "metric_depth`. Use to feed back into "
+                            "`SharpPredictGaussiansFromMetricDepth(image, "
+                            "this_depth)` and verify reproducibility."),
+                io.Image.Output(
+                    display_name="layer_1_refined_depth",
+                    tooltip="[B, 1536, 1536, 3] LAYER-1 (back/occluded) metric "
+                            "depth. SHARP's hallucinated backplate surface — "
+                            "typically the same as layer 0 in flat regions and "
+                            "the sky/background surface at occlusion "
+                            "boundaries. Drives layer-1 gaussian base values."),
             ],
         )
 
@@ -150,6 +166,8 @@ class SharpPredict(io.ComfyNode):
         all_ply_paths = []
         all_extrinsics = []
         all_intrinsics = []
+        all_refined_depths_l0 = []  # layer-0 metric depth (front), per image
+        all_refined_depths_l1 = []  # layer-1 metric depth (back), per image
 
         inference_start = time.time()
         pbar = comfy.utils.ProgressBar(batch_size)
@@ -181,11 +199,13 @@ class SharpPredict(io.ComfyNode):
 
             # Run inference with caching
             log.info(f"Running inference on image {i+1}/{batch_size}...")
-            gaussians = _predict_image_cached(
+            gaussians, refined_depth_l0, refined_depth_l1 = _predict_image_cached(
                 patcher, predictor, image_np, f_px, device,
                 extrinsics=img_extrinsics,
                 intrinsics=img_intrinsics,
             )
+            all_refined_depths_l0.append(refined_depth_l0)
+            all_refined_depths_l1.append(refined_depth_l1)
 
             # Determine output filename
             if is_batch:
@@ -207,14 +227,18 @@ class SharpPredict(io.ComfyNode):
         inference_time = time.time() - inference_start
         log.info(f"Total inference time: {inference_time:.2f}s ({inference_time/batch_size:.2f}s per image)")
 
-        # Return values
-        if is_batch:
-            # For batch: return folder path, and first image's camera params
-            # (assuming all images have same camera - user can override)
-            return io.NodeOutput(output_path, all_extrinsics[0], all_intrinsics[0])
-        else:
-            # For single image: return PLY path and camera params
-            return io.NodeOutput(output_path, all_extrinsics[0], all_intrinsics[0])
+        # Stack refined depths into ComfyUI IMAGE format [B, H, W, 3]
+        refined_l0_batch = torch.stack(all_refined_depths_l0, dim=0)
+        refined_l1_batch = torch.stack(all_refined_depths_l1, dim=0)
+        refined_l0_img = refined_l0_batch.unsqueeze(-1).expand(-1, -1, -1, 3).contiguous()
+        refined_l1_img = refined_l1_batch.unsqueeze(-1).expand(-1, -1, -1, 3).contiguous()
+
+        # Return values — for batch, camera params come from the first image
+        # (assuming all images share camera; user can override upstream).
+        return io.NodeOutput(
+            output_path, all_extrinsics[0], all_intrinsics[0],
+            refined_l0_img, refined_l1_img,
+        )
 
 
 def _predict_image_cached(
@@ -299,6 +323,21 @@ def _predict_image_cached(
     # Decode - always run with current focal length
     disparity_factor = torch.tensor([f_px / width]).float().to(device)
 
+    # Snapshot the metric depths that are about to be fed into init_model
+    # (same formula `predictor.decode` uses internally; depth_alignment is
+    # identity at inference, so this IS what the gaussian decoder sees).
+    # SHARP outputs 2 sorted layers from the monodepth head — layer 0 =
+    # max disparity = front surface, layer 1 = min disparity = back/
+    # occluded surface. Both feed init_model's per-layer base values.
+    _df = disparity_factor[:, None, None, None]
+    _monodepth_metric = _df / monodepth_output.disparity.clamp(min=1e-4, max=1e4)
+    # monodepth_output.disparity is [1, 2, 1536, 1536].
+    refined_depth_l0 = _monodepth_metric[0, 0].detach().cpu()  # [1536, 1536] front
+    if _monodepth_metric.shape[1] >= 2:
+        refined_depth_l1 = _monodepth_metric[0, 1].detach().cpu()  # [1536, 1536] back
+    else:
+        refined_depth_l1 = refined_depth_l0.clone()  # single-layer fallback
+
     decode_start = time.time()
     gaussians_ndc = predictor.decode(monodepth_output, image_resized_pt, disparity_factor)
     log.info(f"Decode time: {time.time() - decode_start:.2f}s")
@@ -336,7 +375,7 @@ def _predict_image_cached(
         gaussians_ndc, unproj_extrinsics, intrinsics_resized, internal_shape
     )
 
-    return gaussians
+    return gaussians, refined_depth_l0, refined_depth_l1
 
 
 NODE_CLASS_MAPPINGS = {

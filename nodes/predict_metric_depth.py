@@ -30,6 +30,7 @@ from comfy_api.latest import io
 from .predict_gaussian_attrs import (
     _compute_image_hash, _monodepth_to, _encode_cache,
 )
+from .utils.image import convert_focallength
 
 
 def _p(msg: str) -> None:
@@ -88,16 +89,27 @@ class SharpPredictMetricDepth(io.ComfyNode):
             ],
             outputs=[
                 io.Image.Output(
-                    display_name="metric_depth",
-                    tooltip="[B, 1536, 1536, 3] disparity-head metric depth "
-                            "at SHARP's native resolution."),
+                    display_name="layer_0_metric_depth",
+                    tooltip="[B, 1536, 1536, 3] LAYER-0 (front/visible) metric "
+                            "depth from SHARP's disparity head, native "
+                            "resolution. Same tensor that feeds the gaussian "
+                            "decoder's layer-0 base values at inference."),
+                io.Image.Output(
+                    display_name="layer_1_metric_depth",
+                    tooltip="[B, 1536, 1536, 3] LAYER-1 (back/occluded) metric "
+                            "depth — SHARP's hallucinated backplate surface. "
+                            "Typically tracks layer 0 in flat regions and "
+                            "diverges at occlusion boundaries (column edges → "
+                            "sky depth behind, etc.). Feeds layer-1 gaussian "
+                            "base values."),
                 io.Custom("EXTRINSICS").Output(
                     display_name="extrinsics_mdepth",
                     tooltip="Pass-through of input extrinsics (resolution-"
-                            "independent)."),
+                            "independent). Applies to both depth layers."),
                 io.Custom("INTRINSICS").Output(
                     display_name="intrinsics_mdepth",
-                    tooltip="Intrinsics rescaled to the 1536² metric_depth grid."),
+                    tooltip="Intrinsics rescaled to the 1536² depth grid. "
+                            "Applies to both depth layers."),
             ],
         )
 
@@ -124,6 +136,34 @@ class SharpPredictMetricDepth(io.ComfyNode):
         B = image.shape[0]
         t_start = time.time()
 
+        # Auto-construct camera defaults when inputs are None so the output
+        # `extrinsics_mdepth` / `intrinsics_mdepth` sockets emit real
+        # tensors. Downstream consumers (SharpDepthMerge) crash on
+        # `np.asarray(None)`; this matches the same fix applied to
+        # SharpPredictGaussianAttrs. image is [B, H, W, 3].
+        _img_H, _img_W = int(image.shape[1]), int(image.shape[2])
+        if extrinsics is None:
+            extrinsics = torch.eye(4, dtype=torch.float32).unsqueeze(0).repeat(B, 1, 1)
+        if intrinsics is None:
+            _f_px_default = float(convert_focallength(
+                _img_W, _img_H, max(0.1, float(focal_length_mm or 30.0)),
+            ))
+            _K_default = torch.tensor(
+                [
+                    [_f_px_default, 0.0,           _img_W / 2.0],
+                    [0.0,           _f_px_default, _img_H / 2.0],
+                    [0.0,           0.0,           1.0],
+                ],
+                dtype=torch.float32,
+            )
+            intrinsics = _K_default.unsqueeze(0).repeat(B, 1, 1)
+            _p(
+                f"intrinsics not wired → using identity-style K "
+                f"(focal={_f_px_default:.1f}px @ image {_img_W}×{_img_H}, "
+                f"35mm-equiv {focal_length_mm:.1f}mm). Pass intrinsics from "
+                f"SharpPanoramaIcosahedronSplit for per-face accurate K."
+            )
+
         internal_shape = (1536, 1536)
         input_shape = [1, 3, internal_shape[0], internal_shape[1]]
         memory_required = patcher.memory_required(input_shape)
@@ -131,7 +171,8 @@ class SharpPredictMetricDepth(io.ComfyNode):
             [patcher], memory_required=memory_required,
         )
 
-        metric_depths = []
+        metric_depths_l0 = []  # front surface
+        metric_depths_l1 = []  # back/occluded surface
         last_width = last_height = None
         for b in range(B):
             img_np = image[b].cpu().numpy() if isinstance(image, torch.Tensor) else np.asarray(image[b])
@@ -164,17 +205,29 @@ class SharpPredictMetricDepth(io.ComfyNode):
                 intr_b = intrinsics[b] if intrinsics.dim() == 3 else intrinsics
                 f_px = float(intr_b[0, 0]) * (internal_shape[0] / width)
             else:
-                f_px = (width / 36.0) * max(0.1, float(focal_length_mm or 30.0))
+                # Match SharpPredict's 35mm-equivalent diagonal formula
+                # (`convert_focallength`) so the depth here is byte-identical
+                # to what `predictor.decode` sees inside SharpPredict for the
+                # same image. Previously this used (width/36)·f_mm which
+                # disagreed by a factor of ~1.18× for square inputs.
+                f_px = float(convert_focallength(width, height, max(0.1, float(focal_length_mm or 30.0))))
 
             disparity_factor_scalar = f_px / width
-            monodepth_disparity = monodepth_output.disparity  # [1, 1, 1536, 1536]
+            monodepth_disparity = monodepth_output.disparity  # [1, 2, 1536, 1536]
             metric_depth_full = (
                 disparity_factor_scalar / monodepth_disparity.clamp(min=1e-4)
-            )  # [1, 1, 1536, 1536]
-            metric_depths.append(metric_depth_full[0, 0].cpu())  # [1536, 1536]
+            )  # [1, 2, 1536, 1536]
+            # Layer 0 = front (max disparity post-sort), layer 1 = back.
+            metric_depths_l0.append(metric_depth_full[0, 0].cpu())  # [1536, 1536]
+            if metric_depth_full.shape[1] >= 2:
+                metric_depths_l1.append(metric_depth_full[0, 1].cpu())
+            else:
+                metric_depths_l1.append(metric_depth_full[0, 0].cpu().clone())
 
-        metric_batch = torch.stack(metric_depths, dim=0)  # [B, 1536, 1536]
-        metric_img = metric_batch.unsqueeze(-1).expand(-1, -1, -1, 3).contiguous()
+        metric_batch_l0 = torch.stack(metric_depths_l0, dim=0)  # [B, 1536, 1536]
+        metric_batch_l1 = torch.stack(metric_depths_l1, dim=0)  # [B, 1536, 1536]
+        metric_img_l0 = metric_batch_l0.unsqueeze(-1).expand(-1, -1, -1, 3).contiguous()
+        metric_img_l1 = metric_batch_l1.unsqueeze(-1).expand(-1, -1, -1, 3).contiguous()
 
         if intrinsics is not None:
             intrinsics_mdepth_out, k_fx_md_dbg = _rescale_K(
@@ -186,16 +239,17 @@ class SharpPredictMetricDepth(io.ComfyNode):
             k_fx_md_dbg = None
         extrinsics_mdepth_out = extrinsics
 
-        m_med = float(metric_batch.median())
+        m_med_l0 = float(metric_batch_l0.median())
+        m_med_l1 = float(metric_batch_l1.median())
         elapsed = time.time() - t_start
         k_str = f", K_{internal_shape[0]} fx→{k_fx_md_dbg:.1f}" if k_fx_md_dbg is not None else ""
         _p(
             f"{B} face(s) @ {internal_shape[0]}²; "
-            f"metric depth median={m_med:.2f}m{k_str}; {elapsed:.1f}s"
+            f"layer0/layer1 depth median={m_med_l0:.2f}m/{m_med_l1:.2f}m{k_str}; {elapsed:.1f}s"
         )
 
         return io.NodeOutput(
-            metric_img, extrinsics_mdepth_out, intrinsics_mdepth_out,
+            metric_img_l0, metric_img_l1, extrinsics_mdepth_out, intrinsics_mdepth_out,
         )
 
 

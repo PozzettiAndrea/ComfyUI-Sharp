@@ -103,14 +103,33 @@ def _subdivide_icosahedron(verts: np.ndarray, edges: np.ndarray) -> np.ndarray:
 
 
 def _icosahedron_split_vertices(subdivision: str) -> np.ndarray:
-    """Return [N, 3] unit-sphere target points for the chosen subdivision."""
+    """Return [N, 3] unit-sphere target points for the chosen subdivision.
+
+    Sorted top-to-bottom in a spiral:
+      - Primary key: -pitch  (= -asin(z), so highest latitude first)
+      - Secondary key: yaw   (= atan2(y, x), going around -π → π at each ring)
+    So index 0 is the topmost vertex (north pole if present), the next
+    several indices walk around the next ring down, then the ring after
+    that, ..., and the last index is the bottommost vertex.
+    """
     base = _icosahedron_vertices()
     if subdivision == "icosahedron_12":
-        return base
-    if subdivision == "icosahedron_42":
+        verts = base
+    elif subdivision == "icosahedron_42":
         edges = _icosahedron_edges(base)
-        return _subdivide_icosahedron(base, edges)
-    raise ValueError(f"unknown subdivision={subdivision!r}")
+        verts = _subdivide_icosahedron(base, edges)
+    else:
+        raise ValueError(f"unknown subdivision={subdivision!r}")
+
+    pitch = np.arcsin(np.clip(verts[:, 2], -1.0, 1.0))     # [-π/2, π/2]
+    yaw = np.arctan2(verts[:, 1], verts[:, 0])             # [-π, π]
+    # lexsort uses the LAST key as primary. Round pitch to 4 decimals so
+    # within-ring ties (same latitude, different yaw) get grouped before
+    # the secondary yaw sort kicks in — avoids floating-point jitter from
+    # putting nominally-same-pitch vertices in different rings.
+    pitch_key = -np.round(pitch, decimals=4)
+    order = np.lexsort((yaw, pitch_key))
+    return verts[order].astype(np.float32)
 
 
 def _build_extrinsics_with_pole_fix(targets: torch.Tensor) -> torch.Tensor:
@@ -257,8 +276,14 @@ class SharpPanoramaIcosahedronSplit(io.ComfyNode):
             inputs=[
                 io.Image.Input(
                     "panorama",
-                    tooltip="Equirectangular RGB panorama (2:1). [B, H, W, 3] "
-                            "or [H, W, 3] in [0, 1]."),
+                    tooltip="Equirectangular panorama (2:1). [B, H, W, 3] "
+                            "or [H, W, 3]. Values passed through as-is — "
+                            "feed RGB in [0, 1] OR a depth panorama in "
+                            "meters (e.g. SharpDepthMerge.depth, used to "
+                            "re-cut the merged depth into per-face crops). "
+                            "The bilinear sampler is linear so either "
+                            "value range works; the debug overlay "
+                            "auto-normalizes by p99 for visualization."),
                 io.Int.Input(
                     "resolution", default=512, min=128, max=2048, step=64,
                     tooltip="Per-face image resolution (square). Default 512 "
@@ -269,12 +294,51 @@ class SharpPanoramaIcosahedronSplit(io.ComfyNode):
                     default="icosahedron_42",
                     tooltip="Tiling density. 12 = base icosahedron (faster), "
                             "42 = subdivided (better polar coverage)."),
+                io.Float.Input(
+                    "fov_deg", default=90.0, min=30.0, max=170.0, step=1.0,
+                    tooltip="Per-face FOV in degrees (square, used for both "
+                            "horizontal and vertical). Default 90° — matches "
+                            "WorldNavPanoramaSplit, SHARP's training "
+                            "distribution sweet-spot, and gives ~2× sphere "
+                            "over-coverage with icosahedron_12 (≈7× with _42).\n\n"
+                            "Coverage trade-off: narrower FOV may leave gaps "
+                            "in the sphere (icosahedron_12 needs ≥85° to "
+                            "cover the full sphere without gaps; icosahedron_42 "
+                            "is safe down to ~55°). Wider FOV gives more "
+                            "redundancy but per-face quality drops past ~110° "
+                            "as SHARP goes out-of-distribution and rectilinear "
+                            "distortion gets severe near face edges."),
                 io.Boolean.Input(
                     "use_gpu", default=True, optional=True,
                     tooltip="Batched panorama->face resampling via "
                             "torch.nn.functional.grid_sample (bilinear) on "
                             "CUDA. Falls back to CPU if CUDA isn't "
                             "available. Math identical within fp32 round-off."),
+                io.Boolean.Input(
+                    "convert_distance_to_planar", default=False, optional=True,
+                    tooltip=(
+                        "ONLY enable when the input panorama is a DEPTH map "
+                        "in equirect ray-distance convention (e.g. the output "
+                        "of SharpDepthMerge, which stores Euclidean distance "
+                        "from the camera center along each equirect pixel's "
+                        "ray direction).\n\n"
+                        "Equirect depth is naturally a 'ray-distance field' "
+                        "(per direction), but downstream consumers like "
+                        "SharpPredictGaussiansFromMetricDepth expect per-face "
+                        "PLANAR Z (depth along the face's optical axis). At "
+                        "the corner of a 90° face the two differ by ~73% — "
+                        "feeding ray-distance where planar Z is expected "
+                        "causes the same world point to land at different "
+                        "3D positions when viewed from different faces.\n\n"
+                        "When True: after bilinear sampling each face, "
+                        "multiply by the per-pixel cos-map "
+                        "  cos_map[u, v] = 1 / sqrt(((u-cx)/fx)² + "
+                        "((v-cy)/fy)² + 1)\n"
+                        "which depends only on K (shared across all faces). "
+                        "Output is per-face planar Z, ready to feed SHARP.\n\n"
+                        "Leave False (default) for RGB panoramas — color is "
+                        "per-direction and doesn't need conversion."
+                    )),
             ],
             outputs=[
                 io.Image.Output(display_name="face_images"),
@@ -290,9 +354,15 @@ class SharpPanoramaIcosahedronSplit(io.ComfyNode):
         cls, panorama: torch.Tensor,
         resolution: int = 512,
         subdivision: str = "icosahedron_42",
+        fov_deg: float = 90.0,
         use_gpu: bool = True,
+        convert_distance_to_planar: bool = False,
     ):
-        # Normalize input shape -> [H, W, 3], float in [0, 1].
+        # Normalize input shape -> [H, W, 3], float. Values are passed
+        # through as-is — no uint8-detection rescale. Caller is responsible
+        # for whatever value range is meaningful (RGB in [0, 1] for image
+        # inputs, meters for depth inputs, etc.). The bilinear sampler
+        # is linear in input values either way.
         pano = panorama
         if pano.dim() == 4:
             pano = pano[0]
@@ -300,8 +370,13 @@ class SharpPanoramaIcosahedronSplit(io.ComfyNode):
             pano = pano.float()
         if pano.shape[-1] == 4:
             pano = pano[..., :3]
-        if pano.max() > 2.0:
-            pano = pano / 255.0
+
+        # Horizontal flip — reconcile input pano convention (yaw decreases
+        # left-to-right = standard photo / generative outputs) with the
+        # sampler's internal convention (yaw increases left-to-right =
+        # WorldStereo). Without this, face images come out mirrored
+        # relative to the input.
+        pano = torch.flip(pano, dims=[-2])  # W axis on [H, W, C]
 
         H_pano, W_pano, _ = pano.shape
         # Hard 2:1 aspect check — same as WorldNavPanoramaSplit.
@@ -326,8 +401,8 @@ class SharpPanoramaIcosahedronSplit(io.ComfyNode):
         extrinsics = _build_extrinsics_with_pole_fix(targets).to(device)
 
         # Same intrinsics for every face (90° FOV, square).
-        fov_x_deg = 90.0
-        fov_y_deg = 90.0
+        fov_x_deg = float(fov_deg)
+        fov_y_deg = float(fov_deg)
         K = _intrinsics_from_fov(
             math.radians(fov_x_deg), math.radians(fov_y_deg),
             int(resolution), int(resolution),
@@ -344,21 +419,65 @@ class SharpPanoramaIcosahedronSplit(io.ComfyNode):
         intrinsics_t = K.unsqueeze(0).expand(N, -1, -1).contiguous()  # [N, 3, 3]
         extrinsics_t = extrinsics.contiguous()  # [N, 4, 4]
 
+        # Optional ray-distance → per-face planar-Z conversion. Equirect depth
+        # is naturally per-direction ray-distance (Euclidean from camera
+        # center); SHARP's NDC unprojection expects planar Z (along the face's
+        # optical axis). Convert by multiplying with cos(angle from optical
+        # axis) = 1 / sqrt(((u-cx)/fx)² + ((v-cy)/fy)² + 1). Same map for
+        # every face (depends only on K).
+        if convert_distance_to_planar:
+            R = int(resolution)
+            uu = torch.arange(R, dtype=torch.float32, device=device)
+            vv = torch.arange(R, dtype=torch.float32, device=device)
+            uu_g, vv_g = torch.meshgrid(uu, vv, indexing="xy")  # (R, R)
+            fx = float(K[0, 0])
+            fy = float(K[1, 1])
+            cx = float(K[0, 2])
+            cy = float(K[1, 2])
+            x_cam = (uu_g - cx) / fx
+            y_cam = (vv_g - cy) / fy
+            ray_norm = torch.sqrt(x_cam * x_cam + y_cam * y_cam + 1.0)
+            cos_map = 1.0 / ray_norm  # (R, R), values in (~0.577, 1] for 90° fov
+            face_images_t = face_images_t * cos_map.unsqueeze(0).unsqueeze(-1)
+            log.info(
+                f"[SharpPanoramaIcosahedronSplit] applied ray-distance → "
+                f"planar-Z conversion: cos_map min={float(cos_map.min()):.4f} "
+                f"max={float(cos_map.max()):.4f} (factor at corners depends "
+                f"on FOV)"
+            )
+
         # Debug overlay: panorama with each face's frustum edges drawn on it.
-        # Matches WorldNavPanoramaSplit's debug_image convention. uint8
-        # round-trip for cv2.polylines, then back to float [0,1] for the
-        # IMAGE socket.
+        # uint8 round-trip needed for cv2.polylines; pano values may be RGB
+        # in [0, 1] OR depth in meters OR anything else linear, so normalize
+        # by p99 (clip outliers, divide by p99) before the uint8 cast. For
+        # standard [0, 1] RGB this is a near-identity (p99 ≈ 1.0). For depth
+        # in meters it gives a sensible grayscale visualization without
+        # crushing dynamic range.
+        # `pano` here is the FLIPPED version (post-sampling-prep flip).
+        # `_make_debug_overlay` computes frustum edge u-coords in Sharp's
+        # internal convention, which matches the flipped pano. Drawing
+        # the overlay on the flipped pano gives correct edge positions,
+        # but the resulting debug image looks horizontally mirrored
+        # relative to the user's original input. To present a debug
+        # image that matches the user's INPUT panorama (with the face
+        # frustum edges drawn at the visually correct positions on it),
+        # we flip the overlay output back along the W axis.
+        _pano_np = pano.detach().cpu().numpy()
+        _p99 = float(np.nanquantile(_pano_np, 0.99))
+        _p99 = max(_p99, 1e-6)
         pano_uint8 = (
-            pano.detach().cpu().clamp(0.0, 1.0).mul(255.0).to(torch.uint8).numpy()
-        )
+            np.clip(_pano_np / _p99, 0.0, 1.0) * 255.0
+        ).astype(np.uint8)
         debug_np = _make_debug_overlay(pano_uint8, extrinsics)  # (H, W, 3) uint8
+        # Flip the overlay back to the user's input pano convention.
+        debug_np = np.ascontiguousarray(debug_np[:, ::-1])
         debug_image = (
             torch.from_numpy(debug_np.astype(np.float32) / 255.0).unsqueeze(0)
         )  # [1, H, W, 3]
 
         log.info(
             f"[SharpPanoramaIcosahedronSplit] {N} faces "
-            f"({subdivision}) @ {resolution}x{resolution}, fov=90°"
+            f"({subdivision}) @ {resolution}x{resolution}, fov={fov_x_deg:.1f}°"
         )
 
         return io.NodeOutput(
