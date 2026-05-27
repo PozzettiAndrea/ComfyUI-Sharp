@@ -1,0 +1,203 @@
+"""SharpPredictMetricDepth — image → disparity-head metric depth only.
+
+Tap SHARP's encoder + disparity head; skip the gaussian decoder entirely.
+Fastest path to a clean per-pixel depth map at SHARP's native 1536²
+resolution, paired with extrinsics_mdepth (pass-through) and
+intrinsics_mdepth (pixel-K rescaled to 1536). The triplet wires straight
+into SharpDepthMerge with no K/depth-shape mismatch.
+
+Why separate from SharpPredictGaussianAttrs:
+  - ~2× faster per face (no init_model + feature_model + prediction_head
+    forward passes).
+  - Lower VRAM (skip decoder allocs).
+  - Cleaner workflows where you only want depth (mesh build, navmesh,
+    downstream depth-aligned gaussian prediction, etc.).
+
+Shares `_encode_cache` with SharpPredictGaussianAttrs so encoding the
+same image across both nodes is a single forward pass.
+"""
+
+from __future__ import annotations
+
+import sys
+import time
+
+import numpy as np
+import torch
+import torch.nn.functional as F
+from comfy_api.latest import io
+
+from .predict_gaussian_attrs import (
+    _compute_image_hash, _monodepth_to, _encode_cache,
+)
+
+
+def _p(msg: str) -> None:
+    print(f"[SharpPredictMetricDepth] {msg}", file=sys.stderr, flush=True)
+
+
+def _rescale_K(intr_in, target_w, target_h, src_w, src_h):
+    sx = float(target_w) / float(src_w)
+    sy = float(target_h) / float(src_h)
+    k = intr_in.detach().clone().float() if isinstance(intr_in, torch.Tensor) \
+        else torch.as_tensor(np.asarray(intr_in)).float().clone()
+    if k.dim() == 2:
+        k[0, :] *= sx
+        k[1, :] *= sy
+        k_dbg = k
+    elif k.dim() == 3:
+        k[:, 0, :] *= sx
+        k[:, 1, :] *= sy
+        k_dbg = k[0]
+    else:
+        raise ValueError(f"intrinsics must be (3,3) or (N,3,3), got {tuple(k.shape)}")
+    return k, float(k_dbg[0, 0])
+
+
+class SharpPredictMetricDepth(io.ComfyNode):
+    """SHARP encoder + disparity head only → per-pixel metric depth at 1536²."""
+
+    @classmethod
+    def define_schema(cls):
+        return io.Schema(
+            node_id="SharpPredictMetricDepth",
+            display_name="SHARP Predict Metric Depth",
+            category="SHARP",
+            description=(
+                "Run only SHARP's encoder + disparity head (skip the gaussian "
+                "decoder). Outputs per-pixel metric depth at native 1536² + "
+                "paired extrinsics/intrinsics. ~2× faster than "
+                "SharpPredictGaussianAttrs when you only want depth. Wire "
+                "into SharpDepthMerge for clean equirect depth merge."
+            ),
+            inputs=[
+                io.Custom("SHARP_MODEL_CONFIG").Input("model"),
+                io.Image.Input("image"),
+                io.Float.Input(
+                    "focal_length_mm", default=30.0, min=0.0, max=500.0,
+                    step=0.1, optional=True,
+                    tooltip="Focal length in mm (35mm equiv). Ignored if "
+                            "intrinsics provided."),
+                io.Custom("EXTRINSICS").Input(
+                    "extrinsics", optional=True,
+                    tooltip="Pass-through to extrinsics_mdepth output."),
+                io.Custom("INTRINSICS").Input(
+                    "intrinsics", optional=True,
+                    tooltip="If provided, overrides focal_length_mm. "
+                            "Re-emitted on intrinsics_mdepth rescaled to 1536²."),
+            ],
+            outputs=[
+                io.Image.Output(
+                    display_name="metric_depth",
+                    tooltip="[B, 1536, 1536, 3] disparity-head metric depth "
+                            "at SHARP's native resolution."),
+                io.Custom("EXTRINSICS").Output(
+                    display_name="extrinsics_mdepth",
+                    tooltip="Pass-through of input extrinsics (resolution-"
+                            "independent)."),
+                io.Custom("INTRINSICS").Output(
+                    display_name="intrinsics_mdepth",
+                    tooltip="Intrinsics rescaled to the 1536² metric_depth grid."),
+            ],
+        )
+
+    @classmethod
+    @torch.no_grad()
+    def execute(
+        cls,
+        model,
+        image: torch.Tensor,
+        focal_length_mm: float = 30.0,
+        extrinsics: torch.Tensor | None = None,
+        intrinsics: torch.Tensor | None = None,
+    ):
+        global _encode_cache
+        import comfy.model_management
+        from .load_model import _load_sharp_model
+
+        patcher = _load_sharp_model(model)
+        predictor = patcher.model
+        device = patcher.load_device
+
+        if image.dim() == 3:
+            image = image.unsqueeze(0)
+        B = image.shape[0]
+        t_start = time.time()
+
+        internal_shape = (1536, 1536)
+        input_shape = [1, 3, internal_shape[0], internal_shape[1]]
+        memory_required = patcher.memory_required(input_shape)
+        comfy.model_management.load_models_gpu(
+            [patcher], memory_required=memory_required,
+        )
+
+        metric_depths = []
+        last_width = last_height = None
+        for b in range(B):
+            img_np = image[b].cpu().numpy() if isinstance(image, torch.Tensor) else np.asarray(image[b])
+            if img_np.dtype != np.uint8:
+                img_np = (np.clip(img_np, 0, 1) * 255 + 0.5).astype(np.uint8)
+            height, width = img_np.shape[:2]
+            last_width, last_height = width, height
+            image_hash = _compute_image_hash(img_np)
+
+            if _encode_cache["image_hash"] == image_hash:
+                monodepth_output = _monodepth_to(_encode_cache["monodepth_output"], device)
+            else:
+                _encode_cache["image_hash"] = None
+                image_pt = (
+                    torch.from_numpy(img_np.copy()).float().to(device).permute(2, 0, 1) / 255.0
+                )
+                image_resized_pt = F.interpolate(
+                    image_pt[None],
+                    size=(internal_shape[1], internal_shape[0]),
+                    mode="bilinear", align_corners=True,
+                )
+                monodepth_output, _ = predictor.encode(image_resized_pt)
+                _encode_cache["image_hash"] = image_hash
+                _encode_cache["monodepth_output"] = _monodepth_to(monodepth_output, "cpu")
+                _encode_cache["image_resized"] = image_resized_pt.cpu()
+                _encode_cache["original_shape"] = (height, width)
+                comfy.model_management.soft_empty_cache()
+
+            if intrinsics is not None:
+                intr_b = intrinsics[b] if intrinsics.dim() == 3 else intrinsics
+                f_px = float(intr_b[0, 0]) * (internal_shape[0] / width)
+            else:
+                f_px = (width / 36.0) * max(0.1, float(focal_length_mm or 30.0))
+
+            disparity_factor_scalar = f_px / width
+            monodepth_disparity = monodepth_output.disparity  # [1, 1, 1536, 1536]
+            metric_depth_full = (
+                disparity_factor_scalar / monodepth_disparity.clamp(min=1e-4)
+            )  # [1, 1, 1536, 1536]
+            metric_depths.append(metric_depth_full[0, 0].cpu())  # [1536, 1536]
+
+        metric_batch = torch.stack(metric_depths, dim=0)  # [B, 1536, 1536]
+        metric_img = metric_batch.unsqueeze(-1).expand(-1, -1, -1, 3).contiguous()
+
+        if intrinsics is not None:
+            intrinsics_mdepth_out, k_fx_md_dbg = _rescale_K(
+                intrinsics, internal_shape[1], internal_shape[0],
+                last_width, last_height,
+            )
+        else:
+            intrinsics_mdepth_out = None
+            k_fx_md_dbg = None
+        extrinsics_mdepth_out = extrinsics
+
+        m_med = float(metric_batch.median())
+        elapsed = time.time() - t_start
+        k_str = f", K_{internal_shape[0]} fx→{k_fx_md_dbg:.1f}" if k_fx_md_dbg is not None else ""
+        _p(
+            f"{B} face(s) @ {internal_shape[0]}²; "
+            f"metric depth median={m_med:.2f}m{k_str}; {elapsed:.1f}s"
+        )
+
+        return io.NodeOutput(
+            metric_img, extrinsics_mdepth_out, intrinsics_mdepth_out,
+        )
+
+
+NODE_CLASS_MAPPINGS = {"SharpPredictMetricDepth": SharpPredictMetricDepth}
+NODE_DISPLAY_NAME_MAPPINGS = {"SharpPredictMetricDepth": "SHARP Predict Metric Depth"}

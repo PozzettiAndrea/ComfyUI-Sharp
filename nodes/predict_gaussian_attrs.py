@@ -57,6 +57,7 @@ from __future__ import annotations
 
 import hashlib
 import logging
+import sys
 import time
 
 import numpy as np
@@ -64,6 +65,13 @@ import torch
 import torch.nn.functional as F
 
 from comfy_api.latest import io
+
+
+def _p(msg: str) -> None:
+    """Print to stderr so the line shows up in ComfyUI's worker log
+    (`log.info`/`log.debug` on the 'sharp' logger don't always get routed
+    through the comfy-env worker stderr pipe — direct print does)."""
+    print(f"[SharpPredictGaussianAttrs] {msg}", file=sys.stderr, flush=True)
 
 log = logging.getLogger("sharp")
 
@@ -225,9 +233,36 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
             ],
             outputs=[
                 io.Image.Output(
+                    display_name="metric_depth",
+                    tooltip="[B, 1536, 1536, 3] per-pixel metric depth from "
+                            "SHARP's disparity head at NATIVE 1536² resolution "
+                            "(`disparity_factor / monodepth_output.disparity`). "
+                            "Unlike the layer_depth_refined outputs (gaussian z "
+                            "with sub-pixel xy drift), this is a true per-pixel "
+                            "depth map — wire with `extrinsics_mdepth + "
+                            "intrinsics_mdepth` into SharpDepthMerge for a "
+                            "seam-free LSMR merge that matches MoGe2-style "
+                            "smoothness. Memory: 42 faces × 1536² fp32 ≈ 395 MB."),
+                io.Custom("EXTRINSICS").Output(
+                    display_name="extrinsics_mdepth",
+                    tooltip="Pass-through of input extrinsics. Extrinsics are "
+                            "resolution-independent (world-to-camera transform); "
+                            "this is just the same matrix paired with metric_depth "
+                            "so workflows can wire the metric-depth path as a "
+                            "self-contained triplet."),
+                io.Custom("INTRINSICS").Output(
+                    display_name="intrinsics_mdepth",
+                    tooltip="Intrinsics rescaled to the 1536² metric_depth grid "
+                            "(pixel-K). Pairs with `metric_depth` so the "
+                            "downstream SharpDepthMerge's K/depth-shape "
+                            "invariant holds without conversion."),
+                io.Image.Output(
                     display_name="first_layer_depth_refined",
                     tooltip="[B, H, W, 3] depth broadcast across 3 channels. "
-                            "Layer-0 (visible surface) post-decoder z."),
+                            "Layer-0 (visible surface) post-decoder z. NOTE: "
+                            "this is the gaussian's z position; the gaussian's "
+                            "xy may have drifted from the source pixel grid. "
+                            "Use `metric_depth` instead for clean per-pixel depth."),
                 io.Custom("MULTIBAND_IMAGE").Output(
                     display_name="first_layer_gaussian_attrs",
                     tooltip="[B, 14, H, W] all layer-0 gaussian attributes. "
@@ -279,6 +314,7 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
         first_attrs = []
         second_depths = []
         second_attrs = []
+        metric_depths = []  # disparity-head depth, downsampled to gaussian grid
 
         # Load model to GPU with the budget the existing predict path uses.
         internal_shape = (1536, 1536)
@@ -334,6 +370,20 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
                 f_px = (width / 36.0) * max(0.1, float(focal_length_mm or 30.0))
 
             disparity_factor = torch.tensor([f_px / width]).float().to(device)
+
+            # Disparity-head metric depth at SHARP's native 1536². Matches
+            # predict_depth.py's convention: `disparity_factor /
+            # monodepth_disparity`. Emitted at native res rather than
+            # downsampled to the gaussian grid (768) so callers get the
+            # full disparity-head detail; the paired `intrinsics_mdepth`
+            # output below carries the matching pixel-K for 1536.
+            monodepth_disparity = monodepth_output.disparity  # [1, 1, 1536, 1536]
+            metric_depth_full = (
+                disparity_factor.view(1, 1, 1, 1)
+                / monodepth_disparity.clamp(min=1e-4)
+            )  # [1, 1, 1536, 1536]
+            metric_depths.append(metric_depth_full[0, 0].cpu())  # [1536, 1536]
+
             t1 = time.time()
             gaussians_ndc = predictor.decode(monodepth_output, image_resized_pt, disparity_factor)
             log.debug(f"  [{b}] decode time: {time.time() - t1:.2f}s")
@@ -358,54 +408,78 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
         d1_batch = torch.cat(second_depths, dim=0)
         attrs0_batch = torch.cat(first_attrs, dim=0)  # [B, H, W, 14]
         attrs1_batch = torch.cat(second_attrs, dim=0)
+        metric_batch = torch.stack(metric_depths, dim=0)  # [B, H, W]
 
         # IMAGE format: [B, H, W, 3] depth broadcast over channels.
         d0_img = d0_batch.unsqueeze(-1).expand(-1, -1, -1, 3).contiguous()
         d1_img = d1_batch.unsqueeze(-1).expand(-1, -1, -1, 3).contiguous()
+        metric_img = metric_batch.unsqueeze(-1).expand(-1, -1, -1, 3).contiguous()
 
         # MULTIBAND_IMAGE: dict with samples [B, 14, H, W] + channel_names.
         l0_mb = _build_multiband(attrs0_batch)
         l1_mb = _build_multiband(attrs1_batch)
 
-        # Rescale intrinsics so their pixel-space matches the emitted depth grid
-        # (H_grid x W_grid), not the input face shape. Without this the
-        # downstream merger normalizes K by the wrong W and ends up with the
-        # wrong effective FOV per face -> visible seams in the merged equirect.
-        if intrinsics is not None:
-            sx = float(W_grid) / float(width)
-            sy = float(H_grid) / float(height)
-            intr = intrinsics.detach().clone().float() if isinstance(intrinsics, torch.Tensor) \
-                else torch.as_tensor(np.asarray(intrinsics)).float().clone()
-            if intr.dim() == 2:
-                intr[0, :] *= sx
-                intr[1, :] *= sy
-                k_dbg = intr
-            elif intr.dim() == 3:
-                intr[:, 0, :] *= sx
-                intr[:, 1, :] *= sy
-                k_dbg = intr[0]
+        # Rescale intrinsics so pixel-K matches the emitted depth grid for
+        # each output pair. The downstream merger normalizes K by the depth
+        # tensor's W; if K's native res doesn't match that W, the effective
+        # FOV is wrong → visible seams. We emit TWO K versions:
+        #   - intrinsics       : K rescaled to (H_grid, W_grid) = 768²,
+        #                        pairs with gaussian-z outputs.
+        #   - intrinsics_mdepth: K rescaled to (1536, 1536),
+        #                        pairs with metric_depth.
+        # extrinsics are resolution-independent — same tensor for both pairs.
+        def _rescale_K(intr_in, target_w, target_h, src_w, src_h):
+            sx = float(target_w) / float(src_w)
+            sy = float(target_h) / float(src_h)
+            k = intr_in.detach().clone().float() if isinstance(intr_in, torch.Tensor) \
+                else torch.as_tensor(np.asarray(intr_in)).float().clone()
+            if k.dim() == 2:
+                k[0, :] *= sx
+                k[1, :] *= sy
+                k_dbg = k
+            elif k.dim() == 3:
+                k[:, 0, :] *= sx
+                k[:, 1, :] *= sy
+                k_dbg = k[0]
             else:
-                raise ValueError(f"intrinsics must be (3,3) or (N,3,3), got {tuple(intr.shape)}")
-            intrinsics_out = intr
-            k_fx_dbg = float(k_dbg[0, 0])
+                raise ValueError(f"intrinsics must be (3,3) or (N,3,3), got {tuple(k.shape)}")
+            return k, float(k_dbg[0, 0])
+
+        if intrinsics is not None:
+            # Gaussian-pair K (768²)
+            intrinsics_out, k_fx_dbg = _rescale_K(
+                intrinsics, W_grid, H_grid, width, height,
+            )
+            # Metric-depth-pair K (1536²)
+            intrinsics_mdepth_out, k_fx_md_dbg = _rescale_K(
+                intrinsics, internal_shape[1], internal_shape[0], width, height,
+            )
         else:
             intrinsics_out = None
+            intrinsics_mdepth_out = None
             k_fx_dbg = None
+            k_fx_md_dbg = None
+        extrinsics_mdepth_out = extrinsics  # resolution-independent pass-through
 
         n_gaussians_total = B * num_layers * H_grid * W_grid
         elapsed = time.time() - t_start
         d0_med = float(d0_batch.median())
         d1_med = float(d1_batch.median())
-        k_str = f", K fx→{k_fx_dbg:.1f}" if k_fx_dbg is not None else ""
-        log.info(
-            f"[SharpPredictGaussianAttrs] {B} face(s) → "
-            f"{n_gaussians_total/1e6:.2f}M gaussians "
+        m_med = float(metric_batch.median())
+        k_str = (
+            f", K_{H_grid} fx→{k_fx_dbg:.1f} K_{internal_shape[0]} fx→{k_fx_md_dbg:.1f}"
+            if k_fx_dbg is not None else ""
+        )
+        _p(
+            f"{B} face(s) → {n_gaussians_total/1e6:.2f}M gaussians "
             f"({B}×{num_layers}×{H_grid}²); "
-            f"layer0/1 depth median={d0_med:.2f}m/{d1_med:.2f}m"
+            f"metric/layer0/layer1 depth median={m_med:.2f}m/{d0_med:.2f}m/{d1_med:.2f}m"
             f"{k_str}; {elapsed:.1f}s"
         )
 
         return io.NodeOutput(
+            metric_img,
+            extrinsics_mdepth_out, intrinsics_mdepth_out,
             d0_img, l0_mb, d1_img, l1_mb,
             extrinsics, intrinsics_out,
         )
