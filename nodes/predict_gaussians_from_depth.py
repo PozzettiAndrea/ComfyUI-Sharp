@@ -25,10 +25,19 @@ Typical pipeline:
   2. SharpPredictMetricDepth (per face)  → raw per-face metric depths
   3. SharpDepthMerge                     → seam-free equirect depth (LSMR)
   4. SharpPanoramaIcosahedronSplit (on the merged depth IMAGE)
-                                          → re-cropped CONSISTENT face depths
-  5. SharpPredictGaussiansFromMetricDepth(face_images, consistent_face_depths)
+                                          → re-cropped face depths in
+                                            equirect ray-distance convention
+  5. SharpPredictGaussiansFromMetricDepth(face_images, consistent_face_depths,
+                                          depth_convention="ray_distance")
                                           → folder of seam-aligned PLYs
   6. MergeGaussians                      → final unified PLY
+
+When step 4 returns ray-distance depth (the equirect convention), set
+`depth_convention="ray_distance"` so the node applies the
+ray-distance → planar-Z cos-map conversion using the per-face intrinsics.
+For depths that are already in SHARP's native planar-Z convention
+(e.g. straight from `SharpPredictMetricDepth` on a single face),
+leave it at the default `"planar_z"`.
 """
 
 from __future__ import annotations
@@ -141,6 +150,30 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                         "decoder's predicted z (the direct-monodepth-override "
                         "behavior is in effect but not enforced)."
                     )),
+                io.Combo.Input(
+                    "depth_convention",
+                    options=["planar_z", "ray_distance"],
+                    default="planar_z",
+                    tooltip=(
+                        "Convention of the incoming `metric_depth`.\n\n"
+                        "  planar_z (default): depth along the face's optical "
+                        "axis — what SHARP's `unproject_gaussians` and the "
+                        "internal monodepth use natively. Pick this when the "
+                        "depth comes straight from SharpPredictMetricDepth on "
+                        "a single face, or from any rectilinear monodepth "
+                        "model (MoGe2, DA3, etc.).\n\n"
+                        "  ray_distance: Euclidean distance from the camera "
+                        "center along each pixel's ray — the equirect "
+                        "convention. Pick this when the depth was extracted "
+                        "via SharpDepthMerge → SharpPanoramaIcosahedronSplit, "
+                        "i.e. when each face was cut out of an equirect "
+                        "depth panorama. The node multiplies by the per-face "
+                        "cos-map `1 / sqrt(((u-cx)/fx)² + ((v-cy)/fy)² + 1)` "
+                        "to convert. At a 90° face corner the difference "
+                        "is ~73% — feeding the wrong convention will distort "
+                        "gaussians toward / away from the camera at face "
+                        "edges."
+                    )),
                 io.Custom("EXTRINSICS").Input(
                     "extrinsics", optional=True,
                     tooltip="Per-face extrinsics from "
@@ -197,6 +230,7 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
         output_prefix: str = "sharp_aligned",
         save_background_layer: bool = True,
         snap_to_external_depth: str = "z_only",
+        depth_convention: str = "planar_z",
         edge_crop: float = 0.0,
         extrinsics: torch.Tensor | None = None,
         intrinsics: torch.Tensor | None = None,
@@ -305,6 +339,44 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
             if md_b.dim() == 3:
                 md_b = md_b[..., 0]
             md_b = md_b.to(device).float().unsqueeze(0).unsqueeze(0)
+
+            # Optional ray-distance → planar-Z conversion. Apply at the
+            # depth's native resolution (before the resize to 1536²) so the
+            # convention boundary doesn't get smeared by bilinear interp.
+            # cos_map = 1 / sqrt(((u-cx)/fx)² + ((v-cy)/fy)² + 1), built from
+            # the per-face intrinsics rescaled to the depth grid. If
+            # `intrinsics` wasn't wired we fall back to a synthetic K from
+            # `f_px` + image (width, height) — same K we'd build later at
+            # the unprojection step, so we never silently skip the convert.
+            if depth_convention == "ray_distance":
+                Hd, Wd = md_b.shape[-2:]
+                if intrinsics is not None:
+                    fx_px = float(intr_b[0, 0])
+                    fy_px = float(intr_b[1, 1])
+                    cx_px = float(intr_b[0, 2])
+                    cy_px = float(intr_b[1, 2])
+                else:
+                    fx_px = fy_px = float(f_px)
+                    cx_px = width / 2.0
+                    cy_px = height / 2.0
+                sx = Wd / float(width)
+                sy = Hd / float(height)
+                fx_d = fx_px * sx
+                fy_d = fy_px * sy
+                cx_d = cx_px * sx
+                cy_d = cy_px * sy
+                uu = torch.arange(Wd, dtype=torch.float32, device=device)
+                vv = torch.arange(Hd, dtype=torch.float32, device=device)
+                uu_g, vv_g = torch.meshgrid(uu, vv, indexing="xy")
+                x_cam = (uu_g - cx_d) / fx_d
+                y_cam = (vv_g - cy_d) / fy_d
+                cos_map = 1.0 / torch.sqrt(x_cam * x_cam + y_cam * y_cam + 1.0)
+                md_b = md_b * cos_map.unsqueeze(0).unsqueeze(0)
+                if b == 0:
+                    _p(f"depth_convention=ray_distance → applying cos_map "
+                       f"(min={float(cos_map.min()):.4f} "
+                       f"max={float(cos_map.max()):.4f}) per face")
+
             external_depth = F.interpolate(
                 md_b, size=internal_shape, mode="bilinear", align_corners=True,
             )

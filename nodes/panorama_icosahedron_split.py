@@ -314,31 +314,6 @@ class SharpPanoramaIcosahedronSplit(io.ComfyNode):
                             "torch.nn.functional.grid_sample (bilinear) on "
                             "CUDA. Falls back to CPU if CUDA isn't "
                             "available. Math identical within fp32 round-off."),
-                io.Boolean.Input(
-                    "convert_distance_to_planar", default=False, optional=True,
-                    tooltip=(
-                        "ONLY enable when the input panorama is a DEPTH map "
-                        "in equirect ray-distance convention (e.g. the output "
-                        "of SharpDepthMerge, which stores Euclidean distance "
-                        "from the camera center along each equirect pixel's "
-                        "ray direction).\n\n"
-                        "Equirect depth is naturally a 'ray-distance field' "
-                        "(per direction), but downstream consumers like "
-                        "SharpPredictGaussiansFromMetricDepth expect per-face "
-                        "PLANAR Z (depth along the face's optical axis). At "
-                        "the corner of a 90° face the two differ by ~73% — "
-                        "feeding ray-distance where planar Z is expected "
-                        "causes the same world point to land at different "
-                        "3D positions when viewed from different faces.\n\n"
-                        "When True: after bilinear sampling each face, "
-                        "multiply by the per-pixel cos-map "
-                        "  cos_map[u, v] = 1 / sqrt(((u-cx)/fx)² + "
-                        "((v-cy)/fy)² + 1)\n"
-                        "which depends only on K (shared across all faces). "
-                        "Output is per-face planar Z, ready to feed SHARP.\n\n"
-                        "Leave False (default) for RGB panoramas — color is "
-                        "per-direction and doesn't need conversion."
-                    )),
             ],
             outputs=[
                 io.Image.Output(display_name="face_images"),
@@ -356,7 +331,6 @@ class SharpPanoramaIcosahedronSplit(io.ComfyNode):
         subdivision: str = "icosahedron_42",
         fov_deg: float = 90.0,
         use_gpu: bool = True,
-        convert_distance_to_planar: bool = False,
     ):
         # Normalize input shape -> [H, W, 3], float. Values are passed
         # through as-is — no uint8-detection rescale. Caller is responsible
@@ -418,33 +392,6 @@ class SharpPanoramaIcosahedronSplit(io.ComfyNode):
         face_images_t = torch.stack(face_images, dim=0).contiguous()  # [N, R, R, 3]
         intrinsics_t = K.unsqueeze(0).expand(N, -1, -1).contiguous()  # [N, 3, 3]
         extrinsics_t = extrinsics.contiguous()  # [N, 4, 4]
-
-        # Optional ray-distance → per-face planar-Z conversion. Equirect depth
-        # is naturally per-direction ray-distance (Euclidean from camera
-        # center); SHARP's NDC unprojection expects planar Z (along the face's
-        # optical axis). Convert by multiplying with cos(angle from optical
-        # axis) = 1 / sqrt(((u-cx)/fx)² + ((v-cy)/fy)² + 1). Same map for
-        # every face (depends only on K).
-        if convert_distance_to_planar:
-            R = int(resolution)
-            uu = torch.arange(R, dtype=torch.float32, device=device)
-            vv = torch.arange(R, dtype=torch.float32, device=device)
-            uu_g, vv_g = torch.meshgrid(uu, vv, indexing="xy")  # (R, R)
-            fx = float(K[0, 0])
-            fy = float(K[1, 1])
-            cx = float(K[0, 2])
-            cy = float(K[1, 2])
-            x_cam = (uu_g - cx) / fx
-            y_cam = (vv_g - cy) / fy
-            ray_norm = torch.sqrt(x_cam * x_cam + y_cam * y_cam + 1.0)
-            cos_map = 1.0 / ray_norm  # (R, R), values in (~0.577, 1] for 90° fov
-            face_images_t = face_images_t * cos_map.unsqueeze(0).unsqueeze(-1)
-            log.info(
-                f"[SharpPanoramaIcosahedronSplit] applied ray-distance → "
-                f"planar-Z conversion: cos_map min={float(cos_map.min()):.4f} "
-                f"max={float(cos_map.max()):.4f} (factor at corners depends "
-                f"on FOV)"
-            )
 
         # Debug overlay: panorama with each face's frustum edges drawn on it.
         # uint8 round-trip needed for cv2.polylines; pano values may be RGB
