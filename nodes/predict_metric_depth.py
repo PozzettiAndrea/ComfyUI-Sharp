@@ -161,8 +161,31 @@ class SharpPredictMetricDepth(io.ComfyNode):
                 f"intrinsics not wired → using identity-style K "
                 f"(focal={_f_px_default:.1f}px @ image {_img_W}×{_img_H}, "
                 f"35mm-equiv {focal_length_mm:.1f}mm). Pass intrinsics from "
-                f"SharpPanoramaIcosahedronSplit for per-face accurate K."
+                f"PanoramaSplit for per-face accurate K."
             )
+        else:
+            # Convention sniff: PanoPack's PanoramaSplit emits NORMALIZED K
+            # (fx≈0.5, cx≈0.5 for 90° fov via utils3d.np.intrinsics_from_fov,
+            # units in [0,1]), whereas Sharp's predict path assumes pixel-K
+            # (fx in the hundreds). Without this conversion, `f_px = K[0,0] *
+            # (1536/width)` resolves to 0.5 instead of ~768, the disparity →
+            # depth math collapses, and every face comes out as a blank (~0)
+            # depth map. Detect normalized (fx < 2.0) and rescale once to
+            # pixel-K for the face image's (width, height). All downstream
+            # uses (f_px, _rescale_K to 1536) then see pixel-K.
+            _sample_fx = float(intrinsics[0, 0, 0] if intrinsics.dim() == 3 else intrinsics[0, 0])
+            if _sample_fx < 2.0:
+                intrinsics = intrinsics.clone().float()
+                if intrinsics.dim() == 3:
+                    intrinsics[:, 0, :] *= float(_img_W)
+                    intrinsics[:, 1, :] *= float(_img_H)
+                else:
+                    intrinsics[0, :] *= float(_img_W)
+                    intrinsics[1, :] *= float(_img_H)
+                _p(
+                    f"detected normalized intrinsics (fx<2); rescaled to "
+                    f"pixel-K for {_img_W}×{_img_H}: fx={float(intrinsics[0, 0, 0] if intrinsics.dim() == 3 else intrinsics[0, 0]):.1f}"
+                )
 
         internal_shape = (1536, 1536)
         input_shape = [1, 3, internal_shape[0], internal_shape[1]]
