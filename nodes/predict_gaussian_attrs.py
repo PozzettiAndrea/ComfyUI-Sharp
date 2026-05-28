@@ -404,8 +404,22 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
             # f_px on the original image, projected to internal_shape's coords.
             # Matches SharpPredict's disparity_factor convention so the decoder
             # produces the same gaussians.
+            #
+            # Convention sniff: PanoPack's PanoramaSplit emits NORMALIZED K
+            # (fx≈0.5, cx≈0.5 for 90° fov via utils3d.np.intrinsics_from_fov,
+            # units in [0,1]) whereas Sharp's predict path assumes pixel-K
+            # (fx in the hundreds). Rescale to pixel-K once before computing
+            # f_px so the disparity → depth math doesn't collapse to ~0.
             if intrinsics is not None:
                 intr_b = intrinsics[b] if intrinsics.dim() == 3 else intrinsics
+                if float(intr_b[0, 0]) < 2.0:
+                    intr_b = intr_b.clone().float()
+                    intr_b[0] = intr_b[0] * float(width)
+                    intr_b[1] = intr_b[1] * float(height)
+                    if b == 0:
+                        _p(f"detected normalized intrinsics (fx<2); "
+                           f"rescaled to pixel-K for {width}x{height}: "
+                           f"fx={float(intr_b[0, 0]):.1f}")
                 f_px = float(intr_b[0, 0]) * (internal_shape[0] / width)
             else:
                 # Match SharpPredict's `convert_focallength` formula (35mm
