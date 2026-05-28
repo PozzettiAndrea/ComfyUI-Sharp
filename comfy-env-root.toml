@@ -1,3 +1,4 @@
 [node_reqs]
 ComfyUI-GeometryPack = "PozzettiAndrea/ComfyUI-GeometryPack"
 ComfyUI-GaussianPack = "PozzettiAndrea/ComfyUI-GaussianPack"
+ComfyUI-PanoPack = "PozzettiAndrea/ComfyUI-PanoPack"
