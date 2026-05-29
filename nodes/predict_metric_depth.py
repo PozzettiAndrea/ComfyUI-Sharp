@@ -110,6 +110,17 @@ class SharpPredictMetricDepth(io.ComfyNode):
                     display_name="intrinsics_mdepth",
                     tooltip="Intrinsics rescaled to the 1536² depth grid. "
                             "Applies to both depth layers."),
+                io.Image.Output(
+                    display_name="layer_0_points_raw",
+                    tooltip="[B, 1536, 1536, 3] LAYER-0 per-pixel 3D point "
+                            "map in CAMERA SPACE — (X, Y, Z) in meters at "
+                            "each pixel. Wire directly into "
+                            "PanoramaDepthMerge.face_points (which expects "
+                            "this exact shape — NOT the scalar depth)."),
+                io.Image.Output(
+                    display_name="layer_1_points_raw",
+                    tooltip="[B, 1536, 1536, 3] LAYER-1 per-pixel 3D point "
+                            "map in camera space."),
             ],
         )
 
@@ -252,6 +263,39 @@ class SharpPredictMetricDepth(io.ComfyNode):
         metric_img_l0 = metric_batch_l0.unsqueeze(-1).expand(-1, -1, -1, 3).contiguous()
         metric_img_l1 = metric_batch_l1.unsqueeze(-1).expand(-1, -1, -1, 3).contiguous()
 
+        # Per-face 3D point maps in camera space:
+        #   x_cam = (u - cx) / fx
+        #   y_cam = (v - cy) / fy
+        #   points[u, v] = (x_cam · Z, y_cam · Z, Z)
+        # By construction ||points|| == ray distance (Euclidean from camera
+        # center), which is what PanoramaDepthMerge.face_points consumes.
+        # Built at 1536² to match the depth grid; `intrinsics` is already in
+        # pixel-K convention here (the fx<2 normalized sniff at the top of
+        # execute() rescaled if PanoPack-style normalized K was passed).
+        Hd = Wd = internal_shape[0]
+        grid_device = metric_batch_l0.device
+        points_l0 = []
+        points_l1 = []
+        for b in range(B):
+            intr_b = intrinsics[b] if intrinsics.dim() == 3 else intrinsics
+            sx = Wd / float(last_width)
+            sy = Hd / float(last_height)
+            fx_d = float(intr_b[0, 0]) * sx
+            fy_d = float(intr_b[1, 1]) * sy
+            cx_d = float(intr_b[0, 2]) * sx
+            cy_d = float(intr_b[1, 2]) * sy
+            uu = torch.arange(Wd, dtype=torch.float32, device=grid_device)
+            vv = torch.arange(Hd, dtype=torch.float32, device=grid_device)
+            uu_g, vv_g = torch.meshgrid(uu, vv, indexing="xy")  # (Hd, Wd)
+            x_ndc = (uu_g - cx_d) / fx_d
+            y_ndc = (vv_g - cy_d) / fy_d
+            Z0 = metric_batch_l0[b]
+            Z1 = metric_batch_l1[b]
+            points_l0.append(torch.stack([x_ndc * Z0, y_ndc * Z0, Z0], dim=-1))
+            points_l1.append(torch.stack([x_ndc * Z1, y_ndc * Z1, Z1], dim=-1))
+        points_batch_l0 = torch.stack(points_l0, dim=0).contiguous()  # (B, Hd, Wd, 3)
+        points_batch_l1 = torch.stack(points_l1, dim=0).contiguous()
+
         if intrinsics is not None:
             intrinsics_mdepth_out, k_fx_md_dbg = _rescale_K(
                 intrinsics, internal_shape[1], internal_shape[0],
@@ -264,15 +308,23 @@ class SharpPredictMetricDepth(io.ComfyNode):
 
         m_med_l0 = float(metric_batch_l0.median())
         m_med_l1 = float(metric_batch_l1.median())
+        # ||points|| range as a sanity check that depth × unprojection
+        # produced sensible scene-scale 3D positions.
+        pts_norm = points_batch_l0.norm(dim=-1)
+        pts_min = float(pts_norm.min())
+        pts_max = float(pts_norm.max())
         elapsed = time.time() - t_start
         k_str = f", K_{internal_shape[0]} fx→{k_fx_md_dbg:.1f}" if k_fx_md_dbg is not None else ""
         _p(
             f"{B} face(s) @ {internal_shape[0]}²; "
-            f"layer0/layer1 depth median={m_med_l0:.2f}m/{m_med_l1:.2f}m{k_str}; {elapsed:.1f}s"
+            f"layer0/layer1 depth median={m_med_l0:.2f}/{m_med_l1:.2f}m{k_str}; "
+            f"points_raw ||v||={pts_min:.2f}–{pts_max:.2f}m; {elapsed:.1f}s"
         )
 
         return io.NodeOutput(
-            metric_img_l0, metric_img_l1, extrinsics_mdepth_out, intrinsics_mdepth_out,
+            metric_img_l0, metric_img_l1,
+            extrinsics_mdepth_out, intrinsics_mdepth_out,
+            points_batch_l0, points_batch_l1,
         )
 
 
