@@ -93,21 +93,36 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                 io.Custom("SHARP_MODEL_CONFIG").Input("model"),
                 io.Image.Input("image"),
                 io.Image.Input(
-                    "metric_depth",
-                    tooltip="External per-face metric depth (any resolution; "
-                            "auto-resized to SHARP's internal 1536²). This "
-                            "depth REPLACES SHARP's own monodepth for BOTH "
-                            "layers (no learned scale-map alignment) — the "
-                            "gaussian decoder's `init_model` sees your depth "
-                            "directly as the scaffold for layer-0 AND layer-1 "
-                            "base values. Layer 1 gaussians end up on the "
-                            "same surface as layer 0 (no sky-backplate "
-                            "hallucination), the per-layer prediction head's "
-                            "deltas can still drift them sub-pixel in xy + "
-                            "color so layer 1 serves as a view-dependent "
-                            "appearance variation. Typically: "
-                            "SharpPredictMetricDepth → SharpDepthMerge → "
-                            "SharpPanoramaIcosahedronSplit (depth as IMAGE)."),
+                    "metric_depth_layer0",
+                    tooltip="External per-face metric depth for LAYER 0 "
+                            "(visible/front surface). Any resolution; "
+                            "auto-resized to SHARP's internal 1536². "
+                            "Replaces SHARP's own monodepth layer 0 — the "
+                            "gaussian decoder's `init_model` sees this as "
+                            "the scaffold for layer-0 base values.\n\n"
+                            "When `metric_depth_layer1` is left unwired, "
+                            "this same depth is duplicated into layer 1 "
+                            "(legacy behavior: layer-1 gaussians collapse "
+                            "onto the front surface; only the prediction "
+                            "head's sub-pixel xy / color drift differen-"
+                            "tiates them). Wire layer 1 separately to get "
+                            "real 2-surface geometry."),
+                io.Image.Input(
+                    "metric_depth_layer1", optional=True,
+                    tooltip="OPTIONAL external metric depth for LAYER 1 "
+                            "(back/occluded surface). When wired, layer 1 "
+                            "of `monodepth_override` uses THIS instead of "
+                            "duplicating layer-0. Restores SHARP's native "
+                            "2-surface semantics (layer 0 = visible, "
+                            "layer 1 = behind it) using your external "
+                            "depths instead of the model's predictions.\n\n"
+                            "Typical sources: SHARP's own "
+                            "`SharpPredictMetricDepth.layer_1_metric_depth` "
+                            "(model-hallucinated back surface), or `layer0 "
+                            "+ small_offset` (e.g. +0.1 m) for a synthetic "
+                            "back-plate, or any other depth predictor.\n\n"
+                            "Unwired (default): layer 1 = layer 0 "
+                            "(today's behavior)."),
                 io.Float.Input(
                     "focal_length_mm", default=30.0, min=0.0, max=500.0,
                     step=0.1, optional=True,
@@ -225,7 +240,8 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
         cls,
         model,
         image: torch.Tensor,
-        metric_depth: torch.Tensor,
+        metric_depth_layer0: torch.Tensor,
+        metric_depth_layer1: torch.Tensor | None = None,
         focal_length_mm: float = 30.0,
         output_prefix: str = "sharp_aligned",
         save_background_layer: bool = True,
@@ -249,12 +265,31 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
             image = image.unsqueeze(0)
         B = image.shape[0]
 
+        metric_depth = metric_depth_layer0
         if metric_depth.dim() == 3:
             metric_depth = metric_depth.unsqueeze(0)
         if metric_depth.shape[0] != B:
             raise ValueError(
-                f"metric_depth batch {metric_depth.shape[0]} != image batch {B}"
+                f"metric_depth_layer0 batch {metric_depth.shape[0]} != "
+                f"image batch {B}"
             )
+
+        # Optional layer-1 depth (back/occluded surface). If unwired,
+        # layer 1 == layer 0 (legacy behavior).
+        metric_depth_l1 = metric_depth_layer1
+        if metric_depth_l1 is not None:
+            if metric_depth_l1.dim() == 3:
+                metric_depth_l1 = metric_depth_l1.unsqueeze(0)
+            if metric_depth_l1.shape[0] != B:
+                raise ValueError(
+                    f"metric_depth_layer1 batch {metric_depth_l1.shape[0]} != "
+                    f"image batch {B}"
+                )
+            _p("metric_depth_layer1 wired → layer-0 + layer-1 will get "
+               "DIFFERENT depths through init_model")
+        else:
+            _p("metric_depth_layer1 unwired → layer 1 will duplicate layer 0 "
+               "(legacy behavior)")
 
         # Sanity-check the alignment is wired through the model.
         scale_map_estimator = predictor.depth_alignment.scale_map_estimator
@@ -286,6 +321,11 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
         all_ply_paths = []
         all_extrinsics = []
         all_intrinsics = []
+        # Per-face denormalized PIXEL-K, captured so the `intrinsics`
+        # output socket emits the same convention SharpPredict does
+        # (pixel-K), regardless of whether the input was normalized
+        # (PanoramaSplit, fx≈0.5) or already pixel-K.
+        all_intr_px = []
 
         pbar = comfy.utils.ProgressBar(B)
         t_start = time.time()
@@ -331,6 +371,13 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
             # the face image's (width, height) so EVERY downstream use of
             # intr_b -- the f_px formula below, the cos_map for ray_distance,
             # and the unprojection K -- sees the same convention.
+            # `intr_b_px` is the per-batch K in PIXEL-K convention. We
+            # reuse it for f_px, the ray→planar cos_map, AND the
+            # unprojection K further down — previously the unprojection
+            # step re-fetched from the raw `intrinsics` tensor, which
+            # silently bypassed the normalized→pixel correction and
+            # produced garbage when PanoramaSplit's normalized K was wired.
+            intr_b_px = None
             if intrinsics is not None:
                 intr_b = intrinsics[b] if intrinsics.dim() == 3 else intrinsics
                 if float(intr_b[0, 0]) < 2.0:
@@ -342,6 +389,8 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                            f"rescaled to pixel-K for {width}x{height}: "
                            f"fx={float(intr_b[0, 0]):.1f} "
                            f"cx={float(intr_b[0, 2]):.1f}")
+                intr_b_px = intr_b
+                all_intr_px.append(intr_b_px.detach().cpu())
                 f_px = float(intr_b[0, 0]) * (internal_shape[0] / width)
             else:
                 # Match SharpPredict's `convert_focallength` formula so the
@@ -397,14 +446,57 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
             external_depth = F.interpolate(
                 md_b, size=internal_shape, mode="bilinear", align_corners=True,
             )
-            # Both monodepth layers = external depth → no back-surface
-            # hallucination. Layer 1's gaussians collapse onto the same
-            # surface as layer 0; the prediction head's per-layer deltas
-            # can still drift them sub-pixel in xy and color, so layer 1
-            # serves as the view-dependent appearance variation rather
-            # than an occlusion backplate (consistent with how SHARP uses
-            # layer 1 as an SH-coefficient substitute per the paper).
-            monodepth_override = external_depth.repeat(1, 2, 1, 1)  # [1, 2, 1536, 1536]
+
+            # Layer-1 path. When wired, apply the SAME conversions
+            # (ray-distance → planar-Z if requested) to keep both layers
+            # in the convention the model expects.
+            if metric_depth_l1 is not None:
+                md_b1 = metric_depth_l1[b]
+                if md_b1.dim() == 3:
+                    md_b1 = md_b1[..., 0]
+                md_b1 = md_b1.to(device).float().unsqueeze(0).unsqueeze(0)
+                if depth_convention == "ray_distance":
+                    # cos_map already built above for layer 0 at md_b's
+                    # native shape; it applies to layer 1 only if its
+                    # shape matches. Rebuild defensively.
+                    Hd1, Wd1 = md_b1.shape[-2:]
+                    sx1 = Wd1 / float(width)
+                    sy1 = Hd1 / float(height)
+                    uu1 = torch.arange(Wd1, dtype=torch.float32, device=device)
+                    vv1 = torch.arange(Hd1, dtype=torch.float32, device=device)
+                    uu_g1, vv_g1 = torch.meshgrid(uu1, vv1, indexing="xy")
+                    if intrinsics is not None:
+                        fx_d1 = float(intr_b[0, 0]) * sx1
+                        fy_d1 = float(intr_b[1, 1]) * sy1
+                        cx_d1 = float(intr_b[0, 2]) * sx1
+                        cy_d1 = float(intr_b[1, 2]) * sy1
+                    else:
+                        fx_d1 = fy_d1 = float(f_px) * sx1
+                        cx_d1 = (width / 2.0) * sx1
+                        cy_d1 = (height / 2.0) * sy1
+                    x_cam1 = (uu_g1 - cx_d1) / fx_d1
+                    y_cam1 = (vv_g1 - cy_d1) / fy_d1
+                    cos1 = 1.0 / torch.sqrt(x_cam1 * x_cam1 + y_cam1 * y_cam1 + 1.0)
+                    md_b1 = md_b1 * cos1.unsqueeze(0).unsqueeze(0)
+                external_depth_l1 = F.interpolate(
+                    md_b1, size=internal_shape, mode="bilinear", align_corners=True,
+                )
+                # Restore SHARP's 2-surface semantics with EXTERNAL depths.
+                # Layer 0 = your front depth (e.g. plane-snapped HYWM2),
+                # Layer 1 = your back depth (e.g. SHARP's own predicted
+                # layer 1, or a +offset back-plate). Prediction head still
+                # adds per-layer Δs on top of these distinct base surfaces.
+                monodepth_override = torch.cat(
+                    [external_depth, external_depth_l1], dim=1,
+                )  # [1, 2, 1536, 1536] with layer 0 ≠ layer 1
+            else:
+                # Legacy behavior: both monodepth layers = external depth →
+                # no back-surface hallucination. Layer 1's gaussians collapse
+                # onto the same surface as layer 0; the prediction head's
+                # per-layer deltas can still drift them sub-pixel in xy and
+                # color, so layer 1 serves as the view-dependent appearance
+                # variation rather than an occlusion backplate.
+                monodepth_override = external_depth.repeat(1, 2, 1, 1)  # [1, 2, 1536, 1536]
 
             # Direct override: bypass `depth_alignment` (the learned scale-
             # map UNet). The paper's recommended inference path passes
@@ -433,14 +525,33 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
             N_total = int(gaussians_ndc.mean_vectors.shape[1])
             num_layers = N_total // (H_grid * W_grid)
 
-            ext_at_grid = F.adaptive_avg_pool2d(
+            ext_at_grid_l0 = F.adaptive_avg_pool2d(
                 external_depth, output_size=(H_grid, W_grid),
             )[0, 0]  # [H_grid, W_grid]
-            target_z_flat = (
-                ext_at_grid.unsqueeze(0)
-                .expand(num_layers, H_grid, W_grid)
-                .reshape(-1)
-            )  # [N_total]
+            # Layer-1 target: use the wired layer-1 depth if available,
+            # else duplicate layer 0 (matches the override semantics above).
+            if metric_depth_l1 is not None:
+                ext_at_grid_l1 = F.adaptive_avg_pool2d(
+                    external_depth_l1, output_size=(H_grid, W_grid),
+                )[0, 0]
+            else:
+                ext_at_grid_l1 = ext_at_grid_l0
+            # Stack per-layer targets and flatten in (layer, h, w) order to
+            # match the composer's output layout. Handles num_layers > 2 by
+            # broadcasting layer 1's target to any extra layers.
+            if num_layers == 1:
+                target_z_flat = ext_at_grid_l0.reshape(-1)
+            elif num_layers == 2:
+                target_z_flat = torch.stack(
+                    [ext_at_grid_l0, ext_at_grid_l1], dim=0,
+                ).reshape(-1)  # [2, H, W] -> [N_total]
+            else:
+                # Unusual: more than 2 layers. Layer 0 from layer-0 target,
+                # all others from layer-1 target.
+                extras = ext_at_grid_l1.unsqueeze(0).expand(num_layers - 1, H_grid, W_grid)
+                target_z_flat = torch.cat(
+                    [ext_at_grid_l0.unsqueeze(0), extras], dim=0,
+                ).reshape(-1)
 
             stride = internal_shape[0] // H_grid
             xs_ndc = torch.arange(
@@ -539,8 +650,11 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                 unproj_extrinsics = torch.eye(4, device=device)
 
             if intrinsics is not None:
-                intr_b = intrinsics[b] if intrinsics.dim() == 3 else intrinsics
-                K = intr_b.to(device).float().clone()
+                # Reuse the per-batch PIXEL-K computed at the top of the
+                # loop. Re-fetching from `intrinsics` here would silently
+                # bypass the normalized→pixel correction and give garbage
+                # `intrinsics_resized` (fx_resized = 0.5 * internal/width).
+                K = intr_b_px.to(device).float().clone()
                 # Promote to 4x4 if it came as 3x3 (unproject_gaussians wants 4x4).
                 if K.shape == (3, 3):
                     K4 = torch.eye(4, device=device, dtype=K.dtype)
@@ -647,8 +761,34 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
         # without caring about batch size.
         ply_folder_out = output_folder if is_batch else os.path.dirname(output_path)
 
+        # Output sockets:
+        #
+        # - extrinsics: forward the user's input verbatim when wired.
+        #   No convention conversion needed (it's R|t).
+        #
+        # - intrinsics: forward the DENORMALIZED pixel-K we captured
+        #   per face (`all_intr_px`), NOT the raw input. PanoramaSplit
+        #   emits normalized K (fx≈0.5); SharpPredict's `intrinsics`
+        #   output is pixel-K (fx in the hundreds) because it stores
+        #   the denormalized form in `metadata["intrinsic"]`. Matching
+        #   that convention keeps downstream consumers (preview
+        #   viewers, gaussian camera nodes, etc.) seeing one K format
+        #   across SHARP's predict family.
+        out_extrinsics = extrinsics if extrinsics is not None else all_extrinsics[0]
+        if intrinsics is not None and all_intr_px:
+            # Stack per-face pixel-K into a batched tensor matching the
+            # input's leading-dim convention. Squeeze the batch dim when
+            # input was 2-D (single shared K).
+            stacked = torch.stack([t.float() for t in all_intr_px], dim=0)
+            if intrinsics.dim() == 2:
+                out_intrinsics = stacked[0]
+            else:
+                out_intrinsics = stacked
+        else:
+            out_intrinsics = all_intrinsics[0]
+
         return io.NodeOutput(
-            output_path, ply_folder_out, all_extrinsics[0], all_intrinsics[0],
+            output_path, ply_folder_out, out_extrinsics, out_intrinsics,
         )
 
 

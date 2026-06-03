@@ -187,6 +187,43 @@ class SharpPredict(io.ComfyNode):
                 # Use provided intrinsics (extract focal length)
                 img_intrinsics = intrinsics.to(device)
                 img_extrinsics = extrinsics[i].to(device)
+                # Strip leading batch dim if a single-camera intrinsics
+                # came in as [1, 3, 3] or [1, 4, 4] (e.g. from upstream
+                # broadcast). f_px extraction + the downstream `ndc @ K @
+                # E` chain both want an UNBATCHED matrix.
+                if img_intrinsics.dim() == 3 and img_intrinsics.shape[0] == 1:
+                    img_intrinsics = img_intrinsics[0]
+                # Detect NORMALIZED K (fx, fy ∈ [0, 1]) and rescale to
+                # pixel-K at this image's resolution. PanoramaSplit emits
+                # normalized K by default (fx≈0.5 for a 90° FOV face);
+                # SHARP's downstream `intrinsics_resized = K * (internal /
+                # width)` plus `f_px = K[0, 0].item()` both assume pixel-K
+                # at the INPUT image's resolution. Same sniff pattern HYWM2
+                # uses (see `_normalize_K_to_pixel` in HYWM2 train).
+                if img_intrinsics.dim() == 2 and float(img_intrinsics[0, 0]) < 2.0:
+                    K = img_intrinsics.clone()
+                    K[0, :] = K[0, :] * float(width)
+                    K[1, :] = K[1, :] * float(height)
+                    img_intrinsics = K
+                    if i == 0:
+                        log.info(
+                            f"detected normalized intrinsics (fx<2); "
+                            f"rescaled to pixel-K for {width}x{height}: "
+                            f"fx={float(K[0, 0]):.1f} fy={float(K[1, 1]):.1f} "
+                            f"cx={float(K[0, 2]):.1f} cy={float(K[1, 2]):.1f}"
+                        )
+                # Promote 3x3 K -> 4x4 homogeneous K so `get_unprojection_matrix`
+                # (sharp/gaussians.py:85, `ndc_matrix @ intrinsics @ extrinsics`)
+                # can multiply against the 4x4 ndc_matrix + 4x4 extrinsics
+                # without a shape mismatch. The standard ecosystem
+                # convention is 3x3 K (PanoramaSplit, HYWM2, MoGe2 all
+                # emit 3x3); SHARP internally wants the homogeneous 4x4.
+                if img_intrinsics.dim() == 2 and img_intrinsics.shape == (3, 3):
+                    K3 = img_intrinsics
+                    K4 = torch.zeros(4, 4, dtype=K3.dtype, device=K3.device)
+                    K4[:3, :3] = K3
+                    K4[3, 3] = 1.0
+                    img_intrinsics = K4
                 f_px = img_intrinsics[0, 0].item()  # fx from intrinsics matrix
             else:
                 # Use focal_length_mm parameter
