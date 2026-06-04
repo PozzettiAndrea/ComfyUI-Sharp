@@ -145,8 +145,8 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                     )),
                 io.Combo.Input(
                     "snap_to_external_depth",
-                    options=["z_only", "xyz_full", "none"],
-                    default="z_only",
+                    options=["none", "z_only", "xyz_full"],
+                    default="none",
                     tooltip=(
                         "Force gaussian positions to exactly match the external "
                         "depth in NDC space (applied after gaussian_composer, "
@@ -201,6 +201,13 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                             "ORIGINAL face image resolution, not the merged "
                             "depth resolution). If absent, focal_length_mm "
                             "is used."),
+                io.Mask.Input(
+                    "mask", optional=True,
+                    tooltip="Optional per-face mask (B, H, W). Gaussians at "
+                            "pixels where mask < 0.5 are deleted. Must match "
+                            "image batch size. Use PanoramaSplit's "
+                            "'create_masks' to generate voronoi-style masks "
+                            "that remove overlap between adjacent faces."),
                 io.Float.Input(
                     "edge_crop", default=0.0, min=0.0, max=0.5, step=0.01,
                     optional=True,
@@ -247,6 +254,7 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
         save_background_layer: bool = True,
         snap_to_external_depth: str = "z_only",
         depth_convention: str = "planar_z",
+        mask: torch.Tensor | None = None,
         edge_crop: float = 0.0,
         extrinsics: torch.Tensor | None = None,
         intrinsics: torch.Tensor | None = None,
@@ -338,6 +346,22 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
             if img_np.dtype != np.uint8:
                 img_np = (np.clip(img_np, 0, 1) * 255 + 0.5).astype(np.uint8)
             height, width = img_np.shape[:2]
+
+            # Log per-face info
+            ext_str = "none"
+            if extrinsics is not None:
+                ext_b = extrinsics[b] if extrinsics.dim() == 3 else extrinsics
+                ext_str = f"[{ext_b[0,3]:.2f}, {ext_b[1,3]:.2f}, {ext_b[2,3]:.2f}]"
+            intr_str = "none"
+            if intrinsics is not None:
+                intr_b_log = intrinsics[b] if intrinsics.dim() == 3 else intrinsics
+                intr_str = f"fx={float(intr_b_log[0,0]):.4f} cx={float(intr_b_log[0,2]):.4f}"
+            has_mask = mask is not None
+            _p(f"face {b+1}/{B}: {width}×{height}, "
+               f"extrinsics={ext_str}, intrinsics={intr_str}, "
+               f"mask={'yes' if has_mask else 'no'}, "
+               f"snap={snap_to_external_depth}, depth_conv={depth_convention}")
+
             image_hash = _compute_image_hash(img_np)
 
             # Encode (shared cache).
@@ -731,6 +755,35 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                         f"per side; kept {n_after}/{n_before} gaussians "
                         f"({100.0 * n_after / max(n_before, 1):.1f}%) per face"
                     )
+
+            # Optional mask: delete gaussians at pixels where mask < 0.5.
+            # mask shape: (B, H, W) — one mask per face in the batch.
+            if mask is not None:
+                mask_b = mask[b] if mask.ndim >= 3 else mask
+                mask_np = mask_b.detach().cpu().numpy() if isinstance(mask_b, torch.Tensor) else np.asarray(mask_b)
+                if mask_np.ndim == 3:
+                    mask_np = mask_np[..., 0]
+                # Resize mask to match the gaussian grid (H_grid x W_grid)
+                if mask_np.shape != (H_grid, W_grid):
+                    import cv2 as _cv2
+                    mask_np = _cv2.resize(mask_np.astype(np.float32), (W_grid, H_grid),
+                                          interpolation=_cv2.INTER_NEAREST)
+                mask_bool = torch.from_numpy((mask_np > 0.5).flatten()).to(
+                    gaussians.mean_vectors.device)
+                if save_background_layer:
+                    mask_bool = torch.cat([mask_bool, mask_bool], dim=0)
+                n_before_mask = int(gaussians.mean_vectors.shape[1])
+                gaussians = gaussians._replace(
+                    mean_vectors=gaussians.mean_vectors[:, mask_bool],
+                    singular_values=gaussians.singular_values[:, mask_bool],
+                    quaternions=gaussians.quaternions[:, mask_bool],
+                    colors=gaussians.colors[:, mask_bool],
+                    opacities=gaussians.opacities[:, mask_bool],
+                )
+                n_after_mask = int(gaussians.mean_vectors.shape[1])
+                if b == 0:
+                    _p(f"mask → kept {n_after_mask}/{n_before_mask} gaussians "
+                       f"({100.0 * n_after_mask / max(n_before_mask, 1):.1f}%)")
 
             # Save PLY.
             if is_batch:
