@@ -609,39 +609,40 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
             # Stats: report would-be shifts at 10 random gaussians + aggregate.
             # Print once per face (we have up to 42 faces — full per-face dump
             # would be noisy).
-            sample_g = torch.Generator(device="cpu").manual_seed(int(b))
-            sample_idx = torch.randperm(N_total, generator=sample_g)[:10]
-            _p(f"--- snap stats face {b} (mode={snap_to_external_depth}, "
-               f"would-be shifts at 10 random gaussians) ---")
-            _p(f"{'idx':>9} | {'lyr':>3} {'h':>4} {'w':>4} | "
-               f"{'z_now':>8} {'z_tgt':>8} {'dz':>8} | "
-               f"{'x_now':>7} {'x_tgt':>7} {'dx':>7} | "
-               f"{'y_now':>7} {'y_tgt':>7} {'dy':>7}")
-            for idx_t in sample_idx.tolist():
-                lyr = idx_t // (H_grid * W_grid)
-                rem = idx_t % (H_grid * W_grid)
-                hh = rem // W_grid
-                ww = rem % W_grid
-                z_now = float(current_z[idx_t])
-                z_tgt = float(target_z_flat[idx_t])
-                x_now = float(current_xx_ndc[idx_t])
-                x_tgt = float(base_xx_flat[idx_t])
-                y_now = float(current_yy_ndc[idx_t])
-                y_tgt = float(base_yy_flat[idx_t])
-                _p(f"{idx_t:>9d} | {lyr:>3d} {hh:>4d} {ww:>4d} | "
-                   f"{z_now:>8.3f} {z_tgt:>8.3f} {z_tgt - z_now:>+8.3f} | "
-                   f"{x_now:>+7.4f} {x_tgt:>+7.4f} {x_tgt - x_now:>+7.4f} | "
-                   f"{y_now:>+7.4f} {y_tgt:>+7.4f} {y_tgt - y_now:>+7.4f}")
-            dz_all = (target_z_flat - current_z).abs()
-            dx_all = (base_xx_flat - current_xx_ndc).abs()
-            dy_all = (base_yy_flat - current_yy_ndc).abs()
-            _p(f"aggregate |shift| over all {N_total} gaussians: "
-               f"|dz| mean={float(dz_all.mean()):.4f} "
-               f"max={float(dz_all.max()):.4f} | "
-               f"|dx_ndc| mean={float(dx_all.mean()):.5f} "
-               f"max={float(dx_all.max()):.5f} | "
-               f"|dy_ndc| mean={float(dy_all.mean()):.5f} "
-               f"max={float(dy_all.max()):.5f}")
+            # NOTE: tagged out — too verbose for normal use; uncomment to debug alignment.
+            # sample_g = torch.Generator(device="cpu").manual_seed(int(b))
+            # sample_idx = torch.randperm(N_total, generator=sample_g)[:10]
+            # _p(f"--- snap stats face {b} (mode={snap_to_external_depth}, "
+            #    f"would-be shifts at 10 random gaussians) ---")
+            # _p(f"{'idx':>9} | {'lyr':>3} {'h':>4} {'w':>4} | "
+            #    f"{'z_now':>8} {'z_tgt':>8} {'dz':>8} | "
+            #    f"{'x_now':>7} {'x_tgt':>7} {'dx':>7} | "
+            #    f"{'y_now':>7} {'y_tgt':>7} {'dy':>7}")
+            # for idx_t in sample_idx.tolist():
+            #     lyr = idx_t // (H_grid * W_grid)
+            #     rem = idx_t % (H_grid * W_grid)
+            #     hh = rem // W_grid
+            #     ww = rem % W_grid
+            #     z_now = float(current_z[idx_t])
+            #     z_tgt = float(target_z_flat[idx_t])
+            #     x_now = float(current_xx_ndc[idx_t])
+            #     x_tgt = float(base_xx_flat[idx_t])
+            #     y_now = float(current_yy_ndc[idx_t])
+            #     y_tgt = float(base_yy_flat[idx_t])
+            #     _p(f"{idx_t:>9d} | {lyr:>3d} {hh:>4d} {ww:>4d} | "
+            #        f"{z_now:>8.3f} {z_tgt:>8.3f} {z_tgt - z_now:>+8.3f} | "
+            #        f"{x_now:>+7.4f} {x_tgt:>+7.4f} {x_tgt - x_now:>+7.4f} | "
+            #        f"{y_now:>+7.4f} {y_tgt:>+7.4f} {y_tgt - y_now:>+7.4f}")
+            # dz_all = (target_z_flat - current_z).abs()
+            # dx_all = (base_xx_flat - current_xx_ndc).abs()
+            # dy_all = (base_yy_flat - current_yy_ndc).abs()
+            # _p(f"aggregate |shift| over all {N_total} gaussians: "
+            #    f"|dz| mean={float(dz_all.mean()):.4f} "
+            #    f"max={float(dz_all.max()):.4f} | "
+            #    f"|dx_ndc| mean={float(dx_all.mean()):.5f} "
+            #    f"max={float(dx_all.max()):.5f} | "
+            #    f"|dy_ndc| mean={float(dy_all.mean()):.5f} "
+            #    f"max={float(dy_all.max()):.5f}")
 
             if snap_to_external_depth == "z_only":
                 # Proportional rescale: mean_vectors *= target_z/current_z.
