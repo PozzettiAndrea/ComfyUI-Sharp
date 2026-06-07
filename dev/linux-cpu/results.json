@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-06-07T20:28:46.911260+00:00",
+  "timestamp": "2026-06-07T21:47:24.557855+00:00",
   "platform": "linux",
   "hardware": {
     "os": "Linux-6.17.0-1015-azure-x86_64-with-glibc2.39",
-    "cpu": "AMD EPYC 7763 64-Core Processor"
+    "cpu": "AMD EPYC 9V74 80-Core Processor"
   },
-  "commit_hash": "d3c12aed8b4d62b78d121b478852188c26ed5634",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/27103239789",
+  "commit_hash": "bc8f98d21459519ae2ae968c1cec0613791e00cc",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/27105058924",
   "success": true,
   "summary": {
     "total": 4,
@@ -24,55 +24,55 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 383.42,
+      "duration_seconds": 434.45,
       "error": null,
       "hardware": {
         "os": "Linux-6.17.0-1015-azure-x86_64-with-glibc2.39",
-        "cpu": "AMD EPYC 7763 64-Core Processor"
+        "cpu": "AMD EPYC 9V74 80-Core Processor"
       },
       "resources": {
         "ram": {
-          "peak": 8.6,
-          "avg": 4.74
+          "peak": 8.82,
+          "avg": 4.79
         },
         "total_ram_gb": 15.6,
-        "samples": 382
+        "samples": 432
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 361.04,
+      "duration_seconds": 397.56,
       "error": null,
       "hardware": {
         "os": "Linux-6.17.0-1015-azure-x86_64-with-glibc2.39",
-        "cpu": "AMD EPYC 7763 64-Core Processor"
+        "cpu": "AMD EPYC 9V74 80-Core Processor"
       },
       "resources": {
         "ram": {
-          "peak": 9.1,
-          "avg": 5.38
+          "peak": 9.02,
+          "avg": 5.35
         },
         "total_ram_gb": 15.6,
-        "samples": 360
+        "samples": 396
       }
     },
     {
       "name": "vanilla_vs_image_depth_gaussians",
       "status": "pass",
-      "duration_seconds": 764.92,
+      "duration_seconds": 843.72,
       "error": null,
       "hardware": {
         "os": "Linux-6.17.0-1015-azure-x86_64-with-glibc2.39",
-        "cpu": "AMD EPYC 7763 64-Core Processor"
+        "cpu": "AMD EPYC 9V74 80-Core Processor"
       },
       "resources": {
         "ram": {
-          "peak": 10.38,
-          "avg": 6.23
+          "peak": 10.47,
+          "avg": 6.27
         },
         "total_ram_gb": 15.6,
-        "samples": 761
+        "samples": 839
       }
     }
   ]
