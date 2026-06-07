@@ -7,10 +7,12 @@ on-demand in _load_sharp_model(), called by inference nodes.
 
 import os
 import sys
+import time
 import logging
 
 import torch
 from huggingface_hub import hf_hub_download
+from huggingface_hub.utils import HfHubHTTPError
 
 from comfy_api.latest import io
 
@@ -59,6 +61,59 @@ except ImportError:
 
 SHARP_REPO_ID = "apple/Sharp"
 SHARP_FILENAME = "sharp_2572gikvuh.pt"
+
+
+def _find_local_checkpoint():
+    """Return the path to an already-present SHARP checkpoint, or None.
+
+    Prefers folder_paths.get_full_path("sharp", ...) so a checkpoint pre-staged
+    in ANY registered "sharp" model folder (including extra_model_paths.yaml or
+    a CI-mounted models dir) is found and re-used -- no re-download. Falls back
+    to the plain MODELS_DIR join when folder_paths is unavailable.
+    """
+    try:
+        import folder_paths
+        hit = folder_paths.get_full_path("sharp", SHARP_FILENAME)
+        if hit and os.path.exists(hit):
+            return hit
+    except Exception:
+        pass
+    direct = os.path.join(MODELS_DIR, SHARP_FILENAME)
+    return direct if os.path.exists(direct) else None
+
+
+def _hf_token():
+    """Use a HF token if the environment provides one. Authenticated requests
+    get a much higher rate limit, which matters in CI where many jobs hit HF at
+    once (anonymous 429s). Returns None when unset -> anonymous download."""
+    for var in ("HF_TOKEN", "HUGGINGFACE_TOKEN", "HUGGING_FACE_HUB_TOKEN"):
+        tok = os.environ.get(var)
+        if tok:
+            return tok
+    return None
+
+
+def _download_with_retry(log_fn, **kwargs):
+    """hf_hub_download with backoff on transient HTTP failures (429 rate limit,
+    5xx). The SHARP checkpoint is large and CI hammers HF in parallel, so a
+    single 429 shouldn't fail the whole run. Retries up to 5x with exponential
+    backoff; re-raises on the final attempt or on non-retryable errors."""
+    token = _hf_token()
+    if token:
+        kwargs.setdefault("token", token)
+    delays = [5, 15, 30, 60]  # seconds; len+1 = total attempts
+    for attempt in range(len(delays) + 1):
+        try:
+            return hf_hub_download(**kwargs)
+        except HfHubHTTPError as e:
+            status = getattr(getattr(e, "response", None), "status_code", None)
+            retryable = status == 429 or (status is not None and 500 <= status < 600)
+            if not retryable or attempt == len(delays):
+                raise
+            wait = delays[attempt]
+            log_fn(f"HF download got HTTP {status} (attempt {attempt + 1}/"
+                   f"{len(delays) + 1}); retrying in {wait}s...")
+            time.sleep(wait)
 
 # -- Module-level model cache (persists across subprocess calls) ----------
 
@@ -196,19 +251,20 @@ class LoadSharpModel(io.ComfyNode):
         dtype_str = {torch.bfloat16: "bf16", torch.float16: "fp16", torch.float32: "fp32"}[dtype]
         _p(f"precision={precision!r} -> dtype={dtype_str} (device={load_device})")
 
-        # Download checkpoint if needed
+        # Locate the checkpoint, downloading only if it isn't already on disk.
         os.makedirs(MODELS_DIR, exist_ok=True)
-        expected_path = os.path.join(MODELS_DIR, SHARP_FILENAME)
-        if os.path.exists(expected_path):
-            # Already downloaded — use it directly, no network call (no HEAD/etag
-            # check). The SHARP checkpoint is immutable, so a present file is valid.
-            size_mb = os.path.getsize(expected_path) / (1024 * 1024)
-            _p(f"checkpoint already present, reusing (no download): {expected_path} ({size_mb:.1f} MB)")
-            model_path = expected_path
+        model_path = _find_local_checkpoint()
+        if model_path is not None:
+            # Already present (in any registered "sharp" model folder, incl.
+            # extra_model_paths.yaml) -> use directly, no network call. The SHARP
+            # checkpoint is immutable, so a present file is valid.
+            size_mb = os.path.getsize(model_path) / (1024 * 1024)
+            _p(f"checkpoint already present, reusing (no download): {model_path} ({size_mb:.1f} MB)")
         else:
-            _p(f"checkpoint not found at {expected_path} — downloading from HuggingFace "
+            _p(f"checkpoint not found — downloading from HuggingFace "
                f"repo '{SHARP_REPO_ID}' file '{SHARP_FILENAME}' -> {MODELS_DIR}")
-            model_path = hf_hub_download(
+            model_path = _download_with_retry(
+                _p,
                 repo_id=SHARP_REPO_ID,
                 filename=SHARP_FILENAME,
                 local_dir=MODELS_DIR,
