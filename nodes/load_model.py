@@ -6,6 +6,7 @@ on-demand in _load_sharp_model(), called by inference nodes.
 """
 
 import os
+import sys
 import logging
 
 import torch
@@ -14,6 +15,13 @@ from huggingface_hub import hf_hub_download
 from comfy_api.latest import io
 
 log = logging.getLogger("sharp")
+
+
+def _p(msg: str) -> None:
+    """Print to stderr so the line surfaces in ComfyUI's worker log
+    (`log.info` on the 'sharp' logger doesn't route through the
+    comfy-env subprocess pipe — direct print to stderr does)."""
+    print(f"[LoadSharpModel] {msg}", file=sys.stderr, flush=True)
 
 
 def _comfy_tqdm():
@@ -90,11 +98,13 @@ def _load_sharp_model(config):
         operations = comfy.ops.pick_operations(dtype, manual_cast_dtype)
 
         # Load state dict
+        _p(f"loading checkpoint from {model_path} (dtype={config['dtype']})")
         log.info(f"Loading checkpoint from {model_path}")
         state_dict = comfy.utils.load_torch_file(model_path)
 
         # Build model on meta device (zero memory allocation) then load weights
         # directly with assign=True, avoiding 2x RAM peak from CPU construction.
+        _p("initializing model on meta device...")
         log.info("Initializing model on meta device...")
         with torch.device("meta"):
             predictor = create_predictor(
@@ -123,6 +133,7 @@ def _load_sharp_model(config):
         if comfy.model_management.force_channels_last():
             predictor.to(memory_format=torch.channels_last)
         comfy.model_management.archive_model_dtypes(predictor)
+        _p(f"model ready ({dtype})")
         log.info(f"Model ready ({dtype})")
 
         # Wrap with ModelPatcher — ComfyUI manages VRAM from here
@@ -183,16 +194,30 @@ class LoadSharpModel(io.ComfyNode):
             dtype = _DTYPE_MAP[precision]
 
         dtype_str = {torch.bfloat16: "bf16", torch.float16: "fp16", torch.float32: "fp32"}[dtype]
+        _p(f"precision={precision!r} -> dtype={dtype_str} (device={load_device})")
 
         # Download checkpoint if needed
         os.makedirs(MODELS_DIR, exist_ok=True)
-        model_path = hf_hub_download(
-            repo_id=SHARP_REPO_ID,
-            filename=SHARP_FILENAME,
-            local_dir=MODELS_DIR,
-            tqdm_class=_comfy_tqdm(),
-        )
+        expected_path = os.path.join(MODELS_DIR, SHARP_FILENAME)
+        if os.path.exists(expected_path):
+            # Already downloaded — use it directly, no network call (no HEAD/etag
+            # check). The SHARP checkpoint is immutable, so a present file is valid.
+            size_mb = os.path.getsize(expected_path) / (1024 * 1024)
+            _p(f"checkpoint already present, reusing (no download): {expected_path} ({size_mb:.1f} MB)")
+            model_path = expected_path
+        else:
+            _p(f"checkpoint not found at {expected_path} — downloading from HuggingFace "
+               f"repo '{SHARP_REPO_ID}' file '{SHARP_FILENAME}' -> {MODELS_DIR}")
+            model_path = hf_hub_download(
+                repo_id=SHARP_REPO_ID,
+                filename=SHARP_FILENAME,
+                local_dir=MODELS_DIR,
+                tqdm_class=_comfy_tqdm(),
+            )
 
+        size_mb = os.path.getsize(model_path) / (1024 * 1024)
+        _p(f"checkpoint ready: {model_path} ({size_mb:.1f} MB)")
+        _p(f"config: precision={precision} -> dtype={dtype_str}")
         log.info(f"SHARP config: precision={precision} -> dtype={dtype_str}, path={model_path}")
 
         config = {
