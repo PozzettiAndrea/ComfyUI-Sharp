@@ -8,12 +8,15 @@
 [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
 [Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
 [Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "three". Relati…ences must start with either "/", "./", or "../".}
-[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "three". Relati…ences must start with either "/", "./", or "../".}
-[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "three". Relati…ences must start with either "/", "./", or "../".}
-[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
-[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
-[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
 [Console-warning] THREE.WARNING: Multiple instances of Three.js being imported.
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "three". Relati…ences must start with either "/", "./", or "../".}
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "three". Relati…ences must start with either "/", "./", or "../".}
+[Console-warning] WARNING: Multiple instances of Three.js being imported.
+[Console-log] [GeomPack] Loading UV mesh preview extension...
+[Console-log] [GeomPack] UV mesh preview extension registered
 [Console-log] [FBX Preview] Auto-registering for all known FBX preview node types...
 [Console-log] [UniRig] Loading FBX mesh preview extension...
 [Console-log] [UniRig] Detected extension folder: ComfyUI-GeometryPack
@@ -27,34 +30,31 @@
 [Console-log] [MotionCapture] Loading FBX mesh preview extension...
 [Console-log] [MotionCapture] Detected extension folder: ComfyUI-GeometryPack
 [Console-log] [MotionCapture] FBX mesh preview extension registered
-[Console-log] [UniRig Compare] Loading compare skeleton widget...
-[Console-log] [UniRig Compare] Detected extension folder: ComfyUI-GeometryPack
-[Console-log] [UniRig Compare] Compare skeleton widget registered
-[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension
-[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension...
-[Console-log] [CompareSMPLBVH] Extension registered: comfy3d.comparesmplbvh
-[Console-log] [GaussianPack Sharp] Loading extension...
 [Console-log] [BVHViewer] Loading BVH Viewer extension
 [Console-log] [BVHViewer] Loading BVH viewer extension...
 [Console-log] [BVHViewer] Extension registered: comfy3d.bvhviewer
-[Console-log] [GaussianPack] Loading extension...
-[Console-warning] WARNING: Multiple instances of Three.js being imported.
+[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension
+[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension...
+[Console-log] [CompareSMPLBVH] Extension registered: comfy3d.comparesmplbvh
+[Console-log] [UniRig Compare] Loading compare skeleton widget...
+[Console-log] [UniRig Compare] Detected extension folder: ComfyUI-GeometryPack
+[Console-log] [UniRig Compare] Compare skeleton widget registered
+[Console-log] [GeomPack Gaussian] Loading extension...
+[Console-log] [GeomPack Multi JS] Loading mesh_preview_multi.js extension
+[Console-log] [UniRig Debug] Loading FBX mesh preview extension...
+[Console-log] [UniRig Debug] Detected extension folder: ComfyUI-GeometryPack
+[Console-log] [UniRig Debug] FBX mesh preview extension registered
 [Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension
 [Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension...
 [Console-log] [FBXAnimationViewer] Extension registered: comfy3d.fbxanimationviewer
 [Console-log] [GeomPack] Loading mesh preview extension...
 [Console-log] [GeomPack] Mesh preview extension registered
-[Console-log] [GeomPack Gaussian] Loading extension...
-[Console-log] [UniRig Debug] Loading FBX mesh preview extension...
-[Console-log] [UniRig Debug] Detected extension folder: ComfyUI-GeometryPack
-[Console-log] [UniRig Debug] FBX mesh preview extension registered
-[Console-log] [GeomPack Multi JS] Loading mesh_preview_multi.js extension
 [Console-log] [GeomPack] Loading VTK.js textured mesh preview extension...
 [Console-log] [GeomPack] VTK.js textured mesh preview extension registered
-[Console-log] [GeomPack] Loading UV mesh preview extension...
-[Console-log] [GeomPack] UV mesh preview extension registered
-[Console-log] [VTK Bundle] GLTFImporter included in bundle
+[Console-log] [GaussianPack Sharp] Loading extension...
+[Console-log] [GaussianPack] Loading extension...
 [Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Extension named 'geompack.text_report' already registered.}
+[Console-log] [VTK Bundle] GLTFImporter included in bundle
 [Console-warning] [MaskEditor] ComfyApp.open_maskeditor is deprecated. Plugins should migrate to using the command system or direct node context menu integration.
 [Console-log] [GaussianPack] Registering Preview Gaussians node
 [Console-log] [GaussianPack Sharp] Registering Preview Gaussian Sharp node
@@ -71,9 +71,9 @@
 [Console-log] [comfy-test] graphToPrompt: 8 nodes, missing class_type: [], sample: {"inputs":{"image":"middlebury.jpg"},"class_type":"LoadImage","_meta":{"title":"Load Image"}}
 [Console-log] [GeomPack Gaussian] onExecuted called with: {ply_file: Array(1), filename: Array(1), file_size_mb: Array(1), extrinsics: Array(1), intrinsics: Array(1)}
 [Console-log] [GeomPack Gaussian] Resized node to: 512 x 407 (aspect ratio: 1.48 )
-[Console-log] [GaussianViewer] Received LOAD_MESH_URL: /view?filename=sharp_1780868456126.ply&type=output&subfolder=
+[Console-log] [GaussianViewer] Received LOAD_MESH_URL: /view?filename=sharp_1780871719073.ply&type=output&subfolder=
 [Console-log] [GaussianViewer] Pre-calculated scale compensation: 29.14 x
-[Console-log] [GaussianViewer] Loading from URL: /view?filename=sharp_1780868456126.ply&type=output&subfolder=
+[Console-log] [GaussianViewer] Loading from URL: /view?filename=sharp_1780871719073.ply&type=output&subfolder=
 [Console-log] [GaussianViewer] Scene bounds center: -0.29070037603378296 -0.020474910736083984 2.356476366519928
 [Console-log] [GaussianViewer] Scene bounds size: 4.462576508522034 2.6968438625335693 2.7145928144454956
 [Console-log] [GaussianViewer] Applied scale compensation: 29.14 x, 1179648 gaussians
@@ -98,9 +98,9 @@
 [Console-log] [GaussianViewer] Loaded successfully from URL
 [Console-log] [GeomPack Gaussian] onExecuted called with: {ply_file: Array(1), filename: Array(1), file_size_mb: Array(1), extrinsics: Array(1), intrinsics: Array(1)}
 [Console-log] [GeomPack Gaussian] Resized node to: 512 x 407 (aspect ratio: 1.48 )
-[Console-log] [GaussianViewer] Received LOAD_MESH_URL: /view?filename=sharp_aligned_1780869367455.ply&type=output&subfolder=
+[Console-log] [GaussianViewer] Received LOAD_MESH_URL: /view?filename=sharp_aligned_1780872753849.ply&type=output&subfolder=
 [Console-log] [GaussianViewer] Pre-calculated scale compensation: 29.14 x
-[Console-log] [GaussianViewer] Loading from URL: /view?filename=sharp_aligned_1780869367455.ply&type=output&subfolder=
+[Console-log] [GaussianViewer] Loading from URL: /view?filename=sharp_aligned_1780872753849.ply&type=output&subfolder=
 [Console-log] [GaussianViewer] Scene bounds center: -0.34965431690216064 -0.013832151889801025 2.5893710255622864
 [Console-log] [GaussianViewer] Scene bounds size: 4.9353368282318115 2.959839701652527 3.0474809408187866
 [Console-log] [GaussianViewer] Applied scale compensation: 29.14 x, 1179648 gaussians
