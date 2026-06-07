@@ -46,8 +46,8 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [32m[INFO][0m   Node 11: PreviewGaussianSharp
   [ComfyUI] [32m[INFO][0m     Inputs: {"preview_gaussian": "", "ply_path": ["7", 0], "extrinsics": ["7", 1], "intrinsics": ["7", 2]}
   [ComfyUI] [32m[INFO][0m     Inputs: {"preview_gaussian": "", "ply_path": ["7", 0], "extrinsics": ["7", 1], "intrinsics": ["7", 2]}
-  [ComfyUI] [32m[INFO][0m Generated prompt_id: cafd411e-3a0a-4b70-8ba9-72013ba60b5b
-  [ComfyUI] [32m[INFO][0m Generated prompt_id: cafd411e-3a0a-4b70-8ba9-72013ba60b5b
+  [ComfyUI] [32m[INFO][0m Generated prompt_id: 5aae21e4-44be-429b-b978-5a960269d211
+  [ComfyUI] [32m[INFO][0m Generated prompt_id: 5aae21e4-44be-429b-b978-5a960269d211
   [ComfyUI] [32m[INFO][0m Calling execution.validate_prompt()...
   [ComfyUI] [32m[INFO][0m Calling execution.validate_prompt()...
   [ComfyUI] [32m[INFO][0m Validation result: valid=True
@@ -64,8 +64,29 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
   [ComfyUI] [ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
   [ComfyUI] [ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
-  [ComfyUI] [ComfyUI-Sharp] Health check: ok
-  [ComfyUI] [ComfyUI-Sharp] Health check: ok
+  [ComfyUI] [ComfyUI-Sharp] Health check: failed
+  [ComfyUI] [ComfyUI-Sharp] Health check: failed
+  [ComfyUI] [ComfyUI-Sharp] Socket unhealthy, restarting worker...
+  [ComfyUI] [ComfyUI-Sharp] Socket unhealthy, restarting worker...
+  [ComfyUI] [comfy-env] sharp-nodes: Library/bin has 566 DLLs
+  [ComfyUI] [comfy-env] sharp-nodes: Library/bin has 566 DLLs
+  [ComfyUI] [ComfyUI-Sharp] python: C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
+  [ComfyUI] [ComfyUI-Sharp] python: C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
+  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2117\\ComfyUI', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2117\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2117\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
+  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2117\\ComfyUI', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2117\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2117\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
+  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\stduser\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\pixi.toml', '-e', 'sharp-nodes', 'python', 'C:\\Users\\stduser\\AppData\\Local\\Temp\\comfyui_pvenv_18exi1fy\\persistent_worker.py', 'tcp://127.0.0.1:62566']...
+  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\stduser\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\pixi.toml', '-e', 'sharp-nodes', 'python', 'C:\\Users\\stduser\\AppData\\Local\\Temp\\comfyui_pvenv_18exi1fy\\persistent_worker.py', 'tcp://127.0.0.1:62566']...
+  Frame 2 saved (frame_001.jpg, t=2.4s)
+  [capture-periodic] freeze=4ms shot=154ms unfreeze=10ms saved=True
+  Frame 3 saved (frame_002.jpg, t=4.7s)
+  [capture-periodic] freeze=3ms shot=117ms unfreeze=6ms saved=True
+  [capture-loop] iter=50 t=6.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=4.6/16.0GB (29%) swap=0.6/2.9GB (21%) cpu=80% browser_rss=0.71GB
+  [ComfyUI] [worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+  [ComfyUI] [worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: comfy_kitchen does not support stochastic FP8 rounding, please update comfy_kitchen.
+  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: comfy_kitchen does not support stochastic FP8 rounding, please update comfy_kitchen.
   [ComfyUI] [SubprocessWorker] worker started/confirmed
   [ComfyUI] [SubprocessWorker] worker started/confirmed
   [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
@@ -74,12 +95,12 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [SubprocessWorker] created 0 shm blocks
   [ComfyUI] [SubprocessWorker] sending request via socket...
   [ComfyUI] [SubprocessWorker] sending request via socket...
-  [ComfyUI] [SubprocessWorker] call_id=2 sending call_method
-  [ComfyUI] [SubprocessWorker] call_id=2 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=3 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=3 sending call_method
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [SubprocessWorker] got response: ok
-  [ComfyUI] [comfy-env] LoadImageWithExif done (0.61s): result: NodeOutput
-  [ComfyUI] [comfy-env] LoadImageWithExif done (0.61s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadImageWithExif done (8.27s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadImageWithExif done (8.27s): result: NodeOutput
   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
   [ComfyUI] [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
@@ -98,68 +119,79 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [SubprocessWorker] created 0 shm blocks
   [ComfyUI] [SubprocessWorker] sending request via socket...
   [ComfyUI] [SubprocessWorker] sending request via socket...
-  [ComfyUI] [SubprocessWorker] call_id=3 sending call_method
-  [ComfyUI] [SubprocessWorker] call_id=3 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=4 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=4 sending call_method
   [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] precision='auto' -> dtype=fp32 (device=cpu)
   [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] precision='auto' -> dtype=fp32 (device=cpu)
-  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint not found at D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\models\sharp\sharp_2572gikvuh.pt � downloading from HuggingFace repo 'apple/Sharp' file 'sharp_2572gikvuh.pt' -> D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\models\sharp
-  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint not found at D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\models\sharp\sharp_2572gikvuh.pt � downloading from HuggingFace repo 'apple/Sharp' file 'sharp_2572gikvuh.pt' -> D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\models\sharp
-  [ComfyUI] HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] Retrying in 1s [Retry 1/5].
-  [ComfyUI] Retrying in 1s [Retry 1/5].
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Retrying in 1s [Retry 1/5].
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Retrying in 1s [Retry 1/5].
-  [ComfyUI] HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] Retrying in 2s [Retry 2/5].
-  [ComfyUI] Retrying in 2s [Retry 2/5].
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Retrying in 2s [Retry 2/5].
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Retrying in 2s [Retry 2/5].
-  Frame 2 saved (frame_001.jpg, t=2.2s)
-  [capture-periodic] freeze=6ms shot=138ms unfreeze=5ms saved=True
-  [ComfyUI] HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] Retrying in 4s [Retry 3/5].
-  [ComfyUI] Retrying in 4s [Retry 3/5].
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Retrying in 4s [Retry 3/5].
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Retrying in 4s [Retry 3/5].
-  Frame 3 saved (frame_002.jpg, t=4.5s)
-  [capture-periodic] freeze=4ms shot=100ms unfreeze=4ms saved=True
-  [capture-loop] iter=50 t=5.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=4.9/16.0GB (31%) swap=0.3/2.9GB (12%) cpu=45% browser_rss=0.77GB
-  [ComfyUI] HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] Retrying in 8s [Retry 4/5].
-  [ComfyUI] Retrying in 8s [Retry 4/5].
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Retrying in 8s [Retry 4/5].
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Retrying in 8s [Retry 4/5].
-  [capture-loop] iter=100 t=11.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=4.9/16.0GB (31%) swap=0.3/2.9GB (12%) cpu=18% browser_rss=0.77GB
-  [ComfyUI] HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] Retrying in 8s [Retry 5/5].
-  [ComfyUI] Retrying in 8s [Retry 5/5].
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Retrying in 8s [Retry 5/5].
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: Retrying in 8s [Retry 5/5].
-  [capture-loop] iter=150 t=17.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=4.9/16.0GB (31%) swap=0.3/2.9GB (12%) cpu=18% browser_rss=0.74GB
-  [capture-loop] iter=200 t=23.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=4.9/16.0GB (31%) swap=0.3/2.9GB (12%) cpu=19% browser_rss=0.74GB
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint already present, reusing (no download): D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\models\sharp\sharp_2572gikvuh.pt (2679.6 MB)
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint already present, reusing (no download): D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\models\sharp\sharp_2572gikvuh.pt (2679.6 MB)
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint ready: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\models\sharp\sharp_2572gikvuh.pt (2679.6 MB)
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint ready: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\models\sharp\sharp_2572gikvuh.pt (2679.6 MB)
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] config: precision=auto -> dtype=fp32
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] config: precision=auto -> dtype=fp32
+  [ComfyUI] [SubprocessWorker] got response: ok
+  [ComfyUI] [SubprocessWorker] got response: ok
+  [ComfyUI] [comfy-env] LoadSharpModel done (0.38s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadSharpModel done (0.38s): result: NodeOutput
+  [ComfyUI] [comfy-env] Running SharpPredict: focal_length_mm: 20.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,1011,1520,3] cpu
+  [ComfyUI] [comfy-env] Running SharpPredict: focal_length_mm: 20.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,1011,1520,3] cpu
+  [ComfyUI] [SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
+  [ComfyUI] [SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
+  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+  [ComfyUI] [ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
+  [ComfyUI] [ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
+  [ComfyUI] [ComfyUI-Sharp] Health check: ok
+  [ComfyUI] [ComfyUI-Sharp] Health check: ok
+  [ComfyUI] [SubprocessWorker] worker started/confirmed
+  [ComfyUI] [SubprocessWorker] worker started/confirmed
+  [ComfyUI] [comfy-env] PRE-SERIALIZE 'image' shape: torch.Size([1, 1011, 1520, 3])
+  [ComfyUI] [comfy-env] PRE-SERIALIZE 'image' shape: torch.Size([1, 1011, 1520, 3])
+  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+  [ComfyUI] [SubprocessWorker] created 0 shm blocks
+  [ComfyUI] [SubprocessWorker] created 0 shm blocks
+  [ComfyUI] [SubprocessWorker] sending request via socket...
+  [ComfyUI] [SubprocessWorker] sending request via socket...
+  [ComfyUI] [SubprocessWorker] call_id=5 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=5 sending call_method
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] _from_shm got dict with keys: ['__type__', 'strategy', 'manager_path', 'storage_key', 'storage_size']
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] _from_shm got dict with keys: ['__type__', 'strategy', 'manager_path', 'storage_key', 'storage_size']
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZE TensorRef: tensor_size=[1, 1011, 1520, 3]
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZE TensorRef: tensor_size=[1, 1011, 1520, 3]
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 1011, 1520, 3])
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 1011, 1520, 3])
+  Frame 4 saved (frame_003.jpg, t=9.1s)
+  [capture-periodic] freeze=4ms shot=144ms unfreeze=5ms saved=True
+  [capture-loop] iter=100 t=12.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=4.7/16.0GB (29%) swap=0.6/2.9GB (21%) cpu=44% browser_rss=0.72GB
+  [capture-loop] iter=150 t=17.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=4.8/16.0GB (30%) swap=0.6/2.9GB (21%) cpu=38% browser_rss=0.72GB
+  [capture-loop] iter=200 t=23.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=4.7/16.0GB (30%) swap=0.6/2.9GB (20%) cpu=42% browser_rss=0.64GB
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] loading checkpoint from D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\models\sharp\sharp_2572gikvuh.pt (dtype=fp32)
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] loading checkpoint from D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\models\sharp\sharp_2572gikvuh.pt (dtype=fp32)
+  [capture-loop] iter=250 t=29.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=6.7/16.0GB (42%) swap=0.6/2.9GB (20%) cpu=33% browser_rss=0.63GB
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] initializing model on meta device...
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] initializing model on meta device...
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] model ready (torch.float32)
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] model ready (torch.float32)
+  [ComfyUI] [SubprocessWorker] callback 'request_vram_budget' from call_id=5
+  [ComfyUI] [SubprocessWorker] callback 'request_vram_budget' from call_id=5
+  [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 9.29GB
+  [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 9.29GB
+  [ComfyUI] [comfy-env] VRAM after eviction: 9.29GB
+  [ComfyUI] [comfy-env] VRAM after eviction: 9.29GB
+  [capture-loop] iter=300 t=35.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.5/16.0GB (47%) swap=0.6/2.9GB (20%) cpu=64% browser_rss=0.60GB
+  [capture-loop] iter=350 t=41.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.5/16.0GB (47%) swap=0.6/2.9GB (20%) cpu=83% browser_rss=0.59GB
+  [capture-loop] iter=400 t=47.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.5/16.0GB (47%) swap=0.6/2.9GB (20%) cpu=79% browser_rss=0.59GB
+  [capture-loop] iter=450 t=53.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.6/16.0GB (47%) swap=0.6/2.9GB (20%) cpu=77% browser_rss=0.59GB
+  [capture-loop] iter=500 t=59.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.6/16.0GB (47%) swap=0.6/2.9GB (20%) cpu=80% browser_rss=0.60GB
   [ComfyUI] [worker:ComfyUI-Sharp]
   [ComfyUI] [worker:ComfyUI-Sharp]
   [ComfyUI] === WATCHDOG TICK 1 ===
   [ComfyUI] === WATCHDOG TICK 1 ===
-  [ComfyUI] [worker:ComfyUI-Sharp] Current thread 0x00001f78 (most recent call first):
-  [ComfyUI] [worker:ComfyUI-Sharp] Current thread 0x00001f78 (most recent call first):
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_jztu37n5\persistent_worker.py", line 52 in _watchdog
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_jztu37n5\persistent_worker.py", line 52 in _watchdog
+  [ComfyUI] [worker:ComfyUI-Sharp] Current thread 0x00001550 (most recent call first):
+  [ComfyUI] [worker:ComfyUI-Sharp] Current thread 0x00001550 (most recent call first):
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 52 in _watchdog
   [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 995 in run
   [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 995 in run
   [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1044 in _bootstrap_inner
@@ -168,419 +200,382 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1015 in _bootstrap
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Thread 0x00000c94 (most recent call first):
-  [ComfyUI] Thread 0x00000c94 (most recent call first):
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 488 in _http_backoff_base
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 488 in _http_backoff_base
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 559 in http_backoff
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 559 in http_backoff
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 685 in _httpx_follow_relative_redirects_with_backoff
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 685 in _httpx_follow_relative_redirects_with_backoff
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1616 in get_hf_file_metadata
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1616 in get_hf_file_metadata
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88 in _inner_fn
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88 in _inner_fn
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1694 in _get_metadata_or_catch_error
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1694 in _get_metadata_or_catch_error
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1351 in _hf_hub_download_to_local_dir
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1351 in _hf_hub_download_to_local_dir
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 998 in hf_hub_download
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 998 in hf_hub_download
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88 in _inner_fn
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88 in _inner_fn
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 211 in execute
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 211 in execute
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\comfy_api\latest\_io.py", line 1892 in EXECUTE_NORMALIZED
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\comfy_api\latest\_io.py", line 1892 in EXECUTE_NORMALIZED
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_jztu37n5\persistent_worker.py", line 1762 in main
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_jztu37n5\persistent_worker.py", line 1762 in main
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_jztu37n5\persistent_worker.py", line 1807 in <module>
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_jztu37n5\persistent_worker.py", line 1807 in <module>
+  [ComfyUI] Thread 0x000002f0 (most recent call first):
+  [ComfyUI] Thread 0x000002f0 (most recent call first):
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\sub_quadratic_attention.py", line 181 in _get_attention_scores_no_kv_chunking
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\sub_quadratic_attention.py", line 181 in _get_attention_scores_no_kv_chunking
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\sub_quadratic_attention.py", line 259 in efficient_dot_product_attention
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\sub_quadratic_attention.py", line 259 in efficient_dot_product_attention
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\attention.py", line 275 in attention_sub_quad
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\attention.py", line 275 in attention_sub_quad
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\attention.py", line 139 in wrapper
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\attention.py", line 139 in wrapper
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 234 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 234 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 309 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 309 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 412 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 412 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 685 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 685 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1109 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1109 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 348 in _predict_image_cached
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 348 in _predict_image_cached
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 239 in execute
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 239 in execute
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy_api\latest\_io.py", line 1892 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy_api\latest\_io.py", line 1892 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1807 in <module>
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1807 in <module>
   [ComfyUI] 
   [ComfyUI] 
   [ComfyUI] [worker:ComfyUI-Sharp] === END ===
   [ComfyUI] [worker:ComfyUI-Sharp] === END ===
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] [worker:ComfyUI-Sharp] WARNING: HTTP Error 429 thrown while requesting HEAD https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt
-  [ComfyUI] [SubprocessWorker] got response: error
-  [ComfyUI] [SubprocessWorker] got response: error
-  [ComfyUI] [1m[31m[ERROR][0m !!! Exception during processing !!! An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
-  [ComfyUI] [1m[31m[ERROR][0m !!! Exception during processing !!! An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+  [capture-loop] iter=550 t=65.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.6/16.0GB (47%) swap=0.6/2.9GB (20%) cpu=80% browser_rss=0.59GB
+  [capture-loop] iter=600 t=71.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=16 ram=7.8/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=79% browser_rss=0.59GB
+  [capture-loop] iter=650 t=77.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.6/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=82% browser_rss=0.59GB
+  [capture-loop] iter=700 t=83.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=7.6/16.0GB (47%) swap=0.6/2.9GB (20%) cpu=77% browser_rss=0.59GB
+  [capture-loop] iter=750 t=89.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.8/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=72% browser_rss=0.59GB
+  [capture-loop] iter=800 t=95.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.6/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=71% browser_rss=0.59GB
+  [capture-loop] iter=850 t=100.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=7.6/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=71% browser_rss=0.59GB
+  [capture-loop] iter=900 t=106.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.6/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=73% browser_rss=0.60GB
+  [capture-loop] iter=950 t=112.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.7/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=70% browser_rss=0.60GB
+  [capture-loop] iter=1000 t=118.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=30 ram=7.7/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=87% browser_rss=0.60GB
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] === WATCHDOG TICK 2 ===
+  [ComfyUI] === WATCHDOG TICK 2 ===
+  [ComfyUI] [worker:ComfyUI-Sharp] Current thread 0x00001550 (most recent call first):
+  [ComfyUI] [worker:ComfyUI-Sharp] Current thread 0x00001550 (most recent call first):
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 995 in run
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 995 in run
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1044 in _bootstrap_inner
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1044 in _bootstrap_inner
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1015 in _bootstrap
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1015 in _bootstrap
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Worker traceback:
-  [ComfyUI] Worker traceback:
-  [ComfyUI] Traceback (most recent call last):
-  [ComfyUI] Traceback (most recent call last):
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 761, in hf_raise_for_status
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 761, in hf_raise_for_status
-  [ComfyUI]     response.raise_for_status()
-  [ComfyUI]     response.raise_for_status()
-  [ComfyUI]     ~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  [ComfyUI]     ~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\httpx\_models.py", line 829, in raise_for_status
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\httpx\_models.py", line 829, in raise_for_status
-  [ComfyUI]     raise HTTPStatusError(message, request=request, response=self)
-  [ComfyUI]     raise HTTPStatusError(message, request=request, response=self)
-  [ComfyUI] httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt'
-  [ComfyUI] httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt'
-  [ComfyUI] For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
-  [ComfyUI] For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+  [ComfyUI] Thread 0x000002f0 (most recent call first):
+  [ComfyUI] Thread 0x000002f0 (most recent call first):
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\sub_quadratic_attention.py", line 159 in _get_attention_scores_no_kv_chunking
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\sub_quadratic_attention.py", line 159 in _get_attention_scores_no_kv_chunking
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\sub_quadratic_attention.py", line 259 in efficient_dot_product_attention
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\sub_quadratic_attention.py", line 259 in efficient_dot_product_attention
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\attention.py", line 275 in attention_sub_quad
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\attention.py", line 275 in attention_sub_quad
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\attention.py", line 139 in wrapper
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\attention.py", line 139 in wrapper
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 234 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 234 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 309 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 309 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 412 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 412 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 685 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 685 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1109 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1109 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 348 in _predict_image_cached
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 348 in _predict_image_cached
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 239 in execute
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 239 in execute
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy_api\latest\_io.py", line 1892 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy_api\latest\_io.py", line 1892 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1807 in <module>
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1807 in <module>
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] The above exception was the direct cause of the following exception:
-  [ComfyUI] The above exception was the direct cause of the following exception:
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Traceback (most recent call last):
-  [ComfyUI] Traceback (most recent call last):
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1694, in _get_metadata_or_catch_error
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1694, in _get_metadata_or_catch_error
-  [ComfyUI]     metadata = get_hf_file_metadata(
-  [ComfyUI]     metadata = get_hf_file_metadata(
-  [ComfyUI]         url=url,
-  [ComfyUI]         url=url,
-  [ComfyUI]     ...<4 lines>...
-  [ComfyUI]     ...<4 lines>...
-  [ComfyUI]         retry_on_errors=retry_on_errors,
-  [ComfyUI]         retry_on_errors=retry_on_errors,
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
-  [ComfyUI]     return fn(*args, **kwargs)
-  [ComfyUI]     return fn(*args, **kwargs)
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1616, in get_hf_file_metadata
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1616, in get_hf_file_metadata
-  [ComfyUI]     response = _httpx_follow_relative_redirects_with_backoff(
-  [ComfyUI]     response = _httpx_follow_relative_redirects_with_backoff(
-  [ComfyUI]         method="HEAD", url=url, headers=hf_headers, timeout=timeout, retry_on_errors=retry_on_errors
-  [ComfyUI]         method="HEAD", url=url, headers=hf_headers, timeout=timeout, retry_on_errors=retry_on_errors
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 685, in _httpx_follow_relative_redirects_with_backoff
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 685, in _httpx_follow_relative_redirects_with_backoff
-  [ComfyUI]     response = http_backoff(
-  [ComfyUI]     response = http_backoff(
-  [ComfyUI]         method=method,
-  [ComfyUI]         method=method,
-  [ComfyUI]     ...<3 lines>...
-  [ComfyUI]     ...<3 lines>...
-  [ComfyUI]         **no_retry_kwargs,
-  [ComfyUI]         **no_retry_kwargs,
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 559, in http_backoff
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 559, in http_backoff
-  [ComfyUI]     return next(
-  [ComfyUI]     return next(
-  [ComfyUI]         _http_backoff_base(
-  [ComfyUI]         _http_backoff_base(
-  [ComfyUI]     ...<9 lines>...
-  [ComfyUI]     ...<9 lines>...
-  [ComfyUI]         )
-  [ComfyUI]         )
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 468, in _http_backoff_base
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 468, in _http_backoff_base
-  [ComfyUI]     if not _should_retry(response):
-  [ComfyUI]     if not _should_retry(response):
-  [ComfyUI]            ~~~~~~~~~~~~~^^^^^^^^^^
-  [ComfyUI]            ~~~~~~~~~~~~~^^^^^^^^^^
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 448, in _should_retry
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 448, in _should_retry
-  [ComfyUI]     hf_raise_for_status(response)  # Will raise uncaught exception
-  [ComfyUI]     hf_raise_for_status(response)  # Will raise uncaught exception
-  [ComfyUI]     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  [ComfyUI]     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 868, in hf_raise_for_status
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 868, in hf_raise_for_status
-  [ComfyUI]     raise _format(HfHubHTTPError, message, response) from e
-  [ComfyUI]     raise _format(HfHubHTTPError, message, response) from e
-  [ComfyUI] huggingface_hub.errors.HfHubHTTPError: (Amz CF ID: uZzEHDTurjJaCH3jfTgpHAi44ajC3BZloA8QQupnjgohK45WQAy8Lw==)
-  [ComfyUI] huggingface_hub.errors.HfHubHTTPError: (Amz CF ID: uZzEHDTurjJaCH3jfTgpHAi44ajC3BZloA8QQupnjgohK45WQAy8Lw==)
+  [capture-loop] iter=1050 t=125.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.7/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=95% browser_rss=0.59GB
+  [capture-loop] iter=1100 t=131.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.7/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=70% browser_rss=0.59GB
+  [capture-loop] iter=1150 t=136.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=7.7/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=73% browser_rss=0.60GB
+  [capture-loop] iter=1200 t=142.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.7/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=71% browser_rss=0.59GB
+  [capture-loop] iter=1250 t=148.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=9 ram=7.8/16.0GB (49%) swap=0.6/2.9GB (20%) cpu=74% browser_rss=0.59GB
+  [capture-loop] iter=1300 t=154.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.7/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=73% browser_rss=0.59GB
+  [capture-loop] iter=1350 t=160.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.7/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=72% browser_rss=0.59GB
+  [capture-loop] iter=1400 t=166.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=26 ram=7.8/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=79% browser_rss=0.59GB
+  [capture-loop] iter=1450 t=172.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.8/16.0GB (48%) swap=0.6/2.9GB (20%) cpu=94% browser_rss=0.59GB
+  [capture-loop] iter=1500 t=178.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.9/16.0GB (49%) swap=0.6/2.9GB (20%) cpu=88% browser_rss=0.59GB
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] === WATCHDOG TICK 3 ===
+  [ComfyUI] === WATCHDOG TICK 3 ===
+  [ComfyUI] [worker:ComfyUI-Sharp] Current thread 0x00001550 (most recent call first):
+  [ComfyUI] [worker:ComfyUI-Sharp] Current thread 0x00001550 (most recent call first):
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 995 in run
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 995 in run
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1044 in _bootstrap_inner
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1044 in _bootstrap_inner
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1015 in _bootstrap
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1015 in _bootstrap
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] 429 Too Many Requests for url: https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt.
-  [ComfyUI] 429 Too Many Requests for url: https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt.
+  [ComfyUI] Thread 0x000002f0 (most recent call first):
+  [ComfyUI] Thread 0x000002f0 (most recent call first):
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\sub_quadratic_attention.py", line 159 in _get_attention_scores_no_kv_chunking
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\sub_quadratic_attention.py", line 159 in _get_attention_scores_no_kv_chunking
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\sub_quadratic_attention.py", line 259 in efficient_dot_product_attention
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\sub_quadratic_attention.py", line 259 in efficient_dot_product_attention
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\attention.py", line 275 in attention_sub_quad
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\attention.py", line 275 in attention_sub_quad
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\attention.py", line 139 in wrapper
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ldm\modules\attention.py", line 139 in wrapper
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 234 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 234 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 309 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 309 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 412 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 412 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 685 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 685 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1109 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1109 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 348 in _predict_image_cached
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 348 in _predict_image_cached
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 239 in execute
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 239 in execute
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy_api\latest\_io.py", line 1892 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy_api\latest\_io.py", line 1892 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1807 in <module>
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1807 in <module>
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] The above exception was the direct cause of the following exception:
-  [ComfyUI] The above exception was the direct cause of the following exception:
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Traceback (most recent call last):
-  [ComfyUI] Traceback (most recent call last):
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_jztu37n5\persistent_worker.py", line 1762, in main
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_jztu37n5\persistent_worker.py", line 1762, in main
-  [ComfyUI]     result = method(**inputs)
-  [ComfyUI]     result = method(**inputs)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\comfy_api\latest\_io.py", line 1892, in EXECUTE_NORMALIZED
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\comfy_api\latest\_io.py", line 1892, in EXECUTE_NORMALIZED
-  [ComfyUI]     to_return = cls.execute(*args, **kwargs)
-  [ComfyUI]     to_return = cls.execute(*args, **kwargs)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 211, in execute
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 211, in execute
-  [ComfyUI]     model_path = hf_hub_download(
-  [ComfyUI]     model_path = hf_hub_download(
-  [ComfyUI]         repo_id=SHARP_REPO_ID,
-  [ComfyUI]         repo_id=SHARP_REPO_ID,
-  [ComfyUI]     ...<2 lines>...
-  [ComfyUI]     ...<2 lines>...
-  [ComfyUI]         tqdm_class=_comfy_tqdm(),
-  [ComfyUI]         tqdm_class=_comfy_tqdm(),
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
-  [ComfyUI]     return fn(*args, **kwargs)
-  [ComfyUI]     return fn(*args, **kwargs)
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 998, in hf_hub_download
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 998, in hf_hub_download
-  [ComfyUI]     return _hf_hub_download_to_local_dir(
-  [ComfyUI]     return _hf_hub_download_to_local_dir(
-  [ComfyUI]         # Destination
-  [ComfyUI]         # Destination
-  [ComfyUI]     ...<16 lines>...
-  [ComfyUI]     ...<16 lines>...
-  [ComfyUI]         dry_run=dry_run,
-  [ComfyUI]         dry_run=dry_run,
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1367, in _hf_hub_download_to_local_dir
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1367, in _hf_hub_download_to_local_dir
-  [ComfyUI]     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
-  [ComfyUI]     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
-  [ComfyUI]     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1811, in _raise_on_head_call_error
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1811, in _raise_on_head_call_error
-  [ComfyUI]     raise LocalEntryNotFoundError(
-  [ComfyUI]     raise LocalEntryNotFoundError(
-  [ComfyUI]     ...<3 lines>...
-  [ComfyUI]     ...<3 lines>...
-  [ComfyUI]     ) from head_call_error
-  [ComfyUI]     ) from head_call_error
-  [ComfyUI] huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
-  [ComfyUI] huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+  [capture-loop] iter=1550 t=184.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=7.9/16.0GB (50%) swap=0.7/2.9GB (24%) cpu=91% browser_rss=0.59GB
+  [capture-loop] iter=1600 t=190.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=7.7/16.0GB (48%) swap=0.7/2.9GB (24%) cpu=91% browser_rss=0.58GB
+  [capture-loop] iter=1650 t=197.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=12 ram=8.3/16.0GB (52%) swap=0.8/2.9GB (30%) cpu=93% browser_rss=0.57GB
+  [capture-loop] iter=1700 t=203.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.2/16.0GB (52%) swap=1.0/2.9GB (33%) cpu=91% browser_rss=0.54GB
+  [capture-loop] iter=1750 t=209.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.6/16.0GB (54%) swap=1.1/2.9GB (38%) cpu=76% browser_rss=0.52GB
+  [capture-loop] iter=1800 t=215.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.9/16.0GB (56%) swap=1.1/2.9GB (38%) cpu=79% browser_rss=0.51GB
+  [capture-loop] iter=1850 t=221.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.9/16.0GB (56%) swap=1.1/2.9GB (38%) cpu=75% browser_rss=0.49GB
+  [capture-loop] iter=1900 t=227.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=10.5/16.0GB (66%) swap=1.2/2.9GB (41%) cpu=75% browser_rss=0.47GB
+  [capture-loop] iter=1950 t=233.1s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=10.3/16.0GB (65%) swap=1.3/2.9GB (44%) cpu=76% browser_rss=0.47GB
+  [capture-loop] iter=2000 t=239.2s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=10.1/16.0GB (63%) swap=1.3/2.9GB (44%) cpu=78% browser_rss=0.47GB
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] [worker:ComfyUI-Sharp]
+  [ComfyUI] === WATCHDOG TICK 4 ===
+  [ComfyUI] === WATCHDOG TICK 4 ===
+  [ComfyUI] [worker:ComfyUI-Sharp] Current thread 0x00001550 (most recent call first):
+  [ComfyUI] [worker:ComfyUI-Sharp] Current thread 0x00001550 (most recent call first):
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 52 in _watchdog
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 995 in run
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 995 in run
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1044 in _bootstrap_inner
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1044 in _bootstrap_inner
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1015 in _bootstrap
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\threading.py", line 1015 in _bootstrap
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] [1m[31m[ERROR][0m Traceback (most recent call last):
-  [ComfyUI] [1m[31m[ERROR][0m Traceback (most recent call last):
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\execution.py", line 536, in execute
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\execution.py", line 536, in execute
-  [ComfyUI]     output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
-  [ComfyUI]     output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
-  [ComfyUI]                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\execution.py", line 336, in get_output_data
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\execution.py", line 336, in get_output_data
-  [ComfyUI]     return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
-  [ComfyUI]     return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
-  [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\execution.py", line 310, in _async_map_node_over_list
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\execution.py", line 310, in _async_map_node_over_list
-  [ComfyUI]     await process_inputs(input_dict, i)
-  [ComfyUI]     await process_inputs(input_dict, i)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\execution.py", line 298, in process_inputs
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\execution.py", line 298, in process_inputs
-  [ComfyUI]     result = f(**inputs)
-  [ComfyUI]     result = f(**inputs)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\.venv\Lib\site-packages\comfy_env\isolation\metadata.py", line 556, in proxy
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\.venv\Lib\site-packages\comfy_env\isolation\metadata.py", line 556, in proxy
-  [ComfyUI]     result = worker.call_method(
-  [ComfyUI]     result = worker.call_method(
-  [ComfyUI]         module_name=mod,
-  [ComfyUI]         module_name=mod,
-  [ComfyUI]     ...<4 lines>...
-  [ComfyUI]     ...<4 lines>...
-  [ComfyUI]         timeout=600.0,
-  [ComfyUI]         timeout=600.0,
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\.venv\Lib\site-packages\comfy_env\isolation\workers\subprocess.py", line 674, in call_method
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\.venv\Lib\site-packages\comfy_env\isolation\workers\subprocess.py", line 674, in call_method
-  [ComfyUI]     raise WorkerError(
-  [ComfyUI]     raise WorkerError(
-  [ComfyUI]     ...<2 lines>...
-  [ComfyUI]     ...<2 lines>...
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI] comfy_env.isolation.workers.base.WorkerError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
-  [ComfyUI] comfy_env.isolation.workers.base.WorkerError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+  [ComfyUI] Thread 0x000002f0 (most recent call first):
+  [ComfyUI] Thread 0x000002f0 (most recent call first):
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\conv.py", line 548 in _conv_forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\conv.py", line 548 in _conv_forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\conv.py", line 553 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\conv.py", line 553 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ops.py", line 537 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy\ops.py", line 537 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\container.py", line 253 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\container.py", line 253 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1120 in forward
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1120 in forward
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1787 in _call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\nn\modules\module.py", line 1776 in _wrapped_call_impl
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 348 in _predict_image_cached
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 348 in _predict_image_cached
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 239 in execute
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 239 in execute
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy_api\latest\_io.py", line 1892 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2117\ComfyUI\comfy_api\latest\_io.py", line 1892 in EXECUTE_NORMALIZED
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1762 in main
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1807 in <module>
+  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_18exi1fy\persistent_worker.py", line 1807 in <module>
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] Worker traceback:
-  [ComfyUI] Worker traceback:
-  [ComfyUI] Traceback (most recent call last):
-  [ComfyUI] Traceback (most recent call last):
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 761, in hf_raise_for_status
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 761, in hf_raise_for_status
-  [ComfyUI]     response.raise_for_status()
-  [ComfyUI]     response.raise_for_status()
-  [ComfyUI]     ~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  [ComfyUI]     ~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\httpx\_models.py", line 829, in raise_for_status
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\httpx\_models.py", line 829, in raise_for_status
-  [ComfyUI]     raise HTTPStatusError(message, request=request, response=self)
-  [ComfyUI]     raise HTTPStatusError(message, request=request, response=self)
-  [ComfyUI] httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt'
-  [ComfyUI] httpx.HTTPStatusError: Client error '429 Too Many Requests' for url 'https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt'
-  [ComfyUI] For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
-  [ComfyUI] For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
+  [ComfyUI] [worker:ComfyUI-Sharp] === END ===
   [ComfyUI] 
   [ComfyUI] 
-  [ComfyUI] The above exception was the direct cause of the following exception:
-  [ComfyUI] The above exception was the direct cause of the following exception:
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] Traceback (most recent call last):
-  [ComfyUI] Traceback (most recent call last):
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1694, in _get_metadata_or_catch_error
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1694, in _get_metadata_or_catch_error
-  [ComfyUI]     metadata = get_hf_file_metadata(
-  [ComfyUI]     metadata = get_hf_file_metadata(
-  [ComfyUI]         url=url,
-  [ComfyUI]         url=url,
-  [ComfyUI]     ...<4 lines>...
-  [ComfyUI]     ...<4 lines>...
-  [ComfyUI]         retry_on_errors=retry_on_errors,
-  [ComfyUI]         retry_on_errors=retry_on_errors,
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
-  [ComfyUI]     return fn(*args, **kwargs)
-  [ComfyUI]     return fn(*args, **kwargs)
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1616, in get_hf_file_metadata
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1616, in get_hf_file_metadata
-  [ComfyUI]     response = _httpx_follow_relative_redirects_with_backoff(
-  [ComfyUI]     response = _httpx_follow_relative_redirects_with_backoff(
-  [ComfyUI]         method="HEAD", url=url, headers=hf_headers, timeout=timeout, retry_on_errors=retry_on_errors
-  [ComfyUI]         method="HEAD", url=url, headers=hf_headers, timeout=timeout, retry_on_errors=retry_on_errors
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 685, in _httpx_follow_relative_redirects_with_backoff
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 685, in _httpx_follow_relative_redirects_with_backoff
-  [ComfyUI]     response = http_backoff(
-  [ComfyUI]     response = http_backoff(
-  [ComfyUI]         method=method,
-  [ComfyUI]         method=method,
-  [ComfyUI]     ...<3 lines>...
-  [ComfyUI]     ...<3 lines>...
-  [ComfyUI]         **no_retry_kwargs,
-  [ComfyUI]         **no_retry_kwargs,
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 559, in http_backoff
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 559, in http_backoff
-  [ComfyUI]     return next(
-  [ComfyUI]     return next(
-  [ComfyUI]         _http_backoff_base(
-  [ComfyUI]         _http_backoff_base(
-  [ComfyUI]     ...<9 lines>...
-  [ComfyUI]     ...<9 lines>...
-  [ComfyUI]         )
-  [ComfyUI]         )
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 468, in _http_backoff_base
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 468, in _http_backoff_base
-  Execution complete (t=24.7s)
-  [ComfyUI]     if not _should_retry(response):
-  [ComfyUI]     if not _should_retry(response):
-  Execution error: {'prompt_id': 'e5a88d07-87b3-4a98-beb1-8aaf3c8bd5ff', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['9'], 'exception_message': 'An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.\n\nWorker traceback:\nTraceback (most recent call last):\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py", line 761, in hf_raise_for_status\n    response.raise_for_status()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\httpx\\_models.py", line 829, in raise_for_status\n    raise HTTPStatusError(message, request=request, response=self)\nhttpx.HTTPStatusError: Client error \'429 Too Many Requests\' for url \'https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt\'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\file_download.py", line 1694, in _get_metadata_or_catch_error\n    metadata = get_hf_file_metadata(\n        url=url,\n    ...<4 lines>...\n        retry_on_errors=retry_on_errors,\n    )\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_validators.py", line 88, in _inner_fn\n    return fn(*args, **kwargs)\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\file_download.py", line 1616, in get_hf_file_metadata\n    response = _httpx_follow_relative_redirects_with_backoff(\n        method="HEAD", url=url, headers=hf_headers, timeout=timeout, retry_on_errors=retry_on_errors\n    )\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py", line 685, in _httpx_follow_relative_redirects_with_backoff\n    response = http_backoff(\n        method=method,\n    ...<3 lines>...\n        **no_retry_kwargs,\n    )\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py", line 559, in http_backoff\n    return next(\n        _http_backoff_base(\n    ...<9 lines>...\n        )\n    )\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py", line 468, in _http_backoff_base\n    if not _should_retry(response):\n           ~~~~~~~~~~~~~^^^^^^^^^^\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py", line 448, in _should_retry\n    hf_raise_for_status(response)  # Will raise uncaught exception\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py", line 868, in hf_raise_for_status\n    raise _format(HfHubHTTPError, message, response) from e\nhuggingface_hub.errors.HfHubHTTPError: (Amz CF ID: uZzEHDTurjJaCH3jfTgpHAi44ajC3BZloA8QQupnjgohK45WQAy8Lw==)\n\n429 Too Many Requests for url: https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "C:\\Users\\stduser\\AppData\\Local\\Temp\\comfyui_pvenv_jztu37n5\\persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\ComfyUI\\comfy_api\\latest\\_io.py", line 1892, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\ComfyUI\\custom_nodes\\ComfyUI-Sharp\\nodes\\load_model.py", line 211, in execute\n    model_path = hf_hub_download(\n        repo_id=SHARP_REPO_ID,\n    ...<2 lines>...\n        tqdm_class=_comfy_tqdm(),\n    )\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_validators.py", line 88, in _inner_fn\n    return fn(*args, **kwargs)\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\file_download.py", line 998, in hf_hub_download\n    return _hf_hub_download_to_local_dir(\n        # Destination\n    ...<16 lines>...\n        dry_run=dry_run,\n    )\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\file_download.py", line 1367, in _hf_hub_download_to_local_dir\n    _raise_on_head_call_error(head_call_error, force_download, local_files_only)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\file_download.py", line 1811, in _raise_on_head_call_error\n    raise LocalEntryNotFoundError(\n    ...<3 lines>...\n    ) from head_call_error\nhuggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\ComfyUI\\execution.py", line 536, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\ComfyUI\\execution.py", line 336, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\ComfyUI\\execution.py", line 310, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\ComfyUI\\execution.py", line 298, in process_inputs\n    result = f(**inputs)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\.venv\\Lib\\site-packages\\comfy_env\\isolation\\metadata.py", line 556, in proxy\n    result = worker.call_method(\n        module_name=mod,\n    ...<4 lines>...\n        timeout=600.0,\n    )\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\.venv\\Lib\\site-packages\\comfy_env\\isolation\\workers\\subprocess.py", line 674, in call_method\n    raise WorkerError(\n    ...<2 lines>...\n    )\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['11', '9', '2', '7'], 'timestamp': 1780863333087}
-  [ComfyUI]            ~~~~~~~~~~~~~^^^^^^^^^^
-  [ComfyUI]            ~~~~~~~~~~~~~^^^^^^^^^^
-    Status: FAILED
-    Error: Workflow execution failed: {'prompt_id': 'e5a88d07-87b3-4a98-beb1-8aaf3c8bd5ff', 'node_id': '2', 'node_type': 'LoadSharpModel', 'executed': ['9'], 'exception_message': 'An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.\n\nWorker traceback:\nTraceback (most recent call last):\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py", line 761, in hf_raise_for_status\n    response.raise_for_status()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\httpx\\_models.py", line 829, in raise_for_status\n    raise HTTPStatusError(message, request=request, response=self)\nhttpx.HTTPStatusError: Client error \'429 Too Many Requests\' for url \'https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt\'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\file_download.py", line 1694, in _get_metadata_or_catch_error\n    metadata = get_hf_file_metadata(\n        url=url,\n    ...<4 lines>...\n        retry_on_errors=retry_on_errors,\n    )\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_validators.py", line 88, in _inner_fn\n    return fn(*args, **kwargs)\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\file_download.py", line 1616, in get_hf_file_metadata\n    response = _httpx_follow_relative_redirects_with_backoff(\n        method="HEAD", url=url, headers=hf_headers, timeout=timeout, retry_on_errors=retry_on_errors\n    )\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py", line 685, in _httpx_follow_relative_redirects_with_backoff\n    response = http_backoff(\n        method=method,\n    ...<3 lines>...\n        **no_retry_kwargs,\n    )\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py", line 559, in http_backoff\n    return next(\n        _http_backoff_base(\n    ...<9 lines>...\n        )\n    )\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py", line 468, in _http_backoff_base\n    if not _should_retry(response):\n           ~~~~~~~~~~~~~^^^^^^^^^^\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py", line 448, in _should_retry\n    hf_raise_for_status(response)  # Will raise uncaught exception\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_http.py", line 868, in hf_raise_for_status\n    raise _format(HfHubHTTPError, message, response) from e\nhuggingface_hub.errors.HfHubHTTPError: (Amz CF ID: uZzEHDTurjJaCH3jfTgpHAi44ajC3BZloA8QQupnjgohK45WQAy8Lw==)\n\n429 Too Many Requests for url: https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "C:\\Users\\stduser\\AppData\\Local\\Temp\\comfyui_pvenv_jztu37n5\\persistent_worker.py", line 1762, in main\n    result = method(**inputs)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\ComfyUI\\comfy_api\\latest\\_io.py", line 1892, in EXECUTE_NORMALIZED\n    to_return = cls.execute(*args, **kwargs)\n  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\ComfyUI\\custom_nodes\\ComfyUI-Sharp\\nodes\\load_model.py", line 211, in execute\n    model_path = hf_hub_download(\n        repo_id=SHARP_REPO_ID,\n    ...<2 lines>...\n        tqdm_class=_comfy_tqdm(),\n    )\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\utils\\_validators.py", line 88, in _inner_fn\n    return fn(*args, **kwargs)\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\file_download.py", line 998, in hf_hub_download\n    return _hf_hub_download_to_local_dir(\n        # Destination\n    ...<16 lines>...\n        dry_run=dry_run,\n    )\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\file_download.py", line 1367, in _hf_hub_download_to_local_dir\n    _raise_on_head_call_error(head_call_error, force_download, local_files_only)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages\\huggingface_hub\\file_download.py", line 1811, in _raise_on_head_call_error\n    raise LocalEntryNotFoundError(\n    ...<3 lines>...\n    ) from head_call_error\nhuggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.\n\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\ComfyUI\\execution.py", line 536, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\ComfyUI\\execution.py", line 336, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\ComfyUI\\execution.py", line 310, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\ComfyUI\\execution.py", line 298, in process_inputs\n    result = f(**inputs)\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\.venv\\Lib\\site-packages\\comfy_env\\isolation\\metadata.py", line 556, in proxy\n    result = worker.call_method(\n        module_name=mod,\n    ...<4 lines>...\n        timeout=600.0,\n    )\n', '  File "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\.venv\\Lib\\site-packages\\comfy_env\\isolation\\workers\\subprocess.py", line 674, in call_method\n    raise WorkerError(\n    ...<2 lines>...\n    )\n'], 'current_inputs': {'precision': ['auto']}, 'current_outputs': ['11', '9', '2', '7'], 'timestamp': 1780863333087}
-    Details: Workflow: C:\Users\stduser\AppData\Local\Temp\comfy-test-run-dzvfgudn\ComfyUI-Sharp\workflows\sharp_exif.json
-Node error: LoadSharpModel
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 448, in _should_retry
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 448, in _should_retry
-  [ComfyUI]     hf_raise_for_status(response)  # Will raise uncaught exception
-  [ComfyUI]     hf_raise_for_status(response)  # Will raise uncaught exception
-  [ComfyUI]     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  [ComfyUI]     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 868, in hf_raise_for_status
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_http.py", line 868, in hf_raise_for_status
-  [ComfyUI]     raise _format(HfHubHTTPError, message, response) from e
-  [ComfyUI]     raise _format(HfHubHTTPError, message, response) from e
-  [ComfyUI] huggingface_hub.errors.HfHubHTTPError: (Amz CF ID: uZzEHDTurjJaCH3jfTgpHAi44ajC3BZloA8QQupnjgohK45WQAy8Lw==)
-  [ComfyUI] huggingface_hub.errors.HfHubHTTPError: (Amz CF ID: uZzEHDTurjJaCH3jfTgpHAi44ajC3BZloA8QQupnjgohK45WQAy8Lw==)
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] 429 Too Many Requests for url: https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt.
-  [ComfyUI] 429 Too Many Requests for url: https://huggingface.co/apple/Sharp/resolve/main/sharp_2572gikvuh.pt.
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] The above exception was the direct cause of the following exception:
-  [ComfyUI] The above exception was the direct cause of the following exception:
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] Traceback (most recent call last):
-  [ComfyUI] Traceback (most recent call last):
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_jztu37n5\persistent_worker.py", line 1762, in main
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_jztu37n5\persistent_worker.py", line 1762, in main
-  [ComfyUI]     result = method(**inputs)
-  [ComfyUI]     result = method(**inputs)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\comfy_api\latest\_io.py", line 1892, in EXECUTE_NORMALIZED
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\comfy_api\latest\_io.py", line 1892, in EXECUTE_NORMALIZED
-  [ComfyUI]     to_return = cls.execute(*args, **kwargs)
-  [ComfyUI]     to_return = cls.execute(*args, **kwargs)
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 211, in execute
-  [ComfyUI]   File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-2001\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 211, in execute
-  [ComfyUI]     model_path = hf_hub_download(
-  [ComfyUI]     model_path = hf_hub_download(
-  [ComfyUI]         repo_id=SHARP_REPO_ID,
-  [ComfyUI]         repo_id=SHARP_REPO_ID,
-  [ComfyUI]     ...<2 lines>...
-  [ComfyUI]     ...<2 lines>...
-  [ComfyUI]         tqdm_class=_comfy_tqdm(),
-  [ComfyUI]         tqdm_class=_comfy_tqdm(),
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\utils\_validators.py", line 88, in _inner_fn
-  [ComfyUI]     return fn(*args, **kwargs)
-  [ComfyUI]     return fn(*args, **kwargs)
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 998, in hf_hub_download
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 998, in hf_hub_download
-  [ComfyUI]     return _hf_hub_download_to_local_dir(
-  [ComfyUI]     return _hf_hub_download_to_local_dir(
-  [ComfyUI]         # Destination
-  [ComfyUI]         # Destination
-  [ComfyUI]     ...<16 lines>...
-  [ComfyUI]     ...<16 lines>...
-  [ComfyUI]         dry_run=dry_run,
-  [ComfyUI]         dry_run=dry_run,
-  [ComfyUI]     )
-  [ComfyUI]     )
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1367, in _hf_hub_download_to_local_dir
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1367, in _hf_hub_download_to_local_dir
-  [ComfyUI]     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
-  [ComfyUI]     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
-  [ComfyUI]     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1811, in _raise_on_head_call_error
-  [ComfyUI]   File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\huggingface_hub\file_download.py", line 1811, in _raise_on_head_call_error
-  [ComfyUI]     raise LocalEntryNotFoundError(
-  [ComfyUI]     raise LocalEntryNotFoundError(
-  [ComfyUI]     ...<3 lines>...
-  [ComfyUI]     ...<3 lines>...
-  [ComfyUI]     ) from head_call_error
-  [ComfyUI]     ) from head_call_error
-  [ComfyUI] huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
-  [ComfyUI] huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] 
-  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 24.44 seconds[0m
-  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 24.44 seconds[0m
+  [capture-loop] iter=2050 t=245.0s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=14 ram=10.4/16.0GB (65%) swap=1.3/2.9GB (44%) cpu=75% browser_rss=0.46GB
+  [capture-loop] iter=2100 t=251.3s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=8 ram=8.2/16.0GB (51%) swap=1.3/2.9GB (46%) cpu=94% browser_rss=0.45GB
+  [capture-loop] iter=2150 t=257.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=7 ram=9.2/16.0GB (57%) swap=1.3/2.9GB (46%) cpu=88% browser_rss=0.45GB
+  [capture-loop] iter=2200 t=263.5s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=10.1/16.0GB (63%) swap=1.3/2.9GB (46%) cpu=84% browser_rss=0.44GB
+  [capture-loop] iter=2250 t=269.4s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=6 ram=10.2/16.0GB (64%) swap=1.3/2.9GB (46%) cpu=88% browser_rss=0.42GB
+  [capture-loop] iter=2300 t=275.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=9.8/16.0GB (61%) swap=1.3/2.9GB (46%) cpu=95% browser_rss=0.41GB
+  [capture-loop] iter=2350 t=281.8s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=4 ram=8.3/16.0GB (52%) swap=1.3/2.9GB (46%) cpu=76% browser_rss=0.40GB
+  [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=5
+  [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=5
+  [ComfyUI] [SubprocessWorker] got response: ok
+  [ComfyUI] [SubprocessWorker] got response: ok
+  [ComfyUI] [comfy-env] SharpPredict done (278.36s): result: NodeOutput
+  [ComfyUI] [comfy-env] SharpPredict done (278.36s): result: NodeOutput
+  [ComfyUI] [comfy-env] Running PreviewGaussianSharp: ply_path: 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Shar..., extrinsics: list[4], intrinsics: list[3]
+  [ComfyUI] [comfy-env] Running PreviewGaussianSharp: ply_path: 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Shar..., extrinsics: list[4], intrinsics: list[3]
+  [ComfyUI] [SubprocessWorker] call_method: nodes.preview_gaussian_sharp.PreviewGaussianSharp.EXECUTE_NORMALIZED
+  [ComfyUI] [SubprocessWorker] call_method: nodes.preview_gaussian_sharp.PreviewGaussianSharp.EXECUTE_NORMALIZED
+  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+  [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
+  [ComfyUI] [ComfyUI-GaussianPack] Health check: ping (timeout=5.0s)...
+  [ComfyUI] [ComfyUI-GaussianPack] Health check: ping (timeout=5.0s)...
+  [ComfyUI] [ComfyUI-GaussianPack] Health check: failed
+  [ComfyUI] [ComfyUI-GaussianPack] Health check: failed
+  [ComfyUI] [ComfyUI-GaussianPack] Socket unhealthy, restarting worker...
+  [ComfyUI] [ComfyUI-GaussianPack] Socket unhealthy, restarting worker...
+  [ComfyUI] [comfy-env] gaussianpack-nodes: Library/bin has 237 DLLs
+  [ComfyUI] [comfy-env] gaussianpack-nodes: Library/bin has 237 DLLs
+  [ComfyUI] [ComfyUI-GaussianPack] python: C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\gaussianpack-nodes\python.exe
+  [ComfyUI] [ComfyUI-GaussianPack] python: C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\gaussianpack-nodes\python.exe
+  [ComfyUI] [ComfyUI-GaussianPack] sys_path sent to worker: ['D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2117\\ComfyUI', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2117\\ComfyUI\\custom_nodes\\ComfyUI-GaussianPack', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\gaussianpack-nodes\\Lib\\site-packages', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2117\\ComfyUI\\custom_nodes\\ComfyUI-GaussianPack']
+  [ComfyUI] [ComfyUI-GaussianPack] sys_path sent to worker: ['D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2117\\ComfyUI', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2117\\ComfyUI\\custom_nodes\\ComfyUI-GaussianPack', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\gaussianpack-nodes\\Lib\\site-packages', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2117\\ComfyUI\\custom_nodes\\ComfyUI-GaussianPack']
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\gaussianpack-nodes\python.exe
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\gaussianpack-nodes\python.exe
+  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\stduser\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\pixi.toml', '-e', 'gaussianpack-nodes', 'python', 'C:\\Users\\stduser\\AppData\\Local\\Temp\\comfyui_pvenv_etyt9220\\persistent_worker.py', 'tcp://127.0.0.1:62685']...
+  [ComfyUI] [SubprocessWorker] launching cmd=['C:\\Users\\stduser\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\pixi.toml', '-e', 'gaussianpack-nodes', 'python', 'C:\\Users\\stduser\\AppData\\Local\\Temp\\comfyui_pvenv_etyt9220\\persistent_worker.py', 'tcp://127.0.0.1:62685']...
+  Frame 5 saved (frame_004.jpg, t=287.4s)
+  [capture-periodic] freeze=5ms shot=157ms unfreeze=5ms saved=True
+  [capture-loop] iter=2400 t=287.7s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=5 ram=8.1/16.0GB (50%) swap=1.2/2.9GB (42%) cpu=54% browser_rss=0.42GB
+  [ComfyUI] [SubprocessWorker] worker started/confirmed
+  [ComfyUI] [SubprocessWorker] worker started/confirmed
+  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+  [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
+  [ComfyUI] [SubprocessWorker] created 0 shm blocks
+  [ComfyUI] [SubprocessWorker] created 0 shm blocks
+  [ComfyUI] [SubprocessWorker] sending request via socket...
+  [ComfyUI] [SubprocessWorker] sending request via socket...
+  [ComfyUI] [SubprocessWorker] call_id=2 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=2 sending call_method
+  [ComfyUI] [worker:ComfyUI-GaussianPack] WARNING: SPZ route not registered (ModuleNotFoundError: No module named 'comfy_aimdo')
+  [ComfyUI] [worker:ComfyUI-GaussianPack] WARNING: SPZ route not registered (ModuleNotFoundError: No module named 'comfy_aimdo')
+  [ComfyUI] [SubprocessWorker] got response: ok
+  [ComfyUI] [SubprocessWorker] got response: ok
+  [ComfyUI] [comfy-env] PreviewGaussianSharp done (3.60s): result: NodeOutput
+  [ComfyUI] [comfy-env] PreviewGaussianSharp done (3.60s): result: NodeOutput
+  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 290.66 seconds[0m
+  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 290.66 seconds[0m
+  Node executed (1 total), capturing...
+  Frame 6 saved (frame_005.jpg, t=291.2s)
+  [capture-node] freeze=4ms shot=142ms unfreeze=0ms saved=True
+  Execution complete (t=291.2s)
+  [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
+  [3d-wait] Phase 1 done in 0.0s
+  [3d-wait] Phase 2: iframes=1
+  [3d-wait] iframe viewer_ready=False (matched 0 console logs)
+  [3d-wait] Waiting for 'Loaded successfully' console message (timeout=60s)...
+  [3d-wait] Got 'Loaded successfully' after 1.2s
+  [3d-wait] Unfrozen in 0.202s, rendering for 5s...
+  [3d-wait] JS halted via CDP after 9.9s
+  [3d-wait] Re-frozen in 39.1s
+  [3d-wait] Total 3D wait: 40.3s
+  Captured 6 unique frames over 331.66s
+  [debug] iframes: 1
+  [debug]   iframe[0]: src=http://127.0.0.1:41881/extensions/ComfyUI-GaussianPack/viewer_gaussian_sharp.htm, canvas=1520x1011, rafFrozen=True
+  [timing] trigger_3d_previews: 0.0s
+  Saved high-quality screenshot: sharp_exif_executed.png
+  [timing] final_screenshot: 0.3s
+    Captured 7 video frames

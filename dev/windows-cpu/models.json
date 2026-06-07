@@ -1,22 +1,32 @@
 {
-  "models_dir": "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2001\\ComfyUI\\models",
+  "models_dir": "D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-2117\\ComfyUI\\models",
   "summary": {
-    "total_files": 2,
-    "total_size_bytes": 196,
-    "total_size_human": "196.0 B"
+    "total_files": 4,
+    "total_size_bytes": 2809738555,
+    "total_size_human": "2.6 GB"
   },
   "folders": {
     "sharp": {
-      "total_size_bytes": 196,
-      "total_size_human": "196.0 B",
+      "total_size_bytes": 2809738555,
+      "total_size_human": "2.6 GB",
       "source": {
         "type": "unknown"
       },
       "files": [
         {
+          "path": "sharp_2572gikvuh.pt",
+          "size_bytes": 2809738232,
+          "size_human": "2.6 GB"
+        },
+        {
           "path": ".cache\\huggingface\\CACHEDIR.TAG",
           "size_bytes": 195,
           "size_human": "195.0 B"
+        },
+        {
+          "path": ".cache\\huggingface\\download\\sharp_2572gikvuh.pt.metadata",
+          "size_bytes": 127,
+          "size_human": "127.0 B"
         },
         {
           "path": ".cache\\huggingface\\.gitignore",
