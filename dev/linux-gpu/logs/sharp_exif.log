@@ -8,18 +8,18 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [32m[INFO][0m Prompt has 4 nodes
   [ComfyUI] [32m[INFO][0m   Node 2: LoadSharpModel
   [ComfyUI] [32m[INFO][0m     Inputs: {"precision": "auto"}
-  [ComfyUI] [ComfyUI-Sharp] python: /tmp/comfytest-home/.ce/.pixi/envs/sharp-nodes/bin/python
   [ComfyUI] [32m[INFO][0m   Node 7: SharpPredict
-  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/workspaces/Sharp-1914/ComfyUI', '/workspaces/Sharp-1914/ComfyUI/custom_nodes/ComfyUI-Sharp', '/tmp/comfytest-home/.ce/.pixi/envs/sharp-nodes/lib/python3.1/site-packages', '/workspaces/Sharp-1914/ComfyUI/custom_nodes/ComfyUI-Sharp']
+  [ComfyUI] [ComfyUI-Sharp] python: /tmp/comfytest-home/.ce/.pixi/envs/sharp-nodes/bin/python
   [ComfyUI] [32m[INFO][0m     Inputs: {"focal_length_mm": ["9", 2], "output_prefix": "sharp", "model": ["2", 0], "image": ["9", 0]}
-  [ComfyUI] [SubprocessWorker] is_pixi=True, python=/tmp/comfytest-home/.ce/.pixi/envs/sharp-nodes/bin/python
   [ComfyUI] [32m[INFO][0m   Node 9: LoadImageWithExif
-  [ComfyUI] [SubprocessWorker] launching cmd=['/tmp/comfytest-home/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/tmp/comfytest-home/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/tmp/comfyui_pvenv_qlpb5zhh/persistent_worker.py', 'abstract://comfy_worker_3201e25c98bb']...
+  [ComfyUI] [ComfyUI-Sharp] sys_path sent to worker: ['/workspaces/Sharp-2000/ComfyUI', '/workspaces/Sharp-2000/ComfyUI/custom_nodes/ComfyUI-Sharp', '/tmp/comfytest-home/.ce/.pixi/envs/sharp-nodes/lib/python3.1/site-packages', '/workspaces/Sharp-2000/ComfyUI/custom_nodes/ComfyUI-Sharp']
   [ComfyUI] [32m[INFO][0m     Inputs: {"image": "eth3d.png", "default_focal_mm": 30}
-  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_3201e25c98bb (abstract, no filesystem path)
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=/tmp/comfytest-home/.ce/.pixi/envs/sharp-nodes/bin/python
   [ComfyUI] [32m[INFO][0m   Node 11: PreviewGaussianSharp
+  [ComfyUI] [SubprocessWorker] launching cmd=['/tmp/comfytest-home/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/tmp/comfytest-home/.ce/pixi.toml', '-e', 'sharp-nodes', 'python', '/tmp/comfyui_pvenv_dtk9es_f/persistent_worker.py', 'abstract://comfy_worker_cf1b3b477ca6']...
+  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_cf1b3b477ca6 (abstract, no filesystem path)
   [ComfyUI] [32m[INFO][0m     Inputs: {"preview_gaussian": "", "ply_path": ["7", 0], "extrinsics": ["7", 1], "intrinsics": ["7", 2]}
-  [ComfyUI] [32m[INFO][0m Generated prompt_id: 35f229fe-8d91-4024-98dd-a9461e299a0b
+  [ComfyUI] [32m[INFO][0m Generated prompt_id: 891aa0c0-2308-4c2f-8512-c5e3736a0440
   [ComfyUI] [32m[INFO][0m Calling execution.validate_prompt()...
   [ComfyUI] [32m[INFO][0m Validation result: valid=True
   [ComfyUI] [32m[INFO][0m === Validation PASSED ===
@@ -38,15 +38,15 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
   [ComfyUI] [SubprocessWorker] created 0 shm blocks
   [ComfyUI] [SubprocessWorker] sending request via socket...
-  [ComfyUI] [SubprocessWorker] call_id=5 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=10 sending call_method
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [comfy-env] [VRAM] Before offload 'RGBGaussianPredictor_1' (2679 MB) -> cpu: 4817 / 24122 MB
   [ComfyUI] [ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
   [ComfyUI] [ComfyUI-Sharp] Health check: ok
-  [ComfyUI] [SubprocessWorker] call_id=6 sending model_to_device
+  [ComfyUI] [SubprocessWorker] call_id=11 sending model_to_device
   [ComfyUI] [1m[33m[WARNING][0m Model 'RGBGaussianPredictor_1' gone from worker (restarted?), treating as offloaded
   [ComfyUI] [comfy-env] [VRAM] After offload 'RGBGaussianPredictor_1' (2679 MB): 4817 / 24122 MB
-  [ComfyUI] [comfy-env] LoadImageWithExif done (1.96s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadImageWithExif done (1.75s): result: NodeOutput
   [ComfyUI] [VRAM] After LoadImageWithExif: 4817 / 24122 MB
   [ComfyUI] [comfy-env] Running LoadSharpModel: precision: 'auto'
   [ComfyUI] [VRAM] Before LoadSharpModel: 4817 / 24122 MB
@@ -58,84 +58,94 @@ Capturing execution frames: sharp_exif.json
   [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
   [ComfyUI] [SubprocessWorker] created 0 shm blocks
   [ComfyUI] [SubprocessWorker] sending request via socket...
-  [ComfyUI] [SubprocessWorker] call_id=7 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=12 sending call_method
   [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] precision='auto' -> dtype=bf16 (device=cuda:0)
-  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint already present, reusing (no download): /workspaces/Sharp-1914/ComfyUI/models/sharp/sharp_2572gikvuh.pt (2679.6 MB)
-  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint ready: /workspaces/Sharp-1914/ComfyUI/models/sharp/sharp_2572gikvuh.pt (2679.6 MB)
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint already present, reusing (no download): /workspaces/Sharp-2000/ComfyUI/models/sharp/sharp_2572gikvuh.pt (2679.6 MB)
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint ready: /workspaces/Sharp-2000/ComfyUI/models/sharp/sharp_2572gikvuh.pt (2679.6 MB)
   [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] config: precision=auto -> dtype=bf16
   [ComfyUI] [SubprocessWorker] got response: ok
-  [ComfyUI] [comfy-env] LoadSharpModel done (0.08s): result: NodeOutput
+  [ComfyUI] [comfy-env] LoadSharpModel done (0.07s): result: NodeOutput
   [ComfyUI] [VRAM] After LoadSharpModel: 4817 / 24122 MB
-  [ComfyUI] [comfy-env] Running SharpPredict: focal_length_mm: 20.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,2022,3040,3] cpu
+  [ComfyUI] [comfy-env] Running SharpPredict: focal_length_mm: 20.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,1011,1520,3] cpu
   [ComfyUI] [VRAM] Before SharpPredict: 4817 / 24122 MB
   [ComfyUI] [SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
   [ComfyUI] [ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
   [ComfyUI] [ComfyUI-Sharp] Health check: ok
   [ComfyUI] [SubprocessWorker] worker started/confirmed
-  [ComfyUI] [comfy-env] PRE-SERIALIZE 'image' shape: torch.Size([1, 2022, 3040, 3])
+  [ComfyUI] [comfy-env] PRE-SERIALIZE 'image' shape: torch.Size([1, 1011, 1520, 3])
   [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
   [ComfyUI] [SubprocessWorker] created 0 shm blocks
   [ComfyUI] [SubprocessWorker] sending request via socket...
-  [ComfyUI] [SubprocessWorker] call_id=8 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=13 sending call_method
   [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] _from_shm got dict with keys: ['__type__', 'strategy', 'parent_pid', 'fd', 'storage_size']
-  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZE TensorRef: tensor_size=[1, 2022, 3040, 3]
-  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 2022, 3040, 3])
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZE TensorRef: tensor_size=[1, 1011, 1520, 3]
+  [ComfyUI] [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 1011, 1520, 3])
   Frame 2 saved (frame_001.jpg, t=2.3s)
-  [capture-periodic] freeze=2ms shot=142ms unfreeze=2ms saved=True
-  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] loading checkpoint from /workspaces/Sharp-1914/ComfyUI/models/sharp/sharp_2572gikvuh.pt (dtype=bf16)
+  [capture-periodic] freeze=9ms shot=105ms unfreeze=1ms saved=True
+  [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] loading checkpoint from /workspaces/Sharp-2000/ComfyUI/models/sharp/sharp_2572gikvuh.pt (dtype=bf16)
   Frame 3 saved (frame_002.jpg, t=4.5s)
-  [capture-periodic] freeze=1ms shot=99ms unfreeze=2ms saved=True
+  [capture-periodic] freeze=1ms shot=101ms unfreeze=2ms saved=True
   [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] initializing model on meta device...
   [ComfyUI] [worker:ComfyUI-Sharp] [LoadSharpModel] model ready (torch.bfloat16)
-  [ComfyUI] [SubprocessWorker] callback 'request_vram_budget' from call_id=8
+  [ComfyUI] [SubprocessWorker] callback 'request_vram_budget' from call_id=13
   [ComfyUI] [comfy-env] VRAM request: 2.81GB, free before eviction: 20.24GB
   [ComfyUI] [comfy-env] VRAM after eviction: 20.24GB
-  [capture-loop] iter=50 t=5.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=1 ram=13.9/31.3GB (44%) swap=1.8/32.0GB (6%) cpu=66% browser_rss=1.09GB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +1115MB (now 1115MB) reserved=1120MB peak=1115MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +2287MB (now 3402MB) reserved=3520MB peak=3402MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +3702MB (now 7105MB) reserved=7968MB peak=7105MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] -2890MB (now 4216MB) reserved=7968MB peak=7105MB
-  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +300MB (now 4516MB) reserved=7392MB peak=7105MB
-  [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=8
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +715MB (now 715MB) reserved=736MB peak=715MB
+  [capture-loop] iter=50 t=5.6s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=2 ram=12.6/31.3GB (40%) swap=3.5/32.0GB (11%) cpu=71% browser_rss=0.88GB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +2589MB (now 3304MB) reserved=3456MB peak=3314MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +3748MB (now 7053MB) reserved=7744MB peak=7053MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] -2890MB (now 4163MB) reserved=7744MB peak=7053MB
+  [ComfyUI] [worker:ComfyUI-Sharp] [VRAM] +234MB (now 4397MB) reserved=7424MB peak=7053MB
+  [ComfyUI] [SubprocessWorker] callback 'report_progress' from call_id=13
   [ComfyUI] [SubprocessWorker] got response: ok
   [ComfyUI] [comfy-env] Created 1 model patchers: ['RGBGaussianPredictor_1']
-  [ComfyUI] [comfy-env] SharpPredict done (7.83s): result: NodeOutput
-  [ComfyUI] [VRAM] After SharpPredict: 12323 / 24122 MB
+  [ComfyUI] [ComfyUI-GaussianPack] python: /tmp/comfytest-home/.ce/.pixi/envs/gaussianpack-nodes/bin/python
+  [ComfyUI] [ComfyUI-GaussianPack] sys_path sent to worker: ['/workspaces/Sharp-2000/ComfyUI', '/workspaces/Sharp-2000/ComfyUI/custom_nodes/ComfyUI-GaussianPack', '/tmp/comfytest-home/.ce/.pixi/envs/gaussianpack-nodes/lib/python3.1/site-packages', '/workspaces/Sharp-2000/ComfyUI/custom_nodes/ComfyUI-GaussianPack']
+  [ComfyUI] [comfy-env] SharpPredict done (7.76s): result: NodeOutput
+  [ComfyUI] [SubprocessWorker] is_pixi=True, python=/tmp/comfytest-home/.ce/.pixi/envs/gaussianpack-nodes/bin/python
+  [ComfyUI] [VRAM] After SharpPredict: 12355 / 24122 MB
+  [ComfyUI] [SubprocessWorker] launching cmd=['/tmp/comfytest-home/.pixi/bin/pixi', 'run', '--as-is', '--manifest-path', '/tmp/comfytest-home/.ce/pixi.toml', '-e', 'gaussianpack-nodes', 'python', '/tmp/comfyui_pvenv_pzbmli8e/persistent_worker.py', 'abstract://comfy_worker_50a848f354a1']...
   [ComfyUI] [VRAM] Loaded: SubprocessModel (2679 MB)
-  [ComfyUI] [comfy-env] Running PreviewGaussianSharp: ply_path: '/workspaces/Sharp-1914/ComfyUI/output/sharp_178086035996..., extrinsics: list[4], intrinsics: list[3]
-  [ComfyUI] [VRAM] Before PreviewGaussianSharp: 12323 / 24122 MB
+  [ComfyUI] [SubprocessWorker] socket_addr=abstract://comfy_worker_50a848f354a1 (abstract, no filesystem path)
+  [ComfyUI] [comfy-env] Running PreviewGaussianSharp: ply_path: '/workspaces/Sharp-2000/ComfyUI/output/sharp_178086325915..., extrinsics: list[4], intrinsics: list[3]
+  [ComfyUI] [VRAM] Before PreviewGaussianSharp: 12355 / 24122 MB
   [ComfyUI] [VRAM] Loaded: SubprocessModel (2679 MB)
   [ComfyUI] [SubprocessWorker] call_method: nodes.preview_gaussian_sharp.PreviewGaussianSharp.EXECUTE_NORMALIZED
   [ComfyUI] [SubprocessWorker] acquired lock, ensuring started...
   [ComfyUI] [ComfyUI-GaussianPack] Health check: ping (timeout=5.0s)...
-  [ComfyUI] [ComfyUI-GaussianPack] Health check: ok
+  [ComfyUI] [ComfyUI-GaussianPack] Health check: failed
+  [ComfyUI] [ComfyUI-GaussianPack] Socket unhealthy, restarting worker...
+  [capture-loop] iter=100 t=10.9s state={'complete': False, 'error': None, 'executedCount': 0, 'wsState': 1} eval_ms=1 ram=14.9/31.3GB (48%) swap=3.5/32.0GB (11%) cpu=14% browser_rss=0.88GB
   [ComfyUI] [SubprocessWorker] worker started/confirmed
   [ComfyUI] [SubprocessWorker] serializing kwargs to shm...
   [ComfyUI] [SubprocessWorker] created 0 shm blocks
   [ComfyUI] [SubprocessWorker] sending request via socket...
-  [ComfyUI] [SubprocessWorker] call_id=2 sending call_method
+  [ComfyUI] [SubprocessWorker] call_id=4 sending call_method
+  Frame 4 saved (frame_003.jpg, t=11.1s)
+  [capture-periodic] freeze=1ms shot=105ms unfreeze=1ms saved=True
+  [ComfyUI] [worker:ComfyUI-GaussianPack] WARNING: SPZ route not registered (ModuleNotFoundError: No module named 'comfy_aimdo')
   [ComfyUI] [SubprocessWorker] got response: ok
-  [ComfyUI] [comfy-env] PreviewGaussianSharp done (0.06s): result: NodeOutput
-  [ComfyUI] [VRAM] After PreviewGaussianSharp: 12323 / 24122 MB
+  [ComfyUI] [comfy-env] PreviewGaussianSharp done (1.43s): result: NodeOutput
+  [ComfyUI] [VRAM] After PreviewGaussianSharp: 12355 / 24122 MB
   [ComfyUI] [VRAM] Loaded: SubprocessModel (2679 MB)
-  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 9.95 seconds[0m
+  [ComfyUI] [32m[INFO][0m [32mPrompt executed in 11.02 seconds[0m
   Node executed (1 total), capturing...
-  Frame 4 saved (frame_003.jpg, t=10.4s)
-  [capture-node] freeze=1ms shot=954ms unfreeze=0ms saved=True
-  Execution complete (t=10.4s)
+  Frame 5 saved (frame_004.jpg, t=11.5s)
+  [capture-node] freeze=1ms shot=187ms unfreeze=0ms saved=True
+  Execution complete (t=11.5s)
   [3d-wait] Phase 1: Waiting for 'Loading 3D Model' text to disappear...
-  [3d-wait] Phase 1 done in 0.0s
+  [3d-wait] Phase 1 done in 0.2s
   [3d-wait] Phase 2: iframes=1
   [3d-wait] iframe viewer_ready=True (matched 1 console logs)
   [3d-wait] Unfrozen in 0.001s, rendering for 5s...
-  [3d-wait] JS halted via CDP after 8.3s
-  [3d-wait] Re-frozen in 33.1s
-  [3d-wait] Total 3D wait: 33.2s
-  Captured 4 unique frames over 44.66s
+  [3d-wait] JS halted via CDP after 8.5s
+  [3d-wait] Re-frozen in 32.5s
+  [3d-wait] Total 3D wait: 32.7s
+  Captured 5 unique frames over 45.09s
   [debug] iframes: 1
-  [debug]   iframe[0]: src=http://127.0.0.1:41899/extensions/ComfyUI-GaussianPack/viewer_gaussian_sharp.htm, canvas=3040x2022, rafFrozen=True
+  [debug]   iframe[0]: src=http://127.0.0.1:41888/extensions/ComfyUI-GaussianPack/viewer_gaussian_sharp.htm, canvas=1520x1011, rafFrozen=True
   [timing] trigger_3d_previews: 0.0s
   Saved high-quality screenshot: sharp_exif_executed.png
   [timing] final_screenshot: 0.3s
-    Captured 5 video frames
+    Captured 6 video frames

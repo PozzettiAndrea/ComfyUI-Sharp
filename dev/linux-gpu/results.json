@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-06-07T19:28:31.886786+00:00",
+  "timestamp": "2026-06-07T20:16:50.649868+00:00",
   "platform": "linux",
   "hardware": {
     "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
     "cpu": "AMD Ryzen 5 5600 6-Core Processor",
     "gpu": "NVIDIA GeForce RTX 3090"
   },
-  "commit_hash": "f2f0983e2ecb85620a0e1850202a4ee5722f3238",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/27102156785",
-  "success": false,
+  "commit_hash": "d3c12aed8b4d62b78d121b478852188c26ed5634",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/27103240368",
+  "success": true,
   "summary": {
     "total": 4,
-    "passed": 3,
-    "failed": 1
+    "passed": 4,
+    "failed": 0
   },
   "workflows": [
     {
       "name": "pano",
-      "status": "fail",
-      "duration_seconds": 229.52,
-      "error": "Workflow execution failed: {'prompt_id': '16f9d308-d076-4c5d-9a60-1719bd41817a', 'node_id': '87', 'node_type': 'PanoramaSplitAdaptive', 'executed': ['7', '81', '61', '96', '9', '70', '62', '59', '80', '60', '68'], 'exception_message': 'unable to allocate shared memory(shm) for file </torch_2560_118963202_16>: Success (0)\\n\\nWorker traceback:\\nTraceback (most recent call last):\\n  File \"/tmp/comfyui_pvenv_0kgugsfd/persistent_worker.py\", line 1772, in main\\n    result_meta = _to_shm(result, shm_registry)\\n  File \"/tmp/comfyui_pvenv_0kgugsfd/persistent_worker.py\", line 692, in _to_shm\\n    \"args\": _to_shm(list(obj.args), registry, visited),\\n  File \"/tmp/comfyui_pvenv_0kgugsfd/persistent_worker.py\", line 705, in _to_shm\\n    result = [_to_shm(v, registry, visited) for v in obj]\\n  File \"/tmp/comfyui_pvenv_0kgugsfd/persistent_worker.py\", line 705, in <listcomp>\\n    result = [_to_shm(v, registry, visited) for v in obj]\\n  File \"/tmp/comfyui_pvenv_0kgugsfd/persistent_worker.py\", line 628, in _to_shm\\n    result = _serialize_tensor_native(tensor, registry)\\n  File \"/tmp/comfyui_pvenv_0kgugsfd/persistent_worker.py\", line 563, in _serialize_tensor_native\\n    t.share_memory_()\\n  File \"/tmp/comfytest-home/.ce/.pixi/envs/panopack-nodes/lib/python3.10/site-packages/torch/_tensor.py\", line 853, in share_memory_\\n    self._typed_storage()._share_memory_()\\n  File \"/tmp/comfytest-home/.ce/.pixi/envs/panopack-nodes/lib/python3.10/site-packages/torch/storage.py\", line 1193, in _share_memory_\\n    self._untyped_storage.share_memory_()\\n  File \"/tmp/comfytest-home/.ce/.pixi/envs/panopack-nodes/lib/python3.10/site-packages/torch/storage.py\", line 449, in wrapper\\n    return fn(self, *args, **kwargs)\\n  File \"/tmp/comfytest-home/.ce/.pixi/envs/panopack-nodes/lib/python3.10/site-packages/torch/storage.py\", line 520, in share_memory_\\n    return super().share_memory_(*args, **kwargs)\\n  File \"/tmp/comfytest-home/.ce/.pixi/envs/panopack-nodes/lib/python3.10/site-packages/torch/storage.py\", line 400, in share_memory_\\n    self._share_fd_cpu_()\\n  File \"/tmp/comfytest-home/.ce/.pixi/envs/panopack-nodes/lib/python3.10/site-packages/torch/storage.py\", line 449, in wrapper\\n    return fn(self, *args, **kwargs)\\n  File \"/tmp/comfytest-home/.ce/.pixi/envs/panopack-nodes/lib/python3.10/site-packages/torch/storage.py\", line 524, in _share_fd_cpu_\\n    return super()._share_fd_cpu_(*args, **kwargs)\\nRuntimeError: unable to allocate shared memory(shm) for file </torch_2560_118963202_16>: Success (0)\\n\\n', 'exception_type': 'comfy_env.isolation.workers.base.WorkerError', 'traceback': ['  File \"/workspaces/Sharp-1914/ComfyUI/execution.py\", line 536, in execute\\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\\n', '  File \"/workspaces/Sharp-1914/ComfyUI/execution.py\", line 336, in get_output_data\\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\\n', '  File \"/workspaces/Sharp-1914/ComfyUI/execution.py\", line 310, in _async_map_node_over_list\\n    await process_inputs(input_dict, i)\\n', '  File \"/workspaces/Sharp-1914/ComfyUI/execution.py\", line 298, in process_inputs\\n    result = f(**inputs)\\n', '  File \"/workspaces/Sharp-1914/.venv/lib/python3.10/site-packages/comfy_env/isolation/metadata.py\", line 556, in proxy\\n    result = worker.call_method(\\n', '  File \"/workspaces/Sharp-1914/.venv/lib/python3.10/site-packages/comfy_env/isolation/workers/subprocess.py\", line 674, in call_method\\n    raise WorkerError(\\n'], 'current_inputs': {'split_method': ['icosahedron_42'], 'resolution': [1536], 'fov_degrees': [90], 'use_gpu': [True], 'create_masks': [True], 'mask_method': ['closest_to'], 'panorama': [\"{'image': tensor([[[[0.1647, 0.1020, 0.0745],\\n          [0.1765, 0.1098, 0.0863],\\n          [0.1765, 0.1137, 0.0941],\\n          ...,\\n          [0.1647, 0.1137, 0.0941],\\n          [0.1647, 0.1098, 0.0902],\\n          [0.1333, 0.0784, 0.0667]],\\n\\n         [[0.1922, 0.1255, 0.0902],\\n          [0.1843, 0.1216, 0.0902],\\n          [0.1922, 0.1255, 0.0980],\\n          ...,\\n          [0.1765, 0.1255, 0.0980],\\n          [0.1725, 0.1255, 0.1020],\\n          [0.1647, 0.1059, 0.0824]],\\n\\n         [[0.1882, 0.1216, 0.0980],\\n          [0.1843, 0.1216, 0.0980],\\n          [0.1882, 0.1216, 0.0980],\\n          ...,\\n          [0.1804, 0.1333, 0.1020],\\n          [0.1804, 0.1373, 0.1098],\\n          [0.1569, 0.1059, 0.0863]],\\n\\n         ...,\\n\\n         [[0.1882, 0.1255, 0.1176],\\n          [0.1922, 0.1255, 0.1176],\\n          [0.1922, 0.1255, 0.1176],\\n          ...,\\n          [0.1176, 0.1333, 0.1412],\\n          [0.1686, 0.1529, 0.1451],\\n          [0.1843, 0.1569, 0.1333]],\\n\\n         [[0.1882, 0.1255, 0.1176],\\n          [0.1882, 0.1255, 0.1137],\\n          [0.1922, 0.1255, 0.1176],\\n          ...,\\n          [0.1647, 0.1412, 0.1098],\\n          [0.1922, 0.1529, 0.1176],\\n          [0.2039, 0.1490, 0.1294]],\\n\\n         [[0.1765, 0.1137, 0.1137],\\n          [0.1804, 0.1255, 0.1216],\\n          [0.1765, 0.1216, 0.1137],\\n          ...,\\n          [0.1961, 0.1725, 0.1412],\\n          [0.1647, 0.1451, 0.1333],\\n          [0.1843, 0.1137, 0.1373]]]]), 'meta': {}}\"], 'depth_panorama': ['tensor([[[[0.7430, 0.7430, 0.7430],\\n          [0.7430, 0.7430, 0.7430],\\n          [0.7430, 0.7430, 0.7430],\\n          ...,\\n          [0.7430, 0.7430, 0.7430],\\n          [0.7430, 0.7430, 0.7430],\\n          [0.7430, 0.7430, 0.7430]],\\n\\n         [[0.7429, 0.7429, 0.7429],\\n          [0.7429, 0.7429, 0.7429],\\n          [0.7429, 0.7429, 0.7429],\\n          ...,\\n          [0.7429, 0.7429, 0.7429],\\n          [0.7429, 0.7429, 0.7429],\\n          [0.7429, 0.7429, 0.7429]],\\n\\n         [[0.7430, 0.7430, 0.7430],\\n          [0.7430, 0.7430, 0.7430],\\n          [0.7430, 0.7430, 0.7430],\\n          ...,\\n          [0.7430, 0.7430, 0.7430],\\n          [0.7430, 0.7430, 0.7430],\\n          [0.7430, 0.7430, 0.7430]],\\n\\n         ...,\\n\\n         [[0.8810, 0.8810, 0.8810],\\n          [0.8810, 0.8810, 0.8810],\\n          [0.8810, 0.8810, 0.8810],\\n          ...,\\n          [0.8810, 0.8810, 0.8810],\\n          [0.8810, 0.8810, 0.8810],\\n          [0.8810, 0.8810, 0.8810]],\\n\\n         [[0.8811, 0.8811, 0.8811],\\n          [0.8811, 0.8811, 0.8811],\\n          [0.8811, 0.8811, 0.8811],\\n          ...,\\n          [0.8811, 0.8811, 0.8811],\\n          [0.8811, 0.8811, 0.8811],\\n          [0.8811, 0.8811, 0.8811]],\\n\\n         [[0.8813, 0.8813, 0.8813],\\n          [0.8813, 0.8813, 0.8813],\\n          [0.8813, 0.8813, 0.8813],\\n          ...,\\n          [0.8813, 0.8813, 0.8813],\\n          [0.8813, 0.8813, 0.8813],\\n          [0.8813, 0.8813, 0.8813]]]])'], 'normals_panorama': ['tensor([[[[4.8400e-01, 5.0399e-01, 2.7195e-04],\\n          [4.8401e-01, 5.0400e-01, 2.7180e-04],\\n          [4.8401e-01, 5.0400e-01, 2.7180e-04],\\n          ...,\\n          [4.8401e-01, 5.0399e-01, 2.7168e-04],\\n          [4.8401e-01, 5.0399e-01, 2.7168e-04],\\n          [4.8400e-01, 5.0399e-01, 2.7195e-04]],\\n\\n         [[4.8384e-01, 5.0488e-01, 2.8512e-04],\\n          [4.8384e-01, 5.0488e-01, 2.8512e-04],\\n          [4.8384e-01, 5.0488e-01, 2.8512e-04],\\n          ...,\\n          [4.8384e-01, 5.0488e-01, 2.8512e-04],\\n          [4.8384e-01, 5.0488e-01, 2.8512e-04],\\n          [4.8384e-01, 5.0488e-01, 2.8512e-04]],\\n\\n         [[4.8386e-01, 5.0571e-01, 2.9308e-04],\\n          [4.8386e-01, 5.0571e-01, 2.9308e-04],\\n          [4.8386e-01, 5.0571e-01, 2.9308e-04],\\n          ...,\\n          [4.8386e-01, 5.0571e-01, 2.9308e-04],\\n          [4.8386e-01, 5.0571e-01, 2.9308e-04],\\n          [4.8386e-01, 5.0571e-01, 2.9308e-04]],\\n\\n         ...,\\n\\n         [[4.9929e-01, 5.1112e-01, 9.9988e-01],\\n          [4.9929e-01, 5.1112e-01, 9.9988e-01],\\n          [4.9929e-01, 5.1112e-01, 9.9988e-01],\\n          ...,\\n          [4.9929e-01, 5.1112e-01, 9.9988e-01],\\n          [4.9929e-01, 5.1112e-01, 9.9988e-01],\\n          [4.9929e-01, 5.1112e-01, 9.9988e-01]],\\n\\n         [[4.9880e-01, 5.1144e-01, 9.9987e-01],\\n          [4.9880e-01, 5.1144e-01, 9.9987e-01],\\n          [4.9880e-01, 5.1144e-01, 9.9987e-01],\\n          ...,\\n          [4.9880e-01, 5.1144e-01, 9.9987e-01],\\n          [4.9880e-01, 5.1144e-01, 9.9987e-01],\\n          [4.9880e-01, 5.1144e-01, 9.9987e-01]],\\n\\n         [[4.9943e-01, 5.1242e-01, 9.9985e-01],\\n          [4.9943e-01, 5.1242e-01, 9.9985e-01],\\n          [4.9943e-01, 5.1242e-01, 9.9985e-01],\\n          ...,\\n          [4.9943e-01, 5.1242e-01, 9.9985e-01],\\n          [4.9943e-01, 5.1242e-01, 9.9985e-01],\\n          [4.9943e-01, 5.1242e-01, 9.9985e-01]]]])']}, 'current_outputs': ['7', '61', '81', '54', '96', '87', '9', '62', '70', '59', '76', '73', '80', '89', '95', '68', '78', '60'], 'timestamp': 1780860292737}\n\nDetails:\nWorkflow: /node/ComfyUI-Sharp/workflows/pano.json\nNode error: PanoramaSplitAdaptive",
+      "status": "pass",
+      "duration_seconds": 443.87,
+      "error": null,
       "hardware": {
         "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
         "cpu": "AMD Ryzen 5 5600 6-Core Processor",
@@ -27,21 +27,21 @@
       },
       "resources": {
         "ram": {
-          "peak": 26.12,
-          "avg": 13.61
+          "peak": 30.33,
+          "avg": 20.43
         },
         "total_ram_gb": 31.3,
-        "samples": 224,
+        "samples": 434,
         "vram": {
-          "peak": 5.97,
-          "avg": 3.49
+          "peak": 18.08,
+          "avg": 8.49
         }
       }
     },
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 55.83,
+      "duration_seconds": 52.81,
       "error": null,
       "hardware": {
         "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
@@ -50,21 +50,21 @@
       },
       "resources": {
         "ram": {
-          "peak": 18.84,
-          "avg": 13.47
+          "peak": 24.51,
+          "avg": 14.16
         },
         "total_ram_gb": 31.3,
-        "samples": 55,
+        "samples": 52,
         "vram": {
           "peak": 11.99,
-          "avg": 5.32
+          "avg": 5.58
         }
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 52.3,
+      "duration_seconds": 52.59,
       "error": null,
       "hardware": {
         "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
@@ -73,21 +73,21 @@
       },
       "resources": {
         "ram": {
-          "peak": 15.26,
-          "avg": 14.04
+          "peak": 13.99,
+          "avg": 12.67
         },
         "total_ram_gb": 31.3,
         "samples": 51,
         "vram": {
-          "peak": 12.11,
-          "avg": 9.87
+          "peak": 11.89,
+          "avg": 9.9
         }
       }
     },
     {
       "name": "vanilla_vs_image_depth_gaussians",
       "status": "pass",
-      "duration_seconds": 110.16,
+      "duration_seconds": 109.07,
       "error": null,
       "hardware": {
         "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
@@ -96,14 +96,14 @@
       },
       "resources": {
         "ram": {
-          "peak": 15.62,
-          "avg": 14.25
+          "peak": 16.41,
+          "avg": 15.14
         },
         "total_ram_gb": 31.3,
-        "samples": 107,
+        "samples": 106,
         "vram": {
-          "peak": 12.02,
-          "avg": 5.15
+          "peak": 12.15,
+          "avg": 5.07
         }
       }
     }
