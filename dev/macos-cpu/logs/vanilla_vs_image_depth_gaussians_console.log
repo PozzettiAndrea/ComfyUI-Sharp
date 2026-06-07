@@ -1,0 +1,125 @@
+[Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+[Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+[Console-warning] [ComfyUI] The legacy queue/history menu is deprecated. Core functionality in this menu may break at any time. Issues and feature requests related to the legacy menu will not be addressed. To switch to the new menu: Settings → search "Use new menu" → change from "Disabled" to "Top".
+[Console-warning] [ComfyUI] The legacy queue/history menu is deprecated. Core functionality in this menu may break at any time. Issues and feature requests related to the legacy menu will not be addressed. To switch to the new menu: Settings → search "Use new menu" → change from "Disabled" to "Top".
+[Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+[Console-error] ComfyApp graph accessed before initialization
+[Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+[Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+[Console-error] Failed to load resource: the server responded with a status of 404 (Not Found)
+[Console-warning] THREE.WARNING: Multiple instances of Three.js being imported.
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "three". Relati…ences must start with either "/", "./", or "../".}
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "three". Relati…ences must start with either "/", "./", or "../".}
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "three". Relati…ences must start with either "/", "./", or "../".}
+[Console-warning] WARNING: Multiple instances of Three.js being imported.
+[Console-log] [VTK Bundle] GLTFImporter included in bundle
+[Console-log] [GaussianPack Sharp] Loading extension...
+[Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension
+[Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension...
+[Console-log] [FBXAnimationViewer] Extension registered: comfy3d.fbxanimationviewer
+[Console-log] [BVHViewer] Loading BVH Viewer extension
+[Console-log] [BVHViewer] Loading BVH viewer extension...
+[Console-log] [BVHViewer] Extension registered: comfy3d.bvhviewer
+[Console-log] [GeomPack] Loading VTK.js textured mesh preview extension...
+[Console-log] [GeomPack] VTK.js textured mesh preview extension registered
+[Console-log] [GeomPack Multi JS] Loading mesh_preview_multi.js extension
+[Console-log] [GeomPack] Loading mesh preview extension...
+[Console-log] [GeomPack] Mesh preview extension registered
+[Console-log] [FBX Preview] Auto-registering for all known FBX preview node types...
+[Console-log] [UniRig] Loading FBX mesh preview extension...
+[Console-log] [UniRig] Detected extension folder: ComfyUI-GeometryPack
+[Console-log] [UniRig] FBX mesh preview extension registered
+[Console-log] [SAM3DBody] Loading FBX mesh preview extension...
+[Console-log] [SAM3DBody] Detected extension folder: ComfyUI-GeometryPack
+[Console-log] [SAM3DBody] FBX mesh preview extension registered
+[Console-log] [MotionCapture] Loading FBX mesh preview extension...
+[Console-log] [MotionCapture] Detected extension folder: ComfyUI-GeometryPack
+[Console-log] [MotionCapture] FBX mesh preview extension registered
+[Console-log] [MotionCapture] Loading FBX mesh preview extension...
+[Console-log] [MotionCapture] Detected extension folder: ComfyUI-GeometryPack
+[Console-log] [MotionCapture] FBX mesh preview extension registered
+[Console-log] [UniRig Compare] Loading compare skeleton widget...
+[Console-log] [UniRig Compare] Detected extension folder: ComfyUI-GeometryPack
+[Console-log] [UniRig Compare] Compare skeleton widget registered
+[Console-log] [GeomPack] Loading UV mesh preview extension...
+[Console-log] [GeomPack] UV mesh preview extension registered
+[Console-log] [GeomPack Gaussian] Loading extension...
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Extension named 'geompack.text_report' already registered.}
+[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension
+[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension...
+[Console-log] [CompareSMPLBVH] Extension registered: comfy3d.comparesmplbvh
+[Console-log] [GaussianPack] Loading extension...
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
+[Console-log] [UniRig Debug] Loading FBX mesh preview extension...
+[Console-log] [UniRig Debug] Detected extension folder: ComfyUI-GeometryPack
+[Console-log] [UniRig Debug] FBX mesh preview extension registered
+[Console-warning] [MaskEditor] ComfyApp.open_maskeditor is deprecated. Plugins should migrate to using the command system or direct node context menu integration.
+[Console-log] [GaussianPack] Registering Preview Gaussians node
+[Console-log] [GaussianPack Sharp] Registering Preview Gaussian Sharp node
+[Console-log] [GaussianPack] Registering Preview Gaussian Dual node
+[Console-log] [GeomPack] Registering Preview Mesh node
+[Console-log] [GeomPack] Registering Preview Mesh UV node
+[Console-log] [GeomPack Gaussian] Registering Preview Gaussian node
+[Console-log] [GaussianViewer] Initialized successfully
+[Console-log] [GaussianViewer] Ready - waiting for LOAD_MESH message
+[Console-log] [GaussianViewer] Initialized successfully
+[Console-log] [GaussianViewer] Ready - waiting for LOAD_MESH message
+[Console-log] [GaussianViewer] Initialized successfully
+[Console-log] [GaussianViewer] Ready - waiting for LOAD_MESH message
+[Console-log] [comfy-test] graphToPrompt: 8 nodes, missing class_type: [], sample: {"inputs":{"image":"middlebury.jpg"},"class_type":"LoadImage","_meta":{"title":"Load Image"}}
+[Console-log] [GeomPack Gaussian] onExecuted called with: {ply_file: Array(1), filename: Array(1), file_size_mb: Array(1), extrinsics: Array(1), intrinsics: Array(1)}
+[Console-log] [GeomPack Gaussian] Resized node to: 512 x 407 (aspect ratio: 1.48 )
+[Console-log] [GaussianViewer] Received LOAD_MESH_URL: /view?filename=sharp_1780860208252.ply&type=output&subfolder=
+[Console-log] [GaussianViewer] Pre-calculated scale compensation: 29.14 x
+[Console-log] [GaussianViewer] Loading from URL: /view?filename=sharp_1780860208252.ply&type=output&subfolder=
+[Console-log] [GaussianViewer] Scene bounds center: 0.10209310054779053 -0.08394670486450195 4.675457775592804
+[Console-log] [GaussianViewer] Scene bounds size: 7.957335710525513 5.492011547088623 6.474382758140564
+[Console-log] [GaussianViewer] Applied scale compensation: 29.14 x, 1179648 gaussians
+[Console-log] [GaussianViewer] Setting camera from extrinsics/intrinsics
+[Console-log] [GaussianViewer] Extrinsics: [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]
+[Console-log] [GaussianViewer] Intrinsics: [[1186.1897630000663,0,708],[0,1186.1897630000663,480],[0,0,1]]
+[Console-log] [GaussianViewer] Computed camera position from extrinsics: 0 0 0
+[Console-log] [GaussianViewer] Intrinsics: fx= 1186.1897630000663 fy= 1186.1897630000663 cx= 708 cy= 480
+[Console-log] [GaussianViewer] Image dimensions (from intrinsics): 1416 x 960
+[Console-log] [GaussianViewer] Locking resolution to native: 1416x960
+[Console-log] [GaussianViewer] Native resolution: 1416 x 960
+[Console-log] [GaussianViewer] Container size: 486 x 203
+[Console-log] [GaussianViewer] Gaussian scale compensation (with 3x boost): 8.74 x
+[Console-log] [GaussianViewer] Calculated FOV: 44.062125276079 degrees
+[Console-log] [GaussianViewer] Target Z distance: 2.4712286729168045
+[Console-log] [GaussianViewer] Scene center: 0.10209310054779053 0.08394670486450195 4.675457775592804
+[Console-log] [GaussianViewer] Closest point Z: 1.4
+[Console-log] [GaussianViewer] Orbit center Z: 2.2 (closest + 50%)
+[Console-log] [GaussianViewer] Camera set to position: 0 0 0
+[Console-log] [GaussianViewer] Looking at target: 0 0 4.675457775592804
+[Console-log] [GaussianViewer] This should match the original input image view
+[Console-log] [GaussianViewer] Loaded successfully from URL
+[Console-log] [GeomPack Gaussian] onExecuted called with: {ply_file: Array(1), filename: Array(1), file_size_mb: Array(1), extrinsics: Array(1), intrinsics: Array(1)}
+[Console-log] [GeomPack Gaussian] Resized node to: 512 x 407 (aspect ratio: 1.48 )
+[Console-log] [GaussianViewer] Received LOAD_MESH_URL: /view?filename=sharp_aligned_1780860425846.ply&type=output&subfolder=
+[Console-log] [GaussianViewer] Pre-calculated scale compensation: 29.14 x
+[Console-log] [GaussianViewer] Loading from URL: /view?filename=sharp_aligned_1780860425846.ply&type=output&subfolder=
+[Console-log] [GaussianViewer] Scene bounds center: -0.34212058782577515 -0.16458278894424438 2.5727919936180115
+[Console-log] [GaussianViewer] Scene bounds size: 4.394042611122131 2.7783225774765015 2.456463932991028
+[Console-log] [GaussianViewer] Applied scale compensation: 29.14 x, 1179648 gaussians
+[Console-log] [GaussianViewer] Setting camera from extrinsics/intrinsics
+[Console-log] [GaussianViewer] Extrinsics: [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]
+[Console-log] [GaussianViewer] Intrinsics: [[1186.1897630000663,0,708],[0,1186.1897630000663,480],[0,0,1]]
+[Console-log] [GaussianViewer] Computed camera position from extrinsics: 0 0 0
+[Console-log] [GaussianViewer] Intrinsics: fx= 1186.1897630000663 fy= 1186.1897630000663 cx= 708 cy= 480
+[Console-log] [GaussianViewer] Image dimensions (from intrinsics): 1416 x 960
+[Console-log] [GaussianViewer] Locking resolution to native: 1416x960
+[Console-log] [GaussianViewer] Native resolution: 1416 x 960
+[Console-log] [GaussianViewer] Container size: 486 x 203
+[Console-log] [GaussianViewer] Gaussian scale compensation (with 3x boost): 8.74 x
+[Console-log] [GaussianViewer] Calculated FOV: 44.062125276079 degrees
+[Console-log] [GaussianViewer] Target Z distance: 2.4712286729168045
+[Console-log] [GaussianViewer] Scene center: -0.34212058782577515 0.16458278894424438 2.5727919936180115
+[Console-log] [GaussianViewer] Closest point Z: 1.3
+[Console-log] [GaussianViewer] Orbit center Z: 2.0 (closest + 50%)
+[Console-log] [GaussianViewer] Camera set to position: 0 0 0
+[Console-log] [GaussianViewer] Looking at target: 0 0 2.5727919936180115
+[Console-log] [GaussianViewer] This should match the original input image view
+[Console-log] [GaussianViewer] Loaded successfully from URL
