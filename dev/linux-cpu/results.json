@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-06-07T21:47:24.557855+00:00",
+  "timestamp": "2026-06-07T22:42:00.005566+00:00",
   "platform": "linux",
   "hardware": {
     "os": "Linux-6.17.0-1015-azure-x86_64-with-glibc2.39",
     "cpu": "AMD EPYC 9V74 80-Core Processor"
   },
-  "commit_hash": "bc8f98d21459519ae2ae968c1cec0613791e00cc",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/27105058924",
+  "commit_hash": "67948de30f0bfe7ed71dcf0a1a8909ad73a5c2b7",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/27106306041",
   "success": true,
   "summary": {
     "total": 4,
@@ -24,7 +24,7 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 434.45,
+      "duration_seconds": 421.48,
       "error": null,
       "hardware": {
         "os": "Linux-6.17.0-1015-azure-x86_64-with-glibc2.39",
@@ -32,17 +32,17 @@
       },
       "resources": {
         "ram": {
-          "peak": 8.82,
-          "avg": 4.79
+          "peak": 8.67,
+          "avg": 4.82
         },
         "total_ram_gb": 15.6,
-        "samples": 432
+        "samples": 420
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 397.56,
+      "duration_seconds": 399.54,
       "error": null,
       "hardware": {
         "os": "Linux-6.17.0-1015-azure-x86_64-with-glibc2.39",
@@ -51,16 +51,16 @@
       "resources": {
         "ram": {
           "peak": 9.02,
-          "avg": 5.35
+          "avg": 5.39
         },
         "total_ram_gb": 15.6,
-        "samples": 396
+        "samples": 398
       }
     },
     {
       "name": "vanilla_vs_image_depth_gaussians",
       "status": "pass",
-      "duration_seconds": 843.72,
+      "duration_seconds": 832.64,
       "error": null,
       "hardware": {
         "os": "Linux-6.17.0-1015-azure-x86_64-with-glibc2.39",
@@ -68,11 +68,11 @@
       },
       "resources": {
         "ram": {
-          "peak": 10.47,
-          "avg": 6.27
+          "peak": 10.37,
+          "avg": 6.24
         },
         "total_ram_gb": 15.6,
-        "samples": 839
+        "samples": 828
       }
     }
   ]
