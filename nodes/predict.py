@@ -193,9 +193,9 @@ class SharpPredict(io.ComfyNode):
                 # E` chain both want an UNBATCHED matrix.
                 if img_intrinsics.dim() == 3 and img_intrinsics.shape[0] == 1:
                     img_intrinsics = img_intrinsics[0]
-                # Detect NORMALIZED K (fx, fy ∈ [0, 1]) and rescale to
+                # Detect NORMALIZED K (fx, fy in [0, 1]) and rescale to
                 # pixel-K at this image's resolution. PanoramaSplit emits
-                # normalized K by default (fx≈0.5 for a 90° FOV face);
+                # normalized K by default (fx~=0.5 for a 90° FOV face);
                 # SHARP's downstream `intrinsics_resized = K * (internal /
                 # width)` plus `f_px = K[0, 0].item()` both assume pixel-K
                 # at the INPUT image's resolution. Same sniff pattern HYWM2

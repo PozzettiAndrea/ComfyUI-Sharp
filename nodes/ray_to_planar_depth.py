@@ -25,8 +25,8 @@ Inputs:
   extrinsics  (EXTRINSICS) — pass-through (not used in the math)
   intrinsics  (INTRINSICS) — per-face K; needed to build the cos-map.
                              Accepts normalized K (PanoPack convention,
-                             fx≈0.5) or pixel K (Sharp convention,
-                             fx≈hundreds) — auto-detected and rescaled.
+                             fx~=0.5) or pixel K (Sharp convention,
+                             fx~=hundreds) — auto-detected and rescaled.
 
 Outputs:
   image       (IMAGE)      — per-face depth in planar-Z convention
@@ -55,7 +55,7 @@ class SharpRayToPlanarDepth(io.ComfyNode):
     def define_schema(cls):
         return io.Schema(
             node_id="SharpRayToPlanarDepth",
-            display_name="SHARP Ray-Distance → Planar Depth",
+            display_name="SHARP Ray-Distance -> Planar Depth",
             category="SHARP",
             description=(
                 "Per-face depth convention converter. Multiplies "
@@ -79,7 +79,7 @@ class SharpRayToPlanarDepth(io.ComfyNode):
                 io.Custom("INTRINSICS").Input(
                     "intrinsics",
                     tooltip="Per-face camera intrinsics. Accepts either "
-                            "normalized K (fx≈0.5 for 90° fov, PanoPack "
+                            "normalized K (fx~=0.5 for 90° fov, PanoPack "
                             "convention) or pixel K (fx in the hundreds, "
                             "Sharp convention) — auto-detected. The "
                             "output intrinsics socket emits pixel-K so "
@@ -188,7 +188,7 @@ class SharpRayToPlanarDepth(io.ComfyNode):
             planar = depth_2d_batch * cos_map.unsqueeze(0)
             cos_min_log = f"min={float(cos_map.min()):.4f} max={float(cos_map.max()):.4f}"
 
-        _p(f"ray→planar: B={B} {H}×{W}, cos_map {cos_min_log}, "
+        _p(f"ray->planar: B={B} {H}×{W}, cos_map {cos_min_log}, "
            f"intrinsics{'_rescaled' if rescaled else ''} fx={fx:.1f} cx={cx:.1f}")
 
         # Restore channel dim if input had one.
@@ -199,4 +199,4 @@ class SharpRayToPlanarDepth(io.ComfyNode):
 
 
 NODE_CLASS_MAPPINGS = {"SharpRayToPlanarDepth": SharpRayToPlanarDepth}
-NODE_DISPLAY_NAME_MAPPINGS = {"SharpRayToPlanarDepth": "SHARP Ray-Distance → Planar Depth"}
+NODE_DISPLAY_NAME_MAPPINGS = {"SharpRayToPlanarDepth": "SHARP Ray-Distance -> Planar Depth"}

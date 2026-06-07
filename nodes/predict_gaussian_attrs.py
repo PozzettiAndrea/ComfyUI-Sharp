@@ -36,7 +36,7 @@ Multiband channel order (per layer):
     1:  position_y   (ndc, in [-1, 1])
     2:  position_z   (ndc / camera z, same as depth_refined output;
                        duplicated here so multiband is self-contained)
-    3:  scale_x      (Σ-singular value)
+    3:  scale_x      (Sigma-singular value)
     4:  scale_y
     5:  scale_z
     6:  quaternion_w
@@ -254,7 +254,7 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
                             "depth map — wire with `extrinsics_mdepth + "
                             "intrinsics_mdepth` into SharpDepthMerge for a "
                             "seam-free LSMR merge that matches MoGe2-style "
-                            "smoothness. Memory: 42 faces × 1536² fp32 ≈ 395 MB."),
+                            "smoothness. Memory: 42 faces × 1536² fp32 ~= 395 MB."),
                 io.Custom("EXTRINSICS").Output(
                     display_name="extrinsics_mdepth",
                     tooltip="Pass-through of input extrinsics. Extrinsics are "
@@ -338,7 +338,7 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
             intrinsics = _K_default.unsqueeze(0).repeat(B, 1, 1)
             _fov_deg = 2 * _math.degrees(_math.atan((_img_H / 2.0) / _f_px_default))
             _p(
-                f"intrinsics not wired → using identity-style K "
+                f"intrinsics not wired -> using identity-style K "
                 f"(focal={_f_px_default:.1f}px, image={_img_W}×{_img_H}, "
                 f"~{_fov_deg:.1f}° FOV); pass intrinsics from "
                 f"SharpPanoramaIcosahedronSplit for accurate geometry."
@@ -406,10 +406,10 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
             # produces the same gaussians.
             #
             # Convention sniff: PanoPack's PanoramaSplit emits NORMALIZED K
-            # (fx≈0.5, cx≈0.5 for 90° fov via utils3d.np.intrinsics_from_fov,
+            # (fx~=0.5, cx~=0.5 for 90° fov via utils3d.np.intrinsics_from_fov,
             # units in [0,1]) whereas Sharp's predict path assumes pixel-K
             # (fx in the hundreds). Rescale to pixel-K once before computing
-            # f_px so the disparity → depth math doesn't collapse to ~0.
+            # f_px so the disparity -> depth math doesn't collapse to ~0.
             if intrinsics is not None:
                 intr_b = intrinsics[b] if intrinsics.dim() == 3 else intrinsics
                 if float(intr_b[0, 0]) < 2.0:
@@ -492,7 +492,7 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
                 f"{'layer0 rgb':>22} | {'layer1 rgb':>22} | {'drgb (l1-l0)':>22}"
             )
             _dzs = []
-            _drgbs_l1 = []   # ‖rgb1 - rgb0‖₁ per sampled pixel
+            _drgbs_l1 = []   # ||rgb1 - rgb0||1 per sampled pixel
             for _y, _x in zip(_ys, _xs):
                 _p0 = attrs0_batch[0, _y, _x, 0:3].tolist()    # position xyz (NDC)
                 _p1 = attrs1_batch[0, _y, _x, 0:3].tolist()
@@ -514,8 +514,8 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
             _dz_med = float(sorted(_dzs)[len(_dzs)//2])
             _drgb_med = float(sorted(_drgbs_l1)[len(_drgbs_l1)//2])
             _verdict_z = "layer0 in front" if _dz_med > 0 else "layer1 in front (decoder swapped at the sampled pixels)"
-            _p(f"  median dz = {_dz_med:+.4f}  →  {_verdict_z}")
-            _p(f"  median ‖rgb1 - rgb0‖₁ = {_drgb_med:+.4f}  (sum of abs RGB deltas; 0 = layers share color)")
+            _p(f"  median dz = {_dz_med:+.4f}  ->  {_verdict_z}")
+            _p(f"  median ||rgb1 - rgb0||1 = {_drgb_med:+.4f}  (sum of abs RGB deltas; 0 = layers share color)")
         except Exception as _e:
             _p(f"layer-slice sanity check failed: {_e!r}")
 
@@ -561,7 +561,7 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
         # Rescale intrinsics so pixel-K matches the emitted depth grid for
         # each output pair. The downstream merger normalizes K by the depth
         # tensor's W; if K's native res doesn't match that W, the effective
-        # FOV is wrong → visible seams. We emit TWO K versions:
+        # FOV is wrong -> visible seams. We emit TWO K versions:
         #   - intrinsics       : K rescaled to (H_grid, W_grid) = 768²,
         #                        pairs with gaussian-z outputs.
         #   - intrinsics_mdepth: K rescaled to (1536, 1536),
@@ -606,11 +606,11 @@ class SharpPredictGaussianAttrs(io.ComfyNode):
         d1_med = float(d1_batch.median())
         m_med = float(metric_batch.median())
         k_str = (
-            f", K_{H_grid} fx→{k_fx_dbg:.1f} K_{internal_shape[0]} fx→{k_fx_md_dbg:.1f}"
+            f", K_{H_grid} fx->{k_fx_dbg:.1f} K_{internal_shape[0]} fx->{k_fx_md_dbg:.1f}"
             if k_fx_dbg is not None else ""
         )
         _p(
-            f"{B} face(s) → {n_gaussians_total/1e6:.2f}M gaussians "
+            f"{B} face(s) -> {n_gaussians_total/1e6:.2f}M gaussians "
             f"({B}×{num_layers}×{H_grid}²); "
             f"metric/layer0/layer1 depth median={m_med:.2f}m/{d0_med:.2f}m/{d1_med:.2f}m"
             f"{k_str}; {elapsed:.1f}s"

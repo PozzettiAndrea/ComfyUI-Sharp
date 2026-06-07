@@ -305,11 +305,11 @@ class MergeGaussians(io.ComfyNode):
 
         elapsed = time.time() - t_start
         _p(
-            f"merged {len(ply_files)} file(s) → {num_gaussians/1e6:.2f}M gaussians "
-            f"→ {output_path}{size_str}; "
+            f"merged {len(ply_files)} file(s) -> {num_gaussians/1e6:.2f}M gaussians "
+            f"-> {output_path}{size_str}; "
             f"save {save_elapsed:.1f}s, total {elapsed:.1f}s"
         )
-        _p(f"field PLY (positions + face_id only) → {field_output_path}")
+        _p(f"field PLY (positions + face_id only) -> {field_output_path}")
 
         return io.NodeOutput(
             str(ply_folder_in), str(output_path),

@@ -1,4 +1,4 @@
-"""SharpPredictGaussiansFromMetricDepth — image + external depth → PLY paths.
+"""SharpPredictGaussiansFromMetricDepth — image + external depth -> PLY paths.
 
 Like SharpPredict, but **directly overrides SHARP's monodepth** with an
 externally-provided depth (e.g. from SharpDepthMerge after LSMR-merging
@@ -14,27 +14,27 @@ panorama-merging workflows where SHARP's per-face monodepth has scale
 ambiguity that the depth_alignment module wasn't trained to handle.
 
 Output convention matches SharpPredict:
-  - Single image  → single PLY file at OUTPUT_DIR/{prefix}_{ts}.ply
-  - Batch (>1)    → folder OUTPUT_DIR/{prefix}_{ts}/ with NNN.ply files
+  - Single image  -> single PLY file at OUTPUT_DIR/{prefix}_{ts}.ply
+  - Batch (>1)    -> folder OUTPUT_DIR/{prefix}_{ts}/ with NNN.ply files
 
 Wire the batch folder straight into `MergeGaussians (PLY Files)` for a
 single merged scene PLY.
 
 Typical pipeline:
-  1. SharpPanoramaIcosahedronSplit       → face images
-  2. SharpPredictMetricDepth (per face)  → raw per-face metric depths
-  3. SharpDepthMerge                     → seam-free equirect depth (LSMR)
+  1. SharpPanoramaIcosahedronSplit       -> face images
+  2. SharpPredictMetricDepth (per face)  -> raw per-face metric depths
+  3. SharpDepthMerge                     -> seam-free equirect depth (LSMR)
   4. SharpPanoramaIcosahedronSplit (on the merged depth IMAGE)
-                                          → re-cropped face depths in
+                                          -> re-cropped face depths in
                                             equirect ray-distance convention
   5. SharpPredictGaussiansFromMetricDepth(face_images, consistent_face_depths,
                                           depth_convention="ray_distance")
-                                          → folder of seam-aligned PLYs
-  6. MergeGaussians                      → final unified PLY
+                                          -> folder of seam-aligned PLYs
+  6. MergeGaussians                      -> final unified PLY
 
 When step 4 returns ray-distance depth (the equirect convention), set
 `depth_convention="ray_distance"` so the node applies the
-ray-distance → planar-Z cos-map conversion using the per-face intrinsics.
+ray-distance -> planar-Z cos-map conversion using the per-face intrinsics.
 For depths that are already in SHARP's native planar-Z convention
 (e.g. straight from `SharpPredictMetricDepth` on a single face),
 leave it at the default `"planar_z"`.
@@ -71,7 +71,7 @@ def _p(msg: str) -> None:
 
 
 class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
-    """SHARP gaussian decoder driven by external depth → PLY paths."""
+    """SHARP gaussian decoder driven by external depth -> PLY paths."""
 
     @classmethod
     def define_schema(cls):
@@ -85,7 +85,7 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                 "becomes the geometric scaffold for `init_model`'s gaussian "
                 "base values, so gaussians share a consistent surface across "
                 "multiple views — fixes per-face seams.\n\n"
-                "Saves PLYs (single image → one .ply; batch → folder of "
+                "Saves PLYs (single image -> one .ply; batch -> folder of "
                 "NNN.ply). Pipe into MergeGaussians to combine into one PLY."
             ),
             is_output_node=True,
@@ -145,7 +145,7 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                     )),
                 io.Combo.Input(
                     "snap_to_external_depth",
-                    options=["none", "z_only", "xyz_full"],
+                    options=["none", "z_only", "z_only_firstlayer", "xyz_full", "xyz_full_firstlayer"],
                     default="none",
                     tooltip=(
                         "Force gaussian positions to exactly match the external "
@@ -156,11 +156,22 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                         "the prediction head's sub-pixel xy drift survives — "
                         "layer 1 still varies in appearance from layer 0), but "
                         "depth is forced to match external.\n\n"
+                        "  z_only_firstlayer: snap ONLY layer 0 to the external "
+                        "depth (same proportional z rescale as z_only); leave "
+                        "layer 1 (and any further layers) at the decoder's "
+                        "predicted z. The front surface is pinned to your depth "
+                        "while the back gaussians stay where the model put them "
+                        "-- preserves SHARP's hallucinated occlusion backplate.\n\n"
                         "  xyz_full: reset xy to the pixel-grid identity AND "
                         "set depth to external. Every gaussian sits exactly "
                         "on the back-projected ray of its source pixel at the "
                         "external depth — no learned drift at all. Most rigid; "
                         "layer 0 and layer 1 collapse to identical positions.\n\n"
+                        "  xyz_full_firstlayer: apply the xyz_full reset to "
+                        "layer 0 only (front surface sits exactly on the "
+                        "pixel-grid ray at the external depth); leave layer 1+ "
+                        "at the decoder's predicted position (occlusion "
+                        "backplate preserved).\n\n"
                         "  none: skip the snap entirely — trust the gaussian "
                         "decoder's predicted z (the direct-monodepth-override "
                         "behavior is in effect but not enforced)."
@@ -180,7 +191,7 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                         "  ray_distance: Euclidean distance from the camera "
                         "center along each pixel's ray — the equirect "
                         "convention. Pick this when the depth was extracted "
-                        "via SharpDepthMerge → SharpPanoramaIcosahedronSplit, "
+                        "via SharpDepthMerge -> SharpPanoramaIcosahedronSplit, "
                         "i.e. when each face was cut out of an equirect "
                         "depth panorama. The node multiplies by the per-face "
                         "cos-map `1 / sqrt(((u-cx)/fx)² + ((v-cy)/fy)² + 1)` "
@@ -293,10 +304,10 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                     f"metric_depth_layer1 batch {metric_depth_l1.shape[0]} != "
                     f"image batch {B}"
                 )
-            _p("metric_depth_layer1 wired → layer-0 + layer-1 will get "
+            _p("metric_depth_layer1 wired -> layer-0 + layer-1 will get "
                "DIFFERENT depths through init_model")
         else:
-            _p("metric_depth_layer1 unwired → layer 1 will duplicate layer 0 "
+            _p("metric_depth_layer1 unwired -> layer 1 will duplicate layer 0 "
                "(legacy behavior)")
 
         # Sanity-check the alignment is wired through the model.
@@ -332,7 +343,7 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
         # Per-face denormalized PIXEL-K, captured so the `intrinsics`
         # output socket emits the same convention SharpPredict does
         # (pixel-K), regardless of whether the input was normalized
-        # (PanoramaSplit, fx≈0.5) or already pixel-K.
+        # (PanoramaSplit, fx~=0.5) or already pixel-K.
         all_intr_px = []
 
         pbar = comfy.utils.ProgressBar(B)
@@ -396,10 +407,10 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
             # intr_b -- the f_px formula below, the cos_map for ray_distance,
             # and the unprojection K -- sees the same convention.
             # `intr_b_px` is the per-batch K in PIXEL-K convention. We
-            # reuse it for f_px, the ray→planar cos_map, AND the
+            # reuse it for f_px, the ray->planar cos_map, AND the
             # unprojection K further down — previously the unprojection
             # step re-fetched from the raw `intrinsics` tensor, which
-            # silently bypassed the normalized→pixel correction and
+            # silently bypassed the normalized->pixel correction and
             # produced garbage when PanoramaSplit's normalized K was wired.
             intr_b_px = None
             if intrinsics is not None:
@@ -424,13 +435,13 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                 f_px = float(_cfl(width, height, max(0.1, float(focal_length_mm or 30.0))))
             disparity_factor = torch.tensor([f_px / width]).float().to(device)
 
-            # External depth → 1536², broadcast to BOTH layers.
+            # External depth -> 1536², broadcast to BOTH layers.
             md_b = metric_depth[b]
             if md_b.dim() == 3:
                 md_b = md_b[..., 0]
             md_b = md_b.to(device).float().unsqueeze(0).unsqueeze(0)
 
-            # Optional ray-distance → planar-Z conversion. Apply at the
+            # Optional ray-distance -> planar-Z conversion. Apply at the
             # depth's native resolution (before the resize to 1536²) so the
             # convention boundary doesn't get smeared by bilinear interp.
             # cos_map = 1 / sqrt(((u-cx)/fx)² + ((v-cy)/fy)² + 1), built from
@@ -463,7 +474,7 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                 cos_map = 1.0 / torch.sqrt(x_cam * x_cam + y_cam * y_cam + 1.0)
                 md_b = md_b * cos_map.unsqueeze(0).unsqueeze(0)
                 if b == 0:
-                    _p(f"depth_convention=ray_distance → applying cos_map "
+                    _p(f"depth_convention=ray_distance -> applying cos_map "
                        f"(min={float(cos_map.min()):.4f} "
                        f"max={float(cos_map.max()):.4f}) per face")
 
@@ -472,7 +483,7 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
             )
 
             # Layer-1 path. When wired, apply the SAME conversions
-            # (ray-distance → planar-Z if requested) to keep both layers
+            # (ray-distance -> planar-Z if requested) to keep both layers
             # in the convention the model expects.
             if metric_depth_l1 is not None:
                 md_b1 = metric_depth_l1[b]
@@ -509,12 +520,12 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                 # Layer 0 = your front depth (e.g. plane-snapped HYWM2),
                 # Layer 1 = your back depth (e.g. SHARP's own predicted
                 # layer 1, or a +offset back-plate). Prediction head still
-                # adds per-layer Δs on top of these distinct base surfaces.
+                # adds per-layer Deltas on top of these distinct base surfaces.
                 monodepth_override = torch.cat(
                     [external_depth, external_depth_l1], dim=1,
-                )  # [1, 2, 1536, 1536] with layer 0 ≠ layer 1
+                )  # [1, 2, 1536, 1536] with layer 0 != layer 1
             else:
-                # Legacy behavior: both monodepth layers = external depth →
+                # Legacy behavior: both monodepth layers = external depth ->
                 # no back-surface hallucination. Layer 1's gaussians collapse
                 # onto the same surface as layer 0; the prediction head's
                 # per-layer deltas can still drift them sub-pixel in xy and
@@ -526,8 +537,8 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
             # map UNet). The paper's recommended inference path passes
             # depth=None, leaving alignment as identity and using SHARP's
             # own monodepth. Here we instead replace monodepth entirely
-            # with the user's external depth — same code path init_model →
-            # feature_model → prediction_head → gaussian_composer that the
+            # with the user's external depth — same code path init_model ->
+            # feature_model -> prediction_head -> gaussian_composer that the
             # official `decode()` runs, just with external monodepth
             # instead of `disparity_factor / disparity`.
             init_output = predictor.init_model(image_resized_pt, monodepth_override)
@@ -646,8 +657,22 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
 
             if snap_to_external_depth == "z_only":
                 # Proportional rescale: mean_vectors *= target_z/current_z.
-                # (xx*z, yy*z, z) → (xx*target_z, yy*target_z, target_z).
+                # (xx*z, yy*z, z) -> (xx*target_z, yy*target_z, target_z).
                 scale = (target_z_flat / current_z).unsqueeze(0).unsqueeze(-1)
+                new_mean_vectors = gaussians_ndc.mean_vectors * scale
+                gaussians_ndc = gaussians_ndc._replace(
+                    mean_vectors=new_mean_vectors,
+                )
+            elif snap_to_external_depth == "z_only_firstlayer":
+                # Snap ONLY layer 0 to the external depth; leave layer 1+ at the
+                # decoder's predicted z (the hallucinated occlusion backplate).
+                # Gaussians are flattened (layer, h, w), so layer 0 is the first
+                # H_grid*W_grid entries. Per-gaussian scale = 1.0 everywhere
+                # except layer 0, where it is target_z/current_z.
+                per_scale = torch.ones_like(current_z)
+                L0 = H_grid * W_grid
+                per_scale[:L0] = target_z_flat[:L0] / current_z[:L0]
+                scale = per_scale.unsqueeze(0).unsqueeze(-1)
                 new_mean_vectors = gaussians_ndc.mean_vectors * scale
                 gaussians_ndc = gaussians_ndc._replace(
                     mean_vectors=new_mean_vectors,
@@ -665,7 +690,17 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                 gaussians_ndc = gaussians_ndc._replace(
                     mean_vectors=new_mean_vectors,
                 )
-            # else: "none" → leave gaussians_ndc as-is.
+            elif snap_to_external_depth == "xyz_full_firstlayer":
+                # xyz_full applied to layer 0 only; layer 1+ left untouched.
+                new_mean_vectors = gaussians_ndc.mean_vectors.clone()
+                L0 = H_grid * W_grid
+                new_mean_vectors[0, :L0, 0] = base_xx_flat[:L0] * target_z_flat[:L0]
+                new_mean_vectors[0, :L0, 1] = base_yy_flat[:L0] * target_z_flat[:L0]
+                new_mean_vectors[0, :L0, 2] = target_z_flat[:L0]
+                gaussians_ndc = gaussians_ndc._replace(
+                    mean_vectors=new_mean_vectors,
+                )
+            # else: "none" -> leave gaussians_ndc as-is.
 
             # Build extrinsics + intrinsics_resized for unprojection.
             if extrinsics is not None:
@@ -677,7 +712,7 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
             if intrinsics is not None:
                 # Reuse the per-batch PIXEL-K computed at the top of the
                 # loop. Re-fetching from `intrinsics` here would silently
-                # bypass the normalized→pixel correction and give garbage
+                # bypass the normalized->pixel correction and give garbage
                 # `intrinsics_resized` (fx_resized = 0.5 * internal/width).
                 K = intr_b_px.to(device).float().clone()
                 # Promote to 4x4 if it came as 3x3 (unproject_gaussians wants 4x4).
@@ -752,7 +787,7 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                 n_after = int(gaussians.mean_vectors.shape[1])
                 if b == 0:  # log once per batch to avoid spam on 42 faces
                     _p(
-                        f"edge_crop={edge_crop:.3f} → crop_h={crop_h} crop_w={crop_w} "
+                        f"edge_crop={edge_crop:.3f} -> crop_h={crop_h} crop_w={crop_w} "
                         f"per side; kept {n_after}/{n_before} gaussians "
                         f"({100.0 * n_after / max(n_before, 1):.1f}%) per face"
                     )
@@ -783,7 +818,7 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
                 )
                 n_after_mask = int(gaussians.mean_vectors.shape[1])
                 if b == 0:
-                    _p(f"mask → kept {n_after_mask}/{n_before_mask} gaussians "
+                    _p(f"mask -> kept {n_after_mask}/{n_before_mask} gaussians "
                        f"({100.0 * n_after_mask / max(n_before_mask, 1):.1f}%)")
 
             # Save PLY.
@@ -805,7 +840,7 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
         if edge_crop and edge_crop > 0.0:
             layer_str += f", edge_crop={edge_crop:.3f}"
         _p(
-            f"{B} face(s) → {n_gaussians_total/1e6:.2f}M gaussians total "
+            f"{B} face(s) -> {n_gaussians_total/1e6:.2f}M gaussians total "
             f"({layer_str}, snap={snap_to_external_depth}); "
             f"saved to {loc}; {elapsed:.1f}s"
         )
@@ -822,7 +857,7 @@ class SharpPredictGaussiansFromMetricDepth(io.ComfyNode):
         #
         # - intrinsics: forward the DENORMALIZED pixel-K we captured
         #   per face (`all_intr_px`), NOT the raw input. PanoramaSplit
-        #   emits normalized K (fx≈0.5); SharpPredict's `intrinsics`
+        #   emits normalized K (fx~=0.5); SharpPredict's `intrinsics`
         #   output is pixel-K (fx in the hundreds) because it stores
         #   the denormalized form in `metadata["intrinsic"]`. Matching
         #   that convention keeps downstream consumers (preview

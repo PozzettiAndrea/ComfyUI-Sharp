@@ -1,4 +1,4 @@
-"""SharpPredictMetricDepth — image → disparity-head metric depth only.
+"""SharpPredictMetricDepth — image -> disparity-head metric depth only.
 
 Tap SHARP's encoder + disparity head; skip the gaussian decoder entirely.
 Fastest path to a clean per-pixel depth map at SHARP's native 1536²
@@ -56,7 +56,7 @@ def _rescale_K(intr_in, target_w, target_h, src_w, src_h):
 
 
 class SharpPredictMetricDepth(io.ComfyNode):
-    """SHARP encoder + disparity head only → per-pixel metric depth at 1536²."""
+    """SHARP encoder + disparity head only -> per-pixel metric depth at 1536²."""
 
     @classmethod
     def define_schema(cls):
@@ -99,7 +99,7 @@ class SharpPredictMetricDepth(io.ComfyNode):
                     tooltip="[B, 1536, 1536, 3] LAYER-1 (back/occluded) metric "
                             "depth — SHARP's hallucinated backplate surface. "
                             "Typically tracks layer 0 in flat regions and "
-                            "diverges at occlusion boundaries (column edges → "
+                            "diverges at occlusion boundaries (column edges -> "
                             "sky depth behind, etc.). Feeds layer-1 gaussian "
                             "base values."),
                 io.Custom("EXTRINSICS").Output(
@@ -169,17 +169,17 @@ class SharpPredictMetricDepth(io.ComfyNode):
             )
             intrinsics = _K_default.unsqueeze(0).repeat(B, 1, 1)
             _p(
-                f"intrinsics not wired → using identity-style K "
+                f"intrinsics not wired -> using identity-style K "
                 f"(focal={_f_px_default:.1f}px @ image {_img_W}×{_img_H}, "
                 f"35mm-equiv {focal_length_mm:.1f}mm). Pass intrinsics from "
                 f"PanoramaSplit for per-face accurate K."
             )
         else:
             # Convention sniff: PanoPack's PanoramaSplit emits NORMALIZED K
-            # (fx≈0.5, cx≈0.5 for 90° fov via utils3d.np.intrinsics_from_fov,
+            # (fx~=0.5, cx~=0.5 for 90° fov via utils3d.np.intrinsics_from_fov,
             # units in [0,1]), whereas Sharp's predict path assumes pixel-K
             # (fx in the hundreds). Without this conversion, `f_px = K[0,0] *
-            # (1536/width)` resolves to 0.5 instead of ~768, the disparity →
+            # (1536/width)` resolves to 0.5 instead of ~768, the disparity ->
             # depth math collapses, and every face comes out as a blank (~0)
             # depth map. Detect normalized (fx < 2.0) and rescale once to
             # pixel-K for the face image's (width, height). All downstream
@@ -314,7 +314,7 @@ class SharpPredictMetricDepth(io.ComfyNode):
         pts_min = float(pts_norm.min())
         pts_max = float(pts_norm.max())
         elapsed = time.time() - t_start
-        k_str = f", K_{internal_shape[0]} fx→{k_fx_md_dbg:.1f}" if k_fx_md_dbg is not None else ""
+        k_str = f", K_{internal_shape[0]} fx->{k_fx_md_dbg:.1f}" if k_fx_md_dbg is not None else ""
         _p(
             f"{B} face(s) @ {internal_shape[0]}²; "
             f"layer0/layer1 depth median={m_med_l0:.2f}/{m_med_l1:.2f}m{k_str}; "

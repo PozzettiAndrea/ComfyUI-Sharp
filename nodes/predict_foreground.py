@@ -6,7 +6,7 @@ practical). Two selection modes:
 
 - **closest** (default): per pixel, keep the gaussian with the smaller
   world-space z (closer to camera). SHARP's monodepth output IS sorted
-  near→far at the head (`model.py:1122-1125`: `disparity.max` for layer
+  near->far at the head (`model.py:1122-1125`: `disparity.max` for layer
   0, `disparity.min` for layer 1), but the gaussian decoder adds an
   unconstrained delta_z per layer — so layer 0 isn't reliably the front
   post-decode. `closest` looks at the actual z and picks per-pixel,

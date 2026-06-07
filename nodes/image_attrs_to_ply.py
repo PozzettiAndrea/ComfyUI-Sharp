@@ -9,7 +9,7 @@ Channel order is fixed by `SharpPredictGaussianAttrs.GAUSS_ATTR_CHANNEL_NAMES`:
   0:  position_x   (NDC)
   1:  position_y   (NDC)
   2:  position_z   (NDC / camera-space z)
-  3:  scale_x      (Σ-singular value, world units after unprojection)
+  3:  scale_x      (Sigma-singular value, world units after unprojection)
   4:  scale_y
   5:  scale_z
   6:  quaternion_w
@@ -24,7 +24,7 @@ Channel order is fixed by `SharpPredictGaussianAttrs.GAUSS_ATTR_CHANNEL_NAMES`:
 We rebuild a `Gaussians3D` namedtuple in NDC, then call SHARP's
 `unproject_gaussians` to transform to world coordinates using the
 per-face extrinsics + intrinsics. Output convention matches SharpPredict:
-single batch → one .ply; N>1 batch → folder of NNN.ply.
+single batch -> one .ply; N>1 batch -> folder of NNN.ply.
 """
 
 import logging
@@ -61,7 +61,7 @@ OPACITY = 13
 
 
 class SharpImageAttrsToPLY(io.ComfyNode):
-    """MULTIBAND_IMAGE of gaussian attrs + camera → PLY file."""
+    """MULTIBAND_IMAGE of gaussian attrs + camera -> PLY file."""
 
     @classmethod
     def define_schema(cls):
@@ -171,7 +171,7 @@ class SharpImageAttrsToPLY(io.ComfyNode):
                 [0.0,          0.0,          1.0],
             ], dtype=torch.float32)
             intr = K_default.unsqueeze(0).repeat(B, 1, 1)
-            _p(f"intrinsics not wired → using identity-style K (fx=fy={f_px_default:.1f}, "
+            _p(f"intrinsics not wired -> using identity-style K (fx=fy={f_px_default:.1f}, "
                f"cx={W/2:.1f}, cy={H/2:.1f}). Pass `intrinsics` from "
                f"SharpPredictGaussianAttrs for correct geometry.")
         else:
@@ -212,11 +212,11 @@ class SharpImageAttrsToPLY(io.ComfyNode):
         t_start = time.time()
 
         for b in range(B):
-            # ---- extract per-pixel attrs → Gaussians3D in NDC ------------
+            # ---- extract per-pixel attrs -> Gaussians3D in NDC ------------
             s = samples[b]                       # [14, H, W]
             n_pixels = H * W
 
-            # Multiband stores [C, H, W]; flatten spatial dims → [C, N], then
+            # Multiband stores [C, H, W]; flatten spatial dims -> [C, N], then
             # transpose to [N, C] for the per-channel slices below.
             flat = s.reshape(C, n_pixels).T      # [N, C]
             mean_ndc = flat[:, POS].contiguous()          # [N, 3]
@@ -252,7 +252,7 @@ class SharpImageAttrsToPLY(io.ComfyNode):
             # for (H, W) (per the rescale done in SharpPredictGaussianAttrs).
             image_shape = (H, W)
 
-            # ---- NDC → world ---------------------------------------------
+            # ---- NDC -> world ---------------------------------------------
             gaussians_world = unproject_gaussians(
                 gaussians_ndc, ext_b, K_b, image_shape,
             )
@@ -278,7 +278,7 @@ class SharpImageAttrsToPLY(io.ComfyNode):
         loc = output_folder if is_batch else output_path
         total_n = B * H * W
         _p(
-            f"{B} multiband(s) {H}×{W} → {total_n/1e6:.2f}M gaussians; "
+            f"{B} multiband(s) {H}×{W} -> {total_n/1e6:.2f}M gaussians; "
             f"saved to {loc}; {elapsed:.1f}s"
         )
 

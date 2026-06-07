@@ -72,7 +72,7 @@ class ScaleImageValues(io.ComfyNode):
         _p(
             f"{B} image(s) {tuple(image.shape[1:])}: "
             f"in [{float(img_min.min()):.4f}, {float(img_max.max()):.4f}] "
-            f"→ out [0, 1]"
+            f"-> out [0, 1]"
         )
         return io.NodeOutput(scaled)
 

@@ -61,7 +61,7 @@ def subdivide_icosahedron(subdivisions: int = 1) -> np.ndarray:
     Returns:
         vertices: (N, 3) Subdivided vertex coordinates on the unit sphere.
     """
-    # utils3d renamed `icosahedron()` → `create_icosahedron_mesh()`.
+    # utils3d renamed `icosahedron()` -> `create_icosahedron_mesh()`.
     vertices, faces = utils3d.numpy.create_icosahedron_mesh()
 
     # Convert to a list so new vertices can be appended dynamically.
@@ -316,10 +316,10 @@ def solve_lsmr_gpu(A, b, x0=None, atol=1e-5, btol=1e-5, conlim=0.0,
     scipy.sparse.linalg.lsmr (Fong & Saunders 2011), but the entire iteration
     runs through torch tensors — the big work vectors u, v, h, hbar, x live
     on the GPU; only the ~6 scalar Givens reductions per iteration come back
-    to the host. Eliminates the per-iteration host↔device round-trip that
-    the old `_TorchSparseLinearOperator` paid (matvec → .cpu().numpy() →
-    scipy numpy ops → as_tensor → next matvec). For a 1920×960 panorama
-    solve that's ~600 iterations × 4 transfers × 7 MB ≈ 30 GB of avoided
+    to the host. Eliminates the per-iteration host<->device round-trip that
+    the old `_TorchSparseLinearOperator` paid (matvec -> .cpu().numpy() ->
+    scipy numpy ops -> as_tensor -> next matvec). For a 1920×960 panorama
+    solve that's ~600 iterations × 4 transfers × 7 MB ~= 30 GB of avoided
     PCIe traffic.
 
     Numerical behaviour vs scipy fp64 CPU: SpMV runs in fp32 on cuSPARSE
@@ -384,10 +384,10 @@ def solve_lsmr_gpu(A, b, x0=None, atol=1e-5, btol=1e-5, conlim=0.0,
         size=AT_csr.shape,
     )
 
-    def _matvec(vec):  # vec: (n,) → (m,)
+    def _matvec(vec):  # vec: (n,) -> (m,)
         return torch.sparse.mm(A_gpu, vec.unsqueeze(-1)).squeeze(-1)
 
-    def _rmatvec(vec):  # vec: (m,) → (n,)
+    def _rmatvec(vec):  # vec: (m,) -> (n,)
         return torch.sparse.mm(AT_gpu, vec.unsqueeze(-1)).squeeze(-1)
 
     # --- Upload b (and x0 if given). ---
@@ -614,7 +614,7 @@ def merge_panorama_depth_gpu(width: int, height: int, distance_maps: List[np.nda
     ext_gpu = torch.from_numpy(np.stack(extrinsics).astype(np.float32)).to(device)      # (N, 4, 4)
     intr_gpu = torch.from_numpy(np.stack(intrinsics).astype(np.float32)).to(device)     # (N, 3, 3)
 
-    # --- Batched projection: equirect rays → per-face image plane. ---
+    # --- Batched projection: equirect rays -> per-face image plane. ---
     # p_cam = R @ dirs + t. Then K @ p_cam, perspective divide.
     R = ext_gpu[:, :3, :3]                          # (N, 3, 3)
     t = ext_gpu[:, :3, 3]                           # (N, 3)
@@ -718,7 +718,7 @@ def merge_panorama_depth_gpu(width: int, height: int, distance_maps: List[np.nda
     any_mask_lap = mask_laplacian.any(0)                                              # (H, W)
     panorama_pred_mask_final = panorama_pred_mask_per_face.any(0)                     # (H, W)
 
-    # --- Single device→host transfer of the data we need on CPU for the
+    # --- Single device->host transfer of the data we need on CPU for the
     # sparse-system build below. ---
     avg_grad_x_np = avg_grad_x.cpu().numpy()
     avg_grad_y_np = avg_grad_y.cpu().numpy()
@@ -836,7 +836,7 @@ def pred_pano_depth(model, image: Image.Image, scale=1.0, resize_to=1920, remove
     else:
         skip_ratio_info = f"{skipped_count / (pred_count + skipped_count):.2%}"
 
-    print(f"\t 🔍 Predicted {pred_count} splitted images, skipped {skipped_count} splitted images. Skip ratio: {skip_ratio_info}")
+    print(f"\t  Predicted {pred_count} splitted images, skipped {skipped_count} splitted images. Skip ratio: {skip_ratio_info}")
 
     # merge moge depth
     merging_width, merging_height = width, height
@@ -896,7 +896,7 @@ def compute_spherical_ray_derivatives(spherical_directions: np.ndarray):
     ray = spherical_directions
 
     # Azimuth theta and elevation phi.
-    # ray = (cos(φ)sin(θ), sin(φ), cos(φ)cos(θ))
+    # ray = (cos(phi)sin(theta), sin(phi), cos(phi)cos(theta))
     # Or adapt to the coordinate-system definition in use.
 
     # Method 1: numerical computation, which is more robust.
@@ -904,15 +904,15 @@ def compute_spherical_ray_derivatives(spherical_directions: np.ndarray):
     v = (np.arange(H) + 0.5) / H  # [0, 1]
     u_grid, v_grid = np.meshgrid(u, v)
 
-    theta = (u_grid - 0.5) * 2 * np.pi  # [-π, π]
-    phi = (0.5 - v_grid) * np.pi  # [π/2, -π/2]
+    theta = (u_grid - 0.5) * 2 * np.pi  # [-pi, pi]
+    phi = (0.5 - v_grid) * np.pi  # [pi/2, -pi/2]
 
     cos_phi = np.cos(phi)
     sin_phi = np.sin(phi)
     cos_theta = np.cos(theta)
     sin_theta = np.sin(theta)
 
-    # ∂ray/∂θ, assuming standard equirectangular mapping.
+    # dray/dtheta, assuming standard equirectangular mapping.
     # Adjust according to how spherical_directions is actually computed.
     dray_dtheta = np.stack([
         cos_phi * cos_theta,
@@ -920,7 +920,7 @@ def compute_spherical_ray_derivatives(spherical_directions: np.ndarray):
         -cos_phi * sin_theta
     ], axis=-1)
 
-    # ∂ray/∂φ
+    # dray/dphi
     dray_dphi = np.stack([
         -sin_phi * sin_theta,
         cos_phi,
@@ -941,9 +941,9 @@ def normal_to_log_distance_gradient(
 
     Derivation:
         Surface point P = d * ray
-        Tangent vector ∂P/∂θ = (∂d/∂θ) * ray + d * (∂ray/∂θ)
-        The normal is perpendicular to the tangent: n · ∂P/∂θ = 0
-        => ∂(log d)/∂θ = -(n · ∂ray/∂θ) / (n · ray)
+        Tangent vector dP/dtheta = (dd/dtheta) * ray + d * (dray/dtheta)
+        The normal is perpendicular to the tangent: n · dP/dtheta = 0
+        => d(log d)/dtheta = -(n · dray/dtheta) / (n · ray)
 
     Args:
         panorama_normal: (H, W, 3) Panorama normal map in world coordinates.
@@ -973,14 +973,14 @@ def normal_to_log_distance_gradient(
     n_dot_ray_safe = np.where(valid_mask, n_dot_ray, 1.0)
 
     # Continuous-space log(d) gradients with respect to angles.
-    # ∂(log d)/∂θ = -(n · ∂ray/∂θ) / (n · ray)
+    # d(log d)/dtheta = -(n · dray/dtheta) / (n · ray)
     dlogd_dtheta = -n_dot_dray_dtheta / n_dot_ray_safe  # (H, W)
     dlogd_dphi = -n_dot_dray_dphi / n_dot_ray_safe  # (H, W)
 
     # Convert to discrete pixel gradients.
-    # In this code, grad_x = log_d[j] - log_d[j+1] = -∂(log d)/∂θ * Δθ.
-    # Δθ = 2π / W, the θ change per pixel.
-    # grad_y = log_d[i] - log_d[i+1] = -∂(log d)/∂φ * Δφ = ∂(log d)/∂φ * (π/H)
+    # In this code, grad_x = log_d[j] - log_d[j+1] = -d(log d)/dtheta * Deltatheta.
+    # Deltatheta = 2pi / W, the theta change per pixel.
+    # grad_y = log_d[i] - log_d[i+1] = -d(log d)/dphi * Deltaphi = d(log d)/dphi * (pi/H)
 
     delta_theta = 2 * np.pi / W
     delta_phi = np.pi / H
@@ -1257,7 +1257,7 @@ def convert_rgbd2pcd_multi_scale_panorama(
         else:
             interval_mask = ((median_distance * depth_intervals[i - 1]) < distance_nchw) & (distance_nchw <= (median_distance * depth_intervals[i]))
 
-        # pointclouds number ∝ depth^2
+        # pointclouds number prop depth^2
         resize_scale = depth_intervals[i]
         if interval_mask.sum() == 0:
             continue
@@ -2075,7 +2075,7 @@ def erp_distance_ray_to_normal(distance_map, ray_directions,
     normal_map = np.stack([normal_x, normal_y, normal_z], axis=-1)
 
     # 7. Convert to an RGB visualization.
-    # [-1, 1] → [0, 255]
+    # [-1, 1] -> [0, 255]
     normal_rgb = ((normal_map + 1.0) / 2.0 * 255).astype(np.uint8)
 
     return normal_map, normal_rgb
