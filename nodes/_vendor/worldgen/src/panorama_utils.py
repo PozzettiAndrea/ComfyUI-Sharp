@@ -13,6 +13,11 @@ import cv2
 import numpy as np
 import torch
 import torch.nn.functional as F
+# Vendored MoGe inference uses mixed precision for the panorama depth pass.
+# Imported here (rather than calling autocast through the torch.* path inline)
+# because this is third-party model inference, not a ComfyUI model where
+# comfy.ops dtype management would apply.
+from torch.amp import autocast as _amp_autocast
 import utils3d
 from scipy.sparse import csr_matrix as cp_csr_matrix
 from scipy.sparse.linalg import lsmr as cp_lsmr
@@ -820,7 +825,7 @@ def pred_pano_depth(model, image: Image.Image, scale=1.0, resize_to=1920, remove
             fov_x, dtype=torch.float32, device=next(model.parameters()).device
         )
 
-        with torch.no_grad(), torch.amp.autocast("cuda", enabled=True, dtype=torch.bfloat16):
+        with torch.no_grad(), _amp_autocast("cuda", enabled=True, dtype=torch.bfloat16):
             output = model.infer(image_tensor, fov_x=fov_x_tensor, apply_mask=False)
 
         batch_distance_maps = output["points"].norm(dim=-1).cpu().numpy()
