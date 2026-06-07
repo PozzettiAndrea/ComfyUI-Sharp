@@ -1,60 +1,89 @@
 {
-  "timestamp": "2026-05-19T17:28:09.983975+00:00",
+  "timestamp": "2026-06-07T21:35:56.920895+00:00",
   "platform": "windows",
   "hardware": {
     "os": "Windows-11-10.0.26100-SP0",
-    "cpu": "AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD"
+    "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
   },
-  "commit_hash": "695987087b73232bf85d5fec90579e58e438a16f",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/26108883356",
+  "commit_hash": "bc8f98d21459519ae2ae968c1cec0613791e00cc",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/27105060369",
   "success": true,
   "summary": {
-    "total": 3,
-    "passed": 2,
+    "total": 4,
+    "passed": 4,
     "failed": 0
   },
   "workflows": [
     {
       "name": "pano",
-      "status": "skipped",
-      "duration_seconds": 0,
-      "error": "Not configured for GPU runner",
-      "hardware": null
+      "status": "pass",
+      "duration_seconds": 479.03,
+      "error": null,
+      "hardware": {
+        "os": "Windows-11-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
+      },
+      "resources": {
+        "ram": {
+          "peak": 22.59,
+          "avg": 13.64
+        },
+        "total_ram_gb": 31.9,
+        "samples": 474
+      }
     },
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 132.24,
+      "duration_seconds": 44.89,
       "error": null,
       "hardware": {
         "os": "Windows-11-10.0.26100-SP0",
-        "cpu": "AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD"
+        "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 8.46,
-          "avg": 6.02
+          "peak": 19.01,
+          "avg": 16.56
         },
-        "total_ram_gb": 23.9,
-        "samples": 131
+        "total_ram_gb": 31.9,
+        "samples": 45
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 98.57,
+      "duration_seconds": 54.29,
       "error": null,
       "hardware": {
         "os": "Windows-11-10.0.26100-SP0",
-        "cpu": "AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD"
+        "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 8.47,
-          "avg": 7.79
+          "peak": 16.89,
+          "avg": 13.65
         },
-        "total_ram_gb": 23.9,
-        "samples": 98
+        "total_ram_gb": 31.9,
+        "samples": 54
+      }
+    },
+    {
+      "name": "vanilla_vs_image_depth_gaussians",
+      "status": "pass",
+      "duration_seconds": 108.84,
+      "error": null,
+      "hardware": {
+        "os": "Windows-11-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
+      },
+      "resources": {
+        "ram": {
+          "peak": 16.62,
+          "avg": 15.7
+        },
+        "total_ram_gb": 31.9,
+        "samples": 108
       }
     }
   ]
