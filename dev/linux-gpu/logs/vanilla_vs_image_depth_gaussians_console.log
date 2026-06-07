@@ -13,12 +13,8 @@
 [Console-warning] THREE.WARNING: Multiple instances of Three.js being imported.
 [Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
 [Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "three". Relati…ences must start with either "/", "./", or "../".}
-[Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension
-[Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension...
-[Console-log] [FBXAnimationViewer] Extension registered: comfy3d.fbxanimationviewer
 [Console-log] [GeomPack] Loading mesh preview extension...
 [Console-log] [GeomPack] Mesh preview extension registered
-[Console-log] [GaussianPack Sharp] Loading extension...
 [Console-log] [FBX Preview] Auto-registering for all known FBX preview node types...
 [Console-log] [UniRig] Loading FBX mesh preview extension...
 [Console-log] [UniRig] Detected extension folder: ComfyUI-GeometryPack
@@ -32,26 +28,30 @@
 [Console-log] [MotionCapture] Loading FBX mesh preview extension...
 [Console-log] [MotionCapture] Detected extension folder: ComfyUI-GeometryPack
 [Console-log] [MotionCapture] FBX mesh preview extension registered
-[Console-log] [GeomPack Multi JS] Loading mesh_preview_multi.js extension
-[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Extension named 'geompack.text_report' already registered.}
 [Console-log] [UniRig Compare] Loading compare skeleton widget...
 [Console-log] [UniRig Compare] Detected extension folder: ComfyUI-GeometryPack
 [Console-log] [UniRig Compare] Compare skeleton widget registered
+[Console-log] [GaussianPack Sharp] Loading extension...
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Extension named 'geompack.text_report' already registered.}
+[Console-log] [GeomPack Multi JS] Loading mesh_preview_multi.js extension
 [Console-log] [GeomPack] Loading UV mesh preview extension...
 [Console-log] [GeomPack] UV mesh preview extension registered
+[Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension
+[Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension...
+[Console-log] [FBXAnimationViewer] Extension registered: comfy3d.fbxanimationviewer
 [Console-log] [GeomPack] Loading VTK.js textured mesh preview extension...
 [Console-log] [GeomPack] VTK.js textured mesh preview extension registered
-[Console-log] [BVHViewer] Loading BVH Viewer extension
-[Console-log] [BVHViewer] Loading BVH viewer extension...
-[Console-log] [BVHViewer] Extension registered: comfy3d.bvhviewer
-[Console-log] [GaussianPack] Loading extension...
-[Console-log] [GeomPack Gaussian] Loading extension...
 [Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension
 [Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension...
 [Console-log] [CompareSMPLBVH] Extension registered: comfy3d.comparesmplbvh
-[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
+[Console-log] [BVHViewer] Loading BVH Viewer extension
+[Console-log] [BVHViewer] Loading BVH viewer extension...
+[Console-log] [BVHViewer] Extension registered: comfy3d.bvhviewer
+[Console-log] [GeomPack Gaussian] Loading extension...
 [Console-warning] WARNING: Multiple instances of Three.js being imported.
+[Console-log] [GaussianPack] Loading extension...
 [Console-log] [VTK Bundle] GLTFImporter included in bundle
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
 [Console-log] [UniRig Debug] Loading FBX mesh preview extension...
 [Console-log] [UniRig Debug] Detected extension folder: ComfyUI-GeometryPack
 [Console-log] [UniRig Debug] FBX mesh preview extension registered
@@ -71,36 +71,9 @@
 [Console-log] [comfy-test] graphToPrompt: 8 nodes, missing class_type: [], sample: {"inputs":{"image":"middlebury.jpg"},"class_type":"LoadImage","_meta":{"title":"Load Image"}}
 [Console-log] [GeomPack Gaussian] onExecuted called with: {ply_file: Array(1), filename: Array(1), file_size_mb: Array(1), extrinsics: Array(1), intrinsics: Array(1)}
 [Console-log] [GeomPack Gaussian] Resized node to: 512 x 407 (aspect ratio: 1.48 )
-[Console-log] [GaussianViewer] Received LOAD_MESH_URL: /view?filename=sharp_aligned_1780863314728.ply&type=output&subfolder=
+[Console-log] [GaussianViewer] Received LOAD_MESH_URL: /view?filename=sharp_1780867715773.ply&type=output&subfolder=
 [Console-log] [GaussianViewer] Pre-calculated scale compensation: 29.14 x
-[Console-log] [GaussianViewer] Loading from URL: /view?filename=sharp_aligned_1780863314728.ply&type=output&subfolder=
-[Console-log] [GaussianViewer] Scene bounds center: -0.3498966693878174 -0.013971805572509766 2.591732621192932
-[Console-log] [GaussianViewer] Scene bounds size: 4.938079833984375 2.960120677947998 3.0524613857269287
-[Console-log] [GaussianViewer] Applied scale compensation: 29.14 x, 1179648 gaussians
-[Console-log] [GaussianViewer] Setting camera from extrinsics/intrinsics
-[Console-log] [GaussianViewer] Extrinsics: [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]
-[Console-log] [GaussianViewer] Intrinsics: [[1186.1897630000663,0,708],[0,1186.1897630000663,480],[0,0,1]]
-[Console-log] [GaussianViewer] Computed camera position from extrinsics: 0 0 0
-[Console-log] [GaussianViewer] Intrinsics: fx= 1186.1897630000663 fy= 1186.1897630000663 cx= 708 cy= 480
-[Console-log] [GaussianViewer] Image dimensions (from intrinsics): 1416 x 960
-[Console-log] [GaussianViewer] Locking resolution to native: 1416x960
-[Console-log] [GaussianViewer] Native resolution: 1416 x 960
-[Console-log] [GaussianViewer] Container size: 486 x 202
-[Console-log] [GaussianViewer] Gaussian scale compensation (with 3x boost): 8.74 x
-[Console-log] [GaussianViewer] Calculated FOV: 44.062125276079 degrees
-[Console-log] [GaussianViewer] Target Z distance: 2.4712286729168045
-[Console-log] [GaussianViewer] Scene center: -0.3498966693878174 0.013971805572509766 2.591732621192932
-[Console-log] [GaussianViewer] Closest point Z: 1.1
-[Console-log] [GaussianViewer] Orbit center Z: 1.6 (closest + 50%)
-[Console-log] [GaussianViewer] Camera set to position: 0 0 0
-[Console-log] [GaussianViewer] Looking at target: 0 0 2.591732621192932
-[Console-log] [GaussianViewer] This should match the original input image view
-[Console-log] [GaussianViewer] Loaded successfully from URL
-[Console-log] [GeomPack Gaussian] onExecuted called with: {ply_file: Array(1), filename: Array(1), file_size_mb: Array(1), extrinsics: Array(1), intrinsics: Array(1)}
-[Console-log] [GeomPack Gaussian] Resized node to: 512 x 407 (aspect ratio: 1.48 )
-[Console-log] [GaussianViewer] Received LOAD_MESH_URL: /view?filename=sharp_1780863316133.ply&type=output&subfolder=
-[Console-log] [GaussianViewer] Pre-calculated scale compensation: 29.14 x
-[Console-log] [GaussianViewer] Loading from URL: /view?filename=sharp_1780863316133.ply&type=output&subfolder=
+[Console-log] [GaussianViewer] Loading from URL: /view?filename=sharp_1780867715773.ply&type=output&subfolder=
 [Console-log] [GaussianViewer] Scene bounds center: -0.2908294200897217 -0.020594656467437744 2.3582794070243835
 [Console-log] [GaussianViewer] Scene bounds size: 4.464259147644043 2.697376847267151 2.7184091806411743
 [Console-log] [GaussianViewer] Applied scale compensation: 29.14 x, 1179648 gaussians
@@ -121,5 +94,32 @@
 [Console-log] [GaussianViewer] Orbit center Z: 1.5 (closest + 50%)
 [Console-log] [GaussianViewer] Camera set to position: 0 0 0
 [Console-log] [GaussianViewer] Looking at target: 0 0 2.3582794070243835
+[Console-log] [GaussianViewer] This should match the original input image view
+[Console-log] [GaussianViewer] Loaded successfully from URL
+[Console-log] [GeomPack Gaussian] onExecuted called with: {ply_file: Array(1), filename: Array(1), file_size_mb: Array(1), extrinsics: Array(1), intrinsics: Array(1)}
+[Console-log] [GeomPack Gaussian] Resized node to: 512 x 407 (aspect ratio: 1.48 )
+[Console-log] [GaussianViewer] Received LOAD_MESH_URL: /view?filename=sharp_aligned_1780867735593.ply&type=output&subfolder=
+[Console-log] [GaussianViewer] Pre-calculated scale compensation: 29.14 x
+[Console-log] [GaussianViewer] Loading from URL: /view?filename=sharp_aligned_1780867735593.ply&type=output&subfolder=
+[Console-log] [GaussianViewer] Scene bounds center: -0.3498966693878174 -0.013971805572509766 2.591732621192932
+[Console-log] [GaussianViewer] Scene bounds size: 4.938079833984375 2.960120677947998 3.0524613857269287
+[Console-log] [GaussianViewer] Applied scale compensation: 29.14 x, 1179648 gaussians
+[Console-log] [GaussianViewer] Setting camera from extrinsics/intrinsics
+[Console-log] [GaussianViewer] Extrinsics: [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]
+[Console-log] [GaussianViewer] Intrinsics: [[1186.1897630000663,0,708],[0,1186.1897630000663,480],[0,0,1]]
+[Console-log] [GaussianViewer] Computed camera position from extrinsics: 0 0 0
+[Console-log] [GaussianViewer] Intrinsics: fx= 1186.1897630000663 fy= 1186.1897630000663 cx= 708 cy= 480
+[Console-log] [GaussianViewer] Image dimensions (from intrinsics): 1416 x 960
+[Console-log] [GaussianViewer] Locking resolution to native: 1416x960
+[Console-log] [GaussianViewer] Native resolution: 1416 x 960
+[Console-log] [GaussianViewer] Container size: 486 x 202
+[Console-log] [GaussianViewer] Gaussian scale compensation (with 3x boost): 8.74 x
+[Console-log] [GaussianViewer] Calculated FOV: 44.062125276079 degrees
+[Console-log] [GaussianViewer] Target Z distance: 2.4712286729168045
+[Console-log] [GaussianViewer] Scene center: -0.3498966693878174 0.013971805572509766 2.591732621192932
+[Console-log] [GaussianViewer] Closest point Z: 1.1
+[Console-log] [GaussianViewer] Orbit center Z: 1.6 (closest + 50%)
+[Console-log] [GaussianViewer] Camera set to position: 0 0 0
+[Console-log] [GaussianViewer] Looking at target: 0 0 2.591732621192932
 [Console-log] [GaussianViewer] This should match the original input image view
 [Console-log] [GaussianViewer] Loaded successfully from URL

@@ -1,13 +1,13 @@
 {
-  "models_dir": "/workspaces/Sharp-2000/ComfyUI/models",
+  "models_dir": "/workspaces/Sharp-2116/ComfyUI/models",
   "summary": {
     "total_files": 8,
-    "total_size_bytes": 4133554770,
+    "total_size_bytes": 4133554768,
     "total_size_human": "3.8 GB"
   },
   "folders": {
     "moge2": {
-      "total_size_bytes": 1323816221,
+      "total_size_bytes": 1323816219,
       "total_size_human": "1.2 GB",
       "source": {
         "type": "unknown"
@@ -25,8 +25,8 @@
         },
         {
           "path": ".cache/huggingface/download/model.pt.metadata",
-          "size_bytes": 125,
-          "size_human": "125.0 B"
+          "size_bytes": 123,
+          "size_human": "123.0 B"
         },
         {
           "path": ".cache/huggingface/.gitignore",
