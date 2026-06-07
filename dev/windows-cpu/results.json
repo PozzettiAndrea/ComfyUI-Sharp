@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-05-25T19:42:24.612810+00:00",
+  "timestamp": "2026-06-07T20:01:44.222642+00:00",
   "platform": "windows",
   "hardware": {
     "os": "Windows-2025Server-10.0.26100-SP0",
-    "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
+    "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
   },
-  "commit_hash": "695987087b73232bf85d5fec90579e58e438a16f",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/26416314770",
+  "commit_hash": "f2f0983e2ecb85620a0e1850202a4ee5722f3238",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/27102157535",
   "success": true,
   "summary": {
-    "total": 3,
-    "passed": 2,
+    "total": 4,
+    "passed": 3,
     "failed": 0
   },
   "workflows": [
@@ -24,37 +24,55 @@
     {
       "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 356.15,
+      "duration_seconds": 314.79,
       "error": null,
       "hardware": {
         "os": "Windows-2025Server-10.0.26100-SP0",
-        "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
+        "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 7.4,
-          "avg": 4.03
+          "peak": 7.92,
+          "avg": 4.12
         },
         "total_ram_gb": 16.0,
-        "samples": 352
+        "samples": 312
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 345.77,
+      "duration_seconds": 298.23,
       "error": null,
       "hardware": {
         "os": "Windows-2025Server-10.0.26100-SP0",
-        "cpu": "AMD64 Family 25 Model 17 Stepping 1, AuthenticAMD"
+        "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
       },
       "resources": {
         "ram": {
-          "peak": 7.97,
-          "avg": 4.49
+          "peak": 7.99,
+          "avg": 4.46
         },
         "total_ram_gb": 16.0,
-        "samples": 342
+        "samples": 296
+      }
+    },
+    {
+      "name": "vanilla_vs_image_depth_gaussians",
+      "status": "pass",
+      "duration_seconds": 1558.74,
+      "error": null,
+      "hardware": {
+        "os": "Windows-2025Server-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 1 Stepping 1, AuthenticAMD"
+      },
+      "resources": {
+        "ram": {
+          "peak": 7.5,
+          "avg": 2.87
+        },
+        "total_ram_gb": 16.0,
+        "samples": 1332
       }
     }
   ]
