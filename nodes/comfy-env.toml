@@ -1,3 +1,6 @@
+[cuda]
+packages = ["gsplat"]
+
 [dependencies]
 av = "*"
 open3d = "*"
