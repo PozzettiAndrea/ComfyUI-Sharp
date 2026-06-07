@@ -1,70 +1,109 @@
 {
-  "timestamp": "2026-05-16T20:52:37.155765+00:00",
+  "timestamp": "2026-06-07T22:31:23.443768+00:00",
   "platform": "linux",
   "hardware": {
     "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
-    "cpu": "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
+    "cpu": "AMD Ryzen 5 5600 6-Core Processor",
     "gpu": "NVIDIA GeForce RTX 3090"
   },
-  "commit_hash": "6891efa5b5c38cb36d60d3e1da33ab612618fb62",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/25971131977",
+  "commit_hash": "67948de30f0bfe7ed71dcf0a1a8909ad73a5c2b7",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/27106306680",
   "success": true,
   "summary": {
-    "total": 3,
-    "passed": 2,
+    "total": 4,
+    "passed": 4,
     "failed": 0
   },
   "workflows": [
     {
       "name": "pano",
-      "status": "skipped",
-      "duration_seconds": 0,
-      "error": "Not configured for GPU runner",
-      "hardware": null
-    },
-    {
-      "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 173.51,
+      "duration_seconds": 472.63,
       "error": null,
       "hardware": {
         "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
-        "cpu": "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
+        "cpu": "AMD Ryzen 5 5600 6-Core Processor",
         "gpu": "NVIDIA GeForce RTX 3090"
       },
       "resources": {
         "ram": {
-          "peak": 7.37,
-          "avg": 6.0
+          "peak": 30.23,
+          "avg": 18.96
         },
-        "total_ram_gb": 31.2,
-        "samples": 169,
+        "total_ram_gb": 31.3,
+        "samples": 462,
         "vram": {
-          "peak": 8.07,
-          "avg": 5.65
+          "peak": 18.02,
+          "avg": 7.93
+        }
+      }
+    },
+    {
+      "name": "sharp_basic",
+      "status": "pass",
+      "duration_seconds": 53.03,
+      "error": null,
+      "hardware": {
+        "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
+        "cpu": "AMD Ryzen 5 5600 6-Core Processor",
+        "gpu": "NVIDIA GeForce RTX 3090"
+      },
+      "resources": {
+        "ram": {
+          "peak": 23.96,
+          "avg": 13.77
+        },
+        "total_ram_gb": 31.3,
+        "samples": 52,
+        "vram": {
+          "peak": 11.99,
+          "avg": 5.54
         }
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 90.87,
+      "duration_seconds": 52.64,
       "error": null,
       "hardware": {
         "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
-        "cpu": "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
+        "cpu": "AMD Ryzen 5 5600 6-Core Processor",
         "gpu": "NVIDIA GeForce RTX 3090"
       },
       "resources": {
         "ram": {
-          "peak": 8.0,
-          "avg": 3.14
+          "peak": 13.67,
+          "avg": 12.34
         },
-        "total_ram_gb": 31.2,
-        "samples": 89,
+        "total_ram_gb": 31.3,
+        "samples": 51,
         "vram": {
-          "peak": 8.45,
-          "avg": 1.27
+          "peak": 11.83,
+          "avg": 9.84
+        }
+      }
+    },
+    {
+      "name": "vanilla_vs_image_depth_gaussians",
+      "status": "pass",
+      "duration_seconds": 109.02,
+      "error": null,
+      "hardware": {
+        "os": "Linux-6.8.0-107-generic-x86_64-with-glibc2.35",
+        "cpu": "AMD Ryzen 5 5600 6-Core Processor",
+        "gpu": "NVIDIA GeForce RTX 3090"
+      },
+      "resources": {
+        "ram": {
+          "peak": 16.1,
+          "avg": 14.82
+        },
+        "total_ram_gb": 31.3,
+        "samples": 106,
+        "vram": {
+          "peak": 12.15,
+          "avg": 5.17
         }
       }
     }

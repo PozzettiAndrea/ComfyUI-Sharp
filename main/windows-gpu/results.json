@@ -1,30 +1,23 @@
 {
-  "timestamp": "2026-05-18T16:02:27.568533+00:00",
+  "timestamp": "2026-06-07T21:35:56.920895+00:00",
   "platform": "windows",
   "hardware": {
     "os": "Windows-11-10.0.26100-SP0",
     "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
   },
-  "commit_hash": "6891efa5b5c38cb36d60d3e1da33ab612618fb62",
-  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/26042394513",
+  "commit_hash": "bc8f98d21459519ae2ae968c1cec0613791e00cc",
+  "run_url": "https://github.com/PozzettiAndrea/comfy-gpu-ci/actions/runs/27105060369",
   "success": true,
   "summary": {
-    "total": 3,
-    "passed": 2,
+    "total": 4,
+    "passed": 4,
     "failed": 0
   },
   "workflows": [
     {
       "name": "pano",
-      "status": "skipped",
-      "duration_seconds": 0,
-      "error": "Not configured for GPU runner",
-      "hardware": null
-    },
-    {
-      "name": "sharp_basic",
       "status": "pass",
-      "duration_seconds": 86.33,
+      "duration_seconds": 479.03,
       "error": null,
       "hardware": {
         "os": "Windows-11-10.0.26100-SP0",
@@ -32,17 +25,35 @@
       },
       "resources": {
         "ram": {
-          "peak": 7.83,
-          "avg": 4.75
+          "peak": 22.59,
+          "avg": 13.64
         },
         "total_ram_gb": 31.9,
-        "samples": 85
+        "samples": 474
+      }
+    },
+    {
+      "name": "sharp_basic",
+      "status": "pass",
+      "duration_seconds": 44.89,
+      "error": null,
+      "hardware": {
+        "os": "Windows-11-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
+      },
+      "resources": {
+        "ram": {
+          "peak": 19.01,
+          "avg": 16.56
+        },
+        "total_ram_gb": 31.9,
+        "samples": 45
       }
     },
     {
       "name": "sharp_exif",
       "status": "pass",
-      "duration_seconds": 51.33,
+      "duration_seconds": 54.29,
       "error": null,
       "hardware": {
         "os": "Windows-11-10.0.26100-SP0",
@@ -50,11 +61,29 @@
       },
       "resources": {
         "ram": {
-          "peak": 7.83,
-          "avg": 6.96
+          "peak": 16.89,
+          "avg": 13.65
         },
         "total_ram_gb": 31.9,
-        "samples": 51
+        "samples": 54
+      }
+    },
+    {
+      "name": "vanilla_vs_image_depth_gaussians",
+      "status": "pass",
+      "duration_seconds": 108.84,
+      "error": null,
+      "hardware": {
+        "os": "Windows-11-10.0.26100-SP0",
+        "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD"
+      },
+      "resources": {
+        "ram": {
+          "peak": 16.62,
+          "avg": 15.7
+        },
+        "total_ram_gb": 31.9,
+        "samples": 108
       }
     }
   ]
