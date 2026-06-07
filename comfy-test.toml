@@ -3,7 +3,7 @@ levels = ["syntax", "install", "registration", "instantiation", "execution"]
 
 [test.workflows]
 cpu = ["!pano"]
-gpu = ["!pano"]
+gpu = "all"
 
 [test.platforms]
 linux = true

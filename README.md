@@ -33,7 +33,7 @@ Three options, in order of speed → reliability:
 
 ComfyUI wrapper for [SHARP](https://arxiv.org/abs/2512.10685) by [Apple](https://github.com/apple/ml-sharp) - monocular 3D Gaussian Splatting in under 1 second.
 
-2 Example workflows.
+3 Example workflows.
 
 Workflow 1: standard/user input focal length.
 ![Workflow](docs/no_exif.png)
@@ -46,14 +46,15 @@ Workflow 2: focal length extraction from exif data.
 
 ![Workflow_exif](docs/with_exif.png)
 
-
 https://github.com/user-attachments/assets/b0c3e196-aa93-4380-8f8b-9c19b833b818
+
+Workflow 3: Panorama gaussians
+
+https://github.com/user-attachments/assets/f31e6db6-eb3f-4d4a-9d01-089fe9f37326
 
 Note: for PLY inference this model is good on its own, but for the Gaussian Viewer node, you're going to need to install this node as well! https://github.com/PozzettiAndrea/ComfyUI-GeometryPack
 
 Model auto-downloads on first run. For offline use, place `sharp_2572gikvuh.pt` in `ComfyUI/models/sharp/`.
-
-
 
 ## Nodes
 
