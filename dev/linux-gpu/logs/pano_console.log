@@ -10,12 +10,11 @@
 [Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "three". Relati…ences must start with either "/", "./", or "../".}
 [Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "three". Relati…ences must start with either "/", "./", or "../".}
 [Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
-[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
 [Console-warning] THREE.WARNING: Multiple instances of Three.js being imported.
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
 [Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "playcanvas". R…ences must start with either "/", "./", or "../".}
 [Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Failed to resolve module specifier "three". Relati…ences must start with either "/", "./", or "../".}
 [Console-warning] WARNING: Multiple instances of Three.js being imported.
-[Console-log] [GeomPack Gaussian] Loading extension...
 [Console-log] [FBX Preview] Auto-registering for all known FBX preview node types...
 [Console-log] [UniRig] Loading FBX mesh preview extension...
 [Console-log] [UniRig] Detected extension folder: ComfyUI-GeometryPack
@@ -29,32 +28,33 @@
 [Console-log] [MotionCapture] Loading FBX mesh preview extension...
 [Console-log] [MotionCapture] Detected extension folder: ComfyUI-GeometryPack
 [Console-log] [MotionCapture] FBX mesh preview extension registered
-[Console-log] [GeomPack] Loading mesh preview extension...
-[Console-log] [GeomPack] Mesh preview extension registered
-[Console-log] [GeomPack Multi JS] Loading mesh_preview_multi.js extension
-[Console-log] [GeomPack] Loading UV mesh preview extension...
-[Console-log] [GeomPack] UV mesh preview extension registered
-[Console-log] [UniRig Compare] Loading compare skeleton widget...
-[Console-log] [UniRig Compare] Detected extension folder: ComfyUI-GeometryPack
-[Console-log] [UniRig Compare] Compare skeleton widget registered
-[Console-log] [GeomPack] Loading VTK.js textured mesh preview extension...
-[Console-log] [GeomPack] VTK.js textured mesh preview extension registered
-[Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension
-[Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension...
-[Console-log] [FBXAnimationViewer] Extension registered: comfy3d.fbxanimationviewer
-[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension
-[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension...
-[Console-log] [CompareSMPLBVH] Extension registered: comfy3d.comparesmplbvh
-[Console-log] [GaussianPack] Loading extension...
-[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Extension named 'geompack.text_report' already registered.}
-[Console-log] [BVHViewer] Loading BVH Viewer extension
-[Console-log] [BVHViewer] Loading BVH viewer extension...
-[Console-log] [BVHViewer] Extension registered: comfy3d.bvhviewer
-[Console-log] [GaussianPack Sharp] Loading extension...
-[Console-log] [VTK Bundle] GLTFImporter included in bundle
 [Console-log] [UniRig Debug] Loading FBX mesh preview extension...
 [Console-log] [UniRig Debug] Detected extension folder: ComfyUI-GeometryPack
 [Console-log] [UniRig Debug] FBX mesh preview extension registered
+[Console-log] [GaussianPack Sharp] Loading extension...
+[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension
+[Console-log] [CompareSMPLBVH] Loading Compare SMPL BVH extension...
+[Console-log] [CompareSMPLBVH] Extension registered: comfy3d.comparesmplbvh
+[Console-log] [GeomPack] Loading mesh preview extension...
+[Console-log] [GeomPack] Mesh preview extension registered
+[Console-log] [GeomPack Gaussian] Loading extension...
+[Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension
+[Console-log] [FBXAnimationViewer] Loading FBX Animation Viewer extension...
+[Console-log] [FBXAnimationViewer] Extension registered: comfy3d.fbxanimationviewer
+[Console-log] [GeomPack Multi JS] Loading mesh_preview_multi.js extension
+[Console-log] [BVHViewer] Loading BVH Viewer extension
+[Console-log] [BVHViewer] Loading BVH viewer extension...
+[Console-log] [BVHViewer] Extension registered: comfy3d.bvhviewer
+[Console-log] [UniRig Compare] Loading compare skeleton widget...
+[Console-log] [UniRig Compare] Detected extension folder: ComfyUI-GeometryPack
+[Console-log] [UniRig Compare] Compare skeleton widget registered
+[Console-log] [GeomPack] Loading UV mesh preview extension...
+[Console-log] [GeomPack] UV mesh preview extension registered
+[Console-error] [vite:preloadError] {url: null, fileType: unknown, chunkName: null, message: Extension named 'geompack.text_report' already registered.}
+[Console-log] [GeomPack] Loading VTK.js textured mesh preview extension...
+[Console-log] [GeomPack] VTK.js textured mesh preview extension registered
+[Console-log] [GaussianPack] Loading extension...
+[Console-log] [VTK Bundle] GLTFImporter included in bundle
 [Console-warning] [MaskEditor] ComfyApp.open_maskeditor is deprecated. Plugins should migrate to using the command system or direct node context menu integration.
 [Console-log] [GaussianPack] Registering Preview Gaussians node
 [Console-log] [GaussianPack Sharp] Registering Preview Gaussian Sharp node
@@ -67,42 +67,42 @@
 [Console-info] Autofocus processing was blocked because a document already has a focused element.
 [Console-log] [comfy-test] graphToPrompt: 18 nodes, missing class_type: [], sample: {"inputs":{"image":"pano.png"},"class_type":"LoadImage","_meta":{"title":"Load Image"}}
 [Console-log] [GaussianPack] onExecuted called with: {ply_file: Array(1), filename: Array(1), ply_type: Array(1), ply_subfolder: Array(1), file_size_mb: Array(1)}
-[Console-log] [GaussianPack] fetch start: /view?filename=merged_1780868721902_rot_m90_p0_p0_7ef5a2c7.ply&type=output&subfolder=&_=1780868757
-[Console-log] [GaussianPack] download 0%  2.0/217.5 MB
-[Console-log] [GaussianPack] download 5%  11.4/217.5 MB
+[Console-log] [GaussianPack] fetch start: /view?filename=merged_1780871249131_rot_m90_p0_p0_1e218321.ply&type=output&subfolder=&_=1780871252
+[Console-log] [GaussianPack] download 0%  0.3/217.5 MB
+[Console-log] [GaussianPack] download 5%  12.0/217.5 MB
 [Console-log] [GaussianPack] download 10%  22.0/217.5 MB
-[Console-log] [GaussianPack] download 15%  33.1/217.5 MB
+[Console-log] [GaussianPack] download 15%  34.0/217.5 MB
 [Console-log] [GaussianPack] download 20%  44.0/217.5 MB
-[Console-log] [GaussianPack] download 25%  55.1/217.5 MB
+[Console-log] [GaussianPack] download 25%  56.0/217.5 MB
 [Console-log] [GaussianPack] download 30%  66.0/217.5 MB
 [Console-log] [GaussianPack] download 35%  78.0/217.5 MB
 [Console-log] [GaussianPack] download 40%  88.0/217.5 MB
 [Console-log] [GaussianPack] download 45%  98.0/217.5 MB
-[Console-log] [GaussianPack] download 50%  109.1/217.5 MB
+[Console-log] [GaussianPack] download 50%  110.0/217.5 MB
 [Console-log] [GaussianPack] download 55%  120.0/217.5 MB
-[Console-log] [GaussianPack] download 60%  131.1/217.5 MB
+[Console-log] [GaussianPack] download 60%  132.0/217.5 MB
 [Console-log] [GaussianPack] download 65%  142.0/217.5 MB
-[Console-log] [GaussianPack] download 70%  153.1/217.5 MB
-[Console-log] [GaussianPack] download 75%  163.1/217.5 MB
+[Console-log] [GaussianPack] download 70%  154.0/217.5 MB
+[Console-log] [GaussianPack] download 75%  164.0/217.5 MB
 [Console-log] [GaussianPack] download 80%  174.0/217.5 MB
 [Console-log] [GaussianPack] download 85%  186.0/217.5 MB
 [Console-log] [GaussianPack] download 90%  196.0/217.5 MB
 [Console-log] [GaussianPack] download 95%  208.0/217.5 MB
 [Console-log] [GaussianPack] download 100%  217.5/217.5 MB
-[Console-log] [GaussianPack] fetch done: 228046139 bytes in 28475 ms (7.6 MB/s)
+[Console-log] [GaussianPack] fetch done: 228046139 bytes in 3145 ms (69.2 MB/s)
 [Console-log] [GaussianViewer] Received LOAD_MESH_DATA, size: 228046139 renderer: playcanvas
 [Console-log] [GaussianViewer] ensureRenderer('playcanvas') starting...
 [Console-log] [PlayCanvas] engine version: 2.19.4
 [Console-log] [PlayCanvas] adapter initialized (mode=orbit)
 [Console-log] [GaussianViewer] Adapter ready: playcanvas
 [Console-log] [GaussianViewer] Loading splat (228,046,139 bytes) via playcanvas...
-[Console-log] [PlayCanvas] loading splat: merged_1780868721902_rot_m90_p0_p0_7ef5a2c7.ply
-[Console-warning] [.WebGL-0x252408869400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
-[Console-warning] [.WebGL-0x252408869400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
-[Console-warning] [.WebGL-0x252408869400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
-[Console-warning] [.WebGL-0x252408869400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
-[Console-log] [PlayCanvas] loaded in 4355 ms
-[Console-log] [GaussianViewer] adapter.loadSplat resolved in 4355 ms
+[Console-log] [PlayCanvas] loading splat: merged_1780871249131_rot_m90_p0_p0_1e218321.ply
+[Console-warning] [.WebGL-0x2d5400149c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[Console-warning] [.WebGL-0x2d5400149c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[Console-warning] [.WebGL-0x2d5400149c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels
+[Console-warning] [.WebGL-0x2d5400149c00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)
+[Console-log] [PlayCanvas] loaded in 3112 ms
+[Console-log] [GaussianViewer] adapter.loadSplat resolved in 3113 ms
 [Console-log] [GaussianViewer] frameOnBounds: bounds center=(-0.823, -0.022, 0.303) size=(4.532, 2.415, 3.866)
 [Console-log] [GaussianViewer] Framed: cam=(-1.65, -0.04, -4.98) target=(-0.82, -0.02, 0.30) maxExtent=4.53 radius=5.59 fov=50
 [Console-log] [GaussianViewer] Loaded successfully
