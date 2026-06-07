@@ -1,177 +1,272 @@
-setup plugin alembic.autogenerate.schemas
-setup plugin alembic.autogenerate.tables
-setup plugin alembic.autogenerate.types
-setup plugin alembic.autogenerate.constraints
-setup plugin alembic.autogenerate.defaults
-setup plugin alembic.autogenerate.comments
+[32m[INFO][0m setup plugin alembic.autogenerate.schemas
+[32m[INFO][0m setup plugin alembic.autogenerate.tables
+[32m[INFO][0m setup plugin alembic.autogenerate.types
+[32m[INFO][0m setup plugin alembic.autogenerate.constraints
+[32m[INFO][0m setup plugin alembic.autogenerate.defaults
+[32m[INFO][0m setup plugin alembic.autogenerate.comments
 [comfy-env] ComfyUI-GeometryPack: 1 isolation env(s):
-[comfy-env]   nodes -> D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack\nodes
+[comfy-env]   nodes -> D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack\nodes
 [comfy-env] Workspace: C:\Users\stduser\AppData\Local\Programs\comfy-env
-[comfy-env]     env: C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\geometrypack-nodes\.pixi\envs\default  [OK]
+[comfy-env]     env: C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\geometrypack-nodes  [OK]
+[comfy-env] prestartup complete
+[comfy-env] ComfyUI-MoGe2: 1 isolation env(s):
+[comfy-env]   nodes -> D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-MoGe2\nodes
+[comfy-env]     env: C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\moge2-nodes  [OK]
+[comfy-env] prestartup complete
+[comfy-env] ComfyUI-PanoPack: 1 isolation env(s):
+[comfy-env]   nodes -> D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-PanoPack\nodes
+[comfy-env]     env: C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\panopack-nodes  [OK]
 [comfy-env] prestartup complete
 [comfy-env] ComfyUI-Sharp: 1 isolation env(s):
-[comfy-env]   nodes -> D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes
-[comfy-env]     env: C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default  [OK]
+[comfy-env]   nodes -> D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes
+[comfy-env]     env: C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes  [OK]
 [comfy-env] prestartup complete
-
+[32m[INFO][0m 
 Prestartup times for custom nodes:
-   0.0 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp
-   0.4 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack
-
-D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\python_embeded\Lib\site-packages\torch\cuda\__init__.py:180: UserWarning: cudaGetDeviceCount() returned cudaErrorNotSupported, likely using older driver or on CPU machine (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10\cuda\CUDAFunctions.cpp:88.)
+[32m[INFO][0m    0.0 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-MoGe2
+[32m[INFO][0m    0.0 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp
+[32m[INFO][0m    0.0 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-PanoPack
+[32m[INFO][0m    0.0 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GaussianPack
+[32m[INFO][0m    0.4 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack
+[32m[INFO][0m 
+D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\python_embeded\Lib\site-packages\torch\cuda\__init__.py:187: UserWarning: cudaGetDeviceCount() returned cudaErrorNotSupported, likely using older driver or on CPU machine (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\c10\cuda\CUDAFunctions.cpp:88.)
   return torch._C._cuda_getDeviceCount() > 0
-Found comfy_kitchen backend eager: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'dequantize_mxfp8', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'scaled_mm_mxfp8', 'scaled_mm_nvfp4']}
-Found comfy_kitchen backend triton: {'available': False, 'disabled': True, 'unavailable_reason': "ImportError: No module named 'triton'", 'capabilities': []}
-Found comfy_kitchen backend cuda: {'available': False, 'disabled': False, 'unavailable_reason': 'CUDA not available on this system', 'capabilities': []}
-Checkpoint files will always be loaded safely.
-Total VRAM 16379 MB, total RAM 16379 MB
-pytorch version: 2.11.0+cu130
-Set vram state to: DISABLED
-Device: cpu
-Using sub quadratic optimization for attention, if you have memory or speed issues try using: --use-split-cross-attention
-Python version: 3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]
-ComfyUI version: 0.22.0
-comfy-aimdo version: 0.3.0
-comfy-kitchen version: 0.2.8
-****** User settings have been changed to be stored on the server instead of browser storage. ******
-****** For multi-user setups add the --multi-user CLI argument to enable multiple user profiles. ******
-comfyui-frontend-package version: 1.43.18
-comfyui-workflow-templates version: 0.9.79
-comfyui-embedded-docs version: 0.5.0
-comfy-kitchen version: 0.2.8
-comfy-aimdo version: 0.3.0
-[Prompt Server] web root: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\python_embeded\Lib\site-packages\comfyui_frontend_package\static
-Asset seeder disabled
-loading...
-calling register_nodes
-[comfy-env] Version: 0.4.1
-[comfy-env] register_nodes: ComfyUI-GeometryPack
-[comfy-env] ComfyUI source dir: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI
+[32m[INFO][0m Found comfy_kitchen backend cuda: {'available': False, 'disabled': False, 'unavailable_reason': 'CUDA not available on this system', 'capabilities': []}
+[32m[INFO][0m Found comfy_kitchen backend eager: {'available': True, 'disabled': False, 'unavailable_reason': None, 'capabilities': ['apply_rope', 'apply_rope1', 'apply_rope_split_half', 'apply_rope_split_half1', 'dequantize_mxfp8', 'dequantize_nvfp4', 'dequantize_per_tensor_fp8', 'gemv_awq_w4a16', 'quantize_mxfp8', 'quantize_nvfp4', 'quantize_per_tensor_fp8', 'quantize_svdquant_w4a4', 'scaled_mm_mxfp8', 'scaled_mm_nvfp4', 'scaled_mm_svdquant_w4a4', 'stochastic_rounding_fp8']}
+[32m[INFO][0m Found comfy_kitchen backend triton: {'available': False, 'disabled': True, 'unavailable_reason': "ImportError: No module named 'triton'", 'capabilities': []}
+[32m[INFO][0m Checkpoint files will always be loaded safely.
+[32m[INFO][0m Total VRAM 16379 MB, total RAM 16379 MB
+[32m[INFO][0m pytorch version: 2.12.0+cu130
+[32m[INFO][0m Set vram state to: DISABLED
+[32m[INFO][0m Device: cpu
+[32m[INFO][0m Using sub quadratic optimization for attention, if you have memory or speed issues try using: --use-split-cross-attention
+[32m[INFO][0m Python version: 3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]
+[32m[INFO][0m ComfyUI version: 0.24.0
+[32m[INFO][0m comfy-aimdo version: 0.4.8
+[32m[INFO][0m comfy-kitchen version: 0.2.10
+[1m[33m[WARNING][0m ****** User settings have been changed to be stored on the server instead of browser storage. ******
+[1m[33m[WARNING][0m ****** For multi-user setups add the --multi-user CLI argument to enable multiple user profiles. ******
+[32m[INFO][0m comfyui-frontend-package version: 1.44.19
+[32m[INFO][0m comfyui-workflow-templates version: 0.9.94
+[32m[INFO][0m comfyui-embedded-docs version: 0.5.2
+[32m[INFO][0m comfy-kitchen version: 0.2.10
+[32m[INFO][0m comfy-aimdo version: 0.4.8
+[32m[INFO][0m [Prompt Server] web root: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\python_embeded\Lib\site-packages\comfyui_frontend_package\static
+[32m[INFO][0m Asset seeder disabled
+[comfy-env] Version: 0.3.89
+[comfy-env] register_nodes: ComfyUI-GaussianPack
+[comfy-env] ComfyUI source dir: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI
 [comfy-env] Found 1 isolation env(s)
 [comfy-env] Scanning nodes metadata (isolation root)...
-[comfy-env] default: Library/bin has 613 DLLs
-[comfy-env] Metadata scan: C:\Users\stduser\.pixi\bin\pixi.exe run --as-is --manifest-path C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\geometrypack-nodes\pixi.toml -e default python C:\Users\stduser\AppData\Local\Temp\comfy_meta_h4j4150s.py D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack nodes C:\Users\stduser\AppData\Local\Temp\comfy_meta_out_tg6dl5k_.pkl
+[comfy-env] gaussianpack-nodes: Library/bin has 237 DLLs
+[comfy-env] Metadata scan: C:\Users\stduser\.pixi\bin\pixi.exe run --as-is --manifest-path C:\Users\stduser\AppData\Local\Programs\comfy-env\pixi.toml -e gaussianpack-nodes python C:\Users\stduser\AppData\Local\Temp\comfy_meta_gfd50p6y.py D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GaussianPack nodes C:\Users\stduser\AppData\Local\Temp\comfy_meta_out_e5bku8kq.pkl
 [comfy-env] Scan env PATH for nodes:
-[comfy-env]   [0] C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\geometrypack-nodes\.pixi\envs\default
-[comfy-env]   [1] C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\geometrypack-nodes\.pixi\envs\default\Library\bin
-[comfy-env]   [2] C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\geometrypack-nodes\.pixi\envs\default\Scripts
-[comfy-env]   [3] C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\geometrypack-nodes\.pixi\envs\default\Lib\site-packages\bpy
+[comfy-env]   [0] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\gaussianpack-nodes
+[comfy-env]   [1] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\gaussianpack-nodes\Library\bin
+[comfy-env]   [2] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\gaussianpack-nodes\Scripts
+[comfy-env]   [3] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\gaussianpack-nodes\Lib\site-packages\bpy
 [comfy-env]   [4] C:\Windows\System32
 [comfy-env]   [5] C:\Windows
 [comfy-env]   [6] C:\Windows\System32\Wbem
 [comfy-env] Metadata scan stderr for nodes:
-[comfy-env]   [meta-scan] importing nodes from D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack
-[comfy-env]   ERROR:root:Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+[comfy-env]   [meta-scan] importing nodes from D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GaussianPack
+[comfy-env]   SPZ route not registered (ModuleNotFoundError: No module named 'comfy_aimdo')
 [comfy-env]   [meta-scan] import OK
-[comfy-env] Scanned nodes: 125 nodes (21.9s)
-[comfy-env] Scanned nodes root: 125 nodes (21.9s)
+[comfy-env] Scanned nodes: 11 nodes (40.3s)
+[comfy-env] Scanned nodes root: 11 nodes (40.3s)
+[comfy-env] Imported nodes root: 11 nodes (isolation)
+[comfy-env] Registered 11 total nodes
+[32m[INFO][0m loading...
+[32m[INFO][0m calling register_nodes
+[comfy-env] Version: 0.3.89
+[comfy-env] register_nodes: ComfyUI-GeometryPack
+[comfy-env] ComfyUI source dir: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI
+[comfy-env] Found 1 isolation env(s)
+[comfy-env] Scanning nodes metadata (isolation root)...
+[comfy-env] geometrypack-nodes: Library/bin has 612 DLLs
+[comfy-env] Metadata scan: C:\Users\stduser\.pixi\bin\pixi.exe run --as-is --manifest-path C:\Users\stduser\AppData\Local\Programs\comfy-env\pixi.toml -e geometrypack-nodes python C:\Users\stduser\AppData\Local\Temp\comfy_meta_vgjqis9t.py D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack nodes C:\Users\stduser\AppData\Local\Temp\comfy_meta_out_2w54412d.pkl
+[comfy-env] Scan env PATH for nodes:
+[comfy-env]   [0] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\geometrypack-nodes
+[comfy-env]   [1] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\geometrypack-nodes\Library\bin
+[comfy-env]   [2] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\geometrypack-nodes\Scripts
+[comfy-env]   [3] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\geometrypack-nodes\Lib\site-packages\bpy
+[comfy-env]   [4] C:\Windows\System32
+[comfy-env]   [5] C:\Windows
+[comfy-env]   [6] C:\Windows\System32\Wbem
+[comfy-env] Metadata scan stderr for nodes:
+[comfy-env]   [meta-scan] importing nodes from D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack
+[comfy-env]   ERROR:root:Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+[comfy-env]   WARNING:root:comfy_kitchen does not support stochastic FP8 rounding, please update comfy_kitchen.
+[comfy-env]   [meta-scan] import OK
+[comfy-env] Scanned nodes: 125 nodes (10.7s)
+[comfy-env] Scanned nodes root: 125 nodes (10.7s)
 [comfy-env] Imported nodes root: 125 nodes (isolation)
 [comfy-env] Registered 125 total nodes
-[comfy-env] Version: 0.4.1
-[comfy-env] register_nodes: ComfyUI-Sharp
-[comfy-env] ComfyUI source dir: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI
+[comfy-env] Version: 0.3.89
+[comfy-env] register_nodes: ComfyUI-MoGe2
+[comfy-env] ComfyUI source dir: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI
 [comfy-env] Found 1 isolation env(s)
 [comfy-env] Scanning nodes metadata (isolation root)...
-[comfy-env] default: Library/bin has 237 DLLs
-[comfy-env] Metadata scan: C:\Users\stduser\.pixi\bin\pixi.exe run --as-is --manifest-path C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\pixi.toml -e default python C:\Users\stduser\AppData\Local\Temp\comfy_meta_20ucyn04.py D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp nodes C:\Users\stduser\AppData\Local\Temp\comfy_meta_out_83o0spnd.pkl
+[comfy-env] moge2-nodes: Library/bin has 237 DLLs
+[comfy-env] Metadata scan: C:\Users\stduser\.pixi\bin\pixi.exe run --as-is --manifest-path C:\Users\stduser\AppData\Local\Programs\comfy-env\pixi.toml -e moge2-nodes python C:\Users\stduser\AppData\Local\Temp\comfy_meta_twh871qu.py D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-MoGe2 nodes C:\Users\stduser\AppData\Local\Temp\comfy_meta_out_rave_ups.pkl
 [comfy-env] Scan env PATH for nodes:
-[comfy-env]   [0] C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default
-[comfy-env]   [1] C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Library\bin
-[comfy-env]   [2] C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Scripts
-[comfy-env]   [3] C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\bpy
+[comfy-env]   [0] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\moge2-nodes
+[comfy-env]   [1] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\moge2-nodes\Library\bin
+[comfy-env]   [2] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\moge2-nodes\Scripts
+[comfy-env]   [3] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\moge2-nodes\Lib\site-packages\bpy
 [comfy-env]   [4] C:\Windows\System32
 [comfy-env]   [5] C:\Windows
 [comfy-env]   [6] C:\Windows\System32\Wbem
 [comfy-env] Metadata scan stderr for nodes:
-[comfy-env]   [meta-scan] importing nodes from D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp
+[comfy-env]   [meta-scan] importing nodes from D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-MoGe2
+[comfy-env]   ERROR:root:Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+[comfy-env]   WARNING:root:comfy_kitchen does not support stochastic FP8 rounding, please update comfy_kitchen.
 [comfy-env]   [meta-scan] import OK
-[comfy-env] Scanned nodes: 8 nodes (8.0s)
-[comfy-env] Scanned nodes root: 8 nodes (8.0s)
-[comfy-env] Imported nodes root: 8 nodes (isolation)
-[comfy-env] Registered 8 total nodes
-
+[comfy-env] Scanned nodes: 3 nodes (8.4s)
+[comfy-env] Scanned nodes root: 3 nodes (8.4s)
+[comfy-env] Imported nodes root: 3 nodes (isolation)
+[comfy-env] Registered 3 total nodes
+[comfy-env] Version: 0.3.89
+[comfy-env] register_nodes: ComfyUI-PanoPack
+[comfy-env] ComfyUI source dir: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI
+[comfy-env] Found 1 isolation env(s)
+[comfy-env] Scanning nodes metadata (isolation root)...
+[comfy-env] panopack-nodes: Library/bin has 610 DLLs
+[comfy-env] Metadata scan: C:\Users\stduser\.pixi\bin\pixi.exe run --as-is --manifest-path C:\Users\stduser\AppData\Local\Programs\comfy-env\pixi.toml -e panopack-nodes python C:\Users\stduser\AppData\Local\Temp\comfy_meta_9sy7fp_a.py D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-PanoPack nodes C:\Users\stduser\AppData\Local\Temp\comfy_meta_out_p77kr998.pkl
+[comfy-env] Scan env PATH for nodes:
+[comfy-env]   [0] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\panopack-nodes
+[comfy-env]   [1] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\panopack-nodes\Library\bin
+[comfy-env]   [2] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\panopack-nodes\Scripts
+[comfy-env]   [3] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\panopack-nodes\Lib\site-packages\bpy
+[comfy-env]   [4] C:\Windows\System32
+[comfy-env]   [5] C:\Windows
+[comfy-env]   [6] C:\Windows\System32\Wbem
+[comfy-env] Metadata scan stderr for nodes:
+[comfy-env]   [meta-scan] importing nodes from D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-PanoPack
+[comfy-env]   [meta-scan] import OK
+[comfy-env] Scanned nodes: 15 nodes (11.4s)
+[comfy-env] Scanned nodes root: 15 nodes (11.4s)
+[comfy-env] Imported nodes root: 15 nodes (isolation)
+[comfy-env] Registered 15 total nodes
+[comfy-env] Version: 0.3.89
+[comfy-env] register_nodes: ComfyUI-Sharp
+[comfy-env] ComfyUI source dir: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI
+[comfy-env] Found 1 isolation env(s)
+[comfy-env] Scanning nodes metadata (isolation root)...
+[comfy-env] sharp-nodes: Library/bin has 566 DLLs
+[comfy-env] Metadata scan: C:\Users\stduser\.pixi\bin\pixi.exe run --as-is --manifest-path C:\Users\stduser\AppData\Local\Programs\comfy-env\pixi.toml -e sharp-nodes python C:\Users\stduser\AppData\Local\Temp\comfy_meta_r012z958.py D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp nodes C:\Users\stduser\AppData\Local\Temp\comfy_meta_out_zu5_a8se.pkl
+[comfy-env] Scan env PATH for nodes:
+[comfy-env]   [0] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes
+[comfy-env]   [1] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Library\bin
+[comfy-env]   [2] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Scripts
+[comfy-env]   [3] C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\bpy
+[comfy-env]   [4] C:\Windows\System32
+[comfy-env]   [5] C:\Windows
+[comfy-env]   [6] C:\Windows\System32\Wbem
+[comfy-env] Metadata scan stderr for nodes:
+[comfy-env]   [meta-scan] importing nodes from D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp
+[comfy-env]   [meta-scan] import OK
+[comfy-env] Scanned nodes: 17 nodes (10.7s)
+[comfy-env] Scanned nodes root: 17 nodes (10.7s)
+[comfy-env] Imported nodes root: 17 nodes (isolation)
+[comfy-env] Registered 17 total nodes
+[32m[INFO][0m 
 Import times for custom nodes:
-   0.0 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\websocket_image_save.py
-   0.0 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-validate-endpoint
-   8.0 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp
-  22.6 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack
-
-Context impl SQLiteImpl.
-Will assume non-transactional DDL.
-Context impl SQLiteImpl.
-Will assume non-transactional DDL.
-Running upgrade  -> 0001_assets, Initial assets schema
+[32m[INFO][0m    0.0 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\websocket_image_save.py
+[32m[INFO][0m    0.0 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-validate-endpoint
+[32m[INFO][0m    8.4 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-MoGe2
+[32m[INFO][0m   10.7 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp
+[32m[INFO][0m   10.8 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GeometryPack
+[32m[INFO][0m   11.5 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-PanoPack
+[32m[INFO][0m   40.9 seconds: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-GaussianPack
+[32m[INFO][0m 
+[32m[INFO][0m Context impl SQLiteImpl.
+[32m[INFO][0m Will assume non-transactional DDL.
+[32m[INFO][0m Context impl SQLiteImpl.
+[32m[INFO][0m Will assume non-transactional DDL.
+[32m[INFO][0m Running upgrade  -> 0001_assets, Initial assets schema
 Revision ID: 0001_assets
 Revises: None
 Create Date: 2025-12-10 00:00:00
-Running upgrade 0001_assets -> 0002_merge_to_asset_references, Merge AssetInfo and AssetCacheState into unified asset_references table.
-Running upgrade 0002_merge_to_asset_references -> 0003_add_metadata_job_id, Add system_metadata and job_id columns to asset_references.
+[32m[INFO][0m Running upgrade 0001_assets -> 0002_merge_to_asset_references, Merge AssetInfo and AssetCacheState into unified asset_references table.
+[32m[INFO][0m Running upgrade 0002_merge_to_asset_references -> 0003_add_metadata_job_id, Add system_metadata and job_id columns to asset_references.
 Change preview_id FK from assets.id to asset_references.id.
-Database upgraded from None to 0003_add_metadata_job_id
-Starting server
+[32m[INFO][0m Database upgraded from None to 0003_add_metadata_job_id
+[32m[INFO][0m Using RAM pressure cache.
+[32m[INFO][0m Starting server
 
-To see the GUI go to: http://127.0.0.1:41885
-=== /validate endpoint called ===
-Received JSON with keys: ['prompt']
-Prompt has 4 nodes
-  Node 1: LoadImage
-    Inputs: {"image": "beach.jpg"}
-  Node 2: LoadSharpModel
-    Inputs: {"precision": "auto"}
-  Node 4: GeomPackPreviewGaussian
-    Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
-  Node 5: SharpPredict
-    Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
-Generated prompt_id: a5f8163e-d2e8-477b-990b-4d6e7eade86c
-Calling execution.validate_prompt()...
-Validation result: valid=True
-=== Validation PASSED ===
-got prompt
+[32m[INFO][0m To see the GUI go to: http://127.0.0.1:41881
+[32m[INFO][0m Using RAM pressure cache.
+[32m[INFO][0m Using RAM pressure cache.
+[32m[INFO][0m Using RAM pressure cache.
+[32m[INFO][0m === /validate endpoint called ===
+[32m[INFO][0m Received JSON with keys: ['prompt']
+[32m[INFO][0m Prompt has 4 nodes
+[32m[INFO][0m   Node 1: LoadImage
+[32m[INFO][0m     Inputs: {"image": "beach.jpg"}
+[32m[INFO][0m   Node 2: LoadSharpModel
+[32m[INFO][0m     Inputs: {"precision": "auto"}
+[32m[INFO][0m   Node 5: SharpPredict
+[32m[INFO][0m     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["2", 0], "image": ["1", 0]}
+[32m[INFO][0m   Node 6: PreviewGaussianSharp
+[32m[INFO][0m     Inputs: {"preview_gaussian": "", "ply_path": ["5", 0], "extrinsics": ["5", 1], "intrinsics": ["5", 2]}
+[32m[INFO][0m Generated prompt_id: 99b98baf-05aa-4c0e-bbc7-417aa442ecd9
+[32m[INFO][0m Calling execution.validate_prompt()...
+[32m[INFO][0m Validation result: valid=True
+[32m[INFO][0m === Validation PASSED ===
+[32m[INFO][0m got prompt
 [comfy-env] Running LoadSharpModel: precision: 'auto'
-[comfy-env] SubprocessWorker: C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\python.exe
-[comfy-env] env_vars: {'COMFYUI_BASE': 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI'}
+[comfy-env] SubprocessWorker: C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
+[comfy-env] env_vars: {'COMFYUI_BASE': 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1916\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI'}
 [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
 [SubprocessWorker] acquired lock, ensuring started...
-[comfy-env] default: Library/bin has 237 DLLs
-[ComfyUI-Sharp] python: C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\python.exe
-[ComfyUI-Sharp] sys_path sent to worker: ['D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\envs\\sharp-nodes\\.pixi\\envs\\default\\Lib\\site-packages', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
-[SubprocessWorker] is_pixi=True, python=C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\python.exe
-[SubprocessWorker] launching cmd=['C:\\Users\\stduser\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\envs\\sharp-nodes\\pixi.toml', '-e', 'default', 'python', 'C:\\Users\\stduser\\AppData\\Local\\Temp\\comfyui_pvenv_m21lduj5\\persistent_worker.py', 'tcp://127.0.0.1:61391']...
-C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\cuda\__init__.py:180: UserWarning: cudaGetDeviceCount() returned cudaErrorNotSupported, likely using older driver or on CPU machine (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10\cuda\CUDAFunctions.cpp:88.)
+[comfy-env] sharp-nodes: Library/bin has 566 DLLs
+[ComfyUI-Sharp] python: C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
+[ComfyUI-Sharp] sys_path sent to worker: ['D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1916\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1916\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\.pixi\\envs\\sharp-nodes\\Lib\\site-packages', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1916\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
+[SubprocessWorker] is_pixi=True, python=C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\python.exe
+[SubprocessWorker] launching cmd=['C:\\Users\\stduser\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\pixi.toml', '-e', 'sharp-nodes', 'python', 'C:\\Users\\stduser\\AppData\\Local\\Temp\\comfyui_pvenv_ah5r2jvy\\persistent_worker.py', 'tcp://127.0.0.1:54783']...
+C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\cuda\__init__.py:187: UserWarning: cudaGetDeviceCount() returned cudaErrorNotSupported, likely using older driver or on CPU machine (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\c10\cuda\CUDAFunctions.cpp:88.)
   return torch._C._cuda_getDeviceCount() > 0
 [worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+[worker:ComfyUI-Sharp] WARNING: comfy_kitchen does not support stochastic FP8 rounding, please update comfy_kitchen.
 [SubprocessWorker] worker started/confirmed
 [SubprocessWorker] serializing kwargs to shm...
 [SubprocessWorker] created 0 shm blocks
 [SubprocessWorker] sending request via socket...
 [SubprocessWorker] call_id=1 sending call_method
-sharp_2572gikvuh.pt:   0%|          | 0.00/2.81G [00:00<?, ?B/s]sharp_2572gikvuh.pt:   2%|▏         | 67.1M/2.81G [00:01<01:07, 40.7MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:   3%|▎         | 91.2M/2.81G [00:01<00:48, 56.3MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:   8%|▊         | 225M/2.81G [00:02<00:18, 139MB/s]  [SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  13%|█▎        | 359M/2.81G [00:02<00:12, 198MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  15%|█▌        | 427M/2.81G [00:02<00:10, 230MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:03<00:08, 269MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  22%|██▏       | 628M/2.81G [00:03<00:07, 310MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  27%|██▋       | 762M/2.81G [00:03<00:05, 344MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  30%|██▉       | 829M/2.81G [00:03<00:06, 325MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  32%|███▏      | 896M/2.81G [00:06<00:23, 80.8MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  36%|███▋      | 1.02G/2.81G [00:06<00:14, 122MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  39%|███▉      | 1.10G/2.81G [00:07<00:11, 143MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  44%|████▍     | 1.23G/2.81G [00:07<00:07, 210MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  51%|█████     | 1.43G/2.81G [00:07<00:04, 318MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  58%|█████▊    | 1.63G/2.81G [00:07<00:02, 417MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  63%|██████▎   | 1.77G/2.81G [00:08<00:02, 443MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  68%|██████▊   | 1.90G/2.81G [00:08<00:01, 467MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  72%|███████▏  | 2.04G/2.81G [00:08<00:01, 485MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  77%|███████▋  | 2.17G/2.81G [00:08<00:01, 498MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  82%|████████▏ | 2.30G/2.81G [00:09<00:00, 510MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  87%|████████▋ | 2.44G/2.81G [00:09<00:00, 517MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  92%|█████████▏| 2.57G/2.81G [00:09<00:00, 523MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt:  96%|█████████▋| 2.71G/2.81G [00:09<00:00, 527MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
-[SubprocessWorker] callback 'report_progress' from call_id=1
-sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:09<00:00, 286MB/s]
+[worker:ComfyUI-Sharp] [LoadSharpModel] precision='auto' -> dtype=fp32 (device=cpu)
+[worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint not found at D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\models\sharp\sharp_2572gikvuh.pt � downloading from HuggingFace repo 'apple/Sharp' file 'sharp_2572gikvuh.pt' -> D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\models\sharp
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[worker:ComfyUI-Sharp] WARNING: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+sharp_2572gikvuh.pt:   0%|          | 0.00/2.81G [00:00<?, ?B/s]sharp_2572gikvuh.pt:   3%|▎         | 91.2M/2.81G [00:02<01:07, 40.2MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:   6%|▌         | 158M/2.81G [00:02<00:43, 60.3MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:   9%|▉         | 256M/2.81G [00:03<00:26, 98.0MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  15%|█▌        | 427M/2.81G [00:04<00:20, 116MB/s] [SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  20%|█▉        | 561M/2.81G [00:05<00:16, 135MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  22%|██▏       | 628M/2.81G [00:05<00:14, 148MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  25%|██▍       | 695M/2.81G [00:05<00:12, 170MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  27%|██▋       | 762M/2.81G [00:06<00:12, 160MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  32%|███▏      | 896M/2.81G [00:06<00:09, 211MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  34%|███▍      | 963M/2.81G [00:07<00:10, 170MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  37%|███▋      | 1.03G/2.81G [00:07<00:11, 156MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  39%|███▉      | 1.10G/2.81G [00:08<00:10, 166MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  41%|████▏     | 1.16G/2.81G [00:08<00:08, 202MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  44%|████▍     | 1.23G/2.81G [00:08<00:09, 172MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  49%|████▊     | 1.37G/2.81G [00:10<00:13, 105MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  58%|█████▊    | 1.63G/2.81G [00:11<00:06, 174MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  63%|██████▎   | 1.77G/2.81G [00:12<00:05, 189MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  70%|███████   | 1.97G/2.81G [00:12<00:03, 265MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  75%|███████▍  | 2.10G/2.81G [00:12<00:02, 306MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  82%|████████▏ | 2.30G/2.81G [00:12<00:01, 395MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  87%|████████▋ | 2.44G/2.81G [00:13<00:00, 424MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  92%|█████████▏| 2.57G/2.81G [00:13<00:00, 449MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt:  96%|█████████▋| 2.71G/2.81G [00:13<00:00, 470MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:13<00:00, 516MB/s][SubprocessWorker] callback 'report_progress' from call_id=1
+sharp_2572gikvuh.pt: 100%|██████████| 2.81G/2.81G [00:13<00:00, 206MB/s]
+[worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint ready: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\models\sharp\sharp_2572gikvuh.pt (2679.6 MB)
+[worker:ComfyUI-Sharp] [LoadSharpModel] config: precision=auto -> dtype=fp32
 [SubprocessWorker] got response: ok
-[comfy-env] LoadSharpModel done (15.04s): result: NodeOutput
+[comfy-env] LoadSharpModel done (20.89s): result: NodeOutput
 [comfy-env] Running SharpPredict: focal_length_mm: 30.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,1024,1536,3] cpu
 [SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
 [SubprocessWorker] acquired lock, ensuring started...
@@ -186,265 +281,112 @@ C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\de
 [worker:ComfyUI-Sharp] [comfy-env] _from_shm got dict with keys: ['__type__', 'strategy', 'manager_path', 'storage_key', 'storage_size']
 [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZE TensorRef: tensor_size=[1, 1024, 1536, 3]
 [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 1024, 1536, 3])
-[worker:ComfyUI-Sharp] WARNING: No comfy kitchen, using old apply_rope functions.
-[SubprocessWorker] callback 'request_vram_budget' from call_id=2
-[comfy-env] VRAM request: 2.81GB, free before eviction: 9.05GB
-[comfy-env] VRAM after eviction: 9.05GB
-[worker:ComfyUI-Sharp] WARNING: [SPN] start: 0.00 GB, input=[1, 3, 1536, 1536]
-[worker:ComfyUI-Sharp] WARNING: [SPN] patches: 0.00 GB, x0=25 x1=9 x2=1 total=35
-[worker:ComfyUI-Sharp] WARNING: [SPN] after first chunk (4/35): 0.00 GB, chunk_size=4
-[worker:ComfyUI-Sharp] 
-=== WATCHDOG TICK 1 ===
-[worker:ComfyUI-Sharp] Thread 0x00002548 (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 363 in wait
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 660 in wait
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\tqdm\_monitor.py", line 60 in run
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1044 in _bootstrap_inner
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1015 in _bootstrap
+[SubprocessWorker] got response: error
+[1m[31m[ERROR][0m !!! Exception during processing !!! No module named 'torchvision'
 
-Current thread 0x0000235c (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 52 in _watchdog
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 995 in run
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1044 in _bootstrap_inner
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1015 in _bootstrap
+Worker traceback:
+Traceback (most recent call last):
+  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_ah5r2jvy\persistent_worker.py", line 1762, in main
+    result = method(**inputs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy_api\latest\_io.py", line 1880, in EXECUTE_NORMALIZED
+    to_return = cls.execute(*args, **kwargs)
+  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 127, in execute
+    patcher = _load_sharp_model(model)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 83, in _load_sharp_model
+    import comfy.model_patcher
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\model_patcher.py", line 32, in <module>
+    import comfy.hooks
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\hooks.py", line 14, in <module>
+    import comfy.lora
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\lora.py", line 22, in <module>
+    import comfy.model_base
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\model_base.py", line 41, in <module>
+    import comfy.ldm.cosmos.model
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ldm\cosmos\model.py", line 25, in <module>
+    from torchvision import transforms
+ModuleNotFoundError: No module named 'torchvision'
 
-Thread 0x00001d20 (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\linear.py", line 134 in forward
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ops.py", line 484 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 274 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 310 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 412 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 685 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1109 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 287 in _predict_image_cached
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 184 in execute
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy_api\latest\_io.py", line 1833 in EXECUTE_NORMALIZED
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1762 in main
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1807 in <module>
+[1m[31m[ERROR][0m Traceback (most recent call last):
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\execution.py", line 536, in execute
+    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\execution.py", line 336, in get_output_data
+    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\execution.py", line 310, in _async_map_node_over_list
+    await process_inputs(input_dict, i)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\execution.py", line 298, in process_inputs
+    result = f(**inputs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\python_embeded\Lib\site-packages\comfy_env\isolation\metadata.py", line 556, in proxy
+    result = worker.call_method(
+        module_name=mod,
+    ...<4 lines>...
+        timeout=600.0,
+    )
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\python_embeded\Lib\site-packages\comfy_env\isolation\workers\subprocess.py", line 674, in call_method
+    raise WorkerError(
+    ...<2 lines>...
+    )
+comfy_env.isolation.workers.base.WorkerError: No module named 'torchvision'
 
-[worker:ComfyUI-Sharp] === END ===
+Worker traceback:
+Traceback (most recent call last):
+  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_ah5r2jvy\persistent_worker.py", line 1762, in main
+    result = method(**inputs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy_api\latest\_io.py", line 1880, in EXECUTE_NORMALIZED
+    to_return = cls.execute(*args, **kwargs)
+  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 127, in execute
+    patcher = _load_sharp_model(model)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 83, in _load_sharp_model
+    import comfy.model_patcher
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\model_patcher.py", line 32, in <module>
+    import comfy.hooks
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\hooks.py", line 14, in <module>
+    import comfy.lora
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\lora.py", line 22, in <module>
+    import comfy.model_base
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\model_base.py", line 41, in <module>
+    import comfy.ldm.cosmos.model
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ldm\cosmos\model.py", line 25, in <module>
+    from torchvision import transforms
+ModuleNotFoundError: No module named 'torchvision'
 
-[worker:ComfyUI-Sharp] 
-=== WATCHDOG TICK 2 ===
-[worker:ComfyUI-Sharp] Thread 0x00002548 (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 363 in wait
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 660 in wait
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\tqdm\_monitor.py", line 60 in run
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1044 in _bootstrap_inner
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1015 in _bootstrap
 
-Current thread 0x0000235c (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 52 in _watchdog
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 995 in run
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1044 in _bootstrap_inner
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1015 in _bootstrap
-
-Thread 0x00001d20 (most recent call first):
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ldm\modules\sub_quadratic_attention.py", line 259 in efficient_dot_product_attention
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ldm\modules\attention.py", line 275 in attention_sub_quad
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ldm\modules\attention.py", line 139 in wrapper
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 234 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 309 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 412 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 685 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1109 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 287 in _predict_image_cached
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 184 in execute
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy_api\latest\_io.py", line 1833 in EXECUTE_NORMALIZED
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1762 in main
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1807 in <module>
-
-[worker:ComfyUI-Sharp] === END ===
-
-[worker:ComfyUI-Sharp] WARNING: [SPN] after all chunks + cache clear: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [SPN] after merge intermediates: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [SPN] after merge all: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [SPN] after image_encoder: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [SPN] after upsample: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [Monodepth] after SPN encoder + cache clear: 0.00 GB
-[worker:ComfyUI-Sharp] 
-=== WATCHDOG TICK 3 ===
-[worker:ComfyUI-Sharp] Thread 0x00002548 (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 363 in wait
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 660 in wait
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\tqdm\_monitor.py", line 60 in run
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1044 in _bootstrap_inner
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1015 in _bootstrap
-
-Current thread 0x0000235c (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 52 in _watchdog
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 995 in run
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1044 in _bootstrap_inner
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1015 in _bootstrap
-
-Thread 0x00001d20 (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\conv.py", line 548 in _conv_forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\conv.py", line 553 in forward
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ops.py", line 518 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\container.py", line 253 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 766 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 860 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 970 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1118 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 287 in _predict_image_cached
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 184 in execute
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy_api\latest\_io.py", line 1833 in EXECUTE_NORMALIZED
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1762 in main
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1807 in <module>
-
-[worker:ComfyUI-Sharp] === END ===
-
-[worker:ComfyUI-Sharp] WARNING: [Monodepth] after decoder: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [Decode] start: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [Decode] after depth_alignment: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [Decode] after init_model: 0.00 GB
-[worker:ComfyUI-Sharp] 
-=== WATCHDOG TICK 4 ===
-[worker:ComfyUI-Sharp] Thread 0x00002548 (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 363 in wait
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 660 in wait
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\tqdm\_monitor.py", line 60 in run
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1044 in _bootstrap_inner
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1015 in _bootstrap
-
-Current thread 0x0000235c (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 52 in _watchdog
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 995 in run
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1044 in _bootstrap_inner
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1015 in _bootstrap
-
-Thread 0x00001d20 (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\conv.py", line 548 in _conv_forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\conv.py", line 553 in forward
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ops.py", line 518 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\container.py", line 253 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 766 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 860 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1352 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2030 in decode
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 303 in _predict_image_cached
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 184 in execute
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy_api\latest\_io.py", line 1833 in EXECUTE_NORMALIZED
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1762 in main
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1807 in <module>
-
-[worker:ComfyUI-Sharp] === END ===
-
-[worker:ComfyUI-Sharp] WARNING: [Decode] after feature_model: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [Decode] after prediction_head: 0.00 GB
-[SubprocessWorker] callback 'report_progress' from call_id=2
-[SubprocessWorker] got response: ok
-[comfy-env] SharpPredict done (242.78s): result: NodeOutput
-[comfy-env] Running GeomPackPreviewGaussian: ply_path: 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Shar..., extrinsics: list[4], intrinsics: list[3]
-[comfy-env] SubprocessWorker: C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\geometrypack-nodes\.pixi\envs\default\python.exe
-[comfy-env] env_vars: {'KMP_DUPLICATE_LIB_OK': 'TRUE', 'OMP_NUM_THREADS': '1', 'COMFYUI_BASE': 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI'}
-[SubprocessWorker] call_method: nodes.visualization.preview_gaussian.PreviewGaussianNode.EXECUTE_NORMALIZED
-[SubprocessWorker] acquired lock, ensuring started...
-[comfy-env] default: Library/bin has 613 DLLs
-[ComfyUI-GeometryPack] python: C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\geometrypack-nodes\.pixi\envs\default\python.exe
-[ComfyUI-GeometryPack] sys_path sent to worker: ['D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\envs\\geometrypack-nodes\\.pixi\\envs\\default\\Lib\\site-packages', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack']
-[SubprocessWorker] is_pixi=True, python=C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\geometrypack-nodes\.pixi\envs\default\python.exe
-[SubprocessWorker] launching cmd=['C:\\Users\\stduser\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\envs\\geometrypack-nodes\\pixi.toml', '-e', 'default', 'python', 'C:\\Users\\stduser\\AppData\\Local\\Temp\\comfyui_pvenv_7yg5y0nq\\persistent_worker.py', 'tcp://127.0.0.1:54867']...
-C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\geometrypack-nodes\.pixi\envs\default\Lib\site-packages\torch\cuda\__init__.py:180: UserWarning: cudaGetDeviceCount() returned cudaErrorNotSupported, likely using older driver or on CPU machine (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10\cuda\CUDAFunctions.cpp:88.)
-  return torch._C._cuda_getDeviceCount() > 0
-[worker:ComfyUI-GeometryPack] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
-[SubprocessWorker] worker started/confirmed
-[SubprocessWorker] serializing kwargs to shm...
-[SubprocessWorker] created 0 shm blocks
-[SubprocessWorker] sending request via socket...
-[SubprocessWorker] call_id=1 sending call_method
-[worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1779737658487.ply (63.00 MB)
-[SubprocessWorker] got response: ok
-[comfy-env] GeomPackPreviewGaussian done (25.76s): result: NodeOutput
-Prompt executed in 283.77 seconds
-=== /validate endpoint called ===
-Received JSON with keys: ['prompt']
-Prompt has 4 nodes
-  Node 2: LoadSharpModel
-    Inputs: {"precision": "auto"}
-  Node 7: SharpPredict
-    Inputs: {"focal_length_mm": ["9", 2], "output_prefix": "sharp", "model": ["2", 0], "image": ["9", 0]}
-  Node 8: GeomPackPreviewGaussian
-    Inputs: {"preview_gaussian": "", "ply_path": ["7", 0], "extrinsics": ["7", 1], "intrinsics": ["7", 2]}
-  Node 9: LoadImageWithExif
-    Inputs: {"image": "eth3d.png", "default_focal_mm": 30}
-Generated prompt_id: 4526e752-9259-49e3-bd8e-3965a53c3a94
-Calling execution.validate_prompt()...
-Validation result: valid=True
-=== Validation PASSED ===
-got prompt
+[32m[INFO][0m [32mPrompt executed in 23.01 seconds[0m
+[32m[INFO][0m Using RAM pressure cache.
+[32m[INFO][0m Using RAM pressure cache.
+[32m[INFO][0m === /validate endpoint called ===
+[32m[INFO][0m Received JSON with keys: ['prompt']
+[32m[INFO][0m Prompt has 4 nodes
+[32m[INFO][0m   Node 2: LoadSharpModel
+[32m[INFO][0m     Inputs: {"precision": "auto"}
+[32m[INFO][0m   Node 7: SharpPredict
+[32m[INFO][0m     Inputs: {"focal_length_mm": ["9", 2], "output_prefix": "sharp", "model": ["2", 0], "image": ["9", 0]}
+[32m[INFO][0m   Node 9: LoadImageWithExif
+[32m[INFO][0m     Inputs: {"image": "eth3d.png", "default_focal_mm": 30}
+[32m[INFO][0m   Node 11: PreviewGaussianSharp
+[32m[INFO][0m     Inputs: {"preview_gaussian": "", "ply_path": ["7", 0], "extrinsics": ["7", 1], "intrinsics": ["7", 2]}
+[32m[INFO][0m Generated prompt_id: 116feee6-6b92-4c6a-add5-ea0adea5b5be
+[32m[INFO][0m Calling execution.validate_prompt()...
+[32m[INFO][0m Validation result: valid=True
+[32m[INFO][0m === Validation PASSED ===
+[32m[INFO][0m got prompt
 [comfy-env] Running LoadImageWithExif: image: 'eth3d.png', default_focal_mm: 30.0
 [SubprocessWorker] call_method: nodes.load_image_exif.LoadImageWithExif.EXECUTE_NORMALIZED
 [SubprocessWorker] acquired lock, ensuring started...
 [ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
-[ComfyUI-Sharp] Health check: failed
-[ComfyUI-Sharp] Socket unhealthy, restarting worker...
-[comfy-env] default: Library/bin has 237 DLLs
-[ComfyUI-Sharp] python: C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\python.exe
-[ComfyUI-Sharp] sys_path sent to worker: ['D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-Sharp', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\envs\\sharp-nodes\\.pixi\\envs\\default\\Lib\\site-packages', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-Sharp']
-[SubprocessWorker] is_pixi=True, python=C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\python.exe
-[SubprocessWorker] launching cmd=['C:\\Users\\stduser\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\envs\\sharp-nodes\\pixi.toml', '-e', 'default', 'python', 'C:\\Users\\stduser\\AppData\\Local\\Temp\\comfyui_pvenv_m21lduj5\\persistent_worker.py', 'tcp://127.0.0.1:56113']...
-C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\cuda\__init__.py:180: UserWarning: cudaGetDeviceCount() returned cudaErrorNotSupported, likely using older driver or on CPU machine (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10\cuda\CUDAFunctions.cpp:88.)
-  return torch._C._cuda_getDeviceCount() > 0
-[worker:ComfyUI-Sharp] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+[ComfyUI-Sharp] Health check: ok
 [SubprocessWorker] worker started/confirmed
 [SubprocessWorker] serializing kwargs to shm...
 [SubprocessWorker] created 0 shm blocks
 [SubprocessWorker] sending request via socket...
 [SubprocessWorker] call_id=3 sending call_method
 [SubprocessWorker] got response: ok
-[comfy-env] LoadImageWithExif done (4.64s): result: NodeOutput
+[comfy-env] LoadImageWithExif done (0.61s): result: NodeOutput
 [comfy-env] Running LoadSharpModel: precision: 'auto'
 [SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
 [SubprocessWorker] acquired lock, ensuring started...
@@ -455,10 +397,12 @@ C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\de
 [SubprocessWorker] created 0 shm blocks
 [SubprocessWorker] sending request via socket...
 [SubprocessWorker] call_id=4 sending call_method
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-[worker:ComfyUI-Sharp] WARNING: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[worker:ComfyUI-Sharp] [LoadSharpModel] precision='auto' -> dtype=fp32 (device=cpu)
+[worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint already present, reusing (no download): D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\models\sharp\sharp_2572gikvuh.pt (2679.6 MB)
+[worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint ready: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\models\sharp\sharp_2572gikvuh.pt (2679.6 MB)
+[worker:ComfyUI-Sharp] [LoadSharpModel] config: precision=auto -> dtype=fp32
 [SubprocessWorker] got response: ok
-[comfy-env] LoadSharpModel done (0.42s): result: NodeOutput
+[comfy-env] LoadSharpModel done (0.13s): result: NodeOutput
 [comfy-env] Running SharpPredict: focal_length_mm: 20.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,2022,3040,3] cpu
 [SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
 [SubprocessWorker] acquired lock, ensuring started...
@@ -473,155 +417,212 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
 [worker:ComfyUI-Sharp] [comfy-env] _from_shm got dict with keys: ['__type__', 'strategy', 'manager_path', 'storage_key', 'storage_size']
 [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZE TensorRef: tensor_size=[1, 2022, 3040, 3]
 [worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 2022, 3040, 3])
-[worker:ComfyUI-Sharp] WARNING: No comfy kitchen, using old apply_rope functions.
-[SubprocessWorker] callback 'request_vram_budget' from call_id=5
-[comfy-env] VRAM request: 2.81GB, free before eviction: 8.86GB
-[comfy-env] VRAM after eviction: 8.86GB
-[worker:ComfyUI-Sharp] WARNING: [SPN] start: 0.00 GB, input=[1, 3, 1536, 1536]
-[worker:ComfyUI-Sharp] WARNING: [SPN] patches: 0.00 GB, x0=25 x1=9 x2=1 total=35
-[worker:ComfyUI-Sharp] WARNING: [SPN] after first chunk (4/35): 0.00 GB, chunk_size=4
-[worker:ComfyUI-Sharp] 
-=== WATCHDOG TICK 1 ===
-[worker:ComfyUI-Sharp] Current thread 0x000025dc (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 52 in _watchdog
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 995 in run
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1044 in _bootstrap_inner
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1015 in _bootstrap
+[SubprocessWorker] got response: error
+[1m[31m[ERROR][0m !!! Exception during processing !!! No module named 'torchvision'
 
-Thread 0x00001c88 (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\linear.py", line 134 in forward
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ops.py", line 484 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 232 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 309 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 412 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 685 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1109 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 287 in _predict_image_cached
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 184 in execute
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy_api\latest\_io.py", line 1833 in EXECUTE_NORMALIZED
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1762 in main
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1807 in <module>
+Worker traceback:
+Traceback (most recent call last):
+  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_ah5r2jvy\persistent_worker.py", line 1762, in main
+    result = method(**inputs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy_api\latest\_io.py", line 1880, in EXECUTE_NORMALIZED
+    to_return = cls.execute(*args, **kwargs)
+  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 127, in execute
+    patcher = _load_sharp_model(model)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 83, in _load_sharp_model
+    import comfy.model_patcher
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\model_patcher.py", line 32, in <module>
+    import comfy.hooks
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\hooks.py", line 14, in <module>
+    import comfy.lora
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\lora.py", line 22, in <module>
+    import comfy.model_base
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\model_base.py", line 41, in <module>
+    import comfy.ldm.cosmos.model
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ldm\cosmos\model.py", line 25, in <module>
+    from torchvision import transforms
+ModuleNotFoundError: No module named 'torchvision'
 
-[worker:ComfyUI-Sharp] === END ===
+[1m[31m[ERROR][0m Traceback (most recent call last):
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\execution.py", line 536, in execute
+    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\execution.py", line 336, in get_output_data
+    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\execution.py", line 310, in _async_map_node_over_list
+    await process_inputs(input_dict, i)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\execution.py", line 298, in process_inputs
+    result = f(**inputs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\python_embeded\Lib\site-packages\comfy_env\isolation\metadata.py", line 556, in proxy
+    result = worker.call_method(
+        module_name=mod,
+    ...<4 lines>...
+        timeout=600.0,
+    )
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\python_embeded\Lib\site-packages\comfy_env\isolation\workers\subprocess.py", line 674, in call_method
+    raise WorkerError(
+    ...<2 lines>...
+    )
+comfy_env.isolation.workers.base.WorkerError: No module named 'torchvision'
 
-[worker:ComfyUI-Sharp] 
-=== WATCHDOG TICK 2 ===
-[worker:ComfyUI-Sharp] Current thread 0x000025dc (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 52 in _watchdog
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 995 in run
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1044 in _bootstrap_inner
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1015 in _bootstrap
+Worker traceback:
+Traceback (most recent call last):
+  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_ah5r2jvy\persistent_worker.py", line 1762, in main
+    result = method(**inputs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy_api\latest\_io.py", line 1880, in EXECUTE_NORMALIZED
+    to_return = cls.execute(*args, **kwargs)
+  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 127, in execute
+    patcher = _load_sharp_model(model)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 83, in _load_sharp_model
+    import comfy.model_patcher
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\model_patcher.py", line 32, in <module>
+    import comfy.hooks
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\hooks.py", line 14, in <module>
+    import comfy.lora
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\lora.py", line 22, in <module>
+    import comfy.model_base
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\model_base.py", line 41, in <module>
+    import comfy.ldm.cosmos.model
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ldm\cosmos\model.py", line 25, in <module>
+    from torchvision import transforms
+ModuleNotFoundError: No module named 'torchvision'
 
-Thread 0x00001c88 (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\linear.py", line 134 in forward
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ops.py", line 484 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 232 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 309 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 412 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 685 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1109 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 287 in _predict_image_cached
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 184 in execute
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy_api\latest\_io.py", line 1833 in EXECUTE_NORMALIZED
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1762 in main
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1807 in <module>
 
-[worker:ComfyUI-Sharp] === END ===
-
-[worker:ComfyUI-Sharp] WARNING: [SPN] after all chunks + cache clear: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [SPN] after merge intermediates: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [SPN] after merge all: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [SPN] after image_encoder: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [SPN] after upsample: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [Monodepth] after SPN encoder + cache clear: 0.00 GB
-[worker:ComfyUI-Sharp] 
-=== WATCHDOG TICK 3 ===
-[worker:ComfyUI-Sharp] Current thread 0x000025dc (most recent call first):
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 52 in _watchdog
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 995 in run
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1044 in _bootstrap_inner
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\threading.py", line 1015 in _bootstrap
-
-Thread 0x00001c88 (most recent call first):
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 769 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 858 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 970 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 1118 in forward
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1790 in _call_impl
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\nn\modules\module.py", line 1779 in _wrapped_call_impl
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\sharp\model.py", line 2006 in encode
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 287 in _predict_image_cached
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 184 in execute
-  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\sharp-nodes\.pixi\envs\default\Lib\site-packages\torch\utils\_contextlib.py", line 124 in decorate_context
-  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1923\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy_api\latest\_io.py", line 1833 in EXECUTE_NORMALIZED
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1762 in main
-  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_m21lduj5\persistent_worker.py", line 1807 in <module>
-
-[worker:ComfyUI-Sharp] === END ===
-
-[worker:ComfyUI-Sharp] WARNING: [Monodepth] after decoder: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [Decode] start: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [Decode] after depth_alignment: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [Decode] after init_model: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [Decode] after feature_model: 0.00 GB
-[worker:ComfyUI-Sharp] WARNING: [Decode] after prediction_head: 0.00 GB
-[SubprocessWorker] callback 'report_progress' from call_id=5
-[SubprocessWorker] got response: ok
-[comfy-env] SharpPredict done (233.89s): result: NodeOutput
-[comfy-env] Running GeomPackPreviewGaussian: ply_path: 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Shar..., extrinsics: list[4], intrinsics: list[3]
-[SubprocessWorker] call_method: nodes.visualization.preview_gaussian.PreviewGaussianNode.EXECUTE_NORMALIZED
+[32m[INFO][0m [32mPrompt executed in 0.93 seconds[0m
+[32m[INFO][0m Using RAM pressure cache.
+[32m[INFO][0m Using RAM pressure cache.
+[32m[INFO][0m === /validate endpoint called ===
+[32m[INFO][0m Received JSON with keys: ['prompt']
+[32m[INFO][0m Prompt has 8 nodes
+[32m[INFO][0m   Node 7: LoadImage
+[32m[INFO][0m     Inputs: {"image": "middlebury.jpg"}
+[32m[INFO][0m   Node 9: LoadSharpModel
+[32m[INFO][0m     Inputs: {"precision": "auto"}
+[32m[INFO][0m   Node 47: SharpPredictMetricDepth
+[32m[INFO][0m     Inputs: {"focal_length_mm": 30, "model": ["9", 0], "image": ["7", 0]}
+[32m[INFO][0m   Node 57: SharpPredict
+[32m[INFO][0m     Inputs: {"focal_length_mm": 30, "output_prefix": "sharp", "model": ["9", 0], "image": ["58", 0]}
+[32m[INFO][0m   Node 58: ImageFromBatch
+[32m[INFO][0m     Inputs: {"batch_index": 0, "length": 1, "image": ["7", 0]}
+[32m[INFO][0m   Node 83: SharpPredictGaussiansFromMetricDepth
+[32m[INFO][0m     Inputs: {"snap_to_external_depth": "none", "depth_convention": "planar_z", "focal_length_mm": 30, "output_prefix": "sharp_aligned", "save_background_layer": true, "edge_crop": 0, "model": ["9", 0], "image": [
+[32m[INFO][0m   Node 92: PreviewGaussianSharp
+[32m[INFO][0m     Inputs: {"preview_gaussian": "", "ply_path": ["83", 0], "extrinsics": ["83", 2], "intrinsics": ["83", 3]}
+[32m[INFO][0m   Node 93: PreviewGaussianSharp
+[32m[INFO][0m     Inputs: {"preview_gaussian": "", "ply_path": ["57", 0], "extrinsics": ["57", 1], "intrinsics": ["57", 2]}
+[32m[INFO][0m Generated prompt_id: 4e882a01-3dc7-4997-aca3-abaf47deab6d
+[32m[INFO][0m Calling execution.validate_prompt()...
+[32m[INFO][0m Validation result: valid=True
+[32m[INFO][0m === Validation PASSED ===
+[32m[INFO][0m got prompt
+[comfy-env] Running LoadSharpModel: precision: 'auto'
+[SubprocessWorker] call_method: nodes.load_model.LoadSharpModel.EXECUTE_NORMALIZED
 [SubprocessWorker] acquired lock, ensuring started...
-[ComfyUI-GeometryPack] Health check: ping (timeout=5.0s)...
-[ComfyUI-GeometryPack] Health check: failed
-[ComfyUI-GeometryPack] Socket unhealthy, restarting worker...
-[comfy-env] default: Library/bin has 613 DLLs
-[ComfyUI-GeometryPack] python: C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\geometrypack-nodes\.pixi\envs\default\python.exe
-[ComfyUI-GeometryPack] sys_path sent to worker: ['D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\envs\\geometrypack-nodes\\.pixi\\envs\\default\\Lib\\site-packages', 'D:\\a\\comfy-gpu-ci\\comfy-gpu-ci\\test_workspaces\\Sharp-1923\\portable-comfyui\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\ComfyUI-GeometryPack']
-[SubprocessWorker] is_pixi=True, python=C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\geometrypack-nodes\.pixi\envs\default\python.exe
-[SubprocessWorker] launching cmd=['C:\\Users\\stduser\\.pixi\\bin\\pixi.exe', 'run', '--as-is', '--manifest-path', 'C:\\Users\\stduser\\AppData\\Local\\Programs\\comfy-env\\envs\\geometrypack-nodes\\pixi.toml', '-e', 'default', 'python', 'C:\\Users\\stduser\\AppData\\Local\\Temp\\comfyui_pvenv_7yg5y0nq\\persistent_worker.py', 'tcp://127.0.0.1:51994']...
-C:\Users\stduser\AppData\Local\Programs\comfy-env\envs\geometrypack-nodes\.pixi\envs\default\Lib\site-packages\torch\cuda\__init__.py:180: UserWarning: cudaGetDeviceCount() returned cudaErrorNotSupported, likely using older driver or on CPU machine (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10\cuda\CUDAFunctions.cpp:88.)
-  return torch._C._cuda_getDeviceCount() > 0
-[worker:ComfyUI-GeometryPack] ERROR: Failed to import comfy_kitchen, Error: No module named 'comfy_kitchen', fp8 and fp4 support will not be available.
+[ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
+[ComfyUI-Sharp] Health check: ok
 [SubprocessWorker] worker started/confirmed
 [SubprocessWorker] serializing kwargs to shm...
 [SubprocessWorker] created 0 shm blocks
 [SubprocessWorker] sending request via socket...
-[SubprocessWorker] call_id=2 sending call_method
-[worker:ComfyUI-GeometryPack] INFO: Loading PLY: sharp_1779737979955.ply (63.00 MB)
+[SubprocessWorker] call_id=6 sending call_method
+[worker:ComfyUI-Sharp] [LoadSharpModel] precision='auto' -> dtype=fp32 (device=cpu)
+[worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint already present, reusing (no download): D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\models\sharp\sharp_2572gikvuh.pt (2679.6 MB)
+[worker:ComfyUI-Sharp] [LoadSharpModel] checkpoint ready: D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\models\sharp\sharp_2572gikvuh.pt (2679.6 MB)
+[worker:ComfyUI-Sharp] [LoadSharpModel] config: precision=auto -> dtype=fp32
 [SubprocessWorker] got response: ok
-[comfy-env] GeomPackPreviewGaussian done (12.77s): result: NodeOutput
-Prompt executed in 251.75 seconds
+[comfy-env] LoadSharpModel done (0.13s): result: NodeOutput
+[comfy-env] Running SharpPredict: focal_length_mm: 30.0, output_prefix: 'sharp', model: dict, image: torch.float32 [1,960,1416,3] cpu
+[SubprocessWorker] call_method: nodes.predict.SharpPredict.EXECUTE_NORMALIZED
+[SubprocessWorker] acquired lock, ensuring started...
+[ComfyUI-Sharp] Health check: ping (timeout=5.0s)...
+[ComfyUI-Sharp] Health check: ok
+[SubprocessWorker] worker started/confirmed
+[comfy-env] PRE-SERIALIZE 'image' shape: torch.Size([1, 960, 1416, 3])
+[SubprocessWorker] serializing kwargs to shm...
+[SubprocessWorker] created 0 shm blocks
+[SubprocessWorker] sending request via socket...
+[SubprocessWorker] call_id=7 sending call_method
+[worker:ComfyUI-Sharp] [comfy-env] _from_shm got dict with keys: ['__type__', 'strategy', 'manager_path', 'storage_key', 'storage_size']
+[worker:ComfyUI-Sharp] [comfy-env] DESERIALIZE TensorRef: tensor_size=[1, 960, 1416, 3]
+[worker:ComfyUI-Sharp] [comfy-env] DESERIALIZED tensor shape: torch.Size([1, 960, 1416, 3])
+[SubprocessWorker] got response: error
+[1m[31m[ERROR][0m !!! Exception during processing !!! No module named 'torchvision'
+
+Worker traceback:
+Traceback (most recent call last):
+  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_ah5r2jvy\persistent_worker.py", line 1762, in main
+    result = method(**inputs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy_api\latest\_io.py", line 1880, in EXECUTE_NORMALIZED
+    to_return = cls.execute(*args, **kwargs)
+  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 127, in execute
+    patcher = _load_sharp_model(model)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 83, in _load_sharp_model
+    import comfy.model_patcher
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\model_patcher.py", line 32, in <module>
+    import comfy.hooks
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\hooks.py", line 14, in <module>
+    import comfy.lora
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\lora.py", line 22, in <module>
+    import comfy.model_base
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\model_base.py", line 41, in <module>
+    import comfy.ldm.cosmos.model
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ldm\cosmos\model.py", line 25, in <module>
+    from torchvision import transforms
+ModuleNotFoundError: No module named 'torchvision'
+
+[1m[31m[ERROR][0m Traceback (most recent call last):
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\execution.py", line 536, in execute
+    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\execution.py", line 336, in get_output_data
+    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\execution.py", line 310, in _async_map_node_over_list
+    await process_inputs(input_dict, i)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\execution.py", line 298, in process_inputs
+    result = f(**inputs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\python_embeded\Lib\site-packages\comfy_env\isolation\metadata.py", line 556, in proxy
+    result = worker.call_method(
+        module_name=mod,
+    ...<4 lines>...
+        timeout=600.0,
+    )
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\python_embeded\Lib\site-packages\comfy_env\isolation\workers\subprocess.py", line 674, in call_method
+    raise WorkerError(
+    ...<2 lines>...
+    )
+comfy_env.isolation.workers.base.WorkerError: No module named 'torchvision'
+
+Worker traceback:
+Traceback (most recent call last):
+  File "C:\Users\stduser\AppData\Local\Temp\comfyui_pvenv_ah5r2jvy\persistent_worker.py", line 1762, in main
+    result = method(**inputs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy_api\latest\_io.py", line 1880, in EXECUTE_NORMALIZED
+    to_return = cls.execute(*args, **kwargs)
+  File "C:\Users\stduser\AppData\Local\Programs\comfy-env\.pixi\envs\sharp-nodes\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\predict.py", line 127, in execute
+    patcher = _load_sharp_model(model)
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-Sharp\nodes\load_model.py", line 83, in _load_sharp_model
+    import comfy.model_patcher
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\model_patcher.py", line 32, in <module>
+    import comfy.hooks
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\hooks.py", line 14, in <module>
+    import comfy.lora
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\lora.py", line 22, in <module>
+    import comfy.model_base
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\model_base.py", line 41, in <module>
+    import comfy.ldm.cosmos.model
+  File "D:\a\comfy-gpu-ci\comfy-gpu-ci\test_workspaces\Sharp-1916\portable-comfyui\ComfyUI_windows_portable\ComfyUI\comfy\ldm\cosmos\model.py", line 25, in <module>
+    from torchvision import transforms
+ModuleNotFoundError: No module named 'torchvision'
+
+
+[32m[INFO][0m [32mPrompt executed in 0.30 seconds[0m
+[32m[INFO][0m Using RAM pressure cache.
