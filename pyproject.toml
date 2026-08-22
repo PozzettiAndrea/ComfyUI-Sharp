@@ -11,4 +11,5 @@ Repository = "https://github.com/PozzettiAndrea/ComfyUI-Sharp"
 [tool.comfy]
 PublisherId = "pznodes"
 DisplayName = "Sharp"
+web = "javascript"
 Icon = "https://raw.githubusercontent.com/PozzettiAndrea/ComfyUI-Sharp/main/assets/icon.png"
